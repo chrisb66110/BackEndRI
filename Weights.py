@@ -20,6 +20,21 @@ class Weights:
             weights[term] = dicTok[term][1] * self.dicVoc[term][1]
         return weights
 
+    # Metodo que devuelve un diccionario de pesos para la consulta
+    # Llave: termino
+    # Valor: peso
+    def getDicWeightsConsulta(self, fileTokName):
+        tokReader = TokReader(fileTokName)
+        dicTok = tokReader.getDicTok()
+        weights = dict()
+        for term in dicTok.keys():
+            # Posicion 1 del valor del dictTok es la frecuencia normalizada
+            # Posicion 1 del valor del dicVoc es la frecuencia inversa
+            print("Frecuencia normalizada= " + str(dicTok[term][1]))
+            print("Frecuencia inversa= " + str(self.dicVoc[term][1]))
+            weights[term] = (0.5 + 0.5 * dicTok[term][1]) * self.dicVoc[term][1]
+        return weights
+
     # Metodo para mandar a generar los archivos .wtd
     def generateWtd(self, filesName):
         generator = FileGenerator()

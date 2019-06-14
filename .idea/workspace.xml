@@ -3,6 +3,747 @@
   <component name="ChangeListManager">
     <list default="true" id="5e9f8540-2bb2-424e-b36f-d2a5bd6f1d50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/postings/postings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/postings/postings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/vocabulario/vocabulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/vocabulario/vocabulario.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/1_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/2_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/5_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/6_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_AP.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_CT.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_PI.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/AM9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BMW9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/BigData9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CP9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Computadora9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Economia9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ExpEspacial9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/FB-9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/IA9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/JuegosdeMesa9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MC9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/MM-9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI21.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI21.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI210.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI210.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI22.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI22.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI23.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI23.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI24.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI24.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI25.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI25.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI26.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI26.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI27.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI27.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI28.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI28.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI29.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI29.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI31.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI31.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI310.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI310.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI32.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI32.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI33.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI33.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI34.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI34.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI35.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI35.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI36.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI36.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI37.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI37.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI38.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI38.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI39.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI39.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI41.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI41.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI410.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI410.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI42.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI42.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI43.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI43.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI44.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI44.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI45.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI45.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI46.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI46.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI47.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI47.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI48.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI48.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI49.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/NI49.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/P9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/P9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PI-9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/PelAnim9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Proy9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/T9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/T9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Teclado9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ajedrez9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/algoritmosgeneticos9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/android9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/android9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/aplicacionweb9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteantiguo9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/auto9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bioinformatica9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/bonsais9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cadenavalor9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ciberseguridad9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/computacionnube9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/cultura9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/delitosinformaticos9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrolloaplicacionesmoviles9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/desarrollomovil9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/diccionario9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/educsexual9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/emisiones9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/exploracionespacial9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/fengshui9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/hacking9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami11.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami11.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami12.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami12.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami13.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami13.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami14.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami14.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami15.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami15.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami16.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami16.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami17.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami17.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami18.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami18.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami19.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami19.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami20.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami20.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origenuniverso9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/orquideas9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/parquesnacionalescr9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/perro9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/reciclaje9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/redesneuronales9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ri9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tablaturasguitarra9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/tecno9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismocr9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/turismoespacial9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos10.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos3.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos4.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos6.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frecuencias.py" beforeDir="false" afterPath="$PROJECT_DIR$/Frecuencias.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weights.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +756,59 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frecuencias.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Weights.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DocWordCounter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -30,13 +822,25 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>protectora</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/Weights.py" />
+        <option value="$PROJECT_DIR$/Frecuencias.py" />
       </list>
     </option>
   </component>
@@ -85,7 +889,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flask server.Flask (app.py)">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BackEndRI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="BackEndRI" type="Python.FlaskServer">
       <module name="BackEndRI" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -93,7 +919,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -101,6 +927,27 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="BackEndRI" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Python.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -114,7 +961,7 @@
       <updated>1560537409365</updated>
       <workItem from="1560537412533" duration="683000" />
       <workItem from="1560538259492" duration="52000" />
-      <workItem from="1560538375086" duration="624000" />
+      <workItem from="1560538375086" duration="8401000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de proyecto">
       <created>1560538505479</created>
@@ -130,22 +977,28 @@
       <option name="project" value="LOCAL" />
       <updated>1560538976003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se agregar las otras clases">
+      <created>1560539010988</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560539010988</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1359000" />
+    <option name="totallyTimeSpent" value="9136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25642672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32934928" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30411687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -169,16 +1022,83 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicio de proyecto" />
     <MESSAGE value="Se agregar las otras clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregar las otras clases" />
+    <MESSAGE value="Creacion de vectores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion de vectores" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BackEndRI$BackEndRI.coverage" NAME="BackEndRI Coverage Results" MODIFIED="1560538423380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BackEndRI$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1560546002077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BackEndRI$BackEndRI.coverage" NAME="BackEndRI Coverage Results" MODIFIED="1560545125290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BackEndRI$Main.coverage" NAME="Main Coverage Results" MODIFIED="1560545906203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/TokReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Indice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocWordCounter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weights.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frecuencias.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

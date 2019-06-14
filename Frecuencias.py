@@ -49,7 +49,7 @@ class Frecuencias:
             #Numero de veces que aparece el termino en el doc.
             numTermino = self.dictionary[word]
             # Generamos la frecuencia inversa.
-            frecInversa = math.log(self.numDocs/self.dictionary[word])
+            frecInversa = math.log10(self.numDocs/self.dictionary[word])
             # Creamos el objeto que se guarda en el value.
             tuplaVocab = TuplaVocabl(numTermino, frecInversa)
             vocabDict[word] = tuplaVocab
