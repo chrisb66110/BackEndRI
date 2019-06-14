@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="es-ES">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>elTecnoBlog &raquo; Desarrollando aplicaciones para BlackBerry Playbook [parte 1]</title>
+	<meta name="generator" content="WordPress 3.0.2" /> <!-- leave this for stats please -->
+
+	<link rel="stylesheet" type="text/css" href="http://www.eltecnoblog.com/wp-content/themes/stardust/style.css" media="screen" />
+  	<link rel="stylesheet" type="text/css" href="http://www.eltecnoblog.com/wp-content/themes/stardust/my.css" media="screen" />
+        
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.eltecnoblog.com/feed/" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://www.eltecnoblog.com/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.eltecnoblog.com/feed/atom/" />
+  <link rel="shortcut icon" href="http://www.eltecnoblog.com/wp-content/themes/stardust/favicon.ico" />
+	<link rel="pingback" href="http://www.eltecnoblog.com/xmlrpc.php" />
+	<script type="text/javascript" src="http://www.eltecnoblog.com/wp-content/themes/stardust/js/smoothscroll.js"></script>
+  	
+					
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.06 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-19202030-2']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	// End of Google Analytics for WordPress by Yoast v4.0
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="elTecnoBlog &raquo; Desarrollando aplicaciones para BlackBerry Playbook [parte 1] RSS de los comentarios" href="http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/feed/" />
+<style type="text/css">border: 1px solid #ccc; background: #eee; padding: 5px; margin: 10px;</style>
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://www.eltecnoblog.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='codecolorer-css'  href='http://www.eltecnoblog.com/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.8' type='text/css' media='screen' />
+<script type='text/javascript' src='http://www.eltecnoblog.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://www.eltecnoblog.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.eltecnoblog.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.eltecnoblog.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='elTecnoBlog' href='http://www.eltecnoblog.com/' />
+<link rel='start' title='Placas embedded (todo en uno)' href='http://www.eltecnoblog.com/2007/05/06/placas-todo-en-uno/' />
+<link rel='prev' title='Efectos de la exposición a la radiación' href='http://www.eltecnoblog.com/2011/03/16/efectos-de-la-exposicion-a-la-radiacion/' />
+<link rel='next' title='Exim + MailScanner + Mail not delivered &#8211; Mail stuck on queue' href='http://www.eltecnoblog.com/2011/08/29/exim-mailscanner-mail-not-delivered-mail-stuck-on-queue/' />
+<meta name="generator" content="WordPress 3.0.2" />
+<link rel='canonical' href='http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/' />
+<link rel='shortlink' href='http://www.eltecnoblog.com/?p=141' />
+<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Language" content="es-ES" />
+<style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_es { background:url(http://www.eltecnoblog.com/wp-content/plugins/qtranslate/flags/es.png) no-repeat }
+.qtrans_flag_en { background:url(http://www.eltecnoblog.com/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+</style>
+<link hreflang="en" href="http://www.eltecnoblog.com/en/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/" rel="alternate" />
+<script type='text/javascript' src='http://www.eltecnoblog.com/wp-includes/js/tw-sack.js?ver=1.6.1'></script>
+</head>
+
+<body class="single single-post postid-141">
+<div id="container">
+
+<ul class="skip">
+<li><a href="#wrapper">Skip to content</a></li>
+<li><a href="#menu">Skip to menu</a></li>
+</ul>
+
+<hr />
+
+<div id="header">
+  <h1><a href="http://www.eltecnoblog.com/">elTecnoBlog</a></h1>
+  <p class="payoff">Tecnología, comunicaciones, entrepreneurship y un poco de todo lo demás&nbsp;</p>
+   
+  <form id="searchform" method="get" action="http://www.eltecnoblog.com">
+   <div>
+      <label for="s">Buscar</label>
+      <input type="text" name="s" id="s" size="15" value="search..." onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';"/>
+      <button type="submit"><img src="http://www.eltecnoblog.com/wp-content/themes/stardust/images/cerca.jpg" alt="search" /></button><!--<input type="submit" value="Buscar" />-->
+   </div>
+</form>
+  <p id="rss"><a href="http://www.eltecnoblog.com/feed/" title="Subscribe to this site!"><img src="http://www.eltecnoblog.com/wp-content/themes/stardust/images/rss.jpg" alt="Rss 2.0" /></a></p>
+
+  <div class="menu1"><ul><li ><a href="http://www.eltecnoblog.com/" title="Inicio">Inicio</a></li><li class="page_item page-item-2"><a href="http://www.eltecnoblog.com/about/" title="Acerca de elTecnoBlog">Acerca de elTecnoBlog</a></li></ul></div>
+</div><!-- end header -->
+<hr />
+
+<div id="wrapper">
+<div id="content">
+
+<div class="post-141 post type-post hentry category-blackberry category-eltecnoblog-cacarros category-codigo category-playbook tag-blackberry-2 tag-blackberry-playbook tag-desarrollar tag-desarrollar-playbook tag-howto tag-playbook-2 tag-programar-playbook" id="post-141">
+	    <div class="date" title="15-04-2011">
+    <p>
+         <span class="mese">abr</span>
+         <span class="giorno">15</span>
+         <span class="anno">2011</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/" rel="bookmark">Desarrollando aplicaciones para BlackBerry Playbook [parte 1]</a></h2>
+	<div class="meta"><span class="tags">Category: <a href="http://www.eltecnoblog.com/category/blackberry/" title="Ver todas las entradas en BlackBerry" rel="category tag">BlackBerry</a>,<a href="http://www.eltecnoblog.com/category/eltecnoblog-cacarros/" title="Ver todas las entradas en Cacharros" rel="category tag">Cacharros</a>,<a href="http://www.eltecnoblog.com/category/codigo/" title="Ver todas las entradas en Código" rel="category tag">Código</a>,<a href="http://www.eltecnoblog.com/category/blackberry/playbook/" title="Ver todas las entradas en Playbook" rel="category tag">Playbook</a></span> &#8212; <span class="user">guillem @ 1:29 </span> </div>
+
+	<div class="storycontent">
+		<p>Voy a empezar una serie de minitutoriales sobre como desarrollar aplicaciones para el nuevo tablet de BlackBerry que saldrá a la venta, si todo va según lo previsto, el 19 de Abril.</p>
+<p>En la primera parte del tutorial os voy a explicar cómo instalar las herramientas necesarias para poneros manos a la obra. Vamos &#8216;pallá&#8217;.</p>
+<h2><a href="http://www.eltecnoblog.com/wp-content/playbook_white.jpg"><img class="alignleft size-full wp-image-151" title="playbook_white" src="http://www.eltecnoblog.com/wp-content/playbook_white.jpg" alt="" width="600" height="307" /></a>Instalación de herramientas</h2>
+<p>Para empezar a programar para Playbook, vamos a necesitar instalar una serie de aplicaciones y paquetes que nos permitirán escribir, compilar y probar/debugar la aplicación en el simulador (por ahora es dificil hacerlo en un Playbook real)</p>
+<h3><strong>1-. Instalación del entorno de desarrollo</strong></h3>
+<p>El que resultará más cómodo de instalar y que nos proporciona más funcionalidades es el derivado que ha hecho Adobe del genial Eclipse, con la intención de destinarlo al desarrollo de aplicaciones Flash. Se trata de Flash Builder, en su versión 4.5 [Burrito] y lo podéis descargar desde el siguiente enlace (requiere registrarse, pero el proceso es gratuïto y rápido):</p>
+<p style="padding-left: 30px;"><a title="Flash Builder 4.5" href="https://www.adobe.com/cfusion/entitlement/index.cfm?loc=en%5Fus&amp;e=labs%5Fflashbuilder%5Fburrito" target="_blank">https://www.adobe.com/cfusion/entitlement/index.cfm?loc=en%5Fus&amp;e=labs%5Fflashbuilder%5Fburrito</a></p>
+<p>Cabe destacar sin embargo, que se trata de una versión de prueba y en principio expira pasados unos días (60 si no recuerdo mal). Luego la licencia cuesta algo menos de 300$, que no es barato, pero podría ser peor&#8230;</p>
+<p>Una vez descargado, lo ejecutamos y un clásico &#8216;Siguiente&#8217;-&gt;&#8217;Siguiente&#8217;&#8230;. etc y listos. Fijaros sin embargo en que ruta queda instalado, porque necesitaréis el dato después.</p>
+<p><span id="more-141"></span></p>
+<h3><strong>2-. Instalación del SDK de Playbook<br />
+</strong></h3>
+<p>El Playbook Tablet OS SDK lo descargamos desde la web de BlackBerry. También requiere registro. Algo más engorroso que el de Adobe.
+</p>
+<p style="padding-left: 30px;"><a title="Playbook Tablet OS SDK" href="https://www.blackberry.com/Downloads/contactFormPreload.do?code=DC727151E5D55DDE1E950767CF861CA5&amp;dl=CC1AF6924EAAFB7F69BB395A9B47F0A3" target="_blank">https://www.blackberry.com/Downloads/contactFormPreload.do?code=DC727151E5D55DDE1E950767CF861CA5&amp;dl=CC1AF6924EAAFB7F69BB395A9B47F0A3</a></p>
+<p>Como antes, instalamos el paquete ejecutándolo. Aquí si hay que tener precaución de asegurarnos de indicar que tenemos instalado el Flash Builder 4.5 y especificar la ubicación donde se haya hecho la instalación previamente. Hecho esto, es un &#8216;Siguiente&#8217;-&gt;&#8217;Siguiente&#8217;&#8230; como antes.</p>
+<h3><strong>3-. Instalación del simulador</strong></h3>
+<p>Para instalar el simulador necesitamos, en primer lugar, descargar VMWare Player desde aquí (también hay que registrarse&#8230;)</p>
+<p style="padding-left: 30px;"><a title="VMWare Player" href="https://www.vmware.com/tryvmware/?p=player&amp;lp=1" target="_blank">https://www.vmware.com/tryvmware/?p=player&amp;lp=1</a></p>
+<p>Lo instalamos y listos. Luego, tenemos que descargar la imágen del simulador del Playbook, desde aquí (es Blackberry y por tanto ya estáis registrados con los datos del segundo punto)</p>
+<p style="padding-left: 30px;"><a title="Playbook Simulator" href="https://www.blackberry.com/Downloads/contactFormPreload.do?code=DC727151E5D55DDE1E950767CF861CA5&amp;dl=51A328104F9CD84C0600E75C575BABFD" target="_blank">https://www.blackberry.com/Downloads/contactFormPreload.do?code=DC727151E5D55DDE1E950767CF861CA5&amp;dl=51A328104F9CD84C0600E75C575BABFD</a></p>
+<p>Este paquete, al ejecutarlo, nos descomprimirá una ISO en la carpeta que indiquemos. Luego hay que lanzar el VMWare Player y crear una máquina virtual nueva, con el botón destinado a tal efecto. Las opciones que habrá que escoger son:</p>
+<ul>
+<li>Installer disc image file (ISO): y seleccionaremos la ISO que hemos descomprimido previamente</li>
+<li>Guest operating system: other  / Versión (en el desplegable): other</li>
+<li>Escoger un nombre (por ejemplo Playbook)</li>
+<li>Tamaño del disco: Ojo, tienen que ser, <strong>al menos 8GB</strong>. Así pues, <strong>recomiendo dejarlo en 8GB</strong> (no veo porque asignar más para un simulador).</li>
+<li>La opción de split o entero, como os apetezca</li>
+</ul>
+<p>Y listos, ya tenéis también listo el simulador. La primera vez que lo arranqueis os hará como un proceso de instalación sencillo en que solo hay que apretar un par de teclas.</p>
+<p>En la parte 2, explicaré un poquito el entorno de desarrollo y quizá haremos alguna prueba de primera aplicación.</p>
+<p>Saludos!</p>
+<div class="addtoany_share_save_container"><div class="a2a_kit addtoany_list"><a class="a2a_dd addtoany_share_save" href="http://www.addtoany.com/share_save"><img src="http://www.eltecnoblog.com/wp-content/plugins/add-to-any/share_save_171_16.png" width="171" height="16" alt="Share"/></a></div>
+<script type="text/javascript"><!--
+var a2a_config = a2a_config || {};
+a2a_localize = {
+	Share: "Compartir",
+	Save: "Guardar",
+	Subscribe: "Suscribirse",
+	Email: "E-mail",
+    Bookmark: "Marcador",
+	ShowAll: "Mostrar todo",
+	ShowLess: "Mostrar menos",
+	FindServices: "Buscar servicios(s)",
+	FindAnyServiceToAddTo: "Buscar servicio",
+	PoweredBy: "Servicio ofrecido por",
+	ShareViaEmail: "Compartir por e-mail",
+	SubscribeViaEmail: "Suscribirse por e-mail",
+	BookmarkInYourBrowser: "Agregar a marcadores de tu navegador",
+	BookmarkInstructions: "Presione Ctrl+D o Cmd+D para marcar esta pagina",
+	AddToYourFavorites: "Agregar a favoritos",
+	SendFromWebOrProgram: "Enviar de cualquier dirección de e-mail o programa de e-mail",
+    EmailProgram: "Programa de e-mail"
+};
+a2a_config.linkname="Desarrollando aplicaciones para BlackBerry Playbook [parte 1]";
+a2a_config.linkurl="http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/";
+//--></script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+
+</div>
+				<p class="meta">Etiquetas:  <a href="http://www.eltecnoblog.com/tag/blackberry-2/" rel="tag">blackberry</a>, <a href="http://www.eltecnoblog.com/tag/blackberry-playbook/" rel="tag">blackberry playbook</a>, <a href="http://www.eltecnoblog.com/tag/desarrollar/" rel="tag">desarrollar</a>, <a href="http://www.eltecnoblog.com/tag/desarrollar-playbook/" rel="tag">desarrollar playbook</a>, <a href="http://www.eltecnoblog.com/tag/howto/" rel="tag">howto</a>, <a href="http://www.eltecnoblog.com/tag/playbook-2/" rel="tag">playbook</a>, <a href="http://www.eltecnoblog.com/tag/programar-playbook/" rel="tag">programar playbook</a></p>
+				
+	</div>
+
+	<div class="feedback">
+				<p><a href="http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/#comments" title="Comentarios en Desarrollando aplicaciones para BlackBerry Playbook [parte 1]">Comments (1)</a></p>
+	</div>
+
+</div>
+
+
+<!-- You can start editing here. -->
+<h3 id="comments">One Response to &#8220;Desarrollando aplicaciones para BlackBerry Playbook [parte 1]&#8221;</h3>
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-22552">
+		<div id="div-comment-22552">
+		<img alt='' src='http://0.gravatar.com/avatar/43162ea5f73335343b17ab6a0edc6944?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Dani</cite> says:						<br />
+      <small class="commentmetadata"><a href="#comment-22552" title="">abril 15th, 2011  8:13 </a> </small>
+			<div class="commentbody">
+        <div>
+  				<p>Lo he leído por encima, pero creo que es solo otro post populista de esos que tanto abundan en la red.</p>
+          <div class="reply">
+                       </div>				
+        </div>
+      </div>
+    </div>
+</li>
+	</ol>
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+ 
+
+<div id="respond">
+
+   <h3>Leave a Reply</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/#respond" style="display:none;">Clic para cancelar respuesta.</a></small>
+</div>
+
+
+<form action="http://www.eltecnoblog.com/wp-comments-post.php" method="post" id="commentform">
+
+<p><input type="text" name="author" id="author" value="" size="22" aria-required='true' />
+<label for="author"><small>Name (required)</small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" aria-required='true' />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" />
+<label for="url"><small>Website</small></label></p>
+
+<p><label for="comment" class="skip">Comment text</label><textarea name="comment" id="comment" cols="100%" rows="10"></textarea></p>
+<p><input name="submit" type="submit" id="submit" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='141' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<div><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="daeae42f84" /></p><script type="text/javascript">
+//<![CDATA[
+	function gethash(){
+		document.getElementById('commentform').onsubmit = null;
+		if(document.getElementById('submit')) document.getElementById('submit').value='Please wait...';
+		var mysack = new sack("http://www.eltecnoblog.com/wp-content/plugins/wp-captcha-free/captcha-free.php");
+		mysack.execute = 1;
+		mysack.method = 'POST';
+		mysack.onError = function() { alert('Unable to get Captcha-Free Hash!') };
+		mysack.setVar('post_id', 141);
+		mysack.runAJAX();
+		return false;
+	}
+	function gothash(myhash){
+		document.getElementById('captchafree').value = myhash;
+		// Workaround for Wordpress' retarded choice of naming the submit button same as a JS function name >:-(
+		document.getElementById('submit').click();
+	}
+	document.getElementById('commentform').onsubmit = gethash;
+//]]>
+</script>
+<input type="hidden" id="captchafree" name="captchafree" value="" />
+<p><small><noscript><strong>Please note:</strong> JavaScript is required to post comments.</noscript> <a href="http://wordpresssupplies.com/wordpress-plugins/captcha-free/">Spam protection by WP Captcha-Free</a></small></p>
+</div>
+</form>
+
+</div>
+
+
+
+
+<!-- begin footer -->
+</div><!-- end content -->
+</div><!-- end wrapper -->
+
+<hr />
+
+<!-- begin sidebar -->
+<div id="menu">
+
+<ul>
+<li class="widget widget-text">Nomad Analytics<div class="textwidget"><a href="http://www.eltecnoblog.com/wp-content/plugins/adrotate/adrotate-out.php?track=MSwwLDA=" target="_blank"><img src="http://www.eltecnoblog.com/wp-content/nomad_banner2.jpg" /></a></div></li>
+<li id="twitter" class="widget wcc_twitter_widget">Twitter
+<ul id="twitter_update_list">
+	<li>Loading...</li>
+</ul>
+<div class="twitter_follow_link"><a href="http://twitter.com/guillemmateos" title="Follow elTecnoBlog on Twitter">Follow Me</a></div>
+</li><li id="categories-3" class="widget widget_categories">Categorías		<ul>
+	<li class="cat-item cat-item-44"><a href="http://www.eltecnoblog.com/category/blackberry/" title="Ver todas las entradas archivadas en BlackBerry">BlackBerry</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.eltecnoblog.com/category/eltecnoblog-cacarros/" title="Ver todas las entradas archivadas en Cacharros">Cacharros</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="http://www.eltecnoblog.com/category/codigo/" title="Ver todas las entradas archivadas en Código">Código</a>
+</li>
+	<li class="cat-item cat-item-58"><a href="http://www.eltecnoblog.com/category/ciencia/" title="Ver todas las entradas archivadas en ciencia">ciencia</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.eltecnoblog.com/category/cisco/" title="Ver todas las entradas archivadas en Cisco">Cisco</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.eltecnoblog.com/category/linux-eltecnoblog/cpanel/" title="Ver todas las entradas archivadas en cPanel">cPanel</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.eltecnoblog.com/category/curiosidades/" title="Ver todas las entradas archivadas en Curiosidades">Curiosidades</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="http://www.eltecnoblog.com/category/email/" title="Ver todas las entradas archivadas en Email">Email</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://www.eltecnoblog.com/category/emprendedores/" title="Ver todas las entradas archivadas en Emprendedores">Emprendedores</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.eltecnoblog.com/category/google/" title="Ver todas las entradas archivadas en Google">Google</a>
+</li>
+	<li class="cat-item cat-item-49"><a href="http://www.eltecnoblog.com/category/humor/" title="Ver todas las entradas archivadas en Humor">Humor</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.eltecnoblog.com/category/javascript/" title="Ver todas las entradas archivadas en Javascript">Javascript</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.eltecnoblog.com/category/linux-eltecnoblog/" title="Ver todas las entradas archivadas en Linux">Linux</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.eltecnoblog.com/category/php/" title="Ver todas las entradas archivadas en PHP">PHP</a>
+</li>
+	<li class="cat-item cat-item-65"><a href="http://www.eltecnoblog.com/category/blackberry/playbook/" title="Ver todas las entradas archivadas en Playbook">Playbook</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="http://www.eltecnoblog.com/category/pseudo-hacks/" title="Ver todas las entradas archivadas en pseudo-hacks">pseudo-hacks</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="http://www.eltecnoblog.com/category/social/" title="Ver todas las entradas archivadas en Social">Social</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://www.eltecnoblog.com/category/tutorial/" title="Ver todas las entradas archivadas en Tutorial">Tutorial</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.eltecnoblog.com/category/uncategorized/" title="Ver todas las entradas archivadas en Uncategorized">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.eltecnoblog.com/category/voip/" title="Ver todas las entradas archivadas en VoIP">VoIP</a>
+</li>
+		</ul>
+</li><li id="tag_cloud-3" class="widget widget_tag_cloud">Etiquetas<div><a href='http://www.eltecnoblog.com/tag/apc/' class='tag-link-13' title='1 tema' style='font-size: 8pt;'>apc</a>
+<a href='http://www.eltecnoblog.com/tag/barcelona/' class='tag-link-47' title='1 tema' style='font-size: 8pt;'>barcelona</a>
+<a href='http://www.eltecnoblog.com/tag/bbicing/' class='tag-link-46' title='1 tema' style='font-size: 8pt;'>bbicing</a>
+<a href='http://www.eltecnoblog.com/tag/blackberry-2/' class='tag-link-45' title='4 temas' style='font-size: 22pt;'>blackberry</a>
+<a href='http://www.eltecnoblog.com/tag/cadena/' class='tag-link-20' title='1 tema' style='font-size: 8pt;'>cadena</a>
+<a href='http://www.eltecnoblog.com/tag/ciencia/' class='tag-link-58' title='1 tema' style='font-size: 8pt;'>ciencia</a>
+<a href='http://www.eltecnoblog.com/tag/citas/' class='tag-link-52' title='1 tema' style='font-size: 8pt;'>citas</a>
+<a href='http://www.eltecnoblog.com/tag/cosas/' class='tag-link-50' title='1 tema' style='font-size: 8pt;'>cosas</a>
+<a href='http://www.eltecnoblog.com/tag/cpanel/' class='tag-link-24' title='1 tema' style='font-size: 8pt;'>cPanel</a>
+<a href='http://www.eltecnoblog.com/tag/dns/' class='tag-link-28' title='1 tema' style='font-size: 8pt;'>dns</a>
+<a href='http://www.eltecnoblog.com/tag/eaton/' class='tag-link-14' title='1 tema' style='font-size: 8pt;'>eaton</a>
+<a href='http://www.eltecnoblog.com/tag/emprendedor/' class='tag-link-37' title='1 tema' style='font-size: 8pt;'>emprendedor</a>
+<a href='http://www.eltecnoblog.com/tag/emprendedores-2/' class='tag-link-53' title='1 tema' style='font-size: 8pt;'>emprendedores</a>
+<a href='http://www.eltecnoblog.com/tag/facebook/' class='tag-link-31' title='1 tema' style='font-size: 8pt;'>facebook</a>
+<a href='http://www.eltecnoblog.com/tag/fail/' class='tag-link-27' title='1 tema' style='font-size: 8pt;'>fail</a>
+<a href='http://www.eltecnoblog.com/tag/favoritas/' class='tag-link-54' title='1 tema' style='font-size: 8pt;'>favoritas</a>
+<a href='http://www.eltecnoblog.com/tag/gratis/' class='tag-link-48' title='1 tema' style='font-size: 8pt;'>gratis</a>
+<a href='http://www.eltecnoblog.com/tag/grep/' class='tag-link-19' title='1 tema' style='font-size: 8pt;'>grep</a>
+<a href='http://www.eltecnoblog.com/tag/hack/' class='tag-link-32' title='1 tema' style='font-size: 8pt;'>hack</a>
+<a href='http://www.eltecnoblog.com/tag/host/' class='tag-link-78' title='2 temas' style='font-size: 14.3pt;'>host</a>
+<a href='http://www.eltecnoblog.com/tag/image/' class='tag-link-33' title='1 tema' style='font-size: 8pt;'>image</a>
+<a href='http://www.eltecnoblog.com/tag/javascript-2/' class='tag-link-57' title='1 tema' style='font-size: 8pt;'>javascript</a>
+<a href='http://www.eltecnoblog.com/tag/limitar/' class='tag-link-38' title='1 tema' style='font-size: 8pt;'>limitar</a>
+<a href='http://www.eltecnoblog.com/tag/linux-eltecnoblog/' class='tag-link-4' title='2 temas' style='font-size: 14.3pt;'>Linux</a>
+<a href='http://www.eltecnoblog.com/tag/metered/' class='tag-link-17' title='1 tema' style='font-size: 8pt;'>metered</a>
+<a href='http://www.eltecnoblog.com/tag/mootools/' class='tag-link-56' title='1 tema' style='font-size: 8pt;'>mootools</a>
+<a href='http://www.eltecnoblog.com/tag/path/' class='tag-link-40' title='1 tema' style='font-size: 8pt;'>path</a>
+<a href='http://www.eltecnoblog.com/tag/pdu/' class='tag-link-12' title='1 tema' style='font-size: 8pt;'>pdu</a>
+<a href='http://www.eltecnoblog.com/tag/php/' class='tag-link-9' title='2 temas' style='font-size: 14.3pt;'>PHP</a>
+<a href='http://www.eltecnoblog.com/tag/playbook-2/' class='tag-link-68' title='3 temas' style='font-size: 18.5pt;'>playbook</a>
+<a href='http://www.eltecnoblog.com/tag/raritan/' class='tag-link-15' title='1 tema' style='font-size: 8pt;'>raritan</a>
+<a href='http://www.eltecnoblog.com/tag/reemplazar/' class='tag-link-21' title='1 tema' style='font-size: 8pt;'>reemplazar</a>
+<a href='http://www.eltecnoblog.com/tag/register_globals/' class='tag-link-11' title='1 tema' style='font-size: 8pt;'>register_globals</a>
+<a href='http://www.eltecnoblog.com/tag/sacar-de-quicio/' class='tag-link-51' title='1 tema' style='font-size: 8pt;'>sacar de quicio</a>
+<a href='http://www.eltecnoblog.com/tag/shell/' class='tag-link-23' title='1 tema' style='font-size: 8pt;'>shell</a>
+<a href='http://www.eltecnoblog.com/tag/slider/' class='tag-link-55' title='1 tema' style='font-size: 8pt;'>slider</a>
+<a href='http://www.eltecnoblog.com/tag/spf/' class='tag-link-26' title='1 tema' style='font-size: 8pt;'>spf</a>
+<a href='http://www.eltecnoblog.com/tag/sustituir/' class='tag-link-18' title='1 tema' style='font-size: 8pt;'>sustituir</a>
+<a href='http://www.eltecnoblog.com/tag/switched/' class='tag-link-16' title='1 tema' style='font-size: 8pt;'>switched</a>
+<a href='http://www.eltecnoblog.com/tag/twitter/' class='tag-link-41' title='1 tema' style='font-size: 8pt;'>twitter</a>
+<a href='http://www.eltecnoblog.com/tag/usb/' class='tag-link-77' title='2 temas' style='font-size: 14.3pt;'>usb</a>
+<a href='http://www.eltecnoblog.com/tag/wget/' class='tag-link-22' title='1 tema' style='font-size: 8pt;'>wget</a>
+<a href='http://www.eltecnoblog.com/tag/y-combinator/' class='tag-link-36' title='1 tema' style='font-size: 8pt;'>y combinator</a>
+<a href='http://www.eltecnoblog.com/tag/ycombinator/' class='tag-link-35' title='1 tema' style='font-size: 8pt;'>ycombinator</a>
+<a href='http://www.eltecnoblog.com/tag/exito/' class='tag-link-39' title='1 tema' style='font-size: 8pt;'>éxito</a></div>
+</li><li id="linkcat-2" class="widget widget_links">Blogs y enlaces
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.saghul.net/blog/">Blog de Saúl Ibarra</a></li>
+<li><a href="http://www.bocadillodecalamares.com/" rel="friend colleague" target="_blank">Bocadillo de calamares</a></li>
+<li><a href="http://oiyup.blogspot.com/" rel="friend co-worker" target="_blank">Chacareando</a></li>
+<li><a href="http://pof.eslack.org/blog/">pofHQ</a></li>
+<li><a href="http://www.grito.net/dominios/">Registro de dominios</a></li>
+<li><a href="http://www.grito.net/servidores-dedicados/" target="_blank">Servidores dedicados linux</a></li>
+<li><a href="http://www.voipnovatos.es/">VoIP novatos</a></li>
+
+	</ul>
+</li>
+<li id="qtranslate-4" class="widget widget_qtranslate">Choose Language<ul class="qtrans_language_chooser" id="qtranslate-4-chooser"><li class="active"><a href="http://www.eltecnoblog.com/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/" class="qtrans_flag_es qtrans_flag_and_text"><span>Español</span></a></li><li><a href="http://www.eltecnoblog.com/en/2011/04/15/desarrollando-aplicaciones-para-blackberry-playbook-parte-1/" class="qtrans_flag_en qtrans_flag_and_text"><span>English</span></a></li></ul><div class="qtrans_widget_end"></div></li>
+</ul>
+
+</div>
+<!-- end sidebar -->
+
+<hr />
+
+  <div id="footer">
+    <p class="up"><a href="#header" title="Jump to the top of the page">top</a></p>
+    <p class="credit">Powered by <a href='http://wordpress.org/' title='Funciona gracias a WordPress'><strong>WordPress</strong></a> and <a href="http://www.tomstardust.com/wordpress-themes/stardust/" title="Stardust Wordpress Theme">Stardust</a></p>
+    <p>Created by <a href="http://www.tomstardust.com" title="TomStardust.com - Web Design Blog">Tommaso Baldovino</a></p>
+  <script type='text/javascript' src='http://twitter.com/javascripts/blogger.js?ver=1'></script>
+<script type='text/javascript' src='http://twitter.com/statuses/user_timeline/guillemmateos.json?callback=twitterCallback2&count=5&ver=1'></script>
+  </div>
+
+</div><!-- end container -->
+</body>
+</html>

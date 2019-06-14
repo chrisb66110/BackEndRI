@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Aprenda cómo funciona una red neuronal, por qué es importante y cómo se puede capacitar para reconocer patrones, clasificar datos y pronosticar eventos futuros."/>
+
+	<link rel="icon" href="/etc/designs/mathworks/img/favicon.ico" type="image/x-icon">
+	<link rel="canonical" href="https://la.mathworks.com/discovery/neural-network.html"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+
+	
+	
+	
+	
+
+	<meta property="og:url" content="https://la.mathworks.com/discovery/neural-network.html"/>
+	
+	
+	<meta property="og:description" content="Aprenda cómo funciona una red neuronal, por qué es importante y cómo se puede capacitar para reconocer patrones, clasificar datos y pronosticar eventos futuros."/>
+	<meta property="og:title" content="¿Qué es una red neuronal?"/>
+	
+	
+
+	<link rel="stylesheet" href="/etc/clientlibs/foundation/main.min.css" type="text/css"/>
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/utils.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/main.min.js"></script>
+
+	<script type="text/javascript">
+            (function() {
+                window.ContextHub = window.ContextHub || {};
+
+                /* setting paths */
+                ContextHub.Paths = ContextHub.Paths || {};
+                ContextHub.Paths.CONTEXTHUB_PATH = "/etc/cloudsettings/default/contexthub";
+                ContextHub.Paths.RESOURCE_PATH = "\/content\/mathworks\/la\/es\/discovery\/neural\u002Dnetwork\/jcr:content\/contexthub";
+                ContextHub.Paths.SEGMENTATION_PATH = "\/etc\/segmentation\/contexthub";
+                ContextHub.Paths.CQ_CONTEXT_PATH = "";
+
+                /* setting initial constants */
+                ContextHub.Constants = ContextHub.Constants || {};
+                ContextHub.Constants.ANONYMOUS_HOME = "/home/users/P/PKwwu1fmmbCuTYDzAmIS";
+                ContextHub.Constants.MODE = "no-ui";
+            }());
+        </script><script src="/etc/cloudsettings/default/contexthub.kernel.js" type="text/javascript"></script>
+	
+
+	
+
+	
+
+	
+    
+<link rel="stylesheet" href="/etc/designs/mathworks/clientlibs.min.20190220220542215.css" type="text/css"/>
+
+
+
+	
+    
+<script type="text/javascript" src="/etc/designs/mathworks/clientlibs/headlibs.min.20190220220542215.js"></script>
+
+
+
+	
+    
+<link rel="stylesheet" href="/etc/designs/mathworks/clientlibs/aem.min.20190220220542215.css" type="text/css"/>
+
+
+
+
+	
+	
+	
+
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<script id="analyticsDigitalData"> digitalData = {
+  "pageInstanceID" : "https://la.mathworks.com/discovery/neural-network.html",
+  "page" : {
+    "pageInfo" : {
+      "pageID" : "https://la.mathworks.com/discovery/neural-network.html",
+      "destinationURL" : "https://la.mathworks.com/discovery/neural-network.html"
+    },
+    "category" : {
+      "subCategory1" : "discovery/neural-network",
+      "pageType" : "disc"
+    },
+    "attributes" : { }
+  },
+  "product" : [ {
+    "productInfo" : { }
+  } ],
+  "component" : [ ]
+};</script>
+
+	<script src="//assets.adobedtm.com/d0cc0600946eb3957f703b9fe43c3590597a8c2c/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script>
+
+	
+
+	
+		
+	
+
+	<title>¿Qué es una red neuronal? - MATLAB &amp; Simulink</title>
+</head>
+
+
+
+	<body>
+
+	
+<!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+							<span class="sr-only">Cambiar a Navegación Principal</span>
+							<span class="icon-menu"></span>
+						</button>
+						<a href="/?s_tid=gn_logo" class="svg_link navbar-brand">
+							<img src="/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row visible-xs visible-sm">
+				<div class="col-xs-12">
+					<div class="navbar-collapse collapse" id="topnav_collapse">
+						<div class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
+
+<ul class="nav navbar-nav" id="topnav_mobile">
+	<li class="headernav_login" style='display: none;'>
+	<a class='mwa-nav_login'>Iniciar sesión</a>
+</li>
+<li class="headernav_logout dropdown" style='display: none;'>
+	<a href='#' class='dropdown-toggle' data-toggle='dropdown' aria-expanded="false">
+		<span class='mwa-name'></span><b class='caret'></b>
+	</a>
+	<ul class='dropdown-menu'>
+		<li class='mwa-nav_account'><a class='mwa-account'>Mi Cuenta</a></li>
+		<li class='mwa-nav_associate'><a class='mwa-associate-license'>Asociar Licencia</a></li>
+		<li class='mwa-nav_community'><a class='mwa-community-profile'>Mi perfil de la comunidad</a></li>
+		<li class='mwa-nav_logout'><a class='mwa-logout'>Cerrar sesión</a>
+		</li>
+	</ul>
+</li>
+
+	
+		<li class="topnav_products ">
+			<a href="/products.html?s_tid=gn_ps">Productos</a>
+		</li>
+	
+		<li class="topnav_solutions ">
+			<a href="/solutions.html?s_tid=gn_sol">Soluciones</a>
+		</li>
+	
+		<li class="topnav_academia ">
+			<a href="/academia.html?s_tid=gn_acad">Educación</a>
+		</li>
+	
+		<li class="topnav_support ">
+			<a href="/support.html?s_tid=gn_supp">Soporte</a>
+		</li>
+	
+		<li class="topnav_community ">
+			<a href="https://la.mathworks.com/matlabcentral/?s_tid=gn_mlc">Comunidad</a>
+		</li>
+	
+		<li class="topnav_events ">
+			<a href="/company/events.html?s_tid=gn_ev">Eventos</a>
+		</li>
+	
+	
+		<li class="headernav_contact">
+			<a href="/company/aboutus/contact_us.html?s_tid=gn_cntus">Contáctenos</a>
+		</li>
+		<li class="headernav_store">
+			<a href="https://la.mathworks.com/store?s_tid=gn_store">Cómo comprar</a>
+		</li>
+	
+</ul>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="headerNavigation headernavigation containsResourceName resourceClass-headernavigation">
+<div class="collapse navbar-collapse" id="headernav_collapse">
+	<ul class="nav navbar-nav navbar-right" id="headernav">
+		<li class="headernav_contact"><a href="/company/aboutus/contact_us.html?s_tid=gn_cntus">Contáctenos</a></li>
+		<li class="headernav_store"><a href="https://la.mathworks.com/store?s_tid=gn_store">Cómo comprar</a></li>
+		<li class="headernav_login" style='display: none;'>
+	<a class='mwa-nav_login'>Iniciar sesión</a>
+</li>
+<li class="headernav_logout dropdown" style='display: none;'>
+	<a href='#' class='dropdown-toggle' data-toggle='dropdown' aria-expanded="false">
+		<span class='mwa-name'></span><b class='caret'></b>
+	</a>
+	<ul class='dropdown-menu'>
+		<li class='mwa-nav_account'><a class='mwa-account'>Mi Cuenta</a></li>
+		<li class='mwa-nav_associate'><a class='mwa-associate-license'>Asociar Licencia</a></li>
+		<li class='mwa-nav_community'><a class='mwa-community-profile'>Mi perfil de la comunidad</a></li>
+		<li class='mwa-nav_logout'><a class='mwa-logout'>Cerrar sesión</a>
+		</li>
+	</ul>
+</li>
+
+	</ul>
+</div></div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="navbar-header">
+						<div class="logo_container hidden-xs hidden-sm">
+							<a href="/?s_tid=gn_logo" class="svg_link pull-left">
+								<img src="/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+							</a>
+						</div>
+						<div class="navbar-collapse collapse hidden-xs hidden-sm">
+							
+							<div class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
+
+
+	<ul id="topnav" class="nav navbar-nav">
+		<li class="topnav_products ">
+			<a href="/products.html?s_tid=gn_ps">Productos</a>
+		</li>
+	
+		<li class="topnav_solutions ">
+			<a href="/solutions.html?s_tid=gn_sol">Soluciones</a>
+		</li>
+	
+		<li class="topnav_academia ">
+			<a href="/academia.html?s_tid=gn_acad">Educación</a>
+		</li>
+	
+		<li class="topnav_support ">
+			<a href="/support.html?s_tid=gn_supp">Soporte</a>
+		</li>
+	
+		<li class="topnav_community ">
+			<a href="https://la.mathworks.com/matlabcentral/?s_tid=gn_mlc">Comunidad</a>
+		</li>
+	
+		<li class="topnav_events ">
+			<a href="/company/events.html?s_tid=gn_ev">Eventos</a>
+		</li>
+	</ul>
+	
+</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Desktop TopNav: End -->
+
+	<div class="sticky_header_container ">
+		<!-- Section Header: Start -->
+		<div class="section_header level_3">
+			<div class="container">
+				<div class="row" id="mobile_search_row">
+					<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+						<div><div class="sectionHeadSearchBox sectionheadsearchbox containsResourceName resourceClass-sectionheadsearchbox">
+<div class="search_nested_content_container">
+	
+	<div id="search_scope_site" class="collapse in">
+		<form name="search" id="site_search" class="site_search" action="https://la.mathworks.com/search/site_search.html" method="get">
+			<div class="input-group">
+				<label class="sr-only">Buscar MathWorks.com</label>
+				<input type="hidden" name="c[]" value="entire_site">
+				<input type="search" name="q" id="query" class="form-control conjoined_search" placeholder="Buscar MathWorks.com" autocomplete="off" data-site-domain="la" data-site-language="es">
+				<div class="input-group-btn">
+					
+					<button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script>
+		$(".search_scope_trigger").click(function handlerSearch(event) {
+			var target1 = event.target.parentNode.attributes.getNamedItem("data-groupid").nodeValue;
+			$('#' + target1).removeClass("in");
+		});
+	</script>
+
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" data-target="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+
+</div>
+</div>
+					</div>
+					<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5" id="section_header_title">
+						<div><div class="sectionHead sectionhead containsResourceName resourceClass-sectionhead">
+	<div class="section_header_content">
+		<div class="section_header_title">
+			<h1>
+				
+				Redes neuronales
+			</h1>
+			
+			
+		</div>
+		
+	</div>
+</div>
+</div>
+					</div>
+					<div class="visible-xs" id="search_actuator">
+						<button class="btn icon-search btn_search pull-right icon_16 containsResourceName resourceClass-button" data-toggle="collapse" data-target="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+					</div>
+				</div>
+				<!-- Mobile Local Nav: Start -->
+				
+				<!-- Mobile Local Nav: End -->
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+	
+	<div class="content_container">
+		
+			
+			
+
+
+<div class="band add_background_color_null add_background_cover add_display_table section_upsize add_font_color_white">
+	
+	<div data-adaptivepicture data-backgroundImage="true">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content.adapt.full.low.jpg/1533931854399.jpg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content.adapt.full.medium.jpg/1533931854399.jpg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content.adapt.full.high.jpg/1533931854399.jpg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		
+	</div>
+
+	<div class="add_display_table_cell add_vertical_align_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row text-center">
+						<div class="col-xs-12">
+							<p class="add_margin_40 hidden_xs">&nbsp;</p>
+							<div><div class="mainParsys parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h1>¿Qué es una red neuronal?</h1>
+<h2>Tres cosas que es necesario saber</h2>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="band add_background_color_null" id="intro">
+	<div class="container">
+		<div class="row section_upsize">
+			<div class="col-xs-12 col-md-8 col-md-offset-2 section_upsize add_font_futura_book">
+				<div><div class="mainParsys2 parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text add_margin_40 ">
+	<p>Una red neuronal es un modelo de computación cuya estructura de capas se asemeja a la estructura interconectada de las neuronas en el cerebro, con capas de nodos conectados. Una red neuronal puede aprender de los datos, de manera que se puede entrenar para que reconozca patrones, clasifique datos y pronostique eventos futuros.</p>
+<p>Las redes neuronales descomponen las entradas en capas de abstracción. Se pueden entrenar con muchos ejemplos para que reconozcan patrones de voz o en imágenes, por ejemplo, igual que el cerebro humano. Su comportamiento está definido por la forma en que se conectan sus elementos individuales, así como por la importancia (o ponderación) de dichas conexiones. Estas ponderaciones se ajustan automáticamente durante el entrenamiento de acuerdo con una regla de aprendizaje especificada hasta que la red neuronal lleva a cabo la tarea deseada correctamente.</p>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<div class="row add_margin_0 text_center add_equal_heights">
+					
+						
+							<div class="col-xs-12 col-sm-4 add_margin_10_xs">
+								<div class="panel panel-default add_margin_0">
+									<div class="panel-body">
+										<div class="mw-text add_margin_0">
+											<h4 class="text-center add_font_futura_book"><a title="Por qué son importantes" href="#por-qu%C3%A9-son-importantes" target="_self">Por qué son importantes</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="col-xs-12 col-sm-4 add_margin_10_xs">
+								<div class="panel panel-default add_margin_0">
+									<div class="panel-body">
+										<div class="mw-text add_margin_0">
+											<h4 class="text-center add_font_futura_book"><a title="Cómo funcionan" href="#c%C3%B3mo-funcionan" target="_self">Cómo funcionan</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="col-xs-12 col-sm-4 add_margin_10_xs">
+								<div class="panel panel-default add_margin_0">
+									<div class="panel-body">
+										<div class="mw-text add_margin_0">
+											<h4 class="text-center add_font_futura_book"><a title="Redes neuronales con MATLAB" href="#redes-neuronales-con-matlab" target="_self">Redes neuronales con MATLAB</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div><div class="mainParsys3 parsys containsResourceName resourceClass-parsys"><div class="discoverysubsection containsResourceName resourceClass-discoverysubsection section">
+
+<div class="section_upsize add_margin_0 add_margin_0_xs">
+	<h2 class="h1 add_font_color_orange add_margin_0 add_center_rule text-center"><a name="Por qué son importantes" id="por-qu%C3%A9-son-importantes"></a><span>¿Por qué son importantes las redes neuronales?</span></h2>
+</div>
+<div class="band add_background_color_null section_upsize">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<div><div class="text containsResourceName resourceClass-text">
+<div class="mw-text  ">
+	<p>Las redes neuronales resultan especialmente adecuadas para llevar a cabo el <a href="/discovery/pattern-recognition.html">reconocimiento de patrones</a> a fin de identificar y clasificar objetos o señales en sistemas de voz, visión y control. También se pueden emplear para el modelado y la predicción de series temporales.</p>
+<p>Estos son algunos ejemplos de uso de las redes neuronales:</p>
+<ul>
+<li>Las compañías eléctricas <a href="/discovery/load-forecasting.html">pronostican la carga de sus redes</a> con precisión para garantizar la fiabilidad y optimizar la eficiencia de los generadores eléctricos que utilizan.</li>
+<li>Los cajeros automáticos pueden aceptar depósitos bancarios de forma fiable mediante la lectura del número de cuenta y del importe del depósito en un cheque.</li>
+<li>Los patólogos confían en aplicaciones de <a href="https://la.mathworks.com/help/nnet/examples/cancer-detection.html">detección de cáncer</a> como guía a la hora de clasificar los tumores como benignos o malignos en función de la uniformidad del tamaño de las células, el grosor de la masa, la mitosis y otros factores.</li>
+</ul>
+
+</div>
+
+
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 section_downsize">
+						<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			
+			
+			
+			
+			
+				<div class="col-xs-6 col-sm-12">
+					
+	
+		
+		
+	<a href="/solutions/deep-learning.html" title="MATLAB for Deep Learning">
+		<img src="/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys3/discoverysubsection/thumbnail.img.jpg/1541688008089.jpg" class="fluid_image" alt="MATLAB for Deep Learning" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/solutions/deep-learning/thumbnail-deeplearning.jpg">
+		
+		
+		
+	</a>
+
+	
+
+				</div>
+				<div class="col-xs-6 col-sm-12">
+					
+	<div class="asset_title">
+			
+			
+	<a href="/solutions/deep-learning.html">
+		
+		Descripción general de deep learning
+		<span style='color:grey'></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		
+
+				</div>
+			
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12"><div><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3>Deep Learning</h3>
+<p>Las redes neuronales que operan en dos o tres capas de neuronas conectadas se conocen como <a href="https://la.mathworks.com/help/nnet/gs/shallow-networks-for-pattern-recognition-clustering-and-time-series.html">redes neuronales <i>superficiales</i></a>. Las redes de <i>deep learning</i> pueden tener muchas capas, incluso cientos de ellas. Ambas son técnicas de machine learning que aprenden directamente de los datos introducidos.</p>
+<p>El <a href="/discovery/deep-learning.html">deep learning</a> atrae mucha atención últimamente, y hay razones de peso para ello. Está consiguiendo resultados que antes no eran posibles.</p>
+<p>El deep learning se adapta especialmente bien a aplicaciones de identificación complejas, tales como el reconocimiento facial, la traducción de textos y el reconocimiento de voz. También es una tecnología clave utilizada en sistemas y tareas avanzados de conducción asistida, que incluyen la asignación de carriles y el reconocimiento de señales de tráfico.</p>
+
+</div>
+
+
+</div>
+<div class="actionlink containsResourceName section resourceClass-actionlink">
+
+
+
+	
+	
+	<a href="/videos/introduction-to-deep-learning-machine-learning-vs-deep-learning-1489503513018.html" class="add_margin_20    icon-chevron icon-video add_icon_color_null null ">
+		<span></span>
+		Introducción a deep learning: machine learning frente a deep learning
+		<span style='color:grey'> (3:47)</span>
+		
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<div class="discoverysubsection containsResourceName resourceClass-discoverysubsection section">
+
+<div class="section_upsize add_margin_0 add_margin_0_xs">
+	<h2 class="h1 add_font_color_orange add_margin_0 add_center_rule text-center"><a name="Cómo funcionan" id="c%C3%B3mo-funcionan"></a><span>¿Cómo funcionan las redes neuronales?</span></h2>
+</div>
+<div class="band add_background_color_null section_upsize">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<div><div class="text containsResourceName resourceClass-text">
+
+<div class="cq-placeholder" data-emptytext="Text">
+</div>
+
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 section_downsize">
+						<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="cq-placeholder" data-emptytext="Thumbnail"></div>
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12"><div><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<p>Una red neuronal combina diversas capas de procesamiento y utiliza elementos simples que operan en paralelo, y están inspiradas en los sistemas nerviosos biológicos. Consta de una capa de entrada, una o varias capas ocultas y una capa de salida. Las capas están interconectadas mediante nodos, o neuronas; cada capa utiliza la salida de la capa anterior como entrada.</p>
+
+</div>
+
+
+</div>
+<div class="cqImage containsResourceName section resourceClass-image">
+
+
+
+
+
+	
+	
+	<div class="clearfix mw-image thumbnail      ">
+
+		
+		
+
+		
+		
+
+		
+		
+
+	
+	
+	
+	<div data-adaptivepicture data-alt="Arquitectura típica de una red neuronal." data-class=" remove_border">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1001794945/mainParsys3/image.adapt.full.low.svg/1541688008186.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1001794945/mainParsys3/image.adapt.full.medium.svg/1541688008186.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1001794945/mainParsys3/image.adapt.full.high.svg/1541688008186.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys3/discoverysubsection_1001794945/mainParsys3/image.adapt.full.high.svg/1541688008186.svg' alt='Arquitectura típica de una red neuronal.' class=" remove_border" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/discovery/deeplearning-neural-network-weights-biases.svg">
+		</noscript>
+	</div>
+
+
+	
+
+
+		<div class="caption">
+			<p>Arquitectura típica de una red neuronal.</p>
+
+		</div>
+
+	</div>
+
+
+
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3>Técnicas empleadas con las redes neuronales</h3>
+<p>Algunas técnicas habituales de machine learning para diseñar aplicaciones de redes neuronales son el aprendizaje supervisado y no supervisado, la clasificación, la regresión, el reconocimiento de patrones y el clustering.</p>
+<h4>Aprendizaje supervisado</h4>
+<p>Las <a href="/discovery/supervised-learning.html">redes neuronales supervisadas </a>se entrenan para producir las salidas deseadas como respuesta a entradas de muestra, por lo que resultan idóneas para modelar y controlar sistemas dinámicos, clasificar datos con ruido y predecir eventos futuros. <a href="/products/deep-learning.html">Deep Learning Toolbox™</a> incluye cuatro tipos de redes supervisadas: feedforward, de base radial, dinámicas y de cuantificación vectorial de aprendizaje.</p>
+<h4>Clasificación</h4>
+<p>La clasificación es un tipo de machine learning supervisado en el que un algoritmo “aprende” a clasificar nuevas observaciones a partir de ejemplos de datos etiquetados.</p>
+<h4>Regresión</h4>
+<p>Los modelos de regresión describen la relación entre una variable de respuesta (salida) y una o varias variables de predicción (entrada).</p>
+<h4>Reconocimiento de patrones</h4>
+<p>El reconocimiento de patrones es un componente importante de las aplicaciones de redes neuronales en visión artificial, procesamiento de radar, reconocimiento de voz y clasificación textual. Funciona mediante la clasificación de los datos de entrada en objetos o clases en función de características clave, ya sea mediante la clasificación supervisada o no supervisada.</p>
+<p>Por ejemplo, en la visión artificial, se emplean técnicas de reconocimiento de patrones supervisado para el reconocimiento óptico de caracteres (OCR), la detección facial, el reconocimiento facial, la detección de objetos y la clasificación de objetos. En el procesamiento de imágenes y la visión artificial, se emplean técnicas de reconocimiento de patrones no supervisado para la detección de objetos y la segmentación de imágenes.</p>
+<h4>Aprendizaje no supervisado</h4>
+<p>Las <a href="/discovery/unsupervised-learning.html">redes neuronales no supervisadas</a> se entrenan permitiendo que la red neuronal se autoajuste continuamente a las nuevas entradas. Se emplean para inferir información a partir de conjuntos de datos que constan de datos de entrada sin respuestas etiquetadas. Se pueden utilizar para descubrir distribuciones naturales, categorías y relaciones entre categorías en los datos.</p>
+<p>Deep Learning Toolbox incluye dos tipos de redes no supervisadas: capas competitivas y mapas de organización automática.</p>
+<h4>Clustering</h4>
+<p>El clustering es un enfoque de aprendizaje no supervisado en el cual se pueden emplear redes neuronales para el análisis de datos exploratorio a fin de localizar patrones ocultos o agrupaciones de datos. Este proceso implica la agrupación de datos por similitud. Entre las aplicaciones del <a href="/discovery/cluster-analysis.html">análisis de clusters</a> están el análisis de secuencias genéticas, la investigación de mercados y el reconocimiento de objetos.</p>
+
+</div>
+
+
+</div>
+
+</div>
+</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<div class="discoverysubsection containsResourceName resourceClass-discoverysubsection section">
+
+<div class="section_upsize add_margin_0 add_margin_0_xs">
+	<h2 class="h1 add_font_color_orange add_margin_0 add_center_rule text-center"><a name="Redes neuronales con MATLAB" id="redes-neuronales-con-matlab"></a><span>Desarrollo de redes neuronales superficiales con MATLAB</span></h2>
+</div>
+<div class="band add_background_color_null section_upsize">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<div><div class="text containsResourceName resourceClass-text">
+
+<div class="cq-placeholder" data-emptytext="Text">
+</div>
+
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 section_downsize">
+						<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="cq-placeholder" data-emptytext="Thumbnail"></div>
+</div>
+</div>
+						<div><div class="parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12"><div><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<p>Con herramientas y funciones para administrar grandes conjuntos de datos, <a href="/products/matlab.html">MATLAB<sup>®</sup></a> ofrece toolboxes especializadas para trabajar con machine learning, redes neuronales, deep learning, visión artificial y conducción autónoma.</p>
+<p>Con unas pocas líneas de código, MATLAB permite desarrollar redes neuronales sin ser un experto. Podrá ponerse en marcha rápidamente, crear y visualizar modelos o desplegar modelos en servidores y dispositivos embebidos.</p>
+<p>MATLAB permite integrar los resultados en sus aplicaciones existentes. MATLAB automatiza la implementación de sus modelos de redes neuronales en sistemas de empresa, clusters, nubes y dispositivos embebidos.</p>
+
+</div>
+
+
+</div>
+<div class="actionlink containsResourceName section resourceClass-actionlink">
+
+
+
+	
+	
+	<a href="https://la.mathworks.com/help/nnet/ug/workflow-for-neural-network-design.html" class="add_margin_5   icon-documentation  null add_icon_color_null null ">
+		
+		Flujo de trabajo para el diseño de redes neuronales
+		<span style='color:grey'></span>
+		
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="actionlink containsResourceName section resourceClass-actionlink">
+
+
+
+	
+	
+	<a href="/videos/getting-started-with-neural-network-toolbox-68794.html" class="add_margin_5    icon-chevron icon-video add_icon_color_null null ">
+		<span></span>
+		Primeros pasos con Deep Learning Toolbox
+		<span style='color:grey'> (4:20)</span>
+		
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="actionlink containsResourceName section resourceClass-actionlink">
+
+
+
+	
+	
+	<a href="/videos/wine-classification-with-neural-pattern-recognition-tool-68798.html" class="add_margin_20    icon-chevron icon-video add_icon_color_null null ">
+		<span></span>
+		Clasificación de vinos con la app Neural Net Pattern Recognition
+		<span style='color:grey'> (3:36)</span>
+		
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3>Flujo de trabajo típico para diseñar redes neuronales</h3>
+<p>Cada aplicación de red neuronal es única, pero el desarrollo de la red suele implicar los pasos siguientes:</p>
+<ol>
+<li>Acceder a los datos y prepararlos</li>
+<li>Crear la red neuronal</li>
+<li>Configurar las entradas y salidas de la red</li>
+<li>Ajustar los parámetros de la red (las ponderaciones y tendencias) para optimizar el rendimiento</li>
+<li>Entrenar la red</li>
+<li>Validar los resultados de la red</li>
+<li>Integrar la red en un sistema de producción</li>
+</ol>
+<h3>Clasificación y clustering de redes superficiales</h3>
+<p>MATLAB y Deep Learning Toolbox proporcionan funciones de línea de comandos y apps para crear, entrenar y simular redes neuronales superficiales. Las apps facilitan el desarrollo de redes neuronales para tareas tales como la clasificación, la regresión (incluida la regresión de series temporales) y el clustering. Tras crear las redes con estas herramientas, es posible generar automáticamente código de MATLAB para capturar el trabajo y automatizar las tareas.</p>
+<h3>Preprocesamiento, posprocesamiento y perfeccionamiento de la red</h3>
+<p>El preprocesamiento de las entradas y los objetivos de la red aumenta la eficiencia del entrenamiento de redes neuronales superficiales. El posprocesamiento permite el análisis detallado del rendimiento de la red. MATLAB y <a href="/products/simulink.html">Simulink<sup>®</sup></a> proporcionan herramientas para ayudarle a:</p>
+<ul>
+<li>Reducir las dimensiones de los vectores de entrada mediante el análisis de componentes principales</li>
+<li>Llevar a cabo análisis de regresión entre la respuesta de la red y los objetivos correspondientes</li>
+<li>Escalar las entradas y los objetivos para que se ajusten al rango [-1,1]</li>
+<li>Normalizar la media y la desviación estándar del conjunto de datos de entrenamiento</li>
+<li>Utilizar el preprocesamiento de datos y la división de datos automatizados al crear sus redes</li>
+</ul>
+<p>El perfeccionamiento de la capacidad de la red para generalizar contribuye a evitar el sobreajuste, un problema habitual en el diseño de redes neuronales. El sobreajuste se produce cuando una red ha memorizado el conjunto de entrenamiento pero no ha aprendido a generalizar cuando hay entradas nuevas. El sobreajuste produce un error relativamente pequeño en el conjunto de entrenamiento, pero un error mucho mayor cuando se presentan datos nuevos a la red.</p>
+<p>Dos soluciones posibles para mejorar la generalización son:</p>
+<ul>
+<li>La <b>regularización</b>, que modifica la función de rendimiento de la red (la medida de error que minimiza el proceso de entrenamiento). Mediante la inclusión de los valores de las ponderaciones y las tendencias, la regularización produce una red que funciona bien con los datos de entrenamiento y ofrece un comportamiento más fluido cuando se le presentan datos nuevos.</li>
+<li>La <b>parada temprana</b> utiliza dos conjuntos de datos distintos: el conjunto de entrenamiento, para actualizar las ponderaciones y las tendencias, y el conjunto de validación, para detener el entrenamiento cuando la red empieza a sobreajustar los datos.</li>
+</ul>
+
+</div>
+
+
+</div>
+<div class="cqImage containsResourceName section resourceClass-image">
+
+
+
+
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			
+	<div class="clearfix mw-image thumbnail thumbnail_asset asset_overlay enlarge    ">
+
+		
+		
+
+		
+		<a href="/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys3/discoverysubsection_1193573779/mainParsys3/image.adapt.full.high.jpg/1541688008298.jpg" data-footer="&lt;p>Gráficos de posprocesamiento para analizar el rendimiento de la red, incluidos el rendimiento de validación del error cuadrático medio para etapas de entrenamiento sucesivas (arriba a la izquierda), un histograma de errores (arriba a la derecha) y matrices de confusión (abajo) para las fases de entrenamiento, validación y prueba.&lt;/p>
+" data-toggle="lightbox">
+
+			
+
+	
+	
+	
+	<div data-adaptivepicture data-alt="Gráficos de posprocesamiento para analizar el rendimiento de la red." data-class="fluid_image remove_border">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1193573779/mainParsys3/image.adapt.full.low.jpg/1541688008298.jpg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1193573779/mainParsys3/image.adapt.full.medium.jpg/1541688008298.jpg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys3/discoverysubsection_1193573779/mainParsys3/image.adapt.full.high.jpg/1541688008298.jpg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys3/discoverysubsection_1193573779/mainParsys3/image.adapt.full.high.jpg/1541688008298.jpg' alt='Gráficos de posprocesamiento para analizar el rendimiento de la red.' class="fluid_image remove_border" data-aem-src="/content/dam/mathworks/mathworks-dot-com/cmsimages/discovery/images/postprocessing-plots-for-analyzing-network-performance.jpg">
+		</noscript>
+	</div>
+
+
+	<div class="overlay_container">
+		<span class="icon-zoomin add_icon_color_white"></span>
+	</div>
+
+		</a>
+
+		
+		
+
+		<div class="caption">
+			<p>Gráficos de posprocesamiento para analizar el rendimiento de la red, incluidos el rendimiento de validación del error cuadrático medio para etapas de entrenamiento sucesivas (arriba a la izquierda), un histograma de errores (arriba a la derecha) y matrices de confusión (abajo) para las fases de entrenamiento, validación y prueba.</p>
+
+		</div>
+
+	</div>
+
+		</div>
+	</div>
+	
+
+
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3>Generación y despliegue de código</h3>
+<p>Mediante Deep Learning Toolbox con <a href="/products/matlab-coder.html">MATLAB Coder™</a>, <a href="/products/gpu-coder.html">GPU Coder™</a> y <a href="/products/compiler.html">MATLAB Compiler™</a>, es posible desplegar redes entrenadas en sistemas embebidos o integrarlas en una amplia gama de entornos de producción. Puede utilizar MATLAB Coder a fin de generar código C y C++ para su red entrenada, lo cual permite simular una red entrenada en hardware de PCs y, posteriormente, desplegar la red en sistemas embebidos. Puede utilizar MATLAB Compiler y <a href="/products/matlab-compiler-sdk.html">MATLAB Compiler SDK™</a> para desplegar redes entrenadas como librerías C/C++ compartidas, ensamblados de Microsoft<sup>®</sup>. NET, clases de Java<sup>®</sup> y paquetes de Python<sup>®</sup> a partir de programas de MATLAB. También puede entrenar un modelo de red en la aplicación desplegada o en un componente.</p>
+<h3>Soporte para Simulink</h3>
+<p>Deep Learning Toolbox proporciona un conjunto de bloques para crear redes neuronales superficiales en Simulink. Todos los bloques son compatibles con <a href="/products/simulink-coder.html">Simulink Coder™</a>. Estos bloques se dividen en cuatro librerías:</p>
+<ul>
+<li><b>Bloques de función de transferencia</b>, que admiten un vector de entrada de red y generan un vector de salida correspondiente.</li>
+<li><b>Bloques de función de entrada de red</b>, que admiten cualquier número de vectores de entrada ponderados, vectores de salida de capa de ponderación y vectores de tendencias, y devuelven un vector de entrada de red.</li>
+<li><b>Bloques de función de ponderación</b>, que aplican un vector de ponderación neuronal a un vector de entrada (o un vector de salida de capa) a fin de obtener un valor de entrada ponderado para una neurona.</li>
+<li><b>Bloques de preprocesamiento de datos</b>, que asignan datos de entrada y salida dentro de los rangos más adecuados para que la red neuronal los gestione directamente.</li>
+</ul>
+<p>Si lo prefiere, puede crear y entrenar sus redes en el entorno de MATLAB y generar automáticamente bloques de simulación de red para usarlos con Simulink. Este enfoque también permite ver las redes de forma gráfica.</p>
+
+</div>
+
+
+</div>
+<div class="actionlink containsResourceName section resourceClass-actionlink">
+
+
+
+	
+	
+	<a href="https://la.mathworks.com/help/nnet/ug/design-neural-network-predictive-controller-in-simulink.html" class="add_margin_20   icon-documentation  null add_icon_color_null null ">
+		
+		Diseño de un controlador predictivo de red neuronal en Simulink
+		<span style='color:grey'></span>
+		
+	</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+
+	<div class="band add_background_color_null add_border_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row section_upsize text-center">
+						<div class="col-xs-12 col-md-10 col-md-offset-1">
+							<div class="add_margin_30">
+								<h2>Aplicaciones que emplean redes neuronales</h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-10 col-md-offset-1">
+							<div class="row add_equal_heights">
+								<div class="col-xs-12 col-sm-6 col-md-4">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			<div class="col-xs-12">
+				
+	<div class="add_margin_5">
+		
+		
+	<a href="/company/user_stories/lund-university-develops-an-artificial-neural-network-for-matching-heart-transplant-donors-with-recipients.html" title="Lund University Develops an Artificial Neural Network for Matching Heart Transplant Donors with Recipients">
+		<img src="/content/mathworks/la/es/company/user_stories/lund-university-develops-an-artificial-neural-network-for-matching-heart-transplant-donors-with-recipients/_jcr_content/thumbnail.img.jpg/1534706999884.jpg" class="fluid_image" alt="Lund University Develops an Artificial Neural Network for Matching Heart Transplant Donors with Recipients">
+		
+		<div class="overlay_container text-center">
+			<span class="icon-userstory add_icon_color_white"><span class="video_length"> </span></span>
+		</div>
+		
+	</a>
+
+	</div>
+
+				
+	<div class="asset_title">
+			
+			
+	<a href="/company/user_stories/lund-university-develops-an-artificial-neural-network-for-matching-heart-transplant-donors-with-recipients.html">
+		
+		La Universidad de Lund desarrolla una red neuronal artificial a fin de vincular a los donantes de corazón para trasplantes con los receptores
+		<span style='color:grey'></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		<span class="asset_description">La Universidad de Lund ha desarrollado un modelo predictivo y ha simulado miles de combinaciones de perfil de riesgo a fin de aumentar las tasas de supervivencia a largo plazo de los receptores.</span>
+
+			</div>
+			
+			
+			
+			
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-4">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			<div class="col-xs-12">
+				
+	<div class="add_margin_5">
+		
+		
+	<a href="https://la.mathworks.com/help/nnet/examples/cancer-detection.html" title="Utilización de redes neuronales para la detección del cáncer">
+		<img src="/content/mathworks/la/es/discovery/neural-network/_jcr_content/thumbnail2.img.png/1541688008350.png" class="fluid_image" alt="Utilización de redes neuronales para la detección del cáncer" data-aem-src="/content/dam/mathworks/mathworks-dot-com/cmsimages/discovery/images/neural-networks-for-cancer-detection.jpg">
+		
+		<div class="overlay_container text-center">
+			<span class="icon-examples add_icon_color_white"><span class="video_length"> </span></span>
+		</div>
+		
+	</a>
+
+	</div>
+
+				
+	<div class="asset_title">
+			
+			
+	<a href="https://la.mathworks.com/help/nnet/examples/cancer-detection.html">
+		
+		Utilización de redes neuronales para la detección del cáncer
+		<span style='color:grey'></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		<span class="asset_description">Mejora del diagnóstico del cáncer mediante una red neuronal para detectar el cáncer a partir de datos de espectrometría de masas en perfiles de proteínas.</span>
+
+			</div>
+			
+			
+			
+			
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-4">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<div><div class="cqThumbnail containsResourceName resourceClass-thumbnail"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			<div class="col-xs-12">
+				
+	<div class="add_margin_5">
+		
+		
+	<a href="https://la.mathworks.com/help/nnet/examples/train-stacked-autoencoders-for-image-classification.html" title="Entrenamiento de autocodificadores apilados para la clasificación de imágenes">
+		<img src="/content/mathworks/la/es/discovery/neural-network/_jcr_content/thumbnail3.img.jpg/1541688008370.jpg" class="fluid_image" alt="Entrenamiento de autocodificadores apilados para la clasificación de imágenes" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/thumbnails/examples/thumbnail-example-create-simple-deep-learning-network-for-classification.jpg">
+		
+		<div class="overlay_container text-center">
+			<span class="icon-examples add_icon_color_white"><span class="video_length"> </span></span>
+		</div>
+		
+	</a>
+
+	</div>
+
+				
+	<div class="asset_title">
+			
+			
+	<a href="https://la.mathworks.com/help/nnet/examples/train-stacked-autoencoders-for-image-classification.html">
+		
+		Entrenamiento de autocodificadores apilados para la clasificación de imágenes
+		<span style='color:grey'></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		<span class="asset_description">Entrenamiento de una red neuronal para clasificar imágenes de dígitos.</span>
+
+			</div>
+			
+			
+			
+			
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+								
+								
+								
+							</div>
+
+							<div><div class="mainParsys4 parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h2>Temas relacionados</h2>
+
+</div>
+
+
+</div>
+<div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   text-center ">
+
+    
+        <div class=" col-xs-12 col-sm-4 col-md-null"><div class="parsys containsResourceName resourceClass-parsys"><div class="cqPanel containsResourceName resourceClass-panel section">
+
+
+<div class="panel panel-default">
+    
+
+    
+
+    <div class="panel-body">
+        
+        <div class="panelParsys parsys containsResourceName resourceClass-parsys"><div class="pictogram containsResourceName section resourceClass-pictogram">
+
+
+
+
+
+
+ 	<div> 		
+				            				
+		
+	<a class="svg_link" href="/discovery/machine-learning.html">
+		
+	
+	
+	<div data-adaptivepicture data-alt="Machine Learning" data-title="Machine Learning" data-class="pictogram_72">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/1/panel/panelParsys/pictogram_1198790462.adapt.full.low.svg/1541688008534.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/1/panel/panelParsys/pictogram_1198790462.adapt.full.medium.svg/1541688008534.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/1/panel/panelParsys/pictogram_1198790462.adapt.full.high.svg/1541688008534.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys4/columns_copy_copy/1/panel/panelParsys/pictogram_1198790462.adapt.full.high.svg/1541688008534.svg' alt='Machine Learning' title="Machine Learning" class="pictogram_72" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/pictograms/deep-learning.svg">
+		</noscript>
+	</div>
+
+
+	</a>
+
+		
+			
+	</div>
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3><a href="/discovery/machine-learning.html">Machine Learning</a></h3>
+
+</div>
+
+
+</div>
+
+</div>
+        
+    </div>
+
+    
+
+</div></div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-4"><div class="parsys containsResourceName resourceClass-parsys"><div class="cqPanel containsResourceName resourceClass-panel section">
+
+
+<div class="panel panel-default">
+    
+
+    
+
+    <div class="panel-body">
+        
+        <div class="panelParsys parsys containsResourceName resourceClass-parsys"><div class="pictogram containsResourceName section resourceClass-pictogram">
+
+
+
+
+
+
+ 	<div> 		
+				            				
+		
+	<a class="svg_link" href="/discovery/deep-learning.html">
+		
+	
+	
+	<div data-adaptivepicture data-alt="Deep Learning" data-title="Deep Learning" data-class="pictogram_72">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/2/panel_copy/panelParsys/pictogram_351558871.adapt.full.low.svg/1541688008578.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/2/panel_copy/panelParsys/pictogram_351558871.adapt.full.medium.svg/1541688008578.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/2/panel_copy/panelParsys/pictogram_351558871.adapt.full.high.svg/1541688008578.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys4/columns_copy_copy/2/panel_copy/panelParsys/pictogram_351558871.adapt.full.high.svg/1541688008578.svg' alt='Deep Learning' title="Deep Learning" class="pictogram_72" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/pictograms/predictive-analytics.svg">
+		</noscript>
+	</div>
+
+
+	</a>
+
+		
+			
+	</div>
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3><a href="/discovery/deep-learning.html">Deep Learning</a></h3>
+
+</div>
+
+
+</div>
+
+</div>
+        
+    </div>
+
+    
+
+</div></div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-4"><div class="parsys containsResourceName resourceClass-parsys"><div class="cqPanel containsResourceName resourceClass-panel section">
+
+
+<div class="panel panel-default">
+    
+
+    
+
+    <div class="panel-body">
+        
+        <div class="panelParsys parsys containsResourceName resourceClass-parsys"><div class="pictogram containsResourceName section resourceClass-pictogram">
+
+
+
+
+
+
+ 	<div> 		
+				            				
+		
+	<a class="svg_link" href="/discovery/predictive-analytics.html">
+		
+	
+	
+	<div data-adaptivepicture data-alt="Predictive Analytics" data-title="Predictive Analytics" data-class="pictogram_72">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/3/panel_copy/panelParsys/pictogram.adapt.full.low.svg/1541688008621.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/3/panel_copy/panelParsys/pictogram.adapt.full.medium.svg/1541688008621.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/mainParsys4/columns_copy_copy/3/panel_copy/panelParsys/pictogram.adapt.full.high.svg/1541688008621.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/mainParsys4/columns_copy_copy/3/panel_copy/panelParsys/pictogram.adapt.full.high.svg/1541688008621.svg' alt='Predictive Analytics' title="Predictive Analytics" class="pictogram_72" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/pictograms/barchart.svg">
+		</noscript>
+	</div>
+
+
+	</a>
+
+		
+			
+	</div>
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h3><a href="/discovery/predictive-analytics.html">Análisis predictivo</a></h3>
+
+</div>
+
+
+</div>
+
+</div>
+        
+    </div>
+
+    
+
+</div></div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="band add_background_color_gray band_footer_adjacent section_upsize">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row text-center">
+					<div class="col-xs-12 col-sm-offset-2 col-sm-4 add_margin_40_xs">
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+								<div><div class="pictogram1 pictogram containsResourceName resourceClass-pictogram">
+
+
+
+
+
+
+ 	<div class="add_margin_20  add_background_color_darkblue add_padding_10 add_border_radius_50 text-center"> 		
+				            				
+		
+		
+		
+	
+	
+	
+	<div data-adaptivepicture data-alt="Trial" data-title="Trial" data-class="pictogram_default">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram1.adapt.full.low.svg/1539778072054.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram1.adapt.full.medium.svg/1539778072054.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram1.adapt.full.high.svg/1539778072054.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/pictogram1.adapt.full.high.svg/1539778072054.svg' alt='Trial' title="Trial" class="pictogram_default" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/pictograms/download-white.svg">
+		</noscript>
+	</div>
+
+	 
+	
+	</div>
+
+
+</div>
+</div>
+							</div>
+						</div>
+						<h2>Prueba gratuita durante 30 días.</h2>
+						
+						
+							<div><div class="dynamicproductbutton dynamicproductspotlight containsResourceName resourceClass-dynamicproductspotlight">
+
+<a href="/campaigns/products/trials.html" class="btn btn-lg btn_color_orange add_margin_0" data-link="lead" data-offerType="trial">Descargar ahora</a></div>
+</div>
+						
+					</div>
+					<div class=" col-xs-12 col-sm-4">
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+								<div><div class="pictogram2 pictogram containsResourceName resourceClass-pictogram">
+
+
+
+
+
+
+ 	<div class="add_margin_20  add_background_color_darkblue add_padding_10 add_border_radius_50 text-center"> 		
+				            				
+		
+		
+		
+	
+	
+	
+	<div data-adaptivepicture data-alt="Contact Sales" data-title="Contact Sales" data-class="pictogram_default">
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram2.adapt.full.low.svg/1539778035288.svg' data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram2.adapt.full.medium.svg/1539778035288.svg' data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src='/content/mathworks/la/es/discovery/neural-network/jcr:content/pictogram2.adapt.full.high.svg/1539778035288.svg' data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			<img src='/content/mathworks/la/es/discovery/neural-network/_jcr_content/pictogram2.adapt.full.high.svg/1539778035288.svg' alt='Contactar con ventas' title="Contactar con ventas" class="pictogram_default" data-aem-src="/content/dam/mathworks/mathworks-dot-com/images/responsive/pictograms/message-white.svg">
+		</noscript>
+	</div>
+
+	 
+	
+	</div>
+
+
+</div>
+</div>
+							</div>
+						</div>
+						<h2>¿Alguna pregunta?</h2>
+						<div><div class="button2 button containsResourceName resourceClass-button">
+
+
+
+	
+	<a href="/company/aboutus/contact_us/contact_sales.html" class="btn btn-lg btn_color_blue add_margin_0 companion_btn " data-link="lead" data-offerType="Contact Sales">
+		
+		Contactar con ventas
+		<span style='color:grey'></span>
+		
+	</a>
+
+
+
+
+</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
+			
+				
+
+<div><div class="modalParsys parsys containsResourceName resourceClass-parsys">
+</div>
+</div>
+
+				<div id="location_content" style="display:none;"></div>
+
+<div class="modal fade" id="country-unselected">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<object data="/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" width="167" class="mw_logo" type="image/svg+xml">
+					<img src="/etc/designs/mathworks/img/pic-header-mathworks-logo.png" class="mw_logo" alt="MathWorks">
+				</object>
+			</div>
+			<div class="modal-body">
+				<div class="row add_margin_40">
+					<div class="col-xs-12">
+						<h1 class="icon-globe add_icon_color_darkblue">Select a Web Site</h1>
+						<p>Choose a web site to get translated content where available and see local events and
+							offers. Based on
+							your location, we recommend that you select: <strong class="recommended-country"></strong>.
+						</p>
+						<a href="#" id="recommended_domain_button" class="btn btn_color_blue containsResourceName resourceClass-button">Select <span class="recommended-country"></span> web site</a>
+					</div>
+				</div>
+				<p>You can also select a web site from the following list:</p>
+				<div class="alert alert-warning" id="china_performance_alert" style="display:none;"> <span class="alert_icon icon-alert-warning"></span>
+					<h3>How to Get Best Site Performance</h3>
+					<p>Select the China site (in Chinese or English) for best site performance. Other MathWorks country sites are not optimized for visits from your location.</p>
+				</div>
+				<div class="row add_margin_20">
+					<div class="col-sm-4 col-md-3">
+						<h3 class="add_bottom_rule">Americas</h3>
+						<ul class="list-unstyled">
+							<li><a href="//la.mathworks.com" class="domain_selector_link" data-country-code="LA" data-subdomain="la" data-lang="es" data-default-lang="true" data-selected-text="América Latina" data-recommended-text="América Latina" data-do-not-rewrite="true">América Latina</a> (Español)
+							</li>
+							<li><a href="//www.mathworks.com" class="domain_selector_link" data-country-code="CA" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Canada</a> (English)
+							</li>
+							<li><a href="//www.mathworks.com" class="domain_selector_link" data-country-code="US" data-subdomain="www" data-lang="en" data-default-lang="true" data-selected-text="United States" data-recommended-text="United States" data-do-not-rewrite="true">United States</a> (English)
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-md-6">
+						<h3 class="add_bottom_rule">Europe</h3>
+						<div class="row">
+							<div class="col-xs-6 col-sm-12 col-md-6">
+								<ul class="list-unstyled add_margin_0_sm">
+									<li><a href="//nl.mathworks.com" class="domain_selector_link" data-country-code="BE" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Belgium</a> (English)
+									</li>
+									<li><a href="//se.mathworks.com" class="domain_selector_link" data-country-code="DK" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Denmark</a> (English)
+									</li>
+									<li><a href="//de.mathworks.com" class="domain_selector_link" data-country-code="DE" data-subdomain="de" data-lang="de" data-default-lang="true" data-selected-text="Deutschland" data-recommended-text="Deutschland" data-do-not-rewrite="true">Deutschland</a> (Deutsch)
+									</li>
+									<li><a href="//es.mathworks.com" class="domain_selector_link" data-country-code="ES" data-subdomain="es" data-lang="es" data-default-lang="true" data-selected-text="España" data-recommended-text="España" data-do-not-rewrite="true">España</a> (Español)
+									</li>
+									<li><a href="//se.mathworks.com" class="domain_selector_link" data-country-code="FI" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Finland</a> (English)
+									</li>
+									<li><a href="//fr.mathworks.com" class="domain_selector_link" data-country-code="FR" data-subdomain="fr" data-lang="fr" data-default-lang="true" data-selected-text="France" data-recommended-text="France" data-do-not-rewrite="true">France</a> (Français)
+									</li>
+									<li><a href="//uk.mathworks.com" class="domain_selector_link" data-country-code="IE" data-subdomain="uk" data-lang="en" data-do-not-rewrite="true">Ireland</a> (English)
+									</li>
+									<li><a href="//it.mathworks.com" class="domain_selector_link" data-country-code="IT" data-subdomain="it" data-lang="it" data-default-lang="true" data-selected-text="Italia" data-recommended-text="Italia" data-do-not-rewrite="true">Italia</a> (Italiano)
+									</li>
+									<li><a href="//nl.mathworks.com" class="domain_selector_link" data-country-code="LU" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Luxembourg</a> (English)
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-6 col-sm-12 col-md-6">
+								<ul class="list-unstyled">
+									<li><a href="//nl.mathworks.com" class="domain_selector_link" data-country-code="NL" data-subdomain="nl" data-lang="en" data-default-lang="true" data-selected-text="Benelux" data-recommended-text="Netherlands" data-do-not-rewrite="true">Netherlands</a> (English)
+									</li>
+									<li><a href="//se.mathworks.com" class="domain_selector_link" data-country-code="NO" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Norway</a> (English)
+									</li>
+									<li><a href="//de.mathworks.com" class="domain_selector_link" data-country-code="AT" data-subdomain="de" data-lang="de" data-do-not-rewrite="true">Österreich</a> (Deutsch)
+									</li>
+									<li><a href="//www.mathworks.com" class="domain_selector_link" data-country-code="PT" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Portugal</a> (English)
+									</li>
+									<li><a href="//se.mathworks.com" class="domain_selector_link" data-country-code="Sweden" data-subdomain="se" data-lang="en" data-default-lang="true" data-selected-text="Nordic" data-recommended-text="Sweden" data-do-not-rewrite="true">Sweden</a> (English)
+									</li>
+									<li>Switzerland
+										<ul class="list-unstyled add_indent_20">
+											<li><a href="//ch.mathworks.com" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="de" data-selected-text="Schweiz" data-recommended-text="Schweiz" data-do-not-rewrite="true">Deutsch</a>
+											</li>
+
+											<li><a href="//ch.mathworks.com" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="en" data-default-lang="true" data-selected-text="Switzerland" data-recommended-text="Switzerland" data-do-not-rewrite="true">English</a>
+											</li>
+
+											<li><a href="//ch.mathworks.com" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="fr" data-selected-text="Suisse" data-recommended-text="Suisse" data-do-not-rewrite="true">Français</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="//uk.mathworks.com" class="domain_selector_link" data-country-code="GB" data-subdomain="uk" data-lang="en" data-default-lang="true" data-selected-text="United Kingdom" data-recommended-text="United Kingdom" data-do-not-rewrite="true">United Kingdom</a>
+										(English)
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-3">
+						<h3 class="add_bottom_rule">Asia Pacific</h3>
+						<ul class="list-unstyled">
+							<li><a href="//au.mathworks.com" class="domain_selector_link" data-country-code="AU" data-subdomain="au" data-lang="en" data-default-lang="true" data-selected-text="Australia" data-recommended-text="Australia" data-do-not-rewrite="true">Australia</a> (English)
+							</li>
+							<li><a href="//in.mathworks.com" class="domain_selector_link" data-country-code="IN" data-subdomain="in" data-lang="en" data-default-lang="true" data-selected-text="India" data-recommended-text="India" data-do-not-rewrite="true">India</a> (English)
+							</li>
+							<li><a href="//au.mathworks.com" class="domain_selector_link" data-country-code="NZ" data-subdomain="au" data-lang="en" data-do-not-rewrite="true">New Zealand</a> (English)
+							</li>
+							<li>中国
+								<ul class="list-unstyled add_indent_20">
+									<li><a href="//ww2.mathworks.cn" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="zh" data-default-lang="true" data-selected-text="中国" data-recommended-text="中国" data-do-not-rewrite="true">简体中文</a>
+									</li>
+									<li><a href="//ww2.mathworks.cn" class="domain_selector_link" data-country-code="CN" data-subdomain="ww2" data-lang="en" data-default-lang="true" data-selected-text="China" data-recommended-text="China" data-do-not-rewrite="true">English</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="//jp.mathworks.com" class="domain_selector_link" data-country-code="JP" data-subdomain="jp" data-lang="ja" data-default-lang="true" data-selected-text="日本" data-recommended-text="日本" data-do-not-rewrite="true">日本</a> (日本語)
+							</li>
+							<li><a href="//kr.mathworks.com" class="domain_selector_link" data-country-code="KR" data-subdomain="kr" data-lang="ko" data-default-lang="true" data-selected-text="한국" data-recommended-text="한국" data-do-not-rewrite="true">한국</a> (한국어)
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="text-center"><a href="#" class="worldwide_link">Contact your local office</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+		
+	</div>
+
+
+
+
+
+
+
+	<footer id="footer" class="bs-footer">
+
+	<div class="fat_footer_container"><div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div><div class="fatFooterParsys iparsys parsys resourceClass-iparsys containsResourceName"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="fatFooterParsys iparsys parsys containsResourceName resourceClass-par"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   ">
+
+    
+        <div class=" col-xs-12 col-lg-9 col-lg-push-3"><div class="parsys containsResourceName resourceClass-parsys"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row add_margin_20  ">
+
+    
+        <div class=" col-xs-12 col-sm-2"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h5>Explorar Productos</h5>
+<ul class="list-unstyled">
+<li><a href="/products/matlab.html?s_tid=hp_ff_p_matlab" target="_self">MATLAB</a></li>
+<li><a href="/products/simulink.html?s_tid=hp_ff_p_simulink" target="_self">Simulink</a></li>
+<li><a href="/academia/student_version.html?s_tid=hp_ff_p_student" target="_self">Versión de estudiante</a></li>
+<li><a href="/hardware-support/home.html?s_tid=hp_ff_p_hwsupport" target="_self">Soporte Hardware</a></li>
+<li><a href="https://la.mathworks.com/matlabcentral/fileexchange/?s_tid=hp_ff_p_fx">File Exchange</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h5>Probar o Comprar</h5>
+<ul class="list-unstyled">
+<li><a href="https://la.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads">Descargas</a></li>
+<li><a href="/campaigns/products/trials.html?s_iid=hp_ff_p_trial" data-target="same" data-link="lead" data-offerType="trial">Software de prueba</a></li>
+<li><a href="/company/aboutus/contact_us/contact_sales.html?s_iid=hp_ff_t_sales" target="_self" data-link="lead" data-offerType="Contact Sales">Contactar con ventas</a></li>
+<li><a href="/pricing-licensing.html?s_iid=hp_ff_t_pricing" target="_self" data-link="lead" data-offerType="pl">Precios y licencias</a></li>
+<li><a href="https://la.mathworks.com/store?s_iid=hp_ff_t_buy" target="_self">Cómo comprar</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h5>Aprender a utilizar</h5>
+<ul class="list-unstyled">
+<li><a href="https://la.mathworks.com/help/?s_tid=hp_ff_l_doc" data-target="same">Documentación</a></li>
+<li><a href="https://la.mathworks.com/support/learn-with-matlab-tutorials.html?s_tid=hp_ff_l_tutorials" data-target="same">Tutoriales</a></li>
+<li><a href="https://la.mathworks.com/help/examples.html?s_tid=hp_ff_l_examples" data-target="same">Ejemplos</a></li>
+<li><a href="/videos.html?s_tid=hp_ff_l_videos" target="_self">Videos y Webinars</a></li>
+<li><a href="/services/training.html?s_tid=hp_ff_l_training" target="_self">Formación</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h5>Obtener Soporte</h5>
+<ul class="list-unstyled">
+<li><a href="https://la.mathworks.com/support/install-matlab.html?s_tid=hp_ff_s_install">Ayuda para la instalación	</a></li>
+<li><a href="https://la.mathworks.com/matlabcentral/answers/index?s_tid=hp_ff_s_answers">Respuestas</a></li>
+<li><a href="/services/consulting.html?s_tid=hp_ff_s_consulting" target="_self">Consultoría</a></li>
+<li><a href="https://la.mathworks.com/licensecenter/?s_tid=hp_ff_s_license">License Center</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h5>Acerca de MathWorks</h5>
+<ul class="list-unstyled">
+<li><a href="https://la.mathworks.com/company/jobs/opportunities/?s_tid=hp_ff_a_careers">Carreras</a></li>
+<li><a href="/company/newsroom.html?s_tid=hp_ff_a_newsroom" target="_self">Sala de prensa</a></li>
+<li><a href="/company/aboutus/soc_mission.html?s_tid=hp_ff_a_socialmission" target="_self">Misión social</a></li>
+<li><a href="/company/aboutus/contact_us.html?s_tid=hp_ff_a_contact" target="_self">Contáctenos</a></li>
+<li><a href="/company.html?s_tid=hp_ff_a_company" target="_self">Acerca de MathWorks</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-lg-3 col-lg-pull-9"><div class="parsys containsResourceName resourceClass-parsys"><div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<h4 class="add_margin_0">MathWorks</h4>
+<p><i>Accelerating the pace of engineering and science</i></p>
+
+</div>
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<p>MathWorks es el lider en el desarrollo de software de cálculo matemático para ingenieros</p>
+
+</div>
+
+
+</div>
+<div class="text containsResourceName section resourceClass-text">
+<div class="mw-text  ">
+	<p><a href="/discovery.html?s_tid=hp_ff_a_discover" data-target="same">Descubra…</a></p>
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+	<!-- BASIC FOOTER CONTENT - Begin -->
+	<div class="container">
+		<div class="footer">
+			<div class="row">
+				<div class="col-xs-12 col-md-9">
+					<ul class="countrynav">
+						<!-- Code to Remove Tracking from Previous page and add new tracking -->
+						<li class="footernav_country">
+							<a onclick="$('#country-unselected').modal('show');">
+                                <span class="icon-globe icon_color_quinary icon_16"></span><span id="countrySelectorButtonText">United States</span>
+							</a>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+					
+					<div><div class="footerNavigation footernavigation containsResourceName resourceClass-footernavigation">
+	<ul class="footernav  ">
+		<li class="footernav_footernav_patents">
+			<a href="/company/aboutus/policies_statements/patents.html?s_tid=gf_pat">Patentes</a>
+		</li>
+	
+		<li class="footernav_footernav_trademarks">
+			<a href="/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd">Marcas comerciales</a>
+		</li>
+	
+		<li class="footernav_footernav_privacy">
+			<a href="/company/aboutus/policies_statements.html?s_tid=gf_priv">Política de privacidad</a>
+		</li>
+	
+		<li class="footernav_footernav_piracy">
+			<a href="/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir">Preventing Piracy</a>
+		</li>
+	
+		<li class="footernav_footernav_status">
+			<a href="https://status.mathworks.com/?s_tid=gf_application">Estado</a>
+		</li>
+	</ul>
+	
+
+</div>
+</div>
+					
+					<div><div class="footerCompanyAddress footercompanyaddress containsResourceName resourceClass-footercompanyaddress">
+	
+	<div class="cq-placeholder" data-emptytext="Footer Company Address"></div>
+
+</div>
+</div>
+					
+					<div><div class="footerParsys iparsys parsys resourceClass-iparsys containsResourceName"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="footerParsys iparsys parsys containsResourceName resourceClass-par"></div>
+</div>
+</div>
+</div>
+					<div class="clearfix"></div>
+					<p class="copyright">&copy; 1994-2019 The MathWorks, Inc.</p>
+				</div>
+				<div class="clearfix visible-sm add_margin_10"></div>
+				<div class="col-xs-12 col-md-3">
+					
+					<div><div class="socialMediaIconParsys iparsys parsys resourceClass-iparsys containsResourceName"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="socialMediaIconParsys iparsys parsys containsResourceName resourceClass-par"><div class="socialmediaicon containsResourceName resourceClass-socialmediaicon section">
+
+
+	<div class="social_media  ">
+		<ul class="social_media_icons list-unstyled  ">
+			
+			<li>
+				<a href="https://www.facebook.com/MATLAB" class="svg_link" target="_blank">
+					<img class="ico_facebook" alt="Facebook" title="Facebook" src="/etc/designs/mathworks/img/ico-facebook.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://www.twitter.com/MATLAB" class="svg_link" target="_blank">
+					<img class="ico_twitter" alt="Twitter" title="Twitter" src="/etc/designs/mathworks/img/ico-twitter.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://www.instagram.com/matlab/" class="svg_link" target="_blank">
+					<img class="ico_instagram" alt="Instagram" title="Instagram" src="/etc/designs/mathworks/img/ico-instagram.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://www.youtube.com/user/MATLAB" class="svg_link" target="_blank">
+					<img class="ico_youtube" alt="YouTube" title="YouTube" src="/etc/designs/mathworks/img/ico-youtube.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://www.linkedin.com/company/the-mathworks_2" class="svg_link" target="_blank">
+					<img class="ico_linkedin" alt="LinkedIn" title="LinkedIn" src="/etc/designs/mathworks/img/ico-linkedin.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="/company/rss.html" class="svg_link">
+					<img class="ico_rss" alt="RSS" title="RSS" src="/etc/designs/mathworks/img/ico-rss.svg"/>
+				</a>
+
+				 
+				
+			</li>
+			
+			
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+					<div class="clearfix"></div>
+					<p class="pull_right_sm pull_right_md pull_right_lg"><small class="percent_90"><em>Únase a la conversación</em></small></p>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+	<!-- BASIC FAT FOOTER CONTENT - End -->
+</footer>
+
+	<div id="cookie-banner-text" style="display:none;"></div>
+
+	<div class="clientcontext parbase containsResourceName resourceClass-clientcontext"><link rel="stylesheet" href="/etc/designs/cs/brightcove/shared.min.css" type="text/css"/>
+<script type="text/javascript" src="/etc/clientlibs/foundation/shared.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/lodash/modern.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.min.js"></script>
+<script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("\/etc\/segmentation");
+        CQ_Analytics.ClientContextUtils.init("\/etc\/clientcontext\/mw\u002Ddefault", "\/content\/mathworks\/la\/es\/discovery\/neural\u002Dnetwork");
+
+        
+    });
+</script>
+</div>
+
+	
+    
+<script type="text/javascript" src="/etc/designs/mathworks/clientlibs/akamai-country-code.min.20190220220542215.js"></script>
+
+
+
+
+	
+
+	
+    
+<script type="text/javascript" src="/etc/designs/mathworks/clientlibs.min.20190220220542215.js"></script>
+
+
+
+
+	
+
+	
+	<!-- BEGIN Adobe DTM -->
+	<script type="text/javascript">
+	try {
+		_satellite.pageBottom();
+	} catch (e) {
+		//something went wrong
+	}
+	</script>
+	<!-- END Adobe DTM -->
+
+	
+
+	</body>
+
+
+
+</html>

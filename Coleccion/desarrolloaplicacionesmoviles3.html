@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Desarrollo de aplicaciones móviles multiplataforma parte 1/3: web vs nativas vs multiplataforma &laquo;  Yo, programador</title>
+
+<link rel="shorcut icon" type="image/x-ico" href="/favicon-albertovilches.ico" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://albertovilches.com/wp-content/themes/web/style.css" />
+		<link rel="stylesheet" href="http://albertovilches.com/wp-content/themes/web/css/green.css" media="screen" />
+		 <!--[if gte IE 7]>
+    <link rel="stylesheet" media="screen" type="text/css" href="http://albertovilches.com/wp-content/themes/web/ie7.css" />
+    <![endif]-->
+    	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://albertovilches.com/wp-content/themes/web/js/packed.js"></script>
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/albertovilches" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://feeds.feedburner.com/albertovilches" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://feeds.feedburner.com/albertovilches" />
+
+	<link rel="pingback" href="http://albertovilches.com/xmlrpc.php" />
+		<link rel='archives' title='February 2012' href='http://albertovilches.com/2012/02' />
+	<link rel='archives' title='September 2011' href='http://albertovilches.com/2011/09' />
+	<link rel='archives' title='August 2011' href='http://albertovilches.com/2011/08' />
+	<link rel='archives' title='July 2011' href='http://albertovilches.com/2011/07' />
+	<link rel='archives' title='May 2011' href='http://albertovilches.com/2011/05' />
+	<link rel='archives' title='April 2011' href='http://albertovilches.com/2011/04' />
+	<link rel='archives' title='March 2011' href='http://albertovilches.com/2011/03' />
+	<link rel='archives' title='February 2011' href='http://albertovilches.com/2011/02' />
+	<link rel='archives' title='January 2011' href='http://albertovilches.com/2011/01' />
+	<link rel='archives' title='December 2010' href='http://albertovilches.com/2010/12' />
+	<link rel='archives' title='October 2010' href='http://albertovilches.com/2010/10' />
+	<link rel='archives' title='August 2010' href='http://albertovilches.com/2010/08' />
+	<link rel='archives' title='June 2010' href='http://albertovilches.com/2010/06' />
+	<link rel='archives' title='May 2010' href='http://albertovilches.com/2010/05' />
+	<link rel='archives' title='April 2010' href='http://albertovilches.com/2010/04' />
+	<link rel='archives' title='March 2010' href='http://albertovilches.com/2010/03' />
+	<link rel='archives' title='February 2010' href='http://albertovilches.com/2010/02' />
+	<link rel='archives' title='January 2010' href='http://albertovilches.com/2010/01' />
+	<link rel='archives' title='December 2009' href='http://albertovilches.com/2009/12' />
+	<link rel='archives' title='November 2009' href='http://albertovilches.com/2009/11' />
+	<link rel='archives' title='October 2009' href='http://albertovilches.com/2009/10' />
+	<link rel='archives' title='April 2009' href='http://albertovilches.com/2009/04' />
+	<link rel='archives' title='March 2009' href='http://albertovilches.com/2009/03' />
+	<link rel='archives' title='February 2009' href='http://albertovilches.com/2009/02' />
+	<link rel='archives' title='January 2009' href='http://albertovilches.com/2009/01' />
+	<link rel='archives' title='December 2008' href='http://albertovilches.com/2008/12' />
+	<link rel='archives' title='November 2008' href='http://albertovilches.com/2008/11' />
+	<link rel='archives' title='September 2008' href='http://albertovilches.com/2008/09' />
+	<link rel='archives' title='August 2008' href='http://albertovilches.com/2008/08' />
+	<link rel='archives' title='June 2008' href='http://albertovilches.com/2008/06' />
+	<link rel='archives' title='May 2008' href='http://albertovilches.com/2008/05' />
+	<link rel='archives' title='March 2008' href='http://albertovilches.com/2008/03' />
+	<link rel='archives' title='January 2008' href='http://albertovilches.com/2008/01' />
+	<link rel='archives' title='December 2007' href='http://albertovilches.com/2007/12' />
+	<link rel='archives' title='November 2007' href='http://albertovilches.com/2007/11' />
+	<link rel='archives' title='October 2007' href='http://albertovilches.com/2007/10' />
+	<link rel='archives' title='September 2007' href='http://albertovilches.com/2007/09' />
+	<link rel='archives' title='August 2007' href='http://albertovilches.com/2007/08' />
+	<link rel='archives' title='July 2007' href='http://albertovilches.com/2007/07' />
+	<link rel='archives' title='June 2007' href='http://albertovilches.com/2007/06' />
+	<link rel='archives' title='May 2007' href='http://albertovilches.com/2007/05' />
+	<link rel='archives' title='April 2007' href='http://albertovilches.com/2007/04' />
+	<link rel='archives' title='March 2007' href='http://albertovilches.com/2007/03' />
+	<link rel='archives' title='February 2007' href='http://albertovilches.com/2007/02' />
+	<link rel='archives' title='January 2007' href='http://albertovilches.com/2007/01' />
+	<link rel='archives' title='December 2006' href='http://albertovilches.com/2006/12' />
+	<link rel='archives' title='November 2006' href='http://albertovilches.com/2006/11' />
+	<link rel='archives' title='October 2006' href='http://albertovilches.com/2006/10' />
+	<link rel='archives' title='September 2006' href='http://albertovilches.com/2006/09' />
+	<link rel='archives' title='August 2006' href='http://albertovilches.com/2006/08' />
+	<link rel='archives' title='July 2006' href='http://albertovilches.com/2006/07' />
+	<link rel='archives' title='June 2006' href='http://albertovilches.com/2006/06' />
+	<link rel='archives' title='May 2006' href='http://albertovilches.com/2006/05' />
+	<link rel='archives' title='April 2006' href='http://albertovilches.com/2006/04' />
+	<link rel='archives' title='March 2006' href='http://albertovilches.com/2006/03' />
+	<link rel='archives' title='February 2006' href='http://albertovilches.com/2006/02' />
+	<link rel='archives' title='January 2006' href='http://albertovilches.com/2006/01' />
+	<link rel='archives' title='December 2005' href='http://albertovilches.com/2005/12' />
+	<link rel='archives' title='November 2005' href='http://albertovilches.com/2005/11' />
+	<link rel='archives' title='October 2005' href='http://albertovilches.com/2005/10' />
+	<link rel='archives' title='September 2005' href='http://albertovilches.com/2005/09' />
+	<link rel='archives' title='May 2005' href='http://albertovilches.com/2005/05' />
+	<link rel='archives' title='April 2005' href='http://albertovilches.com/2005/04' />
+		<link rel="alternate" type="application/rss+xml" title="Yo, programador &raquo; Desarrollo de aplicaciones móviles multiplataforma parte 1/3: web vs nativas vs multiplataforma Comments Feed" href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/feed" />
+<link rel='stylesheet' id='social_comments-css'  href='http://albertovilches.com/wp-content/plugins/social/assets/comments.css?ver=1.0' type='text/css' media='screen' />
+<script type='text/javascript' src='http://albertovilches.com/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://albertovilches.com/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://albertovilches.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://albertovilches.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Yo, programador' href='http://albertovilches.com' />
+<link rel='start' title='Los a&ntilde;os cada vez pasan m&aacute;s deprisa' href='http://albertovilches.com/los_anos_cada_vez_pasan_mas_deprisa' />
+<link rel='prev' title='Autenticación de usuarios con Twitter/OAuth en Grails' href='http://albertovilches.com/autenticacion-de-usuarios-con-twitter-oauth-en-grails' />
+<link rel='next' title='Desarrollo de aplicaciones móviles multiplataforma parte 2/3: Phonegap y Titanium Appcelerator' href='http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-phonegap-y-titanium-appcelerator' />
+<meta name="generator" content="WordPress 3.2.1" />
+<link rel='canonical' href='http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma' />
+<link rel='shortlink' href='http://albertovilches.com/?p=1605' />
+<link href='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/styles/shCore.css' type='text/css' rel='stylesheet' /><link href='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/styles/shThemeDefault.css' type='text/css' rel='stylesheet' id='shTheme'/><style type="text/css" media="screen">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+	width: 95%;
+}
+
+.contactleft {
+	width: 25%;
+	white-space: pre;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+<script src="http://platform.twitter.com/anywhere.js?id=3WpCAeAeF5TmMEhipu1oRw&amp;v=1"></script>
+<script type="text/javascript">
+	twttr.anywhere(function(twitter) {
+		twitter.hovercards();
+	});
+</script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<!-- begin wrapper -->
+<div id="wrapper">
+	<!-- begin header -->
+	<div id="header">
+	<!-- logo -->
+		<div id="logo"><a href="http://albertovilches.com/" title="Cerrar"><img alt="Cerrar" title="Cerrar" src="http://albertovilches.com/albertovilches.png" alt="Alberto Vilches" /></a><span></span></div>
+        <a style="display:none; overflow:hidden; position: absolute;right: -25px;top: 164px;" id="closeHomeBoxes" href="javascript:;" onclick="$('#slider').remove();$('#homeBoxes').slideUp();$('#closeHomeBoxes').hide()"><img src="/close-icon-new.png" border="0"></a>
+	<!-- end logo -->
+	<!-- tag line -->
+		<div id="topTagline"></div>
+	<!-- end tag line-->
+	<!-- begin top search -->
+		<div id="searchTop">
+
+            <a href="http://twitter.com/albertovilches"><img border="0" src="/ico_twitter.png" alt="Twitter" title="@albertovilches"/></a>
+<!--            <a href="http://www.facebook.com/alberto.vilches1"><img src="/ico_fbpng.png" alt="Facebook" title="facebook.com/alberto.vilches1"/></a>-->
+            <a href="http://www.linkedin.com/in/albertovilches"><img border="0" src="/ico_linkedin.png" alt="Linkedin" title="linkedin.com/in/albertovilches"/></a>
+<!--            <a href="m&#97;i&#108;t&#111;:&#118;&#105;&#108;c&#104;&#101;s&#64;&#103;&#109;ail&#46;&#99;o&#109;"><img src="/gmail2.png" border="0" alt="&#118;&#105;&#108;c&#104;&#101;s&#64;&#103;&#109;ail&#46;&#99;o&#109;" title="&#118;&#105;&#108;c&#104;&#101;s&#64;&#103;&#109;ail&#46;&#99;o&#109;"></a>-->
+            <a href="http://feeds.feedburner.com/albertovilches" title="RSS"><img border="0" alt="RSS" src="/ico_rss.png"/></a>
+
+			<form style="float:right" id="searchform" action="/" method="get">
+				<input id="s" type="text" name="s" value=""/>
+				<input id="searchsubmit" type="submit" value=""/>
+			</form>
+		</div>
+	<!-- end top search -->
+	<!-- begin top menu -->
+	<div id="topMenu" class="menu-main-container"><ul id="menu-main" class="sf-menu"><li id="menu-item-1184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1184"><a href="http://albertovilches.com/">Home</a></li>
+<li id="menu-item-1780" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1780"><a href="http://albertovilches.com/category/programacion">Programación</a></li>
+<li id="menu-item-1779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1779"><a href="http://albertovilches.com/category/tutorial">Tutoriales</a></li>
+<li id="menu-item-1854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1854"><a href="http://albertovilches.com/evangelizar">Mis charlas</a></li>
+<li id="menu-item-1781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1781"><a href="http://iplayas.es">iPlayas.es</a></li>
+<li id="menu-item-1856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1856"><a href="http://albertovilches.com/contacta">Contacto</a></li>
+</ul></div>	<!-- end top menu -->
+	</div>
+	<!-- end header -->
+	
+	<!-- begin content -->
+	<div id="content" class="clearfix">
+
+<!-- begin col left -->
+	<div id="colLeft">		
+				<!-- begin post -->
+	    <div class="blogPost clearfix">
+			<h1><a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma">Desarrollo de aplicaciones móviles multiplataforma parte 1/3: web vs nativas vs multiplataforma</a></h1>
+			<div class="meta">
+				<img src="http://albertovilches.com/wp-content/themes/web/images/ico_file.png" alt="Posted" />En <a href="http://albertovilches.com/category/programacion" title="View all posts in Programación" rel="category tag">Programación</a> &nbsp;&nbsp;&nbsp;&nbsp;<img src="http://albertovilches.com/wp-content/themes/web/images/ico_comments.png" alt="Comments" /> <a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma#comments" title="Comment on Desarrollo de aplicaciones móviles multiplataforma parte 1/3: web vs nativas vs multiplataforma">18 comentarios</a>            <div class="socialHeader">
+
+		<g:plusone size="medium" href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma"></g:plusone>
+
+                    <iframe src="http://www.facebook.com/plugins/like.php?href=http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma&amp;layout=button_count&amp;show_faces=false&amp;width=98&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:120px; height:20px"></iframe>
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="albertovilches" data-url="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma" data-related="albertovilches">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                </div>
+				<div class="date">Aug<br/><strong>1</strong></div>
+
+			</div>
+			<p>Escribiendo un post en el que pretendía analizar en profundidad las alternativas y herramientas al desarrollo de aplicaciones multiplataforma para móviles, me di cuenta de que estaba quedando demasiado largo y que nadie en su sano juicio lo leería. Así que he decidido dividirlo en tres partes con el fin de que se digerible. Esta es la primera, las otras mañana y pasado. Post relacionados:</p>
+<ul>
+<li>Parte 1: <a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma">Aplicaciones móviles: web vs nativas vs multiplataforma</a></li>
+<li>Parte 2: <a href="http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-phonegap-y-titanium-appcelerator">Desarrollo de apps. móviles multiplataforma: Phonegap y Titanium Appcelerator</a></li>
+<li>Parte 3: <a href="http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-corona-y-adobe-air-mobile">Desarrollo de apps. móviles multiplataforma: Corona y Adobe Air mobile y conclusiones</a></li>
+<li>Bola extra: <a href="http://albertovilches.com/phonegap-vs-adobe-air-flex-vs-titanium-appcelerator-vs-corona-nuevas-conclusiones">Nuevas conclusiones</a></li>
+</ul>
+<h2>Introducción</h2>
+<p>Hace ya algún tiempo que llevo queriendo meterme en profundidad en el desarrollo móvil. Pero hacer esto no significa tirar por la borda todos los años o experiencia que tengo en desarrollar aplicaciones web, sino ampliar el alcance de los nuevos proyectos haciendo que funcionen también en dispositivos móviles. Al fin y al cabo, muchas de estas aplicaciones usan servicios web y/o tienen un site en internet donde continuar usando la aplicación o servicio, así que programar para móviles no es dejar la programación web, ni mucho menos, sino hacer que ésta sea accesible por más usuarios. Puede incluso ser visto al revés: el desarrollo web complementa al desarrollo móvil, permitiendo que el usuario continúe usando su aplicación también en internet y no solo en su dispositivo.</p>
+<h2>Aplicaciones web vs aplicaciones nativas</h2>
+<p>Una de las principales ventajas de los smartphone es que todos tienen un navegador HTML5, por lo que podemos, simplemente, crear una aplicación web y usarla desde el navegador de uno de estos móviles. Esto tiene sus pros y sus contras:</p>
+<h3>Ventajas:</h3>
+<ul>
+<li><strong>Fácil diseño</strong>: no hay que pensar en desarrollar una aplicación para móviles si no queremos. Basta con hacer un diseño adaptado a una pantalla y resolución más pequeñas -que puede ser simplemente adaptando un CSS por cada dispositivo- o podemos rediseñar la navegación al completo. Además, las aplicaciones web se pueden &#8220;tunear&#8221; para que parezcan aplicaciones nativas: icono de aplicación, pantalla completa, splash screen, barra de estado, etc. más info en este <a href="http://mobile.tutsplus.com/tutorials/iphone/iphone-web-app-meta-tags/">tutorial</a>.</li>
+<li><strong>Fácil implementación</strong>: las aplicaciones web pueden ser desarrolladas en cualquier tecnología de servidor, así que podemos usar nuestro lenguaje favorito (Java, Grails, Php, Ruby, Python,&#8230;) con la seguridad de que la aplicación se verá igual en todos los terminales.</li>
+<li><strong>Seguridad</strong>: tu controlas el acceso a la aplicación y la puedes actualizar sin tener que pedir permiso. Nadie te va a &#8220;piratear&#8221; la versión premium de tu site, ni nadie ta va a vetar la entrada al App Store porque no cumple los <a href="http://developer.apple.com/appstore/guidelines.html">requisitos</a>.</li>
+</ul>
+<h3>Desventajas:</h3>
+<ul>
+<li><strong>Apis nativas</strong>: no hay acceso completo a todas las Apis nativas del móvil. Aunque la cámara y el micro son accesibles con Flash, todos sabemos que esa tecnología está <a href="http://www.aticomaquero.com/ipod/ipod_touch/steve-jobs-da-razones-por-las-que-no-quiere-flash-en-sus-dispositivos/">vetada en IOS</a>. Desde HTML5 y Javascript, es posible acceder a las <a href="http://html5demos.com/geo">coordenadas del GPS</a>, pero no en tiempo real ni de la misma manera que si pudiéramos acceder a la Api del móvil directamente. Y olvídate de usar el acelerómetro, la agenda, la brújula, etc.</li>
+<li><strong>Difícil de usar, fácil de olvidar</strong>: para usar una aplicación web en un móvil, es necesario que el usuario abra el navegador y teclee la dirección, ya sea porque la sepa, la haya encontrado en Google o la haya recibido por correo o chat. Una vez abierta la aplicación, debe añadirla a favoritos o, mejor todavía, crear un icono de acceso directo en el móvil para acceder a ella más tarde. Confiar en que nuestros posibles usuarios acaben haciendo <a href="http://www.lifeiphone.com/crear-accesos-directos-a-webs-en-el-escritorio-del-iphone.html">todo esto</a> para poder acceder cómodamente a nuestra aplicación en futuras ocasiones es pecar de ingenuo. Es mucho más fácil descargar una aplicación y que aparezca directamente como un icono en nuestro móvil.</li>
+<li><strong>Lenta</strong>: sin contar que renderizar HTML e interpretar Javascript es sin duda más costoso que ejecutar una aplicación nativa, cada petición que hagamos en nuestra aplicación implicará una recarga de la página o un acceso, en mayor o menor medida, contra nuestro servidor. Cualquier espera por pequeña que sea impacta en la experiencia de usuario. Una aplicación nativa tiene todos los recursos y procesos guardados en local, y solo accede al servidor para obtener o enviar datos si es que los necesita. Por tanto, una aplicación web no tiene la fluidez y velocidad de manejo que una aplicación nativa, ni nunca la tendrá.</li>
+<li><strong>Peor monetización</strong>: es más fácil que un usuario pague por nuestros servicios si simplemente cobramos X por nuestra aplicación al descargarla del App Store, que no hacer que el usuario se tenga que registrar y efectuar el pago en nuestra web, introduciendo manualmente todos sus datos como el número tarjeta, dirección, etc. Si el usuario ya tiene sus datos guardados en el App Store, para comprarla solo tiene que poner su password y confirmar la compra. Más fácil imposible.</li>
+</ul>
+<p>Y no soy el único que piensa así, tenemos que ser conscientes de que los mercados de aplicaciones son una realidad: Apple tiene su <a href="http://itunes.apple.com/es/genre/ios/id36?mt=8">App Store</a> para IOS y MacOS, Google su <a href="https://chrome.google.com/webstore">Chrome Web Store</a>, <a href="https://www.google.com/enterprise/marketplace/?pli=1">Google Apps Marketplace</a> y el <a href="https://market.android.com/?hl=es">Android Market</a>, Amazon su <a href="http://www.amazon.com/appstore">Amazon Appstore</a>, incluso hay markets alternativos como <a href="http://openappmkt.com/">OpenAppMkt</a>. Cada vez más empresas invierten en crear un entorno fácil y cómodo para que el usuario pueda descargar, probar y comprar aplicaciones, repartiéndose los beneficios. Pensar que podemos competir con todo esto con una aplicación web para móviles, que simplemente se puede acceder desde una dirección en un navegador, es una ilusión.</p>
+<h2>Desarrollando aplicaciones móviles</h2>
+<p>Cada plataforma tiene su propio lenguaje, herramientas de desarrollo y Apis con los que crear aplicaciones. Para el post, vamos a comentar solo las más importantes: IOS y Android. Demos un breve repaso a cada uno de ellas.</p>
+<h3>IOS</h3>
+<p>El lenguaje oficial para <a href="http://www.apple.com/es/iphone/ios4/">IOS</a> es <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html">Objective-C</a>, y con este lenguaje podemos crear aplicaciones para Iphone, Ipad y Ipod touch. Hay distintas versiones de IOS pero todas ellas se programan usando el mismo lenguaje, Objective-C, y la misma herramienta, <a href="http://developer.apple.com/xcode/">Xcode</a>.</p>
+<p>Xcode es el entorno de desarrollo oficial de Apple. Con él, podemos crear aplicaciones de escritorio para Mac y para IOS. Aunque podemos compilar las aplicaciones &#8220;a mano&#8221;, es una tarea casi imposible y siempre se recomienda Xcode para, por lo menos, empaquetar y subir la aplicación al App Store. La mayoría de alternativas para crear aplicaciones en Iphone (Appcelerator, Phonegap, Corona) se apoyan siempre en esta herramienta para hacer el build final, aunque no todas (Flex no lo necesita).</p>
+<p>El único &#8220;problema&#8221; que tiene es que solo existe para Mac, por lo que para crear aplicaciones IOS te hace falta un ordenador marca Apple. Y esto no siempre es posible, claro (aunque se puede remediar con virtualización). Sobre el precio, <a href="http://itunes.apple.com/us/app/xcode/id448457090?mt=12">ahora es gratis</a> pero hasta hace poco costaba 5€ en la App Store. No es caro y tampoco es un drama tener que comprarlo.</p>
+<p>Requisito importante: para distribuir aplicaciones en el App Store y para poder probar las aplicaciones desarrolladas en nuestro propio Iphone/Ipad, es necesario adquirir una <a href="http://developer.apple.com/programs/ios/">licencia de desarrollador</a> que cuesta 79€ al año.</p>
+<h3>Android</h3>
+<p>Para Android todo es mucho más fácil. Primero tenemos el lenguaje <a href="http://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)">Java</a> para programar aplicaciones y un <a href="http://developer.android.com/sdk/index.html">SDK multiplataforma</a> que funciona en Windows, Linux y Mac. Que Java es más fácil de aprender y programar que Objective-C -y que C en general- debido a su simplicidad es un hecho (sobre si es mejor o peor, ahí no voy a entrar a discutir, cada uno tendrá su propia opinión). Si queremos un entorno de desarrollo, podemos usar un plugin <a href="http://developer.android.com/sdk/eclipse-adt.html">ADT para Eclipse</a> que incluye un simulador, que también es multiplataforma, libre y gratuito, aunque me consta que hay más. Y no tenemos que pagar ninguna licencia anual.</p>
+<h3>Desarrollo móvil multiplataforma</h3>
+<p>En resumen: para hacer aplicaciones IOS nos hace falta un Mac con Xcode, una licencia de desarrollador y hay un lenguaje Objective-C con una sintaxis un tanto complicada de escribir y de leer. Y para hacer aplicaciones Android, no nos hace falta ningún sistema operativo en particular: usamos Java con Eclipse+plugin ADT o el propio SDK de Android que son multiplataforma y no hay licencias que pagar.</p>
+<p>Sobre el hecho de que hay más aplicaciones de pago en el App Store que en el Android Market, o si es mejor publicar tu aplicación en un sitio o en otro, etc, no diré nada. Ya hay unos cuantos artículos interesantes <a href="http://www.celularis.com/apps-descarga/apple-app-store-vs-android-market.php">sobre ello</a>. Yo lo que ahora me planteo es:</p>
+<ul>
+<li>¿Qué pasa si no tenemos un Mac y queremos desarrollar aplicaciones para IOS?</li>
+<li>¿Qué sucede si Objective-C nos parece complicado y no queremos aprenderlo?</li>
+<li>O lo contrario ¿que sucede si sabemos Objective-C y no nos gusta Java?</li>
+<li>Y la más importante <strong>¿qué ocurre si queremos hacer una aplicación para los dos dispositivos y no queremos programarla dos veces?</strong></li>
+</ul>
+<p>Personalmente, creo que todas las preguntas tienen fácil respuesta: &#8220;te compras un Mac o virtualizas un Mac OS con <a href="http://www.virtualbox.org/">VirtualBox</a>&#8221; o &#8220;te aguantas y aprendes Java/Objective-C&#8221;. Pero a la última pregunta no hay respuesta válida posible: si quieres una aplicación para IOS y Android, tienes que programarla dos veces. Oh, espera un momento, quizá haya una alternativa a todas estas preguntas&#8230;</p>
+<p>La solución es conseguir una herramienta &#8220;write once, run everywhere&#8221;. Un software con el que sea posible programar con un lenguaje determinado y que, además, permita que tu aplicación funcione en varios dispositivos. Tras una inspección exhaustiva en internet, esto es lo que he encontrado:</p>
+<ul>
+<li>Flex 4 y Adobe Air Mobile, la única herramienta que permite construir aplicaciones Android y IOS sin tener un Mac ni Xcode. Y se programa en ActionScript.</li>
+<li>PhoneGap, Titanium Appcelerator y Anscana Corona, que nos permiten construir aplicaciones usando otros lenguajes como Javascript y Lua, aunque requieren Mac y Xcode.</li>
+</ul>
+<p>Y me he decidido a probarlas. Las he descargado todas, me he hecho una aplicación de ejemplo con cada uno de ellas y la he intentado instalar el Ipad y el Iphone que tengo en casa (no tengo móvil Android). Y estas han sido mis conclusiones&#8230;</p>
+<p>Fin de la parte 1/3. Continúa en <a href="http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-phonegap-y-titanium-appcelerator">Desarrollo de aplicaciones móviles multiplataforma: PhoneGap y Titanium Appcelerator</a>.</p>
+            <div class="socialHeader">
+
+		<g:plusone size="medium" href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma"></g:plusone>
+
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma&amp;layout=button_count&amp;show_faces=false&amp;width=98&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:120px; height:20px"></iframe>
+                <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="albertovilches" data-url="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma" data-related="albertovilches">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+            </div>
+		</div>
+		<!-- end post -->
+        		
+        <div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="http://albertovilches.com/?social_action=reload_form&#038;redirect_to=http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma&#038;post_id=1605" />
+			Logging In...		</div>
+				<p class="nocomments">Comments are closed.</p>
+			</div>
+	<div id="social-tabs-comments">
+						<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>18 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="social-wordpress"><span>15 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>3 Pingbacks</span></a></li>
+		</ul>
+
+		<!-- panel items -->
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was 219 days ago</div>
+				<ol class="social-commentlist">
+					<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141011">
+<div class="social-comment-inner social-clearfix" id="comment-141011">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/b45dac4e52795ea2c8c493612d09ac32?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://www.tapquo.com' rel='external nofollow' class='url'>Javi</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141011" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Sinceramente creo que no te has tomado el tiempo suficiente de análisis para realizar afirmaciones como:<br />
+   &#8211; cada petición que hagamos en nuestra aplicación implicará una recarga de la página o un acceso ¿conoces AJAX?<br />
+   &#8211; para usar una aplicación web en un móvil, es necesario que el usuario abra el navegador y teclee la dirección ¿sabes lo que es instalar una web-app en el movil? ¿sabes que tienes METAs para ello?<br />
+  &#8211; Peor monetización ¿sabes que se puede meter una web-app en cualquier store?<br />
+  &#8211; Por no decir que la especificación W3C va a llevar todo eso que dices que no tienen las web-apps: acceso a camara, contactos, osciloscopio&#8230; etc</p>
+<p>Este mensaje es constructivo y nunca destructivo, pero sinceramente creo que no te has metido a &#8220;pilon&#8221; con el desarrollo de WebApps.</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141012">
+<div class="social-comment-inner social-clearfix" id="comment-141012">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/133e8f603b12c9d9b1bdfeee45e71100?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://albertovilches.com' rel='external nofollow' class='url'>Alberto Vilches</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141012" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hola Javi, gracias por el comentario.<br />
+Conozco Ajax, y sigue es una petición al servidor que pasa por internet y así que sigue teniendo un coste.<br />
+Sobre la instalación de webapps, si te lees bien esa parte del post, veras que solo digo que el usuario tiene que acceder usando la dirección *la primera vez* y luego tenemos que confiar en el usuario para que la instale como acceso directo o la añada a favoritos. Incluso pongo un enlace a un sitio donde explica como hacerlo con un video. Solo digo que, para el usuario, ese sistema es mas enfarragoso que descargar la aplicación desde el App Store.<br />
+No se como se puede subir una web-app al App Store, de hecho, no entiendo muy bien como es posible ¿subes un enlace y te lo descargas? ¿o subes una aplicación con PhoneGap?<br />
+Supongo que la especificación de W3C traerá muchas cosas en el futuro, pero estoy hablando de alternativas y soluciones reales que se pueden hacer hoy en día, ahora mismo.</p>
+<p>Bueno, cada uno ve las ventajas e inconvenientes según sus propios criterios, y en este artículo yo he puesto mi opinión. Gracias por la tuya, aunque sería más interesante si la acompañaras con enlaces e información adicional, podría añadidos al post. Un saludo!</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141013">
+<div class="social-comment-inner social-clearfix" id="comment-141013">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/133e8f603b12c9d9b1bdfeee45e71100?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://albertovilches.com' rel='external nofollow' class='url'>Alberto Vilches</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141013" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Javi, supongo que te refieres a esto: <a href="http://www.apple.com/webapps/whatarewebapps.html" rel="nofollow">http://www.apple.com/webapps/whatarewebapps.html</a><br />
+La verdad es que no lo conocía y me parece una idea muy interesante, aunque no veo como aprovechar el App Store para monetizar las aplicaciones. ¿Se pueden comprar o hay que usar un formulario de registro dentro de cada web-app para introducir los datos de la tarjeta?<br />
+He modificado el post y añadido como ventaja en la parte facil diseño, el tuneado de webapps para que parezcan aplicaciones nativas con los meta.</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141014">
+<div class="social-comment-inner social-clearfix" id="comment-141014">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/4a77c7771c92e2d203bc80e9f78105f3?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://www.loquetengoqueaguantar.com' rel='external nofollow' class='url'>David Pombar</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141014" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Un post muy interesante, hacía falta que alguien se metiera este trabajo y nos lo contase a los demás, creo que es una duda que tenemos muchos ;)</p>
+<p>Un saludo</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141015">
+<div class="social-comment-inner social-clearfix" id="comment-141015">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/59b8acb67c83769151d5709106bb3130?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn">Jano</cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141015" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>iOS también admite C y C++ pero el interfaz está hecho en Objective-C (UIKit framework). Las aplicaciones con gráficos OpenGL y motores en C, C++ se portan rapidamente, pero aprender UIKit no es tarea trivial. </p>
+<p>iOS 5 tiene ARC (<a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html" rel="nofollow">http://clang.llvm.org/docs/AutomaticReferenceCounting.html</a>) y no es necesario gestionar la memoria manualmente. Supongo que pensabas en eso al comparar la dificultad de Java y Objective-C.</p>
+<p>Al usar estos frameworks multiplataforma hay que tener en cuenta que tu inversión en aprendizaje depende de la suerte de sus respectivos fabricantes, es toda una apuesta.</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141016">
+<div class="social-comment-inner social-clearfix" id="comment-141016">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/133e8f603b12c9d9b1bdfeee45e71100?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://albertovilches.com' rel='external nofollow' class='url'>Alberto Vilches</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141016" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>La dificultad de Objective-C frente a Java es la sintaxis principalmente (llamadas de métodos, punteros) y la cantidad de código que hay que escribir para hacer casi cualquier cosa. Pero es la opinión de alguien que lleva con Java mucho tiempo (yo). Para alguien que llevo mucho con C, C++ u Objective-C, será Java lo que le parezca raro y con una sintaxis caprichosa.</p>
+<p>Lo de la suerte de los respectivos fabricantes tienes muchísima razón, y es una de los factores que hay que tener en cuenta a la hora de decantarse por una herramienta u otra. Al fin y al cabo, es el precio que hay que pagar por no usar las herramientas &#8220;oficiales&#8221;, pero pasa lo mismo en cualquier tecnología (fíjate en Flash por ejemplo: de ser el rey de la web a estar en vías de extinción, aunque sobre esto, tengo mis dudas y opinión personal tambien, confío en Adobe&#8230; :)</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141017">
+<div class="social-comment-inner social-clearfix" id="comment-141017">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/1a8275fd155d1c974c3a7de1030be531?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://1poquitodtodo@blogspot.com' rel='external nofollow' class='url'>Juan Quijano</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141017" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Mmmmm,</p>
+<p>Interesante artículo pero me faltan muchas cosas. Y me da que la primera es la experiencia. Lo cual no hace de menos el valor de tus opiniones.</p>
+<p>1. Te has dejado fuera los RIM (Blackberry) y los Windows Phone (en España casi no existe pero se están vendiendo como churros).</p>
+<p>2. Son mercados diferentes las WebApp y las nativas. Es como comparar una aplicación Web con una aplicación de escritorio. Tienen objetivos y mercados diferentes.</p>
+<p>3. Acabo de terminar una WebApp, que ya es impresionante cómo va en los smartphone y las Blackberry, y ahora estamos migrando a jQuery Mobile&#8230; pruebalo.</p>
+<p>En mi opinión personal y basada en mi última experiencia, las WebApp serán para los móviles lo que la Web ha sido para el escritorio.</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141020">
+<div class="social-comment-inner social-clearfix" id="comment-141020">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/083084c30bfdae576426b957c67297bd?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn">asertus</cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141020" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Un detalle es que para hacer una aplicación Android competitiva, es bastante complicada hacer la en Java, salvo tema de determinados programas de gestión. Cada vez más la punta de velocidad del código nativo C, algo C++ es casi indispensable&#8230;</p>
+<p>Saludos</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141021">
+<div class="social-comment-inner social-clearfix" id="comment-141021">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/083084c30bfdae576426b957c67297bd?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn">asertus</cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141021" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Me refería &#8220;hacerla solamente en Java&#8221;&#8230;</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141025">
+<div class="social-comment-inner social-clearfix" id="comment-141025">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/f87ed6ef8936617c1ac805b01aba8756?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn">Marcin Gryszko</cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141025" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Alberto, los verdaderos machos desarrollan para Android en Scala :) Por lo visto es posible y lo soporta maven-android-plugin.</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+<ul class='social-children'>
+<li class="wordpress even depth-2 social-comment social-clearfix social-wordpress" id="li-comment-141038">
+<div class="social-comment-inner social-clearfix" id="comment-141038">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/02c8ecc24181d171df85a26458b9cd5f?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://twitter.com/jneira' rel='external nofollow' class='url'>jneira</a></cite><span class="social-replied social-imr">replied:</span>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141038" class="social-posted-when">233 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Sin embargo chuck norris programa para IOS en haskell :-P<br />
+<a href="http://www.haskell.org/haskellwiki/IPhone" rel="nofollow">http://www.haskell.org/haskellwiki/IPhone</a><br />
+<a href="http://projects.haskell.org/ghc-iphone" rel="nofollow">http://projects.haskell.org/ghc-iphone</a></p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+<ul class='social-children'>
+<li class="wordpress odd alt depth-3 social-comment social-clearfix social-wordpress" id="li-comment-141043">
+<div class="social-comment-inner social-clearfix" id="comment-141043">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/f87ed6ef8936617c1ac805b01aba8756?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn">Marcin Gryszko</cite><span class="social-replied social-imr">replied:</span>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141043" class="social-posted-when">233 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Ante esta respuesta me quedo perplejo&#8230; Scala es para nenazas si lo comparas con Haskell :)</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+</li>
+<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141027">
+<div class="social-comment-inner social-clearfix" id="comment-141027">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/b3b9e7c677b0fa5b62d503c10119cb18?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://mario.thefrutos.com' rel='external nofollow' class='url'>Ethervoid</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141027" class="social-posted-when">234 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Nosotros en Android el tema de las webapp lo hemos metido dentro de un webcontainer como wrapper y capandolo, para no poder acceder a otra ruta pej, lo hemos subido como aplicación al Android Market</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-141036">
+<div class="social-comment-inner social-clearfix" id="comment-141036">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<span class="social-comment-label">Pingback</span><cite class="social-fn fn"><a href='http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-phonegap-y-titanium-accelerator' rel='external nofollow' class='url'>Desarrollo de aplicaciones móviles multiplataforma parte 2/3: Phonegap y Titanium Accelerator &laquo; Yo, programador</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141036" class="social-posted-when">233 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[...] Parte 2/3 de una serie de posts sobre desarrollo de aplicaciones móviles multiplataforma. Post anterior: Aplicaciones móviles: web vs nativas vs multiplataforma [...]</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-141064">
+<div class="social-comment-inner social-clearfix" id="comment-141064">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<span class="social-comment-label">Pingback</span><cite class="social-fn fn"><a href='http://albertovilches.com/desarrollo-de-aplicaciones-moviles-multiplataforma-corona-y-adobe-air-mobile' rel='external nofollow' class='url'>Desarrollo de aplicaciones móviles multiplataforma parte 3/3: Corona y Adobe Air mobile y conclusiones &laquo; Yo, programador</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141064" class="social-posted-when">233 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[...] Parte 1: Aplicaciones móviles: web vs nativas vs multiplataforma [...]</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-141172">
+<div class="social-comment-inner social-clearfix" id="comment-141172">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<span class="social-comment-label">Pingback</span><cite class="social-fn fn"><a href='http://albertovilches.com/phonegap-vs-adobe-air-flex-vs-titanium-appcelerator-vs-corona-nuevas-conclusiones' rel='external nofollow' class='url'>PhoneGap vs. Flex vs. Appcelerator vs. Corona: nuevas conclusiones &laquo; Yo, programador</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141172" class="social-posted-when">228 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[...] Parte 1: Aplicaciones móviles: web vs nativas vs multiplataforma [...]</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+<li class="wordpress even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141393">
+<div class="social-comment-inner social-clearfix" id="comment-141393">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/fe1107337ed72ea046de03287921eade?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://www.tibal.org' rel='external nofollow' class='url'>Thibaud</a></cite>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141393" class="social-posted-when">219 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, I am discovering those articles thanks to the mistake you did with the RSS feeds &#8230; and I&#8217;m glad you did ! Nice articles !</p>
+<p>Actually, there is another alternative if you come from the .NET/Mono world. You can use &#8220;MonoTouch&#8221; and &#8220;Mono for Android&#8221; to develop applications for iDevices and Android devices in C#. (it is not free, though, and I haven&#8217;t tried it&#8230;). They claim you can reuse most fo your code between the platforms. See <a href="http://xamarin.com/" rel="nofollow">http://xamarin.com/</a></p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+<ul class='social-children'>
+<li class="wordpress byuser comment-author-admin bypostauthor odd alt depth-2 social-comment social-clearfix social-wordpress" id="li-comment-141395">
+<div class="social-comment-inner social-clearfix" id="comment-141395">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/133e8f603b12c9d9b1bdfeee45e71100?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /><cite class="social-fn fn"><a href='http://albertovilches.com' rel='external nofollow' class='url'>Alberto Vilches</a></cite><span class="social-replied social-imr">replied:</span>		</div>
+		<!-- .comment-author .vcard -->
+		<div class="social-comment-meta">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="http://albertovilches.com/aplicaciones-moviles-web-vs-nativas-vs-multiplataforma/comment-page-1#comment-141395" class="social-posted-when">219 days ago</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thank you, maybe I will get Rhodes and MomoTouch for the next article! :)</p>
+	</div>
+	<div class="social-actions entry-meta">
+					</div>
+	<!-- .reply -->
+</div><!-- #comment-##  -->
+</li>
+</ul>
+</li>
+</li>
+				</ol>
+			</div>
+		</div>
+			</div>
+	<!-- #Comments Tabs -->
+	</div>
+					
+			</div>
+			<!-- end col left -->
+	
+	<!-- begin colRight -->
+		<div id="colRight">
+			<div id="inner">
+
+		
+
+<h2>Categorías</h2>		<ul>
+	<li class="cat-item cat-item-109"><a href="http://albertovilches.com/category/cronicas" title="View all posts filed under Crónicas">Crónicas</a> (6)
+</li>
+	<li class="cat-item cat-item-119"><a href="http://albertovilches.com/category/programacion/groovy-programacion" title="View all posts filed under Groovy">Groovy</a> (19)
+</li>
+	<li class="cat-item cat-item-32"><a href="http://albertovilches.com/category/humor" title="View all posts filed under Humor">Humor</a> (14)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://albertovilches.com/category/internet" title="View all posts filed under Internet">Internet</a> (48)
+</li>
+	<li class="cat-item cat-item-27"><a href="http://albertovilches.com/category/juegos" title="View all posts filed under Juegos">Juegos</a> (26)
+</li>
+	<li class="cat-item cat-item-24"><a href="http://albertovilches.com/category/noticias" title="View all posts filed under Noticias">Noticias</a> (111)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://albertovilches.com/category/programacion" title="View all posts filed under Programación">Programación</a> (69)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://albertovilches.com/category/software" title="View all posts filed under Software">Software</a> (25)
+</li>
+	<li class="cat-item cat-item-82"><a href="http://albertovilches.com/category/tutorial" title="View all posts filed under Tutoriales">Tutoriales</a> (11)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://albertovilches.com/category/yo-programador" title="View all posts filed under Yo, programador">Yo, programador</a> (39)
+</li>
+		</ul>
+			</div>
+		</div>
+<!-- end colRight -->
+
+			  	
+
+
+
+</div>
+	<!-- end content -->
+</div>
+<!-- end wrapper -->
+<!-- begin footer -->
+<div id="footer">
+		<div id="innerFooter">
+				<div class="footerBox">		<h2>Últimos posts</h2>		<ul>
+				<li><a href="http://albertovilches.com/vitaminas-para-tu-proyecto-java" title="Vitaminas para tu proyecto Java">Vitaminas para tu proyecto Java</a></li>
+				<li><a href="http://albertovilches.com/jsonp-o-la-insercion-dinamica-de-scripts-que-podria-sustituir-a-ajax" title="JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax">JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax</a></li>
+				<li><a href="http://albertovilches.com/abierto-el-registro-de-greach-el-evento-de-groovy-grails-y-griffon" title="Abierto el registro de Greach">Abierto el registro de Greach</a></li>
+				<li><a href="http://albertovilches.com/grails-enumerados-combos-i18n-y-otras-historias" title="Grails, enumerados, combos, i18n y otras historias">Grails, enumerados, combos, i18n y otras historias</a></li>
+				<li><a href="http://albertovilches.com/consejos-para-el-freelance-de-hoy" title="Consejos para el freelance de hoy">Consejos para el freelance de hoy</a></li>
+				</ul>
+		</div><div class="footerBox"><h2>Últimos comentarios</h2><ul id="recentcomments"><li class="recentcomments"><a href='http://macluq.com' rel='external nofollow' class='url'>Macluq</a> on <a href="http://albertovilches.com/vitaminas-para-tu-proyecto-java/comment-page-1#comment-143867">Vitaminas para tu proyecto Java</a></li><li class="recentcomments"><a href='http://twitter.com/albertovilches' rel='external nofollow' class='url'>albertovilches</a> on <a href="http://albertovilches.com/jsonp-o-la-insercion-dinamica-de-scripts-que-podria-sustituir-a-ajax/comment-page-1#comment-142401">JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax</a></li><li class="recentcomments"><a href='http://twitter.com/albertovilches' rel='external nofollow' class='url'>albertovilches</a> on <a href="http://albertovilches.com/jsonp-o-la-insercion-dinamica-de-scripts-que-podria-sustituir-a-ajax/comment-page-1#comment-142400">JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax</a></li><li class="recentcomments">jorge on <a href="http://albertovilches.com/jsonp-o-la-insercion-dinamica-de-scripts-que-podria-sustituir-a-ajax/comment-page-1#comment-142385">JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax</a></li><li class="recentcomments"><a href='http://www.itsnat.org' rel='external nofollow' class='url'>jmarranz</a> on <a href="http://albertovilches.com/jsonp-o-la-insercion-dinamica-de-scripts-que-podria-sustituir-a-ajax/comment-page-1#comment-142362">JSONP, o la inserción dinámica de scripts que podría sustituir a Ajax</a></li></ul></div>						<div class="footerBox"><h2>Social Networking</h2>
+					<ul id="socialFooterBox">
+                        <li class="twitter"><strong>Twitter</strong><br /><a href="http://twitter.com/albertovilches">http://twitter.com/albertovilches</a></li>
+						<li class="facebook"><strong>Facebook</strong><br /><a href="http://www.facebook.com/alberto.vilches1">http://www.facebook.com/alberto.vilches1</a></li>
+												<li class="linkedin"><strong>Linkedin</strong><br /><a href="http://www.linkedin.com/in/albertovilches">http://www.linkedin.com/in/albertovilches</a></li>
+                        <li class="gmail"><strong>Email</strong><br/>
+                            <a href="m&#97;i&#108;t&#111;:&#118;&#105;&#108;c&#104;&#101;s&#64;&#103;&#109;ail&#46;&#99;o&#109;"><img style="vertical-align: bottom;" src="/wp-content/themes/img/mail.png" border="0"></a>
+                        </li>
+					</ul>
+				
+				</div>
+						<div id="copy">Alberto Vilches, 2006-2011. Todos los contenidos pueden utilizarse bajo licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/es/deed.es">Creative Commons</a>. </div>
+			<div id="footerMenu" class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-1783" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1783"><a href="http://albertovilches.com/category/programacion">Programación</a></li>
+<li id="menu-item-1447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1447"><a href="http://albertovilches.com/category/programacion/groovy-programacion">Groovy</a></li>
+<li id="menu-item-1512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1512"><a href="http://albertovilches.com/evangelizar">Evangelizar</a></li>
+<li id="menu-item-1448" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1448"><a href="http://albertovilches.com/category/tutorial">Tutoriales</a></li>
+<li id="menu-item-1449" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1449"><a href="http://albertovilches.com/category/cronicas">Crónicas</a></li>
+<li id="menu-item-1513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1513"><a href="http://albertovilches.com/programacion">Contrátame</a></li>
+<li id="menu-item-1472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1472"><a href="http://iplayas.es">iPlayas.es</a></li>
+</ul></div>		</div>
+		
+</div>
+<!-- end footer -->
+<script type='text/javascript' src='http://albertovilches.com/wp-content/plugins/social/assets/social.js?ver=1.0'></script>
+<script type='text/javascript' src='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/scripts/shCore.js'></script>
+<script type='text/javascript' src='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/scripts/shBrushJScript.js'></script>
+<script type='text/javascript' src='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/scripts/shBrushJava.js'></script>
+<script type='text/javascript' src='http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/scripts/shBrushXml.js'></script>
+<script type='text/javascript'>
+SyntaxHighlighter.config.clipboardSwf = 'http://albertovilches.com/wp-content/plugins/easy-google-syntax-highlighter/scripts/clipboard.swf';
+SyntaxHighlighter.all();</ScripT>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-522784-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>   
+
+
+</body>
+</html>

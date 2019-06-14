@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta name="keywords" content="Algoritmo genético,1999,Aleatoriedad,Algoritmo,Algoritmo evolutivo,Heurística,Inteligencia Artificial,Inteligencia artificial,Mutación,Probabilidad,Programación evolutiva" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://es.wikipedia.org/apple-touch-icon.png" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (es)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS feed" href="http://es.wikipedia.org/w/index.php?title=Especial:RecentChanges&amp;feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://es.wikipedia.org/w/index.php?title=Especial:RecentChanges&amp;feed=atom" />
+		<title>Algoritmo genético - Wikipedia, la enciclopedia libre</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?126";
+			@import "/skins-1.5/monobook/main.css?126";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/skins-1.5/common/commonPrint.css?126" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?126";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?126";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?126";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?126";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?126"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://es.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Algoritmo_genético";
+var wgTitle = "Algoritmo genético";
+var wgAction = "view";
+var wgArticleId = "165";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "es";
+var wgContentLanguage = "es";
+var wgBreakFrames = false;
+var wgCurRevisionId = "15936179";
+var wgVersion = "1.13alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="/skins-1.5/common/wikibits.js?126"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins-1.5/common/ajax.js?126"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400";
+/*]]>*/</style>
+	</head>
+<body class="mediawiki ns-0 ltr page-Algoritmo_genético">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Algoritmo genético</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">De Wikipedia, la enciclopedia libre</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Saltar a <a href="#column-one">navegación</a>, <a href="#searchInput">búsqueda</a></div>			<!-- start content -->
+			<p>Un <a href="/wiki/Algoritmo" title="Algoritmo">algoritmo</a> es una serie de pasos organizados que describe el proceso que se debe seguir, para dar solución a un problema específico.</p>
+<p><br />
+En los años 1970, de la mano de <a href="/w/index.php?title=John_Holland&amp;action=edit&amp;redlink=1" class="new" title="John Holland (aún no redactado)">John Holland</a>, surgió una de las líneas más prometedoras de la <a href="/wiki/Inteligencia_artificial" title="Inteligencia artificial">inteligencia artificial</a>, la de los <b>algoritmos genéticos</b>. Son llamados así porque se inspiran en la evolución biológica y su base genético-molecular. Estos algoritmos hacen evolucionar una población de individuos sometiéndola a acciones <a href="/wiki/Aleatoriedad" title="Aleatoriedad">aleatorias</a> semejantes a las que actúan en la <a href="/wiki/Teor%C3%ADa_de_la_Evoluci%C3%B3n" class="mw-redirect" title="Teoría de la Evolución">evolución biológica</a> (<a href="/wiki/Mutaci%C3%B3n" title="Mutación">mutaciones</a> y <a href="/wiki/Recombinaci%C3%B3n_gen%C3%A9tica" title="Recombinación genética">recombinaciones genéticas</a>), así como también a una selección de acuerdo con algún criterio, en función del cual se decide cuáles son los individuos más adaptados, que sobreviven, y cuáles los menos aptos, que son descartados.</p>
+<p>Los algoritmos genéticos forman parte de una familia denominada <a href="/wiki/Algoritmo_evolutivo" title="Algoritmo evolutivo">algoritmos evolutivos</a>, que incluye las <a href="/w/index.php?title=Estrategias_de_evoluci%C3%B3n&amp;action=edit&amp;redlink=1" class="new" title="Estrategias de evolución (aún no redactado)">estrategias de evolución</a>, la <a href="/wiki/Programaci%C3%B3n_evolutiva" title="Programación evolutiva">programación evolutiva</a> y la <a href="/w/index.php?title=Programaci%C3%B3n_gen%C3%A9tica&amp;action=edit&amp;redlink=1" class="new" title="Programación genética (aún no redactado)">programación genética</a>. Dentro de esta última se han logrado avances curiosos:</p>
+<p>En <a href="/wiki/1999" title="1999">1999</a>, por primera vez en la historia, se concedió una patente a un invento no realizado directamente por un ser humano: se trata de una antena de forma extraña, pero que funciona perfectamente en las condiciones a las que estaba destinada. No hay, sin embargo, nada injusto en el hecho de que el autor del algoritmo genético del que salió la forma de la antena se haya atribuido la autoría de la patente, pues él escribió el programa e ideó el criterio de selección que condujo al diseño patentado.</p>
+<p>Un algoritmo genético es un método de búsqueda dirigida basada en <a href="/wiki/Probabilidad" title="Probabilidad">probabilidad</a>. Bajo una condición muy débil (que el algoritmo mantenga elitismo, es decir, guarde siempre al mejor elemento de la población sin hacerle ningún cambio) se puede demostrar que el algoritmo <a href="/w/index.php?title=Convergencia_en_probabilidad&amp;action=edit&amp;redlink=1" class="new" title="Convergencia en probabilidad (aún no redactado)">converge en probabilidad</a> al óptimo. En otras palabras, al aumentar el número de iteraciones, la probabilidad de tener el óptimo en la población tiende a 1 (uno).</p>
+<table id="toc" class="toc" summary="Tabla de contenidos">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Tabla de contenidos</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#Funcionamiento"><span class="tocnumber">1</span> <span class="toctext">Funcionamiento</span></a></li>
+<li class="toclevel-1"><a href="#Cu.C3.A1ndo_usar_estos_algoritmos"><span class="tocnumber">2</span> <span class="toctext">Cuándo usar estos algoritmos</span></a></li>
+<li class="toclevel-1"><a href="#Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico"><span class="tocnumber">3</span> <span class="toctext">Funcionamiento de un algoritmo genético básico</span></a></li>
+<li class="toclevel-1"><a href="#Esquema_general_del_algoritmo"><span class="tocnumber">4</span> <span class="toctext">Esquema general del algoritmo</span></a></li>
+<li class="toclevel-1"><a href="#V.C3.A9ase_tambi.C3.A9n"><span class="tocnumber">5</span> <span class="toctext">Véase también</span></a></li>
+<li class="toclevel-1"><a href="#Enlaces_externos"><span class="tocnumber">6</span> <span class="toctext">Enlaces externos</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "mostrar"; var tocHideText = "ocultar"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Funcionamiento" id="Funcionamiento"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=1" title="Editar sección: Funcionamiento">editar</a>]</span> <span class="mw-headline">Funcionamiento</span></h2>
+<p>Los algoritmos genéticos establecen una analogía entre el conjunto de soluciones de un problema, llamado fenotipo, y el conjunto de individuos de una población natural, codificando la información de cada solución en una cadena, generalmente binaria, llamada cromosoma. Los símbolos que forman la cadena son llamados los genes. Cuando la representación de los cromosomas se hace con cadenas de dígitos binarios se le conoce como genotipo. Los cromosomas evolucionan a través de iteraciones, llamadas generaciones. En cada generación, los cromosomas son evaluados usando alguna medida de aptitud. Las siguientes generaciones (nuevos cromosomas), llamada descendencia, se forman utilizando dos operadores, de cruzamiento y de mutación.</p>
+<p><a name="Cu.C3.A1ndo_usar_estos_algoritmos" id="Cu.C3.A1ndo_usar_estos_algoritmos"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=2" title="Editar sección: Cuándo usar estos algoritmos">editar</a>]</span> <span class="mw-headline">Cuándo usar estos algoritmos</span></h2>
+<p>Los algoritmos genéticos son de probada eficacia en caso de querer calcular funciones no derivables (o de derivación muy compleja) aunque su uso es posible con cualquier función.<br />
+Deben tenerse en cuenta también las siguientes consideraciones:</p>
+<ul>
+<li>Si la función a optimizar tiene muchos máximos/mínimos locales se requerirán más iteraciones del algoritmo para "asegurar" el máximo/mínimo global.</li>
+<li>Si la función a optimizar contiene varios puntos muy cercanos en valor al óptimo, solamente podemos "asegurar" que encontraremos uno de ellos (no necesariamente el óptimo).</li>
+</ul>
+<p><a name="Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico" id="Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=3" title="Editar sección: Funcionamiento de un algoritmo genético básico">editar</a>]</span> <span class="mw-headline">Funcionamiento de un algoritmo genético básico</span></h2>
+<ol>
+<li>Se genera aleatoriamente la población inicial, que está constituida por un conjunto de cromosomas, que representan las posibles soluciones del problema. En caso de no hacerlo aleatoriamente, es importante garantizar que dentro de la población inicial, se tenga la diversidad estructural de estas soluciones para tener una representación de la mayor parte de la población posible o al menos evitar la convergencia prematura.</li>
+<li>A cada uno de los cromosomas de esta población se aplicará la función de aptitud para saber qué tan "buena" es la solución que se está codificando.</li>
+<li>Después de saber la aptitud de cada cromosoma se procede a elegir los cromosomas que serán cruzados en la siguiente generación.</li>
+<li>Los cromosomas con mejor aptitud tienen mayor probabilidad de ser seleccionados.</li>
+<li>El cruzamiento es el principal operador genético, representa la reproducción sexual, opera sobre dos cromosomas a la vez para generar dos descendientes donde se combinan las características de ambos cromosomas padres.</li>
+<li>El AG se deberá detener cuando se alcance la solución óptima, pero ésta generalmente se desconoce, por lo que se deben utilizar otros criterios de detención. Normalmente se usan dos criterios: correr el AG un número máximo de iteraciones (generaciones) o detenerlo cuando no haya cambios en la población.</li>
+<li>El problema de selección de variables se puede ver como un problema de optimización, ya que si se quiere encontrar, bajo alguna <a href="/wiki/Heur%C3%ADstica" title="Heurística">heurística</a>, el subconjunto de variables que potencialicen la diferenciación y las semejanzas de objetos de clases diferentes y de la misma clase respectivamente.</li>
+</ol>
+<p><a name="Esquema_general_del_algoritmo" id="Esquema_general_del_algoritmo"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=4" title="Editar sección: Esquema general del algoritmo">editar</a>]</span> <span class="mw-headline">Esquema general del algoritmo</span></h2>
+<ol>
+<li>Inicializar aleatoriamente una población de soluciones a un problema, representadas por una estructura de datos adecuada.</li>
+<li>Evaluar cada una de las soluciones, y asignarle una puntuación o <i>fitness</i> según lo bien que lo hayan hecho.</li>
+<li>Escoger de la población la parte que tenga una puntuación mayor</li>
+<li>Mutar (cambiar) y entrecruzar (combinar) las diferentes soluciones de esa parte escogida, para reconstruir la población.</li>
+<li>Repetir un número determinado de veces, o hasta que se haya encontrado la solución deseada.</li>
+</ol>
+<p><a name="V.C3.A9ase_tambi.C3.A9n" id="V.C3.A9ase_tambi.C3.A9n"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=5" title="Editar sección: Véase también">editar</a>]</span> <span class="mw-headline">Véase también</span></h2>
+<ul>
+<li><a href="/wiki/Redes_neuronales" class="mw-redirect" title="Redes neuronales">Redes neuronales</a></li>
+<li><a href="/wiki/Red_bayesiana" title="Red bayesiana">Red bayesiana</a></li>
+<li><a href="/w/index.php?title=M%C3%ADnimo/m%C3%A1ximo_local&amp;action=edit&amp;redlink=1" class="new" title="Mínimo/máximo local (aún no redactado)">Mínimo/máximo local</a></li>
+<li><a href="/wiki/Inteligencia_Artificial" class="mw-redirect" title="Inteligencia Artificial">Inteligencia Artificial</a></li>
+<li><a href="/wiki/Rob%C3%B3tica_evolutiva" title="Robótica evolutiva">Robótica Evolutiva</a></li>
+</ul>
+<p><a name="Enlaces_externos" id="Enlaces_externos"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=6" title="Editar sección: Enlaces externos">editar</a>]</span> <span class="mw-headline">Enlaces externos</span></h2>
+<ul>
+<li>(en inglés) <a href="http://fog.neopages.org/tutorials.php" class="external text" title="http://fog.neopages.org/tutorials.php" rel="nofollow">A Practical Genetic Algorithm Tutorial</a> Programming step by step a Genetic Algorithm.</li>
+</ul>
+<ul>
+<li><a href="http://geneura.ugr.es/~jmerelo/ie/ags.htm" class="external text" title="http://geneura.ugr.es/~jmerelo/ie/ags.htm" rel="nofollow">Tutorial de algoritmos genéticos</a></li>
+<li><a href="http://the-geek.org/docs/algen" class="external text" title="http://the-geek.org/docs/algen" rel="nofollow">Algoritmos genéticos y computación evolutiva</a></li>
+<li><a href="http://www.youtube.com/watch?v=aKLb0G55_-o" class="external text" title="http://www.youtube.com/watch?v=aKLb0G55_-o" rel="nofollow">Robot con Sistema de Navegación a base de Algoritmos Geneticos</a></li>
+<li><a href="http://www.ventanita.com.ar" class="external text" title="http://www.ventanita.com.ar" rel="nofollow">Proyecto Darwin</a> Simulador de evolución genética. El simulador, presenta 3 especies (plantas, recolectores y predadores) que interactúan, se reproducen y evolucionan.</li>
+<li><a href="http://ai4r.rubyforge.org/geneticAlgorithms.html" class="external text" title="http://ai4r.rubyforge.org/geneticAlgorithms.html" rel="nofollow">Algoritmos genéticos en Ruby</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 8/1000000
+Post-expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+#ifexist count: 0/500
+-->
+
+<!-- Saved in parser cache with key eswiki:pcache:idhash:165-0!1!0!!es!2 and timestamp 20080319195248 -->
+<div class="printfooter">
+Obtenido de "<a href="http://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico">http://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico</a>"</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Especial:Categories" title="Especial:Categories">Categorías</a>:&#32;<span dir='ltr'><a href="/wiki/Categor%C3%ADa:Algoritmos" title="Categoría:Algoritmos">Algoritmos</a></span> | <span dir='ltr'><a href="/wiki/Categor%C3%ADa:Inteligencia_artificial" title="Categoría:Inteligencia artificial">Inteligencia artificial</a></span></div></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Vistas</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="/wiki/Algoritmo_gen%C3%A9tico" title="Ver el artículo [c]" accesskey="c">Artículo</a></li>
+					 <li id="ca-talk"><a href="/wiki/Discusi%C3%B3n:Algoritmo_gen%C3%A9tico" title="Discusión acerca del artículo [t]" accesskey="t">Discusión</a></li>
+					 <li id="ca-edit"><a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit" title="Puede editar esta página. Por favor, use el botón de previsualización antes de grabar. [e]" accesskey="e">Editar</a></li>
+					 <li id="ca-history"><a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=history" title="Versiones anteriores de esta página y sus autores [h]" accesskey="h">Historial</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Herramientas personales</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/w/index.php?title=Especial:UserLogin&amp;returnto=Algoritmo_gen%C3%A9tico" title="Le animamos a registrarse, aunque no es obligatorio [o]" accesskey="o">Registrarse/Entrar</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/7/74/Wikipedia-logo-es.png);" href="/wiki/Portada" title="Visitar la Portada [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navegación</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Portada" title="Visitar la Portada [z]" accesskey="z">Portada</a></li>
+				<li id="n-portal"><a href="/wiki/Portal:Comunidad" title="Acerca del proyecto, qué puede hacer, dónde encontrar información">Portal de la comunidad</a></li>
+				<li id="n-currentevents"><a href="/wiki/Portal:Actualidad" title="Información de contexto sobre acontecimientos actuales">Actualidad</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Especial:RecentChanges" title="La lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li>
+				<li id="n-randompage"><a href="/wiki/Especial:Random" title="Cargar una página aleatoriamente [x]" accesskey="x">Página aleatoria</a></li>
+				<li id="n-help"><a href="/wiki/Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donaciones" title="Respáldenos">Donativos</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Buscar</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Especial:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Buscar en este wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Ir" title="Ir al artículo con este nombre exacto si existe" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Buscar" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Herramientas</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Especial:WhatLinksHere/Algoritmo_gen%C3%A9tico" title="Lista de todas las páginas del wiki que enlazan con ésta [j]" accesskey="j">Lo que enlaza aquí</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Especial:RecentChangesLinked/Algoritmo_gen%C3%A9tico" title="Cambios recientes en las páginas que enlazan con ésta [k]" accesskey="k">Cambios en enlazadas</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload/es" title="Subir imágenes o archivos multimedia [u]" accesskey="u">Subir archivo</a></li>
+<li id="t-specialpages"><a href="/wiki/Especial:SpecialPages" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;printable=yes" title="Versión imprimible de la página [p]" accesskey="p">Versión para imprimir</a></li>				<li id="t-permalink"><a href="/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;oldid=15936179" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Cite&amp;page=Algoritmo_gen%C3%A9tico&amp;id=15936179">Citar este artículo</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Otros idiomas</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A7%D8%AA_%D9%88%D8%B1%D8%A7%D8%AB%D9%8A%D8%A9">العربية</a></li>
+				<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Algorisme_gen%C3%A8tic">Català</a></li>
+				<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Genetick%C3%BD_algoritmus">Česky</a></li>
+				<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Genetisk_algoritme">Dansk</a></li>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Genetischer_Algorithmus">Deutsch</a></li>
+				<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/%CE%93%CE%B5%CE%BD%CE%B5%CF%84%CE%B9%CE%BA%CE%BF%CE%AF_%CE%91%CE%BB%CE%B3%CF%8C%CF%81%CE%B9%CE%B8%CE%BC%CE%BF%CE%B9">Ελληνικά</a></li>
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Genetic_algorithm">English</a></li>
+				<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85_%DA%98%D9%86%D8%AA%DB%8C%DA%A9">فارسی</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Geneettinen_algoritmi">Suomi</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique">Français</a></li>
+				<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Algoritmo_xen%C3%A9tico">Galego</a></li>
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9E%D7%99%D7%9D_%D7%92%D7%A0%D7%98%D7%99%D7%99%D7%9D">עברית</a></li>
+				<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Genetikus_algoritmus">Magyar</a></li>
+				<li class="interwiki-id"><a href="http://id.wikipedia.org/wiki/Algoritma_genetik">Bahasa Indonesia</a></li>
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Algoritmo_genetico">Italiano</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">日本語</a></li>
+				<li class="interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Genetiniai_algoritmai">Lietuvių</a></li>
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Genetisch_algoritme">Nederlands</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Algorytm_genetyczny">Polski</a></li>
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico">Português</a></li>
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Algoritm_genetic">Română</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC">Русский</a></li>
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Genetisk_algoritm">Svenska</a></li>
+				<li class="interwiki-th"><a href="http://th.wikipedia.org/wiki/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1">ไทย</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Genetik_algoritmalar">Türkçe</a></li>
+				<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_thu%E1%BA%ADt_di_truy%E1%BB%81n">Tiếng Việt</a></li>
+				<li class="interwiki-vo"><a href="http://vo.wikipedia.org/wiki/Lalgorit_Geredik">Volapük</a></li>
+				<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95">中文</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins-1.5/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> Esta página fue modificada por última vez el 13:26, 18 feb 2008.</li>
+				<li id="copyright">Contenido disponible bajo los términos de la <a class="internal" href="/wiki/Wikipedia:Texto_de_la_Licencia_de_documentación_libre_de_GNU">Licencia de documentación libre de GNU</a> (véase <b><a class="internal" href="/wiki/Wikipedia:Derechos_de_autor">Derechos de autor</a></b>).<br />
+Wikipedia® es una marca registrada de la organización sin ánimo de lucro <a class="internal" href="http://wikimediafoundation.org/wiki/Portada">Wikimedia Foundation, Inc.</a><br /></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Pol%C3%ADtica_de_privacidad" title="wikimedia:Política de privacidad">Política de privacidad</a></li>
+				<li id="about"><a href="/wiki/Wikipedia:Acerca_de" title="Wikipedia:Acerca de">Acerca de Wikipedia</a></li>
+				<li id="disclaimer"><a href="/wiki/Wikipedia:Limitaci%C3%B3n_general_de_responsabilidad" title="Wikipedia:Limitación general de responsabilidad">Limitación de responsabilidad</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv167 in 0.061 secs. --></body></html>

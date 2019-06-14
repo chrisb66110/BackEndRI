@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual" lang="es-es" dir="ltr" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Diseño de aplicaciones web modernas con ASP.NET Core y Azure" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/es-es/dotnet/standard/modern-web-apps-azure-architecture/" />
+	<meta property="og:description" content="Es una guía en la que se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure." />
+	<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+	<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+		<meta name="ms.devlang" content="dotnet" />
+<meta name="author" content="ardalis" />
+<meta name="ms.author" content="wiwagn" />
+<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+<meta name="apiPlatform" content="dotnet" />
+<meta name="ms.topic" content="conceptual" />
+<meta name="bilingual_type" content="hover over" />
+<meta name="ms.technology" content="dotnet-ebooks" />
+<meta name="ms.prod" content="dotnet" />
+<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+<meta name="description" content="Es una gu&#237;a en la que se proporcionan instrucciones de un extremo a otro sobre c&#243;mo compilar aplicaciones web monol&#237;ticas con ASP.NET Core y Azure." />
+<meta name="ms.date" content="01/30/2019" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="search.ms_docsetname" content="core-docs" />
+<meta name="locale" content="es-es" />
+<meta name="site_name" content="Docs" />
+<meta name="search.ms_product" content="VS" />
+<meta name="depot_name" content="VS.core-docs" />
+<meta name="updated_at" content="2019-04-01 01:26 PM" />
+<meta name="gitcommit" content="https://github.com/dotnet/docs.es-es/blob/9ce4493e3d473ad9fa1fdb08c821fb305c78bde3/docs/standard/modern-web-apps-azure-architecture/index.md" />
+<meta name="original_content_git_url" content="https://github.com/dotnet/docs.es-es/blob/live-sxs/docs/standard/modern-web-apps-azure-architecture/index.md" />
+<meta name="document_id" content="ae811ba0-e87d-2569-5b1d-e8493d933fa3" />
+<meta name="document_version_independent_id" content="0c327672-dba9-eae9-b1b4-aa621d66c69a" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="search.mshattr.devlang" content="csharp" />
+<meta name="word_count" content="1524" />
+
+	<meta name="scope" content=".NET" />
+<link href="https://docs.microsoft.com/es-es/dotnet/standard/modern-web-apps-azure-architecture/" rel="canonical">
+	<title>Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/es-es/_themes/styles/6e59f4a9.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/es-es/_themes/styles/f1e7d9d9.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			azureHeaderLocale: 'es-es',
+			contentLocale: 'es-es',
+			contentDir: 'ltr',
+			userLocale: 'es-es',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasComments: true,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'dotnet/docs.es-es',
+			feedbackProductUrl: 'https://developercommunity.visualstudio.com/spaces/61/index.html',
+			contentGitUrl: 'https://github.com/dotnet/docs.es-es/blob/live/docs/standard/modern-web-apps-azure-architecture/index.md',
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false,
+			enableUHFPPE: true
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="https://static.docs.com/ui/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="https://static.docs.com/ui/third-party/fetch/2.0.3/fetch.min.js" integrity="sha384-H3LQq82b6Mm80GYRHtRSlTwO9DoXctmYCVEYk9M8mp97lRzs6DuSrHVUg3SBP9w0" crossorigin="anonymous"><\/script>');
+	}
+	if (typeof HTMLTemplateElement === 'undefined') {
+		document.write('<script src="https://static.docs.com/ui/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"><\/script>');
+	}
+	</script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+		<script src="/_themes/docs.theme/master/es-es/_themes/scripts/93a53e6a.index-docs.js"></script>
+
+<script>bazadebezolkohpepadr="937232199"</script><script type="text/javascript" src="https://docs.microsoft.com/akam/10/37dd0439" defer></script></head>
+
+<body lang="es-es" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">
+			<div id="uhf-placeholder"></div>
+		</div>
+	<div class="content-header uhf-container has-padding has-default-focus" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Ruta de navegación">
+		<ul id="page-breadcrumbs" class="breadcrumbs">
+		</ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Salir del modo de enfoque</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-controls="sidebar" aria-haspopup="true">
+				<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+				<span>Contenido</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+						<li>
+							<a href="#feedback" class="button is-text is-size-7 is-icon-only-touch" data-bi-name="comments">
+								<span class="icon">
+									<span class="docon docon-comment-lines" aria-hidden="true"></span>
+								</span>
+								<span class="action-item-text">Comentarios</span>
+							</a>
+						</li>
+							<li id="contenteditbtn">
+									<a href="https://github.com/dotnet/docs.es-es/blob/live/docs/standard/modern-web-apps-azure-architecture/index.md" class="button is-text is-icon-only-touch is-size-7" title="Editar este documento" data-bi-name="edit" data-original_content_git_url="https://github.com/dotnet/docs.es-es/blob/live-sxs/docs/standard/modern-web-apps-azure-architecture/index.md" data-original_content_git_url_template="" data-pr_repo="" data-pr_branch="">
+									<span class="icon">
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Editar</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align>
+						<a href="#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Compartir este documento" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Compartir</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Correo electrónico</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-sun"></span>
+						</span>
+						<span class="action-item-text">Tema</span>
+					</button>
+				</li>
+				<li>
+					<div class="lang-toggle-container">
+						<label for="language-toggle" aria-hidden="true" tabindex="-1">Leer en inglés</label>
+						<div class="checkbox-toggle-wrapper">
+							<input type="checkbox" id="language-toggle" aria-label="Leer en inglés">
+							<label for="language-toggle" class="switch"></label>
+						</div>
+					</div>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in auth-status-determined not-authenticated button is-text has-text-primary is-size-7" href="#">Iniciar sesión</a>
+					<div class="dropdown has-caret auth-status-determined authenticated" auto-align>
+						<button class="dropdown-trigger button is-text is-size-7 is-icon-only-touch has-inner-focus" aria-label="Su cuenta" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-truncated" data-profile-property="userName"></span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="/profile" data-profile-property="profileUrl">Perfil</a></li>
+								<li><a class="docs-sign-out" href="#">Cerrar sesión</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contenido" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+
+		<div id="banner-holder" class="has-default-focus has-overflow-hidden">
+		</div>
+
+	<div id="disclaimer-holder" class="has-overflow-hidden"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps ">
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns has-large-gaps ">
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Acciones de página">
+							<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="En navegación de páginas">
+								<h3>En este artículo</h3>
+							</nav>
+					</div>
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="es-es" dir="ltr">
+
+
+
+						<h1 id="architect-modern-web-applications-with-aspnet-core-and-azure" sourcefile="docs/standard/modern-web-apps-azure-architecture/index.md" sourcestartlinenumber="9"><span data-ttu-id="7c6dc-103">Diseño de aplicaciones web modernas con ASP.NET Core y Azure</span><span class="sxs-lookup"><span data-stu-id="7c6dc-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span></h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="es-es" dir="ltr">
+							<li class="displayDate loading">
+								<time role="presentation" datetime="2019-01-30T00:00:00.000Z" data-article-date-source="ms.date">01/30/2019</time>
+							</li>
+								<li class="readingTime">Tiempo de lectura: 7 minutos</li>
+							<li class="contributors-holder">
+								<span class="contributors-text">Colaboradores</span>
+								<ul class="contributors" data-bi-name="contributors">
+											<li><a href="https://github.com/ardalis" title="Steve Smith" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/ardalis.png?size=32" alt="Steve Smith"></a></li>
+											<li><a href="https://github.com/olprod" title="olprod" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/olprod.png?size=32" alt="olprod"></a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="En navegación de páginas">
+							<h3>En este artículo</h3>
+						</nav>
+
+
+						<!-- <content> -->
+							
+<p><img src="media/index/web-application-guide-cover-image.png" alt="Imagen de portada de la guía Diseño de aplicaciones web modernas." data-linktype="relative-path"></p>
+<p><span data-ttu-id="7c6dc-105">PUBLICADO POR</span><span class="sxs-lookup"><span data-stu-id="7c6dc-105">PUBLISHED BY</span></span></p>
+<p><span data-ttu-id="7c6dc-106">Equipos de producto de la División de desarrolladores de Microsoft, .NET y Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7c6dc-106">Microsoft Developer Division, .NET, and Visual Studio product teams</span></span></p>
+<p><span data-ttu-id="7c6dc-107">División de Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="7c6dc-107">A division of Microsoft Corporation</span></span></p>
+<p><span data-ttu-id="7c6dc-108">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="7c6dc-108">One Microsoft Way</span></span></p>
+<p><span data-ttu-id="7c6dc-109">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="7c6dc-109">Redmond, Washington 98052-6399</span></span></p>
+<p><span data-ttu-id="7c6dc-110">Copyright © 2019 de Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="7c6dc-110">Copyright © 2019 by Microsoft Corporation</span></span></p>
+<p><span data-ttu-id="7c6dc-111">Todos los derechos reservados.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-111">All rights reserved.</span></span> <span data-ttu-id="7c6dc-112">No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-112">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span></p>
+<p><span data-ttu-id="7c6dc-113">Este libro se proporciona “tal cual” y expresa las opiniones del autor.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-113">This book is provided “as-is” and expresses the author’s views and opinions.</span></span> <span data-ttu-id="7c6dc-114">Las opiniones y la información expresados en este libro, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-114">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span></p>
+<p><span data-ttu-id="7c6dc-115">Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-115">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="7c6dc-116">No debe deducirse ninguna asociación ni conexión reales.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-116">No real association or connection is intended or should be inferred.</span></span></p>
+<p><span data-ttu-id="7c6dc-117">Microsoft y las marcas comerciales indicadas en <a href="https://www.microsoft.com" data-linktype="external">https://www.microsoft.com</a> en la página web &quot;Marcas comerciales&quot; pertenecen al grupo de empresas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-117">Microsoft and the trademarks listed at <a href="https://www.microsoft.com" data-linktype="external">https://www.microsoft.com</a> on the “Trademarks” webpage are trademarks of the Microsoft group of companies.</span></span></p>
+<p><span data-ttu-id="7c6dc-118">Mac y macOS son marcas comerciales de Apple Inc.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-118">Mac and macOS are trademarks of Apple Inc.</span></span></p>
+<p><span data-ttu-id="7c6dc-119">El logotipo de la ballena de Docker es una marca registrada de Docker, Inc. Se usa con permiso.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-119">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span></p>
+<p><span data-ttu-id="7c6dc-120">El resto de marcas y logotipos pertenece a sus respectivos propietarios.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-120">All other marks and logos are property of their respective owners.</span></span></p>
+<p><span data-ttu-id="7c6dc-121">Autor:</span><span class="sxs-lookup"><span data-stu-id="7c6dc-121">Author:</span></span></p>
+<blockquote>
+<p><span data-ttu-id="7c6dc-122"><strong>Steve &quot;ardalis&quot; Smith</strong>: instructor y arquitecto de software de <a href="https://ardalis.com" data-linktype="external">Ardalis.com</a></span><span class="sxs-lookup"><span data-stu-id="7c6dc-122"><strong>Steve &quot;ardalis&quot; Smith</strong> - Software Architect and Trainer - <a href="https://ardalis.com" data-linktype="external">Ardalis.com</a></span></span></p>
+</blockquote>
+<p><span data-ttu-id="7c6dc-123">Editores:</span><span class="sxs-lookup"><span data-stu-id="7c6dc-123">Editors:</span></span></p>
+<blockquote>
+<p><span data-ttu-id="7c6dc-124"><strong>Maira Wenzel</strong></span><span class="sxs-lookup"><span data-stu-id="7c6dc-124"><strong>Maira Wenzel</strong></span></span></p>
+</blockquote>
+<h2 id="introduction"><span data-ttu-id="7c6dc-125">Introducción</span><span class="sxs-lookup"><span data-stu-id="7c6dc-125">Introduction</span></span></h2>
+<p><span data-ttu-id="7c6dc-126">.NET Core y ASP.NET Core ofrecen varias ventajas con respecto al desarrollo tradicional con .NET.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-126">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="7c6dc-127">Debe usar .NET Core para las aplicaciones de servidor si algunos o todos los elementos siguientes son importantes para el éxito de su aplicación:</span><span class="sxs-lookup"><span data-stu-id="7c6dc-127">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="7c6dc-128">Compatibilidad entre plataformas.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-128">Cross-platform support.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-129">Uso de microservicios.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-129">Use of microservices.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-130">Uso de contenedores de Docker.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-130">Use of Docker containers.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-131">Requisitos elevados de rendimiento y escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-131">High performance and scalability requirements.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-132">Control de versiones en paralelo de versiones de .NET por aplicación en el mismo servidor.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-132">Side-by-side versioning of .NET versions by application on the same server.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="7c6dc-133">Las aplicaciones tradicionales de .NET son compatibles con muchos de estos requisitos, pero ASP.NET Core y .NET Core se han optimizado para ofrecer una compatibilidad mejorada para los escenarios anteriores.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-133">Traditional .NET applications can and do support many of these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span></p>
+<p><span data-ttu-id="7c6dc-134">Cada vez más organizaciones deciden hospedar sus aplicaciones web en la nube con servicios como Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-134">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="7c6dc-135">Considere la posibilidad de hospedar su aplicación en la nube si los siguientes elementos son importantes para la aplicación o la organización:</span><span class="sxs-lookup"><span data-stu-id="7c6dc-135">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="7c6dc-136">Inversión reducida en costos de centros de datos (hardware, software, espacio, utilidades, administración de servidores, etc.).</span><span class="sxs-lookup"><span data-stu-id="7c6dc-136">Reduced investment in data center costs (hardware, software, space, utilities, server management, etc.)</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-137">Precios flexibles (pago en función del uso, y no por la capacidad inactiva).</span><span class="sxs-lookup"><span data-stu-id="7c6dc-137">Flexible pricing (pay based on usage, not for idle capacity).</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-138">Confiabilidad extrema.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-138">Extreme reliability.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-139">Movilidad mejorada de la aplicación; modificación sencilla de dónde y cómo implementar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-139">Improved app mobility; easily change where and how your app is deployed.</span></span></p>
+</li>
+<li><p><span data-ttu-id="7c6dc-140">Capacidad flexible; escalado o reducción vertical en función de las necesidades reales.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-140">Flexible capacity; scale up or down based on actual needs.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="7c6dc-141">La compilación de aplicaciones web con ASP.NET Core, hospedadas en Azure, ofrece muchas ventajas competitivas con respecto a las alternativas tradicionales.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-141">Building web applications with ASP.NET Core, hosted in Azure, offers many competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="7c6dc-142">Se ha optimizado ASP.NET Core para escenarios de hospedaje en la nube y prácticas de desarrollo de aplicaciones web modernas.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-142">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="7c6dc-143">En esta guía se ofrece información sobre cómo diseñar aplicaciones con ASP.NET Core para sacar el máximo provecho de estas funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-143">In this guide, you'll learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span></p>
+<h2 id="purpose"><span data-ttu-id="7c6dc-144">Propósito</span><span class="sxs-lookup"><span data-stu-id="7c6dc-144">Purpose</span></span></h2>
+<p><span data-ttu-id="7c6dc-145">En esta guía se proporcionan instrucciones integrales sobre cómo compilar aplicaciones web <em>monolíticas</em> con ASP.NET Core y Azure.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-145">This guide provides end-to-end guidance on building <em>monolithic</em> web applications using ASP.NET Core and Azure.</span></span> <span data-ttu-id="7c6dc-146">En este contexto, &quot;monolíticas&quot; hace referencia al hecho de que estas aplicaciones se implementan como una sola unidad, no como una colección de aplicaciones y servicios que interactúan.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-146">In this context, &quot;monolithic&quot; refers to the fact that these applications are deployed as a single unit, not as a collection of interacting services and applications.</span></span></p>
+<p><span data-ttu-id="7c6dc-147">Esta guía complementa los microservicios de .NET <a href="../microservices-architecture/index" data-linktype="relative-path">&quot;<em>. Arquitectura para aplicaciones .NET en contenedor</em>&quot;</a> más centrada en Docker, los microservicios y la implementación de contenedores para hospedar aplicaciones empresariales.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-147">This guide is complementary to the <a href="../microservices-architecture/index" data-linktype="relative-path">&quot;<em>.NET Microservices. Architecture for Containerized .NET Applications</em>&quot;</a> which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span></p>
+<h3 id="net-microservices-architecture-for-containerized-net-applications"><span data-ttu-id="7c6dc-148">Microservicios de .NET.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-148">.NET Microservices.</span></span> <span data-ttu-id="7c6dc-149">Arquitectura para aplicaciones .NET en contenedor</span><span class="sxs-lookup"><span data-stu-id="7c6dc-149">Architecture for Containerized .NET Applications</span></span></h3>
+<ul>
+<li><span data-ttu-id="7c6dc-150"><strong>Libro electrónico</strong></span><span class="sxs-lookup"><span data-stu-id="7c6dc-150"><strong>e-book</strong></span></span><br>
+<a href="https://aka.ms/MicroservicesEbook" data-linktype="external">https://aka.ms/MicroservicesEbook</a></li>
+<li><span data-ttu-id="7c6dc-151"><strong>Aplicación de ejemplo</strong></span><span class="sxs-lookup"><span data-stu-id="7c6dc-151"><strong>Sample Application</strong></span></span><br>
+<a href="https://aka.ms/microservicesarchitecture" data-linktype="external">https://aka.ms/microservicesarchitecture</a></li>
+</ul>
+<h2 id="who-should-use-this-guide"><span data-ttu-id="7c6dc-152">Destinatarios de esta guía</span><span class="sxs-lookup"><span data-stu-id="7c6dc-152">Who should use this guide</span></span></h2>
+<p><span data-ttu-id="7c6dc-153">Los destinatarios de esta guía son principalmente desarrolladores, jefes de desarrollo y arquitectos interesados en crear aplicaciones web modernas con tecnologías y servicios de Microsoft en la nube.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-153">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span></p>
+<p><span data-ttu-id="7c6dc-154">Otros destinatarios secundarios son los responsables de tomar decisiones técnicas que ya están familiarizados con ASP.NET o Azure y que buscan información sobre si tiene sentido actualizar a ASP.NET Core para los proyectos nuevos o existentes.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-154">A secondary audience is technical decision makers who are already familiar ASP.NET or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span></p>
+<h2 id="how-you-can-use-this-guide"><span data-ttu-id="7c6dc-155">Cómo leer esta guía</span><span class="sxs-lookup"><span data-stu-id="7c6dc-155">How you can use this guide</span></span></h2>
+<p><span data-ttu-id="7c6dc-156">Esta guía se ha comprimido en un documento relativamente pequeño que se centra en la creación de aplicaciones web con modernas tecnologías de .NET y Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-156">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="7c6dc-157">Por lo tanto, se puede leer completa para proporcionar una base de conocimiento sobre estas aplicaciones y sus consideraciones técnicas.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-157">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="7c6dc-158">La guía, junto con su aplicación de ejemplo, también puede servir como punto inicial o referencia.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-158">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="7c6dc-159">Use la aplicación de ejemplo asociada como una plantilla para las aplicaciones propias o para consultar cómo se pueden organizar los componentes de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-159">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="7c6dc-160">Consulte los principios y la cobertura de la arquitectura, las opciones tecnológicas y las consideraciones para la toma de decisiones de esta guía a la hora de sopesar estas opciones para su propia aplicación.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-160">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when you're weighing these choices for your own application.</span></span></p>
+<p><span data-ttu-id="7c6dc-161">No dude en reenviar esta guía a su equipo para ayudarlo a garantizar una comprensión común de estas consideraciones y oportunidades.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-161">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="7c6dc-162">El hecho de que todos los usuarios trabajen a partir de un conjunto común de principios subyacentes y terminología permite garantizar una aplicación coherente de las prácticas y los patrones de diseño.</span><span class="sxs-lookup"><span data-stu-id="7c6dc-162">Having everybody working from a common set of terminology and underlying principles helps ensure consistent application of architectural patterns and practices.</span></span></p>
+<h2 id="references"><span data-ttu-id="7c6dc-163">Referencias</span><span class="sxs-lookup"><span data-stu-id="7c6dc-163">References</span></span></h2>
+<ul>
+<li><span data-ttu-id="7c6dc-164"><strong>Selección entre .NET Core y .NET Framework para aplicaciones de servidor</strong></span><span class="sxs-lookup"><span data-stu-id="7c6dc-164"><strong>Choosing between .NET Core and .NET Framework for server apps</strong></span></span><br>
+<a href="../choosing-core-framework-server" data-linktype="relative-path">https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server</a></li>
+</ul>
+<div class="step-by-step">
+<p><a href="modern-web-applications-characteristics" data-linktype="relative-path"><span data-ttu-id="7c6dc-165">Siguiente</span><span class="sxs-lookup"><span data-stu-id="7c6dc-165">Next</span></span></a></p>
+</div>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- feedback section -->
+
+
+
+<section class="feedback-section" data-bi-name="feedback-section">
+	<h2 id="feedback">Comentarios</h2>
+
+	<div class="alert choose-feedback-type">
+		<p id="send-feedback-about">Send feedback about:</p>
+
+		<div class="choose-feedback-buttons">
+			<a class="button feedback-type-product has-margin-bottom-small" aria-describedby="send-feedback-about" href="https://developercommunity.visualstudio.com/spaces/61/index.html" data-bi-name="product-feedback">
+				<span>This product</span>
+				<span class="icon docon docon-navigate-external" aria-hidden="true"></span>
+			</a>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small">
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-sign-in-button has-text-wrap" aria-describedby="send-feedback-about" data-bi-name="feedback-sign-in">
+						<span class="icon docon docon-brand-github" aria-hidden="true"></span>
+						<span>This page</span>
+					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger is-full-height" aria-describedby="send-feedback-about" aria-haspopup="true" aria-expanded="false" aria-controls="fbm0" aria-label="Additional feedback options" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div id="fbm0" class="dropdown-menu documentation-feedback-menu">
+						También puede dejar sus comentarios <a data-bi-name="create-issue-on-github" href="{0}">directamente en GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small" hidden>
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-form-toggle" aria-describedby="send-feedback-about" aria-expanded="false" aria-controls="feedback-form"
+						data-bi-name="documentation-feedback">
+This page					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger" aria-describedby="send-feedback-about" aria-haspopup="true" aria-expanded="false" aria-controls="fbm1" aria-label="Additional feedback options" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div id="fbm1" class="dropdown-menu documentation-feedback-menu">
+						También puede dejar sus comentarios <a data-bi-name="create-issue-on-github" href="{0}">directamente en GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form class="feedback-form" id="feedback-form" accept-charset="UTF-8" autocomplete="off" action="javascript:" hidden>
+		<h3 class="feedback-form-heading current-user">
+			<img class="avatar" alt="Avatar" width="36" height="36" aria-hidden="true">
+			<span class="username" aria-hidden="true"></span>
+			<span class="visually-hidden">Liquid error: Can't find the localized string giveDocumentationFeedback for template Conceptual.</span>
+		</h3>
+
+		<label>
+			<span class="visually-hidden">Título del problema</span>
+			<input class="input is-radiusless has-margin-bottom-small" name="title" type="text" placeholder="Título del problema" required pattern=".*\w.*">
+		</label>
+		<label>
+			<span class="visually-hidden">Dejar un comentario</span>
+			<textarea name="body" placeholder="Dejar un comentario" class="textarea is-radiusless" required></textarea>
+		</label>
+
+		<div class="action-container">
+			<button class="button is-primary" type="submit" name="submit">Enviar comentarios</button>
+		</div>
+	</form>
+
+	<div class="feedback-status alert is-loading" role="alert">
+		<p>Cargando comentarios...</p>
+	</div>
+
+	<div class="feedback-tab-group tabGroup" data-tab-group-independent hidden>
+		<ul role="tablist">
+			<li role="presentation">
+				<a href="#tabpanel-issues-open" role="tab" aria-controls="tabpanel-issues-open" data-tab="issues-open" aria-label="Problemas abiertos"></a>
+			</li>
+			<li role="presentation">
+				<a href="#tabpanel-issues-closed" role="tab" aria-controls="tabpanel-issues-closed" data-tab="issues-closed"
+				 aria-label="Problemas cerrados"></a>
+			</li>
+		</ul>
+		<section id="tabpanel-issues-open" role="tabpanel" data-tab="issues-open">
+			<div class="no-issues-placeholder">No hay problemas abiertos</div>
+			<ul class="github-issues-list" aria-label="Problemas abiertos"></ul>
+		</section>
+		<section id="tabpanel-issues-closed" role="tabpanel" data-tab="issues-closed">
+			<div class="no-issues-placeholder">No hay problemas cerrados</div>
+			<ul class="github-issues-list" aria-label="Problemas cerrados"></ul>
+		</section>
+	</div>
+	<div class="action-container">
+		<a class="view-on-github" href="https://github.com/dotnet/docs.es-es/issues" data-bi-name="view-on-github"
+		 hidden>
+			<span class="docon docon-brand-github" aria-hidden="true"></span>
+			<span>Ver en GitHub</span>
+			<span class="docon docon-navigate-external" aria-hidden="true"></span>
+		</a>
+	</div>
+</section>
+						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Documentación de versiones anteriores</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribuir</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidad &amp; cookies</a></li>
+		<li><a data-mscc-ic="false" href="/es-es/legal/termsofuse" data-bi-name="termsofuse">Términos de uso</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Comentarios del sitio</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas comerciales</a></li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Navegación principal">
+						<button class="sidebar-header has-inner-focus" type="button" aria-label="Cerrar" data-bi-name="contents-collapse">
+							<span>Contenido</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							</div>
+							<nav class="toc"></nav>
+							<div class="pdf-download-holder"></div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Documentación de versiones anteriores</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribuir</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidad &amp; cookies</a></li>
+		<li><a data-mscc-ic="false" href="/es-es/legal/termsofuse" data-bi-name="termsofuse">Términos de uso</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Comentarios del sitio</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas comerciales</a></li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+<noscript><img src="https://docs.microsoft.com/akam/10/pixel_37dd0439?a=dD0zZTMxNWY1NzRmNGY5NmMwNmE5ZWFjNDU1NzI2ZDk4ZDlmYWMzYTZjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

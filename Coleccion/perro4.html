@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://elrefugio.org/adopta/perros -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title id="cabeceraSeo_titleSeo">Adopta un perro</title>
+    <!-- METAS OG -->
+    <meta id="cabeceraSeo_meta_titulo" property="og:title" content="El Refugio" name="title">
+    <meta id="cabeceraSeo_meta_img" property="og:image" content="https://elrefugio.org/img/elRefugio.png">
+    <meta id="cabeceraSeo_meta_desc1" property="og:description" content="Adoptar - Adopta un perro" name="description">
+    <meta id="cabeceraSeo_meta_url" property="og:url" content="https://elrefugio.org/adopta/perros">
+    <meta id="cabeceraSeo_msDescripcion" name="description" content="Adopta un perro">
+
+    <!-- METAS TWITTER -->
+    <meta id="cabeceraSeo_meta_tw_tituloPrincipal" name="twitter:card" content="summary">
+    <meta id="cabeceraSeo_meta_tw_titulo" name="twitter:title" content="El Refugio">
+    <meta id="cabeceraSeo_meta_tw_imagen" name="twitter:image" content="https://elrefugio.org/img/elRefugio.png">
+    <meta id="cabeceraSeo_meta_tw_descripcion" name="twitter:description" content="Adoptar - Adopta un perro">
+    <meta id="cabeceraSeo_meta_tw_url" name="twitter:url" content="https://elrefugio.org/adopta/perros">
+<meta name="keywords" content="protectora, madrid, protectoras, adopcion, adopciones, perro, perra, maltrato, gato, gata, animal, veterinario, veterinaria, refugio, el refugio, paunero"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"><meta property="fb:app_id" content="2305272732"><meta name="twitter:site" content="@el_refugio"><link rel="shortcut icon" href="https://elrefugio.org/favicon.ico" type="image/x-icon"><link rel="icon" href="https://elrefugio.org/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link href="./perro4_files/main.css" rel="stylesheet" type="text/css"><link href="./perro4_files/responsive.css" rel="stylesheet" type="text/css"><link href="./perro4_files/colorbox.css" rel="stylesheet" type="text/css"><link href="./perro4_files/leycookies.css" rel="stylesheet" type="text/css">
+    <!-- JS -->
+    <!--[if lt IE 9]> <script src="dist/html5shiv.js"></script> <![endif]-->
+    <script async="" src="./perro4_files/analytics.js.descarga"></script><script src="./perro4_files/jquery.min.js.descarga" type="text/javascript"></script>
+    <script src="./perro4_files/jquery-ui-1.10.4.custom.min.js.descarga" type="text/javascript"></script>
+    <script src="./perro4_files/jquery.bxslider.min.js.descarga"></script>
+    <!-- bxSlider CSS file -->
+    <link href="./perro4_files/jquery.bxslider.css" rel="stylesheet">
+    <script src="./perro4_files/leycookies.js.descarga" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(window).load(function() { $(".btnMenu").click(function() { $(".menu").toggleClass( "on" ); $(".sidebar").toggleClass( "on" ); }); }); 
+    </script>
+    
+    
+<script src="./perro4_files/jquery.colorbox-min.js.descarga" type="text/javascript"></script>
+<script src="./perro4_files/jquery.scrollTo.min.js.descarga" type="text/javascript"></script>
+<script type="text/javascript">
+    var inicio_mas = 18, cat = 18;
+    var macho = 0, hembra = 0, cachorro = 0;
+    var busqueda = '';
+    var filtro = '';
+    var pulsaMas = '1';
+    var ordenFiltro = '';
+    var btnSubir = '0';
+    var fichaAnimal = '0';
+    $(window).load(function () {
+        $('#busquedaNombre').val(busqueda);
+        $('[rel="filtro"]').removeClass('on');
+        if (busqueda != '') { $('.busqueda').slideDown(200); } else { $('.busqueda').slideUp(200); $('#busquedaNombre').val('Buscar por Nombre'); }
+        if (filtro == '') { macho = 0; hembra = 0; cachorro = 0; ordenFiltro = 'PerrosAdopta'; $('#filtroT').addClass('on'); }
+        if (filtro == 'todos') { macho = 0; hembra = 0; cachorro = 0; ordenFiltro = 'PerrosAdopta'; $('#filtroT').addClass('on'); }
+        if (filtro == 'machos') { macho = 1; hembra = 0; cachorro = 0; ordenFiltro = 'PerrosAdoptaMacho'; $('#filtroM').addClass('on'); }
+        if (filtro == 'hembras') { macho = 0; hembra = 1; cachorro = 0; ordenFiltro = 'PerrosAdoptaHembra'; $('#filtroH').addClass('on'); }
+        if (filtro == 'cachorros') { macho = 0; hembra = 0; cachorro = 1; ordenFiltro = 'PerrosAdoptaCachorro'; $('#filtroC').addClass('on'); }
+        $.ajax({ url: 'https://elrefugio.org/masAnimales.aspx?i=0&t=' + ordenFiltro + '&tt=PerrosAdopta&c=' + (cat * pulsaMas) + '&m=' + macho + '&h=' + hembra + '&ch=' + cachorro + '&n=' + busqueda, success: function (data) {
+            var $trabajos = $(data);
+
+            setTimeout(function () {
+                $('#cajas').append($trabajos); setTimeout(function () {
+                    $('#cajas').fadeIn();
+                    if ($('.item').length > 18) {
+                        var elUltimo = $('.item').eq(((pulsaMas - 1) * cat) - 1).position().top;
+                        $(window).scrollTop(elUltimo);
+                    }
+                }, 100);
+            }, 200);
+
+
+            $.ajax({ url: 'https://elrefugio.org/masAnimales.aspx?vm=1&i=' + (cat * pulsaMas) + '&t=' + ordenFiltro + '&tt=PerrosAdopta&c=' + cat + '&m=' + macho + '&h=' + hembra + '&ch=' + cachorro + '&n=' + busqueda, success: function (data) {
+                if (data == 1) { $('#divVerMas').hide(); } else { setTimeout(function () { $('#divVerMas').show(); }, 450); }
+
+            }
+            });
+            setTimeout(function () {
+                if (parseInt(fichaAnimal) > 0) { $('body').scrollTo('[idScroll="' + fichaAnimal + '"]', 400); } //else { $('body').scrollTo('#ancla', 400); }
+                if (btnSubir == 1) { $('.btnSubir').fadeIn(); }
+            }, 600);
+        }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+        });
+
+        $('#menuH > li').find('a').removeClass("on");
+        $('#menuV > li').find('a').removeClass("on");
+        $('.btnAdopta').addClass("on");
+        $('.tagForm').focusin(function () { var valor = $(this).attr("vacio"); if ($(this).val() == valor) { $(this).val(''); } });
+        $('.tagForm').focusout(function () { var valor = $(this).attr("vacio"); if ($(this).val() == '') { $(this).val(valor); } });
+        $('.btnNombre').click(function () {
+            $('.busqueda').slideToggle(200);
+            $('#busquedaNombre').focus();
+            return false;
+        });
+        $('#btnBusqueda').click(function () {
+            busqueda = 1;
+            var aux = $('#busquedaNombre').val();
+            var auxFiltro = 'todos';
+
+            if (filtro == 'machos') { auxFiltro = 'machos'; }
+            if (filtro == 'hembras') { auxFiltro = 'hembras'; }
+            if (filtro == 'cachorros') { auxFiltro = 'cachorros'; }
+            if (aux != '' && aux != 'Buscar por Nombre') { location.href = 'https://elrefugio.org/adopta/perros?filtro=' + auxFiltro + '&busqueda=' + aux; }
+            else { location.href = 'https://elrefugio.org/adopta/perros?filtro=' + auxFiltro; }
+
+            return false;
+        });
+
+        $(".btnCondiciones").colorbox({ inline: true, maxWidth: "96%", transition: "fade" });
+
+        $('.btnVerMas').click(function () {
+            var aux = '';
+            $('.bloqAviso').fadeOut();
+            var orden = 'PerrosAdopta';
+            if (macho == 1) { orden = 'PerrosAdoptaMacho'; }
+            if (hembra == 1) { orden = 'PerrosAdoptaHembra'; }
+            if (cachorro == 1) { orden = 'PerrosAdoptaCachorro'; }
+
+            location.href = 'https://elrefugio.org/adopta/perros?filtro=' + filtro + '&busqueda=' + busqueda + '&pagina=' + (parseInt(pulsaMas) + 1);
+
+            return false;
+        });
+
+        $('#filtroH').click(function () {
+            if (busqueda != '') { location.href = 'https://elrefugio.org/adopta/perros?filtro=hembras' + '&busqueda=' + busqueda; }
+            else { location.href = 'https://elrefugio.org/adopta/perros?filtro=hembras'; }
+            return false;
+        });
+        $('#filtroM').click(function () {
+            if (busqueda != '') { location.href = 'https://elrefugio.org/adopta/perros?filtro=machos' + '&busqueda=' + busqueda; }
+            else { location.href = 'https://elrefugio.org/adopta/perros?filtro=machos'; }
+            return false;
+        });
+        $('#filtroC').click(function () {
+            if (busqueda != '') { location.href = 'https://elrefugio.org/adopta/perros?filtro=cachorros' + '&busqueda=' + busqueda; }
+            else { location.href = 'https://elrefugio.org/adopta/perros?filtro=cachorros'; }
+            return false;
+        });
+        $('#filtroT').click(function () {
+            //if (busqueda != '') { location.href = 'adoptaPerros.aspx?busqueda=' + busqueda; }
+            //else { location.href = 'adoptaPerros.aspx'; }
+            location.href = 'https://elrefugio.org/adopta/perros';
+            return false;
+        });
+        $('.btnSubir').click(function () {
+            $('body').scrollTo('.mainBox', 400);
+            return false;
+        });
+    });
+    </script>
+<title>
+
+</title></head>
+<body style="">
+   <div id="contentLeyCookies"><div class="contentCentradoLeyCookies"><span class="textoLeyCookies">Esta página web utiliza cookies, propias y de terceros, para mejorar tu visita adaptando la navegación a tus preferencias. Pulsa en el botón "Aceptar Cookie" para aceptar nuestra <a class="enlaceCookies" href="http://www.elrefugio.org/politicaPrivacidad.aspx" target="_blank">política de cookies</a><div class="box-boton-aceptar-cookies"><button class="boton-aceptar-cookies" id="boton-aceptar-cookies">Aceptar Cookies</button> <a href="https://elrefugio.org/adopta/perros#" id="botonLeyCookies" class="cerrarLeyCookies"></a>&nbsp;</div></span></div></div>   
+   <div class="mainBox">
+        <header class="header">
+            <div id="logo"><a href="https://elrefugio.org/home"><img src="./perro4_files/elRefugio.png" alt="El Refugio"></a></div>
+            <div class="btnMenu">MENÚ</div>
+            <nav class="menu">
+                <ul id="menuH">
+                    <li class="quienes"><a href="https://elrefugio.org/quienes-somos">Quienes Somos</a></li>
+                    <li class="noticias"><a href="https://elrefugio.org/noticias">Noticias</a></li>
+                    <li class="ayudanos"><a href="https://elrefugio.org/ayudanos">Ayúdanos</a></li>
+                    <li class="donativos"><a href="https://elrefugio.org/donativos">Donativos</a></li>
+                    <li class="contactanos"><a href="https://elrefugio.org/contacto">Contáctanos</a></li>
+                    <li class="shopping"><a href="https://elrefugio.org/shopping">Shopping</a></li>
+                </ul>
+            </nav>       
+        </header>
+        <aside class="sidebar">
+            <ul id="menuV">
+                <li><a href="https://elrefugio.org/adopta" class="btnAdopta on"><span class="txt">Adopta</span><span class="bg"></span></a></li>
+                <li><a href="https://elrefugio.org/hazte-socio" class="btnHSocio"><span class="txt">Hazte Socio</span><span class="bg"></span></a></li>
+                <li><a href="https://elrefugio.org/ayudanos/centro-veterinario" class="btnCVeterinario"><span class="txt">Centro Veterinario</span><span class="bg"></span></a></li>
+                <li><a href="https://www.youtube.com/user/ElRefugioTV" class="btnTV" target="_blank"><span class="txt">El Refugio TV</span><span class="bg"></span></a></li>
+            </ul>
+            <div class="rrss"><a href="https://es-la.facebook.com/pages/Organizaci%C3%B3n-El-Refugio/48993718129" class="btnFacebook" target="_blank">facebook</a><a href="https://twitter.com/el_refugio" class="btnTwitter" target="_blank">twitter</a><a href="https://www.instagram.com/el_refugio/" class="btnInstagram" target="_blank">instagram</a></div>
+        </aside>
+        <section class="content">
+            
+<form method="post" action="https://elrefugio.org/adopta/perros" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI1Njc0ODYyNw9kFgJmD2QWBGYPZBYCZg9kFhYCAQ8WAh4JaW5uZXJodG1sBQ9BZG9wdGEgdW4gcGVycm9kAgMPFgIeB2NvbnRlbnQFCkVsIFJlZnVnaW9kAgUPFgIfAQUnaHR0cHM6Ly9lbHJlZnVnaW8ub3JnL2ltZy9lbFJlZnVnaW8ucG5nZAIHDxYCHwEFGUFkb3B0YXIgLSBBZG9wdGEgdW4gcGVycm9kAgkPFgIfAQUjaHR0cHM6Ly9lbHJlZnVnaW8ub3JnL2Fkb3B0YS9wZXJyb3NkAgsPFgIfAQUPQWRvcHRhIHVuIHBlcnJvZAINDxYCHwEFB3N1bW1hcnlkAg8PFgIfAQUKRWwgUmVmdWdpb2QCEQ8WAh8BBSdodHRwczovL2VscmVmdWdpby5vcmcvaW1nL2VsUmVmdWdpby5wbmdkAhMPFgIfAQUZQWRvcHRhciAtIEFkb3B0YSB1biBwZXJyb2QCFQ8WAh8BBSNodHRwczovL2VscmVmdWdpby5vcmcvYWRvcHRhL3BlcnJvc2QCAQ8WAh4EVGV4dAWbATxhIGhyZWY9Imh0dHBzOi8vZWxyZWZ1Z2lvLm9yZy9heXVkYW5vcy9jZW50cm8tdmV0ZXJpbmFyaW8iIGNsYXNzPSJidG5DVmV0ZXJpbmFyaW8iPjxzcGFuIGNsYXNzPSJ0eHQiPkNlbnRybyBWZXRlcmluYXJpbzwvc3Bhbj48c3BhbiBjbGFzcz0iYmciPjwvc3Bhbj48L2E+ZGRPeZu8+UCWHe0OU9lB3P6OCH35T/plsHN5dIIr80Zisw==">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C421D9F1">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAALaiS2NVOGDty6sOW6zuyrCA8cRIeJBiqPU1KHU6v56sKfQKnrujH+4q1b4kPEzgEMP0Ea5kEu+VZ384ZVjyQgV">
+</div>
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hiFiltro" id="ContentPlaceHolder1_hiFiltro">
+            <div class="colUna boxSubmenu">
+                <div class="contSub">
+                    <div class="boxFiltro"><span>Ver:</span> <a rel="filtro" href="https://elrefugio.org/adopta/perros#" id="filtroH">Hembras</a> <a rel="filtro" href="https://elrefugio.org/adopta/perros#" id="filtroM">Machos</a> <a rel="filtro" href="https://elrefugio.org/adopta/perros#" id="filtroC">Cachorros</a> <a rel="filtro" href="https://elrefugio.org/adopta/perros#" class="on" id="filtroT">Todos</a> <a href="https://elrefugio.org/adopta/perros#" id="filtroN" rel="filtro" class="btnNombre">Por Nombre</a> </div>
+                    <div class="boxEnlaces"> <a href="https://elrefugio.org/adopta/perros#condiciones" class="btnCondiciones cboxElement">Condiciones de Adopción</a></div>
+                </div>
+                 <div class="contSub busqueda" style=""><input type="text" id="busquedaNombre" value="Buscar por Nombre" vacio="Buscar por Nombre" class="tagForm"> <input type="submit" value="Buscar" class="btn" id="btnBusqueda"></div>
+            </div>
+            <div class="boxCondiciones">
+                <article class="boxFicha condiciones" id="condiciones">
+                    <div class="boxInteriorFormulario">
+                        <div class="rowBloq">
+                            <h1>condiciones de Adopción</h1>
+                            <p>Cuando adoptes a tu nuevo compañero te lo entregaremos identificado, desparasitado, vacunado, con análisis de leishmania (perros), test de leucemia e inmunodeficiencia (gatos) y esterilizado. En el momento de la adopción, deberás abonar 90 euros en concepto de donativo, para cubrir parte de los tratamientos veterinarios. Es imprescindible que la persona que vaya a ser titular del animal sea quien realice la adopción, para lo cual deberá presentar el DNI y firmar el contrato de adopción.</p>
+                            <p>Si quieres adoptar a alguno de nuestros perros o gatos, llámanos para poder asesorarte adecuadamente en este teléfono: 91 730 36 80</p>
+                        </div>
+                </div></article>
+            </div>
+              <div id="divAnimales" class="colTres" style="display:none;">
+                
+            </div>
+             <div class="colTres" id="cajas"><article class="item" idscroll="313" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/sandokan"><img src="./perro4_files/El-Refugio-Sandokan.jpg" alt="Sandokan" title="Sandokan"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/sandokan">Sandokan</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="294" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/fuego"><img src="./perro4_files/El-Refugio-Fuego.jpg" alt="Fuego" title="Fuego"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/fuego">Fuego</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="445" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/balea"><img src="./perro4_files/El-Refugio-Baleaweb_2.jpg" alt="Balea" title="Balea"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/balea">Balea</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="930" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/bohemia"><img src="./perro4_files/El-Refugio-Bohemiaweb.jpg" alt="BOHEMIA" title="BOHEMIA"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/bohemia">BOHEMIA</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="1489" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/ynhala"><img src="./perro4_files/El-Refugio-Ynhalaweb.jpg" alt="YNHALA" title="YNHALA"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/ynhala">YNHALA</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="172" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/bender"><img src="./perro4_files/El-Refugio-Bender.jpg" alt="Bender" title="Bender"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/bender">Bender</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="1465" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/lucero"><img src="./perro4_files/El-Refugio-Luceroweb.jpg" alt="LUCERO" title="LUCERO"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/lucero">LUCERO</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="1477" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/senor"><img src="./perro4_files/El-Refugio-Senorweb.jpg" alt="SEÑOR" title="SEÑOR"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/senor">SEÑOR</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="377" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/morisa"><img src="./perro4_files/El-Refugio-AdopMorisaok.jpg" alt="Morisa" title="Morisa"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/morisa">Morisa</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="207" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/marieta"><img src="./perro4_files/El-Refugio-Marieta2.jpg" alt="Marieta" title="Marieta"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/marieta">Marieta</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="270" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/emu"><img src="./perro4_files/El-Refugio-Emu_1.jpg" alt="Emú" title="Emú"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/emu">Emú</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="1411" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/yaki"><img src="./perro4_files/El-Refugio-Yakiweb_1.jpg" alt="YAKI" title="YAKI"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/yaki">YAKI</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="613" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/garrucha"><img src="./perro4_files/El-Refugio-Garruchaweb_2.jpg" alt="GARRUCHA" title="GARRUCHA"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/garrucha">GARRUCHA</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="1432" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/coelho"><img src="./perro4_files/El-Refugio-Coelhoweb.jpg" alt="COELHO" title="COELHO"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/coelho">COELHO</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="758" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/mesena"><img src="./perro4_files/El-Refugio-Mesenaweb.jpg" alt="MESENA" title="MESENA"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/mesena">MESENA</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="192" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/capo"><img src="./perro4_files/El-Refugio-Capo.jpg" alt="Capo" title="Capo"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/capo">Capo</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="401" genero="Hembra" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/jauja"><img src="./perro4_files/El-Refugio-JAUJA.jpg" alt="Jauja" title="Jauja"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/jauja">Jauja</a></h2></li>
+                <li><h3>Hembra</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article>
+    
+                   
+        <article class="item" idscroll="191" genero="Macho" cachorro="0">
+        
+        <a href="https://elrefugio.org/ficha/viento"><img src="./perro4_files/El-Refugio-Viento.jpg" alt="Viento" title="Viento"></a>
+        <div class="txt">
+            <ul>
+                <li><h2><a href="https://elrefugio.org/ficha/viento">Viento</a></h2></li>
+                <li><h3>Macho</h3></li>
+                <li><h3>Adulto</h3></li>
+            </ul>
+        </div>
+    </article></div>
+            <div class="colUna" id="divVerMas" style=""><a href="https://elrefugio.org/adopta/perros#" class="btnVerMas">Ver Más</a></div>
+            <div class="btnSubir" style="display:none;">Subir</div>
+            </form>
+            <div class="share">
+                <div class="rrss">Compartir:<a href="https://www.facebook.com/sharer/sharer.php?u=https://elrefugio.org/adopta/perros" class="btnFacebook" target="_blank"></a> <a href="https://twitter.com/home?status=El%20Refugio%20-%20Donativos%20-%20https://elrefugio.org/adopta/perros" class="btnTwitter" target="_blank"></a> 
+                    &nbsp;&nbsp;<a href="mailto:?subject=Visita%20la%20p%C3%A1gina%20de%20El%20Refugio&amp;body=Te%20recomiendo%20que%20veas:%20https://elrefugio.org/adopta/perros" class="btnInstagram" target="_blank">email</a>
+                </div>
+            </div>
+
+        </section>
+     
+               <span class="footer"><a href="https://elrefugio.org/politicaPrivacidad">Política de Privacidad</a><span>&nbsp;|&nbsp;<a href="https://elrefugio.org/condicionesGenerales">Aviso Legal</a></span>
+    
+    </span></div>
+   
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17802779-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

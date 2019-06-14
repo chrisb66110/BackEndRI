@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+
+
+<title>Una Introduccion a la Logica Difusa (Generation5.org) - VidaArtificial</title>
+<meta name="KEYWORDS" content="Una Introduccion a la Logica Difusa (Generation5.org)">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index,follow">
+<link rel="shortcut icon" href="http://vidaartificial.com/favicon.ico">
+<link rel="stylesheet" type="text/css" media="print" href="index.php_files/wikiprintable.css">
+<script type="text/javascript" src="index.php_files/wikibits.js"></script>
+<style type="text/css">
+/*/*/ /*<![CDATA[*/
+@import "/skins/vidaartificial/vidaartificial.css";
+@import "/index.php?title=MediaWiki:Vidaartificial.css&action=raw&ctype=text/css";
+a.new, #quickbar a.new { color: #CC2200; }
+#quickbar { position: absolute; left: 4px; }
+#article { margin-left: 148px; margin-right: 4px; }
+
+/*]]>*/ /* */
+</style>
+</head><body onload="" bgcolor="#ffffff">
+
+<div id="content">
+<div id="topbar">
+<div id="quicklinks"><h3>Quick Links</h3><ul><li id="q-screenshots"><a href="http://vidaartificial.com/index.php?title=Portada">Portada</a></li><li id="q-downloads"><a href="http://vidaartificial.com/blog">Blog</a></li><li id="q-docs"><a href="http://vidaartificial.com/index.php?title=Categor%C3%ADa:Categor%C3%ADas">Temas</a></li><li id="q-blogs"><a href="http://vidaartificial.com/index.php?title=Usuario:Yearofthedragon">Sobre mi</a></li></ul></div></div>
+<div id="article"><h1 class="pagetitle">Una Introduccion a la Logica Difusa (Generation5.org)</h1><div id="logo"><a href="http://vidaartificial.com/index.php?title=Portada"><img src="index.php_files/top_logo.gif"></a></div><p><a href="http://vidaartificial.com/index.php?title=Inteligencia_Artificial" title="Inteligencia Artificial">Inteligencia Artificial</a>
+</p>
+<ul><li>Artículo original: <a href="http://www.generation5.org/content/1999/fuzzyintro.asp" class="external text" title="http://www.generation5.org/content/1999/fuzzyintro.asp" rel="nofollow">An Introduction to Fuzzy Logic</a>
+</li><li>Autor: <a href="http://www.generation5.org/profile.asp?ID=1" class="external text" title="http://www.generation5.org/profile.asp?ID=1" rel="nofollow">James Matthews</a>
+</li><li>Traductor: Year of the Dragon
+</li></ul>
+<p><br><br>
+</p>
+<p>Esta es una introducción muy básica a la lógica difusa. Es posible que si ya has leído algo <span style="font-style: italic;">algo</span>
+de documentación sobre lógica difusa, probablemente no
+encuentres nada nuevo en este ensayo. Aunque es posible que resulte de
+interés una pequeña clase en C++ canónico que
+escribí para manipular operadores de lógica difusa. Mira
+al final del ensayo para verlo.<br><br>
+</p>
+<p>
+</p>
+<hr size="1" width="50%">
+<p>¿Cuantas veces en la vida real las preguntas permiten
+respuestas tan simples como 'verdadero' o 'falso'? ¡De hecho en muy
+pocas ocasiones! La idea de lógica difusa tiene sus inicios en Platón
+que propuso una tercera región entre verdadero y falso - lo incierto.
+Pasaron varios siglos antes de que este sistema siquiera llegara a
+formalizarse. A principios del siglo XX, <a href="http://es.wikipedia.org/wiki/Jan_Lukasiewicz" class="external text" title="http://es.wikipedia.org/wiki/Jan Lukasiewicz" rel="nofollow">Lukasiewicz</a>
+propuso un sistema lógico con tres valores. Más tarde, Lukasiewicz
+experimentó con sistemas lógicos con cuatro y cinco valores, y
+finalmente propuso que una lógica basada en infinitos valores no era
+menos plausible que una finita. Finalmente, en 1965, Lofti Zadeh
+publicó su trabajo sobre lo que llamó lógica difusa - una parte de la
+teoría de grupos que operaba sobre el rango [0.0 - 1.0].<br><br>
+</p>
+<p><br><br>
+</p>
+<div class="editsection" style="float: right; margin-left: 5px;">[<a href="http://vidaartificial.com/index.php?title=Una_Introduccion_a_la_Logica_Difusa_%28Generation5.org%29&amp;action=edit&amp;section=1" title="Una Introduccion a la Logica Difusa (Generation5.org)">editar</a>]</div><a name="Teor.C3.ADa_de_Grupos_Difusos"></a><h2>Teoría de Grupos Difusos</h2>
+<p>La mayor diferencia entre la lógica difusa y la lógica
+booleana (estándar) son los valores posibles en el rango 0.0 a
+1.0 (inclusive), no solo 0 y 1. Por ejemplo, puedes decir que el valor
+de verdad difusa (<acronym title="Fuzzy Truth Value">FTV</acronym>) de la declaración "Graham es alto" es 0.75 si Graham mide 2 metros. Para escribir esto formalmente:<br><br>
+</p>
+<p>
+</p>
+<pre>m(ALTO(Graham)) = 0.75</pre>
+<p><span style="font-style: italic;">m</span> es una <span style="font-style: italic;">función de pertenencia</span>
+y es la función que asignará a 2 metros un FTV de 0.75.
+La función de pertenencia puede ser increíblemente simple, o
+increíblemente compleja. Por ejemplo, una función de pertenencia
+relativamente simple puede ser:<i><br><br>
+</i>
+</p>
+<p>
+
+</p>
+<p align="center">
+<a href="http://vidaartificial.com/index.php?title=Imagen:Generation5.fz_eq1.png" class="image" title="Fórmula: m(Alto(x)) = (0;x&lt;5) ( (x-5/2)&nbsp;; 4&lt;=x&lt;=7) (1;x&gt;7)"><img src="index.php_files/Generation5.png" alt="Fórmula: m(Alto(x)) = (0;x&lt;5) ( (x-5/2)&nbsp;; 4&lt;=x&lt;=7) (1;x&gt;7)" longdesc="/index.php?title=Imagen:Generation5.fz_eq1.png" height="100" width="250"></a>
+
+</p>Una definición formal de una función de pertenencia
+<p>puede definirse como una función que crea una correspondencia
+para cada punto del grupo difuso A con el intervalo real [0.0,
+1.0] de tal manera que m(A(x)) es una aproximación del grado de
+pertenencia de x en A.<br><br>
+</p>
+<p>
+<b>Operadores Lógicos</b><br><br></p>
+<p>En la lógica booleana existen los operadores unión
+(OR), intersección (AND) y no (NOT). Estos operadores
+también existen en la lógica difusa, pero se definen de
+forma diferente:<br><br>
+</p>
+<ul>
+
+<li>A OR B = MAX(m(A(x)), m(B(x)))
+</li><li>A AND B = MIN(m(A(x)), m(B(x)))
+</li><li>A' (NOT A) = 1 - mA(x)
+</li>
+</ul>Los operadores de intersección y unión son el inicio obvio tanto
+para la lógica booleana y las funciones probabilísticas estándar. Para
+ver porqué están definidas de esta manera, vamos a mirar un ejemplo.
+Vamos a tomar las declaraciones "Graham es muy alto" y "Graham es muy
+listo" - si las combinas usando la probabilidad, obtienes:<br><br>
+<p><font size="2">m(ALTO(Graham)) * m(LISTO(Graham)) = 0.90 * 0.90 = 0.81<br><br></font>
+</p><p><b>Nota:</b> Esto es, obviamente, tomando como para "muy" un
+valor de 0.9 tanto en la función de pertenencia ALTO como LISTO.
+Supongamos también que el rango [0.8 y 0.9) es igual a "bastante". La
+declaración resultante puede leerse como "Graham es bastante alto y
+listo" - esto es desde luego incorrecto. Usando lógica difusa:<br><br>
+</p><p><font size="2">MIN(m(ALTO(Graham)) * m(LISTO(Graham))) = MIN(0.90, 0.90) = 0.90<br><br></font>
+Esto nos lleva a la declaración correcta "Graham es muy alto y listo".
+El resultado es más claro a más variables son tomadas en consideración,
+por ejemplo 6 variables con valores de 0.8 nos llevaría a 0.262 usando
+probabilidad - ¡muy alejado del valor difuso 0.8!<br><br>
+</p>
+<p>
+<b>Operadores Difusos (Hedges)<br><br>
+</b>Los operadores difusos son operadores que se crean de forma
+independiente para modificar los valores difusos. Al igual que la
+lógica difusa, para estos operadores existen correspondencias
+con el lenguaje natural. Por ejemplo, el operador difuso "MUY" puede
+igualarse a la ecuación m(A(x))<sup>2</sup>, o "ALGO" a m(A(x))<sup>0.5</sup>.<br><br>
+Ten en cuenta que crear palabras de ecuaciones de valores difusos y
+realizar operaciones entre ellas (p.e. MENOR QUE) requiere
+manipulaciones algorítmicas complejas. Aún así
+esto se hace, notablemente por F. Wenstop que creo palabras de
+ecuaciones a vectores difusos de 7 valores.<br><br>
+</p><p>
+</p>
+<h2>Aplicaciones prácticas<br><br>
+</h2>La lógica difusa puede aplicarse con facilidad a sistemas expertos
+cuya información es inherentemente difusa. Doctores, abogados e
+ingenieros pueden diagnosticar problemas mucho más rápido si el sistema
+experto que usan para diagnosticar el problema lista unas pocas
+soluciones difusas que pueden usar para aumentar sus propias
+conclusiones.<br><br>
+<p>Otra área donde se usa la lógica difusa es en el reconocimiento de textos escritos - especialmente en Japón, trazos complicados <a href="http://es.wikipedia.org/wiki/Kanji" class="external text" title="http://es.wikipedia.org/wiki/Kanji" rel="nofollow">Kanji</a>
+pueden ser detectados mientras se escriben usando métodos difusos.
+También pueden verse aplicaciones de la lógica difusa en áreas como en
+el control de hornos para cemento o predicción/control financiero.<br><br>
+</p>
+<p>
+</p>
+<h2>Código C++<br><br>
+</h2>Aunque este no es un caso de estudio porque no he buscado un
+<p>ejemplo específico de lógica difusa, he escrito una
+pequeña clase para acompañar lo discutido anteriormente.
+La clase está construida para actuar como un valor difuso, todos
+los operadores de C++ han sido sobrecargados para poder utilizarse con
+cualquier tipo básico. Ten en cuenta que la clase
+permitirá que los valores sobrepasen por encima o por debajo el
+límite (0,1). Aquí hay un pequeño programa de
+ejemplo:<br><br>
+</p><p><font size="2">#include &lt;iostream.h&gt;<br><br>#include &lt;math.h&gt;<br><br>#include "fuzzy.h"<br><br><br><br>void main() {<br><br> fuzzy fz1 = 0.5, <font color="#007f00">// 0.5</font><br><br> fz2 = (fz1 | 0.4f) &amp; 0.45f, <font color="#007f00">// 0.45</font><br><br> fz3 =&nbsp;!fz2 | fz2, <font color="#007f00">// 0.55</font><br><br> fz4 =&nbsp;!(fz1 - fz2); <font color="#007f00">// 0.95</font><br><br> bool bl5 = fz3.contained(fz2), <font color="#007f00">// false</font><br><br> bl6 = fz2.contained(fz3); <font color="#007f00">// true</font><br><br><br><br> cout &lt;&lt; "Class 'fuzzy' logical operators:" &lt;&lt; endl;<br><br> cout &lt;&lt; "fz1 = " &lt;&lt; fz1 &lt;&lt; endl<br><br> &lt;&lt; "fz2 = " &lt;&lt; fz2 &lt;&lt; endl<br><br> &lt;&lt; "fz3 = " &lt;&lt; fz3 &lt;&lt; endl<br><br> &lt;&lt; "fz4 = " &lt;&lt; fz4 &lt;&lt; endl;<br><br> cout &lt;&lt; endl;<br><br> cout &lt;&lt; "bl5 = " &lt;&lt; ((bl5)&nbsp;? "true"&nbsp;: "false") &lt;&lt; endl<br><br> &lt;&lt; "bl6 = " &lt;&lt; ((bl6)&nbsp;? "true"&nbsp;: "false") &lt;&lt; endl;<br><br>}<br><br></font>
+A partir de los comentarios que he puesto, ¡creo que puedes adivinar la
+salida del programa! De todas maneras, puede ver lo fácil que es usar
+la clase. Solo para estar seguros, miremos fz2 y fz3. fz2 es el
+resultado de ((0.5 OR 0.4) AND 0.45). Recuerda que OR toma el máximo,
+así que retorna 0.5, y AND toma el mínimo - de esta manera fz2 es igual
+a 0.45. fz3 es (NOT(fz2) OR fz2) - el NOT de fz2 es 1-0.45=0.55, que es
+mayor que 0.45.<br><br>
+<br><br>
+La función "contenida" retorna verdadero si A &lt;= B. La clase también
+tiene una rutina de conversión del tipo flotante, de esta manera puedes
+usar fuzzy y float por igual al pasar parámetros a las funciones (como
+cout::operator&lt;&lt;). Puedes bajarte <a href="http://www.generation5.org/content/1999/data/fuzzycpp.zip" class="external text" title="http://www.generation5.org/content/1999/data/fuzzycpp.zip" rel="nofollow">el código de la clase difusa</a>, alternativamente puedes mirar <a href="http://www.generation5.org/content/1999/fuzzyclass.asp" class="external text" title="http://www.generation5.org/content/1999/fuzzyclass.asp" rel="nofollow">la documentación de la clase difusa</a> y bajarla ahí.<br><br>
+</p>
+<p>
+</p>
+<div class="GreyLegal" align="center">Article content copyright © James Matthews, 1999.
+</div>
+<p><br>
+</p>
+<div class="GreyLegal" align="center">
+<p>Todo el contenido © 1998-2004, Generation5.<br><br>
+</p>
+</div>
+
+<!-- Saved in parser cache with key qcn343:pcache:idhash:1309-0!1!0!0!!es!2 and timestamp 20090825043719 -->
+
+<div class="printfooter">
+<p>Obtenido de "<a href="http://vidaartificial.com/index.php?title=Una_Introduccion_a_la_Logica_Difusa_%28Generation5.org%29">http://vidaartificial.com/index.php?title=Una_Introduccion_a_la_Logica_Difusa_%28Generation5.org%29</a>"</p>
+
+<p>Esta página ha sido visitada 6.500 veces. Esta página fue modificada por última vez el 04:07 9 ene, 2006. </p>
+</div>
+<br clear="all">
+<div align="right"><a href="http://vidaartificial.com/index.php?title=Especial:Categories&amp;article=Una_Introduccion_a_la_Logica_Difusa_%28Generation5.org%29" title="Especial:Categories">Categorías</a>: <a href="http://vidaartificial.com/index.php?title=Categor%C3%ADa:Inteligencia_Artificial" title="Categoría:Inteligencia Artificial">Inteligencia Artificial</a> | <a href="http://vidaartificial.com/index.php?title=Categor%C3%ADa:Logica_Difusa" title="Categoría:Logica Difusa">Logica Difusa</a> | <a href="http://vidaartificial.com/index.php?title=Categor%C3%ADa:Generation5.org" title="Categoría:Generation5.org">Generation5.org</a>
+<br><a href="http://vidaartificial.com/index.php?title=Una_Introduccion_a_la_Logica_Difusa_%28Generation5.org%29&amp;printable=yes">Versión para imprimir</a> | <a href="http://vidaartificial.com/index.php?title=VidaArtificial:General_disclaimer" title="VidaArtificial:General disclaimer">Disclaimers</a></div>
+<div id="footer"><table border="0" cellspacing="0" width="98%"><tbody><tr><td rowspan="1" width="152">&nbsp;</td><td class="bottom" align="center" valign="top">
+<br>Esta página ha sido visitada 6.500 veces. Esta página fue modificada por última vez el 04:07 9 ene, 2006. </td></tr></tbody></table>
+</div>
+</div>
+<!-- Served by slgc983.piensasolutions.com in 0.11 secs. -->
+</div></body></html>

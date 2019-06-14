@@ -1,0 +1,643 @@
+<html><head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Culturas precolombinas del Noroeste argentino - ceramica</title>
+		<link href="ceramicaCulturasPrecolombinas_files/xplora.css" rel="stylesheet" type="text/css" media="all">
+		</head><body onload="CSScriptInit();" bgcolor="#ffffff"><csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+CSIsW3CDOM = ((document.getElementById) && !(IsIE()&&CSBVers<6)) ? true : false;
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { if (CSIsW3CDOM) return document.getElementById(s).style; else return CSFindElement(s,0);  }
+CSIImg=false;
+function CSInitImgID() {if (!CSIImg && document.images) { for (var i=0; i<document.images.length; i++) { if (!document.images[i].id) document.images[i].id=document.images[i].name; } CSIImg = true;}}
+function CSFindElement(n,ly) { if (CSBVers<4) return document[n];
+	if (CSIsW3CDOM) {CSInitImgID();return(document.getElementById(n));}
+	var curDoc = ly?ly.document:document; var elem = curDoc[n];
+	if (!elem) {for (var i=0;i<curDoc.layers.length;i++) {elem=CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSGetImage(n) {if(document.images) {return ((!IsIE()&&CSBVers<5)?CSFindElement(n,0):document.images[n]);} else {return null;}}
+CSDInit=false;
+function CSIDOM() { if (CSDInit)return; CSDInit=true; if(document.getElementsByTagName) {var n = document.getElementsByTagName('DIV'); for (var i=0;i<n.length;i++) {CSICSS2Prop(n[i].id);}}}
+function CSICSS2Prop(id) { var n = document.getElementsByTagName('STYLE');for (var i=0;i<n.length;i++) { var cn = n[i].childNodes; for (var j=0;j<cn.length;j++) { CSSetCSS2Props(CSFetchStyle(cn[j].data, id),id); }}}
+function CSFetchStyle(sc, id) {
+	var s=sc; while(s.indexOf("#")!=-1) { s=s.substring(s.indexOf("#")+1,sc.length); if (s.substring(0,s.indexOf("{")).toUpperCase().indexOf(id.toUpperCase())!=-1) return(s.substring(s.indexOf("{")+1,s.indexOf("}")));}
+	return "";
+}
+function CSGetStyleAttrValue (si, id) {
+	var s=si.toUpperCase();
+	var myID=id.toUpperCase()+":";
+	var id1=s.indexOf(myID);
+	if (id1==-1) return "";
+	s=s.substring(id1+myID.length+1,si.length);
+	var id2=s.indexOf(";");
+	return ((id2==-1)?s:s.substring(0,id2));
+}
+function CSSetCSS2Props(si, id) {
+	var el=document.getElementById(id);
+	if (el==null) return;
+	var style=document.getElementById(id).style;
+	if (style) {
+		if (style.left=="") style.left=CSGetStyleAttrValue(si,"left");
+		if (style.top=="") style.top=CSGetStyleAttrValue(si,"top");
+		if (style.width=="") style.width=CSGetStyleAttrValue(si,"width");
+		if (style.height=="") style.height=CSGetStyleAttrValue(si,"height");
+		if (style.visibility=="") style.visibility=CSGetStyleAttrValue(si,"visibility");
+		if (style.zIndex=="") style.zIndex=CSGetStyleAttrValue(si,"z-index");
+	}
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; /* dont follow link */
+	else return false; /* dont follow link */
+}
+function CSButtonReturn () { return !CSClickReturn(); }
+CSIm=new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img=CSGetImage(n);
+			if (img&&typeof(CSIm[n][i].src)!="undefined") {img.src=CSIm[n][i].src;}
+			if(i!=0) self.status=CSIm[n][3]; else self.status=" ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im=action[1];
+	if (document.images) {
+		CSIm[im]=new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i]!='') {CSIm[im][i-2]=new Image(); CSIm[im][i-2].src=action[i];}
+			else CSIm[im][i-2]=0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'../../../images/destinos.gif',/*URL*/'../../../images/desrol.gif',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	
+
+	
+		<table cool="cool" showgridx="showgridx" showgridy="showgridy" gridx="16" gridy="16" border="0" cellpadding="0" cellspacing="0" height="3238" width="765">
+			<tbody><tr height="2">
+				<td colspan="24" rowspan="2" xpos="0" height="65" valign="top" width="354" align="left"><a href="http://www.argentinaxplora.com/index.htm" target="_top"><img src="ceramicaCulturasPrecolombinas_files/logo.jpg" alt="argentinaXplora.com" border="0" height="61" width="344"></a></td>
+				<td colspan="21" height="2" width="410"></td>
+				<td height="2" width="1"><spacer type="block" width="1" height="2"></spacer></td>
+			</tr>
+			<tr height="63">
+				<td colspan="21" xpos="354" height="63" valign="top" width="410" align="left"><a href="http://www.barroyarte.com.ar/"><img src="ceramicaCulturasPrecolombinas_files/bannermi.gif" alt="" border="0" height="60" width="410"></a></td>
+				<td height="63" width="1"><spacer type="block" width="1" height="63"></spacer></td>
+			</tr>
+			<tr height="3">
+				<td colspan="45" xpos="0" height="3" valign="top" width="764" align="left"><img src="ceramicaCulturasPrecolombinas_files/linea.gif" border="0" height="3" width="764"></td>
+				<td height="3" width="1"><spacer type="block" width="1" height="3"></spacer></td>
+			</tr>
+			<tr height="21">
+				<td rowspan="13" height="575" width="1"></td>
+				<td colspan="9" xpos="1" height="21" valign="top" width="155" align="left"><img src="ceramicaCulturasPrecolombinas_files/explo.gif" border="0" height="21" width="155"></td>
+				<td rowspan="41" height="3077" width="9"></td>
+				<td content="content" csheight="22" colspan="34" rowspan="2" xpos="165" bgcolor="#ffffce" height="22" valign="top" width="599" align="left">
+					<h3><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">&nbsp;&nbsp;La Cerámica en las Culturas Precolombinas</font></h3>
+				</td>
+				<td height="21" width="1"><spacer type="block" width="1" height="21"></spacer></td>
+			</tr>
+			<tr height="1">
+				<td content="content" csheight="496" colspan="3" rowspan="9" xpos="1" bgcolor="#000066" height="496" valign="top" width="14" align="left"></td>
+				<td content="content" csheight="496" colspan="6" rowspan="9" xpos="15" bgcolor="#000066" height="496" valign="top" width="141" align="left"><font size="2"><br>
+						<a href="http://www.argentinaxplora.com/activida/natural/natural.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Naturaleza</b></font></a></font><font color="white" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/eco/eco.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Ecología</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/geogra/geogra.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Geografía</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/parques/parques.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Parques Nacionales</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/legado/legado.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Legado y Tradición</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/arqueo/arquelog.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Arqueología</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/paleo/paleodos.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Paleontología</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/artesano/artesano.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Artesanías</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/playas/playas.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Playas</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/caza/caza.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Caza</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/pesca/pesca.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Pesca</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/ski/ski.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Ski</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/montana/montana.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Montañismo</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/volcan/volcan.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Volcanes</b></font></a><br>
+						<a href="http://www.argentinaxplora.com/activida/trek/trek.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Trekking</b></font></a><br>
+						<a href="http://www.argentinaxplora.com/activida/rafting/rafting.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Rafting / Kayak</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/cabalgat/cabalga.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Cabalgatas </b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/golf/golf.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Golf</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/futbol/futbol.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Fútbol </b></font></a><br>
+						<a href="http://www.argentinaxplora.com/activida/estancias/estancias.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Estancias</b></font></a><br>
+						<a href="http://www.argentinaxplora.com/activida/polo/polo.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Polo</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/salud/salud.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Salud / Spa / Termas</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/arte/arte.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Arte y Cultura</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/urban/urbana.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Vida Urbana</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/tango/tango.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Tango</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/entreten/entreten.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Entretenimientos</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/gastrono/gastrono.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Gastronomía</b></font></a></font><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b><br>
+						</b></font><font size="2"><a href="http://www.argentinaxplora.com/activida/4x4/4x4.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Travesías 4 x 4 </b></font></a><br>
+						<a href="http://www.argentinaxplora.com/activida/tips/tips.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Argentina Tips</b></font></a><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><br>
+							</b></font><a href="http://www.argentinaxplora.com/activida/producto/producto.htm"><font color="#fffafa" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Productos / Negocios</b></font></a></font></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+			</tr>
+			<tr height="26">
+				<td rowspan="39" height="3055" width="1"></td>
+				<td content="content" csheight="26" colspan="33" xpos="166" bgcolor="#000066" height="26" valign="top" width="598" align="left">
+					<div align="right">
+						<font color="white" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>del Noroeste argentino<br>
+							</b></font></div>
+				</td>
+				<td height="26" width="1"><spacer type="block" width="1" height="26"></spacer></td>
+			</tr>
+			<tr height="8">
+				<td colspan="21" rowspan="2" height="10" width="309"></td>
+				<td colspan="12" height="8" width="289"></td>
+				<td height="8" width="1"><spacer type="block" width="1" height="8"></spacer></td>
+			</tr>
+			<tr height="2">
+				<td content="content" csheight="224" colspan="12" rowspan="3" xpos="475" bgcolor="#f2f2f2" height="224" valign="top" width="289" align="left"><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Por Mirta E. Marziali<br>
+						</b><br>
+						Cuando hablamos de culturas precolombinas, nos referimos en 
+general a las que nos han dejado un patrimonio arquitectónico - 
+escultórico de gran magnitud, sin tener en cuenta a otras culturas de 
+gran importancia como las que se ubican en el Noroeste Argentino.<br>
+						<br>
+						El Noroeste argentino comprende las provincias de Jujuy, Salta, 
+Tucumán, Catamarca y La Rioja, parte de Santiago del Estero y norte de 
+San Juan.</font></td>
+				<td height="2" width="1"><spacer type="block" width="1" height="2"></spacer></td>
+			</tr>
+			<tr height="200">
+				<td colspan="21" xpos="166" height="200" valign="top" width="309" align="left"><img src="ceramicaCulturasPrecolombinas_files/aguada.jpg" border="0" height="200" width="300"></td>
+				<td height="200" width="1"><spacer type="block" width="1" height="200"></spacer></td>
+			</tr>
+			<tr height="22">
+				<td rowspan="35" height="2819" width="2"></td>
+				<td colspan="8" height="22" width="11"></td>
+				<td content="content" csheight="22" colspan="10" xpos="179" height="22" valign="top" width="284" align="left">
+					<div align="center">
+						<font color="#000066" size="2"><i>Cultura: Aguada. Cerámica negra incisa</i></font></div>
+				</td>
+				<td colspan="2" height="22" width="12"></td>
+				<td height="22" width="1"><spacer type="block" width="1" height="22"></spacer></td>
+			</tr>
+			<tr height="74">
+				<td content="content" csheight="74" colspan="32" xpos="168" bgcolor="#f2f2f2" height="74" valign="top" width="596" align="left"><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Reciben
+ influencia de Tiawanacu (Bolivia) y mas tarde forman parte de la 
+provincia sur del Tawantinsuyu de los Incas, el Coyasuyu.<br>
+						La región Chaco - Santiagueña, tuvo una configuración cultural 
+distinta a las anteriores. Santiago del Estero aparece como una región 
+de transición cultural entre el grupo del N.O.A. </font></td>
+				<td height="74" width="1"><spacer type="block" width="1" height="74"></spacer></td>
+			</tr>
+			<tr height="5">
+				<td rowspan="33" height="2723" width="1"></td>
+				<td content="content" csheight="304" colspan="15" rowspan="8" xpos="169" bgcolor="#f2f2f2" height="304" valign="top" width="285" align="left"><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">o culturas andinas y las culturas amazónicas del litoral mesopotámico y los cazadores recoloectores nómades del Chaco.</font><font color="#000066" size="2"><br>
+						<br>
+						<br>
+					</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Cerámica Precolombina<br>
+						</b><br>
+						El hombre americano arcaico, atemorizado ante los avatares de la 
+naturaleza, por todo aquello que era desconocido, necesita hacer 
+comprensible lo incomprensible, necesita sentirse protegido.<br>
+						<br>
+						Es así que surge un personaje importantísimo que es el Chamán quién será el creador de los mitos, la magia y la religión.<br>
+						<br>
+						Luego la demanda religiosa será mayor, se organizan teocráticamente y surge la clase sacerdotal.</font></td>
+				<td rowspan="8" height="304" width="7"></td>
+				<td colspan="2" rowspan="7" height="284" width="3"></td>
+				<td colspan="13" height="5" width="300"></td>
+				<td height="5" width="1"><spacer type="block" width="1" height="5"></spacer></td>
+			</tr>
+			<tr height="158">
+				<td colspan="13" rowspan="6" xpos="464" height="279" valign="top" width="300" align="left"><img src="ceramicaCulturasPrecolombinas_files/vaso.jpg" border="0" height="279" width="300"></td>
+				<td height="158" width="1"><spacer type="block" width="1" height="158"></spacer></td>
+			</tr>
+			<tr height="4">
+				<td rowspan="2" height="28" width="2"></td>
+				<td colspan="8" height="4" width="153"></td>
+				<td height="4" width="1"><spacer type="block" width="1" height="4"></spacer></td>
+			</tr>
+			<tr height="24">
+				<td colspan="8" xpos="3" height="24" valign="top" width="153" align="left"><csobj w="152" h="20" t="Button" ht="../../../images/desrol.gif"><a href="http://www.argentinaxplora.com/destinos/destinos.htm" onmouseover="return CSIShow(/*CMP*/'button',1)" onmouseout="return CSIShow(/*CMP*/'button',0)" onclick="return CSButtonReturn()"><img src="ceramicaCulturasPrecolombinas_files/destinos.gif" name="button" border="0" height="20" width="152"></a></csobj></td>
+				<td height="24" width="1"><spacer type="block" width="1" height="24"></spacer></td>
+			</tr>
+			<tr height="30">
+				<td colspan="4" xpos="1" height="30" valign="top" width="51" align="left"><a href="http://www.argentinaxplora.com/director/aloj.htm"><img src="ceramicaCulturasPrecolombinas_files/botovert_01.gif" border="0" height="24" width="50"></a></td>
+				<td colspan="2" xpos="52" height="30" valign="top" width="51" align="left"><a href="http://www.argentinaxplora.com/director/transp.htm"><img src="ceramicaCulturasPrecolombinas_files/botovert_02.gif" border="0" height="24" width="50"></a></td>
+				<td colspan="3" xpos="103" height="30" valign="top" width="53" align="left"><a href="http://www.argentinaxplora.com/director/excurs.htm"><img src="ceramicaCulturasPrecolombinas_files/botovert_03.gif" border="0" height="24" width="52"></a></td>
+				<td height="30" width="1"><spacer type="block" width="1" height="30"></spacer></td>
+			</tr>
+			<tr height="20">
+				<td colspan="9" xpos="0" height="20" valign="top" width="152" align="left"><img src="ceramicaCulturasPrecolombinas_files/experto.gif" border="0" height="20" width="152"></td>
+				<td rowspan="10" height="542" width="4"></td>
+				<td height="20" width="1"><spacer type="block" width="1" height="20"></spacer></td>
+			</tr>
+			<tr height="43">
+				<td content="content" csheight="495" colspan="9" rowspan="6" xpos="0" bgcolor="#ffffce" height="495" valign="top" width="152" align="left"><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><img src="ceramicaCulturasPrecolombinas_files/marziali.jpg" border="0" height="100" width="79" align="right"><br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<b>Mirta Marziali </b></font>
+					<p><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1">Es ceramista y docente especializada en Arte Precolombino. </font></p>
+					<p><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1">Además es coautora del libro "Catálogo de cerámica Precolombina" en colaboración con el profesor César Sondereguer.<br>
+							<br>
+							Las obras que realizan en su taller y que han sido expuestas en 
+varias oportunidades, son recreaciones de cerámica precolombina 
+realizadas con las técnicas originales, y creaciones propias inspiradas 
+en la cosmovisión de estos pueblos.<br>
+							<br>
+							email:<br>
+							<br>
+							<a href="mailto:mirta@barroyarte.com.ar">mirta@barroyarte.com.ar</a></font></p>
+				</td>
+				<td height="43" width="1"><spacer type="block" width="1" height="43"></spacer></td>
+			</tr>
+			<tr height="20">
+				<td content="content" csheight="19" colspan="13" xpos="461" height="20" valign="top" width="300" align="left">
+					<div align="center">
+						<font color="#000066" size="2"><i>Cultura Condorhuasi. Figura antropozoomorfa.</i></font></div>
+				</td>
+				<td colspan="2" height="20" width="3"></td>
+				<td height="20" width="1"><spacer type="block" width="1" height="20"></spacer></td>
+			</tr>
+			<tr height="108">
+				<td content="content" csheight="108" colspan="31" xpos="169" bgcolor="#f2f2f2" height="108" valign="top" width="595" align="left">
+					<p><font color="#000066" size="2"><br>
+						</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Pero esa fe religiosa necesitará materializar sus dioses, construir centros ceremoniales y crear objetos rituales.<br>
+						</font></p>
+					<p><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Ese
+ es el origen de una magna obra de culto en Amerindia que será plasmada 
+en diferentes géneros plásticos como la arquitectura, la escultura, la 
+textilería, la orfebrería, el dibujo, la pintura y la cerámica.</font></p>
+				</td>
+				<td height="108" width="1"><spacer type="block" width="1" height="108"></spacer></td>
+			</tr>
+			<tr height="234">
+				<td rowspan="24" height="2311" width="1"></td>
+				<td colspan="24" xpos="170" height="234" valign="top" width="357" align="left"><img src="ceramicaCulturasPrecolombinas_files/zepelin.jpg" border="0" height="233" width="350"></td>
+				<td rowspan="2" height="253" width="2"></td>
+				<td content="content" csheight="253" colspan="5" rowspan="2" xpos="529" bgcolor="#f2f2f2" height="253" valign="top" width="235" align="left"><font color="#000066" size="2"><br>
+					</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Con esto entendemos que el origen de estos géneros plásticos, en este caso la cerámica, es religioso, ceremonial y comunicante.<br>
+						<br>
+						Es el sentir colectivo de un pueblo. No surge como obra de arte, 
+no fue hecho para contemplar sino para cumplir una función ceremonial.<br>
+						<br>
+						La cerámica es sin duda una de las manifestaciones plásticas más destacadas en la producción artística del N.O.A. </font></td>
+				<td height="234" width="1"><spacer type="block" width="1" height="234"></spacer></td>
+			</tr>
+			<tr height="19">
+				<td rowspan="23" height="2077" width="3"></td>
+				<td colspan="6" height="19" width="61"></td>
+				<td content="content" csheight="19" colspan="16" xpos="234" height="19" valign="top" width="285" align="left"><font color="#000066" size="2"><i>Cultura Condorhuasi: Cerámica roja</i></font></td>
+				<td height="19" width="8"></td>
+				<td height="19" width="1"><spacer type="block" width="1" height="19"></spacer></td>
+			</tr>
+			<tr height="71">
+				<td content="content" csheight="80" colspan="29" rowspan="2" xpos="173" bgcolor="#f2f2f2" height="80" valign="top" width="591" align="left">
+					<p><font color="#000066" size="2"><br>
+						</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Desde
+ las culturas tempranas de (Alamito, Tafí, Condorhuasi, Candelaria, 
+Ciénaga) pasando por las del periodo medio (Aguada, San José, 
+Sunchituyoc), durante el desarrollo de las culturas regionales o periodo
+ tardío (Belén, Santa María, Averías) y posteriormente bajo el dominio 
+del Imperio Inca.</font></p>
+				</td>
+				<td height="71" width="1"><spacer type="block" width="1" height="71"></spacer></td>
+			</tr>
+			<tr height="9">
+				<td colspan="9" rowspan="3" height="27" width="152"></td>
+				<td height="9" width="1"><spacer type="block" width="1" height="9"></spacer></td>
+			</tr>
+			<tr height="10">
+				<td rowspan="20" height="1978" width="2"></td>
+				<td rowspan="13" height="1189" width="1"></td>
+				<td rowspan="4" height="268" width="1"></td>
+				<td colspan="8" height="10" width="249"></td>
+				<td rowspan="4" height="268" width="1"></td>
+				<td content="content" csheight="268" colspan="17" rowspan="4" xpos="427" bgcolor="#f2f2f2" height="268" valign="top" width="337" align="left"><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+						<br>
+						Levantaron piezas con el método de rodete y a veces con moldes. 
+Pintaron con pinturas pre cocción, engobes (arcilla, agua y pigmento), 
+óxidos y a veces con pinturas post-cocción.<br>
+						<br>
+						Los hornos fueron abiertos y cerrados. No conocieron el torno alfarero.<br>
+						<br>
+						La morfología es variada, teniendo cada cultura características particulares.<br>
+						<br>
+						Realizaron vasijas escultóricas, pucos, urnas funerarias y saumadoras, ricamente ornamentadas.<br>
+					</font>
+					<p></p>
+				</td>
+				<td height="10" width="1"><spacer type="block" width="1" height="10"></spacer></td>
+			</tr>
+			<tr height="8">
+				<td colspan="8" rowspan="2" xpos="177" height="239" valign="top" width="249" align="left"><img src="ceramicaCulturasPrecolombinas_files/zepe.jpg" border="0" height="239" width="237"></td>
+				<td height="8" width="1"><spacer type="block" width="1" height="8"></spacer></td>
+			</tr>
+			<tr height="231">
+				<td content="content" csheight="321" colspan="10" rowspan="4" xpos="0" bgcolor="#ffffcc" height="321" valign="top" width="156" align="left">
+					<div align="left">
+						<p class="gastrobax"><font color="#000066" face="Arial"><span class="indiceazul"><b class="indiceazul">Artículos Relacionados<br>
+										____________________<br>
+										<br>
+									</b><a href="http://www.argentinaxplora.com/activida/arte/museos/musetnog/musetno.htm">MUSEO ETNOGRÁFICO AMBROSETTI</a><br>
+									<br>
+									<a href="http://www.argentinaxplora.com/activida/legado/sonder/sonder.htm">ARTE AMERINDIO DEL NOROESTE ARGENTINO</a><br>
+									<br>
+									<a href="http://www.argentinaxplora.com/activida/arqueo/jaguar.htm">CERAMICA PRECOLOMBINA<br>
+										<br>
+										EL CULTO AL JAGUAR<br>
+									</a><a href="http://www.argentinaxplora.com/activida/legado/etno/prehisto.htm"><br>
+										PRIMEROS POBLADORES<br>
+										<br>
+									</a><a href="http://www.argentinaxplora.com/activida/arte/museos/mcondorh.htm">MUSEO CONDORHUASI</a><br>
+									<br>
+									<a href="http://www.argentinaxplora.com/activida/arqueo/mapa.htm">MAPA DE LA CULTURA AGUADA</a></span></font></p>
+					</div>
+				</td>
+				<td height="231" width="1"><spacer type="block" width="1" height="231"></spacer></td>
+			</tr>
+			<tr height="19">
+				<td height="19" width="1"></td>
+				<td content="content" csheight="19" colspan="7" xpos="178" height="19" valign="top" width="248" align="left"><font color="#000066" size="2"><i>Cultura Condorhuasi. Cerámica polícroma</i></font></td>
+				<td height="19" width="1"><spacer type="block" width="1" height="19"></spacer></td>
+			</tr>
+			<tr height="59">
+				<td content="content" csheight="59" colspan="27" xpos="176" bgcolor="#f2f2f2" height="59" valign="top" width="588" align="left">
+					<p><font color="#000066" size="2"><br>
+						</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Dentro
+ de su iconografía religiosa encontramos tres familias de animales: el 
+felino, como poder de la Tierra, la serpiente: como agua o cielo, el 
+ave: "cielo".</font></p>
+				</td>
+				<td height="59" width="1"><spacer type="block" width="1" height="59"></spacer></td>
+			</tr>
+			<tr height="12">
+				<td rowspan="3" height="271" width="1"></td>
+				<td content="content" csheight="271" colspan="17" rowspan="3" xpos="177" bgcolor="#f2f2f2" height="271" valign="top" width="335" align="left"><font color="#000066" size="2"><br>
+						<br>
+					</font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>En Argentina se sucedieron las siguientes culturas<br>
+						</b><br>
+						<b>400 a.c. al 700 d.C.<br>
+							<br>
+							Condorhuasi:</b> Son vasos escultóricos con formas extrañas, superreales.<br>
+						<br>
+						Son antropomorfos, con un cuello sobre la cabeza. Sus piernas son 
+cónicas, sin pie, tienen dibujos sobre el cuerpo que aluden al rayo y a 
+la serpiente, realizados con engobe blanco y negro sobre fondo rojo.<br>
+						<br>
+						También los hay zoomorfos, siendo los mas característicos los de forma de zepelín.</font></td>
+				<td colspan="2" rowspan="3" height="271" width="7"></td>
+				<td rowspan="2" height="251" width="8"></td>
+				<td colspan="6" height="12" width="237"></td>
+				<td height="12" width="1"><spacer type="block" width="1" height="12"></spacer></td>
+			</tr>
+			<tr height="239">
+				<td colspan="3" rowspan="17" height="1731" width="5"></td>
+				<td colspan="7" rowspan="14" height="1639" width="151"></td>
+				<td colspan="6" xpos="527" height="239" valign="top" width="237" align="left"><img src="ceramicaCulturasPrecolombinas_files/pie.jpg" border="0" height="239" width="237"></td>
+				<td height="239" width="1"><spacer type="block" width="1" height="239"></spacer></td>
+			</tr>
+			<tr height="20">
+				<td content="content" csheight="20" colspan="4" xpos="519" height="20" valign="top" width="235" align="left">
+					<div align="center">
+						<i><font color="#000066" size="2">Cultura Condorhuasi - Vaso cerámico</font></i></div>
+				</td>
+				<td colspan="3" height="20" width="10"></td>
+				<td height="20" width="1"><spacer type="block" width="1" height="20"></spacer></td>
+			</tr>
+			<tr height="96">
+				<td content="content" csheight="96" colspan="27" xpos="176" bgcolor="#f2f2f2" height="96" valign="top" width="588" align="left">
+					<p><font color="#000066"><b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">400 a.c. al 700 d.C.<br>
+									<br>
+								</font></b></font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Ciénaga:</b> Antecesores de la Aguada. Predominan los jarros con asa lateral.<br>
+							<br>
+							Están horneadas en atmósfera reductora (sin circulación de 
+oxígeno, dada por la combustión, las piezas se cubren con guano, 
+logrando ceramicas negras o grises). Realizan diseños geométricos.</font></p>
+				</td>
+				<td height="96" width="1"><spacer type="block" width="1" height="96"></spacer></td>
+			</tr>
+			<tr height="11">
+				<td rowspan="3" height="357" width="1"></td>
+				<td colspan="7" height="11" width="204"></td>
+				<td content="content" csheight="357" colspan="19" rowspan="3" xpos="381" bgcolor="#f2f2f2" height="357" valign="top" width="383" align="left">
+					<p><font color="#000066" size="2"><br>
+							<b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">650 al 850 d.C.<br>
+								</font></b></font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Aguada:</b><br>
+							<br>
+							Diferenciamos dos criterios estlísticos:<br>
+							<br>
+							Vasijas Cocidas en atmósfera reductora, con ornamentación felínica. Están dibujadas con incisiones o esgrafiadas.<br>
+							<br>
+							Vasijas dibujadas con engobe sobre fondo rojo o crema. Funden la 
+serpiente y el jaguar. Son globulares, sin cuello y con dos asas 
+laterales.<br>
+							<br>
+							<br>
+							<b>900 al 1200 d.C.<br>
+							</b></font></p>
+					<p><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>San José: </b>Urnas funerarias con dibujos alusivos al rayo y la serpiente.</font></p>
+				</td>
+				<td height="11" width="1"><spacer type="block" width="1" height="11"></spacer></td>
+			</tr>
+			<tr height="300">
+				<td colspan="7" xpos="177" height="300" valign="top" width="204" align="left"><img src="ceramicaCulturasPrecolombinas_files/mirta.jpg" border="0" height="300" width="191"></td>
+				<td height="300" width="1"><spacer type="block" width="1" height="300"></spacer></td>
+			</tr>
+			<tr height="46">
+				<td content="content" csheight="33" colspan="6" xpos="177" height="46" valign="top" width="189" align="left">
+					<div align="center">
+						<font color="#000066" size="2"><i>Obra de Mirta Marziali, utilizando técnicas de la Aguada</i></font></div>
+				</td>
+				<td height="46" width="15"></td>
+				<td height="46" width="1"><spacer type="block" width="1" height="46"></spacer></td>
+			</tr>
+			<tr height="138">
+				<td content="content" csheight="138" colspan="27" xpos="176" bgcolor="#f2f2f2" height="138" valign="top" width="588" align="left">
+					<p><font color="#000066" size="2"><br>
+							<b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">1000 al 1470 d.C.<br>
+									<br>
+								</font></b></font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Santa María:</b>
+ La forma características son las urnas funerarias formadas por un 
+cuerpo ovoide provisto de asas simétricas y de un cuello que se abre en 
+forma de campana.<br>
+							<br>
+							Muestran diseños combinando elementos figurativos, (humanos y 
+animales) con geométricos. que hacen alusión a la lluvia, el rayo y la 
+serpiente.</font></p>
+				</td>
+				<td height="138" width="1"><spacer type="block" width="1" height="138"></spacer></td>
+			</tr>
+			<tr height="15">
+				<td content="content" csheight="399" colspan="20" rowspan="3" xpos="175" bgcolor="#f2f2f2" height="399" valign="top" width="338" align="left">
+					<p><font color="#000066"><br>
+							<br>
+							<br>
+							<br>
+							<b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">700 al 900 d.C.<br>
+									<br>
+								</font></b></font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Sunchituyoc</b>:
+ Junto con Averías pertenecen a la cultura chaco - Santiagueña. Urnas 
+prototípicas con ave mítica (búho). Pintados sobre fondo negro sobre 
+fondo rojo.<br>
+							<b><br>
+								<br>
+								<br>
+								<br>
+							</b></font><font color="#000066"><b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">1200 al 1500 d.C.<br>
+									<br>
+								</font></b></font><font color="#000066" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><b>Averías:</b> Tienen forma piriforme (de pera). Pintan con engobes (tricromías) abstracciones geométricas de aves y serpientes.</font></p>
+				</td>
+				<td colspan="4" rowspan="2" height="365" width="18"></td>
+				<td colspan="4" height="15" width="233"></td>
+				<td height="15" width="1"><spacer type="block" width="1" height="15"></spacer></td>
+			</tr>
+			<tr height="350">
+				<td colspan="4" xpos="531" height="350" valign="top" width="233" align="left"><img src="ceramicaCulturasPrecolombinas_files/urnadobl.jpg" border="0" height="350" width="233"></td>
+				<td height="350" width="1"><spacer type="block" width="1" height="350"></spacer></td>
+			</tr>
+			<tr height="34">
+				<td content="content" csheight="19" colspan="7" xpos="513" height="34" valign="top" width="250" align="left"><font color="#000066" size="2"><i>Obra de Cristina Cubas,. Urna Santa María</i></font></td>
+				<td rowspan="3" height="104" width="1"></td>
+				<td height="34" width="1"><spacer type="block" width="1" height="34"></spacer></td>
+			</tr>
+			<tr height="10">
+				<td rowspan="4" height="390" width="1"></td>
+				<td colspan="16" height="10" width="300"></td>
+				<td colspan="10" rowspan="2" height="70" width="287"></td>
+				<td height="10" width="1"><spacer type="block" width="1" height="10"></spacer></td>
+			</tr>
+			<tr height="60">
+				<td colspan="16" rowspan="3" xpos="176" height="380" valign="top" width="300" align="left"><img src="ceramicaCulturasPrecolombinas_files/person.jpg" border="0" height="332" width="300"></td>
+				<td height="60" width="1"><spacer type="block" width="1" height="60"></spacer></td>
+			</tr>
+			<tr height="34">
+				<td content="content" csheight="34" colspan="11" xpos="476" height="34" valign="top" width="288" align="left">
+					<div align="center">
+						<font color="#000066" size="2"><i>Cultura Condorhuasi: Personaje, y "zepelín" policromado</i></font></div>
+				</td>
+				<td height="34" width="1"><spacer type="block" width="1" height="34"></spacer></td>
+			</tr>
+			<tr height="286">
+				<td colspan="5" height="286" width="51"></td>
+				<td colspan="6" xpos="527" height="286" valign="top" width="237" align="left"><img src="ceramicaCulturasPrecolombinas_files/zep.jpg" border="0" height="239" width="237"></td>
+				<td height="286" width="1"><spacer type="block" width="1" height="286"></spacer></td>
+			</tr>
+			<tr height="13">
+				<td colspan="42" xpos="5" height="13" valign="top" width="759" align="left"><img src="ceramicaCulturasPrecolombinas_files/linea.gif" border="0" height="3" width="759"></td>
+				<td height="13" width="1"><spacer type="block" width="1" height="13"></spacer></td>
+			</tr>
+			<tr height="6">
+				<td colspan="3" rowspan="2" height="79" width="67"></td>
+				<td content="content" csheight="20" colspan="2" rowspan="2" xpos="72" height="79" valign="top" width="37" align="left"><font color="#313163" size="2"><a href="http://www.argentinaxplora.com/index.htm">Home</a></font></td>
+				<td colspan="15" rowspan="2" height="79" width="168"></td>
+				<td colspan="12" height="6" width="206"></td>
+				<td colspan="10" rowspan="2" height="79" width="281"></td>
+				<td height="6" width="1"><spacer type="block" width="1" height="6"></spacer></td>
+			</tr>
+			<tr height="73">
+				<td content="content" csheight="43" colspan="12" xpos="277" height="73" valign="top" width="206" align="left">
+					<div align="center">
+						<font color="#0000dd" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1">© Copyright. argentina</font><font color="#dd0000" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><b>X</b></font><font color="#0000dd" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1">plora.com<br>
+							2000 - 2007<br>
+								Todos los derechos reservados</font></div>
+				</td>
+				<td height="73" width="1"><spacer type="block" width="1" height="73"></spacer></td>
+			</tr>
+			<tr cntrlrow="" height="1">
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="10"><spacer type="block" width="10" height="1"></spacer></td>
+				<td height="1" width="37"><spacer type="block" width="37" height="1"></spacer></td>
+				<td height="1" width="20"><spacer type="block" width="20" height="1"></spacer></td>
+				<td height="1" width="31"><spacer type="block" width="31" height="1"></spacer></td>
+				<td height="1" width="6"><spacer type="block" width="6" height="1"></spacer></td>
+				<td height="1" width="43"><spacer type="block" width="43" height="1"></spacer></td>
+				<td height="1" width="4"><spacer type="block" width="4" height="1"></spacer></td>
+				<td height="1" width="9"><spacer type="block" width="9" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="3"><spacer type="block" width="3" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="55"><spacer type="block" width="55" height="1"></spacer></td>
+				<td height="1" width="43"><spacer type="block" width="43" height="1"></spacer></td>
+				<td height="1" width="77"><spacer type="block" width="77" height="1"></spacer></td>
+				<td height="1" width="12"><spacer type="block" width="12" height="1"></spacer></td>
+				<td height="1" width="15"><spacer type="block" width="15" height="1"></spacer></td>
+				<td height="1" width="45"><spacer type="block" width="45" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="27"><spacer type="block" width="27" height="1"></spacer></td>
+				<td height="1" width="7"><spacer type="block" width="7" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="11"><spacer type="block" width="11" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="7"><spacer type="block" width="7" height="1"></spacer></td>
+				<td height="1" width="29"><spacer type="block" width="29" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="6"><spacer type="block" width="6" height="1"></spacer></td>
+				<td height="1" width="8"><spacer type="block" width="8" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="223"><spacer type="block" width="223" height="1"></spacer></td>
+				<td height="1" width="7"><spacer type="block" width="7" height="1"></spacer></td>
+				<td height="1" width="2"><spacer type="block" width="2" height="1"></spacer></td>
+				<td height="1" width="1"><spacer type="block" width="1" height="1"></spacer></td>
+				<td height="1" width="1"></td>
+			</tr>
+		</tbody></table>
+		<p></p>
+	
+
+
+
+</body></html>

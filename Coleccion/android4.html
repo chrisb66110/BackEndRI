@@ -1,0 +1,621 @@
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head>
+<!--<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://87.98.169.66">-->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+	<meta name="author" content="Android-Spa Android español, comunidad hispana">
+	<meta name="organization" content="Android-Spa">
+	<meta name="lang" content="com, es, ar, cl, cr, cu, ec, hn, pa, pe, pr, py, sv, uy, ve, us, mx">
+	<meta name="description" content=" | FULL TILT POKER PARA ANDROID Android-Spa, comunidad oficial Android de habla hispana en español. Android para desarrolladores, principiantes y afcionados a Android: noticias, foros, articulos, tutoriales, manuales, herramientas. El mundo de Android.">
+
+
+<link rel="shortcut icon" href="http://www.android-spa.com/Android-Spa.ico">
+
+<link rel="top" href="http://www.android-spa.com/index.php?sid=2a31bcca720cdcf1229d92030aef26d7" title="Índice del Foro www.Android-Spa.com">
+<link rel="search" href="http://www.android-spa.com/search.php?sid=2a31bcca720cdcf1229d92030aef26d7" title="Buscar">
+<link rel="help" href="http://www.android-spa.com/faq.php?sid=2a31bcca720cdcf1229d92030aef26d7" title="F.A.Q.">
+<link rel="author" href="http://www.android-spa.com/memberlist.php?sid=2a31bcca720cdcf1229d92030aef26d7" title="Lista de Miembros">
+
+<title>www.Android-Spa.com  | FULL TILT POKER PARA ANDROID
+Noticias, Foros, Manuales, Programas</title>
+<link rel="stylesheet" href="android4_files/cleanSilver.css" type="text/css">
+
+<script>
+	function openFileUploader(size,boton_agregar,es_imagen_noticia){
+		window.open('upload_files.php?size='+size+'&boton_agregar='+boton_agregar+'&es_imagen_noticia='+es_imagen_noticia,'popup','width=600,height=300,left=150,top=150');
+	}
+	function addImage(size,boton_agregar,es_imagen_noticia){
+		openFileUploader(size,boton_agregar,es_imagen_noticia);
+	}
+	function seeGallery(){
+		window.open('imagenes/upload/nach_gallery2.php','popup','width=1000,height=900,left=100,top=100');
+	}
+	</script>
+
+<script type="text/javascript">
+	function cargar(url){
+		document.location.href=url;
+	}
+	function paginas (url, id_contenedor)
+	{
+		document.getElementById(id_contenedor).innerHTML = "<div align='center'><br /><br /><img src='http://www.terra.es/personal3/javaja/android/img/android_load.gif'><br /><br /></div>";
+
+		var pagina_requerida = false;
+		if (window.XMLHttpRequest)
+		{
+			pagina_requerida = new XMLHttpRequest ();
+		} else if (window.ActiveXObject)
+		{
+			try
+			{
+			pagina_requerida = new ActiveXObject ("Msxml2.XMLHTTP");
+			}
+			catch (e)
+			{
+			try
+			{
+				pagina_requerida = new ActiveXObject ("Microsoft.XMLHTTP");
+			}
+			catch (e)
+			{
+			}
+			}
+		}
+		else
+		return false;
+		pagina_requerida.onreadystatechange = function ()
+		{
+			cargarpagina (pagina_requerida, id_contenedor);
+		}
+		pagina_requerida.open ('POST', url, true);
+		pagina_requerida.send (null);
+	}
+		function cargarpagina (pagina_requerida, id_contenedor)
+	{
+		if (pagina_requerida.readyState == 4 && (pagina_requerida.status == 200 || window.location.href.indexOf ("http") == - 1))
+		document.getElementById (id_contenedor).innerHTML = pagina_requerida.responseText;
+	}
+
+	var numM = 25;
+	var img = new Array("h2l","h1l","h0","h1l","h2l","h0","h1l","h3c","h0","h2c","h1l","h3l","h0","h0","h1l","h2l","h3l","h1l","h2l","h1c","h3c","h2l","h1l","h3l","h1l");
+var left = new Array("21","21","21","21","21","21","21","132","132","28","21","21","21","21","21","21","21","21","21","19","132","21","21","21","21");
+var wid = new Array("257","257","0","257","257","0","257","147","0","147","257","257","0","0","257","257","257","257","257","147","147","257","257","257","257");
+var txt = new Array("¡Ya tenemos las camisetas de Android-Spa!","Me encanta mi camiseta Android-Spa","","¡Ya tenemos las camisetas de Android-Spa!","Me encanta mi camiseta Android-Spa","","¡Ya tenemos las camisetas de Android-Spa!","Yo ya tengo la mía","","¿Cómo puedo colaborar?","Puedes enviar noticias, videos y aplicaciones","Para colaborar hay que registrarse.","","","Existen 10 tipos de usuarios","Los que saben binario y los que no jeje","Jesús a sus discípulos en verdad os digo que Y=X^2","Pedro dice: Maestro no entendemos","A lo que Jesús responde ¡Es una parabola bruto! jaja","Cuenta otro","¿Qué es un oso polar?","Un oso rectangular después de un cambio de coordenadas jeje","Llega un 8 a una fiesta de ceros","todos los ceros se le quedan viendo","el 8 dice ¿qué, no puedo traer cinturón?");
+
+	var i = 0;
+
+
+	function reloadAndroids(){
+
+		document.getElementById("androids").innerHTML = "<table style=\"background:url(http://www.terra.es/personal3/javaja/android/img/"+img[i]+".png) no-repeat;\" width=\"309\" height=\"99\"><tr><td><div style=\"position:relative; top: -20px; left: "+left[i]+"px; width: "+wid[i]+"px; height: 46px; color:#000000; font-size:16px\"><b>"+txt[i]+"</b></div></td></tr></table>";
+		i++;
+		if(i>=numM)
+			i=0;
+		timer = setTimeout("reloadAndroids()", 3000);
+	}
+</script>
+<!-- -->
+<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+<![endif]-->
+<!-- -->
+</head>
+<body>
+<div id="todo">
+  <!--CABECERA -->
+
+  <div id="cabecera">
+
+
+		 <table cellpadding="0" cellspacing="0" align="center">
+		 	<tbody><tr><td colspan="2">
+			<div id="menuBotones">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+                <tbody><tr>
+                  <td class="botonMenuIz">&nbsp;</td>
+                  <td class="botonMenuCen" width="5px">&nbsp;</td>
+                  <td class="botonMenuCen"><a href="http://www.android-spa.com/rss.xml" class="rss"> </a></td>
+                  <td class="botonMenuIzRel" width="9">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('page.php')" align="center"> Noticias</td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('index.php')" align="center"> Foros </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('aplicaciones.php')" align="center"> Aplicaciones<br> </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('videos.php')" align="center"> Vídeos<br> </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('manuales.php')" align="center"> Manuales </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('search.php?sid=2a31bcca720cdcf1229d92030aef26d7')" align="center"> Buscar </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('profile.php?mode=register&amp;sid=2a31bcca720cdcf1229d92030aef26d7')" align="center"> Registrese </td>
+                  <td class="presionado_trans">&nbsp;</td>
+                  <td class="botonMenu" onclick="javascript:cargar('login.php?sid=2a31bcca720cdcf1229d92030aef26d7')" align="center"> Identifiquese </td>
+                  <td class="botonMenuDerRel" width="9">&nbsp;</td>
+                  <td class="botonMenuCen" width="5">&nbsp;</td>
+                  <td class="botonMenuDer" width="9">&nbsp;</td>
+                </tr>
+           </tbody></table>
+         </div>
+
+			</td></tr>
+		
+		 <tr><td>
+		 <table height="200" width="100%"><tbody><tr><td valign="top" width="750">
+		 <div style="position:relative; top: -30px; height: 60px">
+		 	<table><tbody><tr><td><div id="androids" style="position:relative; top: 6px;"><table style="background: url(&quot;http://www.terra.es/personal3/javaja/android/img/h1l.png&quot;) no-repeat scroll 0% 0% transparent;" height="99" width="309"><tbody><tr><td><div style="position:relative; top: -20px; left: 21px; width: 257px; height: 46px; color:#000000; font-size:16px"><b>Me encanta mi camiseta Android-Spa</b></div></td></tr></tbody></table></div></td><td><div style="position:relative; top: 6px;">
+				<img src="android4_files/androidTitulo10.png" alt="" height="99" width="500"><!--http://www.terra.es/personal3/javaja/android/img/androidTitulo10.png  templates/cleanSilver/images/androidTitulo11.png"--></div></td></tr></tbody></table>
+		 		<script>reloadAndroids()</script>
+					 <div id="ultposts"><div align="center"><br><br><img src="android4_files/android_load.gif"><br><br></div></div>
+				<script>paginas("ultposts.php","ultposts")</script>
+				</div></td>
+				<td width="10">
+				<div style="width:180px; height:211px; position:relative; left: -5px; top: 20px"><img src="android4_files/logoAndroid_2.png" alt="" height="211" width="180"></div>
+
+				</td>
+				</tr></tbody></table>
+				
+		</td></tr>
+
+		<tr><td colspan="0">
+		<div class="cuerpoCentro">
+			<table style="margin-top: 10px; height: 50px;" border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+				<tbody><tr>
+				<td heigth="50" valign="bottom" width="12" align="right"><img src="android4_files/cuerpo_izquierda.jpg" alt="" height="50" width="12"></td>
+				<td heigth="50" style="background: url(&quot;templates/cleanSilver/images/cuerpo_centro.jpg&quot;) repeat scroll center bottom transparent;" valign="middle" width="60%"><span class="tituloCuerpo">Noticias</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td heigth="50" style="background: url(&quot;templates/cleanSilver/images/cuerpo_centro.jpg&quot;) repeat scroll center bottom transparent;" valign="middle" width="40%" align="right"><span class="tituloCuerpo"><a href="http://www.android-spa.com/mostrarNoticia.php?id=581"><b>Consigue tu camiseta aquí</b></a></span></td>
+				<td heigth="50" valign="bottom" width="12" align="left"><img src="android4_files/cuerpo_derecha.jpg" alt="" height="50" width="12"></td>
+				</tr>
+		  	</tbody></table>
+		  </div>
+		</td></tr>
+		</tbody></table>
+
+  	</div>
+
+<!--<div align="center"><br><br><b>REDIRIGIENDO, POR FAVOR ESPERE<b><br><br></div>-->
+
+  <!--CUERPO -->
+  <div id="cuerpoTodo">
+  	<div class="cuerpoCentro">
+		<div id="cuerpo">
+
+
+    <table class="styleTableNoticiasConMenu" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+
+    <!-- noticias -->
+
+    <td width="678">
+
+    <div id="ultposts"></div>
+	<script>paginas("ultposts.php","ultposts")</script>
+
+
+	  <table border="0" cellpadding="20px" cellspacing="0"><tbody><tr><td>
+    <table class="styleTableNoticias" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+      <a class="tituloNoticia" href="http://www.android-spa.com/mostrarNoticia.php?id=1256">FULL TILT POKER PARA ANDROID</a>
+	  <div class="enviadoPor" align="left">Enviado por: lancelot | 28 de Febrero de 2012</div>
+	  <table cellpadding="20" width="100%"><tbody><tr><td><img src="android4_files/20120228172904.png" alt="" height="100" width="100"></td><td width="100%"><div class="gen" align="justify"><b>Ya está disponible para su descarga on line en Android Market el Rush
+Poker Mobile, una de las primeras aplicaciones que te <a href="http://www.pokerlistings.es/jugar-al-poker">permite jugar al poker</a> con
+dinero real. Dicha aplicación requiere terminales móviles que ejecuten el sistema
+operativo Android 2.2 o superior y Flash 10.1.</b></div></td></tr></tbody></table>
+	  <table cellpadding="20" width="100%"><tbody><tr><td>
+            <div class="gen" align="justify">Los jugadores aficionados al póker virtual tendrán que crear una cuenta, si
+<br>aún no disponen de ella, para disfrutar jugando al Rush Poker Mobile. Se puede
+<br>crear desde la pantalla de inicio de la aplicación, clicando en el botón &#8220;crear nueva
+<br>cuenta&#8221; y a continuación seguir las instrucciones.
+<br>
+<br>Para los usuarios que ya han disfrutado de las timbas de póker con su
+<br>versión estándar, el uso de Full Tilt Poker en su versión móvil les será muy
+<br>sencillo, ya que ambas versiones sólo se diferencian entre si en la ubicación de sus
+<br>botones y en que la versión de éste juego de <a href="http://www.pokerlistings.es/">poker online</a> para Android no dispone
+<br>de opciones de pre-acción.
+<br>
+<br><div align="center">
+<br><img src="android4_files/20120228173056.jpg">
+<br></div>
+<br>
+<br>Las novedosas tabletas que ejecutan Android 2.2 son también compatibles
+<br>con la aplicación de éste juego de póker, pero Rush Poker Mobile no lo encontrarás
+<br>disponible para ellas en el Android Market, sino que para descargarte la aplicación
+<br>tendrás que acceder a ella mediante el navegador web.
+<br>
+<br>De este modo ya no tendrás que esperar a llegar a casa para apostar y
+<br>disfrutar de una buena timba de póker, sino que ahora éste juego te acompaña
+<br>donde tu vayas gracias a tu móvil o tableta que ejecutan Android 2.2.
+<br>
+<br><div align="center">
+<br><img src="android4_files/20120228173200.jpg">
+<br><img src="android4_files/20120228173222.jpg">
+<br></div></div><br>
+            </td></tr></tbody></table>
+	<table width="100%">
+    <tbody><tr>
+    	<td><div align="right"><a href="http://www.android-spa.com/mostrarNoticia.php?id=1256" class="styleLeerMas"></a></div></td>
+    </tr>
+    <tr>
+	 	<td><div class="styleFuente" align="left"><span>Vía:</span> <a href="http://www.android-spa.com/">Android-Spa</a> &nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+	 <td><div align="left"><a href="http://www.android-spa.com/viewtopic.php?t=15724" class="styleComentarios">2 COMENTARIOS</a>&nbsp;&nbsp;</div></td>
+	 </tr>
+	  <tr>
+	  <td><div align="right"><a href="http://www.android-spa.com/admin_editarNoticia.php?id=1256" class="styleEditarBorrar"></a>  <a href="http://www.android-spa.com/admin_borrarNoticia.php?id=1256" class="styleEditarBorrar"></a></div></td>
+	  </tr></tbody></table>
+	  <br>
+    <hr><br>
+    </td></tr></tbody></table>
+    <table class="styleTableNoticias" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+      <a class="tituloNoticia" href="http://www.android-spa.com/mostrarNoticia.php?id=1255">Gmate - Review de Android-Spa</a>
+	  <div class="enviadoPor" align="left">Enviado por: JaVaK | 05 de Diciembre de 2011</div>
+	  <table cellpadding="20" width="100%"><tbody><tr><td><img src="android4_files/logo.jpg" alt="" height="46" width="152"></td><td width="100%"><div class="gen" align="justify"><b>Gmate, un gadget que resultará muy práctico para muchos Androides. Hemos estado probándolo y aquí os mostramos una review.</b></div></td></tr></tbody></table>
+	  <table cellpadding="20" width="100%"><tbody><tr><td>
+            <div class="gen" align="justify"><b>¿Qué es?</b>
+<br>
+<br>Es un aparato de pequeño tamaño que nos permite comunicar una línea 
+de teléfono con nuestros Androids. Es decir, en Gmate podemos introducir
+ una SIM y mediante una aplicación llamaremos y recibiremos llamadas. 
+Esta comunicación entre Gmate y Android se hace mediante bluetooth.
+<br>
+<br><div align="center"><img src="android4_files/homepage_logo.jpg"></div>
+<br>
+<br><b>¿Qué nos aporta?</b>
+<br>
+<br>Podemos tener 2 líneas al mismo tiempo, para muchos algo necesario 
+si quieren tener la línea personal y la de trabajo en un mismo móvil.
+<br>
+<br>También nos permite utilizar un dispositivo sin cobertura telefónica
+ para llamar y recibir llamadas como un tablet. Y en ciertos casos (si 
+se tiene root) podremos utilizar los datos como si tuviera 3G.
+<br>
+<br><b>Pasos que hemos seguido:</b>
+<br><ul>
+<br><li>1. Introducimos una SIM en Gmate</li>
+<br>
+<br><li>2. Instalamos la aplicación de Gmate en nuestro dispositivo 
+(http://m.skyroam.com), la aplicación dispone de descarga directa y no 
+está en el market.</li>
+<br>
+<br><li>3. Mantenemos presionado el botón de encender del Gmate y vemos que se enciende el led de aviso de encendido.</li>
+<br>
+<br><li>4. Abrimos la aplicación Gmate, nos pregunta si queremos activar
+ el bluetooth, le damos a sí y seguidamente trata de emparejarse con el 
+Gmate. A veces no se consigue a la primera pero nunca hemos necesitado 
+más de 2 intentos para conseguir emparejarlos, y a partir de que esto 
+suceda el emparejamiento se hace automáticamente.</li>
+<br>
+<br><li>5. Si es la primera vez que se empareja nos pedirá el código (1234) y seguidamente el PIN de la SIM.</li>
+<br>
+<br><li>6. En caso de bloquear la SIM nos pedirá el PUK desde la misma aplicación</li>
+<br>
+<br><li>7. A partir de este momento si nos llaman Gmate nos avisará como
+ si fuera una llamada normal y al ir a realizar una llamada podremos 
+elegir Gmate o la línea del teléfono.</li>
+<br></ul>
+<br>
+<br><div align="center"><img src="android4_files/20111205144539.jpg"></div>
+<br>
+<br><b>Un pequeño vistazo a la aplicación:</b>
+<br>
+<br>La aplicación es práctica y sencilla como la nativa de Android. La 
+interfaz está parcialmente traducida al español, pero seguro que en 
+futuras actualizaciones será traducida al completo.
+<br><ul>
+<br><li> Menú principal: Nos indica que la SIM está puesta en el Gmate y
+ el número si seha conseguido leer, así como los datos enviados y 
+recibidos si tenemos los datos sincronizados</li>
+<br>
+<br><li> Teléfono: Nos muestra el listado de contactos y nos permite introducir un número de teléfono para llamar</li>
+<br>
+<br><li> SMS: Nos muestra el listado de SMSs que hemos enviado desde la aplicación y nos permite escribir uno.</li>
+<br>
+<br><li> Logs: Nos da el listado de llamadas enviadas y recibidas mediante la línea de Gmate</li>
+<br>
+<br><li> Ajustes: Nos muestra opciones de configuración de la 
+aplicación: Si queremos que se inicie la aplicación al arrancar el 
+teléfono, la unidad de medida de los datos, etc&#8230;</li>
+<br>
+<br><li> Menú Android: Desde el menú podemos conectar o desconectar el 
+Gmate, comprobar actualizaciones (recordemos que no es una aplicación 
+del market) aunque se hacen comprobaciones automáticas, y salir de la 
+aplicación ya que por defecto nos creará un servicio para seguir 
+conectado a Gmate.</li>
+<br></ul>
+<br>
+<br><b>Sensaciones tras probarlo:</b>
+<br>
+<br>Gmate puede resultar muy práctico y no sólo para las personas que 
+suelen utilizar dos líneas, si cuando viajas a otros países tienes una 
+tarjeta para disponer de internet en el país destino pero a la vez 
+quieres poder recibir llamadas de la línea del país de origen, Gmate te 
+puede salvar de tener que llevar 2 móviles.
+<br>
+<br><div align="center"><b><a href="http://gmate.es/gmate/10-gmate-dualsim-iphone-android.html">Encuentra más información sobre Gmate en su web oficial desde donde podrás comprarlo directamente (gmate.es)</a></b></div>
+<br>
+<br>Si compras alguno recuerda que siempre puedes comentar con el resto de usuarios tu experiencia en el foro de Android-Spa.</div><br>
+            </td></tr></tbody></table>
+	<table width="100%">
+    <tbody><tr>
+    	<td><div align="right"><a href="http://www.android-spa.com/mostrarNoticia.php?id=1255" class="styleLeerMas"></a></div></td>
+    </tr>
+    <tr>
+	 	<td><div class="styleFuente" align="left"><span>Vía:</span> <a href="http://gmate.es/">Gmate</a> &nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+	 <td><div align="left"><a href="http://www.android-spa.com/viewtopic.php?t=14889" class="styleComentarios">3 COMENTARIOS</a>&nbsp;&nbsp;</div></td>
+	 </tr>
+	  <tr>
+	  <td><div align="right"><a href="http://www.android-spa.com/admin_editarNoticia.php?id=1255" class="styleEditarBorrar"></a>  <a href="http://www.android-spa.com/admin_borrarNoticia.php?id=1255" class="styleEditarBorrar"></a></div></td>
+	  </tr></tbody></table>
+	  <br>
+    <hr><br>
+    </td></tr></tbody></table>
+    <table class="styleTableNoticias" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+      <a class="tituloNoticia" href="http://www.android-spa.com/mostrarNoticia.php?id=1254">Fuugo Video, aplicación para Android</a>
+	  <div class="enviadoPor" align="left">Enviado por: lancelot | 21 de Noviembre de 2011</div>
+	  <table cellpadding="20" width="100%"><tbody><tr><td><img src="android4_files/android-spaM.png" alt="" height="100" width="90"></td><td width="100%"><div class="gen" align="justify"><b>Axel
+ Technologies ha liberado dos nuevos productos Fuugo directamente a 
+usuarios finales. Fuugo Video 1.0 y Fuugo TV están disponibles en la 
+página web fuugo.tv y Tiendas de Aplicaciones (App Stores). El premiado 
+software de agregación de contenidos Fuugo tiene la reputación ganada 
+por su revolucionaria experiencia de usuario en consumo de TV y video en
+ dispositivos móviles.</b></div></td></tr></tbody></table>
+	  <table cellpadding="20" width="100%"><tbody><tr><td>
+            <div class="gen" align="justify"><b>Fuugo Video 1.0</b>
+<br>
+<br>Está disponible grobalmente y de forma gratuita en el Android Market
+ y fuugo.tv. Agrega diferentes contenidos de servicios, como Break.com y
+ YouTube, facilitando la busqueda y disfrute del contenido que te 
+interesa. Las versiones para iOS (Iphone) serán lanzadas en breve. Fuugo
+ Video soportará características adicionales de los medios de 
+comunicación social, así como más fuentes de contenido.
+<br>
+<br>http://www.youtube.com/watch?v=L7fZaae2wMA
+<br> 
+<br><b>Fuugo TV</b>
+<br>
+<br>Es una aplicación de recepción de transmisiones de TV digitales para
+ dispositivos móviles y portables, combinado con los accesorios más 
+populares de recepción de TV. Está disponible inicialmente para 
+dispositivos windows, inmediatamente para Mac OSX y iOS (Iphone). El 
+software de prueba está disponible gratuitamente en fuugo.tv, y la 
+versión completamente funcional está disponible a un precio de 19.90 
+Euros. Fuugo TV inicialmente soporta el standard DVB-T usado 
+principalmente en Europa, y pronto soportará el standard ISDB-T usado en
+ los mercados japonés y latinoamericano. Fuugo TV tambien estará 
+disponible en los próximos meses en conocidos dispositivos integrados de
+ TV. http://www.youtube.com/watch?v=VFK5oN3hWEM
+<br>
+<br>Para más información sobre Fuugo o Axel Technologies, por favor, visite:
+<br>
+<br>http://fuugo.tv
+<br>
+<br><object height="360" width="640"><param name="movie" value="https://www.youtube.com/v/L7fZaae2wMA&amp;hl=en_US&amp;feature=player_embedded&amp;version=3"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="android4_files/L7fZaae2wMAhlen_USfeatureplayer_embeddedversion3" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" height="360" width="640"></object></div><br>
+            </td></tr></tbody></table>
+	<table width="100%">
+    <tbody><tr>
+    	<td><div align="right"><a href="http://www.android-spa.com/mostrarNoticia.php?id=1254" class="styleLeerMas"></a></div></td>
+    </tr>
+    <tr>
+	 	<td><div class="styleFuente" align="left"><span>Vía:</span> http://www.fuugo.tv/ &nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+	 <td><div align="left"><a href="http://www.android-spa.com/viewtopic.php?t=14754" class="styleComentarios">0 COMENTARIOS</a>&nbsp;&nbsp;</div></td>
+	 </tr>
+	  <tr>
+	  <td><div align="right"><a href="http://www.android-spa.com/admin_editarNoticia.php?id=1254" class="styleEditarBorrar"></a>  <a href="http://www.android-spa.com/admin_borrarNoticia.php?id=1254" class="styleEditarBorrar"></a></div></td>
+	  </tr></tbody></table>
+	  <br>
+    <hr><br>
+    </td></tr></tbody></table>
+    <table class="styleTableNoticias" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+      <a class="tituloNoticia" href="http://www.android-spa.com/mostrarNoticia.php?id=1253">Sinfonia Masiva</a>
+	  <div class="enviadoPor" align="left">Enviado por: DroiD | 06 de Noviembre de 2011</div>
+	  <table cellpadding="20" width="100%"><tbody><tr><td><img src="android4_files/android-spaM.png" alt="" height="0" width="0"></td><td width="100%"><div class="gen" align="justify"><b>La
+ sinfonía empezará a sonar a las 11h 11m 11s y 111ms (Hora Central 
+Europea, GMT+1), y como no en todo el planeta puede ser la misma hora a 
+la vez, la música se repetirá durante cada hora durante todo el día, así
+ la gente de alrededor del mundo podrá juntarse con nosotros o 
+reproducirla a las 11h 11m 11s y 111ms de su país.</b></div></td></tr></tbody></table>
+	  <table cellpadding="20" width="100%"><tbody><tr><td>
+            <div class="gen" align="justify">
+<br>
+<br>
+<br>
+<br>  <h1><span>Sinfonía Masiva</span></h1>
+<br>  <div id="barratop"><img src="android4_files/sinfomasiv.png" alt="El 11 de noviembre de 2011 a las 11:11 h">
+<br>    
+<br>    <p>Cientos de miles de personas<br>
+<br>      en todo el planeta<br>
+<br>      En cualquier lugar<br>
+<br>      En el mismo instante<br>
+<br>      El cambio esta aquí<br>
+<br>      Juntos</p>
+<br>  </div>
+<br>  <ul id="iconbar">
+<br>    <li id="step1"> <span>Descarga la aplicación ahora</span>
+<br>      <p>Esta aplicación está disponible para <a href="https://market.android.com/details?id=com.vct.oncedelonce">Android</a>.<br><br> Estará DISPONIBLE MUY PRONTO para <a href="http://www.apple.com/es/iphone/from-the-app-store/">iPhone/iPad</a></p>
+<br>    </li>
+<br>    <li id="step2"> <span>Ábrela a las 11h del día 11/11/11</span>
+<br>      <p>Podrás saber cuántas personas se están sumando a la Sinfonía Masiva en todo el mundo.<br><br><small style="font-size:11px">La
+ sinfonía empezará a sonar a las 11h 11m 11s y 111ms (Hora Central 
+Europea, GMT+1), y como no en todo el planeta puede ser la misma hora a 
+la vez, la música se repetirá durante cada hora durante todo el día, así
+ la gente de alrededor del mundo podrá juntarse con nosotros o 
+reproducirla a las 11h 11m 11s y 111ms de su país.</small></p>
+<br>    </li>
+<br>    <li id="step3"> <span>Todos los teléfonos tocarán la sinfonía a la vez</span>
+<br>      <p>El día 11/11/2011, a las 11h, puedes arrancar esta aplicación. El
+<br>        teléfono tardará unos segundos en sincronizarse con todo el planeta. A las
+<br>        11h 11m 11s y 111ms, todos los teléfonos empezarán a tocar a la vez un fragmento
+<br>        de un minuto de la Quinta Sinfonía de Beethoven.</p>
+<br>    </li>
+<br>    <li id="step4"> <span>Al terminar, un mapa mostrará cuántos somos</span>
+<br>      <p>Al terminar, pulsa el icono del mapa. Verás todos los lugares de
+<br>        la Tierra que se han unido a tocar la misma música. Haciendo click sobre la burbuja
+<br>        situada sobre un país, verás el número exacto de sus habitantes que se han sumado.</p>
+<br>    </li>
+<br>  </ul>
+<br>  <div id="credits"><b>Hemos participado de manera voluntaria en este proyecto</b>: Daniel Calabuig, Alfons Cornella, Imma Franch, David Fuentes, Sergio García, José Ignacio Latorre, Menno Marien, Dani Plana,<br>
+<br>    Ismael Ruiz, Dani Sala, Núria Sala, Eladi Sánchez | <a href="http://www.e2sproductora.com/" target="_blank">E2SPRODUCTORA.COM</a>, <a href="http://www.seisgrados.net/" target="_blank">SEISGRADOS.NET</a>, <a href="http://www.infonomia.com/" target="_blank">INFONOMÍA.COM</a>, <a href="http://www.hayqueverlo.com/" target="_blank">HAYQUEVERLO.COM</a>, <a href="http://www.crossmo.es/" target="_blank">CROSSMO.ES</a>, <a href="http://www.emozions.net/" target="_blank">EMOZIONS.NET</a></div>
+<br>  <div id="social"></div>
+<br></div>
+<br>
+<br><br>
+            </td></tr></tbody></table>
+	<table width="100%">
+    <tbody><tr>
+    	<td><div align="right"><a href="http://www.android-spa.com/mostrarNoticia.php?id=1253" class="styleLeerMas"></a></div></td>
+    </tr>
+    <tr>
+	 	<td><div class="styleFuente" align="left"><span>Vía:</span> <a href="http://sinfoniamasiva.org/">http://sinfoniamasiva.org/</a> &nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+	 <td><div align="left"><a href="http://www.android-spa.com/viewtopic.php?t=14624" class="styleComentarios">0 COMENTARIOS</a>&nbsp;&nbsp;</div></td>
+	 </tr>
+	  <tr>
+	  <td><div align="right"><a href="http://www.android-spa.com/admin_editarNoticia.php?id=1253" class="styleEditarBorrar"></a>  <a href="http://www.android-spa.com/admin_borrarNoticia.php?id=1253" class="styleEditarBorrar"></a></div></td>
+	  </tr></tbody></table>
+	  <br>
+    <hr><br>
+    </td></tr></tbody></table>
+    <table class="styleTableNoticias" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+      <a class="tituloNoticia" href="http://www.android-spa.com/mostrarNoticia.php?id=1252">Track My App - Seguimiento de tus aplicaciones</a>
+	  <div class="enviadoPor" align="left">Enviado por: juande | 09 de Septiembre de 2011</div>
+	  <table cellpadding="20" width="100%"><tbody><tr><td><img src="android4_files/promotional_graphic.png" alt="" height="120" width="180"></td><td width="100%"><div class="gen" align="justify"><b>Realiza un seguimiento de tus aplicaciones en los rankings por categorías del Android Market</b></div></td></tr></tbody></table>
+	  <table cellpadding="20" width="100%"><tbody><tr><td>
+            <div class="gen" align="justify"><b>Track My App</b> está 
+dirigida a desarrolladores que tengan aplicaciones publicadas en el 
+Android Market y quieran llevar un seguimiento de estas dentro de los 
+rankings por categorías.
+<br>
+<br><img src="android4_files/feature_graphic_trackmyapp.png" height="200" width="410"></div><br>
+            </td></tr></tbody></table>
+	<table width="100%">
+    <tbody><tr>
+    	<td><div align="right"><a href="http://www.android-spa.com/mostrarNoticia.php?id=1252" class="styleLeerMas">LEER MÁS</a></div></td>
+    </tr>
+    <tr>
+	 	<td><div class="styleFuente" align="left"><span>Vía:</span> <a href="https://market.android.com/details?id=com.nidrico.apps.trackmyapp">Nidrico</a> &nbsp;&nbsp;</div></td>
+    </tr>
+    <tr>
+	 <td><div align="left"><a href="http://www.android-spa.com/viewtopic.php?t=13916" class="styleComentarios">18 COMENTARIOS</a>&nbsp;&nbsp;</div></td>
+	 </tr>
+	  <tr>
+	  <td><div align="right"><a href="http://www.android-spa.com/admin_editarNoticia.php?id=1252" class="styleEditarBorrar"></a>  <a href="http://www.android-spa.com/admin_borrarNoticia.php?id=1252" class="styleEditarBorrar"></a></div></td>
+	  </tr></tbody></table>
+	  <br>
+    <hr><br>
+    </td></tr></tbody></table>
+
+	</td></tr></tbody></table>
+	<table width="100%"><tbody><tr>
+      <td width="150"></td>
+      <td class="gen" align="center"><p><a href="http://www.android-spa.com/page.php?np="></a> Noticias mostradas: 1 a 5 <a href="http://www.android-spa.com/page.php?np=6">SIGUIENTES</a></p>
+        <p>Ir a página de noticias: <a href="http://www.android-spa.com/page.php?np=1">Primera</a></p></td>
+      <td class="gen" nowrap="nowrap" width="150" align="right">&nbsp;</td>
+    </tr></tbody></table>
+
+    </td>
+	<!-- ****************************** CUADROS AQUI ****************************** -->
+    <td class="derechaNoticias" height="100%" valign="top" align="right">
+
+
+ 				 <div id="cuadros"><div align="center"><br><br><img src="android4_files/android_load.gif"><br><br></div></div>
+					<script language="JavaScript">
+					paginas ("menu.php", "cuadros");
+					</script>
+				<!--<div style="background:url(templates/cleanSilver/images/bordabamenu.gif) repeat-x; position: relative; top:-3px; left:3px" align="left"><img src="templates/cleanSilver/images/bordizabmenu.gif" /></div> -->
+
+
+    </td>
+	 <!-- ********************** -->
+    </tr>
+
+    </tbody></table>
+    <table class="noticiasAbajoRedondo">
+    </table>
+
+
+
+
+
+</div>
+<br>
+</div>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="android4_files/ga_002.js" type="text/javascript"></script><script src="android4_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8274793-1");
+pageTracker._trackPageview();
+} catch(err) 
+</script>
+
+<div id="footer">
+		<div class="site-width">
+          <div id="foot">
+			<br>
+		  <table border="0" cellpadding="0" cellspacing="0" align="center"><tbody><tr>
+          <td><div id="footerIzquierda"></div></td>
+          <td>
+             <div id="footerCentro">
+             <br><br>
+             	<table border="0" cellpadding="0" cellspacing="0" align="center"><tbody><tr><td valign="middle" align="center"><b>Powered by Android-SPA Team &amp; PHPbb</b></td></tr><tr>
+             	  <td align="center">
+					 <br>
+					  <script type="text/javascript" language="javascript">
+							 var s_sid = 182506;var st_dominio = 4;
+							 var cimg = 137;var cwi =112;var che =33;
+					  </script>
+					  <script type="text/javascript" language="javascript" src="android4_files/js9.js"></script><script type="text/javascript" language="JavaScript" src="android4_files/182506_002.htm"><\/script>');
+</script><script language="JavaScript">document.writeln('<a target="_blank" href="http://www.histats.com/viewstats/?sid=182506&act=2&f=1"><embed src="http://s10.histats.com/137.swf" flashvars="esterno=1&var_esterno=Vis. Hoy=291#Visitas=3822045#Paginas Hoy=563#Paginas=11229145#En linea=9#&acsid=182506&lu=0" width="112" height="33" quality="high" wmode="transparent" name="137.swf" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></a>');</script><a target="_blank" href="http://www.histats.com/viewstats/?sid=182506&amp;act=2&amp;f=1"><embed src="android4_files/137.swf" flashvars="esterno=1&amp;var_esterno=Vis. Hoy=291#Visitas=3822045#Paginas Hoy=563#Paginas=11229145#En linea=9#&amp;acsid=182506&amp;lu=0" quality="high" wmode="transparent" name="137.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" height="33" width="112" align="middle"></a>
+
+
+<script type="text/javascript" language="JavaScript" src="android4_files/182506.htm"><\/script>');
+</script><script language="JavaScript">document.writeln('<a target="_blank" href="http://www.histats.com/viewstats/?sid=182506&act=2&f=1"><embed src="http://s10.histats.com/137.swf" flashvars="esterno=1&var_esterno=Vis. Hoy=2160#Visitas=3821226#Paginas Hoy=4640#Paginas=11227439#En linea=35#&acsid=182506&lu=0" width="112" height="33" quality="high" wmode="transparent" name="137.swf" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></a>');</script><a target="_blank" href="http://www.histats.com/viewstats/?sid=182506&amp;act=2&amp;f=1"><embed src="android4_files/137.swf" flashvars="esterno=1&amp;var_esterno=Vis. Hoy=2160#Visitas=3821226#Paginas Hoy=4640#Paginas=11227439#En linea=35#&amp;acsid=182506&amp;lu=0" quality="high" wmode="transparent" name="137.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" height="33" width="112" align="middle"></a>
+<a target="_blank" href="http://www.histats.com/viewstats/?sid=182506&amp;act=2&amp;f=1"><embed src="android4_files/137.swf" flashvars="esterno=1&amp;var_esterno=Vis. Hoy=2160#Visitas=3821226#Paginas Hoy=4640#Paginas=11227439#En linea=35#&amp;acsid=182506&amp;lu=0" quality="high" wmode="transparent" name="137.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" height="33" width="112" align="middle"></a>
+
+
+
+						<noscript>
+						<p><a href="http://www.histats.com/es/" target="_blank">
+						<img  src="http://s103.histats.com/stats/0.gif?182506&1" alt="free estadisticas" border="0"></a>
+							   </p>
+						</noscript>
+					  
+					<br>
+
+
+
+				</td>
+
+                </tr></tbody></table>
+            </div>
+			</td>
+            <td><div id="footerDerecha"></div></td>
+            </tr></tbody></table>
+            <br>
+          </div>
+
+        <!--[end] div.site-width -->
+        </div>
+      <!--[end] div#footer -->
+</div>
+
+  <!-- END FOOTER-->
+
+</div>
+</div>
+
+
+
+</body></html>

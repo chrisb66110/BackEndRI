@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>¿Qué es la computación cuántica?</title>
+<style>
+		.body-integrate {
+			display: none;
+		}
+	</style>
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/devcodepro/css/vendor/prism.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="https://s3-us-west-2.amazonaws.com/devcodepro/img/favicon.ico" type="image/png" />
+<meta name="title" content="¿Qué es la computación cuántica?" />
+<meta name="description" itemprop="description" content="Para diferentes científicos la computación cuántica será el futuro de las computadoras, aunque actualmente solo grandes empresas como Google y la NASA han podido adquirir una. " />
+<meta property="image" content="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-la-computacion-cuantica.png" />
+<link rel="canonical" href="https://devcode.la/tutoriales/que-es-la-computacion-cuantica/" />
+<link rel="publisher" href="https://plus.google.com/+DevCodela/" />
+<meta property="fb:app_id" content="653827401318644">
+<meta property="og:site_name" content="DevCode Tutoriales" />
+<meta property="og:url" content="https://devcode.la/tutoriales/que-es-la-computacion-cuantica/" />
+<meta property="og:title" itemprop="name" content="¿Qué es la computación cuántica?" />
+<meta property="og:description" content="Para diferentes científicos la computación cuántica será el futuro de las computadoras, aunque actualmente solo grandes empresas como Google y la NASA han podido adquirir una. " />
+<meta property="og:image" itemprop="image" content="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-la-computacion-cuantica-opengraph.png" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://www.facebook.com/DevCodela" />
+<meta property="article:section" content="DevCode" />
+<meta property="article:published_time" content="Thu Aug 11 2016 23:21:34 GMT+0000 (UTC)" />
+<meta property="article:modified_time" content="" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@devcodela">
+<meta name="twitter:title" content="¿Qué es la computación cuántica?">
+<meta name="twitter:description" content="Para diferentes científicos la computación cuántica será el futuro de las computadoras, aunque actualmente solo grandes empresas como Google y la NASA han podido adquirir una. ">
+<meta name="twitter:image:src" content="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-la-computacion-cuantica-opengraph.png">
+<meta name="twitter:creator" content="@martincj04" />
+
+<script src="https://apis.google.com/js/platform.js" async defer>
+	  {lang: 'es'};
+	</script>
+
+<script>
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+			fbq('init', '1188440254510070');
+			fbq('track', "PageView");
+			/* Pixel de Seguimiento Pago */
+			
+			
+			/* End Pixel Pago */
+			/* Pixel de Registrado usuario curso */
+			
+			
+			/* End Registrado usuario curso */
+			/* Usuario registrado */
+			
+			/* end usuario registrado */
+		</script>
+<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1188440254510070&ev=PageView&noscript=1"/>
+		</noscript>
+
+
+<script type="text/javascript">
+			var url = window.location.pathname;
+			(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+			r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
+			r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+			i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+			return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+			for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+			};var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+			for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId"];
+			function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+			}}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+			if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+			})(window,document);
+
+			amplitude.getInstance().init("0b1d52a0480b88160408fed8f2309d16",  null, {
+				saveEvents: true,
+				includeUtm: true,
+				includeReferrer: true,
+				batchEvents: true,
+			});
+			var eventProperties = {
+				'slug': '/blog/que-es-la-computacion-cuantica/'
+			};
+			amplitude.getInstance().logEvent('PageView', eventProperties);
+		</script>
+
+</head>
+<body class="background__white body-integrate">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8F2KR"
+	    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	    })(window,document,'script','dataLayer','GTM-N8F2KR');</script>
+<header id="js-header__fixed-none" class="header header--timer">
+<div id="js-header__fixed" class="header header--timer">
+<div class="container-1260">
+<div class="header-container header-container--user row nowrap middle center">
+<a class="row middle" href="/padre/">
+<li class="header__item header__item--timer">
+<span class="row middle">
+<h3 class="header__item-menu header__item-menu--transparent header__item-menu-promotion parpadea">
+Promoción Internauta: Descuento del 64% suscripción anual
+</h3>
+<h3 class="header__item-menu header__item-menu--transparent header__item-menu-promotion header__item-menu-promotion--hide">
+Promoción Internauta:
+</h3>
+</span>
+</li>
+<li class="header__item header__item--timer">
+<span class="row middle">
+<h3 class="header__item-menu header__item-menu--timner header__item-menu--transparent timer">
+Promoción Internauta
+</h3>
+</span>
+</li>
+</a>
+</div>
+</div>
+</div>
+</header>
+<header class="header header--notshadow">
+<div class="container-1260">
+<div class="header-container row nowrap middle between">
+<ul class="header-list-left-one">
+<li class="header__item">
+<a class="row middle" href="/">
+<svg class="header__item-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 200">
+<path fill="#0e61ee" d="M161.38,97.24a31,31,0,0,0-48.7-22.8h0l-0.09.07c-0.49.34-1,.7-1.42,1.07L12,150.07a27.14,27.14,0,0,0,31,44.52l103.55-68c0.52-.32,1-0.66,1.53-1l0.1-.07h0a31.19,31.19,0,0,0,13.11-28.23" />
+<path fill="#34d16e" d="M148.27,74.52h0l-0.12-.08c-0.49-.34-1-0.67-1.49-1L43.08,5.42A27.14,27.14,0,0,0,12,49.93l99.12,74.48q0.7,0.56,1.44,1.08l0.09,0.07h0a31,31,0,0,0,48.7-22.8,31.18,31.18,0,0,0-13.11-28.23" /><path fill="#34d16e" d="M13.79,109.07a10,10,0,1,1,9.92-10,9.95,9.95,0,0,1-9.92,10" />
+</svg>
+<h3 class="header__item-logo">DevCode</h3>
+</a>
+</li>
+</ul>
+<ul class="row middle header-list-left-two">
+<li class="header__item">
+<a class="row middle" href="/">
+<svg class="header__item-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 200">
+<path fill="#0e61ee" d="M161.38,97.24a31,31,0,0,0-48.7-22.8h0l-0.09.07c-0.49.34-1,.7-1.42,1.07L12,150.07a27.14,27.14,0,0,0,31,44.52l103.55-68c0.52-.32,1-0.66,1.53-1l0.1-.07h0a31.19,31.19,0,0,0,13.11-28.23" />
+<path fill="#34d16e" d="M148.27,74.52h0l-0.12-.08c-0.49-.34-1-0.67-1.49-1L43.08,5.42A27.14,27.14,0,0,0,12,49.93l99.12,74.48q0.7,0.56,1.44,1.08l0.09,0.07h0a31,31,0,0,0,48.7-22.8,31.18,31.18,0,0,0-13.11-28.23" /><path fill="#34d16e" d="M13.79,109.07a10,10,0,1,1,9.92-10,9.95,9.95,0,0,1-9.92,10" />
+</svg>
+<h3 class="header__item-logo">DevCode</h3>
+</a>
+</li>
+<li class="header__item">
+<a class="header__item-menu header__item-menu--new header__item-margin" href="/cursos/">Cursos</a>
+</li>
+<li class="header__item">
+<a class="header__item-menu header__item-menu--new header__item-menu--row header__item-margin" href="">
+<span class="header__item-name header__item-name--new">Comunidad</span>
+<span class="header__item-icon-down icon-circle-down"></span>
+</a>
+<ul class="header-list-left__comunity">
+<a href="/tutoriales/" class="header-list-left__comunity-item">
+Tutoriales
+</a>
+<a href="/blog/" class="header-list-left__comunity-item">
+Blog
+</a>
+<a href="/tv/" class="header-list-left__comunity-item">
+Tv
+</a>
+
+</ul>
+</li>
+<li class="header__item">
+<a class="header__item-menu header__item-menu--new header__item-margin" href="/precios/">Planes</a>
+</li>
+</ul>
+<ul class="header-list-center">
+</ul>
+<ul class="header-list-rigth-one">
+<li class="header__item">
+<a class="row middle">
+<span class="header__item-icon-menu icon-menu" id="header-visible_no-log"></span>
+</a>
+<ul class="header-list-rigth__menu">
+
+<span class="icon-cross header-list-rigth-no-log__menu-info__close"></span>
+
+<a href="/ingresar/" class="header-list-rigth__menu-item">
+Ingresar
+</a>
+<a href="/cursos/" class="header-list-rigth__menu-item">
+Cursos
+</a>
+<a href="/precios/" class="header-list-rigth__menu-item">
+Planes
+</a>
+<a href="/tutoriales/" class="header-list-rigth__menu-item">
+Tutoriales
+</a>
+<a href="/blog/" class="header-list-rigth__menu-item">
+Blog
+</a>
+<a href="/tv/" class="header-list-rigth__menu-item">
+Tv
+</a>
+
+<a data-toggle="modal" data-target="#registroModal" href="#" class="header-list-rigth__menu-item">
+Regístrate Gratis
+</a>
+</ul>
+</li>
+</ul>
+<ul class="header-list-rigth-two row middle">
+<li class="header__item">
+<a class="header__item-menu header__item-menu--new header__item-margin" data-toggle="modal" data-target="#loginModal" href="#" role="button">Ingresar</a>
+</li>
+<li class="header__item">
+<a data-toggle="modal" data-target="#registroModal" href="#" class="header-button" role="button">Regístrate Gratis</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<section class="container">
+<article class="careers-header">
+<h1 class="careers-header__title">¿Qué es la computación cuántica?</h1>
+<div class="row middle center tutorial-teacher">
+<span class="tutorial-teacher__name">Por</span>
+<img class="tutorial-teacher__image" src="https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/184587_10204167327698203_8629331933368572531_n.jpg?oh=d2f7472730b02c59c64ff4430ba95dce&amp;oe=57CB75C3" alt="">
+<span class="tutorial-teacher__name">Martin Caceres</span>
+</div>
+<div class="tutorial row between top">
+<div class="tutorial-body">
+<img class="tutorial-body__image" src="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-la-computacion-cuantica.png" alt="¿Qué es la computación cuántica?">
+<div class="tutorial-body__content">
+<p>Para diferentes científicos la computación cuántica será el futuro de las computadoras, aunque actualmente solo grandes empresas como Google y la NASA han podido adquirir una. </p>
+<p>Hace unos a&ntilde;os supimos que Google y NASA adquirieron una computadora cu&aacute;ntica en su b&uacute;squeda por alcanzar la mayor velocidad de resoluci&oacute;n de problemas y analizar datos de una forma m&aacute;s precisa.</p>
+<p>Diferentes cient&iacute;ficos describen a la computaci&oacute;n cu&aacute;ntica como un beb&eacute; en pa&ntilde;ales que ser&aacute; el futuro de las computadoras, aunque actualmente solo las grandes empresas ya mencionadas, Google y NASA, tienen acceso a ellas. &nbsp;</p>
+<p>Primero, definamos qu&eacute; es una computadora u ordenador cu&aacute;ntico. Te&oacute;ricamente se trata de una computadora que utiliza los qubits para realizar las operaciones en vez de los tradicionales bits de las computadoras cl&aacute;sicas, lo cual le permite resolver problemas mucho m&aacute;s r&aacute;pido, lo que a una computadora ordinaria le tomar&iacute;a demasiado tiempo o hasta, incluso, podr&iacute;a ser incapaz de resolver.</p>
+<hr />
+<p><strong>&iquest;Qu&eacute; es un qubit?</strong></p>
+<p>Un qubit o tambi&eacute;n llamado cubit es la unidad m&iacute;nima de la informaci&oacute;n cu&aacute;ntica, mientras un bit (unidad de informaci&oacute;n cl&aacute;sica) entrega resultados binarios, es decir 0 y 1. El qubit entrega resultados al mismo tiempo gracias a las leyes de la cu&aacute;ntica, lo que permite m&aacute;s rapidez de procesamiento de datos. Adem&aacute;s, el qubit puede resolver muchas m&aacute;s operaciones al mismo tiempo de forma simult&aacute;nea e incluso realizar miles de combinaciones, lo cual romper&iacute;a cualquier tipo de encriptaci&oacute;n de manera instant&aacute;nea.</p>
+<p>Existen numerosos campos donde el qubit tendr&aacute; gran relevancia como la teletransportaci&oacute;n de informaci&oacute;n cu&aacute;ntica en la tierra y en el espacio, las comunicaciones con seguridad definitiva (infranqueable), y el comienzo de big data a niveles inimaginables, y esto es solo el comienzo de todo lo que se puede lograr con el qubit.</p>
+<hr />
+<p>El ordenador cu&aacute;ntico con el que cuentan Google y NASA es el famoso D-WAVE 2. Lo adquirieron en el 2013 y ambas entidades han colaborado en su desarrollo. Este ordenador les permite realizar trabajos de investigaci&oacute;n y desarrollo de manera mucho m&aacute;s r&aacute;pida, especialmente en los trabajos de inteligencia artificial que vienen desarrollando, sobre todo Google.</p>
+<p>Adem&aacute;s, Google ya ha comenzado a realizar pruebas para hacer de su navegador &ldquo;Chrome&rdquo; lo suficientemente seguro ante las posibles amenazas que la computaci&oacute;n cu&aacute;ntica traiga consigo, debido a que las propiedades y capacidades de la computaci&oacute;n cu&aacute;ntica para el procesamiento de informaci&oacute;n son tan grandes que los protocolos y sistemas de seguridad que actualmente se emplean en la red se ver&iacute;an seriamente comprometidos si no se realizan modificaciones.</p>
+<p>Incluso IBM acaba de poner a disposici&oacute;n su ordenador cu&aacute;ntico a cualquier persona mediante internet. Este ordenador se encuentra en su laboratorio de YorkTown Heights, New York. Ser&aacute; posible utilizarlo desde cualquier ordenador y en cualquier parte del mundo mediante un software que se podr&aacute; descargar.</p>
+<p>As&iacute;, IBM pone en marcha una iniciativa por la cual cualquier cient&iacute;fico, investigador o programador puede encontrar errores y proponer mejoras, adem&aacute;s de tener la oportunidad de trabajar con una m&aacute;quina s&uacute;per poderosa que resolver&iacute;a problemas que para una computadora ordinaria tomar&iacute;a mucho m&aacute;s tiempo.</p>
+<p><strong>Referencia:</strong></p>
+<p><em>Ya puedes utilizar un ordenador cu&aacute;ntico desde tu casa a trav&eacute;s de internet </em>(Mayo, 2016). El Confidencial. Recuperado de&nbsp;http://www.elconfidencial.com/tecnologia/2016-05-04/ibm-computacion-cuantica-informatica_1194604/</p>
+</div>
+<div class="tutorial-body-social">
+<h4 class="tutorial-body-social__title">¿Te gustó el tutorial?</h4>
+<p class="tutorial-body-social__slogan">Ayúdanos a llegar a más personas</p>
+<div class="tutorial__social_btn row center middle">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://devcode.la/tutoriales/que-es-la-computacion-cuantica/" data-via="devcodela">Tweet</a>&nbsp;
+<div class="fb-like" data-href="https://devcode.la/tutoriales/que-es-la-computacion-cuantica/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>&nbsp;
+<div class="g-plus" data-action="share" data-annotation="bubble" href="https://devcode.la/tutoriales/que-es-la-computacion-cuantica/"></div>
+</div>
+</div>
+<div class="tutorial-teacher tutorial-teacher__background">
+<div class="row nowrap middle">
+<img class="tutorial-teacher__image tutorial-teacher__image--large" src="https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/184587_10204167327698203_8629331933368572531_n.jpg?oh=d2f7472730b02c59c64ff4430ba95dce&amp;oe=57CB75C3" alt="Martin Caceres">
+<div class="tutorial-teacher__info">
+<h4 class="tutorial-teacher__name tutorial-teacher__name--bold">Martin Caceres</h4>
+<p class="tutorial-teacher__text">Content Manager en Devcode.la, profesional y aficionado de Branding y Marketing Digital.</p>
+<a target="_blank" class="tutorial-teacher__twitter" href="https://twitter.com/martincj04">
+<span class="icon-twitter2"> @martincj04</span>
+</a>
+</div>
+</div>
+</div>
+<div class="blog__comment">
+<div id="disqus_thread"></div>
+</div>
+</div>
+<aside class="tutorial-sidebar">
+<div class="tutorial-sidebar__social tutorial-sidebar__social--youtube">
+<h4>Siguenos en YouTube</h4>
+<div>
+<div class="g-ytsubscribe" data-channel="DevCodela" data-layout="default" data-count="default"></div>
+</div>
+</div>
+<div class="tutorial-sidebar__social tutorial-sidebar__social--facebook">
+<h4>Siguenos en Facebook</h4>
+<div class="fb-like" data-href="https://www.facebook.com/DevCode.la" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+</div>
+<div class="tutorial-sidebar__social tutorial-sidebar__social--twitter">
+<h4>Siguenos en Twitter</h4>
+<a target="_blank" class="twitter-follow-button" href="https://twitter.com/devcodela">
+Follow @devcodela</a>
+</div>
+<div class="tutorial-recommend">
+<div class="tutorial-recommend__box">
+<h1 class="tutorial-recommend__title">Últimos Blogs</h1>
+<ul class="row column">
+<li class="tutorial-recommend__item row column left">
+<a class="tutorial-recommend__name" href="/blog/errores-en-wordpress/">Errores comunes en WordPress</a>
+<span class="tutorial-recommend__date">13/06/2018</span>
+</li>
+<li class="tutorial-recommend__item row column left">
+<a class="tutorial-recommend__name" href="/blog/laravel-framework-5-5/">Ha llegado la nueva versión de Laravel Framework LTS 5.5</a>
+<span class="tutorial-recommend__date">20/08/2017</span>
+</li>
+<li class="tutorial-recommend__item row column left">
+<a class="tutorial-recommend__name" href="/blog/que-es-npm/">¿Qué es npm?</a>
+<span class="tutorial-recommend__date">20/04/2017</span>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+</article>
+</section>
+<aside class="blog__relational">
+</aside>
+<style type="text/css">
+		.body-integrate {
+			display: block;
+		}
+		@font-face {
+			font-family: 'icomoon';
+			src:url('https://s3-us-west-2.amazonaws.com/devcodepro/fonts/icomoon.eot?-1hf7z8');
+			src:url('https://s3-us-west-2.amazonaws.com/devcodepro/fonts/icomoon.eot?#iefix-1hf7z8') format('embedded-opentype'),
+				url('https://s3-us-west-2.amazonaws.com/devcodepro/fonts/icomoon.ttf?-1hf7z8') format('truetype'),
+				url('https://s3-us-west-2.amazonaws.com/devcodepro/fonts/icomoon.woff?-1hf7z8') format('woff'),
+				url('https://s3-us-west-2.amazonaws.com/devcodepro/fonts/icomoon.svg?-1hf7z8#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/devcodepro/css/main.css">
+<script src="https://s3-us-west-2.amazonaws.com/devcodepro/js/vendor/jquery.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/devcodepro/js/vendor/countdown.js"></script>
+<script>
+		var urlActivate = true;
+		(function(global) {
+			"use strict";
+
+			// Vanilla JS alternative to $.extend
+			global.extend = function(obj, extObj) {
+				obj = obj || {};
+				console.log(obj);
+				console.log(extObj);
+				if (arguments.length > 2) {
+					for (var a = 1; a < arguments.length; a++) {
+						global.extend(obj, arguments[a]);
+					}
+				} else {
+					for (var i in extObj) {
+						obj[i] = extObj[i];
+					}
+				}
+				return obj;
+			};
+
+		// Countdown constructor
+		var Countdown = function(conf) {
+
+			this.conf = global.extend({
+			// Dates
+			dateStart  : new Date(),
+			dateEnd    : new Date(2018, 8, 2, 0, 0, 0),
+
+			// Default elements
+			selector   : ".timer",
+
+			// Messages
+			msgBefore  : "Listo!",
+			msgAfter   : "00 : 00 : 00 : 00",
+			msgPattern : "{days}d" + " : " + "{hours}h" + " : " + "{minutes}m" + " : " + "{seconds}s",
+
+			// Callbacks
+			onStart    : null,
+			onEnd      : null
+		}, conf);
+
+		// Private variables
+		this.selector = document.querySelectorAll(this.conf.selector);
+		this.interval = 1000;
+		this.now      = new Date();
+		this.patterns = [
+			{ pattern: "{years}", secs: 31536000 },
+			{ pattern: "{months}", secs: 2628000 },
+			{ pattern: "{weeks}", secs: 604800 },
+			{ pattern: "{days}", secs: 86400 },
+			{ pattern: "{hours}", secs: 3600 },
+			{ pattern: "{minutes}", secs: 60 },
+			{ pattern: "{seconds}", secs: 1 }
+		];
+
+		// Doing all the things!
+		this.init();
+		};
+
+		// Initializing the instance
+		Countdown.prototype.init = function() {
+			this.defineInterval();
+			if(this.now < this.conf.dateEnd && this.now >= this.conf.dateStart) {
+				this.run();
+				this.callback("start");
+			} else {
+				this.outOfInterval();
+			}
+		};
+
+		// Running the countdown
+		Countdown.prototype.run = function() {
+			var now = this.now.valueOf() / 1000,
+			tar = this.conf.dateEnd.valueOf() / 1000,
+			sec = Math.abs(tar - now);
+
+			// Vanilla JS alternative to $.proxy
+			var that  = this;
+			var timer = global.setInterval(function() {
+			sec--;
+
+			if(sec > 0) {
+			that.display(sec);
+			} else {
+			clearInterval(timer);
+			that.outOfInterval();
+			that.callback("end");
+			}
+			}, this.interval);
+
+			this.display(sec);
+		};
+
+		// Displaying the countdown
+		Countdown.prototype.display = function(sec) {
+			var output = this.conf.msgPattern;
+
+			for (var b = 0; b < this.patterns.length; b++) {
+				var currentPattern = this.patterns[b];
+				
+				if (this.conf.msgPattern.indexOf(currentPattern.pattern) !== -1) {
+					var number = Math.floor(sec / currentPattern.secs);
+					sec -= number * currentPattern.secs;
+					if (number < 10) { number = '0' + number;}
+					output = output.replace(currentPattern.pattern, number);
+				}
+			}
+
+			for(var c = 0; c < this.selector.length; c++) {
+				//console.log(this.selector);
+				this.selector[c].innerHTML = output;
+			}
+		};
+
+		// Defining the interval to be used for refresh
+		Countdown.prototype.defineInterval = function() {
+			for (var e = this.patterns.length; e > 0; e--) {
+				var currentPattern = this.patterns[e-1];
+
+				if (this.conf.msgPattern.indexOf(currentPattern.pattern) !== -1) {
+					this.interval = currentPattern.secs * 1000;
+					return;
+				}
+			}
+		};
+
+		// Canceling the countdown in case it's over
+		Countdown.prototype.outOfInterval = function() {
+			var message = this.now < this.conf.dateStart ? this.conf.msgBefore : this.conf.msgAfter;
+			for(var d = 0; d < this.selector.length; d++) {
+				this.selector[d].innerHTML = message;
+			}
+		};
+
+		// Dealing with events and callbacks
+		Countdown.prototype.callback = function(event) {
+			event = event.capitalize();
+
+			// onStart callback
+			if(typeof this.conf["on" + event] === "function") {
+				this.conf["on" + event]();
+			}
+
+			// Triggering a jQuery event if jQuery is loaded
+			if(typeof global.jQuery !== "undefined") {
+				global.jQuery(this.conf.selector).trigger("countdown" + event);
+			}
+		};
+
+		// Adding a capitalize method to String
+		String.prototype.capitalize = function() {
+			
+			return this.charAt(0).toUpperCase() + this.slice(1);
+		};
+
+		global.Countdown = Countdown;
+		}(window));
+
+		// Initializing two countdowns
+		var tomorrow     = new Countdown(); // All defaults
+  	</script>
+<script>
+		var $nav = $('#js-header__fixed');
+		var $navTop = $nav.offset().top;
+
+		var pegarNav = function () {
+			console.log('entro');
+			var $scrollTop = $(window).scrollTop();
+			if ( $scrollTop > $navTop ) {
+				$('#js-header__fixed').css({
+					'position': 'fixed',
+					//'background-color': '#FFF'
+				});
+			} else {
+				$('#js-header__fixed').css({
+					'position': 'relative',
+					//'background-color': 'initial'
+				});
+			}
+		}
+		$(window).on('scroll', pegarNav);
+	</script>
+
+<script>
+			var urlActivate = true;
+			var trackClickCourseRelated = function(related) {
+				amplitude.getInstance().logEvent('Click cursos relacionados', null, function() {
+					console.log(related);
+					window.location='https://devcode.la/cursos/'+ related +'/?utm_medium=tutoriales&utm_campaign=cursos-relacionados';
+				});
+			};
+		</script>
+<script src="https://s3-us-west-2.amazonaws.com/devcodepro/js/vendor/prism.js"></script>
+
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/devcodepro/js/vendor/jquery.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=653827401318644&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+	window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+	</script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+	  {lang: 'es-419'};
+	</script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES;</script>
+<script type="text/javascript">
+		window.id = ""
+	    /* * * CONFIGURATION VARIABLES * * */
+	    var disqus_shortname = 'devcodetv';
+
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+<script type="text/javascript">
+		var $nav = $('#js-tutorial__fixed');
+		var $navTop = $nav.offset().top + 100;
+
+		var pegarNav = function () {
+			
+			var $scrollTop = $(window).scrollTop();
+
+			if ( $scrollTop > $navTop ) {
+				$('.tutorial-related').css({
+					'position': 'fixed',
+					'top': 0
+				});
+			} else {
+				$('.tutorial-related').css('position', 'relative');
+			}
+		}
+		$(window).on('scroll', pegarNav);
+   	</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<section id="loginModal" class="modal fade col middle" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<h1 class="modal-title">Ingresar a DevCode</h1>
+<div class="login__socials">
+<a href="/auth/facebook" class="login__facebook text-center">
+<span class="icon-facebook2"></span>
+<span>Ingresar con Facebook</span>
+</a>
+<a href="/auth/twitter" class="login__twitter text-center">
+<span class="icon-twitter2"></span>
+<span>Ingresar con Twitter</span>
+</a>
+</div>
+<span>También puedes ingresar con tu email</span>
+<form class="login__form" method="POST" action='/login'>
+<div class="login__row">
+<input class="input login__input" type="email" placeholder="Email" name="email" autocorrect="off" autocapitalize="off" required>
+</div>
+<div class="login__row">
+<input class="input" type="password" placeholder="Password" name="password" autocorrect="off" autocapitalize="off" required>
+</div>
+<a href="/recuperar/" class="login__recovery">
+<small>Olvidé mi contraseña</small>
+</a>
+<input class="btn btn--primary btn--big login__btn" type="submit" value="Ingresar">
+<a id="linkModalRegistro" href="/registrar/" class="row center login__recovery">
+<small>¿No tienes cuenta? <b>Regístrate</b></small>
+</a>
+</form>
+</div>
+<div class="modal-footer">
+<span class="modal__close row center middle">Cerrar ventana</span>
+</div>
+</div>
+</div>
+</section>
+<section id="registroModal" class="modal fade col middle" tabindex="-1" role="dialog" aria-labelledby="registroModal">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<h1 class="modal-title">Regístrate a DevCode</h1>
+<div class="login__socials">
+<a href="/auth/facebook" class="login__facebook text-center">
+<span class="icon-facebook2"></span>
+<span>Regístrate con Facebook</span>
+</a>
+<a href="/auth/twitter" class="login__twitter text-center">
+<span class="icon-twitter2"></span>
+<span>Regístrate con Twitter</span>
+</a>
+</div>
+<span>También puedes registrarte con tu email</span>
+<form class="login__form" method="POST" action="/registrar/">
+
+<div class="login__row">
+<input class="input login__input" type="email" placeholder="Email" name="email" value="">
+<small class="login__error"></small>
+</div>
+
+<input class="btn btn--primary btn--big login__btn" type="submit" value="Regístrate con email">
+<a id="linkModalLogin" href="/ingresar/" class="row center login__recovery">
+<small>¿Ya tienes cuenta? <b>Ingresar</b></small>
+</a>
+</form>
+</div>
+<div class="modal-footer">
+<span class="modal__close row center middle">Cerrar ventana</span>
+</div>
+</div>
+</div>
+</section>
+<script src="https://s3-us-west-2.amazonaws.com/devcodepro/js/vendor/bootstrap.min.js"></script>
+<script src="//use.typekit.net/czi3lht.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>
+		
+		/*
+			// modale
+			window.onload = function () {
+				var openModal = false;
+
+				function getCookie(name) {
+					var cArr = document.cookie.split(';');
+					for(var i=0;i < cArr.length;i++) {
+						var cookie = cArr[i].split("=",2);
+						cookie[0] = cookie[0].replace(/^\s+/,"");
+						if (cookie[0] == name){ return cookie; }
+					}
+				}
+				function addEvent(obj, evt, fn) {
+				    if (obj.addEventListener) {
+				        obj.addEventListener(evt, fn, false);
+				    }
+				    else if (obj.attachEvent) {
+				        obj.attachEvent("on" + evt, fn);
+				    }
+				}
+				addEvent(document, "mouseout", function(e) {
+				    e = e ? e : window.event;
+				    var from = e.relatedTarget || e.toElement;
+				    if (!from || from.nodeName == "HTML") {
+				    	
+				    	if ( typeof(getCookie('modale')) == 'undefined' && (urlActivate) ) { 
+			    			document.cookie = "modale=true; path=/";
+			    		}
+				    	var modaleValue = getCookie('modale');
+					    if ( openModal === false && modaleValue[1] == 'true' ) {
+				    		openModal = true;
+							$('#myModale').css('display', 'block');
+							$('body').css('overflow', 'hidden');
+				    	}
+				    }
+				});
+
+				function addEvent(obj, evt, fn) {
+				    if (obj.addEventListener) {
+				        obj.addEventListener(evt, fn, false);
+				    }
+				    else if (obj.attachEvent) {
+				        obj.attachEvent("on" + evt, fn);
+				    }
+				}
+				addEvent(window,"load",function(e) {
+				    addEvent(document, "mouseout", function(e) {
+				        e = e ? e : window.event;
+				        var from = e.relatedTarget || e.toElement;
+				        if (!from || from.nodeName == "HTML") {
+				        	if ( typeof(getCookie('modale')) == 'undefined' ) { 
+				    			document.cookie = "modale=true; path=/";
+				    		}
+				    		var modaleValue = getCookie('modale');
+					    	if ( openModal === false && modaleValue[1] == 'true' && (urlActivate) ) {
+					    		openModal = true;
+								$('#myModale').css('display', 'block');
+								$('body').css('overflow', 'hidden');
+					    	}
+				        }
+				    });
+				});
+
+				$( '#js-close-modal' ).click( function (event){
+					openModal = false;
+					$('#myModale').css('display', 'none');
+					document.cookie = "modale=false; path=/";
+					$('body').css('overflow', 'initial');
+				});
+			}
+		*/
+	</script>
+<script>
+		$("#linkModalLogin").on("click", function(e){
+			e.preventDefault();
+			$('#registroModal').modal("hide");
+			$('#loginModal').modal({
+				keyboard: true,
+				show: true,
+			});
+		});
+		$("#linkModalRegistro").on("click", function(e){
+			e.preventDefault();
+			$('#loginModal').modal("hide");
+			$('#registroModal').modal({
+				keyboard: true,
+				show: true,
+			});
+		});
+		$(".modal__close").on('click', function(e){
+			e.preventDefault();
+			$('#loginModal').modal("hide");
+			$('#registroModal').modal("hide");
+		});
+	</script>
+<script>
+			var trackClickMisCursos = function() {
+				amplitude.getInstance().logEvent('Click mis cursos', null, function() {
+					window.location='https://devcode.la/mis-cursos/';
+				});
+			};
+		</script>
+<script>
+
+		/* Agregar Clase CSS para el País del Usuario --- Jhonazsh */
+
+		// function cadenaExceptuada(str) {
+	 //        var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç", 
+	 //        to   = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
+	 //        mapping = {};
+
+	 //        for(var i = 0, j = from.length; i < j; i++ )
+	 //            mapping[ from.charAt( i ) ] = to.charAt( i );
+
+	 //        var ret = [];
+	 //        for( var i = 0, j = str.length; i < j; i++ ) {
+	 //            var c = str.charAt( i );
+	 //            if( mapping.hasOwnProperty( str.charAt( i ) ) )
+	 //                ret.push( mapping[ c ] );
+	 //            else
+	 //            ret.push( c );
+	 //        }
+	 //        return ret.join( '' ).replace( /[^-A-Za-z0-9]+/g, '-' ).toLowerCase();
+	 //    }
+
+		// function AgregarClase(userCountry){
+		// 	if(userCountry.length>0){
+		// 		var cadeExceptuada = cadenaExceptuada(userCountry);
+		// 		$('.header-list-rigth__menu-info__image__border').addClass(''+cadeExceptuada);
+		// 	}
+		// }
+
+		// var userCountry = "";
+		// AgregarClase(userCountry);
+
+		/* ------------------------- END ---------------------------- */
+
+
+
+		
+		/* Click close en personal_info del Usuario (header) ---Jhonazsh */
+		
+		$('#header-list-left-one_visible').on('click', function(){
+			$('.header-list-left-one li>ul').show();
+			$('.header-list-rigth-one li>ul').hide();
+		});
+		$('.header-list-left__menu-info__close').on('click', function(){
+			$('.header-list-left-one li>ul').hide();
+		});
+		// ---
+		$('#header-list-rigth-one_visible').on('click', function(){
+			$('.header-list-rigth-one li>ul').show();
+			$('.header-list-left-one li>ul').hide();
+		});
+		$('.header-list-rigth__menu-info__close').on('click', function(){
+			$('.header-list-rigth-one li>ul').hide();
+		});
+		// ---
+		$('#header-visible_no-log').on('click', function(){
+			$('.header-list-rigth-one li>ul').show();
+		});
+		$('.header-list-rigth-no-log__menu-info__close').on('click', function(){
+			$('.header-list-rigth-one li>ul').hide();
+		});
+		// ---
+		$('#header-visible_log').on('click', function(){
+			$('.header-list-rigth-two li>ul').show();
+		});
+		$('.header-list-rigth__menu-info__close').on('click', function(){
+			$('.header-list-rigth-two li>ul').hide();
+		});
+
+		/* ----------------------- END ---------------------------*/
+
+	</script>
+</body>
+</html>

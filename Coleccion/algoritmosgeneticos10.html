@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="generator" content="MediaWiki 1.16alpha-wmf">
+		<meta name="keywords" content="Algoritmo genético,1999,Aleatoriedad,Algoritmo,Algoritmo evolutivo,Alineamiento múltiple de secuencias,Contenedor,Convergencia prematura,Ingeniería de software,Inteligencia Artificial,Inteligencia artificial">
+		<link rel="alternate" type="application/x-wiki" title="Editar" href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit">
+		<link rel="edit" title="Editar" href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit">
+		<link rel="apple-touch-icon" href="http://es.wikipedia.org/apple-touch-icon.png">
+		<link rel="shortcut icon" href="http://es.wikipedia.org/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://es.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (es)">
+		<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+		<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS feed" href="http://es.wikipedia.org/w/index.php?title=Especial:CambiosRecientes&amp;feed=rss">
+		<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://es.wikipedia.org/w/index.php?title=Especial:CambiosRecientes&amp;feed=atom">
+		<title>Algoritmo genético - Wikipedia, la enciclopedia libre</title>
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/shared.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/commonPrint.css" type="text/css" media="print">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/main.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/main_002.css" type="text/css" media="handheld">
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins-1.5/monobook/IE70Fixes.css?233zz2" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/index_003.css" type="text/css">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/index_005.css" type="text/css" media="print">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/index_002.css" type="text/css" media="handheld">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/index.css" type="text/css">
+		<link rel="stylesheet" href="Algoritmo_gen%C3%A9tico_files/index_004.css" type="text/css">
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?233zz2"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type="text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://es.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Algoritmo_genético";
+		var wgTitle = "Algoritmo genético";
+		var wgAction = "view";
+		var wgArticleId = "165";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "es";
+		var wgContentLanguage = "es";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = 29037471;
+		var wgVersion = "1.16alpha-wmf";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = [",	.", ".	,"];
+		var wgDigitTransformTable = ["", ""];
+		var wgMainPageTitle = "Wikipedia:Portada";
+		var wgMWSuggestTemplate = "http://es.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "eswiki";
+		var wgSearchNamespaces = [0, 100, 104];
+		var wgMWSuggestMessages = ["con sugerencias", "sin sugerencias"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/wikibits.js"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/ajax.js"></script>
+		<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/mwsuggest.js"></script>
+		<script type="text/javascript">/*<![CDATA[*/
+		var wgNotice='';var wgNoticeLocal='';
+		/*]]>*/</script>
+		<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/centralnotice.js"></script><style type="text/css">
+#centralNotice .siteNoticeSmall{display:none;}
+#centralNotice .siteNoticeSmallAnon{display:none;}
+#centralNotice .siteNoticeSmallUser{display:none;}
+#centralNotice.collapsed .siteNoticeBig{display:none;}
+#centralNotice.collapsed .siteNoticeSmall{display:block;}
+#centralNotice.collapsed .siteNoticeSmallUser{display:block;}
+#centralNotice.collapsed .siteNoticeSmallAnon{display:block;}
+#centralNotice.anonnotice .siteNoticeSmallUser{display:none !important;}
+#centralNotice.usernotice .siteNoticeSmallAnon{display:none !important;}
+</style>
+
+
+		<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/index_003.php"><!-- site js --></script><script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/index.php"></script><script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/index_002.php"></script><script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/index_004.php"></script><style type="text/css">#interProject {display: none; speak: none;} #p-tb .pBody {padding-right: 0;}</style><script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/index_005.php"></script>
+	</head><body class="mediawiki ltr ns-0 ns-subject page-Algoritmo_genético skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript">if (wgNotice != '') document.writeln(wgNotice);</script><div id="centralNotice" class="expanded anonnotice"><style type="text/css"> 
+/*
+Styles for Notices
+*/
+
+.notice-wrapper-strategy, .notice-collapsed-wrapper-strategy {
+ margin: 2px auto 0;
+ width: 100%;
+ padding: 0;
+ font-family: 'Arial','Helvetica','Tahoma',sans-serif;
+ color: #333;
+ background-color: #ddd;
+ font-size: .9em;
+ font-weight: 200;
+}
+
+.notice-wrapper-strategy
+{
+ border: 1px solid #bbb;
+ background-color: #fcfcfc;
+ text-align: left;
+ font-size: .9em;
+}
+
+.notice-wrapper-strategy a
+{
+ color: #006699;
+}
+
+.trans-box
+{
+ text-align: right;
+ padding: 0;
+ white-space: nowrap;
+}
+
+.toggle-box-strategy
+{
+ text-align: right;
+ padding: 0;
+ white-space: nowrap;
+}
+
+.notice-text-strategy
+{
+ margin: 0 auto;
+ padding: 0 5px 3px 5px;
+ font-size: 1.1em;
+}
+
+.notice-links-strategy
+{
+ text-align:right;
+ padding-right:4px;
+ font-size: .9em;
+}
+
+.line-ht-fix
+{
+ line-height: 1em;
+}
+
+#centralNotice.anonnotice .siteNoticeUser 
+{
+ display:none !important;
+}
+
+#centralNotice.collapsed .siteNoticeUser
+{
+ display:none;
+}
+
+</style>
+
+<table class="siteNoticeUser notice-wrapper-strategy">
+<tbody><tr>
+ <td>
+<div class="notice-text-strategy">
+¿Dónde te gustaría ver a Wikimedia en cinco años? <a href="http://strategy.wikimedia.org/wiki/Call_for_proposals"><b>¡Envía una propuesta!</b></a> (<a href="http://strategy.wikimedia.org/w/index.php?title=Main_Page/es&amp;uselang=es">Más información</a>)
+  </div>
+ </td>
+ <td class="line-ht-fix">
+  <div class="notice-links-strategy">
+   <span class="toggle-box-strategy">[<a href="#" onclick="toggleNotice();return
+false">Contraer</a>]</span> <span class="trans-box">[<a href="http://strategy.wikimedia.org/wiki/Strategic_Planning:Translation">Ayúdanos traduciendo.</a>]</span>
+  </div>
+ </td>
+</tr>
+</tbody></table></div>
+<script type="text/javascript" language="JavaScript">
+/* <![CDATA[ */
+document.writeln("\x3cdiv style=\"text-align:center;\"\x3e\x3ci\x3e\x3ca href=\"http://wikimania2009.wikimedia.org/wiki/Index/es\" class=\"extiw\" title=\"wm2009:Index/es\"\x3eWikimanía 2009\x3c/a\x3e se desarrollará en Buenos Aires del 26 al 28 de agosto. ¡\x3ca href=\"http://wikimania2009.wikimedia.org/wiki/Registration/es\" class=\"extiw\" title=\"wm2009:Registration/es\"\x3eInscríbete\x3c/a\x3e!\x3c/i\x3e.\x3c/div\x3e\n");
+/* ]]> */
+</script><div style="text-align: center;"><i><a href="http://wikimania2009.wikimedia.org/wiki/Index/es" class="extiw" title="wm2009:Index/es">Wikimanía 2009</a> se desarrollará en Buenos Aires del 26 al 28 de agosto. ¡<a href="http://wikimania2009.wikimedia.org/wiki/Registration/es" class="extiw" title="wm2009:Registration/es">Inscríbete</a>!</i>.</div>
+
+</div>		<h1 id="firstHeading" class="firstHeading">Algoritmo genético</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">De Wikipedia, la enciclopedia libre</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Saltar a <a href="#column-one">navegación</a>, <a href="#searchInput">búsqueda</a></div>			<!-- start content -->
+			<p>Un <a href="http://es.wikipedia.org/wiki/Algoritmo" title="Algoritmo">algoritmo</a> es una serie de pasos organizados que describe el proceso que se debe seguir, para dar solución a un problema específico.</p>
+<p>En los años 1970, de la mano de <a href="http://es.wikipedia.org/wiki/John_Henry_Holland" title="John Henry Holland">John Henry Holland</a>, surgió una de las líneas más prometedoras de la <a href="http://es.wikipedia.org/wiki/Inteligencia_artificial" title="Inteligencia artificial">inteligencia artificial</a>, la de los <b>algoritmos genéticos</b>.
+Son llamados así porque se inspiran en la evolución biológica y su base
+genético-molecular. Estos algoritmos hacen evolucionar una población de
+individuos sometiéndola a acciones <a href="http://es.wikipedia.org/wiki/Aleatoriedad" title="Aleatoriedad">aleatorias</a> semejantes a las que actúan en la <a href="http://es.wikipedia.org/wiki/Teor%C3%ADa_de_la_Evoluci%C3%B3n" title="Teoría de la Evolución" class="mw-redirect">evolución biológica</a> (<a href="http://es.wikipedia.org/wiki/Mutaci%C3%B3n" title="Mutación">mutaciones</a> y <a href="http://es.wikipedia.org/wiki/Recombinaci%C3%B3n_gen%C3%A9tica" title="Recombinación genética">recombinaciones genéticas</a>), así como también a una <a href="http://es.wikipedia.org/wiki/Selecci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Selección (computación evolutiva)">Selección</a>
+de acuerdo con algún criterio, en función del cual se decide cuáles son
+los individuos más adaptados, que sobreviven, y cuáles los menos aptos,
+que son descartados. También es denominado <a href="http://es.wikipedia.org/wiki/Algoritmo_evolutivo" title="Algoritmo evolutivo">algoritmos evolutivos</a>, e incluye las <a href="http://es.wikipedia.org/w/index.php?title=Estrategias_de_evoluci%C3%B3n&amp;action=edit&amp;redlink=1" class="new" title="Estrategias de evolución (aún no redactado)">estrategias de evolución</a>, la <a href="http://es.wikipedia.org/wiki/Programaci%C3%B3n_evolutiva" title="Programación evolutiva">programación evolutiva</a> y la <a href="http://es.wikipedia.org/wiki/Programaci%C3%B3n_gen%C3%A9tica" title="Programación genética">programación genética</a>. Dentro de esta última se han logrado avances curiosos:</p>
+<p>En <a href="http://es.wikipedia.org/wiki/1999" title="1999">1999</a>,
+por primera vez en la historia, se concedió una patente a un invento no
+realizado directamente por un ser humano: se trata de una antena de
+forma extraña, pero que funciona perfectamente en las condiciones a las
+que estaba destinada. No hay, sin embargo, nada injusto en el hecho de
+que el autor del algoritmo genético del que salió la forma de la antena
+se haya atribuido la autoría de la patente, pues él escribió el
+programa e ideó el criterio de selección que condujo al diseño
+patentado.</p>
+<p>Un algoritmo genético es un método de búsqueda dirigida basada en <a href="http://es.wikipedia.org/wiki/Probabilidad" title="Probabilidad">probabilidad</a>.
+Bajo una condición muy débil (que el algoritmo mantenga elitismo, es
+decir, guarde siempre al mejor elemento de la población sin hacerle
+ningún cambio) se puede demostrar que el algoritmo <a href="http://es.wikipedia.org/w/index.php?title=Convergencia_en_probabilidad&amp;action=edit&amp;redlink=1" class="new" title="Convergencia en probabilidad (aún no redactado)">converge en probabilidad</a>
+al óptimo. En otras palabras, al aumentar el número de iteraciones, la
+probabilidad de tener el óptimo en la población tiende a 1 (uno).</p>
+<table id="toc" class="toc" summary="Contenido">
+<tbody><tr>
+<td>
+<div id="toctitle">
+<h2>Contenido</h2>
+ <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">ocultar</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="#Funcionamiento"><span class="tocnumber">1</span> <span class="toctext">Funcionamiento</span></a></li>
+<li class="toclevel-1"><a href="#Cu.C3.A1ndo_usar_estos_algoritmos"><span class="tocnumber">2</span> <span class="toctext">Cuándo usar estos algoritmos</span></a></li>
+<li class="toclevel-1"><a href="#Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico"><span class="tocnumber">3</span> <span class="toctext">Funcionamiento de un algoritmo genético básico</span></a></li>
+<li class="toclevel-1"><a href="#Aplicaciones"><span class="tocnumber">4</span> <span class="toctext">Aplicaciones</span></a></li>
+<li class="toclevel-1"><a href="#V.C3.A9ase_tambi.C3.A9n"><span class="tocnumber">5</span> <span class="toctext">Véase también</span></a></li>
+<li class="toclevel-1"><a href="#Enlaces_externos"><span class="tocnumber">6</span> <span class="toctext">Enlaces externos</span></a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "mostrar"; var tocHideText = "ocultar"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Funcionamiento" id="Funcionamiento"></a></p>
+<h2> <span class="mw-headline">Funcionamiento</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=1" title="Editar sección: Funcionamiento">editar</a>]</span></h2>
+<p>Los algoritmos genéticos establecen una analogía entre el conjunto
+de soluciones de un problema, llamado fenotipo, y el conjunto de
+individuos de una población natural, codificando la información de cada
+solución en una cadena, generalmente binaria, llamada cromosoma. Los
+símbolos que forman la cadena son llamados los genes. Cuando la
+representación de los cromosomas se hace con cadenas de dígitos
+binarios se le conoce como genotipo. Los cromosomas evolucionan a
+través de iteraciones, llamadas generaciones. En cada generación, los
+cromosomas son evaluados usando alguna medida de aptitud. Las
+siguientes generaciones (nuevos cromosomas), llamada descendencia, se
+forman utilizando dos <a href="http://es.wikipedia.org/wiki/Operador_gen%C3%A9tico" title="Operador genético">operadores genéticos</a>, de <a href="http://es.wikipedia.org/wiki/Sobrecruzamiento_%28computaci%C3%B3n_evolutiva%29" title="Sobrecruzamiento (computación evolutiva)">sobrecruzamiento</a> y de <a href="http://es.wikipedia.org/wiki/Mutaci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Mutación (computación evolutiva)">mutación</a>.</p>
+<p><a name="Cu.C3.A1ndo_usar_estos_algoritmos" id="Cu.C3.A1ndo_usar_estos_algoritmos"></a></p>
+<h2> <span class="mw-headline">Cuándo usar estos algoritmos</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=2" title="Editar sección: Cuándo usar estos algoritmos">editar</a>]</span></h2>
+<p>Los algoritmos genéticos son de probada eficacia en caso de querer
+calcular funciones no derivables (o de derivación muy compleja) aunque
+su uso es posible con cualquier función.<br>
+Deben tenerse en cuenta también las siguientes consideraciones:</p>
+<ul>
+<li>Si la función a optimizar tiene muchos máximos/mínimos locales se
+requerirán más iteraciones del algoritmo para "asegurar" el
+máximo/mínimo global.</li>
+<li>Si la función a optimizar contiene varios puntos muy cercanos en
+valor al óptimo, solamente podemos "asegurar" que encontraremos uno de
+ellos (no necesariamente el óptimo).</li>
+</ul>
+<p><a name="Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico" id="Funcionamiento_de_un_algoritmo_gen.C3.A9tico_b.C3.A1sico"></a></p>
+<h2> <span class="mw-headline">Funcionamiento de un algoritmo genético básico</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=3" title="Editar sección: Funcionamiento de un algoritmo genético básico">editar</a>]</span></h2>
+<p>Un algoritmo genético puede presentar diversas variaciones,
+dependiendo de cómo se aplican los operadores genéticos (cruzamiento, <a href="http://es.wikipedia.org/wiki/Mutaci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Mutación (computación evolutiva)">mutación</a>), de cómo se realiza la <a href="http://es.wikipedia.org/wiki/Selecci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Selección (computación evolutiva)">selección</a> y de cómo se decide el reemplazo de los individuos para formar la nueva población. En general, el <a href="http://es.wikipedia.org/wiki/Pseudoc%C3%B3digo" title="Pseudocódigo">pseudocódigo</a> consiste de los siguientes pasos:</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width: 302px;"><a href="http://es.wikipedia.org/wiki/Archivo:Evolutionary_algorithm.svg" class="image" title="Algoritmo genético i: inicialización, f(X): evaluación,&nbsp;?: condición de término, Se: selección, Cr: cruzamiento, Mu: mutación, Re: reemplazo, X*: mejor solución."><img alt="" src="Algoritmo_gen%C3%A9tico_files/300px-Evolutionary_algorithm.png" class="thumbimage" width="300" height="225"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://es.wikipedia.org/wiki/Archivo:Evolutionary_algorithm.svg" class="internal" title="Aumentar"><img src="Algoritmo_gen%C3%A9tico_files/magnify-clip.png" alt="" width="15" height="11"></a></div>
+<b>Algoritmo genético</b> i: inicialización, f(X): evaluación,&nbsp;?: condición de término, Se: <a href="http://es.wikipedia.org/wiki/Selecci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Selección (computación evolutiva)">selección</a>, Cr: cruzamiento, Mu: mutación, Re: reemplazo, X*: mejor solución.</div>
+</div>
+</div>
+<ul>
+<li><b>Inicialización</b>: Se genera aleatoriamente la población
+inicial, que está constituida por un conjunto de cromosomas los cuales
+representan las posibles soluciones del problema. En caso de no hacerlo
+aleatoriamente, es importante garantizar que dentro de la población
+inicial, se tenga la diversidad estructural de estas soluciones para
+tener una representación de la mayor parte de la población posible o al
+menos evitar la <a href="http://es.wikipedia.org/wiki/Convergencia_prematura" title="Convergencia prematura">convergencia prematura</a>.</li>
+<li><b>Evaluación</b>: A cada uno de los cromosomas de esta población
+se aplicará la función de aptitud para saber qué tan "buena" es la
+solución que se está codificando.</li>
+<li><b>Condición de término</b> El AG se deberá detener cuando se
+alcance la solución óptima, pero ésta generalmente se desconoce, por lo
+que se deben utilizar otros criterios de detención. Normalmente se usan
+dos criterios: correr el AG un número máximo de iteraciones
+(generaciones) o detenerlo cuando no haya cambios en la población.
+Mientras no se cumpla la condición de término se hace lo siguiente:
+<ul>
+<li><b><a href="http://es.wikipedia.org/wiki/Selecci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Selección (computación evolutiva)">Selección</a></b>
+Después de saber la aptitud de cada cromosoma se procede a elegir los
+cromosomas que serán cruzados en la siguiente generación. Los
+cromosomas con mejor aptitud tienen mayor probabilidad de ser
+seleccionados.</li>
+<li><b><a href="http://es.wikipedia.org/wiki/Sobrecruzamiento_%28computaci%C3%B3n_evolutiva%29" title="Sobrecruzamiento (computación evolutiva)">Sobrecruzamiento</a></b>
+El cruzamiento es el principal operador genético, representa la
+reproducción sexual, opera sobre dos cromosomas a la vez para generar
+dos descendientes donde se combinan las características de ambos
+cromosomas padres.</li>
+<li><b><a href="http://es.wikipedia.org/wiki/Mutaci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Mutación (computación evolutiva)">Mutación</a></b>
+modifica al azar parte del cromosoma de los individuos, y permite
+alcanzar zonas del espacio de búsqueda que no estaban cubiertas por los
+individuos de la población actual.</li>
+<li><b>Reemplazo</b> una vez aplicados los operadores genéticos, se <a href="http://es.wikipedia.org/wiki/Selecci%C3%B3n_%28computaci%C3%B3n_evolutiva%29" title="Selección (computación evolutiva)">seleccionan</a> los mejores individuos para conformar la población de la generación siguiente</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><a name="Aplicaciones" id="Aplicaciones"></a></p>
+<h2> <span class="mw-headline">Aplicaciones</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=4" title="Editar sección: Aplicaciones">editar</a>]</span></h2>
+<ul>
+<li>Diseño automatizado, incluyendo investigación en diseño de
+materiales y diseño multiobjetivo de componentes automovilísticos:
+mejor comportamiento ante choques, ahorros de peso, mejora de
+aerodinámica, etc.</li>
+<li>Diseño automatizado de equipamiento industrial.</li>
+<li>Diseño automatizado de sistemas de comercio en el sector financiero.</li>
+<li>Construcción de <a href="http://es.wikipedia.org/wiki/%C3%81rbol_filogen%C3%A9tico" title="Árbol filogenético">árboles filogenéticos</a>.</li>
+<li>Optimización de carga de <a href="http://es.wikipedia.org/wiki/Contenedor" title="Contenedor">contenedores</a>.</li>
+<li>Diseño de sistemas de distribución de aguas.</li>
+<li>Diseño de topologías de circuitos impresos.</li>
+<li>Diseño de topologías de redes computacionales.</li>
+<li>En <a href="http://es.wikipedia.org/wiki/Teor%C3%ADa_de_juegos" title="Teoría de juegos">Teoría de juegos</a>, resolución de equilibrios.</li>
+<li>Análisis de expresión de genes.</li>
+<li>Aprendizaje de comportamiento de robots.</li>
+<li>Aprendizaje de reglas de <a href="http://es.wikipedia.org/wiki/L%C3%B3gica_difusa" title="Lógica difusa">Lógica difusa</a>.</li>
+<li>Análisis lingüístico, incluyendo inducción gramática, y otros aspectos de <a href="http://es.wikipedia.org/wiki/Procesamiento_de_lenguajes_naturales" title="Procesamiento de lenguajes naturales">Procesamiento de lenguajes naturales</a>, tales como eliminación de ambigüedad de sentido.</li>
+<li>Infraestructura de redes de comunicaciones móviles.</li>
+<li>Optimización de estructuras moleculares.</li>
+<li>Planificación de producción multicriteria.</li>
+<li>Predicción.</li>
+<li>Aplicación de Algoritmos Genéticos al <a href="http://es.wikipedia.org/w/index.php?title=Dilema_del_Prisionero&amp;action=edit&amp;redlink=1" class="new" title="Dilema del Prisionero (aún no redactado)">Dilema del Prisionero</a> Iterado</li>
+<li>Optimización de sistemas de compresión de datos, por ejemplo, usando wavelets.</li>
+<li>Predicción de <a href="http://es.wikipedia.org/wiki/Plegamiento_de_prote%C3%ADnas" title="Plegamiento de proteínas">Plegamiento de proteínas</a>.</li>
+<li>Optimización de <a href="http://es.wikipedia.org/w/index.php?title=Layout&amp;action=edit&amp;redlink=1" class="new" title="Layout (aún no redactado)">Layout</a>.</li>
+<li>Predicción de estructura de <a href="http://es.wikipedia.org/wiki/RNA" title="RNA" class="mw-redirect">RNA</a>.</li>
+<li>En bioinformática, <a href="http://es.wikipedia.org/wiki/Alineamiento_m%C3%BAltiple_de_secuencias" title="Alineamiento múltiple de secuencias">Alineamiento múltiple de secuencias</a>.</li>
+<li>Aplicaciones en planificación de procesos industriales, incluyendo planificación job-shop.</li>
+<li>Selección optima de modelos matemáticos para la descripción de sistemas biológicos.</li>
+<li>Manejo de residuos sólidos.</li>
+<li><a href="http://es.wikipedia.org/wiki/Ingenier%C3%ADa_de_software" title="Ingeniería de software">Ingeniería de software</a>.</li>
+<li>Construcción de horarios en grandes universidades, evitando conflictos de clases.</li>
+<li><a href="http://es.wikipedia.org/wiki/Problema_del_viajante" title="Problema del viajante">Problema del viajante</a>.</li>
+<li>Hallazgo de errores en programas.</li>
+<li>Optimización de producción y distribución de energía eléctrica.</li>
+<li>Diseño de redes geodésicas (Problemas de diseño).</li>
+</ul>
+<p><a name="V.C3.A9ase_tambi.C3.A9n" id="V.C3.A9ase_tambi.C3.A9n"></a></p>
+<h2> <span class="mw-headline">Véase también</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=5" title="Editar sección: Véase también">editar</a>]</span></h2>
+<ul>
+<li><a href="http://es.wikipedia.org/wiki/Redes_neuronales" title="Redes neuronales" class="mw-redirect">Redes neuronales</a></li>
+<li><a href="http://es.wikipedia.org/wiki/L%C3%B3gica_difusa" title="Lógica difusa">Lógica difusa</a></li>
+<li><a href="http://es.wikipedia.org/wiki/Red_bayesiana" title="Red bayesiana">Red bayesiana</a></li>
+<li><a href="http://es.wikipedia.org/w/index.php?title=M%C3%ADnimo/m%C3%A1ximo_local&amp;action=edit&amp;redlink=1" class="new" title="Mínimo/máximo local (aún no redactado)">Mínimo/máximo local</a></li>
+<li><a href="http://es.wikipedia.org/wiki/Inteligencia_Artificial" title="Inteligencia Artificial" class="mw-redirect">Inteligencia Artificial</a></li>
+<li><a href="http://es.wikipedia.org/wiki/Rob%C3%B3tica_evolutiva" title="Robótica evolutiva">Robótica Evolutiva</a></li>
+</ul>
+<p><a name="Enlaces_externos" id="Enlaces_externos"></a></p>
+<h2> <span class="mw-headline">Enlaces externos</span>  <span style="font-size: small; font-weight: normal; float: none; margin-left: 0px;" class="editsection">[<a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit&amp;section=6" title="Editar sección: Enlaces externos">editar</a>]</span></h2>
+<ul>
+<li>(en inglés) <a href="http://fog.neopages.org/tutorials.php" class="external text" title="http://fog.neopages.org/tutorials.php" rel="nofollow">A Practical Genetic Algorithm Tutorial</a> Programming step by step a Genetic Algorithm.</li>
+<li><a href="http://geneura.ugr.es/%7Ejmerelo/ie/ags.htm" class="external text" title="http://geneura.ugr.es/~jmerelo/ie/ags.htm" rel="nofollow">Tutorial de algoritmos genéticos</a></li>
+<li><a href="http://the-geek.org/docs/algen" class="external text" title="http://the-geek.org/docs/algen" rel="nofollow">Algoritmos genéticos y computación evolutiva</a></li>
+<li><a href="http://www.youtube.com/watch?v=aKLb0G55_-o" class="external text" title="http://www.youtube.com/watch?v=aKLb0G55_-o" rel="nofollow">Robot con Sistema de Navegación a base de Algoritmos Geneticos</a></li>
+<li><a href="http://www.ventanita.com.ar/" class="external text" title="http://www.ventanita.com.ar" rel="nofollow">Proyecto Darwin</a>
+Simulador de evolución genética. El simulador, presenta 3 especies
+(plantas, recolectores y predadores) que interactúan, se reproducen y
+evolucionan.</li>
+<li><a href="http://ai4r.rubyforge.org/geneticAlgorithms.html" class="external text" title="http://ai4r.rubyforge.org/geneticAlgorithms.html" rel="nofollow">Algoritmos genéticos en Ruby</a></li>
+<li><a href="http://www.arquimedex.com/index.php?option=com_content&amp;task=view&amp;id=68&amp;Itemid=40" class="external text" title="http://www.arquimedex.com/index.php?option=com_content&amp;task=view&amp;id=68&amp;Itemid=40" rel="nofollow">Arquimedex.com</a> Explicación sencilla y práctica de los algoritmos genéticos</li>
+<li>Poli, R., Langdon, W. B., McPhee, N. F. (2008), <i>A Field Guide to Genetic Programming</i>, freely available via Lulu.com, <a href="http://es.wikipedia.org/wiki/Especial:FuentesDeLibros/9781409200734" class="internal">ISBN 978-1-4092-0073-4</a></li>
+<li>(en inglés) <a href="http://www.it-weise.de/projects/book.pdf" class="external text" title="http://www.it-weise.de/projects/book.pdf" rel="nofollow">Global Optimization Algorithms - Theory and Application</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 8/1000000
+Post-expand include size: 0/2048000 bytes
+Template argument size: 0/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key eswiki:pcache:idhash:165-0!1!0!!es!2 and timestamp 20090821013941 -->
+<div class="printfooter">
+Obtenido de "<a href="http://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico">http://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://es.wikipedia.org/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías">Categorías</a>: <span dir="ltr"><a href="http://es.wikipedia.org/wiki/Categor%C3%ADa:Computaci%C3%B3n_evolutiva" title="Categoría:Computación evolutiva">Computación evolutiva</a></span> | <span dir="ltr"><a href="http://es.wikipedia.org/wiki/Categor%C3%ADa:Algoritmos" title="Categoría:Algoritmos">Algoritmos</a></span> | <span dir="ltr"><a href="http://es.wikipedia.org/wiki/Categor%C3%ADa:Vida_artificial" title="Categoría:Vida artificial">Vida artificial</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Vistas</h5>
+		<div class="pBody">
+			<ul xml:lang="es" lang="es">
+	
+				 <li id="ca-nstab-main" class="selected"><a href="http://es.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico" title="Ver el artículo [alt-shift-c]" accesskey="c">Artículo</a></li>
+				 <li id="ca-talk"><a href="http://es.wikipedia.org/wiki/Discusi%C3%B3n:Algoritmo_gen%C3%A9tico" title="Discusión acerca del artículo [alt-shift-t]" accesskey="t">Discusión</a></li>
+				 <li id="ca-edit"><a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=edit" title="Puedes editar esta página. Por favor, usa el botón de previsualización antes de grabar. [alt-shift-e]" accesskey="e">Editar</a></li>
+				 <li id="ca-history"><a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;action=history" title="Versiones anteriores de esta página y sus autores [alt-shift-h]" accesskey="h">Historial</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Herramientas personales</h5>
+		<div class="pBody">
+			<ul xml:lang="es" lang="es">
+				<li id="pt-acaibeta"><a href="http://es.wikipedia.org/w/index.php?title=Especial:UsabilityInitiativeOptIn&amp;from=Algoritmo_gen%C3%A9tico" class="no-text-transform">Probar Beta</a></li>
+				<li id="pt-login"><a href="http://es.wikipedia.org/w/index.php?title=Especial:Entrar&amp;returnto=Algoritmo_gen%C3%A9tico" title="Te animamos a registrarte antes de editar, aunque no es obligatorio [alt-shift-o]" accesskey="o">Registrarse/Entrar</a></li>
+			</ul>
+		</div>
+	</div>
+	<div title="Portada" class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/7/74/Wikipedia-logo-es.png);" href="http://es.wikipedia.org/wiki/Wikipedia:Portada" title="Portada [alt-shift-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div id="p-search" class="portlet">
+		<h5 xml:lang="es" lang="es"><label for="searchInput">Buscar</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform"><div>
+				<input name="title" value="Especial:Buscar" type="hidden">
+				<input autocomplete="off" id="searchInput" name="search" title="Buscar en este wiki [alt-shift-f]" accesskey="f" value="" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Ir" title="Ir al artículo con este nombre exacto si existe" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Buscar" title="Busca páginas con este texto." type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5 xml:lang="es" lang="es">Navegación</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://es.wikipedia.org/wiki/Wikipedia:Portada">Portada</a></li>
+				<li title="Acerca del proyecto, qué puedes hacer, dónde encontrar información" id="n-portal"><a href="http://es.wikipedia.org/wiki/Portal:Comunidad" title="Acerca del proyecto, qué puede hacer, dónde encontrar información">Portal de la comunidad</a></li>
+				<li title="Información de contexto sobre acontecimientos actuales" id="n-currentevents"><a href="http://es.wikipedia.org/wiki/Portal:Actualidad" title="Información de contexto sobre acontecimientos actuales">Actualidad</a></li>
+				<li id="n-recentchanges"><a href="http://es.wikipedia.org/wiki/Especial:CambiosRecientes" title="La lista de cambios recientes en el wiki [alt-shift-r]" accesskey="r">Cambios recientes</a></li>
+				<li id="n-randompage"><a href="http://es.wikipedia.org/wiki/Especial:Aleatoria" title="Cargar una página aleatoriamente [alt-shift-x]" accesskey="x">Página aleatoria</a></li>
+				<li title="El lugar para aprender" id="n-help"><a href="http://es.wikipedia.org/wiki/Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li>
+				<li title="Respáldanos" id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donaciones" title="Apóyenos">Donaciones</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-coll-create_a_book">
+		<h5 xml:lang="es" lang="es">Crear un libro</h5>
+		<div class="pBody">
+<ul id="collectionPortletList"><li id="coll-add_page"><a href="http://es.wikipedia.org/w/index.php?title=Especial:Libro/add_article/&amp;arttitle=Algoritmo+gen%C3%A9tico&amp;oldid=0" title="Agregar la página wiki actual a tu libro" onclick="collectionCall('AddArticle', ['removepage', wgNamespaceNumber, wgTitle, 0]); return false;" rel="nofollow">Añadir esta página</a></li><li id="coll-help_collections"><a href="http://es.wikipedia.org/wiki/Ayuda:Libros" title="Mostrar ayuda acerca de la herramienta libro">Ayuda de libros</a></li></ul><script type="text/javascript">/*<![CDATA[*/
+		var wgCollectionAddRemoveSate = "addpage";
+		/*]]>*/</script>
+<script type="text/javascript" src="Algoritmo_gen%C3%A9tico_files/portlet.js"></script>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5 xml:lang="es" lang="es">Herramientas</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://es.wikipedia.org/wiki/Especial:LoQueEnlazaAqu%C3%AD/Algoritmo_gen%C3%A9tico" title="Lista de todas las páginas del wiki que enlazan con ésta [alt-shift-j]" accesskey="j">Lo que enlaza aquí</a></li>
+				<li id="t-recentchangeslinked"><a href="http://es.wikipedia.org/wiki/Especial:CambiosEnEnlazadas/Algoritmo_gen%C3%A9tico" title="Cambios recientes en las páginas que enlazan con esta otra [alt-shift-k]" accesskey="k">Cambios en enlazadas</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload/es" title="Subir imágenes o archivos multimedia [alt-shift-u]" accesskey="u">Subir archivo</a></li>
+<li id="t-specialpages"><a href="http://es.wikipedia.org/wiki/Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [alt-shift-q]" accesskey="q">Páginas especiales</a></li>
+				<li id="t-print"><a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;printable=yes" rel="alternate" title="Versión imprimible de la página [alt-shift-p]" accesskey="p">Versión para imprimir</a></li>				<li id="t-permalink"><a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_gen%C3%A9tico&amp;oldid=29037471" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-cite"><a href="http://es.wikipedia.org/w/index.php?title=Especial:Citar&amp;page=Algoritmo_gen%C3%A9tico&amp;id=29037471">Citar este artículo</a></li><li id="t-download-as-pdf"><a href="http://es.wikipedia.org/w/index.php?title=Especial:Libro/render_article/&amp;arttitle=Algoritmo+gen%C3%A9tico&amp;oldid=29037471&amp;writer=rl" rel="nofollow">Versión en PDF</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5 xml:lang="es" lang="es">En otros idiomas</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A7%D8%AA_%D9%88%D8%B1%D8%A7%D8%AB%D9%8A%D8%A9">العربية</a></li>
+				<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Algorisme_gen%C3%A8tic">Català</a></li>
+				<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Genetick%C3%BD_algoritmus">Česky</a></li>
+				<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Genetisk_algoritme">Dansk</a></li>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Genetischer_Algorithmus">Deutsch</a></li>
+				<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/%CE%93%CE%B5%CE%BD%CE%B5%CF%84%CE%B9%CE%BA%CE%BF%CE%AF_%CE%91%CE%BB%CE%B3%CF%8C%CF%81%CE%B9%CE%B8%CE%BC%CE%BF%CE%B9">Ελληνικά</a></li>
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Genetic_algorithm">English</a></li>
+				<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85_%DA%98%D9%86%D8%AA%DB%8C%DA%A9">فارسی</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Geneettinen_algoritmi">Suomi</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique">Français</a></li>
+				<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Algoritmo_xen%C3%A9tico">Galego</a></li>
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D_%D7%92%D7%A0%D7%98%D7%99">עברית</a></li>
+				<li class="interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Geneti%C4%8Dki_algoritmi">Hrvatski</a></li>
+				<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Genetikus_algoritmus">Magyar</a></li>
+				<li class="interwiki-id"><a href="http://id.wikipedia.org/wiki/Algoritma_genetik">Bahasa Indonesia</a></li>
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Algoritmo_genetico">Italiano</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">日本語</a></li>
+				<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%9C%A0%EC%A0%84_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">한국어</a></li>
+				<li class="interwiki-la"><a href="http://la.wikipedia.org/wiki/Algorithmus_geneticus">Latina</a></li>
+				<li class="interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Genetiniai_algoritmai">Lietuvių</a></li>
+				<li class="interwiki-lv"><a href="http://lv.wikipedia.org/wiki/%C4%A2en%C4%93tiskais_algoritms">Latviešu</a></li>
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Genetisch_algoritme">Nederlands</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Algorytm_genetyczny">Polski</a></li>
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico">Português</a></li>
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Algoritm_genetic">Română</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC">Русский</a></li>
+				<li class="interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Genetic_algorithm">Simple English</a></li>
+				<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Genetick%C3%BD_algoritmus">Slovenčina</a></li>
+				<li class="interwiki-sr"><a href="http://sr.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D1%81%D0%BA%D0%B8_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%B0%D0%BC">Српски / Srpski</a></li>
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Genetisk_programmering#Genetisk_algoritm">Svenska</a></li>
+				<li class="interwiki-th"><a href="http://th.wikipedia.org/wiki/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1">ไทย</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Genetik_algoritma">Türkçe</a></li>
+				<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC">Українська</a></li>
+				<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_thu%E1%BA%ADt_di_truy%E1%BB%81n">Tiếng Việt</a></li>
+				<li class="interwiki-vo"><a href="http://vo.wikipedia.org/wiki/Lalgorit_Geredik">Volapük</a></li>
+				<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95">中文</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="Algoritmo_gen%C3%A9tico_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="Algoritmo_gen%C3%A9tico_files/wikimedia-button.png" alt="Wikimedia Foundation" width="88" height="31"></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> Esta página fue modificada por última vez el 01:39, 21 ago 2009.</li>
+					<li id="copyright">El texto está disponible bajo la <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">Licencia Creative Commons Compartir Igual 3.0</a>; cláusulas adicionales pueden ser de aplicación. Vea <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">los términos de uso</a> para los detalles.</li>
+					<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Pol%C3%ADtica_de_privacidad" class="extiw" title="wikimedia:Política de privacidad">Política de privacidad</a></li>
+					<li id="about"><a href="http://es.wikipedia.org/wiki/Wikipedia:Acerca_de" title="Wikipedia:Acerca de">Acerca de Wikipedia</a></li>
+					<li id="disclaimer"><a href="http://es.wikipedia.org/wiki/Wikipedia:Limitaci%C3%B3n_general_de_responsabilidad" title="Wikipedia:Limitación general de responsabilidad">Limitación de responsabilidad</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv158 in 0.091 secs. --></body><script type="text/javascript"><!--
+function __RP_Callback_Helper(str, strCallbackEvent, splitSize, func){var event = null;if (strCallbackEvent){event = document.createEvent('Events');event.initEvent(strCallbackEvent, true, true);}if (str && str.length > 0){var splitList = str.split('|');var strCompare = str;if (splitList.length == splitSize)strCompare = splitList[splitSize-1];var pluginList = document.plugins;for (var count = 0; count < pluginList.length; count++){var sSrc = '';if (pluginList[count] && pluginList[count].src)sSrc = pluginList[count].src;if (strCompare.length >= sSrc.length){if (strCompare.indexOf(sSrc) != -1){func(str, count, pluginList, splitList);break;}}}}if (strCallbackEvent)document.body.dispatchEvent(event);}function __RP_Coord_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Coord_Callback = str;pluginList[index].__RP_Coord_Callback_Left = splitList[0];pluginList[index].__RP_Coord_Callback_Top = splitList[1];pluginList[index].__RP_Coord_Callback_Right = splitList[2];pluginList[index].__RP_Coord_Callback_Bottom = splitList[3];};__RP_Callback_Helper(str, 'rp-js-coord-callback', 5, func);}function __RP_Url_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Url_Callback = str;pluginList[index].__RP_Url_Callback_Vid = splitList[0];pluginList[index].__RP_Url_Callback_Parent = splitList[1];};__RP_Callback_Helper(str, 'rp-js-url-callback', 3, func);}function __RP_TotalBytes_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_TotalBytes_Callback = str;pluginList[index].__RP_TotalBytes_Callback_Bytes = splitList[0];};__RP_Callback_Helper(str, null, 2, func);}function __RP_Connection_Callback(str){var func = function(str, index, pluginList, splitList){pluginList[index].__RP_Connection_Callback = str;pluginList[index].__RP_Connection_Callback_Url = splitList[0];};__RP_Callback_Helper(str, null, 2, func);}
+//--></script></html>

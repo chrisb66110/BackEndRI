@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head><link rel="canonical" href="https://msdn.microsoft.com/es-es/library/hh279674.aspx" />
+    <title>Punteros inteligentes (C++ moderno)</title>
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/es-es/library/hh279674(d=default,l=es-es,v=vs.140).aspx" />
+
+<meta name="NormalizedUrl" content="https://msdn.microsoft.com/es-es/library/hh279674(d=default,l=es-es,v=vs.140).aspx" />
+
+<meta name="ms.normalizedurl" content="https://msdn.microsoft.com/es-es/library/hh279674(d=default,l=es-es,v=vs.140).aspx" />
+
+<meta name="ms.prod" content="visual-studio-dev14" />
+
+<meta name="ms.devlang" content="cpp" />
+
+<meta name="ms.topic" content="article" />
+
+<meta name="VotingContextUrl" content="https://msdn.microsoft.com/es-es/library/hh279674(d=default,l=es-es,v=vs.140).aspx" />
+
+<meta name="MN" content="FB361399-8:11:03 AM" />
+
+<meta name="Search.ShortId" content="hh279674" />
+
+<meta name="ms.shortidmsdn" content="hh279674" />
+
+<meta name="ms.locale" content="es-es" />
+
+<meta name="ms.prodver" content="VS.140" />
+
+<meta name="ms.contentlang" content="ES" />
+
+<meta name="ms.lang" content="ES" />
+
+<meta name="ms.loc" content="ES" />
+
+<meta name="ms.sitever" content="2018.07.17.1" />
+
+<meta name="ms.assetid" content="909ef870-904c-49b6-b8cd-e9d0b7dc9435" />
+
+<meta name="ms.auth" content="0" />
+
+<meta name="ms.technology" content="devlang-cpp" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+        
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" data-do-not-move="true" data-provides="jQuery"></script>
+    
+<link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.css" /><link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://oljscdn.azureedge.net/popover.css" /><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:ImageSprite,0:TopicResponsive,0:TopicResponsive.MediaQueries,1:CodeSnippet,1:ProgrammingSelector,1:ExpandableCollapsibleArea,0:CommunityContent,1:TopicNotInScope,1:FeedViewerBasic,1:ImageSprite,2:Header,2:HeaderFooterSprite,2:Header.MediaQueries,3:Banner.MediaQueries,0:Breadcrumbs,0:Breadcrumbs.MediaQueries,0:ResponsiveToc,0:ResponsiveToc.MediaQueries,1:VersionSelector,0:LibraryMemberFilter,2:Footer,2:Footer.MediaQueries,4:StandardRating,5:LinkList,0:BaseResponsive,6:MsdnResponsive,0:Tables.MediaQueries;/Areas/Library/Content:0,/Areas/Epx/Content/Css:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Epx/Shared/Content:3,/Areas/Global/Content:4,/Areas/Epx/Themes/Base/Content:5,/Areas/Library/Themes/Msdn/Content:6&amp;amp;v=18E9F1D62B7A4A900E4125BAEC1E1444" /></head>
+<body class="library Chrome">
+    <div id="page">
+
+        
+
+        
+    
+
+
+    
+    <link type="text/css" rel="stylesheet" />
+    
+        
+        
+    <input type="hidden" id="isHeaderBleeding" value="true" />
+    <div id="ux-header" dir="ltr" class="ltr msdn" ms.pgarea="header">
+        
+            
+            
+        <div id="ux-banner">
+            <div id="msccBanner" dir="ltr" data-site-name="msdn.microsoft.com" data-mscc-version="0.4.0" data-nver="aspnet-3.0.0" data-sver="0.1.2" class="cc-banner" role="alert"><div class="cc-container"><svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor"><circle cx="22" cy="22" r="20" stroke-width="2"></circle><line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line><line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line></svg> <span class="cc-v-center cc-text">Este sitio utiliza cookies para análisis y para mostrar contenido y anuncios personalizados. Al continuar navegando por este sitio, aceptas este uso.</span> <a href="https://go.microsoft.com/fwlink/?linkid=845480" aria-label="Más información sobre la política de cookies de Microsoft" id="msccLearnMore" class="cc-link cc-v-center cc-float-right" data-mscc-ic="false">Más información</a></div></div>
+        </div>
+
+      <header>
+        <span id="singleCol"></span>
+        <span id="doubleCol"></span>
+        <span id="isMobile"></span>
+        <div>
+          <div class="row topRow" role="banner">
+            <div class="top">
+              <div class="left">
+                <a class="msdnLogoImg" href="https://msdn.microsoft.com/es-es" title="MSDN home" ms.cmpgrp="mslogo">
+                  <div class="clip70x15">
+                    <img alt="Microsoft Logo" id="msft-logo" class="msft-logo" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/HeaderFooterSprite.png?v=636674555847059654" />
+                  </div>
+                </a>
+                <div class="GrayPipeDiv clip1x18">
+                  <img alt="Gray Pipe" class="GrayPipe" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/HeaderFooterSprite.png?v=636674555847059654" />
+                </div>
+                  <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/es-es">Developer Network</a>
+                <a class="DevCenterFullName" href="https://msdn.microsoft.com/es-es">Developer Network</a>
+                <a class="DevCenterShortName" href="https://msdn.microsoft.com/es-es">Developer</a>
+              </div>
+              <div class="right" ms.cmpgrp="aux nav">
+                <div class="auxNav">
+                  <div>
+                    <div data-fragmentName="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">Suscripciones a MSDN</a>
+</div>
+                    <div data-fragmentName="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x40A&amp;slcid=0x40A&amp;campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">Obtener herramientas</a>
+</div>
+                  </div>
+                        <div>
+                            
+                        </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row middleRow">
+            <div class="expandTop">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </div>
+        <div id="buttomRowWrapper" class="bg_default">
+          <div class="row buttomRow bg_default">
+            <div class="bottom">
+              <div class="left" role="navigation" aria-label="header toc" ms.cmpgrp="main nav">
+                <a id="grip" class="menu-icon" href="javascript:void(0)" role="button" aria-label="navigation menu" data-mscc-ic="false"></a>
+                
+                <div id="drawer">
+                  <div class="toc">
+                    
+        <nav>
+            <ul class="navL1">
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Descargas</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+
+                                                <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" role="link" title="Visual Studio">Visual Studio</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" role="link" title="SDK">SDK</a>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a href="javascript:void(0)" title="Software de prueba" role="button" aria-expanded="false" data-mscc-ic="false">Software de prueba</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/evalcenter" title="Descargas gratuitas" role="link">Descargas gratuitas</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/officeevaluationresources" title="Recursos de Office" role="link">Recursos de Office</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sharepoint2013resources" title="Recursos de SharePoint Server 2013" role="link">Recursos de SharePoint Server 2013</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="Recursos de SQL Server 2014 Express" role="link">Recursos de SQL Server 2014 Express</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Recursos de Windows Server 2012" role="link">Recursos de Windows Server 2012</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Programas</a>
+                                <ul class="navL2">
+                                        <li class="inactive toggle">
+
+                                                <a href="javascript:void(0)" title="Suscripciones" role="button" aria-expanded="false" data-mscc-ic="false">Suscripciones</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-administration" title="Administradores" role="link">Administradores</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a href="javascript:void(0)" title="Estudiantes" role="button" aria-expanded="false" data-mscc-ic="false">Estudiantes</a>
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/imagine/imagine-home" title="Microsoft Imagine" role="link">Microsoft Imagine</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Socios estudiantes de Microsoft" role="link">Socios estudiantes de Microsoft</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/applicationbuilder" role="link" title="ISV">ISV</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://www.microsoft.com/bizspark" role="link" title="Nuevas empresas">Nuevas empresas</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://events.microsoft.com/" role="link" title="Eventos">Eventos</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Comunidad</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/magazine/dd767791" role="link" title="Magazine">Magazine</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://social.msdn.microsoft.com/forums/" role="link" title="Foros">Foros</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://blogs.msdn.microsoft.com/" role="link" title="Blogs">Blogs</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="http://channel9.msdn.com/" role="link" title="Channel 9">Channel 9</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive current toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Documentación</a>
+                                <ul class="navL2">
+                                        <li class="inactive current">
+
+                                                <a href="https://msdn.microsoft.com/library" role="link" title="API y referencia">API y referencia</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/developer-centers-msdn" role="link" title="Centros de desarrollo">Centros de desarrollo</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://code.msdn.microsoft.com/" role="link" title="Ejemplos">Ejemplos</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/mt703209" role="link" title="Contenido retirado">Contenido retirado</a>
+                                        </li>
+                                </ul>
+                        </li>
+            </ul>
+        </nav>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right" ms.title="search" role="search">
+                <div data-fragmentName="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+      <button id="FakeHeaderSearchButton" value="Search" type="submit" class="header-search-button" role="button" aria-label="search finder">
+        <div id="search-finder-div" class="clip16x20">
+          <img alt="search finder" id="search-finder" class="search-finder" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/HeaderFooterSprite.png?v=636674555847059654" />
+        </div>
+      </button>
+      <button id="HeaderSearchButton" style="display:none"></button>
+      <div id="searchSplitter"></div>
+      <div id="searchCloseIconDiv" class="clip16x20" tabindex="0">
+        <img alt="search clear" id="searchCloseIcon" class="search-clear-x" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/HeaderFooterSprite.png?v=636674555847059654" />
+      </div>
+      <div id="searchTextContainer" style="width: 0;">
+        <input id="HeaderSearchTextBox" name="query" type="text" aria-label="search edit textbox" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" />
+      </div>
+    </form>
+    
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+    </div>
+
+    
+    
+    
+    <div id="jumpInfo" style="display: none">Lo sentimos. El contenido solicitado se ha quitado. Será redirigido automáticamente en 1 segundo.</div>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" />
+
+
+    <div id="breadcrumbs" ms.pgarea="body" ms.cmpgrp="breadcrumbs">
+        <div id="breadcrumbDesktop" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/es-es/library/dd831853.aspx" title="Visual Studio 2015"></a></span>
+                        <span><a href="https://msdn.microsoft.com/es-es/library/60k1461a.aspx" title="Visual C++"><span>Visual C++</span></a></span>
+                        <span><a href="https://msdn.microsoft.com/es-es/library/hh875057.aspx" title="Lenguaje C++ y bibliotecas estándar"><span>Lenguaje C++ y bibliotecas estándar</span></a></span>
+                        <span class="breadcrumbDropSmall">
+                            <a id="breadcrumbDropDownButton" href="#" targethref="https://msdn.microsoft.com/es-es/library/hh875057.aspx" title="Aquí está otra vez C++"><span>Aquí está otra vez C++</span></a>
+                        </span>
+        </div>
+        <div id="breadcrumbDropDownMenu"></div>
+
+        <div id="breadcrumbTablet" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/es-es/library/hh875057.aspx" title="Lenguaje C++ y bibliotecas estándar"></a></span>
+                    <span><a href="https://msdn.microsoft.com/es-es/library/hh279654.aspx" title="Aquí está otra vez C++"><span>Aquí está otra vez C++</span></a></span>
+                <span class="breadcrumbDropSmall"><a id="tocDropDownButton" href="#" title="Punteros inteligentes"><span>Punteros inteligentes</span></a></span>
+        </div>
+        <div id="tocDropDownMenu"></div>
+        <div id="breadcrumbMobile" class="breadCrumb">
+                <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/es-es/library/hh279654.aspx" title="Aquí está otra vez C++"></a></span>
+            <span class="breadcrumbDropSmall"><a id="tocPopupButton" href="#" title="Punteros inteligentes"><span>Punteros inteligentes</span></a></span>
+        </div>
+    </div>
+    <div id="tocPopupMenu">
+        <div id="tocPopMenuClose" class="tocCloseLarge"></div>
+        <div id="tocTitle">Punteros inteligentes</div>        
+    </div>
+
+    
+
+
+        <div id="body" ms.pgarea="body" class="">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+
+
+
+
+
+    <div id="leftNav" ms.cmpgrp="left toc" role="navigation" aria-label="left toc">
+
+    
+
+
+<div id="tocnav" class="ArchiveV2">
+    <div class="tocunselected">
+        <div id="tocExpandArea">
+            <span class="toc_empty"></span>
+            <span id="tocExpandButton"><a href="javascript:void(0)" aria-label="expand sibling toc" role="button"></a></span>
+        </div>
+        <div id="tocExpand"></div>
+    </div>
+    <div class="tocselected"></div>
+    <div class="tocunselected">
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh567368.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Compatibilidad con las características de C++11/14/17">Compatibilidad con las características de C++11/14/17</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/es-es/library/hh279663.aspx" id="mt561081_VS.140_es-ES" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Sistema de tipos de C++">Sistema de tipos de C++</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/dn387583.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Inicialización uniforme y constructores de delegación">Inicialización uniforme y constructores de delegación</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438473.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Duración de objetos y administración de recursos">Duración de objetos y administración de recursos</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438480.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Recursos propios de los objetos (RAII)">Recursos propios de los objetos (RAII)</a>                </div>
+                <div class="toclevel current" data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/es-es/library/hh279674.aspx" id="mt561088_VS.140_es-ES" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Punteros inteligentes">Punteros inteligentes</a>                </div>
+                <div class="toclevel " data-toclevel="2">
+<a href="https://msdn.microsoft.com/es-es/library/hh279676.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Cómo: Crear y usar instancias de unique_ptr">Cómo: Crear y usar instancias de unique_ptr</a>                </div>
+                <div class="toclevel " data-toclevel="2">
+<a href="https://msdn.microsoft.com/es-es/library/hh279669.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Cómo: Crear y usar instancias de shared_ptr">Cómo: Crear y usar instancias de shared_ptr</a>                </div>
+                <div class="toclevel " data-toclevel="2">
+<a href="https://msdn.microsoft.com/es-es/library/hh279672.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Cómo: Crear y usar instancias de weak_ptr">Cómo: Crear y usar instancias de weak_ptr</a>                </div>
+                <div class="toclevel " data-toclevel="2">
+<a href="https://msdn.microsoft.com/es-es/library/hh279683.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Cómo: Crear y usar instancias de CComPtr y CComQIPtr">Cómo: Crear y usar instancias de CComPtr y CComQIPtr</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438477.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Pimpl para encapsulación en tiempo de compilación">Pimpl para encapsulación en tiempo de compilación</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438470.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Contenedores">Contenedores</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438471.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Algoritmos">Algoritmos</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438469.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Formato de cadena y de E/S">Formato de cadena y de E/S</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/es-es/library/hh279678.aspx" id="mt561086_VS.140_es-ES" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Controlar errores y excepciones">Controlar errores y excepciones</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/es-es/library/hh438475.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Portabilidad en los límites de ABI">Portabilidad en los límites de ABI</a>                </div>
+    </div>
+    <a id="tocMenuToggler" href="javascript:void(0)" role="button">
+        <span id="tocMenuTogglerIcon" class="tocMenuCollapse" role="button" aria-expanded="true" aria-label="Table of contents menu"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>            <div style="display:none">
+                <div id="CollapseLocalizeString">Collapse the table of content</div>
+                <div id="ExpandLocalizeString">Expand the table of content</div>
+            </div>
+        <div>
+            <a id="isd_archiveControlResponsive" style="display:none;" href="javascript:void(0)" role="button" aria-label="Ocultar versiones archivadas" data-include-archive="Mostrar versiones archivadas" data-exclude-archive="Ocultar versiones archivadas">
+            </a>
+            <div id="isd_archiveInstrument" style="display:none">Esta documentación está archivada y no tiene mantenimiento.</div>
+        </div>
+    </div>
+     <div id="content" class="content" ms.cmpgrp="content body" role="main">
+
+
+
+
+
+
+
+
+        <div id="vsBanner">
+            <div class="vsBannerLeft">
+                <div class="vsBannerWarning"></div>
+            </div>
+            <div class="vsBannerRight">
+                <div class="vsBannerMessage">Se recomienda usar Visual Studio 2017</div>
+                <div class="vsBannerRecommendation">
+                    <a class="vsBannerRecommendationButton" href="https://aka.ms/upgradevs2017">Descargar ahora</a>
+                </div>
+            </div>
+        </div>
+    <div id="archiveDisclaimerText" style="display:none">Esta documentación está archivada y no tiene mantenimiento.</div>
+
+
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="topic">
+    <h1 class="title">Punteros inteligentes (C++ moderno)</h1>
+    
+    <div class="lw_vs">
+      <div id="curversion">
+        <strong>
+                Visual Studio 2015 
+            </strong>
+      </div>
+      <div id="versionclick">
+        <div id="vsseperator" class="cl_lw_vs_seperator"></div>
+        <div>
+          <div>
+            <a id="vsLink" href="javascript:void(0)" role="button" aria-label="Otras versiones" aria-expanded="false">
+                        Otras versiones
+                    </a>
+          </div>
+          <div class="cl_vs_arrow clip10x10">
+            <img class="cl_lw_vs_arrow" id="vsArrow" alt="" src="https://i-msdn.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=636674555910029082" />
+          </div>
+        </div>
+        <ul id="vsPanel">
+          <li class="">
+            <a href="/es-es/library/hh279674(v=vs.120).aspx">Visual Studio 2013 </a>
+          </li>
+          <li class="archived">
+            <a href="/es-es/library/hh279674(v=vs.110).aspx">Visual Studio 2012</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div id="mainSection">
+      <div id="mainBody"> <p>Para obtener la documentación más reciente de Visual Studio 2017 RC, consulte <a href="http://docs.microsoft.com/visualstudio">Documentación de Visual Studio 2017 RC</a>.</p><p>En la programación del lenguaje C++ actual, la biblioteca estándar incluye <em>punteros inteligentes</em>, que se utilizan para asegurarse de que los programas están libres de memoria y de pérdidas de recursos y son seguros ante excepciones.</p><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="Contraer" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Usos de los punteros inteligentes</span></a><div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div"><a href="/es-es/library/hh279674.aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Hacer clic con el botón derecho para copiar y compartir el vínculo de esta sección"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></h2><div class="sectionblock"><a id="Usos-de-los-punteros-inteligentes"></a></div></div><p>Los punteros inteligentes se definen en el espacio de nombres <code>std</code> del archivo de encabezado <a href="https://msdn.microsoft.com/es-es/library/k11k2x83.aspx">&lt;memory&gt;</a>.  Son cruciales en la expresión de programación <a href="https://msdn.microsoft.com/es-es/library/hh438480.aspx">RAII</a> o <em>Resource Acquisition Is Initialialization</em>.  El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código.  En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.</p><p>En la mayoría de los casos, cuando se inicializa un puntero o un identificador de recursos sin formato para apuntar a un recurso real, el puntero se pasa inmediatamente a un puntero inteligente.  En el lenguaje C++ actual, los punteros sin formato se utilizan únicamente en pequeños bloques de código de ámbito limitado, bucles o funciones auxiliares donde el rendimiento es crucial y no hay ninguna posibilidad de confusión sobre la propiedad.</p><p>En el ejemplo siguiente se compara una declaración de puntero sin formato con una declaración de puntero inteligente.</p><p>
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar al portapapeles." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_41e1e78c-f7d6-4956-8a33-cb1b54f699c8');" ms.cmptyp="CodeSnippet">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_41e1e78c-f7d6-4956-8a33-cb1b54f699c8" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">void</span> UseRawPointer()
+{
+    <span style="color:Green;">// Using a raw pointer -- not recommended.</span>
+    Song* pSong = <span style="color:Blue;">new</span> Song(L<span style="color:#A31515;">"Nothing on You"</span>, L<span style="color:#A31515;">"Bruno Mars"</span>); 
+
+    <span style="color:Green;">// Use pSong...</span>
+
+    <span style="color:Green;">// Don't forget to delete!</span>
+    <span style="color:Blue;">delete</span> pSong;   
+}
+
+
+<span style="color:Blue;">void</span> UseSmartPointer()
+{
+    <span style="color:Green;">// Declare a smart pointer on stack and pass it the raw pointer.</span>
+    unique_ptr&lt;Song&gt; song2(<span style="color:Blue;">new</span> Song(L<span style="color:#A31515;">"Nothing on You"</span>, L<span style="color:#A31515;">"Bruno Mars"</span>));
+
+    <span style="color:Green;">// Use song2...</span>
+    wstring s = song2-&gt;duration_;
+    <span style="color:Green;">//...</span>
+
+} <span style="color:Green;">// song2 is deleted automatically here.</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</p><p>Como se muestra en el ejemplo, un puntero inteligente es una plantilla de clase que se declara en la pila y se inicializa con un puntero sin formato que apunta a un objeto asignado por montón.  Una vez que se inicializa el puntero inteligente, se convierte en propietario del puntero sin formato.  Esto significa que el puntero inteligente es responsable de eliminar la memoria que el puntero sin formato especifica.  El destructor del puntero inteligente contiene la llamada de eliminación y, dado que el puntero inteligente se declara en la pila, su destructor se invoca cuando el puntero inteligente sale del ámbito, incluso si se produce una excepción en alguna parte que se encuentre más arriba en la pila.</p><p>Para acceder al puntero encapsulado, utilice los conocidos operadores de puntero <code>-&gt;</code> y <code>*</code>, que la clase del puntero inteligente sobrecarga para devolver el puntero sin formato encapsulado.</p><p>La expresión del puntero inteligente de C++ se asemeja a la creación de objetos en lenguajes como C#: se crea el objeto y después se permite al sistema que se ocupe de eliminarlo en el momento correcto.  La diferencia es que ningún recolector de elementos no utilizados independiente se ejecuta en segundo plano; la memoria se administra con las reglas estándar de ámbito de C++, de modo que el entorno en tiempo de ejecución es más rápido y eficaz.</p><table summary="table"><tr><th scope="col"><span><img id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-icon-important" alt="System_CAPS_ICON_important.jpg" src="https://i-msdn.sec.s-msft.com/dynimg/IC160177.jpeg" title="System_CAPS_ICON_important.jpg" xmlns="" /></span> <Token space="preserve">Importante </Token></th></tr><tr><td><p>
+Cree siempre punteros inteligentes en una línea de código independiente, nunca en una lista de parámetros, para que no se produzca una pérdida de recursos imperceptible debido a algunas reglas de asignación de la lista de parámetros.</p></td></tr></table><p>En el ejemplo siguiente se muestra cómo se puede utilizar un tipo de puntero inteligente <code>unique_ptr</code> de la biblioteca de plantillas estándar para encapsular un puntero a un objeto grande.</p><p>
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar al portapapeles." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_c07169ac-baf0-458c-9787-20d1e8508590');" ms.cmptyp="CodeSnippet">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_c07169ac-baf0-458c-9787-20d1e8508590" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+
+<span style="color:Blue;">class</span> LargeObject
+{
+<span style="color:Blue;">public</span>:
+    <span style="color:Blue;">void</span> DoSomething(){}
+};
+
+<span style="color:Blue;">void</span> ProcessLargeObject(<span style="color:Blue;">const</span> LargeObject&amp; lo){}
+<span style="color:Blue;">void</span> SmartPointerDemo()
+{    
+    <span style="color:Green;">// Create the object and pass it to a smart pointer</span>
+    std::unique_ptr&lt;LargeObject&gt; pLarge(<span style="color:Blue;">new</span> LargeObject());
+
+    <span style="color:Green;">//Call a method on the object</span>
+    pLarge-&gt;DoSomething();
+
+    <span style="color:Green;">// Pass a reference to a method.</span>
+    ProcessLargeObject(*pLarge);
+
+} <span style="color:Green;">//pLarge is deleted automatically when function block goes out of scope.</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</p><p>En el ejemplo se muestran los pasos básicos siguientes para utilizar punteros inteligentes.</p><ol><li><p>Declare el puntero inteligente como variable automática (local). (No utilice la expresión <code>new</code> o <code>malloc</code> en el propio puntero inteligente).</p></li><li><p>En el parámetro de tipo, especifique el tipo al que apunta el puntero encapsulado.</p></li><li><p>Pase un puntero sin formato al objeto <code>new</code>-ed en el constructor de puntero inteligente. (Algunas funciones de utilidad o constructores de puntero inteligente hacen esto por usted.)</p></li><li><p>Utilice los operadores sobrecargados <code>-&gt;</code> y <code>*</code> para tener acceso al objeto.</p></li><li><p>Deje que el puntero inteligente elimine el objeto.</p></li></ol><p>Los punteros inteligentes están diseñados para ser lo más eficaces posible tanto en términos de memoria como de rendimiento.  Por ejemplo, el único miembro de datos de <code>unique_ptr</code> es el puntero encapsulado.  Esto significa que <code>unique_ptr</code> tiene exactamente el mismo tamaño que ese puntero, cuatro u ocho bytes.  El acceso al puntero encapsulado a través del puntero inteligente sobrecargado * y los operadores -&gt; no es mucho más lento que el acceso directo a los punteros sin formato.</p><p>Los punteros inteligentes tienen sus propias funciones miembro, a las que se accede mediante la notación “punto”.  Por ejemplo, algunos punteros inteligentes de STL tienen una función miembro de restablecimiento que libera la propiedad del puntero.  Esto es útil cuando se quiere liberar la memoria que es propiedad del puntero inteligente antes de que el puntero inteligente salga del ámbito, tal y como se muestra en el ejemplo siguiente.</p><p>
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar al portapapeles." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8c9385da-616d-4fbd-9641-9c11c0a054a3');" ms.cmptyp="CodeSnippet">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8c9385da-616d-4fbd-9641-9c11c0a054a3" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">void</span> SmartPointerDemo2()
+{
+    <span style="color:Green;">// Create the object and pass it to a smart pointer</span>
+    std::unique_ptr&lt;LargeObject&gt; pLarge(<span style="color:Blue;">new</span> LargeObject());
+
+    <span style="color:Green;">//Call a method on the object</span>
+    pLarge-&gt;DoSomething();
+
+    <span style="color:Green;">// Free the memory before we exit function block.</span>
+    pLarge.reset();
+
+    <span style="color:Green;">// Do some other work...</span>
+
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</p><p>Los punteros inteligentes suelen proporcionar un mecanismo para acceder directamente al puntero sin formato.  Los punteros inteligentes STL tienen una función miembro de <code>get</code> con este propósito y <code>CComPtr</code> tiene un miembro de clase <code>p</code> público.  Si proporciona acceso directo al puntero subyacente, puede utilizar el puntero inteligente para administrar la memoria en el propio código y continuar pasando el puntero sin formato en un código que no admita punteros inteligentes.</p><p>
+<div id="code-snippet-4" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar al portapapeles." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_16e6bfc4-ece8-489f-8e25-5dd62117e90a');" ms.cmptyp="CodeSnippet">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_16e6bfc4-ece8-489f-8e25-5dd62117e90a" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">void</span> SmartPointerDemo4()
+{
+    <span style="color:Green;">// Create the object and pass it to a smart pointer</span>
+    std::unique_ptr&lt;LargeObject&gt; pLarge(<span style="color:Blue;">new</span> LargeObject());
+
+    <span style="color:Green;">//Call a method on the object</span>
+    pLarge-&gt;DoSomething();
+
+    <span style="color:Green;">// Pass raw pointer to a legacy API</span>
+    LegacyLargeObjectFunction(pLarge.get());    
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</p><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="Contraer" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Clases de punteros inteligentes</span></a><div id="Anchor_1" class="LW_CollapsibleArea_Anchor_Div"><a href="/es-es/library/hh279674.aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Hacer clic con el botón derecho para copiar y compartir el vínculo de esta sección"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></h2><div class="sectionblock"><a id="Clases-de-punteros-inteligentes"></a></div></div><p>En la sección siguiente se resumen los distintos tipos de punteros inteligentes disponibles en el entorno de programación de Windows y se describe cuándo utilizarlos.</p><p><strong>Punteros inteligentes de la biblioteca estándar de C++</strong><br />
+Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).</p><ul><li><p><code>unique_ptr</code><br />
+Permite exactamente un único propietario del puntero subyacente.  Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto <code>shared_ptr</code>.  Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir.  Sustituye a <code>auto_ptr</code>, que está desusado.  Comparado con <code>boost::scoped_ptr</code>,  <code>unique_ptr</code> es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue de inserción y extracción rápidas en colecciones STL.  Archivo de encabezado: <code>&lt;memory&gt;</code>.  Para obtener más información, vea <a href="https://msdn.microsoft.com/es-es/library/hh279676.aspx">Cómo: Crear y usar instancias de unique_ptr</a> y <a href="https://msdn.microsoft.com/es-es/library/ee410601.aspx">unique_ptr (Clase)</a>.</p></li><li><p><code>shared_ptr</code><br />
+Puntero inteligente con recuento de referencias.  Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original.  El puntero sin formato no se elimina hasta que todos los propietarios de <code>shared_ptr</code> han salido del ámbito o, de lo contrario, han renunciado a la propiedad.  El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias.  Archivo de encabezado: <code>&lt;memory&gt;</code>.  Para obtener más información, vea <a href="https://msdn.microsoft.com/es-es/library/hh279669.aspx">Cómo: Crear y usar instancias de shared_ptr</a> y <a href="https://msdn.microsoft.com/es-es/library/bb982026.aspx">shared_ptr (Clase)</a>.</p></li><li><p><code>weak_ptr</code><br />
+Puntero inteligente de caso especial para usarlo junto con <code>shared_ptr</code>.  <code>weak_ptr</code> proporciona acceso a un objeto que pertenece a una o varias instancias de <code>shared_ptr</code>, pero no participa en el recuento de referencias.  Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo.  Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de <code>shared_ptr</code>.  Archivo de encabezado: <code>&lt;memory&gt;</code>.  Para obtener más información, vea <a href="https://msdn.microsoft.com/es-es/library/hh279672.aspx">Cómo: Crear y usar instancias de weak_ptr</a> y <a href="https://msdn.microsoft.com/es-es/library/bb982126.aspx">weak_ptr (Clase)</a>.</p></li></ul><p><strong>Punteros inteligentes para objetos COM (programación clásica de Windows)</strong><br />
+Cuando trabaje con objetos COM, encapsule los punteros de interfaz en un tipo de puntero inteligente adecuado.  Active Template Library (ATL) define varios punteros inteligentes para propósitos diferentes.  También puede usar el tipo de puntero inteligente <code>_com_ptr_t</code>, que el compilador utiliza cuando crea clases contenedoras de archivos .tlb.  Es la mejor opción si no desea incluir los archivos de encabezado ATL.</p><p><a href="https://msdn.microsoft.com/es-es/library/ezzw7k98.aspx">CComPtr Class</a><br />
+Utilice esta opción a menos que no puede usar ATL.  Realiza el recuento de referencias mediante los métodos <code>AddRef</code> y de <code>Release</code>.  Para obtener más información, vea <a href="https://msdn.microsoft.com/es-es/library/hh279683.aspx">Cómo: Crear y usar instancias de CComPtr y CComQIPtr</a>.</p><p><a href="https://msdn.microsoft.com/es-es/library/wc177dxw.aspx">CComQIPtr Class</a><br />
+Se parece a <code>CComPtr</code>, pero también proporciona la sintaxis simplificada para llamar a <code>QueryInterface</code> en objetos COM.  Para obtener más información, vea <a href="https://msdn.microsoft.com/es-es/library/hh279683.aspx">Cómo: Crear y usar instancias de CComPtr y CComQIPtr</a>.</p><p><a href="https://msdn.microsoft.com/es-es/library/80zw33a6.aspx">CComHeapPtr Class</a><br />
+Puntero inteligente a objetos que utilizan <code>CoTaskMemFree</code> para liberar memoria.</p><p><a href="https://msdn.microsoft.com/es-es/library/t62af25w.aspx">CComGITPtr Class</a><br />
+Puntero inteligente para las interfaces que se obtienen de la tabla de interfaz global (GIT).</p><p><a href="https://msdn.microsoft.com/es-es/library/417w8b3b.aspx">_com_ptr_t (Clase)</a><br />
+Se parece a <code>CComQIPtr</code> en funcionalidad, pero no depende de los encabezados ATL.</p><p><strong>Punteros inteligentes ATL para objetos POCO</strong><br />
+Además de punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes para objetos estándar de C++.  En la programación clásica de Windows, estos tipos son alternativas útiles a las colecciones STL, especialmente cuando no es necesaria la portabilidad de código o cuando no se quiere mezclar los modelos de programación de STL y ATL.</p><p><a href="https://msdn.microsoft.com/es-es/library/txda4x5t.aspx">CAutoPtr Class</a><br />
+Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia.  Puede compararse con la clase <code>std::auto_ptr</code> desusada.</p><p><a href="https://msdn.microsoft.com/es-es/library/3by29yh0.aspx">CHeapPtr Class</a><br />
+Puntero inteligente para objetos asignados mediante la función <a href="https://msdn.microsoft.com/es-es/library/6ewkz86d.aspx">malloc</a> de C.</p><p><a href="https://msdn.microsoft.com/es-es/library/0satyyw8.aspx">CAutoVectorPtr Class</a><br />
+Puntero inteligente para matrices que se asignan mediante <code>new[]</code>.</p><p><a href="https://msdn.microsoft.com/es-es/library/fe1wsd5y.aspx">CAutoPtrArray Class</a><br />
+Clase que encapsula una matriz de elementos <code>CAutoPtr</code>.</p><p><a href="https://msdn.microsoft.com/es-es/library/1h4ehk5z.aspx">CAutoPtrList Class</a><br />
+Clase que encapsula los métodos para manipular una lista de nodos de <code>CAutoPtr</code>.</p><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="Contraer" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vea también</span></a><div id="Anchor_2" class="LW_CollapsibleArea_Anchor_Div"><a href="/es-es/library/hh279674.aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Hacer clic con el botón derecho para copiar y compartir el vínculo de esta sección"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></h2><div class="sectionblock"><a id="Vea-tambi-n"></a></div></div><p><a href="https://msdn.microsoft.com/es-es/library/hh279654.aspx">Aquí está otra vez C++</a><br /><a href="https://msdn.microsoft.com/es-es/library/3bstk3k5.aspx">Referencia de lenguaje C++</a><br /><a href="https://msdn.microsoft.com/es-es/library/cscc687y.aspx">Biblioteca estándar de C++</a><br /><span class="unresolvedLink">información general: administración de memoria en C++</span></p></div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Mostrar:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit" />Heredado
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected" />Protegido
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="No hay miembros disponibles que coincidan con la configuración de filtro actual." />
+
+
+
+    </div>
+<div id="rightNavigationMenu" ms.cmpgrp="right nav">
+    <div id="mobileButtons">
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://msdn.microsoft.com/es-es/library/hh279674(d=printer).aspx" rel="nofollow"><ins class="print"></ins>Imprimir </a>
+            <a id="isd_printABook" href="/es-es/library/export/help/?returnurl=%2fes-es%2flibrary%2fhh279674.aspx">
+                <ins class="export"></ins>Exportar (<span class="count">0</span>)
+            </a>
+        </div>
+    </div>
+    <div id="navMain">
+        <div id="closeNavigation">
+            <a class="tocCloseSmall" id="closeButton"></a>
+        </div>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://msdn.microsoft.com/es-es/library/hh279674(d=printer).aspx" rel="nofollow"><ins class="print"></ins>Imprimir </a>
+            <a id="isdShare" href="#" role="button" aria-expanded="false">
+                <ins class="share"></ins>Compartir
+            </a>
+            <div id="socials" style="display: none">
+                <a class="isdFacebook" href="#" aria-label="Compartir en Facebook">
+                    <ins class="facebook"></ins>
+                </a>
+                <a class="isdTwitter" href="#" aria-label="Compartir en Twitter">
+                    <ins class="twitter"></ins>
+                </a>
+                <a class="isdGooglePlus" href="#" aria-label="Compartir en Google+">
+                    <ins class="googlePlus"></ins>
+                </a>
+            </div>
+        </div>
+        <div id="indoc_toc" style="display: none" ms.cmpgrp="indoc toc">
+            <div id="indoc_title">EN ESTE ARTÍCULO</div>
+            <ul id="indoc_toclist"></ul>
+        </div>
+    </div>
+</div>
+<div id="rightNavigationMenuThumbnail" class="rightNavigationMenuThumbnail">
+</div>
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+
+<input name="__RequestVerificationToken" type="hidden" value="F0Ao035J0ohqK0WyRv_RRYlyaBXRgSDKHjtR1kABLxQMvp7dqvil1YiV5FJwA9dqr_fVvzmDSKLUsnBoCxLj0Va0-Uc1" />
+<input id="ratingValueSubmitUrl" type="hidden" value="https://msdn.microsoft.com/es-es/library/feedback/rate/hh279674.aspx" />
+<input id="ratingAdditionalSubmitUrl" type="hidden" value="https://msdn.microsoft.com/es-es/library/feedback/additional/hh279674.aspx" />
+<input id="isTopicRated" type="hidden" value="false" />
+
+
+
+
+    <div id="lib-footer">
+        
+
+    
+    <link type="text/css" rel="stylesheet" />
+    
+        
+    <div id="ux-footer" class="" style="" dir="ltr" ms.pgarea="footer">
+
+
+    <div id="standardRatingBefore" class="clear stdr-container-before"></div>
+    <div id="standardRating" class="stdr-container" ms.pgarea="body">
+        <div class="stdr-close"></div>
+        <div class="stdr-vote stdr-content">
+            <div class="stdr-content">
+                <span class="stdr-votetitle">¿Le resulta útil esta página?</span>
+                <button class="stdr-yes" aria-label="Yes, this page was helpful">Sí</button>
+                <button class="stdr-no" aria-label="No, this page was not helpful">No</button>
+                <input id="s_ratingValue" type="hidden" value="" />
+            </div>
+        </div>
+        <div class="stdr-feedback" style="display: none">
+            <div class="stdr-form">
+                <div class="stdr-fieldtitle">¿Tiene comentarios adicionales?</div>
+                <textarea class="stdr-detail" rows="6" maxlength="1500"></textarea>
+                <div>
+                    <span class="stdr-count">Caracteres restantes: <span class="stdr-charcnt">1500</span></span>
+                    <div class="stdr-buttons">
+                        <button class="stdr-provide" aria-label="Submit my additional feedback">Enviar</button>
+                        <button class="stdr-skip" aria-label="Skip additional feedback">Pasar por alto</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="stdr-thanks" style="display: none">
+            <div class="stdr-content">
+                <span class="stdr-thankyou">Gracias.</span>
+                <span class="stdr-appreciate">Agradecemos mucho su ayuda.</span>
+            </div>
+        </div>
+
+        
+        <div id="contentFeedbackQAContainer" style="display: none;"></div>
+    </div>
+    <div id="standardRatingPlaceholder" style="display: none"></div>
+    
+
+        <footer class="top" role="navigation" aria-label="footer">
+            <div data-fragmentName="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Centros de desarrollo</h4>
+    <ul class="links">
+      <li>
+        <a href="https://dev.windows.com" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+      </li>
+      <li>
+        <a href="https://dev.office.com" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+      </li>
+      <li>
+        <a href="https://azure.microsoft.com/es-es/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/developer-centers-msdn" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">Más...</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div id="rightLinks">
+                <div data-fragmentName="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Recursos de aprendizaje</h4>
+    <ul class="links">
+      <li>
+        <a href="https://mva.microsoft.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="https://channel9.msdn.com/" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/magazine/" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">MSDN Magazine</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Comunidad</h4>
+    <ul class="links">
+      <li>
+        <a href="https://social.msdn.microsoft.com/forums/es-es/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">Foros</a>
+      </li>
+      <li>
+        <a href="https://blogs.msdn.com/b/developer-tools/" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">Blogs</a>
+      </li>
+      <li>
+        <a href="https://www.codeplex.com" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Soporte técnico</h4>
+    <ul class="links">
+      <li>
+        <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">Autoasistencia</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Programas</h4>
+    <ul class="links">
+      <li>
+        <a href="https://bizspark.microsoft.com/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark (para empresas nuevas)</a>
+      </li>
+      <li>
+        <a href="https://imagine.microsoft.com/en-us" id="CenterLinks4_2151_21" xmlns="http://www.w3.org/1999/xhtml">Microsoft Imagine (for students)</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/es-es/education" id="CenterLinks4_2151_15" xmlns="http://www.w3.org/1999/xhtml">Microsoft en la Educación</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </div>
+        </footer>
+
+        <footer class="bottom" role="contentinfo">
+            <span class="localeContainer">
+                
+    <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/es-es/selectlocale-dmc">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2fmsdn.microsoft.com%2fes-es%2flibrary%2fhh279674.aspx" />
+        <a href="#" onclick="$('#selectLocaleForm').submit();return false;" title="Cambie su idioma">España (Español)</a>
+    </form>
+
+
+            </span>
+
+            <div data-fragmentName="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">Boletín</a>
+      </li>
+      <li>
+        <a href="https://go.microsoft.com/fwlink/?LinkId=521839" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml">Privacidad y cookies</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml">Términos de uso</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml">Marcas comerciales</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <span class="logoLegal">
+                <span class="logoSpan clip67x13" role="img" tabindex="0" aria-label="microsoft logo">
+                    <img alt="logo" class="logo" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/HeaderFooterSprite.png?v=636674555847059654" />
+                </span>
+                <span class="copyright">© 2018 Microsoft</span>
+            </span>
+        </footer>
+    </div>
+    
+
+    </div>
+
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2018 Microsoft</div>
+        </div>
+
+        
+        
+
+        
+        
+        
+
+    <input id="tocPaddingPerLevel" type="hidden" value="17" />
+
+
+
+        <input id="MtpsDevice" type="hidden" value="Default" />
+
+
+<![CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]>
+
+        
+        
+        
+            
+        
+
+        
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="dqStW152uLnz_pCF-VYBGFbcz4N5vUcyQmY0-gM_weVZluRqICQ-IGl0KEfRKpy-MQGqj8RTKTbjIaVsYorhK0-nADY1" />
+</div>
+
+
+    </div>
+
+    
+
+    
+
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-msdn.sec.s-msft.com\", \r\n\t\"css\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"ttf\": \"https://i-msdn.sec.s-msft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = \u00275eb1b2eb-c47a-497a-a7ac-a1c230b2882f\u0027;\n        //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Layout,2:Header,3:Breadcrumbs,4:LibraryRightNavigationMenu,4:PrintExportButton,5:StandardRating,2:Footer,0:Topic,3:ResponsiveSupport,0:ABTestControl;/Areas/Epx/Content/Scripts:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Library/Content:3,/Areas/Library/Themes/Base/Content:4,/Areas/Global/Content:5\u0026amp;hashKey=CAED803405A331ED3E282CA92E2EC527\u0026amp;v=107103BF2AA32F1C3A4483D82C5ADB15" },
+	{ url: "https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.js" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Areas/Epx/Themes/Base/Content/SearchBox.js" },
+	{ url: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026minimumTermLength=2\u0026pgArea=header\u0026brand=Msdn\u0026loc=es-es\u0026focusOnInit=false\u0026emptyWatermark=true\u0026searchButtonTooltip=Buscar en MSDN" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:JumpRedirect,1:CmpgrpForHeader,1:ResponsiveToc;/Areas/Epx/Themes/Base/Content:0,/Areas/Library/Content:1\u0026amp;hashKey=27CB08B1B0C7422F93D5325C9A4B4479\u0026amp;v=107103BF2AA32F1C3A4483D82C5ADB15" },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027Expandir\u0027; MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027Contraer\u0027; MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027Haga clic para expandir. Haga doble clic para expandir todo.\u0027; MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027Haga clic para contraer. Haga doble clic para contraer todo.\u0027; MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027Expandir todo\u0027; MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027Contraer todo\u0027;" },
+	{ url: "https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js" },
+	{ txt: "OL=window.OL||{};OL.options=window.OL.options||{};OL.options.is_beta=false;OL.options.translation_type=\"ht\";" },
+	{ url: "https://oljscdn.azureedge.net/js/popover.es-ES.min.js" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:LibraryMemberFilter,1:Toc_Fixed,1:CodeSnippet,1:TopicNotInScope,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=D8D1FFAA6CA68460B7EFA5923975CA44\u0026amp;v=107103BF2AA32F1C3A4483D82C5ADB15" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script></body>
+</html>

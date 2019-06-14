@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>[C++] Punteros, punteros inteligentes o punteros compartidos?  pointers | CODE Q&amp;A [Español]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="/assets/style2.min.css" rel="stylesheet" type="text/css">
+            <link rel="alternate" hreflang="en" href="/en/q/65ec9">
+            <link rel="alternate" hreflang="ja" href="/ja/q/65ec9">
+            <link rel="alternate" hreflang="ko" href="/ko/q/65ec9">
+            <link rel="alternate" hreflang="ko-kr" href="/ko-kr/q/65ec9">
+            <link rel="alternate" hreflang="fr" href="/fr/q/65ec9">
+            <link rel="alternate" hreflang="de" href="/de/q/65ec9">
+            <link rel="alternate" hreflang="it" href="/it/q/65ec9">
+            <link rel="alternate" hreflang="ru" href="/ru/q/65ec9">
+            <link rel="alternate" hreflang="es" href="/es/q/65ec9">
+            <link rel="alternate" hreflang="ar" href="/ar/q/65ec9">
+            <link rel="alternate" hreflang="hi" href="/hi/q/65ec9">
+            <link rel="alternate" hreflang="zh-CN" href="/zh-CN/q/65ec9">
+            <link rel="alternate" hreflang="zh-TW" href="/zh-TW/q/65ec9">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34412481-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-34412481-6');
+</script>    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6424571640879890",
+        enable_page_level_ads: true
+    });
+</script>
+    <!-- 2018-08-28 15:35:21 -->
+</head>
+<body>
+<header class="bg-primary text-white" id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                                            <a class="navbar-brand" href="/es">
+                            <b>CODE</b> <span class="font-weight-light">Q&amp;A</span>                        </a>
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarText"
+                            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-white">
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto mt-2">
+                                                            <li class="nav-item-questions nav-item active">
+                                    <a class="nav-link" href="/es/">
+                                        Questions
+                                    </a>
+                                </li>
+                                <li class="nav-item-docs nav-item active">
+                                    <a class="nav-link" href="/es/docs/">
+                                        Documentation
+                                    </a>
+                                </li>
+                                                    </ul>
+
+                        <form class="form-inline mt-2"
+                              action="https://cse.google.com/cse/publicurl"
+                              target="_blank">
+                            <input type="hidden" name="cx" value="009992530158477552384:vklmtmurosc">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="search" name="q" id="q" required autocomplete="on" class="form-control"
+                                       placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>    <br>
+    <main class="question">
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h2">
+                            [C++] Punteros, punteros inteligentes o punteros compartidos?                         </h1>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <div id="more-spinner">
+                        <div class="spinner"></div>
+                    </div>
+                    <br>
+
+                    <div id="more-arrow" class="text-secondary">
+                        <i class="fas fa-caret-down fa-5x"></i>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="h3">
+                                <i class="fas fa-info-circle text-primary"></i>
+                                Answers
+                            </div>
+                            <br>
+                            <p>  el t&eacute;rmino "puntero inteligente" <em>incluye</em> punteros compartidos, punteros autom&aacute;ticos, punteros de bloqueo y otros.  quer&iacute;as decir auto puntero (m&aacute;s ambiguamente conocido como "poseer puntero"), no puntero inteligente. </p><p>  Los consejos tontos (T *) nunca son la mejor soluci&oacute;n.  Te obligan a hacer una gesti&oacute;n de memoria expl&iacute;cita, que es prolija, propensa a errores y, en ocasiones, casi imposible.  Pero m&aacute;s importante a&uacute;n, no se&ntilde;alan tu intenci&oacute;n. </p><p>  Los punteros autom&aacute;ticos eliminan la punta en el momento de la destrucci&oacute;n.  Para matrices, prefiera encapsulaciones como vector y deque.  Para otros objetos, muy raramente existe la necesidad de almacenarlos en el mont&oacute;n: solo use los locales y la composici&oacute;n de objetos.  Sin embargo, la necesidad de punteros autom&aacute;ticos surge con las funciones que devuelven los punteros del mont&oacute;n, como las f&aacute;bricas y los retornos polim&oacute;rficos. </p><p>  Los punteros compartidos eliminan el puntero cuando se destruye el &uacute;ltimo puntero compartido.  Esto es &uacute;til cuando se desea un esquema de almacenamiento abierto y sin complicaciones, donde la vida &uacute;til esperada y la propiedad pueden variar ampliamente seg&uacute;n la situaci&oacute;n.  Debido a la necesidad de mantener un contador (at&oacute;mico), son un poco m&aacute;s lentos que los punteros autom&aacute;ticos.  Algunos dicen en broma que los indicadores compartidos son para personas que no pueden dise&ntilde;ar sistemas, juzguen por s&iacute; mismos. </p><p>  Para una contraparte esencial de punteros compartidos, busque punteros d&eacute;biles tambi&eacute;n. </p>                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-secondary">
+                                <div class="card-header bg-secondary text-white">
+                                    <div class="h3">
+                                        <i class="fa fa-question-circle"></i>
+                                        Question
+                                    </div>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <div class="question-status question-originals-of-duplicate"><p>  Esta pregunta ya tiene una respuesta aqu&iacute;: </p><ul><li> <a dir="ltr" href="1a00c" title="What is a smart pointer and when should I use one?">&iquest;Qu&eacute; es un puntero inteligente y cu&aacute;ndo deber&iacute;a usar uno?</a> <span class="question-originals-answer-count">14 respuestas</span> </li></ul></div><p>  Estoy programando con punteros normales, pero he o&iacute;do hablar de bibliotecas como Boost que implementan punteros inteligentes.  Tambi&eacute;n he visto que en el motor de renderizado Ogre3D hay un uso profundo de punteros compartidos. </p><p>  &iquest;Cu&aacute;l es exactamente la diferencia entre los tres, y deber&iacute;a seguir usando solo un tipo de ellos? </p>                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="answers">
+                                                                    <br>
+                                    <hr>
+                                    <br>
+                                    <article id="answer0">
+                                        <div class="float-left h4">
+                                            <i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+                                        </div>
+                                        <p>  Para evitar fugas de memoria, puede utilizar punteros inteligentes siempre que sea posible.  B&aacute;sicamente, hay 2 tipos diferentes de punteros inteligentes en C ++ </p><ul><li>  Referencia contada (por ejemplo, boost :: shared_ptr / std :: tr1: shared_ptr) </li><li>  sin referencia contada (por ejemplo, boost :: scoped_ptr / std :: auto_ptr) </li></ul><p>  La diferencia principal es que los punteros inteligentes contados de referencia se pueden copiar (y usar en std :: containers) mientras que scoped_ptr no.  Los punteros contados no de referencia casi no tienen gastos generales ni gastos generales.  El recuento de referencias siempre introduce alg&uacute;n tipo de sobrecarga. </p><p>  (Sugiero evitar auto_ptr, tiene algunos defectos graves si se usa incorrectamente) </p>                                    </article>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="container">
+            <!-- MORE -->
+            <div class="row" id="more-button-container">
+                <div class="col text-center">
+                                                                <button class="btn btn-block btn-info"
+                                onclick="more();"
+                                id="more-button">
+                            Read More                        </button>
+                                    </div>
+            </div>
+            <!-- /MORE -->
+            <br>
+        </div>
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 text-center">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-gi-t+3k-1s-5e"
+     data-ad-client="ca-pub-6424571640879890"
+     data-ad-slot="6217064463"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+                    <div class="row">
+                <div class="col">
+                    <h3>
+                        Links
+                    </h3>
+
+                    <ul>
+                                                    <li>
+                                <a href="e08b">
+                                    ¿Cuáles son las diferencias entre una variable de puntero y una variable de referencia en C ++?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="17013">
+                                    Punteros inteligentes: ¿O quién te posee bebé?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="1a00c">
+                                    ¿Qué es un puntero inteligente y cuándo debería usar uno?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="4cb195">
+                                    ¿Qué implementaciones de C ++ Smart Pointer están disponibles?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="606c2a">
+                                    C ++ 11 introdujo un modelo de memoria estandarizada.                                </a>
+                            </li>
+                                                    <li>
+                                <a href="606c2a">
+                                    Qué significa eso?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="606c2a">
+                                    ¿Y cómo afectará la programación en C ++?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="8efe66">
+                                    ¿Por qué las líneas de lectura de stdin son mucho más lentas en C ++ que en Python?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="9b296e">
+                                    Procesamiento de imágenes: mejora de algoritmos para el reconocimiento de 'Coca-Cola Can'                                </a>
+                            </li>
+                                                    <li>
+                                <a href="9db12f">
+                                    ¿Por qué las bibliotecas y frameworks C ++ nunca usan punteros inteligentes?                                </a>
+                            </li>
+                                                    <li>
+                                <a href="151ec2e">
+                                    ¿Por qué debería usar un puntero en lugar del objeto en sí?                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <h3>
+                    Tags
+                </h3>
+                <br>
+                <ul class="tag-label">
+                                            <li>
+                            <a href="/es/tagged/c%2B%2B">
+                                c++                            </a>
+                        </li>
+                                            <li>
+                            <a href="/es/tagged/pointers">
+                                pointers                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6424571640879890"
+     data-ad-slot="9553827650"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>        </div>
+    </div>
+</div>
+
+<br>
+
+<footer>
+    <div class="container">
+        <div class="row border-top pt-3 pb-3">
+            <div class="col-8">
+                                    <a class="mr-3" href="/">
+                        <i class="fas fa-globe"></i>
+                        Español                    </a>
+                                            </div>
+            <div class="col-4 text-right">
+                <a href="#header">
+                    <i class="fas fa-caret-square-up"></i>
+                    Top
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="/assets/main.min.js"></script>
+</body>
+</html>

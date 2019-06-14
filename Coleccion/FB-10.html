@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" class="desktop futbol" lang="es" ng-app="Fox">
+<head prefix="og: http://ogp.me/ns# object: http://ogp.me/ns/object#">
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="FOX Deportes" name="author" />
+    <link href="/2.0/images/favicon.ico" rel="icon" />
+    <link href="/2.0/images/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/2.0/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+    <link href='http://www.foxdeportes.com/futbol/' rel='canonical' />
+    <link href="https://twitter.com/foxdeportes" rel="me" />
+    <meta content="Futbol" name="keywords" />
+    <meta content="Información de todo tipo de deporte incluyendo Fútbol Mexicano, Béisbol, NBA, Básquetbol, Fútbol Americano, NFL, Tenis, Boxeo, automovilismo y Golf." name="description" />
+    <meta content="notranslate" value="notranslate" name="google" />
+            <meta content="index, follow" name="robots" />
+        <meta content="Fútbol" property="og:title" />
+    <meta content="​" property="og:description" />
+    <meta content="http://media.foxdeportes.com/assets/images/fxd_logo_450.png" property="og:image" />
+    <meta content="400" property="og:image:width" />
+    <meta content="300" property="og:image:height" />
+    <meta content="image/png" property="og:image:type" />
+    <meta content="http://www.foxdeportes.com/futbol/" property="og:url" />
+    <meta content="blog" property="og:type" />
+    <meta content="Fútbol en FOX Deportes" property="og:site_name" />
+    <meta content="345600" property="og:ttl" />
+    <meta content="157146604310435" property="fb:pages" />
+    <meta content="538542952921947" property="fb:app_id" />
+                        <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@foxdeportes">
+    <meta name="twitter:creator" content="@foxdeportes">
+    <meta name="twitter:title" content="FútbolFútbol">
+    <meta name="twitter:description" content="​">
+    <meta name="twitter:image" content="http://media.foxdeportes.com/assets/images/fxd_logo_450.png">
+                <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <meta content="es_US" property="og:locale" />
+    <meta content="es_MX" property="og:locale:alternate" />
+    <meta content="es_419" property="og:locale:alternate" />
+    <base href="/">
+    <meta name="google-site-verification" content="3bwzW7Ey27RqRoc2GyIfxEMKruA1NzVJluALB2e_aEg" />
+
+    <!-- FreeWheel -->
+        <!-- FreeWheel -->
+
+    <!-- Begin comScore Tag -->
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6035208" });
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6035208&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+    <!-- TABOOLA -->
+        <script type="text/javascript">
+        !function (e, f, u) {
+            e.async = 1;
+            e.src = u;
+            f.parentNode.insertBefore(e, f);
+        }(document.createElement('script'), document.getElementsByTagName('script')[0], 'http://cdn.taboola.com/libtrc/foxdeportes/loader.js');
+    </script>
+        <script type="text/javascript">
+                        var utag_data = {
+            sport: "futbol",
+            league: "no league",
+            page_type: "main section front",
+            page_title: "main section front",
+            team: "no team name",
+            content_id: "no show id",
+            author: 'no author name',
+        };
+               (function(a,b,c,d){
+                      a='//tags.tiqcdn.com/utag/foxsports/deportes/prod/utag.js'
+           b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+           a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+       })();
+    </script>
+
+    <title>Fútbol | FOX Deportes</title>
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }</style>
+    <!-- assetic: css_base -->
+            <link rel="stylesheet" href="/2.0/css/fox.min.css" />
+        <link href="/2.0/css/bootstrap-datepicker.css" rel="icon" />
+    <!-- extra: css -->
+    <!-- assetic: js_base -->
+    <script src="/2.0/js/app.min.js"></script>
+    <!-- extra: app.js -->
+    <link rel="stylesheet" href="/2.0/css/sectionfront/style_futbol.css?v=0d6f7e" type="text/css" />
+
+
+    <script src="/2.0/js/app.js?v0d6f7e" type="text/javascript"></script>
+    <script defer src="/2.0/js/bootstrap-datepicker.js?v0d6f7e" type="text/javascript"></script>
+    <script type="text/javascript">
+        foxdeportes.service('refreshads', ["$rootScope", function($rootScope){
+            return {
+                refreshad: function (index) {
+                    //TODO: Refresh all ads
+                },
+                refreshallads: function () {
+                    //TODO: Refresh all ads
+                }
+            }
+        }]);
+    </script>
+
+    <!-- assetic: js_extended -->
+
+    <script defer src="/2.0/js/extra.min.js"></script>
+    <script defer src="/2.0/js/slider-tabs.min.js?v0d6f7e" type="text/javascript"></script>
+    <script defer src="/2.0/js/slider-tabs.tpl.min.js?v0d6f7e" type="text/javascript"></script>
+    <script defer src="/2.0/js/roundProgress.min.js?v0d6f7e"></script>
+    <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "name": "Fútbol",
+      "itemListElement": [
+                {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "http://www.foxdeportes.com/",
+            "name": "Homepage"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "http://www.foxdeportes.com/futbol/",
+            "name": "Fútbol"
+          }
+        }
+      ]
+    }
+    </script>
+
+<script type="text/javascript">foxdeportes.run(function(SessionService){    SessionService.setdata("parent","homepage"); SessionService.setdata("section_front_type","all"); SessionService.setdata("slug","futbol"); SessionService.setdata("type","category"); SessionService.setdata("posttype","sectionfront"); SessionService.setdata("freewheel_section_id","/futbol"); SessionService.setdata("is_worldcup","false"); SessionService.setdata("videofeedid","http://feed.theplatform.com/f/fox-deportes/futbol?form=json&range=0-50"); SessionService.setdata("videocategory","futbol"); SessionService.setdata("redmas","false"); });</script></head>
+<body class="home  ng-cloak" data-freewheel-section-id="www.foxdeportes.com/futbol" ng-controller="FoxGeneralController">
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({appId: '538542952921947', status: true, cookie: true,
+        xfbml: true});
+    };
+    (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+        '//connect.facebook.net/es_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+    }());
+</script>
+
+<notifications-bar class="notifications"></notifications-bar>
+<div id="fxdHeader" ng-controller="NavigationController">
+    <div class="fxdContent">
+        <!--****************************************** Desktop *************************************************************-->
+
+<!-- wdgtNavigation open -->
+
+<div id="wdgtNavDesktop"  class="wdgt wdgtNavigation hidden-xs">
+    <div class="container">
+        <!-- row open -->
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <!-- nav open -->
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid1">
+
+                        <!-- NavHeader open -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
+                                <span class="sr-only">Navegación</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1 id="logo"><a target="_self" class="navbar-brand" rel="Inicio" title="Fox Deportes" href="/">FOX Deportes</a></h1>
+                        </div>
+                        <!-- NavHeader close -->
+
+                        <!-- NavCollapse open -->
+                        <div class="collapse menu-desktop navbar-collapse" id="navCollapse">
+                            <ul class="nav navbar-nav" >
+
+
+                                <li id="item-menu-{{ $index  }}" ng-if="navitem.name!='Home'"   ng-class="{'fxdCategoryPrimary': navitem.children.length>0, 'fxdCategorySecondary': navitem.slug=='nascar', 'active2': navitem.children.length==0 && navitem.slug != 'nascar'}"   ng-repeat="navitem in navigation" on-navigation-load>
+                                    <a target="_self" class="hidden-md hidden-sm hidden-xs" href="{{ navitem.url }}">{{ navitem.name }}</a>
+                                    <a  class="hidden-lg" href="#">{{ navitem.name }}</a>
+
+                                    <div class="subMenuWrap" ng-if="navitem.children.length>0">
+                                        <ul class="subMenu showSubMenu" >
+
+                                            <li ng-repeat="subnavitem in navitem.children" ng-class="{ 'hidden-lg': subnavitem.name=='Portada'  }">
+                                                <a target="_self" href="{{ subnavitem.url }}">{{ subnavitem.name }}</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+
+                                <li  class="menuItemPlus">
+                                    <a href="#"><span class="icon-FS_Icons_expand"></span></a>
+                                    <div class="subMenuWrap">
+                                        <ul class="subMenu  showSubMenu socialMediaMenu">
+                                            <li><a href="https://www.facebook.com/foxdeportes"  target="_blank"   title="Síguenos en Facebook"><span class="allSocial socialFacebook"></span> Síguenos en Facebook</a></li>
+                                            <li><a href="https://twitter.com/FOXDeportes" target="_blank"   title="Síguenos en Twitter"><span class="allSocial socialTwitter"></span> Síguenos en Twitter</a></li>
+                                            <li><a href="https://www.instagram.com/foxdeportes/" target="_blank"   title="Síguenos en Instagram"><span class="allSocial socialInstagram"></span> Síguenos en Instagram</a></li>
+                                            <li><a href="https://www.youtube.com/user/FOXDeportesUS" target="_blank"   title="Síguenos en You Tube"><span class="allSocial socialYouTube"></span> Síguenos en YouTube</a></li>
+                                            <li><a href="/podcasts" title="Siguenos en Podcasts"><span class="allSocial socialPodcasts"></span> Siguenos en Podcasts</a></li>
+                                            <li><a href="http://www.dailymotion.com/FOXDeportes" target="_blank"   title="Síguenos en Dailymotion"><span class="socialmediadaylimotionmini"></span> Síguenos en Dailymotion</a></li>
+                                            <li><a href="http://www.foxdeportes.com/page/fox-sports-go/" target="_blank"   title="Síguenos en FSGO"><span class="socialmediafsgomini"></span> Síguenos en FSGO</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- NavCollapse close -->
+                    </div>
+                </nav>
+                <!-- nav close -->
+            </div>
+        </div>
+        <!-- row close -->
+    </div>
+    <div class="wdgtFormSearchContent panel-collapse collapse" aria-labelledby="Formulario de búsqueda" role="tabpanel" aria-expanded="false">
+        <div class="panel-body">
+
+            <div  class="wdgt wdgtFormSearch">
+                <div class="wdgtBody">
+                    <form action="/search/" method="post" name="s" id="formSearchArticles">
+                        <div class="containersearch">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0 elementContentSearch"  style=" margin-left: 20px;padding-left: 0;padding-right: 3px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="t" name="string" required="required" value="" placeholder=""/>
+                                        <span class="input-group-addon"><span class="icon-FS_Icons_search"></span></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12 elementContentSearch alignCenter" style=" padding-left: 3px;padding-right: 10px;">
+                                    <input type="submit" class="btn" value="Buscar" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- wdgtNavigation close -->
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        /*Search*/
+        $('.menuItemSearch a').click(function(e){
+            e.preventDefault();
+            $('.wdgtNavigation .wdgtFormSearchContent').slideToggle('fast');
+            if (!$('.borderIcon').hasClass('iconDisplay')){
+                $('#fxdHeader').addClass('openSearch');
+                $('.borderIcon').addClass('iconDisplay');
+
+                $('#t').focus();
+            }else{
+                $('.borderIcon').removeClass('iconDisplay');
+                $('#fxdHeader').removeClass('openSearch');
+            }
+        });
+
+
+        var homepage = 'homepage';
+        //if (homepage == 'homepage'){$('.bItem').removeClass('active');}
+
+        //Cat Parent
+        $('body').addClass('homepage');
+        //Nav
+        $("#navCollapse a[href^='#']").click(function (event) {
+            event.preventDefault();
+        });
+        //Category
+        if ($('#navCollapse ul li.active').children().hasClass('subMenuWrap')) {
+            $('#fxdHeader').addClass('includeSubMenu');
+        }
+        if ($('#fxdHeader .fxdContent .wdgt').hasClass('wdgtBoard')) {
+            $('#fxdHeader').addClass('includeSubMenu2');
+        }
+
+
+
+
+
+    });
+</script>
+
+<script>
+
+    $(document).ready(function(){
+        var waypoints = $('.wdgtBoard').waypoint({
+            handler: function(direction) {
+                if (direction === 'down') {
+                    $('#wdgtNavDesktop').addClass('wdgtNavDesktopSmaller');
+                }else{
+                    $('#wdgtNavDesktop').removeClass('wdgtNavDesktopSmaller');
+                }
+            }
+        })
+    });
+
+</script>
+
+
+
+<!--****************************************** Mobile *************************************************************-->
+
+
+<div id="wrappermobilenav" class="hidden-sm hidden-md hidden-lg" >
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+
+            <li ng-click="menuclick(navitem.children.length, navitem.slug)"   ng-class="{ active: navitem.slug==activemenu, iconMenuHome: navitem.slug=='homepage', iconMenuSoccer: navitem.slug=='futbol', iconMenuNFL: navitem.slug=='nfl', iconMenuMLB: navitem.slug=='mlb', iconMenuNBA: navitem.slug=='nba', iconMenuCombate: navitem.slug=='ufc', iconMenuNascar: navitem.slug=='nascar', iconMenuMore: navitem.slug=='mas', iconMenuTV: navitem.slug=='tvschedule', iconMenuVideo: navitem.slug=='video', iconMenuPhoto: navitem.slug=='photo-gallery', iconMenuEscore: navitem.slug=='all-scores', iconMenuWorldCup: navitem.slug=='mundial' }"   ng-repeat="navitem in navigation">
+                <a ng-if="navitem.children.length == 0" target="_self" href="{{ navitem.url}}"><span>{{ navitem.name }}</span></a>
+                <span ng-if=" navitem.children.length > 0">{{ navitem.name }}</span>
+
+            </li>
+
+        </ul>
+        <div class="sociaMenuMobile" id="wdgtsocialsidebarend">
+
+            <ul>
+                <li><a target="_blank" href="https://www.facebook.com/foxdeportes" class="socialMediaSprite facebook" title="Facebook"></a></li>
+
+                <li><a target="_blank" href="https://twitter.com/FOXDeportes" class="socialMediaSprite twitter" title="Twitter"></a></li>
+
+                <li><a target="_blank" href="http://instagram.com/foxdeportes" class="socialMediaSprite instagram" title="Instagram"></a></li>
+
+                <li><a target="_blank" href="https://www.youtube.com/user/FOXDeportesUS" class="socialMediaSprite youtube" title="YouTube"></a></li>
+
+                <li><a href="/podcasts" title="Siguenos en Podcasts" class="socialMediaSprite podcasts"></a></li>
+
+                <li><a target="_blank" href="http://www.dailymotion.com/FOXDeportes" class="socialmediadailymotionround" title="Dailymotion"></a></li>
+
+                <li><a target="_blank" href="http://www.foxdeportes.com/page/fox-sports-go/" class="socialmediafsgoround" title="Síguenos en FSGO"></a></li>
+            </ul>
+        </div>
+        <ul class="submenu">
+            <li ng-click="submenuclick(subitem.children.length, subitem.slug)" ng-repeat="subitem in activemenu_submenu" class="">
+                <a ng-if="subitem.children.length == 0 || subitem.children.length == null" target="_self" href="{{ subitem.url}}" >{{ subitem.name }}<i class="iconArrowMenuMobile"></i></a>
+                <span ng-if="subitem.children.length > 0 " >{{ subitem.name }}<i class="iconArrowMenuMobile"></i></span>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="wdgt wdgtNavigation">
+
+        <div class="container" style="width:100%;position:absolute;">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12"><!-- nav open -->
+                    <nav role="navigation" class="navbar navbar-default" id="navigationBar">
+                        <div class="container-fluid"><!-- NavHeader open -->
+                            <div class="navbar-header">
+                                <button type="button" class="hamburger is-closed animated fadeInLeft navbar-toggle" data-toggle="offcanvas">
+                                    <span class="sr-only">Navegación</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <h1 id="logo">
+                                    <a target="_self" rel="Inicio" title="Fox Deportes" href="/" class="navbar-brand">FOX Deportes</a>
+                                </h1>
+                                <ul class="allSocialMobile pull-right">
+                                    <li><a target="_self" href="/all-scores/">Marcadores</a></li>
+                                </ul>
+                            </div><!-- NavHeader close --><!-- NavCollapse open -->
+
+                        </div>
+                    </nav><!-- nav close -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script>
+    $(document).ready(function () {
+        var trigger = $('.hamburger'),
+            overlay = $('.overlay'),
+            isClosed = false;
+
+        trigger.click(function () {
+            hamburger_cross();
+        });
+
+        function hamburger_cross() {
+
+            if (isClosed == true) {
+                overlay.hide();
+                trigger.removeClass('is-open');
+                trigger.addClass('is-closed');
+                isClosed = false;
+            } else {
+                overlay.show();
+                trigger.removeClass('is-closed');
+                trigger.addClass('is-open');
+                isClosed = true;
+            }
+        }
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('#wrappermobilenav').toggleClass('toggled');
+            $('#fxdBody').toggleClass('toggled');
+        });
+
+        /*
+        * HammerJS
+        * */
+
+        var options = { threshold: 3 };
+
+        $('#sidebar-wrapper').hammer(options).bind('swipeleft', function(){
+            $('.hamburger').click();
+        });
+
+        $('#wrappermobilenav .overlay').on('click', function(){
+            $('.hamburger').click();
+        });
+
+        /*
+        * HammerJS
+        * */
+
+    });
+</script>
+        <div ng-controller="ScoreStripController" class="wdgt wdgtBoard">
+    <div class="container containerScorestrip">
+        <div class="row">
+
+            <div class="caliente-section" ng-if="mxSession">
+                <a target="_blank" href="https://online.caliente.mx/promoRedirect?member=foxdeportes&compaign=DEFAULT&channel=DEFAULT&zone=54623980&lp=0">
+                    <span class="caliente-text">Presentado por</span>
+                    <img class="caliente-logo-header" src="/2.0/css/images/calientelogored.png">
+                </a>
+
+            </div>
+            <div ng-cloak class="col-md-12 col-sm-12 col-xs-12 " ng-class="mxSession? 'widthToCaliente' : ''">
+
+                <div class="btn-group btnGroupSelect">
+                    <div class="dropdown">
+
+                        <a ng-cloak id="btnSelectCategoryItem" class="btn btnToggle" data-slug="{{ league.slug}}" data-prefix="{{ league.prefix }}" data-toggle="dropdown" href="#"> {{ league.abbr }} <b class="caret"></b></a>
+                        <ul aria-labelledby="btnSelectCategoryItem" role="menu" class="dropdown-menu" id="selectLeague">
+
+                            <li ng-repeat="league in leagues" class="">
+                                <a ng-click="selectLeague(league)" data-prefix="{{ league.prefix }}" data-slug="{{ league.slug }}">
+                                    {{ league.name }}
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="navBoard {{ league.prefix }}">
+                    <div class="boardCarousel ">
+                        <div class="loading-scorestrip" ng-if="loadingShow"></div>
+                        <div class="boardInner">
+                            <div id="items">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addBoard">
+                    <div class="wdgt wdgtAds200">
+    <div class="wdgtBody">
+
+    </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<style type="text/css">
+
+    .caliente-data{
+        float: right;
+    }
+
+    .postponed .game, .suspended .game, .cancelled .game { opacity: 0.2; }
+
+    img.logo-team-scorestrip{
+        display: inline-block;
+        width: 20px;
+    }
+
+
+
+    .loading-scorestrip{
+        background: url("./2.0/css/images/loader2.gif") no-repeat scroll center center #00182E;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 39;
+    }
+
+    .not-events-scorestrip{
+        color: #aeb2b7;
+        font-weight: bold;
+        font-size: 16px;
+        height: 72px;
+        vertical-align: middle;
+        display: table-cell;
+        width: 10%;
+    }
+
+    .gameHeader{
+        text-align: right !important;
+    }
+
+    .score-strip-item{
+        cursor: pointer;
+    }
+
+    .caliente-logo-header{
+        width: 100px;
+    }
+
+    .caliente-text{
+        color: #aeb2b7;
+        font-family: 'Nimbus Sans Condensed';
+        font-size: 18px;
+        display: block;
+    }
+
+    .caliente-section{
+        display: inline-block;
+        float: left;
+    }
+
+
+    .widthToCaliente{
+        width: 90%;
+    }
+
+    @media (max-width: 1200px){
+        .widthToCaliente{
+            width: 89%;
+        }
+
+    }
+
+    @media (max-width: 940px){
+        .widthToCaliente{
+            width: 88%;
+        }
+
+    }
+
+    @media (max-width: 864px){
+        .widthToCaliente{
+            width: 87%;
+        }
+
+    }
+
+    @media (max-width: 798px){
+        .widthToCaliente{
+            width: 86%;
+        }
+
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1B4066;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+    }
+
+    .score-strip-item:hover .overlay {
+        height: 100%;
+    }
+
+    .overlay hr{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .overlay .score-strip-link{
+        height: 49%;
+        display: table;
+        width: 100%;
+    }
+
+    .overlay .score-strip-link a{
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        font-family: 'Nimbus Sans Condensed';
+        font-size: 20px;
+    }
+
+    .linkMatchtrax{
+        cursor: pointer;
+    }
+</style>                
+<!-- wdgtNavigation open -->
+
+     <style>
+         .includeSubMenu .wdgtNavigation li.fxdCategoryPrimary.active .subMenuWrap {
+             z-index: 40 !important;
+         }
+     </style>
+     <div  class="wdgt wdgtSubNavigation" ng-controller="SubnavigationController" ng-init="init()" ng-class="{'hidden-lg hidden-md hidden-sm':activemenu=='homepage'}">
+         <div class="container-fluid" style="height:100%">
+             <!-- row open -->
+             <div class="row" style="height:100%">
+                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding-left:0px; padding-right:0px; height:100%">
+
+                     <!-- nav open -->
+                     <nav class="navbar navbar-default" role="navigation">
+                         <div class="container-fluid" style="height:100%">
+
+                             <!-- NavHeader open -->
+                             <div class="navbar-header">
+                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
+                                     <span class="sr-only">Navegación</span>
+                                     <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span>
+                                     <span class="icon-bar"></span>
+                                 </button>
+
+                             </div>
+                             <!-- NavHeader close -->
+                             <!-- NavCollapse open -->
+                             <div class="collapse menu-desktop navbar-collapse" id="navSubNavigationCollapse" ">
+                                 <div class="container" ng-show="activemenu!='homepage'">
+                                     <div><span class="categorytitlesubnavigation">{{ subnavigationtitle }}</span><span class="mundial-timer hidden-sm hidden-xs" mundial-countdown date='June 14, 2018 12:00:00'></span></div>
+                                     <span class="icondownrow hidden-lg hidden-md hidden-sm " id="buttonsubnavmobile">MENU</span>
+                                     <script>
+                                         $("#buttonsubnavmobile").click(function(){
+                                             console.log('click');
+                                             if ($(".wdgtSubNavigation").hasClass("open")==false){
+                                                 $(".wdgtSubNavigation").addClass("open");
+                                                 $("#navSubNavigationCollapse").addClass("open");
+                                             }else{
+                                                 $(".wdgtSubNavigation").removeClass("open");
+                                                 $("#navSubNavigationCollapse").removeClass("open");
+                                             }
+
+                                         });
+                                     </script>
+                                 </div>
+                                 <div class="container " ng-class="{'containersubmenu': activemenu!='homepage', 'containersubmenuhome': activemenu=='homepage'}">
+                                     <ul class="nav navbar-nav slider" id="navulsubnavigationhomepage" ng-if=" activemenu=='homepage'">
+
+                                         <li  class="fxdCategoryPrimary" ng-repeat="navitem in subnavigation">
+                                             <a target="_self" ng-href="{{ navitem.url }}"  ng-class="{'activesubmenuhome': navitem.slug == activemenu_submenu_slug}" ng-click="homepagesubnavclick(navitem.name)" style="text-align:center; text-transform: uppercase;">{{ navitem.name }}</a>
+                                         </li>
+
+
+                                     </ul>
+                                     <ul class="nav navbar-nav slider" id="navulsubnavigation" ng-if="activemenu!='homepage'">
+
+                                         <li  class="fxdCategoryPrimary" ng-repeat="navitem in subnavigation">
+                                             <a target="_self" ng-href="{{ navitem.url }}" >{{ navitem.name }}</a>
+                                         </li>
+
+
+                                     </ul>
+                                 </div>
+                                 <style>
+                                     @media (max-width: 767px) {
+                                         #navulsubnavigationhomepage .fxdCategoryPrimary {
+                                             float: none !important;
+                                             display: table-cell !important;
+                                         }
+
+                                         .activesubmenuhome{
+                                             border-bottom: 3px solid #337ab7;height: 44px;
+                                         }
+
+                                         .containersubmenuhome{
+                                             border-bottom: 1px solid #337ab7;padding-right: 0px !important; padding-left:0px !important;
+                                         }
+
+                                         .navbar-collapse.collapse .container a{
+                                             font-size: 20px;
+                                         }
+                                     }
+                                 </style>
+
+                             </div>
+                         
+                             <!-- NavCollapse close -->
+                         </div>
+                     </nav>
+                     <!-- nav close -->
+                 </div>
+             </div>
+             <!-- row close -->
+         </div>
+
+     </div>
+
+
+
+<style>
+    .categorytitlesubnavigation{
+        font-size: 28px;
+    }
+
+    .mundial-timer{
+        float: right;
+        font-size: 16px;
+        padding: 10px;
+        font-weight: bold;
+    }
+</style>
+        
+        <div class="wdgtDSM">
+    <div style="text-align: center; width: 100%;" free-wheel="728x90">
+    </div>
+</div>    </div>
+</div><div id="fxdBody">
+    <div class="row caliente-banner-container visible-xs" ng-if="mxSession">
+    <div clas="col-md-12">
+        <a target="_blank" href="https://online.caliente.mx/promoRedirect?member=foxdeportes&compaign=DEFAULT&channel=DEFAULT&zone=54623980&lp=0"><img alt="Caliente Banner Mobile" src="/photos/caliente/5b50d8f0aa2e4.gif" ></a>
+    </div>
+</div>    
+
+
+
+
+
+
+
+
+
+<!-- Script here.. -->
+
+    <script type="text/javascript" src="//player.foxdcg.com/deportes"></script>
+
+<div  class="container bgWhite fxdContent HomeCategory">
+    <div class="row">
+            <div id="fxdSidebar" class="fxdSidebar col-md-3 "  ng-controller="SidebarController">
+    <div class="wdgt wdgtTitular" ng-controller="HeadlineCategoryController">
+    <div class="wdgtHeader">
+        <div class="wdgtTitle titleXs white"><h2> Titulares <span
+                    class="icon-FS_Icons_arrow_right"></span></h2></div>
+    </div>
+    <div ng-cloak="" class="wdgtBody">
+        <ul>
+            <li ng-repeat="post in posts" ng-show="$index < 2">
+                <span class="numindicator">{{$index + 1}}</span>
+                <div class="titlepostcontent">
+                    <h3 class="titlePost">
+
+                        <a target="_self" title="{{ post.title }}" href="{{ post.url }}">  {{ post.short_title_desktop }}</a>
+                    </h3>
+                    <small ng-if="post.subtitle">
+                        <span class="smalltitle">Tambi&eacute;n: </span>
+                        <a target="_self" ng-href="{{ post.related[0].obj.url }}">
+                        <span class="smalldescription">{{ post.related[0].obj.title }}</span>
+                            </a>
+                    </small>
+                </div>
+            </li>
+        </ul>
+        <div id="divsidebarhomepage2"> <div class="wdgtDSM">
+    <div style="text-align: center; width: 100%;" free-wheel="300x250">
+    </div>
+</div></div>
+        <ul>
+            <li ng-repeat="post in posts" ng-show="$index > 1">
+                <span class="numindicator">{{$index + 1}}</span>
+                <div class="titlepostcontent">
+                    <h3 class="titlePost">
+
+                        <a target="_self" title="{{ post.title }}" href="{{ post.url }}">  {{ post.short_title_desktop }}</a>
+                    </h3>
+                    <small ng-if="post.subtitle">
+                        <span class="smalltitle">Tambi&eacute;n: </span>
+                        <a target="_self" ng-href="{{ post.related[0].obj.url }}">
+                            <span class="smalldescription">{{ post.related[0].obj.title }}</span>
+                        </a>
+                    </small>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>    <div ng-controller="ImageLinkController" class="wdgtImageLink" ng-show="image!=null">
+    <a target="_self" href="{{ url }}" target="{{ target }}"><img ng-src="{{ image }}" alt="Link" title="Link" ></a>
+</div>    <div class="caliente-quiniela" ng-if="mxSession">
+    <a target="_blank" href="https://online.caliente.mx/promoRedirect?member=foxdeportes&compaign=DEFAULT&channel=DEFAULT&zone=54623980&lp=0"><img
+            src="./2.0/images/calientetunnein.gif"></a>
+</div>
+<style>
+    .caliente-quiniela {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>    <div id="divsidebarhomepage3"> <div class="wdgtDSM">
+    <div style="text-align: center; width: 100%;" free-wheel="300x250">
+    </div>
+</div></div>
+    <div ng-controller="ImageLinkController" class="wdgtImageLink" ng-show="image!=null">
+    <a target="_self" href="{{ url }}" target="{{ target }}"><img ng-src="{{ image }}" alt="Link" title="Link" ></a>
+</div>    <div ng-if="mxSession"><div class="widget-caliente" data-sportcaliente="FOOT" caliente-live-game>
+    <div class="widget-header">
+        Apuesta en <img src="./2.0/css/images/calientelogowhitered.png">
+    </div>
+    <div class="widget-content">
+        <div class="caliente-league"></div>
+        <div class="row teams">
+            <div class="col-md-6 homeTeam">
+                <div class="logo-team"></div>
+                <div class="name-team"></div>
+            </div>
+            <div class="col-md-6 visitTeam">
+                <div class="logo-team"></div>
+                <div class="name-team"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 oddsHomeTeam">
+
+            </div>
+            <div class="col-md-4 oddsTie">
+
+            </div>
+            <div class="col-md-4 oddsVisitTeam">
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .widget-caliente {
+        border: 1px solid #b6b6b6;
+    }
+
+    .widget-caliente .widget-header{
+        background: #5a5a5a;
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Antenna-Bold';
+        height: 50px;
+        padding-top: 13px;
+        font-size: 12px;
+    }
+
+    .widget-caliente .widget-header img{
+        width: 130px;
+        margin-left: 5px;
+    }
+
+    .widget-caliente .widget-content .teams{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .widget-caliente .widget-content .caliente-league{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .widget-caliente .homeTeam img, .widget-caliente .visitTeam img{
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .widget-caliente .oddsHomeTeam, .widget-caliente .oddsTie, .widget-caliente .oddsVisitTeam{
+        text-align: center;
+    }
+
+    .widget-caliente .homeTeam .name-team, .widget-caliente .visitTeam .name-team{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .widget-caliente .homeTeam .logo-team, .widget-caliente .visitTeam .logo-team{
+        cursor: pointer;
+    }
+
+    .widget-caliente .widget-header img{
+        cursor: pointer;
+    }
+</style></div>
+    <!-- wdgtSocialMedia open -->
+<div class="wdgt wdgtSocialMedia">
+    <div class="wdgtfooterfxd">
+        <div class="titlefooterfxd">
+            <span>[-] Fox Deportes</span>
+        </div>
+        <div class="linksfooterfxd">
+            <span><a target="_blank" href="http://www.foxhispanicmedia.com/">Contactos de Publicidad</a></span><span> | </span><span><a target="_self" href="/page/politica-de-privacidad-de-fox-deportes/">Nueva Política de Confidencialidad</a></span><span> | </span><span><a target="_self" href="/page/acuerdo-de-terminos-de-uso-de-fox-deportes/">Términos de Uso </a><a target="_self" href="/page/que-hay-de-nuevo/">(Lo Nuevo)</a></span><span> | </span><span><a target="_self" href="/page/politica-de-privacidad-de-fox-deportes/#Adchoice">Ad Choices en Español</a></span><span> | </span><span><a target="_self" href="http://www.foxsports.com/">FOXSports.com</a></span>
+        </div>
+        <div class="linksfooterfxd">
+            <span>TM & ©2016 FOX and its related entities. <br />All Rights Reserved.</span> 
+        </div>
+        
+    </div>
+    <div class="">
+
+    </div>
+    <hr>
+    <div class="copyrightdiv">
+         <span>
+            El uso de este website (incluyendo todas y cada una de las partes y componentes) constituye una aceptación de los <a target="_self" href="/page/acuerdo-de-terminos-de-uso-de-fox-deportes/">Términos de Uso </a><a target="_self" href="/page/que-hay-de-nuevo/">( Lo Nuevo )</a> y <a target="_self" href="/page/politica-de-privacidad-de-fox-deportes/">Política de Privacidad</a>.
+        </span>
+    </div>
+    <div class="linksfooterend">
+        <span><a href="#">Privacy Policy</a></span><span>|</span><span><a href="#">Advertising Choices</a></span><span>|</span><span><a target="_self" href="/page/que-hay-de-nuevo/">Terms of Use</a></span><span>|</span><span><a href="#">Site Feedback</a></span>
+    </div>
+
+    <div class="wdgtBody" id="wdgtsocialsidebarend" on-socialbar-load>
+
+        <ul>
+                        <li><a target="_blank" href="https://www.facebook.com/foxdeportes" class="socialMediaSprite facebook" title="Facebook"></a></li>
+            
+                        <li><a target="_blank" href="https://twitter.com/FOXDeportes" class="socialMediaSprite twitter" title="Twitter"></a></li>
+            
+                        <li><a target="_blank" href="http://instagram.com/foxdeportes" class="socialMediaSprite instagram" title="Instagram"></a></li>
+            
+                        <li><a target="_blank" href="https://www.youtube.com/user/FOXDeportesUS" class="socialMediaSprite youtube" title="YouTube"></a></li>
+                        <li><a target="_blank" href="http://www.dailymotion.com/FOXDeportes" class="socialmediadailymotionround" title="Dailymotion"></a></li>
+        </ul>
+    </div>
+</div>
+<!-- wdgtSocialMedia open --></div>            <!--<div class="col-md-10 customCol8">-->
+<div class="col-md-9 wraper_news_fd" id="contentwidget">
+    <div class=""  ng-controller="LastestnewsCategoryController">
+    <div id="lastestcontent" infinite-scroll="loadMore()">
+    </div>
+    <!-- SPINNER LOADING-->
+    <div class="spinner-wrap" ng-show="spinnerShow">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<style>
+    .spinner {
+        margin: 10px auto;
+        width: 70px;
+        text-align: center;
+    }
+
+    .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        /* Prevent first frame from flickering when animation starts */
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+        background-color: #02A8F3;
+    }
+
+    .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+        background-color: #4BAE4F;
+    }
+
+    .spinner .bounce3 {
+        background-color: #F34235;
+    }
+
+    @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        } 40% {
+              transform: scale(1.0);
+              -webkit-transform: scale(1.0);
+          }
+    }
+
+    #video-player-mini {
+        height: inherit;
+    }
+</style>
+
+</div>    </div>
+</div>
+
+<div class="modal fade col-md-12" id="caliente-take-over" tabindex="-1" role="dialog" aria-labelledby="takeover-modal"
+     caliente-take-over>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close closeCaliente" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">Cerrar &times;</span></button>
+            <a ng-if="!showDefaultTakeOver" alt="TakeOver Caliente" target="_blank" href="{{ urlLinkTakeOver }}"><img
+                        ng-src="{{ urlImageTakeOver }}" width="100%"></a>
+            <a ng-if="showDefaultTakeOver" alt="TakeOver Caliente" target="_blank"
+               href="https://online.caliente.mx/promoRedirect?member=foxdeportes&compaign=DEFAULT&channel=DEFAULT&zone=54623980&lp=0"><img
+                        src="/photos/caliente/5b576bfa5ea98.gif" width="100%"></a>
+        </div>
+    </div>
+</div></div>
+<div id="fxdFooter">
+<!--    --><!--    --></div>
+<!-- angular: controllers -->
+
+<script defer src="/2.0/js/controllers/Category/sidebar.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/Category/headline.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/All/dsm.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/All/image_plus_link.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/Category/lastestnews.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/All/navigation.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/All/board.min.js?v=0d6f7e" type="text/javascript"></script>
+<script defer src="/2.0/js/controllers/Category/subnavigation.min.js?v=0d6f7e" type="text/javascript"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4ccf5e1f8c","applicationID":"15243831","transactionName":"YgEDMBNSWBVTVBFaXFtLNBYIHFcWQhkVW0M=","queueTime":0,"applicationTime":984,"atts":"TkYARltISxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

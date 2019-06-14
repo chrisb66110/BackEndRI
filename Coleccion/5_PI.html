@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='es'>
+<head>
+<link href='https://www.blogger.com/static/v1/widgets/3480144793-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta content='width=1100' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='https://dgvergel.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="C++ -&gt; Fundamentos de Programación - Atom" href="https://dgvergel.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="C++ -&gt; Fundamentos de Programación - RSS" href="https://dgvergel.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="C++ -&gt; Fundamentos de Programación - Atom" href="https://www.blogger.com/feeds/4453229641717490708/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="C++ -&gt; Fundamentos de Programación - Atom" href="https://dgvergel.blogspot.com/feeds/7671729029488251315/comments/default" />
+<!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/3762807459-ieretrofit.js"></script>
+<![endif]-->
+<link href='http://4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png' rel='image_src'/>
+<meta content='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html' property='og:url'/>
+<meta content='Punteros inteligentes (II)' property='og:title'/>
+<meta content='Semántica de propiedad exclusiva (primera parte)    La plantilla de clase std::unique_ptr&lt;&gt;  implementa una semántica de propiedad exclusiva...' property='og:description'/>
+<meta content='//4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/w1200-h630-p-k-no-nu/unique_ptr.png' property='og:image'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>C++ -&gt; Fundamentos de Programación: Punteros inteligentes (II)</title>
+<style type='text/css'>@font-face{font-family:'Calibri';font-style:normal;font-weight:400;src:local('Calibri'),url(//fonts.gstatic.com/l/font?kit=J7afnpV-BGlaFfdAhLEY6w&skey=a1029226f80653a8&v=v8)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}</style>
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Simple
+Designer: Blogger
+URL:      www.blogger.com
+----------------------------------------------- */
+
+/* Content
+----------------------------------------------- */
+body {
+font: normal normal 16px Calibri;
+color: #333333;
+background: #dadada none repeat scroll top left;
+padding: 0 0 0 0;
+}
+html body .region-inner {
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+h2 {
+font-size: 22px;
+}
+a:link {
+text-decoration:none;
+color: #2288bb;
+}
+a:visited {
+text-decoration:none;
+color: #888888;
+}
+a:hover {
+text-decoration:underline;
+color: #33aaff;
+}
+.body-fauxcolumn-outer .fauxcolumn-inner {
+background: transparent none repeat scroll top left;
+_background-image: none;
+}
+.body-fauxcolumn-outer .cap-top {
+position: absolute;
+z-index: 1;
+height: 400px;
+width: 100%;
+}
+.body-fauxcolumn-outer .cap-top .cap-left {
+width: 100%;
+background: transparent none repeat-x scroll top left;
+_background-image: none;
+}
+.content-outer {
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 #333333;
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+margin-bottom: 1px;
+}
+.content-inner {
+padding: 10px 40px;
+}
+.content-inner {
+background-color: #ffffff;
+}
+/* Header
+----------------------------------------------- */
+.header-outer {
+background: transparent none repeat-x scroll 0 -400px;
+_background-image: none;
+}
+.Header h1 {
+font: normal normal 40px 'Trebuchet MS',Trebuchet,Verdana,sans-serif;
+color: #174063;
+text-shadow: 0 0 0 rgba(0, 0, 0, .2);
+}
+.Header h1 a {
+color: #174063;
+}
+.Header .description {
+font-size: 18px;
+color: #660000;
+}
+.header-inner .Header .titlewrapper {
+padding: 22px 0;
+}
+.header-inner .Header .descriptionwrapper {
+padding: 0 0;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner .section:first-child {
+border-top: 0 solid #dddddd;
+}
+.tabs-inner .section:first-child ul {
+margin-top: -1px;
+border-top: 1px solid #dddddd;
+border-left: 1px solid #dddddd;
+border-right: 1px solid #dddddd;
+}
+.tabs-inner .widget ul {
+background: transparent none repeat-x scroll 0 -800px;
+_background-image: none;
+border-bottom: 1px solid #dddddd;
+margin-top: 0;
+margin-left: -30px;
+margin-right: -30px;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+padding: .6em 1em;
+font: normal normal 16px Calibri;
+color: #000000;
+border-left: 1px solid #ffffff;
+border-right: 1px solid #dddddd;
+}
+.tabs-inner .widget li:first-child a {
+border-left: none;
+}
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+color: #000000;
+background-color: #eeeeee;
+text-decoration: none;
+}
+/* Columns
+----------------------------------------------- */
+.main-outer {
+border-top: 0 solid transparent;
+}
+.fauxcolumn-left-outer .fauxcolumn-inner {
+border-right: 1px solid transparent;
+}
+.fauxcolumn-right-outer .fauxcolumn-inner {
+border-left: 1px solid transparent;
+}
+/* Headings
+----------------------------------------------- */
+div.widget > h2,
+div.widget h2.title {
+margin: 0 0 1em 0;
+font: normal bold 11px 'Trebuchet MS',Trebuchet,Verdana,sans-serif;
+color: #000000;
+}
+/* Widgets
+----------------------------------------------- */
+.widget .zippy {
+color: #999999;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+}
+.widget .popular-posts ul {
+list-style: none;
+}
+/* Posts
+----------------------------------------------- */
+h2.date-header {
+font: normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+.date-header span {
+background-color: #bbbbbb;
+color: #ffffff;
+padding: 0.4em;
+letter-spacing: 3px;
+margin: inherit;
+}
+.main-inner {
+padding-top: 35px;
+padding-bottom: 65px;
+}
+.main-inner .column-center-inner {
+padding: 0 0;
+}
+.main-inner .column-center-inner .section {
+margin: 0 1em;
+}
+.post {
+margin: 0 0 45px 0;
+}
+h3.post-title, .comments h4 {
+font: normal normal 22px 'Trebuchet MS',Trebuchet,Verdana,sans-serif;
+margin: .75em 0 0;
+}
+.post-body {
+font-size: 110%;
+line-height: 1.4;
+position: relative;
+}
+.post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
+.BlogList .item-thumbnail img {
+padding: 2px;
+background: #ffffff;
+border: 1px solid #eeeeee;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+.post-body img, .post-body .tr-caption-container {
+padding: 5px;
+}
+.post-body .tr-caption-container {
+color: #666666;
+}
+.post-body .tr-caption-container img {
+padding: 0;
+background: transparent;
+border: none;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+}
+.post-header {
+margin: 0 0 1.5em;
+line-height: 1.6;
+font-size: 90%;
+}
+.post-footer {
+margin: 20px -2px 0;
+padding: 5px 10px;
+color: #666666;
+background-color: #eeeeee;
+border-bottom: 1px solid #eeeeee;
+line-height: 1.6;
+font-size: 90%;
+}
+#comments .comment-author {
+padding-top: 1.5em;
+border-top: 1px solid transparent;
+background-position: 0 1.5em;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+#comments .avatar-image-container img {
+border: 1px solid #eeeeee;
+}
+/* Comments
+----------------------------------------------- */
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #999999;
+border-bottom: 1px solid #999999;
+}
+.comments .comment-thread.inline-thread {
+background-color: #eeeeee;
+}
+.comments .continue {
+border-top: 2px solid #999999;
+}
+/* Accents
+---------------------------------------------- */
+.section-columns td.columns-cell {
+border-left: 1px solid transparent;
+}
+.blog-pager {
+background: transparent url(//www.blogblog.com/1kt/simple/paging_dot.png) repeat-x scroll top center;
+}
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+background-color: #ffffff;
+padding: 5px;
+}
+.footer-outer {
+border-top: 1px dashed #bbbbbb;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile  {
+background-size: auto;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+.mobile .body-fauxcolumn-outer .cap-top {
+background-size: 100% auto;
+}
+.mobile .content-outer {
+-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+}
+.mobile .tabs-inner .widget ul {
+margin-left: 0;
+margin-right: 0;
+}
+.mobile .post {
+margin: 0;
+}
+.mobile .main-inner .column-center-inner .section {
+margin: 0;
+}
+.mobile .date-header span {
+padding: 0.1em 10px;
+margin: 0 -10px;
+}
+.mobile h3.post-title {
+margin: 0;
+}
+.mobile .blog-pager {
+background: transparent none no-repeat scroll top center;
+}
+.mobile .footer-outer {
+border-top: none;
+}
+.mobile .main-inner, .mobile .footer-inner {
+background-color: #ffffff;
+}
+.mobile-index-contents {
+color: #333333;
+}
+.mobile-link-button {
+background-color: #2288bb;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #ffffff;
+}
+.mobile .tabs-inner .section:first-child {
+border-top: none;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background-color: #eeeeee;
+color: #000000;
+border-top: 1px solid #dddddd;
+border-bottom: 1px solid #dddddd;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #dddddd;
+}
+.post pre {
+width: 680px;
+font-family: Courier;
+font-size: 10pt;
+margin:.75em 0;
+border:1px solid #272938;
+border-width:1px 1px;
+padding:5px 15px;
+display: block;
+background-color: #f1f1f1;
+white-space: pre;
+}
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body {
+min-width: 1180px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 1180px;
+max-width: 1180px;
+_width: 1180px;
+}
+.main-inner .columns {
+padding-left: 0;
+padding-right: 350px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0;
+right: 350px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0") -
+parseInt("350px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 350px;
+}
+.main-inner .column-left-outer {
+width: 0;
+right: 100%;
+margin-left: -0;
+}
+.main-inner .column-right-outer {
+width: 350px;
+margin-right: -350px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+body#layout div.add_widget {
+padding: 8px;
+}
+body#layout div.add_widget a {
+margin-left: 32px;
+}
+--></style>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=4453229641717490708&amp;zx=93268a08-ee3c-4bfb-8860-f517a3dd38a7' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=4453229641717490708&amp;zx=93268a08-ee3c-4bfb-8860-f517a3dd38a7' rel='stylesheet'/></noscript>
+
+</head>
+<body class='loading variant-simplysimple'>
+<div class='navbar no-items section' id='navbar' name='Barra de navegación'>
+</div>
+<div class='body-fauxcolumns'>
+<div class='fauxcolumn-outer body-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content'>
+<div class='content-fauxcolumns'>
+<div class='fauxcolumn-outer content-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content-outer'>
+<div class='content-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left content-fauxborder-left'>
+<div class='fauxborder-right content-fauxborder-right'></div>
+<div class='content-inner'>
+<header>
+<div class='header-outer'>
+<div class='header-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left header-fauxborder-left'>
+<div class='fauxborder-right header-fauxborder-right'></div>
+<div class='region-inner header-inner'>
+<div class='header section' id='header' name='Cabecera'><div class='widget Header' data-version='1' id='Header1'>
+<div id='header-inner'>
+<div class='titlewrapper'>
+<h1 class='title'>
+<a href='https://dgvergel.blogspot.com/'>
+C++ -&gt; Fundamentos de Programación
+</a>
+</h1>
+</div>
+<div class='descriptionwrapper'>
+<p class='description'><span>Técnicas modernas y aplicaciones actuales del lenguaje</span></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class='header-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</header>
+<div class='tabs-outer'>
+<div class='tabs-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left tabs-fauxborder-left'>
+<div class='fauxborder-right tabs-fauxborder-right'></div>
+<div class='region-inner tabs-inner'>
+<div class='tabs section' id='crosscol' name='Multicolumnas'><div class='widget Image' data-version='1' id='Image1'>
+<h2>C++ Fundamentos de Programación</h2>
+<div class='widget-content'>
+<a href='http://dgvergel.blogspot.com'>
+<img alt='C++ Fundamentos de Programación' height='267' id='Image1_img' src='//2.bp.blogspot.com/-SnZIAcUEB0o/VLqAUrbPU8I/AAAAAAAAACg/C_MUCLgfQzM/s1600/cpp_icon_dgvergel_blog.png' width='398'/>
+</a>
+<br/>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=Image&widgetId=Image1&action=editWidget&sectionId=crosscol' onclick='return _WidgetManager._PopupConfig(document.getElementById("Image1"));' target='configImage1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+<div class='tabs no-items section' id='crosscol-overflow' name='Cross-Column 2'></div>
+</div>
+</div>
+<div class='tabs-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='main-outer'>
+<div class='main-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left main-fauxborder-left'>
+<div class='fauxborder-right main-fauxborder-right'></div>
+<div class='region-inner main-inner'>
+<div class='columns fauxcolumns'>
+<div class='fauxcolumn-outer fauxcolumn-center-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-left-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-right-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class='columns-inner'>
+<div class='column-center-outer'>
+<div class='column-center-inner'>
+<div class='main section' id='main' name='Principal'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<meta content='http://4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png' itemprop='image_url'/>
+<meta content='4453229641717490708' itemprop='blogId'/>
+<meta content='7671729029488251315' itemprop='postId'/>
+<a name='7671729029488251315'></a>
+<h3 class='post-title entry-title' itemprop='name'>
+Punteros inteligentes (II)
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-7671729029488251315' itemprop='description articleBody'>
+<span style="color: #073763;"><b>Semántica de propiedad exclusiva (primera parte)</b></span><br />
+<br />
+<div style="text-align: justify;">
+La plantilla de clase <span style="color: blue;">std::unique_ptr&lt;&gt;</span> implementa una <span style="color: #38761d;"><b>semántica de propiedad exclusiva</b></span> del objeto referenciado. Concretamente, un objeto <span style="color: blue;">u</span> de tipo <span style="color: blue;">std::unique_ptr&lt;T&gt;</span> almacena un puntero miembro a un segundo objeto de tipo <span style="color: blue;">T</span> o derivado, sobre el que se sigue una determinada política de destrucción (configurable por el usuario) cuando <span style="color: blue;">u</span> es destruido. La semántica de propiedad exclusiva implica que el puntero inteligente <span style="color: blue;">u</span> no pueda copiarse, pues de poder hacerlo acabaríamos con dos referencias al mismo objeto. Existe, sin embargo, un mecanismo de transferencia de la propiedad que analizaremos en este <i>post</i>.</div>
+<br />
+<a name='more'></a><div style="text-align: justify;">
+</div>
+<div style="text-align: justify;">
+El estándar del lenguaje define la siguiente plantilla biparamétrica para objetos simples (no-matriciales):&nbsp;</div>
+<br />
+<pre><span style="color: purple;">namespace std {</span>
+   <span style="color: #0c343d;"><span style="color: #20124d;"><span style="color: #073763;">template&lt;typename T, class D = default_delete&lt;T&gt;&gt; class</span> </span><span style="color: #660000;">unique_ptr</span><span style="color: #073763;">;</span></span>
+<span style="color: purple;">}</span>
+</pre>
+<br />
+<div style="text-align: justify;">
+El segundo parámetro determina la política de destrucción a seguir con el objeto referenciado al finalizar el tiempo de vida del puntero inteligente. La política adoptada por defecto, implementada por la clase <span style="color: blue;">std::default_delete&lt;T&gt;</span>, invoca al operador <span style="color: blue;">delete</span> sobre el puntero miembro.<br />
+<br />
+<pre><span style="color: purple;">namespace std {</span>
+   <span style="color: #073763;">template&lt;typename T&gt;
+   struct <span style="color: #660000;">default_delete</span> {
+      default_delete() noexcept = default;
+
+      <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;
+<a href="https://www.blogger.com/null" name="l00053"></a>      default_delete(<span class="keyword">default_delete&lt;U&gt; const</span>&amp;) noexcept { }
+
+   <span class="keywordtype">   void</span> operator()(T* p)<span class="keyword"> const</span>
+      {
+         <i><span style="color: #38761d;">// if T is an incomplete type, the program is ill-formed</span></i>
+         static_assert(sizeof(T) &gt; 0,"cannot delete pointer to incomplete type");
+         <span class="keyword">delete</span> p;
+      }
+   };</span>
+<span style="color: purple;">}</span>
+</pre>
+<br />
+<div style="text-align: justify;">
+De ser necesario el uso explícito de punteros, la plantilla <span style="color: blue;">std::unique_ptr&lt;&gt;</span> se considera la opción por defecto para la asignación dinámica de memoria de forma segura ante excepciones. A modo de ejemplo, consideremos el código siguiente:<br />
+<br />
+<pre><span style="color: #783f04;">#include &lt;cassert&gt;
+#include &lt;memory&gt;
+#include &lt;utility&gt;</span>
+
+<span style="color: #073763;">class <span style="color: #660000;">Complex</span> {
+   double re_,
+          im_;
+public:
+   Complex(double const&amp; re = 0.0, double const&amp; im = 0.0) noexcept
+      : re_{re}, im_{im} { }
+
+   double const&amp; real() const noexcept { return re_; } 
+   double&amp;       real()       noexcept { return re_; }
+   double const&amp; imag() const noexcept { return im_; } 
+   double&amp;       imag()       noexcept { return im_; }
+};</span>
+
+<span style="color: #073763;">int main()
+{
+   std::unique_ptr&lt;Complex&gt; u{new Complex{3.0,4.0}}; <i><span style="color: #38761d;">// <b>(1)</b></span></i>
+   Complex c = *u;                    <i><span style="color: #38761d;">// <b>(2)</b></span></i>
+   u-&gt;real() = 2.0;                   <i><span style="color: #38761d;">// <b>(3)</b></span></i>
+   <span style="color: #38761d;"><i>// don't do this: auto v = u;         <b>(4)</b> error</i></span>
+   auto v = std::move(u);             <i><span style="color: #38761d;">// <b>(5)</b></span></i>
+   assert(u == nullptr);              <span style="color: #38761d;"><i>// <b>(6)</b> ok, execution continues</i></span>
+   v-&gt;imag() = 7.0;                   <i><span style="color: #38761d;">// <b>(7)</b></span></i>
+   <i><span style="color: #38761d;">// don't do this: u-&gt;imag() = 1.0;</span></i> <span style="color: #38761d;"><i>   <b>(8)</b> undefined behavior</i></span>
+} <span style="color: #38761d;"><i>// <b>(9)</b></i></span></span>
+
+</pre>
+<br />
+En <span style="color: #38761d;"><b>(1)</b></span> se inicializa una variable automática de tipo <span style="color: blue;">std::unique_ptr&lt;Complex&gt;</span>, que almacena como dato miembro un puntero a un objeto de tipo <span style="color: blue;">Complex</span> (de parte real 3.0 e imaginaria 4.0) almacenado dinámicamente. Las operaciones de observación propias de los punteros ordinarios se encuentran habilitadas para <span style="color: blue;">std::unique_ptr&lt;&gt;</span> gracias a la sobrecarga de operadores. Así, en <span style="color: #38761d;"><b>(2)</b></span>, el operador de indirección (<span style="color: blue;">*</span>) permite acceder al objeto referenciado por <span style="color: blue;">u</span> y realizar una copia del mismo en una nueva variable automática <span style="color: blue;">c</span> de tipo <span style="color: blue;">Complex</span>. En <span style="color: #38761d;"><b>(3)</b></span>, se invoca a la función miembro <span style="color: blue;">real()</span> a través del operador de desreferencia (<span style="color: blue;">-&gt;</span>) para asignar un nuevo valor a la parte real del número complejo referenciado por <span style="color: blue;">u</span>.<br />
+<br />
+Con el fin de dar efecto a la semántica de propiedad exclusiva, <span style="color: blue;">std::unique_ptr&lt;&gt;</span> posee un constructor copia y un operador de asignación copia declarados <span style="color: blue;">delete</span>, por lo que tales operaciones se encuentran deshabilitadas. De ahí que se produzca un error de compilación de intentarse una inicialización como en <span style="color: #38761d;"><b>(4)</b></span>.<br />
+<br />
+<pre><span style="color: purple;">namespace std {</span> 
+   <span style="color: #073763;">template&lt;typename T, class D</span><span style="color: #073763;"><span style="color: #0c343d;"><span style="color: #20124d;"><span style="color: #073763;"> = default_delete&lt;T&gt;</span></span></span>&gt;
+   class <span style="color: #660000;">unique_ptr</span> {
+   public:
+      <i><span style="color: #38761d;">// unique_ptr is neither CopyConstructible nor CopyAssignable:</span></i>
+      unique_ptr(unique_ptr const&amp;) <span style="color: #cc0000;">= delete</span>;
+      unique_ptr&amp; operator=(unique_ptr const&amp;) <span style="color: #cc0000;">= delete</span>;
+      <i><span style="color: #38761d;">// unique_ptr is both MoveConstructible and MoveAssignable:</span></i>
+      unique_ptr(unique_ptr&amp;&amp;) noexcept;
+      unique_ptr&amp; operator=(unique_ptr&amp;&amp;) noexcept;
+      <span style="color: #38761d;"><i>// ...</i></span>
+   };
+<span style="color: purple;">}</span>
+</span></pre>
+<br />
+Sin embargo, la plantilla de clase <span style="color: blue;">std::unique_ptr&lt;&gt;</span> implementa la semántica de movimiento, de modo que la propiedad del objeto referenciado puede ser transferida a un nuevo puntero inteligente <span style="color: blue;">v</span> de tipo <span style="color: blue;">std::unique_ptr&lt;Complex&gt;</span> de manera explícita como en <span style="color: #38761d;"><b>(5)</b></span>, sin más que utilizar la función <span style="color: blue;">std::move()</span> definida en el fichero de cabecera <span style="color: blue;">&lt;utility&gt;</span>. Al hacerlo, el puntero miembro de <span style="color: blue;">u</span> es reseteado a <span style="color: blue;">nullptr</span>, tal y como se comprueba en <span style="color: #38761d;"><b>(6)</b></span>. A partir de <span style="color: #38761d;"><b>(5)</b></span>, pues, el puntero <span style="color: blue;">v</span> es el responsable único del objeto <span style="color: blue;">Complex</span> creado al principio del programa, pudiendo realizar operaciones sobre él como en <b><span style="color: #38761d;">(7)</span></b>. El puntero <span style="color: blue;">u</span>, si bien vacío, sigue disponible para una eventual reasignación. Eso sí, cualquier desreferencia del mismo en dicho estado, como en <span style="color: #38761d;"><b>(8)</b></span>, daría lugar a un comportamiento indefinido de acuerdo con el estándar del lenguaje.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="//4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="148" src="//4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png" width="400"></a></div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+En <b><span style="color: #38761d;">(9)</span></b>, tanto <span style="color: blue;">u</span> como <span style="color: blue;">v</span> salen fuera de ámbito, invocándose automáticamente al operador <span style="color: blue;">delete</span> sobre sus punteros miembro. Esta operación no tiene ningún efecto en <span style="color: blue;">u</span>, al ser su puntero miembro nulo. En el caso de <span style="color: blue;">v</span>, sin embargo, el objeto por él apuntado es destruido y su memoria liberada.<br />
+<br />
+Se recomienda, con el fin de obtener un código seguro y robusto, evitar el uso explícito, no encapsulado, de los operadores <span style="color: blue;">new</span>/<span style="color: blue;">delete</span>. Es por ello que el nuevo estándar del lenguaje, <span style="color: #990000;"><b>C++14</b></span>, proporciona la plantilla de función <span style="color: blue;">std::make_unique&lt;&gt;</span>:<br />
+<br />
+<pre><span style="color: purple;">namespace std {</span>&nbsp;&nbsp; <span style="color: #073763;">
+   template&lt;typename T, typename... Args&gt;
+&nbsp;&nbsp; unique_ptr&lt;T&gt; <span style="color: #660000;">make_unique</span>(Args&amp;&amp;... args)
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return unique_ptr&lt;T&gt;{new T(forward&lt;Args&gt;(args)...)};
+&nbsp;&nbsp; }</span>
+<span style="color: purple;">}</span>
+</pre>
+</div>
+<div style="text-align: justify;">
+<br />
+Ésta crea un objeto <span style="color: blue;">std::unique_ptr&lt;T&gt;</span> para un tipo <span style="color: blue;">T</span> no-matricial, pasando los argumentos <span style="color: blue;">args</span> al constructor de <span style="color: blue;">T</span>. Así, la línea de código <span style="color: #38761d;"><b>(1)</b></span> en el ejemplo anterior puede ser sustituida por la expresión</div>
+</div>
+<br />
+<pre><span style="color: #073763;">auto u = std::make_unique&lt;Complex&gt;(3.0,4.0);</span><span style="color: #38761d;"><i>
+// note: u is of type std::unique_ptr&lt;Complex&gt;</i></span>
+</pre>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+Publicado por
+<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+<meta content='https://plus.google.com/106343395125536258978' itemprop='url'/>
+<a class='g-profile' href='https://plus.google.com/106343395125536258978' rel='author' title='author profile'>
+<span itemprop='name'>Daniel Gómez Vergel</span>
+</a>
+</span>
+</span>
+<span class='post-timestamp'>
+en
+<meta content='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html' itemprop='url'/>
+<a class='timestamp-link' href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html' rel='bookmark' title='permanent link'><abbr class='published' itemprop='datePublished' title='2015-03-01T17:00:00+01:00'>domingo, marzo 01, 2015</abbr></a>
+</span>
+<span class='reaction-buttons'>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-backlinks post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-control blog-admin pid-1829783769'>
+<a href='https://www.blogger.com/post-edit.g?blogID=4453229641717490708&postID=7671729029488251315&from=pencil' title='Editar entrada'>
+<img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+<a class='goog-inline-block share-button sb-email' href='https://www.blogger.com/share-post.g?blogID=4453229641717490708&postID=7671729029488251315&target=email' target='_blank' title='Enviar por correo electrónico'><span class='share-button-link-text'>Enviar por correo electrónico</span></a><a class='goog-inline-block share-button sb-blog' href='https://www.blogger.com/share-post.g?blogID=4453229641717490708&postID=7671729029488251315&target=blog' onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target='_blank' title='Escribe un blog'><span class='share-button-link-text'>Escribe un blog</span></a><a class='goog-inline-block share-button sb-twitter' href='https://www.blogger.com/share-post.g?blogID=4453229641717490708&postID=7671729029488251315&target=twitter' target='_blank' title='Compartir con Twitter'><span class='share-button-link-text'>Compartir con Twitter</span></a><a class='goog-inline-block share-button sb-facebook' href='https://www.blogger.com/share-post.g?blogID=4453229641717490708&postID=7671729029488251315&target=facebook' onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target='_blank' title='Compartir con Facebook'><span class='share-button-link-text'>Compartir con Facebook</span></a><a class='goog-inline-block share-button sb-pinterest' href='https://www.blogger.com/share-post.g?blogID=4453229641717490708&postID=7671729029488251315&target=pinterest' target='_blank' title='Compartir en Pinterest'><span class='share-button-link-text'>Compartir en Pinterest</span></a><div class='goog-inline-block google-plus-share-container'><g:plusone source='blogger:blog:plusone' href='http://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html' size='medium' width='300' annotation='inline'/></div>
+</div>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'>
+<span class='post-location'>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>No hay comentarios:</h4>
+<div id='Blog1_comments-block-wrapper'>
+<dl class='avatar-comment-indent' id='comments-block'>
+</dl>
+</div>
+<p class='comment-footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<h4 id='comment-post-message'>Publicar un comentario</h4>
+<p>
+</p>
+<a href='https://www.blogger.com/comment-iframe.g?blogID=4453229641717490708&postID=7671729029488251315' id='comment-editor-src'></a>
+<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script src='https://www.blogger.com/static/v1/jsbin/2567313873-comment_from_post_iframe.js' type='text/javascript'></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+</p>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-iii.html' id='Blog1_blog-pager-newer-link' title='Entrada más reciente'>Entrada más reciente</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='https://dgvergel.blogspot.com/2015/02/punteros-inteligentes-i.html' id='Blog1_blog-pager-older-link' title='Entrada antigua'>Entrada antigua</a>
+</span>
+<a class='home-link' href='https://dgvergel.blogspot.com/'>Página principal</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+<div class='feed-links'>
+Suscribirse a:
+<a class='feed-link' href='https://dgvergel.blogspot.com/feeds/7671729029488251315/comments/default' target='_blank' type='application/atom+xml'>Enviar comentarios (Atom)</a>
+</div>
+</div>
+<script type='text/javascript'>
+    window.___gcfg = { 'lang': 'es' };
+  </script>
+</div></div>
+</div>
+</div>
+<div class='column-left-outer'>
+<div class='column-left-inner'>
+<aside>
+</aside>
+</div>
+</div>
+<div class='column-right-outer'>
+<div class='column-right-inner'>
+<aside>
+<div class='sidebar section' id='sidebar-right-1'><div class='widget Text' data-version='1' id='Text1'>
+<h2 class='title'>Acerca del blog</h2>
+<div class='widget-content'>
+Este blog está especialmente dirigido a estudiantes y profesores de Ciencias de la Computación interesados en la gestión eficiente de los recursos de sus sistemas mediante técnicas modernas de programación en el lenguaje C++.<br />
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=Text&widgetId=Text1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("Text1"));' target='configText1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BlogSearch' data-version='1' id='BlogSearch1'>
+<h2 class='title'>Buscar en el blog</h2>
+<div class='widget-content'>
+<div id='BlogSearch1_form'>
+<form action='https://dgvergel.blogspot.com/search' class='gsc-search-box' target='_top'>
+<table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+<tbody>
+<tr>
+<td class='gsc-input'>
+<input autocomplete='off' class='gsc-input' name='q' size='10' title='search' type='text' value=''/>
+</td>
+<td class='gsc-search-button'>
+<input class='gsc-search-button' title='search' type='submit' value='Buscar'/>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=BlogSearch&widgetId=BlogSearch1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogSearch1"));' target='configBlogSearch1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BlogArchive' data-version='1' id='BlogArchive1'>
+<h2>Artículos publicados</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/'>
+2016
+</a>
+<span class='post-count' dir='ltr'>(15)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/11/'>
+noviembre
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/10/'>
+octubre
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/07/'>
+julio
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/05/'>
+mayo
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2016/04/'>
+abril
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/'>
+2015
+</a>
+<span class='post-count' dir='ltr'>(37)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/07/'>
+julio
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/06/'>
+junio
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/05/'>
+mayo
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/04/'>
+abril
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/03/'>
+marzo
+</a>
+<span class='post-count' dir='ltr'>(3)</span>
+<ul class='posts'>
+<li><a href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-iv.html'>Punteros inteligentes (IV)</a></li>
+<li><a href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-iii.html'>Punteros inteligentes (III)</a></li>
+<li><a href='https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html'>Punteros inteligentes (II)</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/02/'>
+febrero
+</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://dgvergel.blogspot.com/2015/01/'>
+enero
+</a>
+<span class='post-count' dir='ltr'>(20)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget FeaturedPost' data-version='1' id='FeaturedPost1'>
+<h2 class='title'>Entrada destacada</h2>
+<div class='post-summary'>
+<h3><a href='https://dgvergel.blogspot.com/2015/01/semanticas-de-copia-y-movimiento-i_18.html'>Semánticas de copia y movimiento (I)</a></h3>
+<img class='image' src='https://2.bp.blogspot.com/-FLEluzFabno/VLrg2oDRRFI/AAAAAAAAADE/dLagXwe0t9k/s1600/rref.jpg'/>
+</div>
+<style type='text/css'>
+    .image {
+      width: 100%;
+    }
+  </style>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=FeaturedPost&widgetId=FeaturedPost1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("FeaturedPost1"));' target='configFeaturedPost1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Profile' data-version='1' id='Profile1'>
+<h2>Sobre el autor</h2>
+<div class='widget-content'>
+<a href='https://plus.google.com/106343395125536258978'><img alt='Mi foto' class='profile-img' height='80' src='//lh6.googleusercontent.com/-AGcF-JMM79M/AAAAAAAAAAI/AAAAAAAAAIQ/owgK_cG5Ea4/s80-c/photo.jpg' width='80'/></a>
+<dl class='profile-datablock'>
+<dt class='profile-data'>
+<a class='profile-name-link g-profile' href='https://plus.google.com/106343395125536258978' rel='author' style='background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);'>
+Daniel Gómez Vergel
+</a>
+<br/>
+<div class='g-follow' data-annotation='bubble' data-height='20' data-href='https://plus.google.com/106343395125536258978'></div>
+</dt>
+<dd class='profile-textblock'><div><div>
+	<div>
+		
+			
+				
+			
+		
+	</div><br>Soy Licenciado en Física por la Universidad de Sevilla (2005) y 
+Doctor en Física Teórica por la Universidad Complutense de Madrid 
+(2009).<br><br>Mi interés por distintas ramas de la Física me ha permitido ocupar 
+puestos de investigación en áreas de muy diversa naturaleza (Física 
+atómica, caracterización de materiales, gravedad cuántica) en centros de
+ reconocido prestigio durante los últimos diez años, colaborando con 
+equipos experimentales y teóricos tanto en España (Centro Nacional de 
+Aceleradores y Centro Superior de Investigaciones Científicas, entre 
+otros) como en el extranjero (Universidad de Utrecht y Universidad 
+Técnica de Lisboa).
+
+</div></div><p>Y ello con la labor docente como referente permanente, pues la he 
+considerado siempre como la mejor forma, en base a mis aptitudes, de 
+contribuir a la mejora de la sociedad y a la mejor formación de nuestros
+ profesionales.</p>
+
+<p>En la actualidad, formo parte del equipo docente del <i>Departamento de Ciencias y Tecnología </i>de la <i>Universidad Europea</i>
+ (Madrid) e imparto clases magistrales de asignaturas de Física, 
+Matemáticas y Programación enfocadas a diversos Grados académicos.</p></dd>
+</dl>
+<a class='profile-link' href='https://plus.google.com/106343395125536258978' rel='author'>Ver todo mi perfil</a>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target='configProfile1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class='sidebar no-items section' id='sidebar-right-3'></div>
+</aside>
+</div>
+</div>
+</div>
+<div style='clear: both'></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class='main-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<footer>
+<div class='footer-outer'>
+<div class='footer-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left footer-fauxborder-left'>
+<div class='fauxborder-right footer-fauxborder-right'></div>
+<div class='region-inner footer-inner'>
+<div class='foot no-items section' id='footer-1'></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='foot no-items section' id='footer-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='foot no-items section' id='footer-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class='foot section' id='footer-3' name='Pie de página'><div class='widget Attribution' data-version='1' id='Attribution1'>
+<div class='widget-content' style='text-align: center;'>
+Todos los derechos reservados - Daniel Gómez Vergel - 2015-2016. Tema Sencillo. Con la tecnología de <a href='https://www.blogger.com' target='_blank'>Blogger</a>.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=4453229641717490708&widgetType=Attribution&widgetId=Attribution1&action=editWidget&sectionId=footer-3' onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target='configAttribution1' title='Editar'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+</div>
+</div>
+<div class='footer-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</footer>
+<!-- content -->
+</div>
+</div>
+<div class='content-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
+<script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2647409398-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY4GVBAth0YOzoJABoDKqCwMVPaTmQ:1535469090648';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d4453229641717490708','//dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html','4453229641717490708');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '4453229641717490708', 'title': 'C++ -\x26gt; Fundamentos de Programación', 'url': 'https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html', 'canonicalUrl': 'https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html', 'homepageUrl': 'https://dgvergel.blogspot.com/', 'searchUrl': 'https://dgvergel.blogspot.com/search', 'canonicalHomepageUrl': 'https://dgvergel.blogspot.com/', 'blogspotFaviconUrl': 'https://dgvergel.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'es', 'localeUnderscoreDelimited': 'es', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22C++ -\x26gt; Fundamentos de Programación - Atom\x22 href\x3d\x22https://dgvergel.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22C++ -\x26gt; Fundamentos de Programación - RSS\x22 href\x3d\x22https://dgvergel.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22C++ -\x26gt; Fundamentos de Programación - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/4453229641717490708/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22C++ -\x26gt; Fundamentos de Programación - Atom\x22 href\x3d\x22https://dgvergel.blogspot.com/feeds/7671729029488251315/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'ieCssRetrofitLinks': '\x3c!--[if IE]\x3e\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22https://www.blogger.com/static/v1/jsbin/3762807459-ieretrofit.js\x22\x3e\x3c/script\x3e\n\x3c![endif]--\x3e', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/52ecc25e7baf0105', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Obtener enlace', 'key': 'link', 'shareMessage': 'Obtener enlace', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Compartir en Facebook', 'target': 'facebook'}, {'name': 'Escribe un blog', 'key': 'blogThis', 'shareMessage': 'Escribe un blog', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Compartir en Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Compartir en Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Compartir en Google+', 'target': 'googleplus'}, {'name': 'Correo electrónico', 'key': 'email', 'shareMessage': 'Correo electrónico', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27es\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Leer más', 'pageType': 'item', 'postId': '7671729029488251315', 'postImageThumbnailUrl': 'http://4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s72-c/unique_ptr.png', 'postImageUrl': 'http://4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png', 'pageName': 'Punteros inteligentes (II)', 'pageTitle': 'C++ -\x26gt; Fundamentos de Programación: Punteros inteligentes (II)'}}, {'name': 'features', 'data': {'cmt_anon_warn': 'false', 'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Editar', 'linkCopiedToClipboard': 'El enlace se ha copiado en el Portapapeles.', 'ok': 'Aceptar', 'postLink': 'Enlace de la entrada'}}, {'name': 'template', 'data': {'name': 'Simple', 'localizedName': 'Sencillo', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': false, 'variant': 'simplysimple', 'variantId': 'simplysimple'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Punteros inteligentes (II)', 'description': 'Semántica de propiedad exclusiva (primera parte)    La plantilla de clase std::unique_ptr\x3c\x3e  implementa una semántica de propiedad exclusiva...', 'featuredImage': '//4.bp.blogspot.com/-cXz4FPXDick/VPyMlzJJvsI/AAAAAAAAAJU/UeJIQlT69gg/s1600/unique_ptr.png', 'url': 'https://dgvergel.blogspot.com/2015/03/punteros-inteligentes-ii.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 7671729029488251315}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image1', 'crosscol', null, document.getElementById('Image1'), {'resize': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'useNgc': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/692226768-lbx__es.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_TextView', new _WidgetInfo('Text1', 'sidebar-right-1', null, document.getElementById('Text1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'sidebar-right-1', null, document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-right-1', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Cargando\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeaturedPostView', new _WidgetInfo('FeaturedPost1', 'sidebar-right-1', null, document.getElementById('FeaturedPost1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar-right-1', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer-3', null, document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>

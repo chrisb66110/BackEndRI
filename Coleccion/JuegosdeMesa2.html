@@ -1,0 +1,717 @@
+<!DOCTYPE html><html data-app-version="e935dd0bd3268d05042cf12f13acb1ab42d5b421-production"><head><link rel="stylesheet" media="all" href="https://static.tutsplus.com/assets/application-afeaf20d094a271eb74a7f29c196a265.css" /><link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" /><meta charset="utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"27851e2035","applicationID":"3094824","transactionName":"JQpZTURXXlRcRBYSXhURRBZFUF1P","queueTime":0,"applicationTime":157,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><title>Cómo aprender diseño y desarrollo de juegos de mesa</title><link rel="canonical" href="https://gamedevelopment.tutsplus.com/es/articles/how-to-learn-board-game-design-and-development--gamedev-11607" /><link rel="shortcut icon" type="image/png" href="https://static.tutsplus.com/assets/favicon-9e8b377989d9949ad1003dc5298cd8ef.png" /><link rel="apple-touch-icon" type="image/png" href="https://static.tutsplus.com/assets/apple-touch-icon-edce48c2c1293474a34fa8f1c87b5685.png" /><script>window.Tutsplus = {};
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+Tutsplus.environment = 'production';
+Tutsplus.recaptchaSiteKey = '6Lc_OAETAAAAABHaGkjvRfbPQizlpILv2YzeqTil';
+Tutsplus.rollbarToken = '5b20f5bdb8ae402fb5bcfd50cc7f04a3';
+Tutsplus.rollbarEnabled = true;
+Tutsplus.ssoEnabled = true;
+Tutsplus.ssoServer = 'https://account.envato.com';
+Tutsplus.ssoSignInPath = '/sso/sign_in.json';
+Tutsplus.resetPasswordPath = 'https://account.envato.com/reset_password?to=tutsplus';
+Tutsplus.forcedResetPasswordPath = 'https://account.envato.com/password_reset_required?to=tutsplus';
+Tutsplus.fuseTagsEnabled = true;</script><link href="https://public-assets.envato-static.com/css/cookiebot.css" media="all" rel="stylesheet" type="text/css" /><script async="async" data-cbid="4a6af4ea-f614-41d8-b0a9-8bb6d7fe4799" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" type="text/javascript"></script><!--[if lte IE 8]><link rel="stylesheet" media="screen" href="https://static.tutsplus.com/assets/ie8-9850b7f919e1b2b2d9d1a412d95bd6e3.css" /><script src="https://static.tutsplus.com/assets/modernizr.custom-980d665eeab47b43d57b6ce2c3e57284.js"></script><![endif]--><script async="async" src="//cdn.publift.com/fuse/tag/2/1007/fuse.js"></script><script async="async" src="https://www.google-analytics.com/analytics.js"></script><script src="https://static.tutsplus.com/assets/application-17817ed984426ecfed0b22bba2cb25aa.js"></script><link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="https://tutsplus.com/posts.atom" /><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="KVPM7r6eSYBMGqRFG5vEqWTmi5uKBGFGBX296cYIsA30hKRBQerFXkPtJPjXIX+Eilmasq/PuUKGPVLePtLYDA==" /><meta content="initial-scale=1" name="viewport" /><meta content="index, follow" name="robots" /><meta content="Cómo aprender diseño y desarrollo de juegos de mesa" property="og:title" /><meta content="Game Development Envato Tuts+" property="og:site_name" /><meta content="1494084460809023" property="fb:app_id" /><meta content="
+Durante la última década, los juegos de mesa han ganado mayor protagonismo en la industria del juego. Con
+ la creciente popularidad de los juegos de mesa estilo Euro, como 
+Settlers of Catan, y..." name="description" property="og:description" /><meta content="article" property="og:type" /><meta content="https://gamedevelopment.tutsplus.com/es/articles/how-to-learn-board-game-design-and-development--gamedev-11607" property="og:url" /><meta content="true" property="native:billable" /><meta content="7403" property="native:length" /><meta content="long" property="native:priority" /><link href="https://gamedevelopment.tutsplus.com/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="en" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/ar/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="ar" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/es/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="es" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/id/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="id" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/it/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="it" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/pt/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="pt" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/ru/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="ru" rel="alternate" /><link href="https://gamedevelopment.tutsplus.com/uk/articles/how-to-learn-board-game-design-and-development--gamedev-11607" hreflang="uk" rel="alternate" /><meta content="https://cms-assets.tutsplus.com/uploads/users/30/posts/17822/preview_image/Preview400.jpg" property="og:image" /><meta content="summary_large_image" name="twitter:card" /><meta content="@tutsplus" name="twitter:site" /><meta content="Cómo aprender diseño y desarrollo de juegos de mesa" name="twitter:title" /><meta content="
+Durante la última década, los juegos de mesa han ganado mayor protagonismo en la industria del juego. Con
+ la creciente popularidad de los juegos de mesa estilo Euro, como 
+Settlers of Catan, y..." name="twitter:description" /><meta content="https://cms-assets.tutsplus.com/uploads/users/30/posts/17822/preview_image/Preview400.jpg" name="twitter:image" /><meta content="t60fIs6JfmiK5FpPBlh_bKr5lJSX6abJYYIFjqiFG3M" name="google-site-verification" /><meta content="D3E35339A8EC086B14C62277CBEC8234" name="msvalidate.01" /><meta content="zvqxFgQqdy" name="baidu-site-verification" /><script src="https://static.tutsplus.com/assets/body-69afa38c9db3e5cdecd6206edffd4e8a.js" async="async"></script><link href="//www.google-analytics.com" rel="dns-prefetch" /><link href="//fonts.gstatic.com" rel="dns-prefetch" /><link href="//js-agent.newrelic.com" rel="dns-prefetch" /></head><body class="page-body topic-gamedevelopment" data-ga-account="UA-11792865-37" data-ga-autolink-domains="activeden.net,audiojungle.net,themeforest.net,videohive.net,graphicriver.net,3docean.net,codecanyon.net,photodune.net,market.envato.com,market.styleguide.envato.com,elements.envato.com,build.envatohostedservices.com,author.envato.com,tutsplus.com,envato.com,business.tutsplus.com,design.tutsplus.com,code.tutsplus.com,webdesign.tutsplus.com,photography.tutsplus.com,music.tutsplus.com,cgi.tutsplus.com,gamedevelopment.tutsplus.com,computers.tutsplus.com,crafts.tutsplus.com" data-ga-domain="tutsplus.com" data-wt-dcsid="dcs222cpd4g6lg7wb3cum8l5g_6w6m"><div class="announcement-bar view" data-announcement-id="header_promo_mar19" data-background-image="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/15/topics/8/announcement_background_image/new-elements-bg.png" data-fallback-background-color="#273ab2" data-link-color="#2d2d2d" data-text-color="#ffffff"><div class="announcement-bar__content"><div class="announcement-bar__primary"><div class="announcement-bar__title"><div align="center">
+    <span class="announcement-bar__title-desktop">
+        <strong>Unlimited </strong>
+         WordPress themes, graphics, videos & courses!
+    </span>
+    <span class="announcement-bar__title-mobile">
+        <strong>Unlimited asset downloads!</strong>
+    </span>
+
+    <a rel="noskim" href="https://elements.envato.com/pricing?utm_source=tutsplus.com&utm_medium=promos&utm_campaign=elements_tuts-header_marc2019">From $16.50/m</a>
+</div>
+
+<style>
+
+    .announcement-bar__title a {
+        border-radius:4px;
+        background-color:#FC9F97;
+        padding:0px 20px;
+        box-shadow:0px 0px 0px #FC9F97;
+        margin:10px 10px 10px 10px;
+        font-size:12px;
+        letter-spacing:0.07em;
+        height:30px;
+        line-height:30px;
+        text-decoration:none;
+        color:#2d2d2d;
+    }
+
+    .announcement-bar__title a:hover {
+        background-color: #ffd3d0;
+        text-decoration:none;
+    }
+
+</style>
+</div></div><div class="announcement-bar__secondary"><a title="Close this announcement bar" class="announcement-bar__close-link" href="javascript:"><span class="announcement-bar__close-label">Dismiss</span><i class="fa fa-times announcement-bar__close-icon"></i></a></div></div></div><!--[if lt IE 10]><div class="legacy-ie-banner"><h2 class="legacy-ie-banner__title">Unsupported browser</h2><p class="legacy-ie-banner__text">This site was designed for modern browsers and tested with Internet Explorer version 10 and later. </p><p class="legacy-ie-banner__text">It may not look or work correctly on your browser. </p></div><![endif]--><nav class="global-nav view"><div class="global-nav__mobile-overlay"></div><div class="global-nav__mobile"><section class="global-nav__mobile-search global-search view"><form class="global-nav__search-form" action="https://gamedevelopment.tutsplus.com/tutorials/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><input type="text" name="search[terms]" id="search_terms" value="" placeholder="Search Envato Tuts+" class="global-nav__mobile-search-terms" /><button name="button" type="submit" class="global-nav__mobile-search-button"><i class="fa fa-search"></i></button></form></section><div class="global-nav__mobile-user-links"><a class="global-nav__mobile-user-link" href="https://tutsplus.com/subscribe-with-elements">Subscribe</a><a class="global-nav__mobile-user-link" href="https://tutsplus.com/sign_in?redirect_to=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607">Sign In</a></div><ul class="global-nav__mobile-top-level"><li class="global-nav__mobile-top-level-item global-nav__mobile-top-level-item--expanded"><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-link-expandable" href="https://tutsplus.com/tutorials"><span class="global-nav__mobile-top-level-link-title">How-To Tutorials</span></a><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-expansion-link" href="#"><span class="global-nav__mobile-top-level-expand-text"><i class="fa fa-plus global-nav__mobile-top-level-link-icon"></i></span><span class="global-nav__mobile-top-level-collapse-text"><i class="fa fa-minus global-nav__mobile-top-level-link-icon"></i></span></a><ul class="global-nav__mobile-second-level"><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-design" href="https://design.tutsplus.com/tutorials">Design &amp; Illustration</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-code" href="https://code.tutsplus.com/tutorials">Code</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-webdesign" href="https://webdesign.tutsplus.com/tutorials">Web Design</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-photography" href="https://photography.tutsplus.com/tutorials">Photo &amp; Video</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-business" href="https://business.tutsplus.com/tutorials">Business</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-music" href="https://music.tutsplus.com/tutorials">Music &amp; Audio</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-cgi" href="https://cgi.tutsplus.com/tutorials">3D &amp; Motion Graphics</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-gamedevelopment" href="https://gamedevelopment.tutsplus.com/tutorials">Game Development</a></li><li class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-computers" href="https://computers.tutsplus.com/tutorials">Computer Skills</a></li></ul></li><li class="global-nav__mobile-top-level-item"><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-link-expandable" href="https://tutsplus.com/courses"><span class="global-nav__mobile-top-level-link-title">Courses</span></a><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-expansion-link" href="#"><span class="global-nav__mobile-top-level-expand-text"><i class="fa fa-plus global-nav__mobile-top-level-link-icon"></i></span><span class="global-nav__mobile-top-level-collapse-text"><i class="fa fa-minus global-nav__mobile-top-level-link-icon"></i></span></a><div class="global-nav__mobile-second-level"><div class="global-nav__mobile-second-level-item"></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-design" href="https://design.tutsplus.com/courses">Design &amp; Illustration</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-code" href="https://code.tutsplus.com/courses">Code</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-webdesign" href="https://webdesign.tutsplus.com/courses">Web Design</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-photography" href="https://photography.tutsplus.com/courses">Photo &amp; Video</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-business" href="https://business.tutsplus.com/courses">Business</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-music" href="https://music.tutsplus.com/courses">Music &amp; Audio</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-cgi" href="https://cgi.tutsplus.com/courses">3D &amp; Motion Graphics</a></div></div></li><li class="global-nav__mobile-top-level-item"><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-link-expandable" href="https://tutsplus.com/ebooks"><span class="global-nav__mobile-top-level-link-title">eBooks</span></a><a class="global-nav__mobile-top-level-link global-nav__mobile-top-level-expansion-link" href="#"><span class="global-nav__mobile-top-level-expand-text"><i class="fa fa-plus global-nav__mobile-top-level-link-icon"></i></span><span class="global-nav__mobile-top-level-collapse-text"><i class="fa fa-minus global-nav__mobile-top-level-link-icon"></i></span></a><div class="global-nav__mobile-second-level"><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-design" href="https://design.tutsplus.com/ebooks">Design &amp; Illustration</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-code" href="https://code.tutsplus.com/ebooks">Code</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-webdesign" href="https://webdesign.tutsplus.com/ebooks">Web Design</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-photography" href="https://photography.tutsplus.com/ebooks">Photo &amp; Video</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-business" href="https://business.tutsplus.com/ebooks">Business</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-music" href="https://music.tutsplus.com/ebooks">Music &amp; Audio</a></div><div class="global-nav__mobile-second-level-item"><a class="global-nav__mobile-second-level-topic-link topic-cgi" href="https://cgi.tutsplus.com/ebooks">3D &amp; Motion Graphics</a></div></div></li><li class="global-nav__mobile-top-level-item"><a class="global-nav__mobile-top-level-link" href="https://tutsplus.com/subscribe-with-elements">Pricing</a></li></ul><ul class="global-nav-mobile__envato-links"><li class="global-nav__mobile-top-level-item"><a class="global-mobile__header-item--envato-link" href="https://elements.envato.com">Envato Elements</a></li><li class="global-nav__mobile-top-level-item"><a class="global-mobile__header-item--envato-link" href="https://studio.envato.com">Envato Studio</a></li><li class="global-nav__mobile-top-level-item"><a class="global-mobile__header-item--envato-link" href="http://community.envato.com">Community</a></li><li class="global-nav__mobile-top-level-item"><a class="global-mobile__header-item--envato-link" href="https://help.elements.envato.com">Help</a></li></ul></div><div class="global-nav__header"><div class="global-nav__header-content"><div class="global-nav__header-top"><a class="global-nav__header-tuts-logo-link" href="https://tutsplus.com/"><img alt="envato-tuts+" class="global-nav__header-tuts-logo-image" src="https://static.tutsplus.com/assets/tuts_logo-cf1e6fd0e5ca6cc573eb3cd0c94e16d7.svg" /></a><div class="global-nav__header-right"><ul class="global-nav__header-list"><li class="global-nav__header-item"><a class="global-nav__header-item--envato-link" href="https://elements.envato.com?utm_campaign=elements_tuts-header_nav&amp;utm_medium=promos&amp;utm_source=tutsplus">Envato Elements</a></li><li class="global-nav__header-item"><a class="global-nav__header-item--envato-link" href="https://studio.envato.com?utm_campaign=elements_tuts-header_nav&amp;utm_medium=promos&amp;utm_source=tutsplus">Envato Studio</a></li><li class="global-nav__header-item"><a class="global-nav__header-item--envato-link" href="http://community.envato.com?utm_campaign=elements_tuts-header_nav&amp;utm_medium=promos&amp;utm_source=tutsplus">Community</a></li><li class="global-nav__header-item"><a class="global-nav__header-item--envato-link" href="https://forums.envato.com/c/project-making/envato-courses-and-tutorials?utm_campaign=elements_tuts-header_nav&amp;utm_medium=promos&amp;utm_source=tutsplus">Forum</a></li><li class="global-nav__header-item"><a class="global-nav__header-item--envato-link" href="https://help.elements.envato.com">Help</a></li></ul><ul class="global-nav__header-buttons"><li class="global-nav__header-item"><a class="global-nav__header-item--internal-link global-nav__header-item--free-account-button" href="https://tutsplus.com/subscribe-with-elements">Subscribe</a></li><li class="global-nav__header-item"><a class="global-nav__header-item--sign-in-button global-nav__header-item--internal-link" rel="nofollow" href="https://tutsplus.com/sign_in?redirect_to=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607">Sign In</a></li></ul></div></div><div class="global-nav__header-bottom"><ul class="global-nav__header-list"><li class="global-nav__header-item"><nav class="topics-menu view" data-toggle=".topics-menu__dropdown-toggle"><a class="topics-menu__dropdown-toggle global-nav__header-link global-nav__header-link--primary global-nav__header-link--active" href="https://tutsplus.com/tutorials">How-To Tutorials<i class="fa fa-chevron-down"></i></a><ul class="topics-menu__topics"><li class="topics-menu__topic topic-design" data-slug="design"><a class="topics-menu__topic-link topic-design" href="http://design.tutsplus.com/es/tutorials">Design &amp; Illustration<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-design"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/adobe-photoshop">Adobe Photoshop</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/adobe-illustrator">Adobe Illustrator</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/drawing">Drawing</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/adobe-indesign">Adobe InDesign</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/photo-manipulation">Photo Manipulation</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/graphic-design">Graphic Design</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/text-effects">Text Effects</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/vector">Vector</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/photoshop-actions">Photoshop Actions</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-design hello" href="https://design.tutsplus.com/es/categories/icon-design">Icon Design</a></li></ul><a class="topics-menu__more-categories-link topic-design" href="https://design.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-design" href="https://design.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-code" data-slug="code"><a class="topics-menu__topic-link topic-code" href="http://code.tutsplus.com/es/tutorials">Code<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-code"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/javascript">JavaScript</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/wordpress">WordPress</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/mobile-development">Mobile Development</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/php">PHP</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/laravel">Laravel</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/cms">CMS</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/swift">Swift</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/android-sdk">Android SDK</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/react">React</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-code hello" href="https://code.tutsplus.com/es/categories/angular-2">Angular 2+</a></li></ul><a class="topics-menu__more-categories-link topic-code" href="https://code.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-code" href="https://code.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-webdesign" data-slug="webdesign"><a class="topics-menu__topic-link topic-webdesign" href="http://webdesign.tutsplus.com/es/tutorials">Web Design<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-webdesign"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/css">CSS</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/html-css">HTML &amp; CSS</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/animation">Animation</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/ui-design">UI Design</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/adobe-photoshop">Adobe Photoshop</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/sketch">Sketch</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/workflow">Workflow</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/design-theory">Design Theory</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/javascript">JavaScript</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-webdesign hello" href="https://webdesign.tutsplus.com/es/categories/ux">UX</a></li></ul><a class="topics-menu__more-categories-link topic-webdesign" href="https://webdesign.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-webdesign" href="https://webdesign.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-photography" data-slug="photography"><a class="topics-menu__topic-link topic-photography" href="http://photography.tutsplus.com/es/tutorials">Photo &amp; Video<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-photography"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/photography">Photography</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/video">Video</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/editing">Editing</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/how-to">How-To</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/inspiration">Inspiration</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/lighting">Lighting</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/adobe-photoshop">Adobe Photoshop</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/adobe-after-effects">Adobe After Effects</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/adobe-premiere-pro">Adobe Premiere Pro</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-photography hello" href="https://photography.tutsplus.com/es/categories/adobe-lightroom">Adobe Lightroom</a></li></ul><a class="topics-menu__more-categories-link topic-photography" href="https://photography.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-photography" href="https://photography.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-business" data-slug="business"><a class="topics-menu__topic-link topic-business" href="http://business.tutsplus.com/es/tutorials">Business<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-business"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/small-business">Small Business</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/entrepreneurship">Entrepreneurship</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/freelance">Freelance</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/careers">Careers</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/marketing">Marketing</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/finance">Finance</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/productivity">Productivity</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/planning">Planning</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/communication">Communication</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-business hello" href="https://business.tutsplus.com/es/categories/how-to">How-To</a></li></ul><a class="topics-menu__more-categories-link topic-business" href="https://business.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-business" href="https://business.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-music" data-slug="music"><a class="topics-menu__topic-link topic-music" href="http://music.tutsplus.com/es/tutorials">Music &amp; Audio<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-music"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/audio-production">Audio Production</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/logic-pro">Logic Pro</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/general">General</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/mixing-mastering">Mixing &amp; Mastering</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/sound-design">Sound Design</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/workshops">Workshops</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/reason">Reason</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/recording">Recording</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/ableton-live">Ableton Live</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-music hello" href="https://music.tutsplus.com/es/categories/cubase">Cubase</a></li></ul><a class="topics-menu__more-categories-link topic-music" href="https://music.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-music" href="https://music.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-cgi" data-slug="cgi"><a class="topics-menu__topic-link topic-cgi" href="http://cgi.tutsplus.com/es/tutorials">3D &amp; Motion Graphics<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-cgi"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/adobe-after-effects">Adobe After Effects</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/3d">3D</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/3d-studio-max">3D Studio Max</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/motion-graphics">Motion Graphics</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/maya">Maya</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/cinema-4d">Cinema 4D</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/workflow">Workflow</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/blender">Blender</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/visual-effects">Visual Effects</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-cgi hello" href="https://cgi.tutsplus.com/es/categories/roundups">Roundups</a></li></ul><a class="topics-menu__more-categories-link topic-cgi" href="https://cgi.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-cgi" href="https://cgi.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-gamedevelopment" data-slug="gamedevelopment"><a class="topics-menu__topic-link topic-gamedevelopment" href="http://gamedevelopment.tutsplus.com/es/tutorials">Game Development<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-gamedevelopment"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/game-design">Game Design</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/platform-agnostic">Platform Agnostic</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/game-mechanics">Game Mechanics</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/business">Business</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/programming">Programming</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/game-art">Game Art</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/level-design">Level Design</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/from-scratch">From Scratch</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/unity">Unity</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-gamedevelopment hello" href="https://gamedevelopment.tutsplus.com/es/categories/html5">HTML5</a></li></ul><a class="topics-menu__more-categories-link topic-gamedevelopment" href="https://gamedevelopment.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-gamedevelopment" href="https://gamedevelopment.tutsplus.com/series">Learning Guides</a></div></li><li class="topics-menu__topic topic-computers" data-slug="computers"><a class="topics-menu__topic-link topic-computers" href="http://computers.tutsplus.com/es/tutorials">Computer Skills<i class="fa fa-chevron-right topics-menu__topic-link-chevron"></i></a><div class="topics-menu__topic-submenu topic-computers"><ul class="topics-menu__featured-categories"><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/os-x">OS X</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/app-training">App Training</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/productivity">Productivity</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/how-to">How-To</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/tips-shortcuts">Tips &amp; Shortcuts</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/customization">Customization</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/automation">Automation</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/security">Security</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/hardware">Hardware</a></li><li class="topics-menu__featured-category"><a class="topics-menu__featured-category-link topic-computers hello" href="https://computers.tutsplus.com/es/categories/microsoft-powerpoint">Microsoft Powerpoint</a></li></ul><a class="topics-menu__more-categories-link topic-computers" href="https://computers.tutsplus.com/categories">More Categories...</a><a class="topics-menu__submenu-footer-link topic-computers" href="https://computers.tutsplus.com/series">Learning Guides</a></div></li></ul></nav></li><li class="global-nav__header-item"><nav class="courses-menu view" data-toggle=".courses-menu__dropdown-toggle"><a class="courses-menu__dropdown-toggle global-nav__header-link global-nav__header-link--primary " href="https://tutsplus.com/courses">Courses<i class="fa fa-chevron-down"></i></a><ul class="courses-menu__topics"><li class="courses-menu__topic topic-design" data-slug="design"><a class="courses-menu__topic-link topic-design" href="https://design.tutsplus.com/courses">Design &amp; Illustration</a></li><li class="courses-menu__topic topic-code" data-slug="code"><a class="courses-menu__topic-link topic-code" href="https://code.tutsplus.com/courses">Code</a></li><li class="courses-menu__topic topic-webdesign" data-slug="webdesign"><a class="courses-menu__topic-link topic-webdesign" href="https://webdesign.tutsplus.com/courses">Web Design</a></li><li class="courses-menu__topic topic-photography" data-slug="photography"><a class="courses-menu__topic-link topic-photography" href="https://photography.tutsplus.com/courses">Photo &amp; Video</a></li><li class="courses-menu__topic topic-business" data-slug="business"><a class="courses-menu__topic-link topic-business" href="https://business.tutsplus.com/courses">Business</a></li><li class="courses-menu__topic topic-music" data-slug="music"><a class="courses-menu__topic-link topic-music" href="https://music.tutsplus.com/courses">Music &amp; Audio</a></li><li class="courses-menu__topic topic-cgi" data-slug="cgi"><a class="courses-menu__topic-link topic-cgi" href="https://cgi.tutsplus.com/courses">3D &amp; Motion Graphics</a></li><li class="courses-menu__separator"></li><a class="courses-menu__topic-link courses-menu__upcoming-link" href="https://tutsplus.com/courses/upcoming">Coming Soon</a></ul></nav></li><li class="global-nav__header-item"><nav class="ebooks-menu view" data-toggle=".ebooks-menu__dropdown-toggle"><a class="ebooks-menu__dropdown-toggle global-nav__header-link global-nav__header-link--primary " href="https://tutsplus.com/ebooks">eBooks<i class="fa fa-chevron-down"></i></a><ul class="ebooks-menu__topics"><li class="ebooks-menu__topic topic-design" data-slug="design"><a class="ebooks-menu__topic-link topic-design" href="https://design.tutsplus.com/ebooks">Design &amp; Illustration</a></li><li class="ebooks-menu__topic topic-code" data-slug="code"><a class="ebooks-menu__topic-link topic-code" href="https://code.tutsplus.com/ebooks">Code</a></li><li class="ebooks-menu__topic topic-webdesign" data-slug="webdesign"><a class="ebooks-menu__topic-link topic-webdesign" href="https://webdesign.tutsplus.com/ebooks">Web Design</a></li><li class="ebooks-menu__topic topic-photography" data-slug="photography"><a class="ebooks-menu__topic-link topic-photography" href="https://photography.tutsplus.com/ebooks">Photo &amp; Video</a></li><li class="ebooks-menu__topic topic-business" data-slug="business"><a class="ebooks-menu__topic-link topic-business" href="https://business.tutsplus.com/ebooks">Business</a></li><li class="ebooks-menu__topic topic-music" data-slug="music"><a class="ebooks-menu__topic-link topic-music" href="https://music.tutsplus.com/ebooks">Music &amp; Audio</a></li><li class="ebooks-menu__topic topic-cgi" data-slug="cgi"><a class="ebooks-menu__topic-link topic-cgi" href="https://cgi.tutsplus.com/ebooks">3D &amp; Motion Graphics</a></li></ul></nav></li><li class="global-nav__header-item"><a class="global-nav__header-link" href="https://tutsplus.com/subscribe-with-elements">Pricing</a></li></ul><div class="global-nav__header-right"><div class="global-nav__search global-search view"><form class="global-nav__search-form" action="https://gamedevelopment.tutsplus.com/tutorials/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><input type="text" name="search[terms]" id="search_terms" value="" placeholder="Search Envato Tuts+" class="global-nav__search-terms" /><button name="button" type="submit" class="global-nav__search-button"><i class="fa fa-search"></i></button></form></div></div></div></div></div><div class="global-nav__mobile-toggle"><a class="global-nav__mobile-toggle-link" href="javascript:"><i class="fa fa-reorder"></i><i class="fa fa-times"></i></a></div></nav><div class="avert fuse-ad avert--leaderboard"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764355519"></div></div><div class="avert__label">Advertisement</div></div></div><div class="page-content topic-gamedevelopment"><main class="content"><div class="content-banner"><div class="content-banner-restricted-width"><ol class="content-banner__content-breadcrumb topic-gamedevelopment"><li><a href="http://gamedevelopment.tutsplus.com/es/tutorials">Game Development</a></li><li><a href="https://gamedevelopment.tutsplus.com/es/categories/how-to-learn">How to Learn</a></li></ol><div class="content-banner__icon"><img class="content-banner__title-icon" src="https://static.tutsplus.com/assets/redesign/gamedevelopment-b473c03b53e886f7c34182f6521cb1d2.svg" alt="Gamedevelopment" /></div><div class="content-banner__body"><h1 class="content-banner__title">Cómo aprender diseño y desarrollo de juegos de mesa</h1></div></div></div><div class="content-title"></div><article class="post article view"><div class="post__inarticle-ad-template" style="display: none"><div class="avert fuse-ad"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764347426"></div></div><div class="avert__label">Advertisement</div></div></div></div><div class="layout__content-with-sidebar"><div class="content-heading"><div class="content-heading__primary"><div class="content-heading__primary-authorship"><span class="content-heading__author">by <span class="content-heading__author-name"><a rel="author" href="https://tutsplus.com/authors/david-silverman">David Silverman</a></span></span><time class="content-heading__publication-date" datetime="2013-11-29T15:30:13Z" title="29 Nov 2013">29 Nov 2013</time></div><div class="content-heading__primary-attributes"><span class="content-heading__item"><span class="content-heading__label">Length:</span><span class="content-heading__value">Long</span></span><span class="content-heading__item"><span class="content-heading__label">Languages:</span><select class="content-heading__value url-selector view"><option data-url="/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="en">English</option><option data-url="/ar/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="ar">العربية/عربي</option><option data-url="/es/articles/how-to-learn-board-game-design-and-development--gamedev-11607" selected="" value="es">Español</option><option data-url="/id/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="id">Bahasa Indonesia</option><option data-url="/it/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="it">Italiano</option><option data-url="/pt/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="pt">Português</option><option data-url="/ru/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="ru">Pусский</option><option data-url="/uk/articles/how-to-learn-board-game-design-and-development--gamedev-11607" value="uk">українська мова</option></select></span></div></div><div class="content-heading__secondary"><div class="content-heading__secondary-categories"><a href="/es/categories/how-to-learn"><span class="content-heading__secondary-categories-tag">How to Learn</span></a><a href="/es/categories/board-game"><span class="content-heading__secondary-categories-tag">Board Game</span></a><a href="/es/categories/game-design"><span class="content-heading__secondary-categories-tag">Game Design</span></a></div><div class="content-heading__secondary-social"><span class="content-heading__comment-count"><a href="#post_comments"><i class="fa fa-comment"></i></a><div class="social-share-menu popup-menu view"><a class="popup-menu-toggle" href="javascript:"><i class="fa fa-share-alt"></i></a><div class="popup-menu-content"><ul class="social-share-menu__popup-menu-content"><li><a title="Share on Facebook" href="https://www.facebook.com/dialog/feed?app_id=1494084460809023&amp;link=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607&amp;display=page&amp;name=C%C3%B3mo%20aprender%20dise%C3%B1o%20y%20desarrollo%20de%20juegos%20de%20mesa&amp;redirect_uri=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607"><i class="fa fa-facebook-square"></i></a></li><li><a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=C%C3%B3mo%20aprender%20dise%C3%B1o%20y%20desarrollo%20de%20juegos%20de%20mesa&amp;url=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607&amp;via=tutsplus"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" title="Pin on Pinterest" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgamedevelopment.tutsplus.com%2Fes%2Farticles%2Fhow-to-learn-board-game-design-and-development--gamedev-11607&amp;description=C%C3%B3mo%20aprender%20dise%C3%B1o%20y%20desarrollo%20de%20juegos%20de%20mesa&amp;media=https%3A%2F%2Fcms-assets.tutsplus.com%2Fuploads%2Fusers%2F30%2Fposts%2F17822%2Fpreview_image%2FPreview400.jpg"><i class="fa fa-pinterest"></i></a></li></ul></div></div></span></div></div></div><div class="post-body view"><div class="post-body__translated-by"><p><span>Spanish (Español) translation by <span><a href="https://tutsplus.com/authors/elias-nicolas">Elías Nicolás</a></span> (you can also <a href="https://gamedevelopment.tutsplus.com/articles/how-to-learn-board-game-design-and-development--gamedev-11607?ec_unit=translation-info-language">view the original English article</a>) </span></p></div><div class="post-body__body"><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script><div class="post-body__content">
+<p>Durante la última década, los juegos de mesa han ganado mayor protagonismo en la industria del juego. Con
+ la creciente popularidad de los juegos de mesa estilo Euro, como <a href="http://www.catan.com/">
+Settlers of Catan</a>, y la constante afluencia de nuevos juegos y tipos de 
+juegos como <a href="http://en.wikipedia.org/wiki/Dominion_(card_game)">Dominion</a>, el popular juego de construcción de tablas, los 
+juegos de mesa han visto un inesperado resurgimiento entre los jugadores
+ de todo tipo . Mientras
+ que los juegos de mesa comparten muchas ideas con los videojuegos, se 
+juegan de una manera muy diferente, ya menudo utilizan mecanismos de 
+juego muy diferentes. Diseñar
+ para juegos de mesa trae consigo diferentes desafíos que diseñar para 
+videojuegos, pero las habilidades pueden aplicarse universalmente para 
+mejorar todos sus juegos.</p>
+<hr>
+<h2>Una visión general de los géneros de juegos de mesa</h2>
+ <p>Antes de comenzar, veamos brevemente algunos géneros de juegos de mesa. Esto
+ debería ayudar a familiarizarse con un par de diferentes tipos de 
+juegos de mesa, y los conceptos detrás de ellos, y darle una idea de por
+ dónde empezar si eres nuevo en los juegos de mesa. Recuerde
+ que muchos juegos de mesa ahora tienen homólogos digitales que usted 
+puede jugar en un iPad o PC, así que incluso si es difícil para usted 
+jugar estos juegos en un tablero real, no debería tener problemas para 
+probar los más populares.</p>
+ <h3>Juegos de mesa clásicos o juegos de familia</h3>
+ <p>Estos juegos requieren que los jugadores corran alrededor del tablero o sigan un camino designado para alcanzar su meta. A veces también habrá un sistema de puntos involucrados. Estos juegos tienen una fuerte dependencia de la suerte, y tienen menos estrategia que los juegos de mesa más modernos. Juegos como estos funcionan mejor con grupos donde el juego en sí no es tan importante como la experiencia de jugar juntos. La
+ mayoría de las veces, estos juegos tienen temas muy simples o absurdos 
+que tienen poco o ningún impacto en la mecánica del juego.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/2407/sorry">Sorry</a>, <a href="http://boardgamegeek.com/boardgame/5432/snakes-and-ladders">Snakes and Ladders</a>, y <a href="http://boardgamegeek.com/boardgame/5048/candy-land">Candyland</a></p>
+ <h3>Juegos Estilo-Euro</h3>
+ <p>Los juegos estilo-Euro son a menudo sobre la obtención de puntos de victoria, un recurso arbitrario que le permite ganar. Por lo general duran un cierto número de vueltas, o continúan hasta que un jugador tiene un cierto número de puntos de victoria. Estos juegos tienen temas fuertes que informan mucho del diseño. También
+ suele haber un sistema de gestión de recursos, y algún tipo de juego 
+"político" entre los jugadores a medida que negocian la venta y el 
+comercio de recursos. Por último,
+ estos juegos tienen menos elementos de suerte o de oportunidad, y la 
+mayoría de los problemas que el jugador experimenta debido a la "mala 
+suerte" se pueden mitigar con un juego estratégico fuerte.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/13/the-settlers-of-catan">Settlers of Catan</a>, <a href="http://boardgamegeek.com/boardgame/2651/power-grid">Power Grid</a>, <a href="http://boardgamegeek.com/boardgame/822/carcassonne">Carcassona</a> y <a href="http://boardgamegeek.com/boardgame/96913/lancaster">Lancaster</a></p>
+ <h3>Juegos de construcción de mazos</h3>
+ <p>Juego de construcción de mazos (DBG) son similares a los juegos de cartas (TCG), donde cada jugador tiene una baraja de cartas que utilizan durante el juego. La
+ diferencia es que en DBG los jugadores trabajan todos de la misma 
+colección de la tarjeta, y el edificio de la cubierta ocurre como parte 
+del juego. Estos juegos vienen generalmente con 15-20 diferentes tipos de tarjetas, pero sólo diez se utilizan en un solo juego. Esto le da a los juegos mucho valor de repetición. En estos juegos los jugadores construyen su cubierta con el tiempo comprando tarjetas disponibles de la piscina de tarjetas. Juegos
+ como este suelen terminar cuando un cierto número de tipos de tarjetas 
+se agotan, o cuando se produce una situación específica.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/36218/dominion">Dominion</a>, <a href="http://boardgamegeek.com/boardgame/53953/thunderstone">Thunderstone</a>, <a href="http://boardgamegeek.com/boardgame/88408/nightfall">Nightfall</a> y <a href="http://boardgamegeek.com/boardgame/91536/quarriors">Quarriors</a></p>
+ <h3>Juegos de Estrategia Abstracta</h3>
+ <p>Los juegos de estrategia abstractos incluyen ajedrez y damas. El punto de estos juegos es que dos jugadores tengan una compleja batalla estratégica en la que tratan de superar a su oponente. Estos
+ juegos son más difíciles de describir sin ejemplos específicos, y los 
+elementos del juego y los objetivos no son tan comunes en todo el 
+género. En lugar de rodillos de dados o combinaciones de cartas, el objetivo es a menudo colocar las piezas en la ubicación correcta.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/171/chess">Ajedrez</a>, <a href="http://boardgamegeek.com/boardgame/2083/checkers">Damas</a>, <a href="http://boardgamegeek.com/boardgame/624/quoridor">Quoridor</a> y <a href="http://boardgamegeek.com/boardgame/54221/push-fight">Push Fight</a></p>
+ <h3>Juegos de estrategia</h3>
+ <p>Los juegos de estrategia son juegos mucho más grandiosos que el estilo Euro. Estos juegos suelen tener un tablero muy importante y una narrativa que impulsa el progreso del juego. Estos
+ juegos a menudo implican una gran cantidad de juego cooperativo y 
+competitivo, obligando a los jugadores a hacer y romper alianzas a lo 
+largo del juego.</p>
+ <p>Los
+ jugadores suelen estar participando tanto en el juego como en los 
+juegos mentales de nivel superior: tratar de salir adelante, formar 
+alianzas y discernir los motivos de su oponente. Estos
+ juegos son generalmente marcados por sesiones de juego muy largas (seis
+ horas o más, para algunos), y aveces son referidos cariñosamente como 
+"juegos terminadores de amistad", debido a lo apasionados que son los jugadores. Risk es quizás el juego más conocido en este género.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/181/risk">Risk</a>, <a href="http://boardgamegeek.com/boardgame/12493/twilight-imperium-third-edition">Twilight Imperium</a>, <a href="http://boardgamegeek.com/boardgame/15987/arkham-horror">Arkham Horror</a> y <a href="http://boardgamegeek.com/boardgame/37111/battlestar-galactica">Battlestar Galactica</a></p>
+ <h3>Juegos de estrategia basados en tarjetas</h3>
+ <p>Los juegos de estrategia basados en cartas son juegos de estrategia donde las cartas son el elemento principal del juego. Juegos
+ como este varían mucho, pero a menudo hay un mecánico de dibujo, o un 
+elemento de carácter o base de construcción donde los jugadores usan 
+tarjetas para ganar habilidades o bonificaciones. Estos juegos suelen tener un fuerte elemento de suerte o aleatoriedad.</p>
+ <p>El
+ objetivo en juegos como éste puede basarse en puntos de victoria, 
+tratar de completar un juego específico de cartas, o eliminar a ciertos 
+jugadores objetivo, entre otros. Juegos
+ como Poker, Spit y Egyptian Rat Screw no encajan en esta categoría 
+porque carecen de un tema central y no requieren nada más que una baraja
+ estándar de cartas. Juego de construcción de mazos podría encajar en esta categoría, pero se han vuelto tan populares que los considero su propio género.</p>
+ <p>Ejemplos: <a href="http://boardgamegeek.com/boardgame/1927/munchkin">Munchkin</a>, <a href="http://boardgamegeek.com/boardgame/3955/bang">Bang</a>, <a href="http://boardgamegeek.com/boardgame/68448/7-wonders">7 Wonders</a> y <a href="http://boardgamegeek.com/boardgame/815/chrononauts">Chrononauts</a></p>
+ <hr>
+<h2>Antes de que comencemos</h2>
+ <p>Al
+ igual que los videojuegos, la creación de juegos de mesa no puede 
+reducirse a un conjunto específico de pasos que debe seguir. Podría dar una visión general, pero sin entrar en los detalles, es difícil explicar el desarrollo de juegos de cualquier tipo.</p>
+ <p>Para
+ ayudarte a entender los conceptos, voy a utilizar este artículo para 
+guiarte en el proceso que tomé mientras desarrollaba una de mis ideas. Este
+ no es un juego completo, pero todavía debe ayudarme a ilustrar muchos 
+de mis puntos por tener un ejemplo concreto para que usted aprenda.</p>
+ <p>La
+ clave aquí es que usted llegará a ver tanto la teoría y el proceso de 
+pensamiento real que estoy usando a medida que desarrollo esta idea un poco 
+más. Esperemos
+ que al final del artículo usted entienda cómo mi idea fue de concepto a
+ prototipo, y cómo podría convertirlo en un proyecto terminado.</p>
+ <p>Con todo esto en mente, vamos a empezar.</p>
+ <hr>
+<h2><strong>Obtener una idea</strong></h2>
+ <figure><img width="600" alt="the-thinker" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/the-thinker.jpg" height="391"><br><figcaption>Imagen de <a href="http://www.flickr.com/people/84989911@N00">Daniel Stockman</a> desde <a href="http://commons.wikimedia.org/wiki/File:Paris_2010_-_Le_Penseur.jpg">Wikimedia Commons</a>.<br></figcaption></figure><p>El primer paso en cualquier proyecto es averiguar cuál será su proyecto. Una
+ gran manera de inspirarse es tomar un juego que ya juega y disfrutar, y
+ para agregar o eliminar un elemento importante del juego. Hacer esto te obliga a mirar el juego desde una nueva perspectiva.</p>
+ <p>Cuando intenta agregar o quitar algo del juego, comienza a buscar los componentes existentes mucho más críticamente. En
+ el momento de quitar algo, se hace mucho más fácil ver por qué ese 
+elemento era tan importante o sin importancia para empezar. Esto
+ puede darle una comprensión más profunda del juego con el que está jugando, y una buena idea del propósito de muchos de las mecánicas de juego.</p>
+ <p>Otra gran 
+técnica es comenzar con un tema del mundo real o el sistema que te 
+gusta, y tratar de construir un juego alrededor de eso. Si empieza a trabajar con un tema o sistema específico, lo hace mucho más fácil determinar qué tipo de juego desea. Comenzar de esta manera también puede ayudar a entender cómo los jugadores estarán interactuando entre sí.</p>
+ <p>Por ejemplo, si está haciendo un juego sobre zombies, podría hacer algunos jugadores humanos y algunos zombies; Podría hacer que todos seres humanos y tenerlos trabajando para escapar o matar a todos los zombies; O usted podría tener a los jugadores compitiendo para ser el sobreviviente final de pie.</p>
+ <p>Comenzar con un tema también le da la capacidad de dibujar de ese tema al intentar pensar de los nuevos elementos del juego. Si
+ ya estás haciendo un juego sobre personajes en el espacio, entonces 
+siempre puedes referenciar libros, películas y otros materiales sobre el
+ espacio para encontrar inspiración para nuevos elementos. Este fue el método que elegí usar cuando trabajaba en mi juego.</p>
+ <p>Mi
+ primera idea estaba relacionada con los traficantes de drogas porque 
+estaba viendo Breaking Bad e imaginando lo que sería ser Walter White. A
+ medida que pensaba más en esta idea, me di cuenta de que el conflicto 
+central en el narcotráfico y los imperios de la droga es ganar y 
+controlar el territorio, y yo sabía específicamente que no quería hacer 
+un juego que me obligara a hacer mucho del trabajo que establece los territorios en un tablero de juego.</p>
+ <p>Con eso en 
+mente, me conformé con hacer un juego de estrategia basado en cartas y 
+abandoné el tema del imperio de la droga, ya que sería muy difícil 
+transmitir territorio en ese estilo de juego. Entonces
+ empecé a pensar en otras industrias competitivas, y específicamente 
+industrias donde el control o el posicionamiento en un mapa no son 
+importantes. Eventualmente me conformé con la industria cinematográfica como el sistema en el que quería basar mi juego.</p>
+ <figure><img width="600" alt="hollywood-sign-wikimedia-commons" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/hollywood-sign-wikimedia-commons.jpg" height="274"><br><figcaption>Imagen de Jelson25 de <a href="http://commons.wikimedia.org/wiki/File:Aerial_Hollywood_Sign.jpg">Wikimedia Commons</a>.</figcaption></figure><p>La
+ industria del cine es una buena opción porque ya es una industria 
+basada en la competencia donde las empresas compiten por las ventas y 
+los premios. Además,
+ una película puede ser fácilmente reducida a una colección de partes 
+que usted como el diseñador puede cuantificar y utilizar como elementos 
+de juego, un guión, un director, actores, género y fecha de lanzamiento,
+ entre otros.</p>
+ <p>También
+ existe el hecho de que la mayoría de la gente ya tiene alguna 
+comprensión de cómo funciona la industria cinematográfica, o puede 
+inferir muchos de los detalles. Esto significaba que el concepto del juego sería fácil de entender y rápidamente accesible a la mayoría de los jugadores. Por
+ último, la industria cinematográfica está compuesta de muchos elementos
+ diferentes y "partes móviles", y me daría muchos recursos para 
+inspirarme.</p>
+ <hr>
+<h2>Desarrollando tu idea</h2>
+ <p>Una vez que usted se ha establecido en su tema, usted necesita determinar cual es objetivo del juego, y cómo se juega. Comience escribiendo todo lo que pueda pensar relacionado con el juego, y poniendo cada idea que tiene sobre el papel.</p>
+ <p>Su
+ idea inicial va a ser muy áspera, y si lo describió rápidamente a diez 
+personas diferentes, se alejaría con diez diferentes conceptos de cómo 
+funciona. El
+ objetivo en este momento es poner todo el pensamiento en el concepto 
+que puedas, y pensar en todos los aspectos de él que le interesa. Usted quiere alejarse de esto con una comprensión sólida de lo que su juego se supone que debe ser, y cómo se juega.</p>
+ <p>En este punto, también es útil escribir su intención para cada idea junto con la idea misma. No es raro para mí encontrar que mis ideas iniciales no funcionan tan bien después de que las desarollo. Durante estos momentos, es útil saber de dónde vino la idea. Esto me permite refinar ideas que no me gustan, al tiempo que conservo los objetivos originales. También es importante considerar ideas alternativas, o variaciones en sus conceptos iniciales. Tener
+ un montón de métodos potenciales para lograr los mismos resultados 
+evitará que golpee obstáculos cuando un sistema clave necesita ser
+ re-elaborado.</p>
+ <figure><img width="600" alt="This is the initial design document I put together when working on the movie studio idea The yellow parts on the side of each page are notes to myself or future designers I bring on about certain important game aspects or about other ways I could make certain systems" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-Movie-Studio-Doc.png" height="425"><p></p>
+ <figcaption>Este es el documento de diseño inicial que preparé al trabajar en la idea del estudio cinematográfico. Las
+ partes amarillas en el lado de cada página son notas a mí mismo o a 
+futuros diseños, sobre ciertos aspectos importantes del 
+juego o sobre otras maneras que podría hacer ciertos sistemas.</figcaption></figure><p>Debe también intentar detallar exactamente cómo es la mecánica que podría funcionar. Hágase preguntas acerca del juego mientras está trabajando en él. Esto le impide ignorar los detalles más pequeños y le permite analizar continuamente su diseño y hacia dónde va.</p>
+ <p>Hágase preguntas como:</p>
+ <ul>
+<li>¿Cuántos jugadores habrá?</li>
+ <li>¿Cuánto tiempo debe durar el juego?</li>
+ <li>¿Qué opciones hará el jugador, y cuándo lo harán?</li>
+ <li>¿Cómo hará el jugador estas opciones?</li>
+ <li>¿Cómo afectará la elección de un jugador a los otros jugadores?</li>
+ <li>¿Cómo interactúan los jugadores entre sí?</li>
+ <li>¿Hay alguna opción que puede hacer un jugador, pero no los otros?</li>
+ <li>¿Cómo progresa el juego? ¿Es estrictamente basado en turnos, o es en rondas con fases?</li>
+ <li>¿Qué acciones tomará el jugador?</li>
+ <li>¿Cómo se determinará el resultado de una acción?</li>
+ <li>¿Cuál es la meta del jugador?</li>
+ <li>¿Cómo puede ganar el jugador?</li>
+ </ul>
+<p>Incluso
+ si todavía no sabe todas las respuestas, puede encontrar que mantener 
+las preguntas en mente mientras trabaja le llevará a las respuestas.</p>
+ <p>Trato
+ de no avanzar con el desarrollo hasta que pueda leer el documento sin 
+cuestionar los detalles de ninguna mecánica específica. También
+ sé que no he terminado con esta etapa si no he determinado cómo una 
+ronda o giro progresa, cuánto tiempo se supone que el juego dura, cómo 
+gana el jugador y cuántos jugadores quiero en un juego promedio.</p>
+ <p>No se puede ejecutar una prueba de juego exitosa, o construir un prototipo, sin respuestas a estas preguntas. Usted
+ sabrá que está listo para seguir adelante cuando pueda mirar este 
+documento y entender lo que es el juego, y cómo funciona, incluso si no 
+es perfecto.</p>
+ <p>Para mi concepto del estudio de película comencé determinando la meta del jugador. El
+ concepto más lógico era que los jugadores crearan y lanzaran películas 
+para ganar premios (puntos de victoria) y dinero (el recurso primario).</p>
+ <p>A
+ partir de ahí determiné que el guión, el director y los actores son los
+ aspectos más conocidos de una película, así que pensé que éstos también
+ serían buenos elementos del juego. Hacer
+ una película también parecía bastante sencillo: comprar un guión, 
+contratar a un director, encontrar a los actores y filmar la película. Esto
+ tenía sentido con lo que había tenido hasta ahora, y parecía cosas 
+lógicas para el jugador para hacer durante su turno, así que decidí de esto como la estructura de cómo una ronda de progreso.</p>
+ <figure><img width="600" alt="Movie process" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-Movie-process.png" height="171"></figure><p>Después
+ de resolver sobre los elementos básicos del juego, y cómo 
+interactuaron, determiné cómo los premios y el dinero serían 
+distribuidos. Para
+ ello creé un atributo de género para guiones, y decidí que los actores y
+ directores se podrían especializar en ciertos géneros. Esto
+ me dio una forma sólida de vincular a los actores, directores y 
+guiones, y me permitió cuantificar una película terminada sobre la base 
+de las calificaciones de los personajes asociados en los géneros dados.</p>
+ <p>El
+ resto de mi desarrollo en esta etapa se centró en rellenar los detalles
+ de cómo una ronda progresó, cómo actores, directores y guiones se 
+compran, y cómo los jugadores realmente completar una película. Una
+ vez que había trabajado a través de toda la interacción que los 
+jugadores tendrían con el sistema, me acomodé en una progresión de juego
+ para cada ronda, y para el juego como un todo. Finalmente,
+ con todas las piezas importantes en su lugar, y una sólida comprensión 
+de mi juego, me trasladé a la siguiente etapa de desarrollo.</p>
+ <hr>
+<h2>Desarrollo de contenido</h2>
+ <p>Ahora que entiendes lo que es tu juego y cómo se juega, debes hacer todo el contenido.</p>
+ <p>Si
+ está desarrollando un juego de estrategia abstracto como el ajedrez o 
+las damas, esta etapa será mucho más simple porque probablemente se 
+reducirá al equilibrio y la finalización de reglas y piezas. Por
+ otro lado, si estás desarrollando un juego de contenido pesado como el 
+juego de película en el que estoy trabajando, esta etapa requerirá mucho
+ tiempo y esfuerzo para decidir qué tipos de contenido necesitas, cuánto
+ contenido necesitas y en qué basar su contenido.</p>
+ <p>No
+ importa el tipo de juego en el que esté trabajando, siempre es mejor 
+empezar por determinar qué tipos de contenido necesita y cuánto 
+necesita.</p>
+ <p>En el estudio de cine necesito al menos tres tipos de contenido: guiones o películas, actores y directores. Además
+ de eso, tengo que conformarme con premios para el jugador, y crear 
+todas las cartas que dictan cuánto dinero obtienen los jugadores de sus 
+películas.</p>
+ <figure><img width="600" alt="ContentTypesNeeded" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-ContentTypesNeeded.png" height="173"></figure><p>Mi juego está dividido en rondas. Si
+ asumo que el número máximo de películas que un jugador puede 
+desarrollar en cualquier momento es dos, y el número máximo de jugadores
+ es cuatro, eso significa que los jugadores necesitan poder tener hasta 
+ocho secuencias de comandos únicas para cada ronda. Si
+ asumo que hay seis rondas en el juego, ahora sé que necesito 48 
+tarjetas de comandos únicas en el juego, ya que las tarjetas de script 
+nunca se reutilizan. Este número me dice el mínimo número de scripts que mi juego necesita para una sesión de juego.</p>
+ <p>(Una
+ vez que la mecánica esté finalizada, puedo agregar más secuencias de 
+comandos para aumentar el valor de repetición o para permitir más rondas
+ en un solo juego, pero todavía es importante saber cuál es el mínimo).</p>
+ <p>Después, necesito calcular cuántos actores y directores pueden ser comprados entre todos los jugadores en una ronda dada. A
+ diferencia de scripts, los actores y directores 
+eventualmente son arrastrados a sus respectivas plataformas. Esto
+ significa que necesito saber el número mínimo de actores y directores 
+que se pueden utilizar antes de que se reorganizan en la baraja si 
+quiero evitar que los jugadores se agoten.</p>
+ <p>En la actualidad, los actores y directores no se quitan de una película hasta que la película se estrena. Esto no es totalmente realista, pero hace que la jugabilidad sea mucho más fácil. Con
+ esto en mente, necesito saber cuánto tiempo una película puede ir 
+inédita para determinar el número máximo de actores y directores que 
+pueden ser ocupados a la vez. Puesto
+ que una ronda representa un año, decidí que dos rondas eran las más 
+largas que una película podía pasar sin ser lanzada por el jugador. Así,
+ con un máximo de ocho películas desarrolladas cada vuelta, y cada 
+película que requiere un director y hasta tres actores, sabía que, en 
+cada ronda, hasta ocho directores y 24 actores podían ser comprados por 
+los jugadores. Si
+ multiplicamos esos valores por tres para dar cuenta de dos rondas de 
+películas inéditas, y las películas que se están haciendo en la ronda 
+actual, tenemos a 24 directores y 72 actores como nuestros mínimos.</p>
+ <h3>Continuar Simplificando</h3>
+ <p>Creo que vale la pena señalar aquí que en un momento estos números eran en realidad mucho más altos. Después de hacer las matemáticas, me di cuenta de que tendría demasiado contenido para hacer antes de poder probar mi juego. Tenga
+ en cuenta que, aunque sea poco probable, su juego podría terminar 
+fallando, por lo que es bueno tratar de minimizar la cantidad de tiempo 
+que dedica a hacer contenido, hasta que esté seguro de que vale la pena 
+dedicarle tiempo.</p>
+ <p>En este punto también me conformé con tener seis premios cada uno, uno por cada género de película. Dado que los premios seguirían siendo el mismo todo el juego no era un gran problema. Además
+ de eso, decidí hacer 18 cartas de escenario que se utilizarían para 
+dictar cómo se distribuía el dinero en una ronda determinada. Esto
+ me dio la capacidad de probar el juego tres veces y se garantiza 
+diferentes resultados, ya que en cada ronda sólo se utiliza una tarjeta 
+de escenario. Ambas
+ cosas eran fáciles de desarrollar comparadas con el otro contenido, así
+ que pensé que la inversión del tiempo valió la pena.</p>
+ <figure><img width="600" alt="Content Totals" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-Content-Totals.png" height="160"></figure><p>Una vez que sepas cuánto contenido necesitas, tienes que hacer realmente todo ese contenido. Hasta
+ que empiece a jugar a las pruebas y sé que mi juego es divertido, 
+intento pensar en mi juego en términos de la mecánica con la que estoy 
+trabajando y las estrategias que quiero que los jugadores estén 
+implementando, y no tanto el Texto o aspectos de arte. Esto ahorra tiempo, y me impide tener tanto trabajo perdido cuando tengo que rediseñar las cosas más tarde.</p>
+ <p>Pensando
+ en la mecánica del juego, sé que quiero que algunas secuencias de 
+comandos sean más propensas a darle dinero al jugador, y que algunas 
+sean más propensas a obtenerlas. Para
+ hacer que este trabajo, voy a ver las estadísticas que importan para 
+ambos, y ver cómo puedo distribuirlos de diferentes maneras para afectar
+ las probabilidades.</p>
+ <p>También sé que quiero que haya formas interesantes para que los actores interactúen con directores, guiones y entre sí. Para
+ hacer esto puedo crear aficionados especiales que los actores obtienen 
+cuando trabajan con ciertos otros actores, o dar algunos aficionados a 
+las secuencias de comandos cuando tienen directores específicos 
+vinculados a ellos. También
+ puedo añadir más características únicas, como las scripts que vienen automáticamente con ciertos actores o directores 
+adjuntos si esos actores o directores no están siendo utilizados por 
+otros jugadores.</p>
+ <p>Si
+ usara actores reales y directores en mi juego, podría tener una tarjeta
+ de director para Tim Burton, y tarjetas de actor para Johnny Depp y 
+Helena Bonham Carter. Dado
+ que estos tres son todos conocidos para trabajar juntos en casi todos 
+sus proyectos, tendría sentido para darles bonos cuando se utilizan en 
+la misma película. Lo mismo podría aplicarse a James Franco y Seth Rogen, o Matt Damon y Ben Affleck. Aunque
+ es poco probable que utilice cualquier actor real en el juego, esto 
+todavía me da un buen modelo de cómo los diferentes personajes podrían 
+interactuar.</p>
+ <h3>Organizando las interacciones de su juego</h3>
+ <p>Ayuda
+ a hacer una lista de todas las posibles interacciones que surgen con el
+ trabajo, y utilizar esa lista como referencia cuando se crean elementos
+ de juego. Esto
+ asegura que no se olvide de las interacciones potenciales y le 
+proporciona una referencia para asegurarse de que hay una buena variedad
+ para cada tipo si realiza un seguimiento de la frecuencia con la que 
+utiliza cada uno.</p>
+ <p>También
+ debería intentar escribir reglas sobre cómo se deben generar las 
+estadísticas de caracteres o cómo deberían funcionar ciertos tipos de 
+tarjetas. En
+ mi juego, sé que debería haber un desglose de las especialidades de 
+género entre los actores, directores y guiones de películas para 
+mantener el juego equilibrado. Además
+ de esto, podría considerar hacer reglas como "Un personaje no puede 
+tener un pulido mayor que X a menos que se cumpla una cierta condición", o
+ "Un personaje nunca debería tener más de Y puntos de estadísticas o 
+menos de Z". Definir reglas como esta le ayuda a mantener un diseño coherente y hace más fácil traer nuevos diseñadores más adelante.</p>
+ <h3>Iterando el juego de reglas</h3>
+ <p>Esta etapa de desarrollo puede tomar un tiempo, pero también es muy importante, así que no se apresure. También
+ debes saber que hay una gran posibilidad de que parte del trabajo que 
+hagas aquí se vuelva inútil o inutilizable cuando te das cuenta de que 
+ciertos mecanismos no funcionan o necesitan ser reajustados. Esto está bien, sin embargo.</p>
+ <p>El hecho de que una idea no funcione ahora, no significa que no pueda volver a integrarla en la línea. Una
+ vez que clavar abajo de toda la mecánica del juego, el único paso del 
+diseño del juego a la izquierda es éste, el resto está sobre la 
+comprensión de su juego, haciéndolo parecer bonito, perfeccionándolo, y 
+comercializándolo. Pasa
+ mucho tiempo en este paso, porque cuanto más considere dar estos 
+elementos ahora, menos probable es que tendrá que rehacer todos ellos 
+más tarde.</p>
+ <hr>
+<h2>Diseño y construcción de su prototipo</h2>
+ <p>Con su contenido desarrollado, el siguiente paso es realmente hacer un prototipo. Lo primero que debes recordar es que tu prototipo no tiene que parecer lindo. Mientras
+ que las tarjetas bien diseñadas con obras de arte hermosas mejorarán 
+las opiniones de algunos jugadores, se tarda mucho tiempo en hacer las 
+cosas bien. Recuerde,
+ su juego puede necesitar revisiones importantes, o desecharse por 
+completo, y si esto sucede, apesta saber que pasó un día entero o 
+semana de trabajo en hermosas imágenes y diseños que nunca se utilizan. Créame, he cometido este error, y no es divertido.</p>
+ <figure><img width="600" alt="This is the prototype for a game called The Infinity Formula which was made by one of our editors for the Global Game Jam" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-Infinity-Formula-Prototype.jpg" height="320"><p></p>
+ <figcaption>Este
+ es el prototipo de un juego llamado The Infinity Formula, que fue hecho
+ por<a href="http://mcfunkypants.com/2012/the-infinity-formula-board-game/"> uno de nuestros editores</a> para el Global Game Jam.</figcaption></figure><p>Con eso dicho, no debe apenas juntar su tablero del juego o tarjetas sin considerar la disposición o la legibilidad. Aunque 
+estos diseños no son definitivos, tómese un tiempo para determinar qué 
+información es más importante tener y cómo mostrar eficazmente esa 
+información. Empiezo
+ enumerando toda la información necesaria en una ficha o pieza de juego,
+ y luego dar prioridad a esa información para que sepa lo importante que
+ es cada aspecto.</p>
+ <p>Si
+ tu juego tiene varias barajas de cartas, también necesitas diferenciar 
+estas barajas para que los jugadores puedan saber de qué baraja es una 
+carta. Para el 
+prototipo, esto puede ser tan fácil como usar diferentes colores de 
+papel para cada cubierta, pero al trabajar en el producto final debe 
+crear distinciones y diseños claros para cada tipo de tarjeta o pieza.</p>
+ <p>También debe considerar para qué se utiliza la pieza, o lo que representa. Para
+ el juego movie game, intenté pensar una manera de 
+hacer que las tarjetas del actor miren como las fotografias de cabeza que un 
+agente da a los directores del bastidor. Esto
+ terminó no funcionando porque no me dejó con el espacio para listar 
+efectivamente las estadísticas del actor, o el precio para el actor. A
+ pesar de esto, todavía usé elementos de cabezas en el diseño, y decidí 
+que la imagen del actor que se usaba en la tarjeta todavía era un fotografia de la cara, aunque no fuera exactamente lo que había planeado.</p>
+ <figure><img width="520" alt="This was the format I originally envisioned for the cards The problem with this was that I had little room for more information without making these images very small This would make it a waste to have four images since it would make it hard for the player to appreciate the time and effort any artists put into the images" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-TobiasFunkeHeadshots.png" height="614"><br><figcaption>Este fue el formato que originalmente imaginé para las tarjetas. El problema con esto era que tenía muy poco espacio para incluir más información sin hacer estas imágenes muy pequeñas. Esto
+ haría un desperdicio tener cuatro imágenes, ya que haría difícil para 
+el jugador apreciar el tiempo y el esfuerzo de los artistas puestos
+ en las imágenes.</figcaption></figure><figure><img width="520" alt="While this format wasnt quite as compelling it made each individual piece of art easier to appreciate and gave me more room on the card" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-TobiasFunkeCard.png" height="313"><br><figcaption>Si
+ bien este formato no era tan convincente, hice cada pieza individual de
+ arte más fácil de apreciar, y me dio más espacio en la tarjeta.</figcaption></figure><p>Aunque
+ algunos aspectos del diseño, como mis tarjetas de actor y director, 
+pueden quedar incompletos o simplificados en el prototipo, cosas como 
+tableros de juego pueden necesitar estar mucho más lejos antes de que 
+puedas probar el juego. Si
+ usted estaba haciendo un tablero <em>Risk</em> personalizado, <em>tendría</em> que 
+dibujar un mapa real, ya que el equilibrio en <em>Risk</em> se basa en el 
+posicionamiento, la división de las fronteras del país y el número de 
+países totales.</p>
+ <p>En estos casos, hay algunas técnicas que usted podría utilizar para hacer la preparación de un prototipo más fácil. Puede
+ dibujar el mapa en una pizarra o en la superficie de la pizarra para 
+que pueda modificarse fácilmente o hacer el mapa en el ordenador para 
+poder imprimirlo y esperar a dibujar líneas de territorio hasta que se 
+imprima el mapa. También
+ podría poner cada país en pedazos separados de papel o cartón que se 
+puede mover y volver a colocar hasta que encuentre la lugar 
+ideal.</p>
+ <h3>Ediciones digitales contra físicas</h3>
+ <p>Además, tenga en cuenta lo fácil que puede enviar su prototipo a otros. Muchos de mis amigos son desarrolladores de juegos que viven a cientos de kilómetros de distancia de mí. Dado que me pueden dar una perspectiva diferente que el jugador promedio, me gusta enviarles copias tempranas de mis juegos.</p>
+ <p>Esto
+ hace que sea importante tener en cuenta sus limitaciones cuando diseño 
+elementos como tarjetas que necesitan ser impresas o piezas que 
+necesitan ser construidas. También me impide usar demasiados colores, ya que eso hace que la impresión sea más cara. Tengo que tratar de mantener todo en 8,5 x 11 páginas, para que pueda ser impreso más fácilmente. Podría descuidar estas limitaciones y construir los prototipos yo mismo y enviarlos, pero esto es obviamente más caro. Es
+ posible que no conozca a ningún diseñador de juegos para enviar su 
+juego, pero puede que desee hacer una versión impresa y reproducida en 
+su sitio web, y las mismas limitaciones deben considerarse para ello 
+también.</p>
+ <p>Por último, ningún prototipo está completo sin una copia completa de las reglas del juego. Sus jugadores tendrán que referirse a estos, y probablemente también en las primeras pruebas. Tener
+ las reglas escritas permite que la prueba de juego continúe con tan poca 
+interferencia de usted como sea posible, y permite a los jugadores leer 
+cualquier regla que no entienda tantas veces como sea necesario. </p>
+ <p>Escribir las reglas también te permite asegurarte de que no hay nada que te olvides de construir para tu prototipo. Por
+ lo menos, hacer una hoja de referencia para los jugadores para que 
+puedan buscar el costo de las compras comunes, o una lista de acciones 
+básicas, cuando lo necesitan.</p>
+ <p>Una
+ de las piezas de juego más útiles en Settlers of Catan es la tarjeta de
+ referencia que te dice cuánto cuesta cada elemento del juego. Sin
+ la tarjeta de referencia, Catan sería un juego mucho más lento, 
+especialmente si una o más personas nunca habían jugado antes.</p>
+ <hr>
+<h2>Pruebas de juego</h2>
+ <p>Con su prototipo construido, usted está listo para pasar a la etapa más crucial de desarrollo para cualquier juego: playtesting. Al igual 
+que con los videojuegos, la prueba de juego es donde puedes ver todas 
+tus ideas en acción, y cuando se llega a ver lo bien que funciona. Lo más importante, sin embargo, se llega a ver si su juego es divertido.</p>
+ <p>Si
+ usted está trabajando en el juego con otras personas y es posible jugar
+ a través de algunas rondas sin traer a nadie nuevo, le sugiero que lo 
+haga. Hacer
+ esto le permite trabajar con cualquier pequeña torcedura o errores que 
+son fáciles de resolver, y le da un mejor manejo de cómo el juego 
+realmente fluye.</p>
+ <p>Si
+ bien es bueno usar las opiniones y las ideas que obtiene del juego en 
+este momento, siempre debe recordar que su opinión será sesgada por todo
+ el tiempo que pasó desarrollando el juego. Debido a esto, usted puede subconsciente-mente tratar de justificar los sentimientos que ya tiene. Tenga esto en cuenta y tome nota de cualquier cosa que vea o sienta mientras juega. Es posible que tengas razón, pero es bueno tener las opiniones de los jugadores reales de todos modos.</p>
+ <p>Una vez que hayas hecho unos cuantos pruebas de juego por tu cuenta, puedes traer gente nueva y ver cómo reaccionan. Pruebas de juegos de mesa es muy similar a los videojuegos de prueba. En primer lugar, siempre trate de tener el juego preparado y listo para jugar, antes de que alguien aparezca. En segundo lugar, asegúrese de tener una completa y fácil de entender la explicación de cómo se juega el juego.</p>
+ <p>Realmente,
+ sin embargo, la mejor manera de ejecutar el Prueba de juego es dar a los 
+jugadores el libro de reglas y ver cuánto problema tienen de averiguar 
+todo. Hacer esto te dice lo fácil que son las reglas de entender, y lo bien escrita que están. Si
+ no quieres hacerlo de esta manera para las primeras pruebas, está bien,
+ pero tienes que ejecutar unas cuantas pruebas de juego como este antes de 
+decir que el juego está hecho, para asegurarse de que el libro de reglas
+ es completo y fácil de entender .</p>
+ <h3>Grabe sus sesiones de prueba de juego</h3>
+ <p>Si
+ puede, también es una buena idea grabar en video toda la Prueba de juego y 
+anotar la firma de tiempo en la grabación cuando ocurren eventos 
+importantes. La
+ grabación de la sesión le da un registro concreto de todo lo que 
+sucedió, y anotar la firma de tiempo en los puntos cruciales garantiza 
+que no tenga que volver a mirar el video entero para hacer referencia a 
+sólo cinco minutos de juego. Si no puede grabar un video, debe tener un portátil o una computadora en la que pueda tomar notas. Si no lo hace, perderá inevitablemente alguna información importante o comentarios de sus jugadores.</p>
+ <p>Trate de ser lo más detallado posible con sus notas. Si no lo eres, terminarás con notas importantes que no puedes recordar el contexto o el significado. Esto
+ es aún peor que no tener notas en absoluto, ya que significa que tomó 
+el tiempo para escribirlo, pero no puede recordar por qué. Finalmente, tome nota de cuánto tiempo toma cada fase del juego, y cuánto tiempo toma el juego como un todo. Si su juego se supone que dure una hora, y dura dos, necesita saber cuales fueron los atracos si desea arreglarlo.</p>
+ <figure><img width="600" alt="The Playtest Journal is a notebook thats specifically designed to help you keep track of information while testing a game Even if you dont want something like this you should still keep a journal by your side to take notes" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/playtest_journal.jpg" height="482"><br><figcaption><a href="http://genimuse.com/playtest/">El
+ Playtest Journal</a> es un portátil específicamente diseñado para ayudarle a
+ mantener un registro de la información mientras prueba un juego. Incluso si no quiere algo como esto, debe mantener un diario a su lado para tomar notas.</figcaption></figure><p>También es importante cómo se comporta durante la Prueba de juego. Lo más importante es no estar en el camino de los jugadores. Al
+ principio de la prueba de juego, asegúrese de decirle a los jugadores 
+que expresen sus opiniones sobre el juego en voz alta cuando las tengan. Esto
+ evita que tenga que interrumpir constantemente la  Prueba de juego para 
+preguntarles si les gustan las diferentes mecánicas, o si tienen 
+problemas para entender las cosas.</p>
+ <p>Idealmente, desea simular una sesión de juego real tanto como sea posible. Esto
+ significa que desea ver no sólo qué reglas los jugadores no entienden, 
+sino también <em>por qué</em> no las entienden y cómo tratan de entenderlas. Esto le ayuda a reescribir las reglas de manera más efectiva, y le ayuda a determinar cómo las reglas son defectuosas. Por lo tanto, con eso en mente, trate de no interferir con el juego a menos que sea absolutamente necesario.</p>
+ <h3>Solicitar comentarios</h3>
+ <p>Lo último que debe hacer es un cuestionario de fin de juego o una discusión con los jugadores. Después
+ de que el juego es más que usted debe estar preparado para pasar 15-20 
+minutos sentado con sus jugadores y preguntarles qué piensan. Su objetivo es obtener una mayor comprensión de todo lo que sucedió durante la prueba de juego.</p>
+ <p>Algunas preguntas a hacer incluyen:</p>
+ <ul>
+<li>¿Cuál fue tu parte favorita?</li>
+ <li>¿Cuál fue su parte menos favorita?</li>
+ <li>¿Qué es lo que tuviste más problemas para entender? ¿Por qué?</li>
+ <li>¿Qué mecánica cambiaría y cómo la cambiaría?</li>
+ <li>¿Crees que el juego fue demasiado largo?</li>
+ <li>¿Hay algún elemento del juego que se sienta desequilibrado o que no era necesario?</li>
+ <li>¿Volverías a jugar?</li>
+ <li>¿Alguna de las mecánicas se sienten demasiado complejas? ¿Demasiado simple?</li>
+ <li>¿Hay alguna fase de juego que desea que sea más larga? ¿Corta?</li>
+ <li>¿Fue divertido?</li>
+ </ul>
+<p>Es
+ posible que no necesite ninguna o todas estas preguntas, pero siempre 
+termine una prueba de juego hablando con los jugadores y obteniendo sus 
+opiniones sobre el juego; No sólo asuma que entiende todo lo que sentían al respecto.</p>
+ <hr>
+<h2>Cómo terminar y liberar su juego</h2>
+ <p>Las Pruebas de juego llevan mucho tiempo y muchas sesiones, pero finalmente las reglas serán finalizadas y tu juego estará completo.</p>
+ <p>En
+ este punto, debe finalizar diseños y diseños para cosas como tarjetas, 
+tableros de juegos, piezas, libros de reglas o hojas, etc. Además
+ de eso, si planeas vender copias físicas, deberías averiguar en qué tipo 
+de caja tu juego vendrá y qué aspecto tendrá la caja.</p>
+ <p>Si
+ bien es importante considerar aspectos como la legibilidad y la 
+efectividad durante el juego al hacer estos diseños, mucho de este 
+trabajo está relacionado con los conceptos de diseño gráfico. Tenga
+ esto en cuenta mientras trabaja, y no tenga miedo de usar recursos "no 
+convencionales" para obtener ayuda al trabajar en sus piezas de juego.</p>
+ <p>Por último, intente probar su juego unas cuantas veces con los diseños finalizados en su lugar. A
+ veces un diseño parecerá que funciona, pero debido a la forma en que la
+ gente juega el juego es realmente defectuoso de una manera inesperada. Juega
+ a través de tu juego un par de veces con los diseños terminados, y 
+deberías ser capaz de resolver rápidamente cualquier problema que 
+encuentres.</p>
+ <p>Una vez que haya terminado de diseñar todas las piezas del juego, debe determinar cómo se lanzará su juego. Hay un montón de opciones a considerar, así que he reunido esta lista de los más grandes:</p>
+ <h3>Imprimir-y-jugar</h3>
+ <figure><img width="600" alt="cards-against-humanity" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/cards-against-humanity.png" height="374"><br><figcaption>La versión original de Cards Against Humanity fue una versión de Imprimir-y-jugar. Esto
+ les ayudó a obtener el financiamiento para hacer un Kickstarter, 
+trabajar en el juego a tiempo completo y, finalmente, hacer uno oficial impreso.</figcaption></figure><p>Un juego de Imprimir-y-jugar es uno que la gente puede comprar en línea y luego imprimir en casa. Esta
+ opción es buena para juegos pequeños como juegos de estrategia 
+abstracta, juegos de estrategia con tarjeta y juegos que no tienen 
+muchas piezas.</p>
+ <p>Antes de seguir esta ruta, debe considerar algunas cosas. En
+ primer lugar, la mayoría de la gente no tiene acceso a impresoras de 
+alta calidad, o impresoras que pueden imprimir más de una hoja de papel 
+estándar, así que trate de mantener todo en papel de 8,5 x 11 pulgadas 
+(o papel A4, en algunas partes del mundo) . Los
+ colores también pueden ser problemáticos: si su juego es demasiado 
+grande y demasiado colorido, su juego puede agotar el cartucho de tinta 
+de alguien e incrementar indirectamente cuánto están gastando en su 
+juego.</p>
+ <p>Esta opción puede ser buena, pero mantener estas limitaciones en mente, porque los compradores potenciales definitivamente la tendran. Al
+ prepararse para un lanzamiento como este, tómese el tiempo para 
+optimizar la forma en que su juego se está imprimiendo y cómo se 
+presenta en la hoja para que no sólo es barato de imprimir, sino también
+ fácil de cortar y "construir". Siempre trate de hacer una prueba de impresión antes de liberar para asegurarse de que no es demasiado difícil de hacer.</p>
+ <h3>Ejecuciones personales de impresión</h3>
+ <p>Las
+ tiradas personales son cuando usted consigue el juego impreso por su cuenta y lo vende a través de un sitio web personal o negocio. Las
+ tiradas de esta manera varían mucho en términos de calidad, pero 
+usualmente no funcionan tan bien en juegos de gran escala, y funcionan 
+mejor cuando el número total de piezas es algo limitado.</p>
+ <p>En casos como este, usted querría buscar servicios como Kickstarter e IndieGoGo para tratar de obtener fondos. No hay 
+demasiados servicios que imprimirá todo tu juego para ti, pero sitios 
+web como <a href="https://www.thegamecrafter.com/">The Game Crafter</a>, de los que hablo más detalladamente a 
+continuación, se especializan en eso, y si miras puedes encontrar muchos
+ servicios para comprar juegos genéricos y Piezas personalizadas en todo el Internet.</p>
+ <p>Convertir 
+un beneficio puede ser difícil con cosas como esta, pero si su único 
+objetivo es hacer un juego para uso personal o sabes que ya hay personas
+ interesadas en comprar el juego, esto puede ser una gran opción a 
+considerar.</p>
+ <h3>Obtener un editor</h3>
+ <p>Otra opción es llevar su juego a un editor e intentar conseguir que lo lancen. La mayoría de los editores tienen páginas en sus sitios donde pueden enviar ideas de juegos. Las
+ especificaciones de cómo funciona esto son diferentes para cada 
+empresa, pero usted tendrá que enviarles una copia de su juego, ya sea 
+digitalmente o por correo, y luego tendrá que esperar un poco de tiempo 
+mientras lo revisan y toman una decisión . </p>
+ <p>Si este es su objetivo, tómese un tiempo para determinar qué compañía (o empresas) sería más receptiva a su juego. No
+ lanzar un juego de estrategia complejo que toma tres horas para jugar a
+ una empresa como <a href="http://www.sjgames.com/">Steve Jackson Games</a>  que son conocidos por hacer 
+juegos de cartas cortas y humorísticas.</p>
+ <p>El tema de su juego también puede ser importante. Si
+ envías tu juego de ciencia ficción espacial a una compañía conocida 
+principalmente por juegos sobre combate medieval, es poco probable que 
+lo acepten, simplemente porque no encaja con el tema de sus productos. Por
+ otro lado, si lo envía a una empresa que tiene una amplia variedad de 
+tipos de juegos o temas, trate de tener en cuenta lo que ya ofrecen o 
+están trabajando, ya que no quieren demasiados juegos en el mismo género
+ o categoría.</p>
+ <p>Al igual que al diseñar su juego, es necesario considerar la audiencia a la que está lanzando.</p>
+ <h3>Juego de video o aplicación</h3>
+ <figure><img width="600" alt="This is a screenshot from the popular Settlers of Catan Online a version of the game which can be played online in your browser for free" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/how-to-learn-board-game-design-Settlers-Online.jpg" height="450"><p></p>
+ <figcaption>Esta
+ es una captura de pantalla del popular <a href="http://www.playcatan.com/">Settlers of Catan Online</a>, una 
+versión del juego que se puede jugar en línea en su navegador de forma 
+gratuita.</figcaption></figure><p>La última manera en la que podría lanzar su juego sería como un videojuego o aplicación. Esto
+ le permite llegar a una audiencia mucho más grande, pero también puede 
+hacer más difícil tener éxito si su juego no es bien conocido. Aunque
+ hay muchos juegos de mesa que han creado aplicaciones exitosas y 
+videojuegos, la mayoría de esos juegos ya tenían una base de fans 
+establecida. Esto
+ les ayudó mucho porque significaba que ya tenían una base de 
+instalación garantizada de personas que les gusta jugar juegos de mesa 
+virtualmente, y que disfrutan de su juego.</p>
+ <p>El
+ hecho es que el mercado para las personas que quieren jugar juegos de 
+mesa en un entorno virtual es bastante limitado, ya que la idea de un 
+juego de mesa virtual socava un poco lo que hace un juego de mesa para empezar. Tenga
+ esto en cuenta al convertirlo en un videojuego, y es posible que pueda 
+reorientar algunos aspectos para que se adapten mejor al medio y 
+atraigan a más jugadores. Si usted no
+ tiene el dinero para hacer una tirada, pero tiene la experiencia para 
+hacer algo como esto, definitivamente vale la pena considerar.</p>
+ <hr>
+<h2>A dónde ir desde aquí</h2>
+ <p>Aunque
+ todavía hay otras cosas que podríamos cubrir, en este punto realmente 
+necesitas salir y ver qué sucede cuando intentas hacer un juego. Espero
+ que esta guía le ayude a acercarse un poco más a su objetivo al 
+mostrarle dónde empezar con su proyecto y cómo llegar a una idea. Si
+ desea más consejos, o simplemente necesita comprar algunos suministros 
+para su juego, aquí hay algunos buenos recursos que uso:</p>
+ <h3>Board Game Geek</h3>
+ <figure><img width="600" alt="boardgamegeek" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/boardgamegeek.png" height="351"><br></figure><p><a href="http://boardgamegeek.com/">Board Game Geek</a> es el sitio web de estreno para obtener información sobre 
+juegos de mesa y temas relacionados con juegos de mesa. Usted
+ puede encontrar información y comentarios sobre casi cualquier juego de
+ mesa en el mercado, y es un gran lugar para reunirse y hablar con otras
+ personas que están interesadas en las mismas cosas.</p>
+ <p>También
+ tiene una gran comunidad de desarrolladores y tiene una serie de 
+herramientas y recursos en su foro y en todo el sitio en general. Si usted está buscando un nuevo juego para jugar, o para el consejo en su proyecto actual, aquí es donde comenzara.</p>
+ <h3>/r/boardgames en reddit</h3>
+ <figure><img width="600" alt="reddit-boardgames" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/reddit-boardgames.png" height="382"><br></figure><p>Reddit tiene una serie de grandes subreddits relacionados con juegos de mesa, y <a href="http://www.reddit.com/r/boardgames">/r/boardgames</a> es sólo uno de ellos. Este
+ subreddit es muy activo y puede ser un gran lugar para averiguar sobre 
+nuevos juegos, ver lo que la gente piensa de los juegos populares, o 
+incluso para conectar los juegos en los que está trabajando. Siempre tiene mucho que hacer y es un gran lugar para conectarse con otros jugadores.</p>
+ <h3>/r/tabletopgamedesign en reddit</h3>
+ <figure><img width="600" alt="reddit-tabletopgamedesign" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/reddit-tabletopgamedesign.png" height="324"><br></figure><p>/r/tabletopgamedesign Es otro subreddit grande y relativamente activo. No
+ he sido un miembro de este subreddit demasiado tiempo, pero por lo que 
+he visto los miembros suelen publicar grandes artículos y recursos 
+relacionados con el diseño de juegos de mesa.</p>
+ <h3>Foro Board Game Designer</h3>
+ <figure><img width="600" alt="board-game-designers-forum" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/board-game-designers-forum.png" height="371"><br></figure><p>Como probablemente se puede decir por el nombre, <a href="http://www.bgdf.com/">FBGD</a> se dedica al arte de diseñar juegos de mesa. El sitio web en sí no ha sido actualizado demasiado en los últimos años, pero tienen un foro muy activo.</p>
+ <p>Este es un gran sitio para obtener comentarios, y para encontrar beta testers para su juego. Si
+ usted está tratando de encontrar una buena comunidad para despedir 
+ideas y charlar con las complejidades del diseño de juegos de mesa, 
+entonces eso es exactamente lo que obtendrá aquí.</p>
+ <h3>The Game Crafter</h3>
+ <figure><img width="600" alt="the-game-crafter" data-src="https://cdn.tutsplus.com/gamedev/uploads/2013/11/the-game-crafter.jpg" height="295"><br></figure><p>El sitio final que quiero mencionar es <a href="https://www.thegamecrafter.com/">The Game Crafter</a>. No
+ sólo este sitio tiene algunos artículos interesantes y videos para ver, también tiene un número de grandes recursos para 
+producir las tarjetas y los pedazos que usted necesita para su juego.</p>
+ <p>Si usted 
+tiene un juego y quiere dar un paso más por la auto-publicación, este es
+ un gran sitio para pedir sus tarjetas personalizadas y fichas de juego. Además
+ de eso, también tienen muchas clásicas fichas de juego pre-hechos que 
+puede ordenar a granel, si su juego no necesita tanta especialización.</p>
+ <hr>
+<h2>Conclusion</h2>
+ <p>Al igual que con cualquier proyecto en el que trabaje, la construcción de un juego de mesa llevará tiempo y esfuerzo. Probablemente
+ no harás un juego perfecto la primera vez que lo intentes, pero 
+definitivamente puedes aprender algo de cada intento que realices.</p>
+ <p>Trate
+ de empezar con algo simple—cualquier cosa realmente—y ver qué tipo 
+de ideas únicas o al azar puede crear a su alrededor. Usted puede terminar con un juego aburrido que tirar, o puede terminar con algo que te gusta y que desea trabajar en un rato.</p>
+ <p>De
+ cualquier manera, su éxito siempre se reduce a si realmente tomar la 
+zambullida y hacerlo, así que vaya allí y haga algo.</p></div></div></div><div class="avert fuse-ad"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764354928"></div></div><div class="avert__label">Advertisement</div></div></div><div class="content-author"><a href="https://tutsplus.com/authors/david-silverman"><div class="content-author__header"><img class="content-author__image" src="//www.gravatar.com/avatar/df9be277b6682bb4382a7605aa47c0a3?s=200&amp;d=https%3A%2F%2Fassets.tutsplus.com%2Fimages%2Fhub%2Favatar_default.png&amp;r=PG" alt="Df9be277b6682bb4382a7605aa47c0a3?s=200&amp;d=https%3a%2f%2fassets.tutsplus.com%2fimages%2fhub%2favatar default" /><div class="content-author__name">David Silverman</div><div class="content-author__title"></div></div><div class="content-author__bio">David Silverman studied Game Design, 3D Modelling and IT at the Rochester Institute of Technology where he also helped run the Game Development Club, and created an indie puzzle game called Chromathud. On top of his personal and school projects he also spent time developing games for the One Laptop Per Child program and taught Level Design and 3D Modelling at InternalDrive Technology Camps.</div></a></div></div><div class="layout__sidebar"><ul class="social-links"><li class="social-links__item social-links__item--feed"><a class="social-links__link social-links__link--feed" href="https://gamedevelopment.tutsplus.com/es/categories/how-to-learn.atom"><i class="icon fa fa-rss social-links__icon"></i>Feed </a></li><li class="social-links__item social-links__item--facebook"><a class="social-links__link social-links__link--facebook" href="https://www.facebook.com/tutsplus"><i class="icon fa fa-facebook-square social-links__icon"></i>Like </a></li><li class="social-links__item social-links__item--twitter"><a class="social-links__link social-links__link--twitter" href="http://twitter.com/tutsplus"><i class="icon fa fa-twitter social-links__icon"></i>Follow </a></li></ul><div class="post__sidebar"><div class="post__sidebar-primary"><div class="weekly-digest-subscription"><div class="weekly-digest-subscription--header">Weekly email summary</div>Subscribe below and we’ll send you a weekly email summary of all new Game Development tutorials. Never miss out on learning about the next big thing.<form class="weekly-digest-subscription__form" id="new_weekly_digest_subscription_request" action="/weekly_digest_subscription_requests" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="f1z65/P229gtrEzuHujSEdTLKr8w7TAoiWFT+PYnohmii5JIDIJXBiJbzFPSUmk8OnQ7lhUm6CwKIbzPDv3KGA==" /><input placeholder="Email Address" class="weekly-digest-subscription__email-field" type="email" name="weekly_digest_subscription_request[email]" id="weekly_digest_subscription_request_email" /><button name="button" type="submit" class="weekly-digest-subscription__subscribe-button">Update me weekly</button></form></div><div class="avert fuse-ad"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764355522"></div></div><div class="avert__label">Advertisement</div></div></div></div><div class="post__sidebar-secondary"><div class="post__sidebar-resource-links"></div><div class="post-translate"><div class="post-translate-heading">Translations</div><p>Envato Tuts+ tutorials are translated into other languages by our community members&mdash;you can be involved too!</p><a class="post-translate-button" href="https://getnative.me/?ref=tutsplus&amp;lang=en&amp;url=https://gamedevelopment.tutsplus.com/articles/how-to-learn-board-game-design-and-development--gamedev-11607&amp;title=C%C3%B3mo%20aprender%20dise%C3%B1o%20y%20desarrollo%20de%20juegos%20de%20mesa&amp;splitMode=1">Translate this post</a><div class="post-translate-by">Powered by<img class="post-translate-by-image" title="Native" alt="Native logo" src="https://static.tutsplus.com/assets/translations/native-logo-26829f74cf5fa5fd085cd64c24df4c50.png" /></div></div><div class="sticky-ad-target"></div><div class="sticky-ad"><div class="avert fuse-ad"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764355525"></div></div><div class="avert__label">Advertisement</div></div></div><div class="free-trial-highlight green"><img alt="envato-tuts+" class="free-trial-highlight__logo" src="https://static.tutsplus.com/assets/tuts_logo-cf1e6fd0e5ca6cc573eb3cd0c94e16d7.svg" /><div class="free-trial-highlight__header"><div class="free-trial-highlight__line-one"><span class="free-trial-highlight__text">Watch</span> <span class="free-trial-highlight__highlight-text">any</span></div><div class="free-trial-highlight__line-two"><span class="free-trial-highlight__text">course now</span> </div></div><a href="https://tutsplus.com/subscription_sign_up/monthly?ec_unit=sidebar-sticky"><div class="free-trial-highlight__action"><div class="free-trial-highlight__action-text">Subscribe to Access</div><div class="free-trial-highlight__action-button"><span class="fa fa-angle-right"></span></div></div></a></div></div></div></div></div></article><footer class="post__footer"><div class="layout__content-with-sidebar"><div class="post__comments" id="post_comments" name="post_comments"><div id="disqus_thread" name="disqus_thread"></div><script>var disqus_shortname  = "gamedevtuts";
+var disqus_identifier = "11607 http://gamedev.tutsplus.com/?p=11607 lang:es";
+var disqus_title      = "Cómo aprender diseño y desarrollo de juegos de mesa";
+var disqus_url        = "https://gamedevelopment.tutsplus.com/es/articles/how-to-learn-board-game-design-and-development--gamedev-11607";
+var disqus_config     = function() {
+    this.language = "es";
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.type = 'text/javascript';
+  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></div></div><div class="layout__sidebar"><div class="avert fuse-ad"><div class="avert__wrapper"><div class="avert__content"><div data-fuse="21764355528"></div></div><div class="avert__label">Advertisement</div></div></div></div></footer></main><div class="market-highlight market-highlight--padded-bottom"><div class="market-highlight__heading"><div class="market-highlight__intro">Looking for something to help kick start your next project?</div><div class="market-highlight__title"><a href="https://themeforest.net?ec_unit=market_highlight">Envato Market</a> has a range of items for sale to help get you started.</div></div><div class="market-highlight__cards"><div class="market-highlight__card"><a href="https://codecanyon.net/category/mobile?ec_unit=market_highlight"><img class="market-highlight__card-image" data-src="https://static.tutsplus.com/assets/market/gamedevelopment/mobilegametemplates-1f176710968e9022dc011551b04c006f.png" /><div class="market-highlight__card-content"><div class="market-highlight__card-title">Mobile Game Templates</div><div class="market-highlight__card-description">From $5</div></div></a></div><div class="market-highlight__card"><a href="https://codecanyon.net/category/html5/games?ec_unit=market_highlight"><img class="market-highlight__card-image" data-src="https://static.tutsplus.com/assets/market/gamedevelopment/html5games-8bd519301dd04910ef44a9ac5dc3bfe4.png" /><div class="market-highlight__card-content"><div class="market-highlight__card-title">HTML5 Games</div><div class="market-highlight__card-description">From $4</div></div></a></div><div class="market-highlight__card"><a href="https://codecanyon.net/category/all?ec_unit=market_highlight"><img class="market-highlight__card-image" data-src="https://static.tutsplus.com/assets/market/gamedevelopment/game_design_software-7e56a3d843bc2ea10972a444ffabbd43.png" /><div class="market-highlight__card-content"><div class="market-highlight__card-title">Game Design Software</div><div class="market-highlight__card-description">From $2</div></div></a></div><div class="market-highlight__card"><a href="https://graphicriver.net/category/game-assets?ec_unit=market_highlight"><img class="market-highlight__card-image" data-src="https://static.tutsplus.com/assets/market/gamedevelopment/gameassets-c50ba5fde34dd9aebdcaee2746982dd6.png" /><div class="market-highlight__card-content"><div class="market-highlight__card-title">Game Assets</div><div class="market-highlight__card-description">From $2</div></div></a></div></div></div></div><div class="ecosystem-highlight"><div class="ecosystem-highlight__cards"><div class="ecosystem-highlight__card"><a href="https://elements.envato.com?ec_unit=ecosystem_highlight&amp;utm_campaign=elements_tuts-ecosystem-promo_&amp;utm_medium=promos&amp;utm_source=tutsplus"><img class="ecosystem-highlight__card-image" data-src="https://static.tutsplus.com/assets/ecosystem/Elements-8d12ebd8ef7a8c6a1fd035134c4011f9.png" /><div class="ecosystem-highlight__card-content"><div class="ecosystem-highlight__card-title">Unlimited Downloads<br />From $16.50/month</div><div class="ecosystem-highlight__card-description">Get access to over 400,000 creative assets on Envato Elements.</div></div></a></div><div class="ecosystem-highlight__card"><a href="https://themeforest.net?ec_unit=ecosystem_highlight&amp;utm_campaign=elements_tuts-ecosystem-promo_&amp;utm_medium=promos&amp;utm_source=tutsplus"><img class="ecosystem-highlight__card-image" data-src="https://static.tutsplus.com/assets/ecosystem/Market-7e6b77007d2f2e3158f3c3279a77a143.png" /><div class="ecosystem-highlight__card-content"><div class="ecosystem-highlight__card-title"> Over 9 Million Digital Assets</div><div class="ecosystem-highlight__card-description"> Everything you need for your next creative project.</div></div></a></div><div class="ecosystem-highlight__card"><a href="https://placeit.net?ec_unit=ecosystem_highlight&amp;utm_campaign=placeit_mkt-footer&amp;utm_content=tuts_global-footer&amp;utm_medium=promos&amp;utm_source=tutsplus.com"><img class="ecosystem-highlight__card-image" data-src="https://static.tutsplus.com/assets/ecosystem/Placeit-4b64744fed7e0608004dca545150dd77.png" /><div class="ecosystem-highlight__card-content"><div class="ecosystem-highlight__card-title"> Create Beautiful Logos, Designs <br> &amp; Mockups in Seconds</div><div class="ecosystem-highlight__card-description"> Design like a professional without Photoshop.</div></div></a></div><div class="ecosystem-highlight__card"><a href="http://community.envato.com?ec_unit=ecosystem_highlight&amp;utm_campaign=elements_tuts-ecosystem-promo_&amp;utm_medium=promos&amp;utm_source=tutsplus"><img class="ecosystem-highlight__card-image" data-src="https://static.tutsplus.com/assets/ecosystem/Community-e18375bc04b26732cbe441eb1c736937.png" /><div class="ecosystem-highlight__card-content"><div class="ecosystem-highlight__card-title"> Join the Community</div><div class="ecosystem-highlight__card-description"> Share ideas. Host meetups. Lead discussions. Collaborate.</div></div></a></div></div></div><div class="quick-links view"><div class="quick-links__container"><div class="quick-links__title"><div class="quick-links__toggle js-quick-links__toggle"><i class="quick-links__toggle-icon"></i><span class="quick-links__toggle-text">Quick Links</span><span class="quick-links__toggle-subtext">Explore popular categories</span></div></div><div class="quick-links__content"><ul class="quick-links__list"><li class="quick-links__list-title">Web Themes &amp; Templates</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://themeforest.net/category/wordpress">WP Themes</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://themeforest.net/category/site-templates">HTML Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://themeforest.net/category/ecommerce/shopify">Shopify Themes</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://themeforest.net/tags/bootstrap">Bootstrap Themes</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://themeforest.net/free/wordpress-themes">Free WordPress Themes</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Video</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://videohive.net/category/after-effects-project-files">After Effects Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://videohive.net/category/apple-motion-templates">Apple Motion Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://videohive.net/tags/effects">Video Effects</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://videohive.net/category/motion-graphics/lower-thirds">Lower Thirds</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://videohive.net/category/stock-footage">Stock Footage</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Audio</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://audiojungle.net/category/music">Royalty Free Music</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://audiojungle.net/category/sound">Sound Effects</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://audiojungle.net/popular_item/by_category?category=music">Best Selling Royalty Free Music</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://audiojungle.net/category/source-files/logic-pro">Logic Pro Files</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://audiojungle.net/tags/background">Background Music</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Code</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://codecanyon.net/category/wordpress">WordPress Plugins</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://codecanyon.net/category/php-scripts">PHP Script</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://codecanyon.net/category/javascript">JavaScript</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://codecanyon.net/category/css">CSS Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://codecanyon.net/category/plugins/prestashop">PrestaShop Plugins</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Graphics</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://graphicriver.net/logo-templates">Logo Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://graphicriver.net/print-templates/business-cards">Business Card Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://graphicriver.net/add-ons/lightroom-presets">Lightroom Presets</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://graphicriver.net/fonts/serif">Serif Fonts</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://graphicriver.net/fonts/sans-serif">Sans-serif Fonts</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Photos</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photodune.net/tags/food">Food Stock Photos</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photodune.net/tags/animals">Animal Stock Photos</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photodune.net/tags/technology">Tech Stock Photos</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photodune.net/tags/fitness,sports#content">Fitness Stock Photos</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photodune.net/tags/nature,travel#content">Nature Stock Photos</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Design Maker</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/c/logos?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=logo_quick-links">Logo Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/c/design-templates/?f_devices=business%20card%20maker&amp;h=36&amp;utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=buscard_quick-links">Business Card Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/c/design-templates/?f_devices=t-shirt%20design&amp;h=35&amp;utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=tshirt-maker_quick-links">T-Shirt Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/banner-maker?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=banner_maker_quick-links">Banner Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/flyer-maker?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=flyer_maker_quick-links">Flyer Maker</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Video Maker</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/intro-maker?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=intro_maker_quick_links">Intro Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/slideshow-video-maker?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=slideshow_video_maker_quick_links">Slideshow Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/instagram-story-video-maker?utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=instagram_story_videomaker_quick_links">Instagram Story Video Maker</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/c/videos/?f_devices=Offers%20%2F%20Sales&amp;h=117&amp;utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=offer_sales_quick-links">Offer / Sales</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://placeit.net/c/videos/?f_tags=Content%20Teaser&amp;h=120&amp;utm_medium=promos&amp;utm_source=envatoquicklinks&amp;utm_campaign=placeit_mkt-quicklinks&amp;utm_content=content_teaser_quick-links">Content Teaser</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Elements</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://elements.envato.com/wordpress/themes">WordPress Themes</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://elements.envato.com/photos">Stock Images</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://elements.envato.com/web-templates/site-templates">Website Templates</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://elements.envato.com/graphic-templates/logos">Logos</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://elements.envato.com/fonts">Fonts</a></li></ul><ul class="quick-links__list"><li class="quick-links__list-title">Tuts+</li><li class="quick-links__list-item"><a class="quick-links__link" href="https://code.tutsplus.com">Learn Code</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://design.tutsplus.com/tutorials">Learn Graphic Design</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://business.tutsplus.com/tutorials">Learn Business</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://photography.tutsplus.com/categories/photography">Learn Photography</a></li><li class="quick-links__list-item"><a class="quick-links__link" href="https://code.tutsplus.com/ebooks/search/Cryptocurrencies">CryptoCurrency Tutorials &amp; Ebooks</a></li></ul></div></div></div><footer class="page-footer view"><div class="page-footer__content"><div class="page-footer__links-column"><div class="page-footer__section page-footer__section--first"><div class="page-footer__heading">Envato Tuts+</div><a class="page-footer__links-column-expansion-link" href="javascript:void(0);"><span class="page-footer__links-column-expansion-link-expand-text"><i class="fa fa-plus page-footer__links-column-link-icon"></i></span><span class="page-footer__links-column-expansion-link-collapse-text"><i class="fa fa-minus page-footer__links-column-link-icon"></i></span></a><div class="page-footer__item"><a class="page-footer__link" href="https://tutsplus.com/about">About Envato Tuts+</a></div><div class="page-footer__item"><a class="page-footer__link" href="https://tutsplus.com/terms-of-use">Terms of Use</a></div><div class="page-footer__item"><a class="page-footer__link" href="https://tutsplus.com/advertise">Advertise</a></div></div></div><div class="page-footer__links-column"><div class="page-footer__section page-footer__section--first"><div class="page-footer__heading">Join our Community</div><a class="page-footer__links-column-expansion-link" href="javascript:void(0);"><span class="page-footer__links-column-expansion-link-expand-text"><i class="fa fa-plus page-footer__links-column-link-icon"></i></span><span class="page-footer__links-column-expansion-link-collapse-text"><i class="fa fa-minus page-footer__links-column-link-icon"></i></span></a><div class="page-footer__item"><a class="page-footer__link" href="https://tutsplus.com/teach">Teach at Envato Tuts+</a></div><div class="page-footer__item"><a class="page-footer__link" href="https://tutsplus.com/translate-for-us">Translate for Envato Tuts+</a></div><div class="page-footer__item"><a class="page-footer__link" href="https://forums.envato.com/c/project-making/envato-courses-and-tutorials">Forums</a></div></div></div><div class="page-footer__links-column"><div class="page-footer__section page-footer__section--first"><div class="page-footer__heading">Help</div><a class="page-footer__links-column-expansion-link" href="javascript:void(0);"><span class="page-footer__links-column-expansion-link-expand-text"><i class="fa fa-plus page-footer__links-column-link-icon"></i></span><span class="page-footer__links-column-expansion-link-collapse-text"><i class="fa fa-minus page-footer__links-column-link-icon"></i></span></a><div class="page-footer__item"><a class="page-footer__link" href="https://help.elements.envato.com/hc/en-us/categories/360000070683”">FAQ</a></div><div class="page-footer__item"><a class="page-footer__link" href="https://help.elements.envato.com">Help Center</a></div></div></div><div class="page-footer__links-column page-footer__links-last-column"><div class="page-footer__tuts-brand"><img alt="envato-tuts+" class="page-footer__tuts-logo-image tuts-logo" src="https://static.tutsplus.com/assets/tuts_logo-cf1e6fd0e5ca6cc573eb3cd0c94e16d7.svg" /><div class="page-footer__counts"><div class="page-footer__count-item"><div class="page-footer__count-value">27,474</div><div class="page-footer__count-label">Tutorials</div></div><div class="page-footer__count-item"><div class="page-footer__count-value">1,226</div><div class="page-footer__count-label">Courses</div></div><div class="page-footer__count-item"><div class="page-footer__count-value">39,762</div><div class="page-footer__count-label">Translations</div></div></div></div></div></div><div class="page-footer__envato-bar"><div class="page-footer__envato-bar-content"><div class="page-footer__envato-bar-content-left-column"><ul class="page-footer__envato-bar-links"><li class="page-footer__envato-bar-link-item"><a class="page-footer__envato-bar-link" href="https://envato.com">Envato.com</a></li><li class="page-footer__envato-bar-link-item"><a class="page-footer__envato-bar-link" href="https://envato.com/#products">Our products</a></li><li class="page-footer__envato-bar-link-item"><a class="page-footer__envato-bar-link" href="https://envato.com/careers">Careers</a></li><li class="page-footer__envato-bar-link-item"><a class="page-footer__envato-bar-link" href="https://envato.com/sitemap">Sitemap</a></li></ul><div class="page-footer__copyright">© 2019 Envato Pty Ltd. Trademarks and brands are the property of their respective owners.</div></div><div class="page-footer__envato-bar-content-right-column"><ul class="page-footer__follow-us"><li class="page-footer__follow-us-element">Follow Envato Tuts+</li><li class="page-footer__follow-us-element"><a class="page-footer__social-link page-footer__facebook-link" href="https://www.facebook.com/tutsplus"></a></li><li class="page-footer__follow-us-element"><a class="page-footer__social-link page-footer__twitter-link" href="https://twitter.com/tutsplus"></a></li><li class="page-footer__follow-us-element"><a class="page-footer__social-link page-footer__pinterest-link" href="https://www.pinterest.com/tutsplus/"></a></li></ul></div></div></div></footer></body></html>

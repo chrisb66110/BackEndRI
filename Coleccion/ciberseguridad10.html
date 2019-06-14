@@ -1,0 +1,613 @@
+<!doctype html>
+
+<!--[if lt IE 7]><html lang="es" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="es" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="es" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Ciberseguridad: hacker versus cracker</title>
+
+				<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta property="fb:pages" content="158213781516" />
+
+				<link rel="icon" href="https://www.t-systemsblog.es/wp-content/themes/tsystems2016/favicon.ico"/>
+
+
+		<link rel="pingback" href="https://www.t-systemsblog.es/xmlrpc.php">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+				
+<!-- This site is optimized with the Yoast SEO plugin v7.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Los hackers y los crackers, aunque son individuos con los mismos conocimientos, tienen finalidades muy distintas en la vida"/>
+<link rel="canonical" href="https://www.t-systemsblog.es/hacker-cracker/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ciberseguridad: hacker versus cracker" />
+<meta property="og:description" content="Los hackers y los crackers, aunque son individuos con los mismos conocimientos, tienen finalidades muy distintas en la vida" />
+<meta property="og:url" content="https://www.t-systemsblog.es/hacker-cracker/" />
+<meta property="og:site_name" content="El blog de T-Systems Iberia" />
+<meta property="article:tag" content="ciberseguridad" />
+<meta property="article:tag" content="tecnología" />
+<meta property="article:section" content="Seguridad" />
+<meta property="article:published_time" content="2017-01-06T11:25:21+00:00" />
+<meta property="article:modified_time" content="2017-01-05T14:41:01+00:00" />
+<meta property="og:updated_time" content="2017-01-05T14:41:01+00:00" />
+<meta property="og:image" content="https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg" />
+<meta property="og:image:secure_url" content="https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg" />
+<meta property="og:image:width" content="544" />
+<meta property="og:image:height" content="342" />
+<meta property="og:image:alt" content="hacker" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Los hackers y los crackers, aunque son individuos con los mismos conocimientos, tienen finalidades muy distintas en la vida" />
+<meta name="twitter:title" content="Ciberseguridad: hacker versus cracker" />
+<meta name="twitter:image" content="https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="El blog de T-Systems Iberia &raquo; Feed" href="https://www.t-systemsblog.es/feed/" />
+<link rel="alternate" type="application/rss+xml" title="El blog de T-Systems Iberia &raquo; RSS de los comentarios" href="https://www.t-systemsblog.es/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="El blog de T-Systems Iberia &raquo; Ciberseguridad: hacker versus cracker RSS de los comentarios" href="https://www.t-systemsblog.es/hacker-cracker/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.t-systemsblog.es\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='https://www.t-systemsblog.es/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css' type='text/css' media='all' />
+<link rel='stylesheet' id='selection-sharer-css'  href='https://www.t-systemsblog.es/wp-content/plugins/selection-sharer/css/selection-sharer.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bcct_style-css'  href='https://www.t-systemsblog.es/wp-content/plugins/better-click-to-tweet/assets/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.t-systemsblog.es/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ley-cookie-css'  href='https://www.t-systemsblog.es/wp-content/plugins/spain-cookie-law/assets/css/ley-cookie.css' type='text/css' media='all' />
+<link rel='stylesheet' id='related-frontend-css-css'  href='https://www.t-systemsblog.es/wp-content/plugins/related/css/frontend-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='youtube-channel-gallery-css'  href='https://www.t-systemsblog.es/wp-content/plugins/youtube-channel-gallery/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.magnific-popup-css'  href='https://www.t-systemsblog.es/wp-content/plugins/youtube-channel-gallery/magnific-popup.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bones-stylesheet-css'  href='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/css/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='bones-ie-only-css'  href='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/plugins/spain-cookie-law/assets/js/cookie-check.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/plugins/spain-cookie-law/assets/js/jquery-cookie/jquery.cookie.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/jquery.fitvids.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/jquery.bxslider.min.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/jquery.sharrre.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/dotimeout.min.js'></script>
+<link rel='https://api.w.org/' href='https://www.t-systemsblog.es/wp-json/' />
+<link rel='shortlink' href='https://www.t-systemsblog.es/?p=11969' />
+<link rel="alternate" type="application/json+oembed" href="https://www.t-systemsblog.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.t-systemsblog.es%2Fhacker-cracker%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.t-systemsblog.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.t-systemsblog.es%2Fhacker-cracker%2F&#038;format=xml" />
+<link rel="amphtml" href="https://www.t-systemsblog.es/hacker-cracker/amp/">		
+				
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+		  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+		<![endif]-->
+
+
+
+	    <script>
+	            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	            ga('create', 'UA-47080398-1', 'auto');
+	            ga('send', 'pageview');
+	    </script>
+
+
+
+	</head>
+
+	<body class="post-template-default single single-post postid-11969 single-format-standard" itemscope itemtype="http://schema.org/WebPage">
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1380575052163112";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<div id="container">
+
+			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+
+										<div class="logo-part cf">
+						<div class="wrap">
+
+							<div class="search">
+			                    <form role="search" method="get" id="searchform" class="searchform" action="https://www.t-systemsblog.es/">
+									<button type="submit" id="searchsubmit" ><i class="icon icon-search"></i></button>
+									<input type="search" id="s" name="s" placeholder="Buscar" value="" />
+								</form>
+							</div>
+
+							<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
+								<a class="brand" href="https://www.t-systems.com/es/es" target="_blank"> </a>
+								<a href="https://www.t-systemsblog.es" rel="nofollow">
+									<img src="https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/images/logo-tsystems.png" alt="El blog de T-Systems Iberia" />
+								</a>
+							</p>
+
+						</div>
+						<a class="mobile-toggle" href="javascript:void(0)">
+							<i class="icon icon-menu"></i>
+						</a>
+					</div>
+
+										
+					<div class="nav-part">
+						<div class="wrap">
+							<div class="social">
+    <a href="https://www.facebook.com/tsystemsiberia" target="_blank" rel="publisher" title="T-Systems en Facebook">
+        <i class="icon icon-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/user/TSystemsIberia" target="_blank" rel="publisher" title="T-Systems en Youtube">
+        <i class="icon icon-youtube"></i>
+    </a>
+    <a href="https://twitter.com/TSystems_Iberia" target="_blank" rel="publisher" title="T-Systems en Twitter">
+        <i class="icon icon-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/t--systems-iberia" target="_blank" rel="publisher" title="T-Systems en LinkedIn">
+        <i class="icon icon-linkedin"></i>
+    </a>
+    <a href="https://plus.google.com/+TsystemsblogEspana/about" target="_blank" rel="publisher" title="T-Systems en Google +">
+        <i class="icon icon-googleplus"></i>
+    </a>
+<!--    <a href="https://www.instagram.com/" target="_blank" rel="publisher">
+        <i class="icon icon-instagram"></i>
+    </a>
+-->
+
+<!--    <a href="https://open.spotify.com/" target="_blank" rel="publisher">
+        <i class="icon icon-spotify"></i>
+    </a>
+-->
+
+    <a href="/rss" target="_blank" rel="publisher" title="RSS del Blog de T-Systems">
+        <i class="icon icon-rss"></i>
+    </a>
+</div>
+
+
+
+
+
+
+ 
+ 
+							
+							<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+								<ul id="menu-superior" class="nav top-nav cf"><li id="menu-item-10907" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10907"><a href="https://www.t-systemsblog.es/digitalizat/">DigitalizaT</a></li>
+<li id="menu-item-10909" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10909"><a href="https://www.t-systemsblog.es/big-data/">Big Data</a></li>
+<li id="menu-item-10910" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10910"><a href="https://www.t-systemsblog.es/cloud/">Cloud</a></li>
+<li id="menu-item-10911" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10911"><a href="https://www.t-systemsblog.es/iot/">Internet de las cosas</a></li>
+<li id="menu-item-10912" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-10912"><a href="https://www.t-systemsblog.es/seguridad/">Seguridad</a></li>
+<li id="menu-item-11082" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11082"><a href="https://www.t-systemsblog.es/tic/">TIC</a></li>
+<li id="menu-item-11471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11471"><a href="/abc">ABC</a></li>
+</ul>
+							</nav>
+						</div>
+					</div>
+
+			</header>
+
+			<div id="content">
+
+								<div class="header-wrapper">
+					<div class="wrap cf">
+		                <header class="article-header entry-header t-10of12 d-10of12" style="background-position: center; background-image: url(https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg)">
+			                <div class="darken">
+			                	<div class="header-contents">
+					  				<p class="category">
+					  				<a href="https://www.t-systemsblog.es/seguridad/" alt="View all posts in Seguridad">Seguridad</a>					  				</p>
+					                <h1 class="entry-title single-title" itemprop="headline" rel="bookmark">Ciberseguridad: hacker versus cracker</h1>
+				                </div>
+			                </div>
+		                </header>
+	                </div>
+                </div>
+
+				<div id="inner-content" class="wrap cf">
+
+					<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+				              <article id="post-11969" class="cf post-11969 post type-post status-publish format-standard has-post-thumbnail hentry category-seguridad tag-ciberseguridad tag-tecnologia" role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+				                <div class="cf"></div>
+				                <div class="left t-1of12 d-1of12">
+				                		<div class="vertical">
+											<div class="sharrre-container">
+	<div class="twitter" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Tweet"></div>
+	<div class="facebook" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Like"></div>
+	<div class="googleplus" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="+1"></div>
+	<div class="linkedin" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Pin It"></div>
+	<div class="whatsapp sharrre">
+		<a class="box" class="whatsapp" href="whatsapp://send?text=Ciberseguridad: hacker versus cracker – https://www.t-systemsblog.es/hacker-cracker/" data-action="share/whatsapp/share">
+			<div class="count" href="#"> &nbsp; </div>
+			<div class="share"><i class="fa fa-whatsapp"></i></div>
+		</a>
+	</div>
+</div><!--/.sharrre-container-->
+
+
+<script type="text/javascript">
+	// Sharrre
+	jQuery(document).ready(function(){
+		jQuery('.twitter').sharrre({
+			share: {
+				twitter: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-twitter"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			buttons: { twitter: {via: 'volvocar_es'}},
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('twitter');
+			}
+		});
+		jQuery('.facebook').sharrre({
+			share: {
+				facebook: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-facebook-square"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('facebook');
+			}
+		});
+		jQuery('.googleplus').sharrre({
+			share: {
+				googlePlus: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-google-plus-square"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			urlCurl: 'https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/sharrre.php',
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('googlePlus');
+			}
+		});
+		jQuery('.linkedin').sharrre({
+			share: {
+				linkedin: true
+			},
+			template: '<a class="box" href="#" rel="nofollow"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-linkedin"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			buttons: {
+			linkedin: {
+				description: 'Ciberseguridad: hacker versus cracker',media: 'https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg'				}
+			},
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('linkedin');
+			}
+		});
+		
+				
+	});
+</script>										</div>
+										<div class="horizontal">
+											<div class="sharrre-container">
+	<div class="twitter" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Tweet"></div>
+	<div class="facebook" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Like"></div>
+	<div class="googleplus" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="+1"></div>
+	<div class="linkedin" data-url="https://www.t-systemsblog.es/hacker-cracker/" data-text="Ciberseguridad: hacker versus cracker" data-title="Pin It"></div>
+	<div class="whatsapp sharrre">
+		<a class="box" class="whatsapp" href="whatsapp://send?text=Ciberseguridad: hacker versus cracker – https://www.t-systemsblog.es/hacker-cracker/" data-action="share/whatsapp/share">
+			<div class="count" href="#"> &nbsp; </div>
+			<div class="share"><i class="fa fa-whatsapp"></i></div>
+		</a>
+	</div>
+</div><!--/.sharrre-container-->
+
+
+<script type="text/javascript">
+	// Sharrre
+	jQuery(document).ready(function(){
+		jQuery('.twitter').sharrre({
+			share: {
+				twitter: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-twitter"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			buttons: { twitter: {via: 'volvocar_es'}},
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('twitter');
+			}
+		});
+		jQuery('.facebook').sharrre({
+			share: {
+				facebook: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-facebook-square"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('facebook');
+			}
+		});
+		jQuery('.googleplus').sharrre({
+			share: {
+				googlePlus: true
+			},
+			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-google-plus-square"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			urlCurl: 'https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/libs/sharrre.php',
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('googlePlus');
+			}
+		});
+		jQuery('.linkedin').sharrre({
+			share: {
+				linkedin: true
+			},
+			template: '<a class="box" href="#" rel="nofollow"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-linkedin"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			buttons: {
+			linkedin: {
+				description: 'Ciberseguridad: hacker versus cracker',media: 'https://www.t-systemsblog.es/wp-content/uploads/2017/01/hacker.jpg'				}
+			},
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('linkedin');
+			}
+		});
+		
+				
+	});
+</script>										</div>
+				                </div>
+
+				                <div class="inner-contents t-10of12 d-10of12">
+					                <div class="meta cf">
+										<p class="byline m-all t-1of3 d-1of3 entry-meta vcard">
+											Publicado el  <time class="updated entry-time" datetime="2017-01-06" itemprop="datePublished">06/01/2017</time> 										</p>
+										<p class="tags m-all t-2of3 d-2of3"><span class="tags-title">Tags:</span> <a href="https://www.t-systemsblog.es/tag/ciberseguridad/" rel="tag">ciberseguridad</a> <a href="https://www.t-systemsblog.es/tag/tecnologia/" rel="tag">tecnología</a></p>					                </div>
+
+					                <section class="entry-content cf" itemprop="articleBody">
+					                  <p>Los medios de comunicación usan muy frecuentemente la palabra <em>&#8216;hacker&#8217;</em> cuando hablan de ciberdelincuencia. A pesar de ser un término ampliamente difundido en la cultura moderna, no siempre se utiliza correctamente.</p>
+<p>Como las dos caras de una misma moneda (de la ciberseguridad), los <em>hackers</em> y los <em>crackers</em> son individuos con los <strong>mismos conocimientos</strong> pero con finalidades muy distintas en la vida.</p>
+<p>No se trata de una cuestión de tecnología, sino del uso del conocimiento de una <strong>forma legítima o ilícita.</strong></p>
+<h2>El hacker</h2>
+<p>El término se refiere a una profunda comprensión de todo lo que rodea a la seguridad informática. Sin embargo, lo cierto es que se puede aplicar a <strong>cualquier aspecto de la tecnología,</strong> tanto a nivel de software como de hardware.</p>
+<blockquote><p>Un hacker es una persona de mente abierta que busca no sólo encontrar los límites que presentan las tecnologías, sino superarlos y ampliarlos mediante su actuación.</p></blockquote>
+<p>Sus conocimientos pueden utilizarse para hacer el bien, lo que se llama <strong><em>white hat hacking, </em></strong>como los expertos en seguridad informática. Pero también pueden emplearse para hacer el mal, como los llamados <strong><em>black hack hackers o crackers.</em></strong></p>
+<p>Así, el término <em>hacker</em> se utiliza para designar a &#8216;los buenos&#8217;, aunque muchos medios de comunicación y la opinión pública lo apliquen para designar a los cibercriminales o <em>crackers.</em> De ahí la confusión y mala fama del término.</p>
+<h2>El cracker</h2>
+<p>Un <em>cracker</em> es un <em>hacker</em> que utiliza sus conocimientos en beneficio propio, <strong>saltándose las leyes</strong> y haciendo daño a otras personas.</p>
+<p><a href="http://www.t-systemsblog.es/todos-los-hackers-tienen-un-precio/" target="_blank">No solamente provocan daños económicos a sus víctimas,</a> sino que también violan su privacidad recabando y difundiendo datos personales. Lo consiguen utilizando <em>malware</em> y tretas como la ingeniería social, expresada a través de <em>phising</em> y otros métodos.</p>
+<span class='bctt-click-to-tweet'><span class='bctt-ctt-text'><a href='https://twitter.com/intent/tweet?url=https://www.t-systemsblog.es/?p=11969&#038;text=%23Hackers%20y%20%23crackers%20tienen%20los%20mismos%20conocimientos%20pero%20finalidades%20muy%20distintas%20&#038;via=TSystems_Iberia&#038;related=TSystems_Iberia' target='_blank'rel="noopener noreferrer">#Hackers y #crackers tienen los mismos conocimientos pero finalidades muy distintas  </a></span><a href='https://twitter.com/intent/tweet?url=https://www.t-systemsblog.es/?p=11969&#038;text=%23Hackers%20y%20%23crackers%20tienen%20los%20mismos%20conocimientos%20pero%20finalidades%20muy%20distintas%20&#038;via=TSystems_Iberia&#038;related=TSystems_Iberia' target='_blank' class='bctt-ctt-btn'rel="noopener noreferrer">﻿Clic para tuitear</a></span>
+					                </section> 
+					                <div class="footer-meta cf">
+						                						                <div class="author m-all t-2of3 d-2of3">
+						                	<img alt='' src='https://secure.gravatar.com/avatar/c8cb6d02ae1a7770a6e2ff5502227bf4?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c8cb6d02ae1a7770a6e2ff5502227bf4?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' />						                	<p class="author-name">
+												<a href="https://www.t-systemsblog.es/author/t-systems/">T-Systems</a>
+						                	</p>
+						                	<p class="author-description">
+												 Con una presencia en más de 20 países, T-Systems es uno de los principales proveedores mundiales de tecnologías de la información y las comunicaciones (TIC). 
+						                	</p>
+						                </div>
+						                
+					                </div>
+
+					                
+
+					                <footer class="article-footer cf">
+
+										<div class='yarpp-related'>
+<h3>Entradas relacionadas</h3>
+<ul>
+			<li id="post-11911" class="post-11911 post type-post status-publish format-standard has-post-thumbnail hentry category-seguridad tag-ciberseguridad tag-movilidad tag-tecnologia">
+				<img width="375" height="300" src="https://www.t-systemsblog.es/wp-content/uploads/2016/12/electronics-1851218_1920-375x300.jpg" class="attachment-related size-related wp-post-image" alt="smartphone" />				<div class="item">
+	  				<p class="category">
+
+	  											<a href="https://www.t-systemsblog.es/seguridad/" 
+								alt="View all posts in Seguridad">
+								Seguridad</a>
+						
+
+	  				</p>
+					<div class="title">
+						<a href="https://www.t-systemsblog.es/smartphone-puerta-entrada-hackers/">
+							El smartphone, una puerta de entrada a los hackers						</a>	
+					</div>
+				</div>
+		</li>
+
+
+
+
+
+
+
+
+			<li id="post-12459" class="post-12459 post type-post status-publish format-standard has-post-thumbnail hentry category-seguridad tag-ciberseguridad tag-tecnologia">
+				<img width="375" height="300" src="https://www.t-systemsblog.es/wp-content/uploads/2017/03/matrix-1799661_1920-375x300.jpg" class="attachment-related size-related wp-post-image" alt="doxxing" />				<div class="item">
+	  				<p class="category">
+
+	  											<a href="https://www.t-systemsblog.es/seguridad/" 
+								alt="View all posts in Seguridad">
+								Seguridad</a>
+						
+
+	  				</p>
+					<div class="title">
+						<a href="https://www.t-systemsblog.es/doxxing-ciberdelincuencia/">
+							El doxxing, una suculenta forma de ciberdelincuencia						</a>	
+					</div>
+				</div>
+		</li>
+
+
+
+
+
+
+
+
+	</ul>
+</div>
+
+										<div class="comments-container t-10of12 d-10of12">					
+							                
+
+
+  							            </div>
+
+
+					                </footer> 
+										<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deja tu comentario sobre "Ciberseguridad: hacker versus cracker" <small><a rel="nofollow" id="cancel-comment-reply-link" href="/hacker-cracker/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://www.t-systemsblog.es/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment_pre_text">Nos encantará conocer tu opinión, pero primero tenemos que indicarte que los comentarios están moderados, y no aparecerán inmediatamente en la página al ser enviados. Evita, por favor, las descalificaciones personales, los comentarios maleducados, los ataques directos o ridiculizaciones personales, o los calificativos insultantes de cualquier tipo, sean dirigidos a los autores, a cualquier otro comentarista o la empresa propietaria de esta página. Estás en tu perfecto derecho de comentar anónimamente, pero por favor, no utilices el anonimato para decirles a las personas cosas que no les dirías en caso de tenerlas delante. Intenta mantener un ambiente agradable en el que las personas puedan comentar sin temor a sentirse insultados o descalificados. No comentes de manera repetitiva sobre un mismo tema, y mucho menos con varias identidades o suplantando a otros comentaristas. También, procura que tus opiniones estén relacionadas con lo que se comenta en esta entrada. Los comentarios off-topic, promocionales, o que incumplan todas estas normas básicas serán eliminados.</p><p class="comment-form-comment"><label for="comment">Comentario</label><br /><textarea autocomplete="nope"  id="f7efd7bad6"  name="5a2514d4c5"   aria-required="true"></textarea><textarea id="comment" aria-hidden="true" name="comment" autocomplete="nope" style="padding:0;clip:rect(1px, 1px, 1px, 1px);position:absolute !important;white-space:nowrap;height:1px;width:1px;overflow:hidden;" tabindex="-1"></textarea><script type="text/javascript">document.getElementById("comment").setAttribute( "id", "d66095226758c8f48891c8ba6e91345b" );document.getElementById("f7efd7bad6").setAttribute( "id", "comment" );</script></p><input type="checkbox" name="privacy" value="privacy-key" required="required" class="privacyBox" aria-req="true"><p class="pprivacy">Presto mi consentimiento para que, de acuerdo a la normativa europea de protección de datos, T-Systems ITC Iberia S.A.U trate mis datos personales con la finalidad de identificar al autor del comentario previo. Estos datos se pueden ceder a las empresas del grupo Deutsche Telekom AG. Está prevista la realización de transferencias a Francia. Puede ejercer sus derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad de datos solicitándolo por escrito a: T-Systems ITC Iberia SAU, Calle Sancho de Ávila, 110. 08018 Barcelona, o a través de correo electrónico a FMB.TS-IB-PROTEC-DATOS-PERSONALES@t-systems.com, adjuntando en todo caso un documento acreditativo de su identidad. A su vez, puede dirigir cualquier consulta al Delegado de Protección de Datos a la dirección indicada anteriormente.<p><p class="comment-form-author"><label for="author">Nombre <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Correo electrónico <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='11969' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="822b528982" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="70"/></p>			</form>
+			</div><!-- #respond -->
+	
+					            </div>
+
+
+				              </article> 					</main>
+				</div>
+
+						
+									</div>
+
+			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+				<div id="inner-footer" class="wrap cf">
+
+                    <div class="social">
+    <a href="https://www.facebook.com/tsystemsiberia" target="_blank" rel="publisher" title="T-Systems en Facebook">
+        <i class="icon icon-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/user/TSystemsIberia" target="_blank" rel="publisher" title="T-Systems en Youtube">
+        <i class="icon icon-youtube"></i>
+    </a>
+    <a href="https://twitter.com/TSystems_Iberia" target="_blank" rel="publisher" title="T-Systems en Twitter">
+        <i class="icon icon-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/t--systems-iberia" target="_blank" rel="publisher" title="T-Systems en LinkedIn">
+        <i class="icon icon-linkedin"></i>
+    </a>
+    <a href="https://plus.google.com/+TsystemsblogEspana/about" target="_blank" rel="publisher" title="T-Systems en Google +">
+        <i class="icon icon-googleplus"></i>
+    </a>
+<!--    <a href="https://www.instagram.com/" target="_blank" rel="publisher">
+        <i class="icon icon-instagram"></i>
+    </a>
+-->
+
+<!--    <a href="https://open.spotify.com/" target="_blank" rel="publisher">
+        <i class="icon icon-spotify"></i>
+    </a>
+-->
+
+    <a href="/rss" target="_blank" rel="publisher" title="RSS del Blog de T-Systems">
+        <i class="icon icon-rss"></i>
+    </a>
+</div>
+
+
+
+
+
+
+ 
+ 
+
+                    <a href="https://www.t-systemsblog.es" class="logo">
+                        <img src="https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/images/logo-tsystems-white.png" alt="El blog de T-Systems Iberia" />
+                    </a>
+
+                    <nav role="navigation">
+                        <div class="footer-links cf"><ul id="menu-inferior" class="nav footer-nav cf"><li id="menu-item-10903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10903"><a href="https://www.t-systemsblog.es/acerca-de/">Acerca de</a></li>
+<li id="menu-item-10904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10904"><a href="https://www.t-systemsblog.es/politica-privacidad/">Política de privacidad</a></li>
+<li id="menu-item-11127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11127"><a href="https://www.t-systemsblog.es/condiciones-uso-contenidos/">Condiciones de uso</a></li>
+<li id="menu-item-10906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10906"><a href="https://www.t-systemsblog.es/politica-de-cookies/">Política de cookies</a></li>
+<li id="menu-item-10905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10905"><a href="https://www.t-systemsblog.es/contacto/">Contacto</a></li>
+</ul></div>                    </nav>
+
+					<p class="source-org copyright">Copyright © 2016 T-Systems International GmbH.</p>					
+
+				</div>
+			</footer>
+
+		</div>
+
+				<script>jQuery(document).ready(function ($) { $('p').selectionSharer();});</script>	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		CookieLegal.inicio({
+			ajaxCallback: "https://www.t-systemsblog.es/wp-admin/admin-ajax.php",
+			checkGeoip: "off",
+			mensaje: "Utilizamos cookies propias y de terceros para mejorar la experiencia de navegación, y ofrecer contenidos y publicidad de interés. Al continuar con la navegación entendemos que se acepta nuestra Política de cookies.",
+			pagePermanlink:"https://www.t-systemsblog.es/politica-de-cookies/",
+			tituloPagina: "Política de cookies",
+			web: "https://www.t-systemsblog.es",
+		});
+	});
+	</script>
+	        <script type="text/javascript">
+        jQuery(document).ready(function($){
+            jQuery("#submit").click(function(e){
+                if (!jQuery('.privacyBox').prop('checked')){
+                    e.preventDefault();
+                    alert('Debes aceptar el tratamiento de datos para poder enviar tu comentario.');
+                    return false;
+                }
+            })
+        });
+        </script>
+        <link rel='stylesheet' id='yarppRelatedCss-css'  href='https://www.t-systemsblog.es/wp-content/plugins/yet-another-related-posts-plugin/style/related.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.t-systemsblog.es\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/plugins/contact-form-7/includes/js/scripts.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/themes/tsystems2016/library/js/scripts.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-includes/js/wp-embed.min.js'></script>
+<script async="async" type='text/javascript' src='https://www.t-systemsblog.es/wp-content/plugins/akismet/_inc/form.js'></script>
+<script type='text/javascript' src='https://www.t-systemsblog.es/wp-content/plugins/selection-sharer/js/selection-sharer.js'></script>
+
+	</body>
+
+</html> <!-- end of site. what a ride! -->

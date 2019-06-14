@@ -1,0 +1,2676 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>OZ&Uacute; - Video Juegos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Revisit-After" content="7 Days" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<META HTTP-EQUIV = "imagetoolbar" CONTENT="no" />	
+	<link id="cssfile" href="/graphics/osu/oberon.css" rel="stylesheet" type="text/css">
+	<link id="cssfile" href="/graphics/osu/oberon2.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	/*siempre*/
+	A{text-decoration:none;}
+	A:hover{text-decoration:underline;}
+	BODY{font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:10px;}
+	A:hover{text-decoration:underline;}
+	img{border-style:solid; border-width:0px;}
+	.ozu-cab-base{background-color:#E2B5C8; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+	.ozu-cab-base2{background-color:#F5E5ED}
+	
+	/*cabecera*/
+	.ozu-cab-link{font-size:10px; color:#000000; text-transform:uppercase;padding-right:20px}
+	.ozu-cab-caja{font-size:10px; font-family:verdana;}
+	.ozu-cab-buscador{background-color:#BDC8CE; background-image:url(http://img.ozu.es/cabcomun/bg_busca.gif); background-repeat:no-repeat;}
+	.ozu-cab-ruta{font-size:10px; color:#666666; background-color:#F5F2F4;}
+	.ozu-cab-ruta-actual{color:#CC3399;}
+	
+	/*pie*/
+	.ozu-puntos{background-color:#DF79B0;background-image:url(http://img.ozu.es/cabcomun/bg_puntos.gif);}
+	.ozu-pie-links-color{font-family:Arial, Verdana, Sans-serif, Helvetica;font-size:10px;color:#CC3399;text-decoration:none;font-weight: bold;}
+	.ozu-pie-links-negro{color:#000000;font-family:Arial, Verdana, Sans-serif, Helvetica;font-size:10px;text-decoration:none;font-weight: bold;}
+	.ozu-pie-links-negro:hover{text-decoration:underline;}
+	
+	/*especificos este canal*/
+	</style>
+</head>
+
+<BODY bgcolor=#FFFFFF topmargin="0">
+<iframe align="center" src="http://img.ozu.es/cabvideojuegos/cabecera.html" scrolling="no" height=130 width=784 frameborder=0></iframe><div align="center">
+<!-- first table is responsible to align all the page to the top -->
+<table border=0 width=760  cellpadding=0 cellspacing=0>
+<tr>
+	<td width="152" valign="top">
+		<!-- Custom left bar -->
+		<!-- include the left bar here -->
+
+		
+<script language="JavaScript">
+document.onselectstart = new Function("return true");
+
+     function changeLangFunc(){
+		document.changeLang.action = "/index.htm?";
+		document.changeLang.submit();
+     }
+</script>
+<!-- Language Selection Menu start -->
+<div id="langDiv" style="display:none;">
+    <span class="leftbar_menuOut" style="border-top:none; height: 43; padding-top: 6px; padding left: 8px;background-image: url(/graphics/osu/leftbar_top145.gif);background-repeat: no-repeat;">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="leftbar_category">Choose Your Language</td>
+			</tr>
+		</table>
+	</span>
+	<div>
+		<table style="table-layout:fixed;background-color:#2D7DD4;width:145px;" >
+		<tr>
+			<td height="20">
+				<form method="post" name="changeLang" ID="changeLang" action="">
+					<select name="lc" id="lc" onchange="changeLangFunc();" style="position:relative;left:27px;">
+						
+					</select>
+					<script language=javascript>
+					<!--
+						var langCodeSelected = "es";
+						try{	
+							document.getElementById("l_" + langCodeSelected).selected = true;
+						}
+						catch(er){}
+					//-->
+					</script>
+				</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+	<span><img src="/graphics/osu/langbar_bottom145.gif" width="145" height="15" border="0"></span>
+	<div><img src="/graphics/1pixel.gif" height="5"></div>
+</div>
+<!--/Language Selection Menu end -->
+
+
+<script type="text/javascript">
+function SwitchMenu(obj){
+    if(document.getElementById){
+    var el = document.getElementById(obj);
+    var ar = document.getElementById("cont").getElementsByTagName("DIV");
+        if(el.style.display == "none"){
+            for (var i=0; i<ar.length; i++){
+                ar[i].style.display = "none";
+            }
+            el.style.display = "block";
+        }else{
+            el.style.display = "none";
+        }
+    }
+}
+function ChangeClass(menu, newClass) { 
+     if (document.getElementById) {
+         document.getElementById(menu).className = newClass;
+     } 
+} 
+document.onselectstart = new Function("return true");
+</script>
+
+<!-- Menu start -->
+<div id="cont">
+    <span class="leftbar_menuOut" style="border-top:none; height: 43; padding-top: 6px; padding left: 8px;background-image: url(/graphics/osu/leftbar_top145.gif);background-repeat: no-repeat;">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="leftbar_category">JUEGO ESTRELLA</td>
+			</tr>
+		</table>
+	</span>
+
+    <span id="menu1" class="leftbar_menuOut" onclick="SwitchMenu('sub1')" onmouseover="ChangeClass('menu1','leftbar_menuOver')" onmouseout="ChangeClass('menu1','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Juegos Más Populares</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub1" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110463663&RefId=&origin=leftbar_gm" title="Más información">Mah Jong Quest</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111131887&RefId=&origin=leftbar_gm" title="Más información">Mystery Case Files: Huntsville</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111103570&RefId=&origin=leftbar_gm" title="Más información">Luxor: Amun Rising</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110356410&RefId=&origin=leftbar_gm" title="Más información">Bola mágica 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111155117&RefId=&origin=leftbar_gm" title="Más información">Fish Tycoon</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110272767&RefId=&origin=leftbar_gm" title="Más información">Bejeweled 2 Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110521297&RefId=&origin=leftbar_gm" title="Más información">Incrediball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110492280&RefId=&origin=leftbar_gm" title="Más información">Aloha Solitaire</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110327910&RefId=&origin=leftbar_gm" title="Más información">Big Kahuna Reef</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110320740&RefId=&origin=leftbar_gm" title="Más información">Jigsaw 365</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111160880&RefId=&origin=leftbar_gm" title="Más información">Wonderlines</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110130890&RefId=&origin=leftbar_gm" title="Más información">Pacific Heroes</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110182610&RefId=&origin=leftbar_gm" title="Más información">Feeding Frenzy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110378737&RefId=&origin=leftbar_gm" title="Más información">Luxor</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110452667&RefId=&origin=leftbar_gm" title="Más información">Magic Ball 2: New Worlds</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110524983&RefId=&origin=leftbar_gm" title="Más información">Magic Match</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11110237&RefId=&origin=leftbar_gm" title="Más información">Phlinx To Go</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111107777&RefId=&origin=leftbar_gm" title="Más información">Fairies</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110374720&RefId=&origin=leftbar_gm" title="Más información">Poker Superstars</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110523340&RefId=&origin=leftbar_gm" title="Más información">Offroad Arena</a></td></tr>
+        
+</table></div>
+    <span id="menu2" class="leftbar_menuOut" onclick="SwitchMenu('sub2')" onmouseover="ChangeClass('menu2','leftbar_menuOver')" onmouseout="ChangeClass('menu2','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Nuevos Juegos</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub2" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11118287&RefId=&origin=leftbar_gm" title="Más información">Alien Stars</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111170887&RefId=&origin=leftbar_gm" title="Más información">Egg vs. Chicken</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111185967&RefId=&origin=leftbar_gm" title="Más información">Karu</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111183900&RefId=&origin=leftbar_gm" title="Más información">7 Wonders of the Ancient World</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111166120&RefId=&origin=leftbar_gm" title="Más información">Strike Ball 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11111090&RefId=&origin=leftbar_gm" title="Más información">Saints and Sinners Bowling</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111164947&RefId=&origin=leftbar_gm" title="Más información">Funkiball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111155117&RefId=&origin=leftbar_gm" title="Más información">Fish Tycoon</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111153797&RefId=&origin=leftbar_gm" title="Más información">Snowy Fish Frenzy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111168990&RefId=&origin=leftbar_gm" title="Más información">Tradewinds Legends</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110523340&RefId=&origin=leftbar_gm" title="Más información">Offroad Arena</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111169773&RefId=&origin=leftbar_gm" title="Más información">Valentine’s Gift</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111131887&RefId=&origin=leftbar_gm" title="Más información">Mystery Case Files: Huntsville</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111158213&RefId=&origin=leftbar_gm" title="Más información">Kakuro Master</a></td></tr>
+        
+</table></div>
+    <span id="menu3" class="leftbar_menuOut" onclick="SwitchMenu('sub3')" onmouseover="ChangeClass('menu3','leftbar_menuOver')" onmouseout="ChangeClass('menu3','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Rompecabezas</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub3" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110524983&RefId=&origin=leftbar_gm" title="Más información">Magic Match</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110475607&RefId=&origin=leftbar_gm" title="Más información">Sudoku Quest</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111128790&RefId=&origin=leftbar_gm" title="Más información">King Kong: Skull Island Adventure</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110462883&RefId=&origin=leftbar_gm" title="Más información">Jewel Quest</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110327910&RefId=&origin=leftbar_gm" title="Más información">Big Kahuna Reef</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110289377&RefId=&origin=leftbar_gm" title="Más información">Cubis Gold 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110272767&RefId=&origin=leftbar_gm" title="Más información">Bejeweled 2 Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110532173&RefId=&origin=leftbar_gm" title="Más información">Fortune Tiles Gold</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111135287&RefId=&origin=leftbar_gm" title="Más información">Legend of Aladdin</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110522267&RefId=&origin=leftbar_gm" title="Más información">Gem Shop</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110320740&RefId=&origin=leftbar_gm" title="Más información">Jigsaw 365</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111169773&RefId=&origin=leftbar_gm" title="Más información">Valentine’s Gift</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11007977&RefId=&origin=leftbar_gm" title="Más información">BeTrapped!</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110080263&RefId=&origin=leftbar_gm" title="Más información">Chainz</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110383590&RefId=&origin=leftbar_gm" title="Más información">Wonderland - Secret Worlds</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111158213&RefId=&origin=leftbar_gm" title="Más información">Kakuro Master</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110256293&RefId=&origin=leftbar_gm" title="Más información">Una serie de desafortunados sucesos</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110002357&RefId=&origin=leftbar_gm" title="Más información">Inpector Parker</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110331157&RefId=&origin=leftbar_gm" title="Más información">Adventure Inlay</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110203670&RefId=&origin=leftbar_gm" title="Más información">5 Spots II</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110189860&RefId=&origin=leftbar_gm" title="Más información">Pipeline</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111131887&RefId=&origin=leftbar_gm" title="Más información">Mystery Case Files: Huntsville</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110461697&RefId=&origin=leftbar_gm" title="Más información">Cubis Gold</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110161390&RefId=&origin=leftbar_gm" title="Más información">Puzzaz</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110296553&RefId=&origin=leftbar_gm" title="Más información">Magic Vines</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110031733&RefId=&origin=leftbar_gm" title="Más información">Combo Caos</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110032653&RefId=&origin=leftbar_gm" title="Más información">QBz</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110183110&RefId=&origin=leftbar_gm" title="Más información">Shape Shifter</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110110200&RefId=&origin=leftbar_gm" title="Más información">SpongeBob Collapse</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110132687&RefId=&origin=leftbar_gm" title="Más información">5 Spots</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110135903&RefId=&origin=leftbar_gm" title="Más información">Genius Move</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110157827&RefId=&origin=leftbar_gm" title="Más información">Domino Master</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110254200&RefId=&origin=leftbar_gm" title="Más información">Fiber Twig</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111160880&RefId=&origin=leftbar_gm" title="Más información">Wonderlines</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110190170&RefId=&origin=leftbar_gm" title="Más información">Puzzle Express</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110156327&RefId=&origin=leftbar_gm" title="Más información">Jigs@w Platinum Edition</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110321137&RefId=&origin=leftbar_gm" title="Más información">Shapo Gold</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110328297&RefId=&origin=leftbar_gm" title="Más información">Revolved</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110249967&RefId=&origin=leftbar_gm" title="Más información">Mad Caps</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110043123&RefId=&origin=leftbar_gm" title="Más información">Puzzle Inlay</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110045280&RefId=&origin=leftbar_gm" title="Más información">Super Collapse II</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110107200&RefId=&origin=leftbar_gm" title="Más información">Magic Inlay</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110240733&RefId=&origin=leftbar_gm" title="Más información">Cosmic Switch</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110468103&RefId=&origin=leftbar_gm" title="Más información">Pixelus</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110470430&RefId=&origin=leftbar_gm" title="Más información">Dynomite</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110093793&RefId=&origin=leftbar_gm" title="Más información">Digby’s Donuts</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110293567&RefId=&origin=leftbar_gm" title="Más información">Gold Rush</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110402387&RefId=&origin=leftbar_gm" title="Más información">Oasis</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110422737&RefId=&origin=leftbar_gm" title="Más información">Honey Switch</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110420300&RefId=&origin=leftbar_gm" title="Más información">Penguin Puzzle</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110403863&RefId=&origin=leftbar_gm" title="Más información">Charm Tale</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11044227&RefId=&origin=leftbar_gm" title="Más información">Puzzaz Plus</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110415417&RefId=&origin=leftbar_gm" title="Más información">Gold Fever</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111167870&RefId=&origin=leftbar_gm" title="Más información">Zulu Gems</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110454580&RefId=&origin=leftbar_gm" title="Más información">AstroPop</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110181373&RefId=&origin=leftbar_gm" title="Más información">Bounce Out Blitz</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110332330&RefId=&origin=leftbar_gm" title="Más información">Iggle Pop</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110479110&RefId=&origin=leftbar_gm" title="Más información">Glow Worm</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11048363&RefId=&origin=leftbar_gm" title="Más información">Asea</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110514813&RefId=&origin=leftbar_gm" title="Más información">Fiber Twig 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110516180&RefId=&origin=leftbar_gm" title="Más información">Ancient Sudoku</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110530357&RefId=&origin=leftbar_gm" title="Más información">Chainz 2: reencadenado</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111112380&RefId=&origin=leftbar_gm" title="Más información">GameHouse Sudoku</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111107777&RefId=&origin=leftbar_gm" title="Más información">Fairies</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110560680&RefId=&origin=leftbar_gm" title="Más información">The Lost City of Gold</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110559920&RefId=&origin=leftbar_gm" title="Más información">Hexalot</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111183900&RefId=&origin=leftbar_gm" title="Más información">7 Wonders of the Ancient World</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110116857&RefId=&origin=leftbar_gm" title="Más información">Rocket Mania</a></td></tr>
+        
+</table></div>
+    <span id="menu4" class="leftbar_menuOut" onclick="SwitchMenu('sub4')" onmouseover="ChangeClass('menu4','leftbar_menuOver')" onmouseout="ChangeClass('menu4','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Cónsola</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub4" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111154337&RefId=&origin=leftbar_gm" title="Más información">Adventure Ball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111155117&RefId=&origin=leftbar_gm" title="Más información">Fish Tycoon</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110509177&RefId=&origin=leftbar_gm" title="Más información">Bricks of Atlantis</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110429257&RefId=&origin=leftbar_gm" title="Más información">Tumblebugs</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111164947&RefId=&origin=leftbar_gm" title="Más información">Funkiball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11031273&RefId=&origin=leftbar_gm" title="Más información">Diner Dash</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110356410&RefId=&origin=leftbar_gm" title="Más información">Bola mágica 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110280723&RefId=&origin=leftbar_gm" title="Más información">Ricochet Lost Worlds: Recharged</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110298790&RefId=&origin=leftbar_gm" title="Más información">Bricks of Egypt</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11025560&RefId=&origin=leftbar_gm" title="Más información">Wik And The Fable of Souls</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111166120&RefId=&origin=leftbar_gm" title="Más información">Strike Ball 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110172170&RefId=&origin=leftbar_gm" title="Más información">Ballistik</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110215763&RefId=&origin=leftbar_gm" title="Más información">Chicken Invaders 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110164187&RefId=&origin=leftbar_gm" title="Más información">Ricochet Lost Worlds</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111153797&RefId=&origin=leftbar_gm" title="Más información">Snowy Fish Frenzy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110225310&RefId=&origin=leftbar_gm" title="Más información">Dino And Aliens</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110094233&RefId=&origin=leftbar_gm" title="Más información">Yummy Dots</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110196733&RefId=&origin=leftbar_gm" title="Más información">Yummy Dots 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110053700&RefId=&origin=leftbar_gm" title="Más información">Magic Ball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110106903&RefId=&origin=leftbar_gm" title="Más información">Betty’s Beer Bar</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=1100280&RefId=&origin=leftbar_gm" title="Más información">Ricochet Xtreme</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110351257&RefId=&origin=leftbar_gm" title="Más información">Bricks of Camelot</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110452667&RefId=&origin=leftbar_gm" title="Más información">Magic Ball 2: New Worlds</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110511257&RefId=&origin=leftbar_gm" title="Más información">Twistingo Bingo</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110517887&RefId=&origin=leftbar_gm" title="Más información">Trijinx</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110515393&RefId=&origin=leftbar_gm" title="Más información">Splash</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111109977&RefId=&origin=leftbar_gm" title="Más información">Roller Rush</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111108643&RefId=&origin=leftbar_gm" title="Más información">Memory Loops</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111151687&RefId=&origin=leftbar_gm" title="Más información">Time Breaker</a></td></tr>
+        
+</table></div>
+    <span id="menu5" class="leftbar_menuOut" onclick="SwitchMenu('sub5')" onmouseover="ChangeClass('menu5','leftbar_menuOver')" onmouseout="ChangeClass('menu5','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Acción</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub5" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111103570&RefId=&origin=leftbar_gm" title="Más información">Luxor: Amun Rising</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110251793&RefId=&origin=leftbar_gm" title="Más información">Insaniquarium Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11011713&RefId=&origin=leftbar_gm" title="Más información">Zuma Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110378737&RefId=&origin=leftbar_gm" title="Más información">Luxor</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111185967&RefId=&origin=leftbar_gm" title="Más información">Karu</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110375407&RefId=&origin=leftbar_gm" title="Más información">After the End</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110410580&RefId=&origin=leftbar_gm" title="Más información">Air Strike 2: Gulf Thunder</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110523340&RefId=&origin=leftbar_gm" title="Más información">Offroad Arena</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11118287&RefId=&origin=leftbar_gm" title="Más información">Alien Stars</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111133710&RefId=&origin=leftbar_gm" title="Más información">Chicken Attack</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11110237&RefId=&origin=leftbar_gm" title="Más información">Phlinx To Go</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110379990&RefId=&origin=leftbar_gm" title="Más información">Tradewinds 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110521297&RefId=&origin=leftbar_gm" title="Más información">Incrediball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110171717&RefId=&origin=leftbar_gm" title="Más información">Hamsterball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110130890&RefId=&origin=leftbar_gm" title="Más información">Pacific Heroes</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110199593&RefId=&origin=leftbar_gm" title="Más información">Platypus</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111168990&RefId=&origin=leftbar_gm" title="Más información">Tradewinds Legends</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110182610&RefId=&origin=leftbar_gm" title="Más información">Feeding Frenzy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111156907&RefId=&origin=leftbar_gm" title="Más información">Water Bugs</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110281137&RefId=&origin=leftbar_gm" title="Más información">Panda Craze</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110088530&RefId=&origin=leftbar_gm" title="Más información">Alien Shooter</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110192153&RefId=&origin=leftbar_gm" title="Más información">Air Strike 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111170887&RefId=&origin=leftbar_gm" title="Más información">Egg vs. Chicken</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110097840&RefId=&origin=leftbar_gm" title="Más información">Alien Sky</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110012623&RefId=&origin=leftbar_gm" title="Más información">Atomaders</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110089733&RefId=&origin=leftbar_gm" title="Más información">Air Strike 3D</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110052997&RefId=&origin=leftbar_gm" title="Más información">Beetle Junior</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110387443&RefId=&origin=leftbar_gm" title="Más información">Cosmic Bugs</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110471710&RefId=&origin=leftbar_gm" title="Más información">Arma total</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11110173&RefId=&origin=leftbar_gm" title="Más información">Chicken Invaders 2: Christmas Edition</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111104380&RefId=&origin=leftbar_gm" title="Más información">Island Wars 2: Christmas Edition</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111116670&RefId=&origin=leftbar_gm" title="Más información">Loco: Edición de Navidad</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110558280&RefId=&origin=leftbar_gm" title="Más información">Cactus Bruce and the Corporate Monkeys</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11055467&RefId=&origin=leftbar_gm" title="Más información">Beetle Bomp</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111106993&RefId=&origin=leftbar_gm" title="Más información">R.I.P</a></td></tr>
+        
+</table></div>
+    <span id="menu6" class="leftbar_menuOut" onclick="SwitchMenu('sub6')" onmouseover="ChangeClass('menu6','leftbar_menuOver')" onmouseout="ChangeClass('menu6','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Carta y Casino</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub6" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110492280&RefId=&origin=leftbar_gm" title="Más información">Aloha Solitaire</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110374720&RefId=&origin=leftbar_gm" title="Más información">Poker Superstars</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110271577&RefId=&origin=leftbar_gm" title="Más información">Saints and Sinners Bingo</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110423840&RefId=&origin=leftbar_gm" title="Más información">Tik&rsquo;s Texas Hold &rsquo;em</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110252700&RefId=&origin=leftbar_gm" title="Más información">Catan: el juego de computadora</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110430857&RefId=&origin=leftbar_gm" title="Más información">Mansión de cartas</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110268750&RefId=&origin=leftbar_gm" title="Más información">Shape Solitaire</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110541797&RefId=&origin=leftbar_gm" title="Más información">Aloha Tripeaks</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11016643&RefId=&origin=leftbar_gm" title="Más información">Slingo</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110302410&RefId=&origin=leftbar_gm" title="Más información">Solitaire Poker Pack</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110151950&RefId=&origin=leftbar_gm" title="Más información">Two feet texas Hold ‘em</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110000170&RefId=&origin=leftbar_gm" title="Más información">Solitario Top Ten</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110198810&RefId=&origin=leftbar_gm" title="Más información">Ancient Tripeaks</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11002130&RefId=&origin=leftbar_gm" title="Más información">Five Card Frenzy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110147467&RefId=&origin=leftbar_gm" title="Más información">Five Card Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110417680&RefId=&origin=leftbar_gm" title="Más información">Big Money</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110518183&RefId=&origin=leftbar_gm" title="Más información">Ancient Trijong</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110526803&RefId=&origin=leftbar_gm" title="Más información">Chip$</a></td></tr>
+        
+</table></div>
+    <span id="menu7" class="leftbar_menuOut" onclick="SwitchMenu('sub7')" onmouseover="ChangeClass('menu7','leftbar_menuOver')" onmouseout="ChangeClass('menu7','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Deportes</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub7" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110086310&RefId=&origin=leftbar_gm" title="Más información">Cue Club</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110329357&RefId=&origin=leftbar_gm" title="Más información">Gutterball 2</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11111090&RefId=&origin=leftbar_gm" title="Más información">Saints and Sinners Bowling</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110401840&RefId=&origin=leftbar_gm" title="Más información">Tennis Titans</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110267470&RefId=&origin=leftbar_gm" title="Más información">Rocketbowl</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110030590&RefId=&origin=leftbar_gm" title="Más información">Gutterball</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110136140&RefId=&origin=leftbar_gm" title="Más información">Golf Adventure Galaxy</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110129670&RefId=&origin=leftbar_gm" title="Más información">Touchdown Madness</a></td></tr>
+        
+</table></div>
+    <span id="menu8" class="leftbar_menuOut" onclick="SwitchMenu('sub8')" onmouseover="ChangeClass('menu8','leftbar_menuOver')" onmouseout="ChangeClass('menu8','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Mahjong</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub8" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110096903&RefId=&origin=leftbar_gm" title="Más información">Mahjong Valentín</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110463663&RefId=&origin=leftbar_gm" title="Más información">Mah Jong Quest</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110006250&RefId=&origin=leftbar_gm" title="Más información">Mahjong Torres II</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110330430&RefId=&origin=leftbar_gm" title="Más información">Mah Jong Medley</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110419183&RefId=&origin=leftbar_gm" title="Más información">Mahjongg Mystery</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110242610&RefId=&origin=leftbar_gm" title="Más información">Mahjongg Fortuna</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=1101880&RefId=&origin=leftbar_gm" title="Más información">Super Mah Jong Solitaire</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110501623&RefId=&origin=leftbar_gm" title="Más información">Mahjong Towers Eternity</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110533617&RefId=&origin=leftbar_gm" title="Más información">Mahjong Journey of Enlightenment</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111117397&RefId=&origin=leftbar_gm" title="Más información">Mahjong Holidays 2005</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=111125120&RefId=&origin=leftbar_gm" title="Más información">Mah Jong Adventures</a></td></tr>
+        
+</table></div>
+    <span id="menu9" class="leftbar_menuOut" onclick="SwitchMenu('sub9')" onmouseover="ChangeClass('menu9','leftbar_menuOver')" onmouseout="ChangeClass('menu9','leftbar_menuOut')">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/graphics/osu/leftbar_arrow.gif" width="11" height="18" hspace="5" border="0"></td>
+				<td class="leftbar_category">Palabra</td>
+			</tr>
+		</table>
+	</span>
+    <div class="leftbar_submenu" id="sub9" style="display:none;">
+    <table border="0" cellspacing="1" cellpadding="0">
+
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110469307&RefId=&origin=leftbar_gm" title="Más información">Bookworm Deluxe</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110115763&RefId=&origin=leftbar_gm" title="Más información">Flip Words</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110241327&RefId=&origin=leftbar_gm" title="Más información">Text Express</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110277107&RefId=&origin=leftbar_gm" title="Más información">Trivia Machine</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110009217&RefId=&origin=leftbar_gm" title="Más información">Word Wizard</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=11014843&RefId=&origin=leftbar_gm" title="Más información">Word Challenger</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110131217&RefId=&origin=leftbar_gm" title="Más información">Infinite Crosswords</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110039187&RefId=&origin=leftbar_gm" title="Más información">SpelVin</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110047560&RefId=&origin=leftbar_gm" title="Más información">Super Text Twist</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110359607&RefId=&origin=leftbar_gm" title="Más información">Mind Machine</a></td></tr>
+        
+
+        <tr><td class="leftbar_cell"><a href="/game.htm?code=110465160&RefId=&origin=leftbar_gm" title="Más información">Word Mojo Gold</a></td></tr>
+        
+</table></div>
+	
+    <span class="leftbar_menuOut"><img src="/graphics/osu/leftbar_bottom145.gif" width="145" height="43" border="0"></span>
+</div>
+<!-- Menu end -->
+
+		   
+<!--------------------------------------->
+<!---------- NEW BY OZU starts ---------->
+<!--------------------------------------->
+
+<!-- QDQ -->
+<style type="text/css">
+.ozu-col1-tit{background-color:#EBF0F3;color:#DE79B5;font-weight:bold; padding-left:2px; font-size:10px;}
+.ozu-col1-txt{color:#DE79B5;font-weight:bold; font-size:9px; padding-bottom:2px;}
+.col1-caja{font-family:Verdana; font-size:9px;}
+.qdq-mini{font-family:Verdana; font-size:9px;color:#DE79B5; text-decoration:none;}
+.qdq-boton{font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:10px;background-color:#FFFFFF; border-style:solid; border-width:1px; border-color:#DE79B5; text-transform:uppercase; color:#DE79B5; font-weight:normal;}
+</style>
+<script type="text/javascript">
+<!--
+//-----QDQ------
+function campos() {
+buscar= new RegExp('\\w','gi');
+if (!(buscar.test(document.qdqform.pQue.value) || buscar.test(document.qdqform.pQuien.value))){
+alert('Por favor, rellene al menos uno de los dos campos "Actividad" o "Empresa"');
+return false;
+}
+if(document.qdqform.pDonde.value) return true;
+else {
+alert('Por favor, debe rellenar el campo Dónde');
+return false;
+}
+}
+function ayudaqdq()
+{
+msgWindow=window.open('http://guia.ozu.es/ayuda.html','ayudaqdq','scrollbars=yes,width=470,height=300');
+}
+//-->
+</script>
+<table width="145" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="ozu-col1-tit" height="35"><a class="ozu-col1-tit" href="http://guia.ozu.es/" target="_blank">&nbsp;&nbsp;LA GUIA QDQ</a></td>
+<td class="ozu-col1-tit" width="18"><a class="ozu-col1-tit" href="http://guia.ozu.es/" target="_blank"><img src="http://img.ozu.es/cabvideojuegos/lupa.gif" width="11" height="12" alt="La guia QDQ" border="0" hspace="10" vspace="2"></a></td>
+</tr>
+</table>
+<table width="145" cellpadding="0" cellspacing="0" border="0" bgcolor="#EBF0F3" style="border-style:solid; border-width:0px; border-bottom-width:3px; border-color:#DE79B5;">
+<form method="get" name="qdqform" action="http://ww2.qdq.com/buscar.cfm" onSubmit="return campos()" target="_blank">
+<tr>
+  <td width="3" rowspan="99"><img width="1" height="1" hspace="4"></td>
+  <td><img width="1" height="1"></td>
+  <td width="3" rowspan="99"><img width="1" height="1" hspace="4"></td>
+</tr>
+<tr>
+  <td class="ozu-col1-txt">Actividad</td>
+</tr>
+<tr>
+  <td>
+  <select name="pQue" id="pQue" class="col1-caja" style="width:127px;">
+  <option value=""></option><option value="Academias">Academias</option><option value="Accesorios para telefonía móvil" selected>Accesorios telefon&iacute;a</option><option value="Aerobic">Aerobic</option><option value="Agencias de viajes">Agencias de viajes</option><option value="Ajedrez">Ajedrez</option><option value="Albergues y campamentos">Albergues</option><option value="Alojamientos rurales">Alojamientos rurales</option><option value="Alquiler de coches y furgonetas">Alquiler coches</option><option value="Artes gráficas">Artes gráficas</option><option value="Asesorías de turismo">Asesorías turismo</option><option value="Asociaciones">Asociaciones</option><option value="Autoescuelas">Autoescuelas</option><option value="Balnearios">Balnearios</option><option value="Bares">Bares</option><option value="Bicicletas">Bicicletas</option><option value="Bocaterías">Bocaterías</option><option value="Boleras">Boleras</option><option value="Buceo">Buceo</option><option value="Cacerías">Cacerías</option><option value="Cafés Internet">Cafés Internet</option><option value="Campamentos">Campamentos</option><option value="Campings">Campings</option><option value="Campos de golf">Campos de golf</option><option value="Campos de tiro">Campos de tiro</option><option value="Casas rurales">Casas rurales</option><option value="CD´s">CD´s</option><option value="Centros comerciales">Centros comerciales</option><option value="Centros de estética">Centros de estética</option><option value="Centros deportivos">Centros deportivos</option><option value="Cibercafés">Cibercafés</option><option value="Cines">Cines</option><option value="Clubs deportivos">Clubs deportivos</option><option value="Comics">Comics</option><option value="Concesionarios">Concesionarios</option><option value="Decoración y diseño de interiores">Decoración</option><option value="Deportes">Deportes</option><option value="Deportes de aventura">Deportes aventura</option><option value="Deportes Naúticos">Deportes naúticos</option><option value="Discotecas y Salas de fiesta">Discotecas</option><option value="Diseño gráfico">Diseño gráfico</option><option value="Disfraces">Disfraces</option><option value="Ecoturismo">Ecoturismo</option><option value="Escuelas de fútbol">Escuelas de fútbol</option><option value="Escuelas de música, danza e interpretación">Escuelas de música</option><option value="Escuelas de natación">Escuelas natación</option><option value="Escuelas de peluquería y estética">Escuelas peluquería</option><option value="Esquí">Esquí</option><option value="Excursiones">Excursiones</option><option value="Fiestas">Fiestas</option><option value="Fitness">Fitness</option><option value="Floristerías">Floristerías</option><option value="Fontaneros">Fontaneros</option><option value="Fotografía">Fotografía</option><option value="Franquicias">Franquicias</option><option value="Gimnasios">Gimnasios</option><option value="Hoteles">Hoteles</option><option value="Informática">Informática</option><option value="Internet">Internet</option><option value="Juegos">Juegos</option><option value="Karaokes">Karaokes</option><option value="Motos">Motos</option><option value="Música">Música</option><option value="Oficinas de turismo">Oficinas de turismo</option><option value="Paradores de turismo">Paradores turismo</option><option value="Parques de atracciones y ocio">Parques de ocio</option><option value="Parques infantiles">Parques infantiles</option><option value="Piscinas">Piscinas</option><option value="Pistas de deporte">Pistas de deporte</option><option value="Polideportivos">Polideportivos</option><option value="Pubs y bares de copas">Pubs</option><option value="Puenting">Puenting</option><option value="Rafting">Rafting</option><option value="Regalos">Regalos</option><option value="Restaurantes">Restaurantes</option><option value="Salas de Conciertos">Salas de conciertos</option><option value="Salas de exposiciones">Salas exposiciones</option><option value="Senderismo">Senderismo</option><option value="Servicios turísticos">Servicios turísticos</option><option value="Surf">Surf</option><option value="Tai-chi">Tai-chi</option><option value="Talleres">Talleres</option><option value="Tatuajes">Tatuajes</option><option value="Teatros">Teatros</option><option value="Telefonía movil">Telefonía movil</option><option value="Tiendas de deportes">Tiendas de deporte</option><option value="Turismo">Turismo</option><option value="Turismo activo">Turismo activo</option><option value="Turismo rural">Turismo rural</option><option value="Universidades">Universidades</option><option value="Viajes">Viajes</option><option value="Videojuegos">Videojuegos</option>
+  </select>
+  </td>
+</tr>
+<tr>
+  <td height="2"><img width="1" height="1"></td>
+</tr>
+<tr>
+  <td class="qdq-mini">&nbsp;&nbsp;&raquo;&nbsp;<a href="http://guia.ozu.es/indexqdq.html" class="qdq-mini">M&aacute;s actividades</a>&nbsp;</td>
+</tr>
+<tr>
+  <td height="5"><img width="1" height="1"></td>
+</tr>
+<tr>
+  <td class="ozu-col1-txt">Empresa</td>
+</tr>
+<tr>
+  <td><input type="text" name="pQuien" class="col1-caja" style="width:127px;"></td>
+</tr>
+<tr>
+  <td height="5"><img width="1" height="1"></td>
+</tr>
+<tr>
+  <td class="ozu-col1-txt">D&oacute;nde</td>
+</tr>
+<tr>
+  <td><input type="text" name="pDonde" class="col1-caja" style="width:127px;"></td>
+</tr>
+<tr>
+  <td height="5"><img width="1" height="1"></td>
+</tr>
+<tr>
+<td>
+  <table cellpadding="0" cellspacing="2" border="0">
+  <tr>
+    <td><input type="radio" name="pTipo" value="provincia" onFocus="this.blur();"></td><td class="ozu-col1-txt">Provincia</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="pTipo" value="poblacion" onFocus="this.blur();"></td><td class="ozu-col1-txt">Localidad</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="pTipo" value="cp" onFocus="this.blur();"></td><td class="ozu-col1-txt">C.P.</td>
+  </tr>
+  </table>
+</td>
+</tr>
+<tr>
+  <td height="5"><img width="1" height="1"></td>
+</tr>
+<tr>
+  <td align="center">
+  <input type="hidden" name="pCliente" value="ozu">
+  <input type="hidden" name="pNueva" value="http://guia.ozu.es/">
+  <input type="hidden" name="pCalle" value="">
+  <input type="hidden" name="pPortal" value="">
+  <input type="submit" name="buscar1" value="Buscar" width="85" height="22" class="qdq-boton" onFocus="this.blur();">
+  </td>
+</tr>
+<tr>
+  <td height="15"><img width="1" height="1"></td>
+</tr>
+</form>
+</table><img height="1" width="1" vspace="5" border="0" alt=""><br>
+<!-- /QDQ -->
+
+<center>
+<!-- Boton banner -->
+<OAS URL=www.ozu.es/index.html@Top!Top> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var sitepage = "arcade.ozu.es/index.html";
+var position ="Middle1";
+var query = escape("");
+_version=10;
+//-->
+</script> 
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+_version=11;
+if (navigator.userAgent.indexOf('Mozilla/3') != -1)
+{
+_version=10;
+}
+// -->
+</script>
+<SCRIPT LANGUAGE="JavaScript" src="http://www.ozu.es/js/banners.js">
+</script>
+</OAS>
+<!-- /Boton banner -->
+<br><br>
+<!-- PUBLI SKY -->
+<OAS URL=www.ozu.es/index.html@Top!Top>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+var sitepage = "arcade.ozu.es/index.html";
+var position ="BottomRight";
+var query = escape("");
+_version=10;
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+_version=11;
+if (navigator.userAgent.indexOf('Mozilla/3') != -1)
+{
+_version=10;
+}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" src="http://www.ozu.es/js/banners.js">
+</script>
+</OAS>
+<!-- FIN PUBLI SKY -->
+</center>
+<!--------------------------- ---------->
+<!---------- /NEW BY OZU ends ---------->
+<!--------------------------- ---------->
+
+		   
+		   
+		<!-- / End of left bar -->
+
+	</td>
+	<td width="597" valign="top">
+	
+	
+	<link id="cssfile" href="/graphics/osu/oberon2.css" rel="stylesheet" type="text/css"><link>
+	
+	<script language="JavaScript" type="text/javascript">
+		//when mouse over item
+		function doMouseOver(obj)
+		{
+			obj.src = (obj.src).replace("_out", "_over");
+			return;
+		}
+		//when mouse out item
+		function doMouseOut(obj)
+		{
+			obj.src = (obj.src).replace("_over", "_out");
+			return;
+		}
+		
+		//pop the online version popup
+		function popOnlineVersion(code)
+		{
+			window.open("/onlineGame.htm?code=" + code, "online", "width=780, height=535");
+			return;
+		}
+		
+	</script>
+<center>
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+<tr>
+	<td width="597" valign="top">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td height="21" valign="top" nowrap style="background-image : url(/graphics/osu/roundBorderHeader2.gif);background-position:top right; background-repeat: no-repeat;">
+			<!-- Top nav bar -->
+				<table border="0" cellspacing="0" cellpadding="0" ID="Table1">
+				<tr><td height="5" colspan="10"></td></tr>
+				<tr>
+					<td valign="top">&nbsp;<a href="/index.htm?RefId=&Session=&origin=pmenu_ind"><img src="/graphics/osu/es/navTopGames_out.gif" alt="" hspace="0" border="0" onMouseOver="doMouseOver(this);" onMouseOut="doMouseOut(this);"></a></td>
+					<td valign="top"><a href="/moreGames.htm?RefId=&Session=&origin=pmenu_mrgm"><img src="/graphics/osu/es/navMoreGames_out.gif" alt="" hspace="0" border="0" onMouseOver="doMouseOver(this);" onMouseOut="doMouseOut(this);"></a></td>
+					<td valign="top"><a href="/myGames.htm?RefId=&Session=&origin=pmenu_mygm"><img src="/graphics/osu/es/navMy_out.gif" alt="" hspace="0" border="0" onMouseOver="doMouseOver(this);" onMouseOut="doMouseOut(this);"></a></td>
+					<td width="100%">&nbsp;</td>		            
+				</tr>
+				</table>
+			<!-- /Top nav bar -->
+			</td>
+		</tr>
+		<tr>
+			<td class="oberonBorder">
+
+
+<script language="javascript">
+	function playMultiOnline(gCode)
+	{
+		//window.open("http://209.208.140.98/OnlineEntrance.aspx?code=" +gCode +"&channel=110098793", "multi", "width=800, height=535, top=100, left=100, status=yes");
+		//return;
+		//window.open("http://multi.dev.oberon-media.com/OnlineEntrance.aspx?code=" +gCode +"&channel=110098793", "multi", "width=800, height=535, top=100, left=100, status=yes");
+		window.open("/multiplayer/OnlineEntrance.aspx?RefId=&code=" +gCode +"&channel=110098793", "multi", "width=800, height=535, top=100, left=100, status=yes");
+		return;
+	}
+	
+	//run the download event from parent window to get the corect domain for the cookie
+	function downloadOnlineGame(script){
+		try{
+			var strScript = new String();
+			strScript = script;
+			while (strScript.indexOf("%27") != -1)
+				strScript = strScript.replace("%27","'");
+			window.opener.eval(strScript);
+			
+		}
+		catch(er){}
+	}
+	
+	//return a string represents a date formated according to the regional setting
+	//on the client machine.
+	function convertDateToLocal(date)
+	{
+		var myDate=new Date(date);
+		//fixme - returns long format
+		//return myDate.toLocaleString();
+		return date; 
+	}
+
+	function popOnlineExt(gameUrl, gameCode, origin, width, height) {    
+        	window.open(gameUrl + "?code=" + gameCode + "&origin=" + origin, "online", "width=" + width + ", height=" + height);
+        	return;
+	}
+
+
+	function getCookie(name) { 
+		try {
+			var index = document.cookie.indexOf(name + "=");
+			if (index == -1) return null;
+			index = document.cookie.indexOf("=", index) + 1;
+			var endstr = document.cookie.indexOf(";", index);
+			if (endstr == -1) endstr = document.cookie.length;
+			return unescape(document.cookie.substring(index, endstr));
+		}
+		catch(er){}
+	}
+	
+	//name - the name of cookie
+	//value - the value of the cookie
+	//expiration - the expiration period of the cookie (in days)
+	function setCookie(name, value, expiration) { // use: setCookie("name", value);
+		try {
+			var strDate = new String();
+			strDate = value.toString();
+			//replace all chars with URL encoding
+			while (strDate.indexOf(" ") != -1) {
+				strDate = strDate.replace(" ","%20");
+			}
+			while (strDate.indexOf(":") != -1) {
+				strDate = strDate.replace(":","%3A");
+			}
+			strDate = strDate.replace("+","%2B");
+			strDate = strDate.replace("-","%2D");
+			var today = new Date();
+			var expiry = new Date(today.getTime() + expiration * 24 * 60 * 60 * 1000); 
+			if (strDate != null && strDate != "") {
+				document.cookie=name + "=" + strDate + "; expires=" + expiry.toGMTString();
+			}
+		}
+		catch(er){}
+	}
+	
+	
+	//stores the download time per sku fixme and refid?
+	//the page that is calling this function is required to include the omniture js files   
+	function omnitureLogDownload(gameCode, omnitureChannel, gameReportName) {
+		try {
+			var expirationPeriod = 180; //the number of days before expiration
+			var today = new Date();
+			setCookie(gameCode,today,expirationPeriod);
+
+			s_linkType="d";
+			s_linkName=gameReportName;
+			s_events="event1";
+			s_eVar11="3/30/2006 3:27:26 PM";
+			s_products=";"+gameReportName;
+			s_lnk=s_co(this);		
+			s_gs(omnitureChannel);
+		}
+		catch(er){}
+		
+		return true;
+		
+	}
+
+	//oDate - a string represents the date and time the user downloaded the game	
+	function getTimeBucket(oDate)
+	{
+		try {
+			var today = new Date();
+			var downloadDate = new Date(oDate);
+			var timeGap		
+			
+			//the gap between downloadDate and today in hours
+			timeGap = ((today.getTime() - downloadDate.getTime())/ (60*60*1000))	
+			//fit the time gap into a descret bucket
+			var timeBucket 
+			if (downloadDate.getTime() == 0 || isNaN(timeGap)) {
+				timeBucket = "Unknown";
+			} else if (timeGap >=0 && timeGap <1) {
+				timeBucket = "0-1 Hours";
+			} else if (timeGap >=1 && timeGap <2) {
+				timeBucket = "1-2 Hours";
+			} else if (timeGap >=2 && timeGap <4) {
+				timeBucket = "2-4 Hours";
+			} else if (timeGap >=4 && timeGap <6) {
+				timeBucket = "4-6 Hours";
+			} else if (timeGap >=6 && timeGap <12) {
+				timeBucket = "6-12 Hours";
+			} else if (timeGap >=12 && timeGap <24) {
+				timeBucket = "1 Day";
+			} else if (timeGap >=1*24 && timeGap <2*24) {
+				timeBucket = "2 Days";
+			} else if (timeGap >=2*24 && timeGap <3*24) {
+				timeBucket = "3 Days";
+			} else if (timeGap >=3*24 && timeGap <4*24) {
+				timeBucket = "4 Days";
+			} else if (timeGap >=4*24 && timeGap <5*24) {
+				timeBucket = "5 Days";
+			} else if (timeGap >=5*24 && timeGap <6*24) {
+				timeBucket = "6 Days";
+			} else if (timeGap >=6*24 && timeGap <7*24) {
+				timeBucket = "7 Days";
+			} else if (timeGap >=1*24*7 && timeGap <2*24*7) {
+				timeBucket = "1-2 Weeks";
+			} else if (timeGap >=2*24*7 && timeGap <4*24*7) {
+				timeBucket = "2-4 Weeks";
+			} else if (timeGap >=1*24*7*4 && timeGap <2*24*7*4) {
+				timeBucket = "1-2 Months";
+			} else {
+				timeBucket = " > 2 Months";
+			}
+
+			return timeBucket;
+		}
+		catch(er){
+			return "Unknown";
+		}
+	}
+	
+	function getOmnitureChannel() {
+		return "oberonozu";
+	}
+
+</script>
+<script language="vbscript">
+<!--
+	function convertDateByRegionalSeting(theDate)		
+		theDate = CStr(FormatDateTime(theDate,vbShortDate))
+		theDate = replace(theDate,"/",".")
+		convertDateByRegionalSeting = theDate
+	end function
+'-->
+</script>
+
+
+        <!-- Content -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"><!-- table 1 -->
+		<tr>
+            <td height="4"></td>
+        </tr>
+        <tr>
+			<td>
+				<!--promos -->
+				<table border="0" cellspacing="3" cellpadding="0"><!-- table 2 -->
+
+				<tr>
+					<td colspan="3" height="4"></td>
+				</tr>
+				<tr align="center">
+
+					<td><A href="/exe/Luxor_Amun_Rising-setup.exe?RefId=&origin=pindex_fg_dl&ext=Luxor_Amun_Rising-setup.exe" target="_self" onclick="omnitureLogDownload('111103570','oberonozu','Luxor Amun Rising')"><IMG src="/images/games/thumbnails/luxor_amun185x117.jpg" border=0></A></td>
+
+					<td><A href="/exe/Mystery_Huntsville-setup.exe?RefId=&origin=pindex_fg_dl&ext=Mystery_Huntsville-setup.exe" target="_self" onclick="omnitureLogDownload('111131887','oberonozu','Mystery Huntsville ')"><IMG src="/images/games/thumbnails/MCF_huntsville185x117.jpg" border=0></A></td>
+
+					<td><A href="/exe/magic_match_1hr-setup.exe?RefId=&origin=pindex_fg_dl&ext=magic_match_1hr-setup.exe" target="_self" onclick="omnitureLogDownload('110524983','oberonozu','Magic Match')"><IMG src="/images/games/thumbnails/magic_match185x117.jpg" border=0></A></td>
+
+				</tr>
+				<tr align="center">
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Salva al antiguo Egipto de la destrucción!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Resuelve las pistas para sorprender a los criminales!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Explora seis absorbentes reinos de fantasía!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+				</tr>
+				<tr align="center">
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/Luxor_Amun_Rising-setup.exe?RefId=&origin=pindex_fg_dl&ext=Luxor_Amun_Rising-setup.exe" target="_self" onclick="omnitureLogDownload('111103570','oberonozu','Luxor Amun Rising')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111103570&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/Mystery_Huntsville-setup.exe?RefId=&origin=pindex_fg_dl&ext=Mystery_Huntsville-setup.exe" target="_self" onclick="omnitureLogDownload('111131887','oberonozu','Mystery Huntsville ')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111131887&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/magic_match_1hr-setup.exe?RefId=&origin=pindex_fg_dl&ext=magic_match_1hr-setup.exe" target="_self" onclick="omnitureLogDownload('110524983','oberonozu','Magic Match')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110524983&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+				</tr>
+
+
+				<tr>
+					<td colspan="3" height="4"></td>
+				</tr>
+				<tr align="center">
+
+					<td><A href="/exe/mah_jong_quest_zylom-setup.exe?RefId=&origin=pindex_fg_dl&ext=mah_jong_quest_zylom-setup.exe" target="_self" onclick="omnitureLogDownload('110463663','oberonozu','mah_jong_quest_zylom')"><IMG src="/images/games/thumbnails/mah_jong_quest_185x117.jpg" border=0></A></td>
+
+					<td><A href="/exe/magic_ball_2-setup.exe?RefId=&origin=pindex_fg_dl&ext=magic_ball_2-setup.exe" target="_self" onclick="omnitureLogDownload('110356410','oberonozu','Magic Ball 2')"><IMG src="/images/games/thumbnails/magicBall2_185x117.jpg" border=0></A></td>
+
+					<td><A href="/exe/bejeweled2-setup.exe?RefId=&origin=pindex_fg_dl&ext=bejeweled2-setup.exe" target="_self" onclick="omnitureLogDownload('110272767','oberonozu','bejeweled2')"><IMG src="/images/games/thumbnails/bejeweled2_185x117.jpg" border=0></A></td>
+
+				</tr>
+				<tr align="center">
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Reconstruye el imperio a base de fichas!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Acción de rotura de ladrillos enfermizamente adictiva!
+¡No dejes que la bola llegue al fondo!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+					<td valign="top" align="left">
+						<table border="0" cellspacing="3" cellpadding="0" width="192"><!-- table 3 -->
+						<tr>
+							<td><font class="oberonNormal">&nbsp;</font></td>
+							<td><font class="oberonNormal">¡Nuevos efectos especiales y piedras preciosas explosivas!</font></td>
+						</tr>
+						</table><!-- /table 3 -->
+					</td>
+
+				</tr>
+				<tr align="center">
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/mah_jong_quest_zylom-setup.exe?RefId=&origin=pindex_fg_dl&ext=mah_jong_quest_zylom-setup.exe" target="_self" onclick="omnitureLogDownload('110463663','oberonozu','mah_jong_quest_zylom')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110463663&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/magic_ball_2-setup.exe?RefId=&origin=pindex_fg_dl&ext=magic_ball_2-setup.exe" target="_self" onclick="omnitureLogDownload('110356410','oberonozu','Magic Ball 2')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110356410&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+					<td width="185" height="19" bgcolor="#ECECEC">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2"><!-- table 4 -->
+					
+						<tr align="right">
+							<td align="left"><img src="/graphics/arrowDown.gif" alt="" hspace="2" border="0"><a href="/exe/bejeweled2-setup.exe?RefId=&origin=pindex_fg_dl&ext=bejeweled2-setup.exe" target="_self" onclick="omnitureLogDownload('110272767','oberonozu','bejeweled2')" class="oberonNavM">Descargar</a></td>
+						<tr>
+						</tr>
+							<td align="left"><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110272767&RefId=&origin=pindex_fg_gm" class="oberonNavM">Más información/Comprar</a></td>
+						</tr>
+					
+
+						</table><!-- /table 4 -->
+					</td>
+
+				</tr>
+
+
+				</table><!-- /table 2 -->
+            <!--end promos-->
+			</td>
+        </tr>
+        <tr>
+            <td height="6"></td>
+        </tr>
+        <tr>
+            <td>
+            
+            </td>
+        </tr>
+        <tr>
+            <td height="3"></td>
+        </tr>
+        <tr>
+        <td>
+        <table border="0" cellspacing="0" cellpadding="0"><!-- table 5 -->
+        <tr>        
+            <td valign="top">
+            <!-- Left column -->
+            <table width="396" border="0" cellspacing="0" cellpadding="0"><!-- table 6 -->
+            <tr>
+                <td><img src="/graphics/osu/es/topGamesL.gif" alt="" width="396" height="20" border="0"></td>
+            </tr>
+            
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110463663&RefId=&origin=pindex_mp_img"><img src="/images/games/mah_jong_quest/mah_jong_quest81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110463663&RefId=&origin=pindex_mp_desc" class="oberonGameName">Mah Jong Quest</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Reconstruye tu imperio mediante el antiguo juego de fichas, el Mah Jong!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/mah_jong_quest_zylom-setup.exe?RefId=&origin=pindex_mp_dl&ext=mah_jong_quest_zylom-setup.exe"  target="_self" onclick="omnitureLogDownload('110463663','oberonozu','mah_jong_quest_zylom')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110463663&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=111131887&RefId=&origin=pindex_mp_img"><img src="/images/games/MCF_huntsville/MCF_huntsville81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=111131887&RefId=&origin=pindex_mp_desc" class="oberonGameName">Mystery Case Files: Huntsville</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Resuelve las pistas para sorprender a los criminales en este apasionante juego de detectives!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Mystery_Huntsville-setup.exe?RefId=&origin=pindex_mp_dl&ext=Mystery_Huntsville-setup.exe"  target="_self" onclick="omnitureLogDownload('111131887','oberonozu','Mystery Huntsville ')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111131887&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=111103570&RefId=&origin=pindex_mp_img"><img src="/images/games/luxor_amun/luxor_amun81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=111103570&RefId=&origin=pindex_mp_desc" class="oberonGameName">Luxor: Amun Rising</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Destruye las esferas invasoras antes de que alcancen las pirámides del antiguo Egipto!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Luxor_Amun_Rising-setup.exe?RefId=&origin=pindex_mp_dl&ext=Luxor_Amun_Rising-setup.exe"  target="_self" onclick="omnitureLogDownload('111103570','oberonozu','Luxor Amun Rising')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111103570&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110356410&RefId=&origin=pindex_mp_img"><img src="/images/games/magic_ball_2/magicball2_81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110356410&RefId=&origin=pindex_mp_desc" class="oberonGameName">Bola mágica 2</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Mantén la Bola mágica botando en este juego de romper ladrillos enfermizamente adictivo!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/magic_ball_2-setup.exe?RefId=&origin=pindex_mp_dl&ext=magic_ball_2-setup.exe"  target="_self" onclick="omnitureLogDownload('110356410','oberonozu','Magic Ball 2')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110356410&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=111155117&RefId=&origin=pindex_mp_img"><img src="/images/games/fish_tycoon/fish_tycoon81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=111155117&RefId=&origin=pindex_mp_desc" class="oberonGameName">Fish Tycoon</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">Cría y cuida a estos peces exóticos en un acuario virtual en tiempo real.</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/fish_tycoon-setup.exe?RefId=&origin=pindex_mp_dl&ext=fish_tycoon-setup.exe"  target="_self" onclick="omnitureLogDownload('111155117','oberonozu','Fish Tycoon')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111155117&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110272767&RefId=&origin=pindex_mp_img"><img src="/images/games/bejeweled2/bejeweled2_81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110272767&RefId=&origin=pindex_mp_desc" class="oberonGameName">Bejeweled 2 Deluxe</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡La continuación del rompecabezas de piedras preciosas, ahora más adictivo que nunca!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/bejeweled2-setup.exe?RefId=&origin=pindex_mp_dl&ext=bejeweled2-setup.exe"  target="_self" onclick="omnitureLogDownload('110272767','oberonozu','bejeweled2')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110272767&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110521297&RefId=&origin=pindex_mp_img"><img src="/images/games/Incrediball/Incrediball81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110521297&RefId=&origin=pindex_mp_desc" class="oberonGameName">Incrediball</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Viaja por el mundo recogiendo tesoros antiguos en esta aventura rompeladrillos!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Incrediball-setup.exe?RefId=&origin=pindex_mp_dl&ext=Incrediball-setup.exe"  target="_self" onclick="omnitureLogDownload('110521297','oberonozu','Incrediball')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110521297&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110492280&RefId=&origin=pindex_mp_img"><img src="/images/games/aloha_solitaire/alohasolitaire81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110492280&RefId=&origin=pindex_mp_desc" class="oberonGameName">Aloha Solitaire</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">Un paraíso tropical para los amantes del mahjong y de los solitarios.</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/aloha_solitaire-setup.exe?RefId=&origin=pindex_mp_dl&ext=aloha_solitaire-setup.exe"  target="_self" onclick="omnitureLogDownload('110492280','oberonozu','Aloha Solitaire')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110492280&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110327910&RefId=&origin=pindex_mp_img"><img src="/images/games/big_kahuna_reef/big_kahuna81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110327910&RefId=&origin=pindex_mp_desc" class="oberonGameName">Big Kahuna Reef</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">Bucea por los arrecifes hawaianos en busca del tótem místico.</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/big_kahuna_reef-setup.exe?RefId=&origin=pindex_mp_dl&ext=big_kahuna_reef-setup.exe"  target="_self" onclick="omnitureLogDownload('110327910','oberonozu','Big Kahuna Reef')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110327910&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110320740&RefId=&origin=pindex_mp_img"><img src="/images/games/jigsaw365/jigsaw365_81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110320740&RefId=&origin=pindex_mp_desc" class="oberonGameName">Jigsaw 365</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">Disfruta de una diversión interminable con 365 rompecabezas a tu disposición y ochenta  estilos distintos.¡Utiliza también tus propias fotografías!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/jigsaw365-setup.exe?RefId=&origin=pindex_mp_dl&ext=jigsaw365-setup.exe"  target="_self" onclick="omnitureLogDownload('110320740','oberonozu','Jigsaw 365')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110320740&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=111160880&RefId=&origin=pindex_mp_img"><img src="/images/games/wonderlines/wonderlines81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=111160880&RefId=&origin=pindex_mp_desc" class="oberonGameName">Wonderlines</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Aventúrate por tierras antiguas en este extraordinariamente original rompecabezas de aventuras!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/wonderlines-setup.exe?RefId=&origin=pindex_mp_dl&ext=wonderlines-setup.exe"  target="_self" onclick="omnitureLogDownload('111160880','oberonozu','Wonderlines')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111160880&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110130890&RefId=&origin=pindex_mp_img"><img src="/images/games/pacificHeros/pacificHeros81x46.jpg" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110130890&RefId=&origin=pindex_mp_desc" class="oberonGameName">Pacific Heroes</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">Destruye aviones y barcos enemigos en este videojuego de acción frenética.</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Pacific_Heroes-Setup.exe?RefId=&origin=pindex_mp_dl&ext=Pacific_Heroes-Setup.exe"  target="_self" onclick="omnitureLogDownload('110130890','oberonozu','pacific_heroes')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110130890&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110182610&RefId=&origin=pindex_mp_img"><img src="/images/games/feedingfrenzy/feedingfrenzy81x46.jpg" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110182610&RefId=&origin=pindex_mp_desc" class="oberonGameName">Feeding Frenzy</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Avanza por la cadena alimentaria devorando lo que encuentres a tu paso! ¡Haz frente a este desafío en las profundidades del mar!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/feedingfrenzy-setup.exe?RefId=&origin=pindex_mp_dl&ext=feedingfrenzy-setup.exe"  target="_self" onclick="omnitureLogDownload('110182610','oberonozu','feeding_frenzy')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110182610&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110378737&RefId=&origin=pindex_mp_img"><img src="/images/games/luxor/luxor81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110378737&RefId=&origin=pindex_mp_desc" class="oberonGameName">Luxor</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Embárcate en una emocionante aventura para salvar de la ruina al antiguo Egipto!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/luxor-setup.exe?RefId=&origin=pindex_mp_dl&ext=luxor-setup.exe"  target="_self" onclick="omnitureLogDownload('110378737','oberonozu','Luxor')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110378737&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110452667&RefId=&origin=pindex_mp_img"><img src="/images/games/magic_ball2_new_worlds/MagicBall2_NW81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110452667&RefId=&origin=pindex_mp_desc" class="oberonGameName">Magic Ball 2: New Worlds</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">La bola mágica regresa en esta nueva entrega de la serie.</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/magic_ball2_new_words-setup.exe?RefId=&origin=pindex_mp_dl&ext=magic_ball2_new_words-setup.exe"  target="_self" onclick="omnitureLogDownload('110452667','oberonozu','Magic Ball 2: New Worlds')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110452667&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110524983&RefId=&origin=pindex_mp_img"><img src="/images/games/magic_match/magic_match81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110524983&RefId=&origin=pindex_mp_desc" class="oberonGameName">Magic Match</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Explora seis reinos místicos en las Tierras de Arcane!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/magic_match_1hr-setup.exe?RefId=&origin=pindex_mp_dl&ext=magic_match_1hr-setup.exe"  target="_self" onclick="omnitureLogDownload('110524983','oberonozu','Magic Match')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110524983&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=11110237&RefId=&origin=pindex_mp_img"><img src="/images/games/Phlinx_To_Go/Phlinx81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=11110237&RefId=&origin=pindex_mp_desc" class="oberonGameName">Phlinx To Go</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Vive el antiguo Egipto mientras disfrutas de horas de fascinante rompecabezas!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Phlinx_Regular-setup.exe?RefId=&origin=pindex_mp_dl&ext=Phlinx_Regular-setup.exe"  target="_self" onclick="omnitureLogDownload('11110237','oberonozu','Phlinx Regular')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=11110237&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=111107777&RefId=&origin=pindex_mp_img"><img src="/images/games/Fairies/Fairies81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=111107777&RefId=&origin=pindex_mp_desc" class="oberonGameName">Fairies</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Rompe hechizos mágicos para liberar del mal a las hadas!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/Fairies-setup.exe?RefId=&origin=pindex_mp_dl&ext=Fairies-setup.exe"  target="_self" onclick="omnitureLogDownload('111107777','oberonozu','Fairies')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111107777&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110374720&RefId=&origin=pindex_mp_img"><img src="/images/games/poker_superstars/poker_superstars_81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110374720&RefId=&origin=pindex_mp_desc" class="oberonGameName">Poker Superstars</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Enfréntate a los maestros en este juego de cartas al estilo de Texas!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/poker_superstars-setup.exe?RefId=&origin=pindex_mp_dl&ext=poker_superstars-setup.exe"  target="_self" onclick="omnitureLogDownload('110374720','oberonozu','Poker Superstars')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110374720&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            <tr>
+                <td valign="top">
+                <table cellspacing="4"><!-- table 7 -->
+                <tr>
+                    <td>
+                    <table><!-- table 8 -->
+                    <tr>
+                        <td rowspan="3" valign="top"><a href="/game.htm?code=110523340&RefId=&origin=pindex_mp_img"><img src="/images/games/offroad_arena/offroad_arena81x46.gif" alt="" width="81" height="46" vspace="1" border="0"></a></td>
+                        <td colspan="2" valign="top"><a href="/game.htm?code=110523340&RefId=&origin=pindex_mp_desc" class="oberonGameName">Offroad Arena</a></td>
+                    </tr>
+                    <tr>
+                        <td height="32" colspan="3" valign="top"><font class="oberonNormal">¡Pisa a fondo el acelerador en una carrera todo terreno de gran velocidad!</font></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td height="16" align="right" style="background-image: url(/graphics/dividerStrip.jpg);">
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 9 -->
+            <tr>
+                <td width="116"><a href="/exe/offroad_arena-setup.exe?RefId=&origin=pindex_mp_dl&ext=offroad_arena-setup.exe"  target="_self" onclick="omnitureLogDownload('110523340','oberonozu','Offroad Arena')"><img src="/graphics/osu/es/freeDownloadS_out.gif" alt="" width="110" height="16" border="0"></a></td>
+                <td><img src="/graphics/plusG.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110523340&RefId=&origin=pindex_mp_i" class="oberonNavM">Más información</a>&nbsp;&nbsp;</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                
+            </table>
+            <!-- /Left column -->
+            </td>
+            <td width="1" style="background-image: url(/graphics/osu/vertDottedLine.gif); background-repeat: repeat-y;"></td>
+            <td valign="top">
+            <!-- Right column -->
+            <table border="0" cellspacing="0" cellpadding="0"><!-- table 10 -->
+            <tr>
+                <td><img src="/graphics/osu/es/newGames20p.gif" alt="" border="0"></td>
+            </tr>
+            <tr>
+                <td>
+                <table cellspacing="4"><!-- table 11 -->
+            
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=11118287&RefId=&origin=pindex_ng_img"><img src="/images/games/Alien_Stars/Alien_Stars81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=11118287&RefId=&origin=pindex_ng_r" class="oberonGameName">Alien Stars</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Viaja por el universo con todo tu arsenal!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Alien_Stars-setup.exe?RefId=&origin=pindex_ng_dl&ext=Alien_Stars-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('11118287','oberonozu','Alien Stars')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=11118287&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111170887&RefId=&origin=pindex_ng_img"><img src="/images/games/eggVSchicken/eggVSchicken81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111170887&RefId=&origin=pindex_ng_r" class="oberonGameName">Egg vs. Chicken</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¿Huevo o gallina? ¿Quién fue primero?</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Egg _vsChicken-setup.exe?RefId=&origin=pindex_ng_dl&ext=Egg _vsChicken-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111170887','oberonozu','Egg vs Chicken ')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111170887&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111185967&RefId=&origin=pindex_ng_img"><img src="/images/games/Karu/Karu81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111185967&RefId=&origin=pindex_ng_r" class="oberonGameName">Karu</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Detén a la amenaza deslizante!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Karu-setup.exe?RefId=&origin=pindex_ng_dl&ext=Karu-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111185967','oberonozu','Karu')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111185967&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111183900&RefId=&origin=pindex_ng_img"><img src="/images/games/7_wonders/7_wonders81x46.jpg" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111183900&RefId=&origin=pindex_ng_r" class="oberonGameName">7 Wonders of the Ancient World</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Construye las 7 maravillas del mundo!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/7_Wonders-setup.exe?RefId=&origin=pindex_ng_dl&ext=7_Wonders-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111183900','oberonozu','7 Wonders ')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111183900&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111166120&RefId=&origin=pindex_ng_img"><img src="/images/games/Strike_Ball_2/Strike_Ball_281x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111166120&RefId=&origin=pindex_ng_r" class="oberonGameName">Strike Ball 2</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Nueva locura rompeladrillos en 3D!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Strike_Ball_2-setup.exe?RefId=&origin=pindex_ng_dl&ext=Strike_Ball_2-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111166120','oberonozu','Strike Ball 2')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111166120&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=11111090&RefId=&origin=pindex_ng_img"><img src="/images/games/s_and_s_bowling/s_and_s_bowling81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=11111090&RefId=&origin=pindex_ng_r" class="oberonGameName">Saints and Sinners Bowling</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Juega a los bolos contra tus enigmáticos contrincantes!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/SandS_Bowling-setup.exe?RefId=&origin=pindex_ng_dl&ext=SandS_Bowling-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('11111090','oberonozu','Saints & Sinners Bowling')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=11111090&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111164947&RefId=&origin=pindex_ng_img"><img src="/images/games/funkiball/funkiball81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111164947&RefId=&origin=pindex_ng_r" class="oberonGameName">Funkiball</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Recupera obras de arte robadas!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/funkiball-setup.exe?RefId=&origin=pindex_ng_dl&ext=funkiball-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111164947','oberonozu','Funkiball')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111164947&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111155117&RefId=&origin=pindex_ng_img"><img src="/images/games/fish_tycoon/fish_tycoon81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111155117&RefId=&origin=pindex_ng_r" class="oberonGameName">Fish Tycoon</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Cría peces en un acuario virtual!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/fish_tycoon-setup.exe?RefId=&origin=pindex_ng_dl&ext=fish_tycoon-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111155117','oberonozu','Fish Tycoon')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111155117&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111153797&RefId=&origin=pindex_ng_img"><img src="/images/games/Snowy_Fish/Snowy_Fish81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111153797&RefId=&origin=pindex_ng_r" class="oberonGameName">Snowy Fish Frenzy</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Esquiva a los hambrientos y delincuentes felinos!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/snowyfishfrenzy-setup.exe?RefId=&origin=pindex_ng_dl&ext=snowyfishfrenzy-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111153797','oberonozu','Snowy Fish Frenzy')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111153797&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111168990&RefId=&origin=pindex_ng_img"><img src="/images/games/Tradewinds_Legends/Tradewinds_Legends81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111168990&RefId=&origin=pindex_ng_r" class="oberonGameName">Tradewinds Legends</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Construye una flota de acorazados mágicos!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Tradewinds_Legends-setup.exe?RefId=&origin=pindex_ng_dl&ext=Tradewinds_Legends-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111168990','oberonozu','Tradewinds Legends ')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111168990&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=110523340&RefId=&origin=pindex_ng_img"><img src="/images/games/offroad_arena/offroad_arena81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=110523340&RefId=&origin=pindex_ng_r" class="oberonGameName">Offroad Arena</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Carrera todo terreno de gran velocidad!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/offroad_arena-setup.exe?RefId=&origin=pindex_ng_dl&ext=offroad_arena-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('110523340','oberonozu','Offroad Arena')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110523340&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111169773&RefId=&origin=pindex_ng_img"><img src="/images/games/valentine_gift/valentine_gift81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111169773&RefId=&origin=pindex_ng_r" class="oberonGameName">Valentine’s Gift</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Abre tus regalos de San Valentín!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/valentines_gift-setup.exe?RefId=&origin=pindex_ng_dl&ext=valentines_gift-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111169773','oberonozu','Valentines Gift')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111169773&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111131887&RefId=&origin=pindex_ng_img"><img src="/images/games/MCF_huntsville/MCF_huntsville81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111131887&RefId=&origin=pindex_ng_r" class="oberonGameName">Mystery Case Files: Huntsville</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡Resuelve las pistas para sorprender a los criminales!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/Mystery_Huntsville-setup.exe?RefId=&origin=pindex_ng_dl&ext=Mystery_Huntsville-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111131887','oberonozu','Mystery Huntsville ')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111131887&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td>
+                    <table><!-- table 12 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=111158213&RefId=&origin=pindex_ng_img"><img src="/images/games/kakuro/kakuro81x46.gif" alt="" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 13 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=111158213&RefId=&origin=pindex_ng_r" class="oberonGameName">Kakuro Master</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¡La última moda en rompecabezas japoneses!</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowDownW.gif" alt="" width="6" height="5" hspace="2" border="0"><a href="/exe/kakuro_master-setup.exe?RefId=&origin=pindex_ng_dl&ext=kakuro_master-setup.exe" class="oberonNavM"  target="_self" onclick="omnitureLogDownload('111158213','oberonozu','Kakuro Master')">Descargar</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=111158213&RefId=&origin=pindex_ng_mi_d" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                                    
+                </table>
+                </td>
+            </tr>
+            <tr>
+		
+                    <td><a href="/category.htm?code=1001&RefId=&origin=pindex_cat_ol"><img src="/graphics/osu/es/topOnlineGames.gif" alt="" border="0"></a></td>
+                               
+            </tr>
+            <tr>
+                <td>
+                <img src="/graphics/1pixel.gif" alt="" width="0" height="5" border="0">
+                <font class="oberonNormal">&nbsp;Juege ahora! No se requiere descarga.</font>
+                <table cellspacing="4"><!-- table 14 -->
+                            
+            
+                <tr>
+                    <td>
+                    <table><!-- table 15 -->
+                    <tr><td><img src="/graphics/1pixel.gif" alt="" width="1" height="2" border="0"></td></tr>
+                    <tr>
+                        <td valign="top"><a href="/game.htm?code=110475607&RefId=&origin=pindex_ol_img"><img src="/images/games/sudoku_quest/sudokuquest81x46.gif" width="81" height="46" border="0"></a></td>
+                        <td align="left" valign="top">
+                            <table border="0" style="table-layout:fixed;word-wrap:break-word;" cellspacing="0" cellpadding="0"><!-- table 16 -->
+                            <tr>
+                                <td height="5"></td>
+                            </tr>
+                            <tr>
+                                <td width="94"><a href="/game.htm?code=110475607&RefId=&origin=pindex_ol_r" class="oberonGameName">Sudoku Quest</a></td>
+                            </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><font class="oberonNormal">¿Aún no juegas Sudoku?</font></td>
+                    </tr>
+                    <tr>
+                        <td width="80" nowrap><img src="/graphics/arrowRight.gif" alt="" width="7" height="6" hspace="2" border="0"><a href="javascript:popOnlineExt('/online2/sudoku/index.htm',110475607, 'pindex_ol_p', 740, 460)" class="oberonNavM">Pruébelo en línea</a></td>
+                        <td width="98" nowrap><img src="/graphics/plus.gif" alt="" width="6" height="6" hspace="2" border="0"><a href="/game.htm?code=110475607&RefId=&origin=pindex_ol_mi" class="oberonNavM">Más información</a></td>
+                    </tr>
+                    </table>
+                    </td>
+                </tr>
+                                    
+                </table>
+                </td>
+            </tr>
+            </table>
+            <!-- /Right column -->
+            </td>
+        </tr>    
+
+        </table>
+        </td>
+        </tr>
+        </table><!-- /table 1 -->
+        <!-- /Content -->
+<!-- SiteCatalyst code version: G.7.
+
+Copyright 1997-2004 Omniture, Inc. More info available at
+
+http://www.omniture.com --><script language="JavaScript"><!--
+
+/* You may give each page an identifying name, server, and channel on
+
+the next lines. */
+
+var s_pageName="HomePage"
+/* E-commerce Variables */
+var s_state=""
+var s_zip=""
+var s_events=""
+var s_products=";"
+var s_purchaseID=""
+var s_eVar1=""
+var s_eVar2=""
+var s_eVar7="Home Page"
+/********* INSERT THE DOMAIN AND PATH TO YOUR CODE BELOW ************/
+
+//--></script>
+<script language="JavaScript">
+/************************ ADDITIONAL FEATURES ************************
+     Dynamic Account Selection
+     Plugins
+*/
+
+/************************** CONFIG SECTION **************************/
+/* You may add or alter any code config here.                       */
+var s_server="150";
+var s_channel="110098793";
+var s_prop1="Codebase - 1.3.1.o";
+var s_prop2="es";
+var s_account = getOmnitureChannel();
+var s_eVar10 = s_account;
+var s_prop10 = s_account;
+var s_prop3="/index.htm";
+/* E-commerce Variables */
+var s_eVar8 = "";
+var s_campaign="";
+var s_eVar6 = s_campaign;
+var s_charSet="" //set s_charSet to page's charSet if double-byte
+var s_cookieDomainPeriods="2"
+/* Variables (s_pageName, s_prop1, etc.) not prefixed with "s_" will not be used. */
+var s_disableLegacyVars=true
+/* Specify the Report Suite ID(s) to track here */
+
+/* Create s_dynamicAccountList variable */
+/*
+ * report suite id arrays
+ * in format new Array("reportSuiteId","URL_FILTERS")
+ */
+
+if(s_account=="none"){
+      s_account="devoberon"
+}
+
+/* E-commerce Config */
+var s_currencyCode="USD" //set to currency of purchase. USD is default
+var s_eVarCFG=""
+/* Link Tracking Config */
+var s_trackDownloadLinks=false
+var s_trackExternalLinks=true
+var s_trackInlineStats=true
+var s_linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls"
+var s_linkInternalFilters="javascript:,oberon-media.com,arcade.osu.es,osu.oberon-media.com"
+var s_linkLeaveQueryString=false
+var s_linkTrackVars="s_events,s_products,s_eVar1,s_eVar2,s_prop1,s_eVar7,s_eVar11,s_eVar10,s_prop10,s_eVar6"
+var s_linkTrackEvents="event1"
+/* Plugin Config */
+var s_usePlugins=true
+function s_doPlugins() {
+	/* Add calls to plugins here */
+}
+</script>
+
+<script language="JavaScript" src="/omniture/omnitureStaticCode.js"></script>
+
+
+
+<!-- End SiteCatalyst code version: G.7. -->		
+		<br>
+		</td>
+	</tr>
+	<tr>
+		<td height="45" align="left" style="background-image : url(/graphics/osu/roundBorderFooter.gif);background-repeat: no-repeat">
+			<table border="0" width="100%">
+			<tr>
+				<td >
+					<table>
+						<tr>
+							<td><a href="/about.htm?RefId=&Session=&origin=pmenu_about" class="oberonNormal">Sobre nosotros</a></td>
+							<td class="oberonNormal"><img src="/graphics/common/navDivider.gif" alt="" width="5" height="22" border="0"></td>
+							<td class="oberonNormal"><a href="/support.htm?RefId=&Session=&origin=pmenu_support" class="oberonNormal">Ayuda técnica</a></td>
+							<td class="oberonNormal"><img src="/graphics/common/navDivider.gif" alt="" width="5" height="22" border="0"></td>
+							<td class="oberonNormal"><a href="/notices.htm?RefId=&Session=&origin=pmenu_notices" class="oberonNormal">Avisos</a></td>
+							<td class="oberonNormal"><img src="/graphics/common/navDivider.gif" alt="" width="5" height="22" border="0"></td>
+							<td class="oberonNormal"><a href="/privacy.htm?RefId=&Session=&origin=pmenu_privacy" class="oberonNormal">Privacidad</a></td>
+						</tr>
+					</table>
+				</td>
+				<td align="right" width="171"><img src="/graphics/common/presented.gif" alt="Oberon Media" hspace="8" border="0"></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+</table>
+</center>
+	</td>
+</tr>
+</table>
+</div>
+<iframe align="center" src="http://img.ozu.es/cabvideojuegos/pie.html" scrolling="no" height=123 width=784 frameborder=0></iframe>
+</body>
+</html>

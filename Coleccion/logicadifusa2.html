@@ -1,0 +1,487 @@
+<html><head>
+
+
+<meta http-equiv="Content-Language" content="es">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Introducción a la Lógica Difusa - KDD (UNI - 2005)</title>
+<!-- base -->
+<style>
+<!--
+.ms-classic2-main { border-left-style: none; border-right-style: none; 
+               border-top: 1.5pt solid black; border-bottom: 1.5pt solid black }
+.ms-classic2-tl { font-weight: bold; color: white; border-left-style: none; border-right-style: 
+               none; border-top-style: none; border-bottom: .75pt solid black; 
+               background-color: purple }
+.ms-classic2-top { color: white; border-left-style: none; border-right-style: none; 
+               border-top-style: none; border-bottom: .75pt solid black; 
+               background-color: purple }
+div.Section1
+	{page:Section1;}
+
+DIV.clsDocBody
+
+{
+	padding:0px;
+
+}
+-->
+</style>
+</head><body>
+
+<table id="table1" border="0" cellpadding="0" cellspacing="1" height="66" width="600">
+	<tbody><tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="AVISOS">AVISOS</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="645">
+		<hr align="justify">
+
+
+		
+		</td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="DATOS_GENERALES">DATOS 
+		GENERALES</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<table id="table13" style="border-collapse: collapse;" border="0" cellpadding="0" width="97%">
+			<tbody><tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Horas Teoría</font></p></td>
+				<td valign="top">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">2 horas por semana</font></p></td>
+			</tr>
+			<tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Horas Práctica</font></p></td>
+				<td valign="top">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">2 horas por semana</font></p></td>
+			</tr>
+			<tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Profesor</font></p></td>
+				<td valign="top">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">
+				<a href="http://www.wiphala.net/courses/oporto/index.html">Samuel Oporto Díaz</a>&nbsp;&nbsp;
+				<a href="mailto:soporto@wiphala.net?subject=%5BUSMP-090178-2005-II%5D">
+				soporto@wiphala.net</a></font></p></td>
+			</tr>
+			<tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Horario de Clases</font></p></td>
+				<td valign="top">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Sábados:&nbsp;&nbsp;&nbsp; 
+				5:00 PM - 9:00 PM</font></p></td>
+			</tr>
+			<tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Libro de Texto</font></p></td>
+				<td valign="top">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td valign="top" width="137">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Área</font></p></td>
+				<td valign="top">
+				<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;">
+				<font style="font-size: 9pt;" face="Verdana">Curso-Taller 
+				Investigación en Inteligencia Artificial</font></p></td>
+			</tr>
+		</tbody></table>
+		</td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="SUMILLA">SUMILLA</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="OBJETIVOS_DEL_CURSO">OBJETIVOS 
+		DEL CURSO</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">Objetivos Generales</font></p>
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+&nbsp;</p>
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">Objetivos Conceptuales</font></p>
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+&nbsp;</p><p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">Objetivos Procedimentales.</font></p><p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+&nbsp;</p><p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">Objetivos Actitudinales.</font><font style="font-size: 9pt;" face="Verdana"></font></p><p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+<font style="font-size: 9pt;" face="Verdana">&nbsp;</font></p></td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="PRE-REQUISITOS">PRE-REQUISITOS</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<ol style="font-family: Verdana; font-size: 9pt; word-spacing: 0pt; line-height: 150%; margin-top: 0pt; margin-bottom: 0pt;">
+			<li>
+			<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+			<font style="font-size: 9pt;" face="Verdana">Conocimientos de 
+			inferencia lógica.</font>
+			</p></li><li>
+			<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+			<font style="font-size: 9pt;" face="Verdana">Conocimientos de MatLab.</font>
+			</p></li><li>
+			<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+			<font style="font-size: 9pt;" face="Verdana">Conocimientos de </font>
+			algún lenguaje de programación.
+		</p></li></ol>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="MAPA_CONCEPTUAL">MAPA 
+		CONCEPTUAL</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="center">
+		<font style="font-size: 9pt;" face="Verdana">
+		<img src="index_files/map.jpg" border="0" height="340" width="622"></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;" align="justify">
+		&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="CONTENIDO_DEL_CURSO">CONTENIDO 
+		DEL CURSO</a></font></p></td>
+	</tr>
+	<tr>
+		<td style="padding: 0pt;" width="673">
+		<div class="Section1">
+			<table x:str="" style="border-collapse: collapse; width: 599px;" id="table14" border="0" cellpadding="0" cellspacing="0">
+				<colgroup>
+					<col style="width: 14pt;" width="19">
+					<col style="width: 36pt;" width="48">
+					<col style="width: 16pt;" width="21">
+					<col style="width: 317pt;" width="422">
+					<col style="width: 54pt;" width="72">
+				</colgroup>
+				<tbody><tr style="height: 10.5pt;" height="14">
+					<td style="border: 0.5pt solid windowtext; background: rgb(255, 255, 153) none repeat scroll 0% 0%; height: 10.5pt; width: 14pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" align="center" height="14" width="19">
+					<p style="line-height: 20px;"><span style="font-size: 9pt;">D</span></p></td>
+					<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 0.5pt 0.5pt 0.5pt medium; background: rgb(255, 255, 153) none repeat scroll 0% 0%; width: 36pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" align="center" width="48">
+					<p style="line-height: 20px;"><span style="font-size: 9pt;">
+					Fecha</span></p></td>
+					<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 0.5pt 0.5pt 0.5pt medium; background: rgb(255, 255, 153) none repeat scroll 0% 0%; width: 16pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" align="center" width="21">
+					<p style="line-height: 20px;"><span style="font-size: 9pt;">S</span></p></td>
+					<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 0.5pt 0.5pt 0.5pt medium; background: rgb(255, 255, 153) none repeat scroll 0% 0%; width: 317pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" align="left" width="422">
+					<p style="line-height: 20px;" align="center">
+					<span style="font-size: 9pt;">Temario</span></p></td>
+					<td style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 0.5pt 0.5pt 0.5pt medium; background: rgb(255, 255, 153) none repeat scroll 0% 0%; width: 82px; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" align="center">
+					<p style="line-height: 20px;"><span style="font-size: 9pt;">
+					Laboratorio</span></p></td>
+				</tr>
+				<tr style="height: 10.5pt;" height="14">
+					<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 0.5pt 0.5pt; height: 10.5pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" height="14">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Sa</span></p></td>
+					<td x:num="38605" style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">10-Sep</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">1</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="left">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/class/class_01_fuzzy_sets_and_classical_sets.ppt">
+					Conjuntos Difusos, Conjuntos Clásicos y Funciones de 
+					Membresía</a></span></p>
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" width="82">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/labs/lab01/membership_functions.doc">Lab1</a></span></p></td>
+				</tr>
+				<tr style="height: 10.5pt;" height="14">
+					<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 0.5pt 0.5pt; height: 10.5pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" height="14">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Sa</span></p></td>
+					<td x:num="38612" style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">17-Sep</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">2</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="left">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/class/class_02_operations_on_fuzzy_sets.ppt">Operaciones y Relaciones en 
+					Conjuntos Difusos, Principio de Extensión</a></span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" width="82">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/labs/lab02/lab02_operaciones_con_conjuntos_difusos.doc">Lab2</a></span></p></td>
+				</tr>
+				<tr style="height: 10.5pt;" height="14">
+					<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 0.5pt 0.5pt; height: 10.5pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" height="14">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Sa</span></p></td>
+					<td x:num="38619" style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">24-Sep</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">3</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="left">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/class/class_03_fuzzy_logic_and_classical_logic.ppt">Lógica clásica y lógica difusa 
+					y Variables Lingüísticas</a></span></p>
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" width="82">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Lab3</span></p></td>
+				</tr>
+				<tr style="height: 10.5pt;" height="14">
+					<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 0.5pt 0.5pt; height: 10.5pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" height="14">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Sa</span></p></td>
+					<td x:num="38626" style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">01-Oct</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">4</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="left">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/class/class_04_fuzzy_logic_and_approximate_reasoning.ppt">Sistema de reglas difusas e 
+					Inferencia difusa</a></span></p>
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" width="82">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Lab4</span></p></td>
+				</tr>
+				<tr style="height: 10.5pt;" height="14">
+					<td style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 0.5pt 0.5pt; height: 10.5pt; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" height="14">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Sa</span></p></td>
+					<td x:num="38633" style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">08-Oct</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">5</span></p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; color: windowtext; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="left">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">
+					<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/class/class_05_fuzzy_rule_base_fuzzy_inference_engine.ppt">Fuzificadores y defusificadores</a></span></p>
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+					<td style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 0.5pt 0.5pt medium; color: navy; font-size: 8pt; font-family: Verdana,sans-serif; vertical-align: top; font-weight: 400; font-style: normal; text-decoration: none; white-space: nowrap; padding-left: 1px; padding-right: 1px; padding-top: 1px;" align="center" width="82">
+					<p style="line-height: 20px; margin-top: 0pt; margin-bottom: 0pt;">
+					<span style="font-size: 9pt;">Lab5</span></p></td>
+				</tr>
+			</tbody></table>
+			<p>&nbsp;</p></div>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="BIBLIOGRAFÍA">BIBLIOGRAFÍA</a></font></p></td>
+	</tr>
+	<tr>
+		<td width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">
+		Bibliografía Básica:</font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-weight: 700;" color="#800080" face="Verdana">
+		Bibliografía Complementaría:</font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+		</td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="justify" width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="LABORATORIOS">LABORATORIOS</a></font></p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;"><font style="font-size: 9pt;" face="Verdana">Durante el desarrollo del curso se tomarán 
+		5 
+		laboratorios.</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font color="#800080"><a name="Laboratorio_1.">
+		<span style="font-weight: 700;">
+		<font style="font-size: 9pt;" face="Verdana">Laboratorio</font></span><font style="font-size: 9pt; font-weight: 700;" face="Verdana"> 1.</font></a></font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt;" face="Verdana">
+		<a href="http://www.wiphala.net/courses/intelligent_systems/KAS_FL/2005-II/labs/lab01/membership_functions.doc">Funciones de membresía.</a></font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-style: italic;" face="Verdana">Fecha de entrega:</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font color="#800080" face="Verdana">
+		<span style="font-size: 9pt; font-weight: 700;">
+		<font style="font-size: 9pt; font-weight: 700;"><a name="Laboratorio_2.">Laboratorio 2.</a></font></span></font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-style: italic;" face="Verdana">Fecha de entrega:</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font color="#800080" face="Verdana">
+		<span style="font-size: 9pt; font-weight: 700;">
+		<font style="font-size: 9pt; font-weight: 700;"><a name="Laboratorio_3.">Laboratorio 3.</a></font></span></font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-style: italic;" face="Verdana">Fecha de entrega:</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font color="#800080" face="Verdana">
+		<span style="font-size: 9pt; font-weight: 700;">
+		<font style="font-size: 9pt; font-weight: 700;"><a name="Laboratorio_4.">Laboratorio 4.</a></font></span></font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-style: italic;" face="Verdana">Fecha de entrega:</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font color="#800080" face="Verdana">
+		<span style="font-size: 9pt; font-weight: 700;">
+		<font style="font-size: 9pt; font-weight: 700;"><a name="Laboratorio_5.">Laboratorio 
+		5.</a></font></span></font></p>
+		<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">
+		<font style="font-size: 9pt; font-style: italic;" face="Verdana">Fecha de entrega:</font></p><p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p></td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="justify" width="673"><hr></td>
+	</tr>
+	<tr>
+		<td align="justify" bgcolor="#c0c0c0" width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="justify" width="673"><hr></td>
+	</tr>
+	<tr>
+		<td align="justify" bgcolor="#c0c0c0" width="673">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="justify" width="673">
+		<p style="margin-top: 0pt; margin-bottom: 0pt; line-height: 15px;" align="justify">
+		<font style="font-size: 9pt; font-weight: 700;" color="#000080" face="Verdana">
+		<a name="RECURSOS_DE_SOFTWARE">RECURSOS DE 
+		SOFTWARE</a></font></p></td>
+	</tr>
+	<tr>
+		<td align="justify" valign="top" width="673"><hr align="justify"></td>
+	</tr>
+	<tr>
+		<td align="justify" valign="top" width="673">&nbsp;</td>
+	</tr>
+	</tbody></table>
+
+<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 15px; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+
+<!-- text below generated by server. PLEASE REMOVE --><!-- Counter/Statistics data collection code --><script language="JavaScript" src="index_files/whv2_001.js"></script><script language="javascript">geovisit();</script><img style="display: none;" src="index_files/visit.gif" border="0">
+<noscript><img src="http://visit.webhosting.yahoo.com/visit.gif?us1251260657" alt="setstats" border="0" width="1" height="1"></noscript></body></html>

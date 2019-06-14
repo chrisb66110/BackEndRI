@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+		<title>Estructura de una aplicación web | intercoud {</title>
+<link rel="pingback" href="https://www.intercoud.com/xmlrpc.php">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This site is optimized with the Yoast SEO plugin v10.1.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="¿Quieres saber como se estructura una aplicación web? Lee nuestro artículo y conviértete en un experto del tema y aprende que herramientas utilizar."/>
+<link rel="canonical" href="https://www.intercoud.com/blog/articulo/estructura-de-una-aplicacion-web/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Estructura de una aplicación web | intercoud {" />
+<meta property="og:description" content="¿Quieres saber como se estructura una aplicación web? Lee nuestro artículo y conviértete en un experto del tema y aprende que herramientas utilizar." />
+<meta property="og:url" content="https://www.intercoud.com/blog/articulo/estructura-de-una-aplicacion-web/" />
+<meta property="og:site_name" content="intercoud {" />
+<meta property="article:publisher" content="https://www.facebook.com/intercoud.pa/" />
+<meta property="og:image" content="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png" />
+<meta property="og:image:secure_url" content="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png" />
+<meta property="og:image:width" content="940" />
+<meta property="og:image:height" content="400" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="¿Quieres saber como se estructura una aplicación web? Lee nuestro artículo y conviértete en un experto del tema y aprende que herramientas utilizar." />
+<meta name="twitter:title" content="Estructura de una aplicación web | intercoud {" />
+<meta name="twitter:site" content="@intercoud" />
+<meta name="twitter:image" content="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png" />
+<meta name="twitter:creator" content="@intercoud" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"https://www.intercoud.com/","sameAs":["https://www.facebook.com/intercoud.pa/","https://www.instagram.com/intercoud/","https://www.linkedin.com/company/intercoud/","https://www.youtube.com/channel/UChyPIhIwajeIPJaJifKZJ0Q?view_as=subscriber","https://twitter.com/intercoud"],"@id":"https://www.intercoud.com/#organization","name":"Intercoud","logo":"https://www.intercoud.com/wp-content/uploads/2018/09/Logo-Intercoud-small-bgyellow.png"}</script>
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.intercoud.com/","name":"inicio"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.intercoud.com/blog/articulo/","name":"Art\u00edculos"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.intercoud.com/blog/articulo/estructura-de-una-aplicacion-web/","name":"Estructura de una aplicaci\u00f3n web"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="intercoud { &raquo; Feed" href="https://www.intercoud.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="intercoud { &raquo; RSS de los comentarios" href="https://www.intercoud.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="intercoud { &raquo; Estructura de una aplicación web RSS de los comentarios" href="https://www.intercoud.com/blog/articulo/estructura-de-una-aplicacion-web/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.5.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.5.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-126704666-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-126704666-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Función desactivada __gaTracker(' + arguments[0] + " ....) porque no estás siendo rastreado. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.intercoud.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://www.intercoud.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/slick.min.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-hamburgers-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css?ver=1.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-arrow-r-css'  href='https://www.intercoud.com/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/arrow-r.css?ver=1.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='https://www.intercoud.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=4.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='https://www.intercoud.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.5.11' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://www.intercoud.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.5.11' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css'  href='https://www.intercoud.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=2.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='https://www.intercoud.com/wp-content/uploads/elementor/css/global.css?ver=1554327585' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1040-css'  href='https://www.intercoud.com/wp-content/uploads/elementor/css/post-1040.css?ver=1554328749' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1801-css'  href='https://www.intercoud.com/wp-content/uploads/elementor/css/post-1801.css?ver=1554328750' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CBitter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSalsa%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CViga%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/www.intercoud.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.5.0'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<link rel='https://api.w.org/' href='https://www.intercoud.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.intercoud.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.intercoud.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel='shortlink' href='https://www.intercoud.com/?p=1489' />
+<link rel="alternate" type="application/json+oembed" href="https://www.intercoud.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.intercoud.com%2Fblog%2Farticulo%2Festructura-de-una-aplicacion-web%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.intercoud.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.intercoud.com%2Fblog%2Farticulo%2Festructura-de-una-aplicacion-web%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="icon" href="https://www.intercoud.com/wp-content/uploads/2018/09/cropped-Logo-Intercoud-small-8-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.intercoud.com/wp-content/uploads/2018/09/cropped-Logo-Intercoud-small-8-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.intercoud.com/wp-content/uploads/2018/09/cropped-Logo-Intercoud-small-8-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.intercoud.com/wp-content/uploads/2018/09/cropped-Logo-Intercoud-small-8-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			/** Start Envato Elements CSS:Moving Company (56-3-cb0c9164107a81c74e0e7157ef44a8e8) **/.envato-kit-53-hvr-img-one .elementor-image{position:relative}.envato-kit-53-hvr-img-one .elementor-image:before{position:absolute;content:'';background-color:rgba(34,34,34,0.80);width:100%;height:50%;left:0;top:0;transition:.5s ease;opacity:0;visibility:hidden}.envato-kit-53-hvr-img-one:hover .elementor-image:before{height:100%;opacity:1;visibility:visible}/* Float Shadow */.envato-kit-53-hvr-float-shadow{vertical-align:middle;-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 1px rgba(0,0,0,0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;position:relative;-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-property:transform;transition-property:transform}.envato-kit-53-hvr-float-shadow:before{pointer-events:none;position:absolute;z-index:-1;content:'';top:100%;left:5%;height:10px;width:90%;opacity:0;background:-webkit-radial-gradient(center,ellipse,rgba(0,0,0,0.35) 0,rgba(0,0,0,0) 80%);background:radial-gradient(ellipse at center,rgba(0,0,0,0.35) 0,rgba(0,0,0,0) 80%);/* W3C */-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-property:transform,opacity;transition-property:transform,opacity}.envato-kit-53-hvr-float-shadow:hover,.envato-kit-53-hvr-float-shadow:focus,.envato-kit-53-hvr-float-shadow:active{-webkit-transform:translateY(-5px);transform:translateY(-5px);/* move the element up by 5px */}.envato-kit-53-hvr-float-shadow:hover:before,.envato-kit-53-hvr-float-shadow:focus:before,.envato-kit-53-hvr-float-shadow:active:before{opacity:1;-webkit-transform:translateY(5px);transform:translateY(5px);/* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */}/** End Envato Elements CSS:Moving Company (56-3-cb0c9164107a81c74e0e7157ef44a8e8) **//** Start Envato Elements CSS:Recruitment Business (68-3-0bc077675219c2b7f54651a82bc0b314) **/@media (max-width:667px){.envato-kit-65-mobile-bg-shift{background-position:top center !important}}/** End Envato Elements CSS:Recruitment Business (68-3-0bc077675219c2b7f54651a82bc0b314) **//** Start Envato Elements CSS:Mechanic (40-3-e3e14e5b8af1b8019415af2ca3caf28a) **/.rdn-progress-bar{font-family:"Roboto",Sans-serif;font-size:13px}/** End Envato Elements CSS:Mechanic (40-3-e3e14e5b8af1b8019415af2ca3caf28a) **//** Start Envato Elements CSS:Blocks (69-3-4f8cfb8a1a68ec007f2be7a02bdeadd9) **/.envato-kit-66-menu .e--pointer-framed .elementor-item:before{border-radius:1px}.envato-kit-66-subscription-form .elementor-form-fields-wrapper{position:relative}.envato-kit-66-subscription-form .elementor-form-fields-wrapper .elementor-field-type-submit{position:static}.envato-kit-66-subscription-form .elementor-form-fields-wrapper .elementor-field-type-submit button{position:absolute;top:50%;right:6px;transform:translate(0,-50%);-moz-transform:translate(0,-50%);-webmit-transform:translate(0,-50%)}.envato-kit-66-testi-slider .elementor-testimonial__footer{margin-top:-60px !important;z-index:99;position:relative}.envato-kit-66-featured-slider .elementor-slides .slick-prev{width:50px;height:50px;background-color:#ffffff !important;transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);left:-25px !important;-webkit-box-shadow:0 1px 2px 1px rgba(0,0,0,0.32);-moz-box-shadow:0 1px 2px 1px rgba(0,0,0,0.32);box-shadow:0 1px 2px 1px rgba(0,0,0,0.32)}.envato-kit-66-featured-slider .elementor-slides .slick-prev:before{display:block;margin-top:0;margin-left:0;transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.envato-kit-66-featured-slider .elementor-slides .slick-next{width:50px;height:50px;background-color:#ffffff !important;transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);right:-25px !important;-webkit-box-shadow:0 1px 2px 1px rgba(0,0,0,0.32);-moz-box-shadow:0 1px 2px 1px rgba(0,0,0,0.32);box-shadow:0 1px 2px 1px rgba(0,0,0,0.32)}.envato-kit-66-featured-slider .elementor-slides .slick-next:before{display:block;margin-top:-5px;margin-right:-5px;transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.envato-kit-66-orangetext{color:#f4511e}.envato-kit-66-countdown .elementor-countdown-label{display:inline-block !important;border:2px solid rgba(255,255,255,0.2);padding:9px 20px}/** End Envato Elements CSS:Blocks (69-3-4f8cfb8a1a68ec007f2be7a02bdeadd9) **/		</style>
+		<!-- OceanWP CSS -->
+<style type="text/css">
+/* General CSS */a:hover,a.light:hover,.theme-heading .text::before,#top-bar-content >a:hover,#top-bar-social li.oceanwp-email a:hover,#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header.medium-header #medium-searchform button:hover,.oceanwp-mobile-menu-icon a:hover,.blog-entry.post .blog-entry-header .entry-title a:hover,.blog-entry.post .blog-entry-readmore a:hover,.blog-entry.thumbnail-entry .blog-entry-category a,ul.meta li a:hover,.dropcap,.single nav.post-navigation .nav-links .title,body .related-post-title a:hover,body #wp-calendar caption,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .custom-links-widget .oceanwp-custom-links li a:hover,body .custom-links-widget .oceanwp-custom-links li a:hover:before,body .posts-thumbnails-widget li a:hover,body .social-widget li.oceanwp-email a:hover,.comment-author .comment-meta .comment-reply-link,#respond #cancel-comment-reply-link:hover,#footer-widgets .footer-box a:hover,#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover,.sidr a:hover,.sidr-class-dropdown-toggle:hover,.sidr-class-menu-item-has-children.active >a,.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,input[type=checkbox]:checked:before{color:#f9ea3b}input[type="button"],input[type="reset"],input[type="submit"],button[type="submit"],.button,#site-navigation-wrap .dropdown-menu >li.btn >a >span,.thumbnail:hover i,.post-quote-content,.omw-modal .omw-close-modal,body .contact-info-widget.big-icons li:hover i,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{background-color:#f9ea3b}.widget-title{border-color:#f9ea3b}blockquote{border-color:#f9ea3b}#searchform-dropdown{border-color:#f9ea3b}.dropdown-menu .sub-menu{border-color:#f9ea3b}.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#f9ea3b}.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#f9ea3b}.social-widget li.oceanwp-email a:hover{border-color:#f9ea3b}#respond #cancel-comment-reply-link:hover{border-color:#f9ea3b}body .contact-info-widget.big-icons li:hover i{border-color:#f9ea3b}#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#f9ea3b}input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button[type="submit"]:hover,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,button[type="submit"]:focus,.button:hover,#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,.post-quote-author,.omw-modal .omw-close-modal:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover{background-color:#282828}table th,table td,hr,.content-area,body.content-left-sidebar #content-wrap .content-area,.content-left-sidebar .content-area,#top-bar-wrap,#site-header,#site-header.top-header #search-toggle,.dropdown-menu ul li,.centered-minimal-page-header,.blog-entry.post,.blog-entry.grid-entry .blog-entry-inner,.blog-entry.thumbnail-entry .blog-entry-bottom,.single-post .entry-title,.single .entry-share-wrap .entry-share,.single .entry-share,.single .entry-share ul li a,.single nav.post-navigation,.single nav.post-navigation .nav-links .nav-previous,#author-bio,#author-bio .author-bio-avatar,#author-bio .author-bio-social li a,#related-posts,#comments,.comment-body,#respond #cancel-comment-reply-link,#blog-entries .type-page,.page-numbers a,.page-numbers span:not(.elementor-screen-only),.page-links span,body #wp-calendar caption,body #wp-calendar th,body #wp-calendar tbody,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .posts-thumbnails-widget li,body .tagcloud a{border-color:#282828}/* Header CSS */#site-header{border-color:#282828}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.98)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:210px}@media (max-width:768px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:210px}}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:200px}}@media (max-width:480px){#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:204px}}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#f9ea3b}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#f9ea3b}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #f9ea3b,-10px 0 #f9ea3b}#site-navigation-wrap .dropdown-menu >li >a{padding:0 14px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#ffffff}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#f9ea3b}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{background-color:#d6d6d6}.navigation li.mega-cat .mega-cat-title{background-color:#1e73be}.mobile-menu .hamburger-inner,.mobile-menu .hamburger-inner::before,.mobile-menu .hamburger-inner::after{background-color:#000000}/* Footer Bottom CSS */#footer-bottom{background-color:#282828}#footer-bottom,#footer-bottom p{color:#ffffff}
+</style>	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="articulo-template-default single single-articulo postid-1489 wp-embed-responsive oceanwp-theme sidebar-mobile no-header-border default-breakpoint has-sidebar content-right-sidebar elementor-default elementor-template-canvas elementor-page-1040">
+			<div data-elementor-type="single" data-elementor-id="1040" class="elementor elementor-1040 elementor-location-single post-1489 articulo type-articulo status-publish has-post-thumbnail hentry etiquetas-innovacion etiquetas-software etiquetas-tecnologia entry has-media" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-51f06603 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="51f06603" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-70fd176d roblox elementor-column elementor-col-33 elementor-top-column" data-id="70fd176d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-34bd99b9 elementor-widget elementor-widget-heading" data-id="34bd99b9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="https://www.intercoud.com/">intercoud {</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4cfc1729 search-column  elementor-column elementor-col-33 elementor-top-column" data-id="4cfc1729" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1828a561 elementor-search-form--skin-full_screen elementor-widget elementor-widget-search-form" data-id="1828a561" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.intercoud.com" method="get">
+						<div class="elementor-search-form__toggle">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<span class="elementor-screen-only">Buscar</span>
+			</div>
+						<div class="elementor-search-form__container">
+								<input placeholder="Buscar...." class="elementor-search-form__input" type="search" name="s" title="Buscar" value="">
+												<div class="dialog-lightbox-close-button dialog-close-button">
+					<i class="eicon-close" aria-hidden="true"></i>
+					<span class="elementor-screen-only">Cerrar</span>
+				</div>
+							</div>
+		</form>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1ed43412 roblox elementor-column elementor-col-33 elementor-top-column" data-id="1ed43412" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1fb6572f elementor-nav-menu--stretch elementor-nav-menu__align-left elementor-nav-menu--indicator-classic elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="1fb6572f" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow"><ul id="menu-1-1fb6572f" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-836"><a href="https://www.intercoud.com/#home" class="elementor-item elementor-item-anchor">inicio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-837"><a href="https://www.intercoud.com/#services" class="elementor-item elementor-item-anchor">servicios</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-838"><a href="https://www.intercoud.com/#portfolio" class="elementor-item elementor-item-anchor">portafolio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-839"><a href="https://www.intercoud.com/#team" class="elementor-item elementor-item-anchor">equipo</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-840"><a href="https://www.intercoud.com/#contact" class="elementor-item elementor-item-anchor">contacto</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-886"><a href="https://www.intercoud.com/blog" class="elementor-item">blog</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle">
+			<i class="eicon" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menú</span>
+		</div>
+		<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"><ul id="menu-2-1fb6572f" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-836"><a href="https://www.intercoud.com/#home" class="elementor-item elementor-item-anchor">inicio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-837"><a href="https://www.intercoud.com/#services" class="elementor-item elementor-item-anchor">servicios</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-838"><a href="https://www.intercoud.com/#portfolio" class="elementor-item elementor-item-anchor">portafolio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-839"><a href="https://www.intercoud.com/#team" class="elementor-item elementor-item-anchor">equipo</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-840"><a href="https://www.intercoud.com/#contact" class="elementor-item elementor-item-anchor">contacto</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-886"><a href="https://www.intercoud.com/blog" class="elementor-item">blog</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-af6e407 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="af6e407" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c041946 elementor-column elementor-col-50 elementor-top-column" data-id="c041946" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1342eb5 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="1342eb5" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png" data-elementor-open-lightbox="default">
+							<img width="940" height="400" src="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png" class="attachment-full size-full" alt="" srcset="https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400.png 940w, https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400-300x128.png 300w, https://www.intercoud.com/wp-content/uploads/2018/10/MOB_native-vs-web-app-whats-the-diff-which-do-i-need_M-940x400-768x327.png 768w" sizes="(max-width: 940px) 100vw, 940px" />								</a>
+											</div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-69deff1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="69deff1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c64b675 elementor-column elementor-col-33 elementor-inner-column" data-id="c64b675" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b51a830 elementor-widget elementor-widget-image" data-id="b51a830" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://www.intercoud.com/wp-content/uploads/2018/09/Intercoud_MarioMorales.png" data-elementor-open-lightbox="default">
+							<img width="500" height="500" src="https://www.intercoud.com/wp-content/uploads/2018/09/Intercoud_MarioMorales.png" class="attachment-full size-full" alt="Ing. Mario Morales" srcset="https://www.intercoud.com/wp-content/uploads/2018/09/Intercoud_MarioMorales.png 500w, https://www.intercoud.com/wp-content/uploads/2018/09/Intercoud_MarioMorales-150x150.png 150w, https://www.intercoud.com/wp-content/uploads/2018/09/Intercoud_MarioMorales-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px" />								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-db40582 elementor-column elementor-col-33 elementor-inner-column" data-id="db40582" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75bd41d elementor-widget elementor-widget-post-info" data-id="75bd41d" data-element_type="widget" data-widget_type="post-info.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+					<li class="elementor-icon-list-item elementor-repeater-item-06602b3 elementor-inline-item">
+									<span class="elementor-icon-list-icon">
+							<i class="fa fa-user" aria-hidden="true"></i>
+					</span>
+								<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-custom">
+										Mario Morales					</span>
+								</li>
+				<li class="elementor-icon-list-item elementor-repeater-item-da9bfdb elementor-inline-item">
+									<span class="elementor-icon-list-icon">
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+					</span>
+								<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-custom">
+										octubre 10, 2018					</span>
+								</li>
+				<li class="elementor-icon-list-item elementor-repeater-item-c2898f1 elementor-inline-item" itemprop="commentCount">
+						<a href="https://www.intercoud.com/blog/articulo/estructura-de-una-aplicacion-web/#respond">
+										<span class="elementor-icon-list-icon">
+							<i class="fa fa-comments" aria-hidden="true"></i>
+					</span>
+								<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-comments">
+										Sin Comentarios					</span>
+									</a>
+				</li>
+				</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-aa9db65 elementor-column elementor-col-33 elementor-inner-column" data-id="aa9db65" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-af6279b elementor-widget elementor-widget-heading" data-id="af6279b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Artículo</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-65a439f elementor-widget elementor-widget-divider" data-id="65a439f" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator"></span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-fe77f9e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="fe77f9e" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Estructura de una aplicación web</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b46d783 elementor-widget elementor-widget-divider" data-id="b46d783" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator"></span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-da6ca84 elementor-align-left elementor-hidden-desktop elementor-widget elementor-widget-post-info" data-id="da6ca84" data-element_type="widget" data-widget_type="post-info.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+					<li class="elementor-icon-list-item elementor-repeater-item-f4d1ec3 elementor-inline-item" itemprop="about">
+									<span class="elementor-icon-list-icon">
+							<i class="fa fa-tags" aria-hidden="true"></i>
+					</span>
+								<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+										<span class="elementor-post-info__terms-list">
+				<a href="https://www.intercoud.com/blog/etiquetas/innovacion/" class="elementor-post-info__terms-list-item">Innovación</a>, <a href="https://www.intercoud.com/blog/etiquetas/software/" class="elementor-post-info__terms-list-item">Software</a>, <a href="https://www.intercoud.com/blog/etiquetas/tecnologia/" class="elementor-post-info__terms-list-item">Tecnología</a>				</span>
+					</span>
+								</li>
+				</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-09793c0 content-links elementor-widget elementor-widget-text-editor" data-id="09793c0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-168daa6 content-links elementor-widget elementor-widget-theme-post-content" data-id="168daa6" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			<p>Hace algunos años, cuando se desarrollaba una herramienta de software, era común entregar todo el trabajo compilado dentro de un archivo instalable. Este archivo podía estar copiado dentro de un CD, memoria USB o podía ser descargado desde la web. El mismo contenía todo el proyecto de software y era necesario instalar todos sus componentes en la computadora o servidor que lo ejecutaría.</p>
+<p>Una vez instalada la herramienta podías hacer uso de su interfaz gráfica, que funcionaba como cliente. Por medio de esta interfaz eras capaz de hacer solicitudes a otro módulo de software que hacía las veces de servidor. Este segundo modulo podía estar instalado en la misma computadora o podía ser accedido a través de solicitudes web.</p>
+<p>Con este modelo de software la herramienta desarrollada tenía limitaciones, la mayoría dadas por el equipo huésped. En otras palabras, si tu computadora o servidor no tenían espacio en el disco duro, tampoco lo tenía la herramienta. Si sufrían el ataque de un hacker o virus informático, se comprometía toda la herramienta y la información que estaba almacenaba. Si tu computadora o servidor dejaban de funcionar por cualquier motivo, así mismo tu herramienta se volvía inoperante.</p>
+<h3>Las Aplicaciones Web</h3>
+<p>Esto cambió con la llegada de las aplicaciones web. Una aplicación web es una herramienta de software que se accede y utiliza a través de un navegador web. Esta nueva estrategia de programación fue ganando seguidores rápidamente gracias a la independencia que tiene con el dispositivo desde el cual se utiliza y las grandes ventajas que esto supone.</p>
+<p>Las aplicaciones web no se instalan ni se ejecutan en un computador o servidor. Quizás te estés preguntando… ¿y cómo puedo utilizar un software que no está instalado en mi equipo? La respuesta ya la mencioné en el párrafo anterior, gracias a los navegadores. La aplicación web se podrá acceder desde navegadores como Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer, Opera, etc.</p><div class='code-block code-block-1' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<div style="margin-top: 40px; margin-bottom: 40px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="6132582443"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<p>Esta posibilidad le proporciona otra ventaja que tienen las aplicaciones web: son herramientas multiplataforma. Si observas una vez mas la lista de navegadores, caerás en cuenta que alguno de ellos funcionan en varios dispositivos, por ejemplo: Google Chrome, yo lo tengo instalado en mi smartphone y en mi Laptop; también está Opera, que es el navegador de los dispositivos iOS. Los navegadores son aplicaciones comunes de todos los dispositivos con conexión a internet, lo cual significa que una aplicación web también se podrá acceder desde los mismos dispositivos.</p>
+<h3>¿Cómo está estructurada una aplicación web?</h3>
+<p>Aunque existen muchas posibilidades para estructurar una aplicación web, todas se pueden resumir en tres capaz principales. Interfaz gráfica, Controlador o servidor y Base de Datos.</p>
+<h4>Interfaz gráfica</h4>
+<p>Es la primera capa de una aplicación web utilizada directamente por los usuarios. En las aplicaciones web esta capa es ejecutada por un navegador. El lenguaje más utilizado para implementar esta capa es <strong>HTML</strong>, también se puede utilizar <strong>XML</strong>.</p>
+<p><strong>HTML</strong> (HyperText Markup Language) es un lenguaje no compilado que permite plasmar y posicionar cada uno de los elementos de una página web. El archivo HTML es interpretado por el navegador y lo dibuja en pantalla. Para darle estilo, colores, animaciones y adaptabilidad a diferentes tamaños de pantallas necesitaremos escribir código <strong>CSS</strong> (Cascading Style Sheets). Por último, si deseamos darle una experiencia más interactiva, como actualizar cierta parte de la pantalla, necesitaremos implementar un poco de <strong>JavaScript</strong>. Estas tres tecnologías trabajan en armonía para darle al usuario la experiencia interactiva que se desea dentro de cualquier aplicación web.</p><div class='code-block code-block-1' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<div style="margin-top: 40px; margin-bottom: 40px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="6132582443"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<h4>Controlador o servidor</h4>
+<p>Este módulo es el encargado de recibir todas las solicitudes realizadas por el usuario en la interfaz gráfica, interpretarlas, ejecutarlas y por último devolver la información a la primera capa. El controlador es el encargado de establecer conexión con la base de datos para introducir, actualizar o consultar la información que requiera el usuario.</p>
+<p>Existen muchas tecnologías que pueden realizar el trabajo de la segunda capa, entre las cuales podemos mencionar:</p>
+<ul>
+<li>PHP</li>
+<li>Java: Java Servlets o JSP</li>
+<li>JavaScript en su modalidad de Server Side JavaScript</li>
+<li>Perl</li>
+<li>Ruby</li>
+<li>Phyton</li>
+<li>js</li>
+<li>ASP y ASP.NET</li>
+</ul>
+<h4>Base de datos</h4>
+<p>Es la capa más importante de toda aplicación web, ya que almacena toda la información de la herramienta. La base de datos también puede realizar algunas tareas que por definición se deberían realizar en el controlador, pero que al poder realizarlas desde la base de datos podemos proporcionar más velocidad de respuesta. Estas tareas pueden hacerse en forma de procedimientos almacenados o funciones de base de datos.</p>
+<p>Las herramientas de base de datos más utilizadas son:</p>
+<ul>
+<li>MySQL</li>
+<li>MS SQL Server</li>
+<li>Oracle</li>
+<li>Microsoft Access</li>
+<li>Postgre SQL</li>
+</ul>
+<h3>Ventajas de las aplicaciones web</h3>
+<ul>
+<li>Menor tiempo de implementación: se puede ejecutar la aplicación sin necesidad de instalaciones ni configuraciones previas.</li>
+<li>Ahorro de espacio: Al no estar instaladas en tu equipo, no consumen espacio de disco duro.</li>
+<li>Poco consumo de recursos: como esta alojada en un servidor distinto a tu computador, las tareas de la herramienta no consumirán memoria ni recursos de tu computador, sino del servidor.</li>
+<li>Compatibilidad: Se pueden utilizar desde cualquier sistema operativo y navegador</li>
+<li>Virus o Malware: Si tienes tu computador infectado con virus o malware, tu información no se verá afectada. En caso de dañarse la computadora podrás acceder desde cualquier otro dispositivo.</li>
+<li>Disponibilidad: Al estar alojada en otro servidor, se puede considerar un servicio de nube, los cuales comúnmente tienen una alta disponibilidad debido a que están configurados para propagarse en caso de caídas de servidores y demás.</li>
+<li>Actualizaciones inmediatas: Al estar utilizando una aplicación web, no necesitaremos instalar actualizaciones, ni configuraciones. Siempre estaremos utilizando la última versión del software.</li>
+</ul>
+<h3>Desventajas de las aplicaciones web</h3>
+<ul>
+<li>La disponibilidad se puede ver interrumpida por falta de conexión a internet. En otras palabras, dependemos de nuestro proveedor de internet.</li>
+</ul>
+<h3>Ejemplo de aplicaciones web que usamos comúnmente</h3>
+<p>En nuestros tiempos es raro que no hayamos utilizado alguno de los servicios que se ofrecen como aplicación web. Podemos disfrutar de ellos en distintas áreas o para distintas tareas:</p><div class='code-block code-block-1' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<div style="margin-top: 40px; margin-bottom: 40px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="6132582443"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<ul>
+<li>Correo electrónico: Hotmal, Gmail, Yahoo</li>
+<li>Almacenamiento: Google Drive, OneDrive, Dropbox</li>
+<li>Ofimática: Office 365, Google Docs</li>
+<li>Entretenimiento: Netflix, Youtube, Twitch, Mixer</li>
+<li>Redes sociales: Facebook, Twitter, Instagram</li>
+<li>Compras: Ebay, Amazon</li>
+</ul>
+<p>Nuestra empresa Intercoud se especializa en desarrollo de aplicaciones web, teniendo como proyecto estrella nuestra Plataforma de Gestión Veterinaria <a href="https://www.intercoud.com/luvet-petscare/">Luvet PetsCare</a>.</p>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-e4b054f content-links elementor-widget elementor-widget-text-editor" data-id="e4b054f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Gracias por leer el artículo hasta el final, si te gustó el contenido suscríbete a nuestro blog para que recibas de primera mano todos nuestros artículos.</p>
+</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4d75723 content-links elementor-widget elementor-widget-text-editor" data-id="4d75723" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Fuentes:</p>
+<p>Documentación: <a href="https://es.m.wikipedia.org/wiki/Aplicaci%C3%B3n_web">Wikipedia, </a><a href="http://www.miprofit.com/los-gestores-base-datos-mas-utilizados-mundo-empresarial/">Miprofit</a></p>
+<p>Imágenes: <a href="https://www.upwork.com/hiring/mobile/native-app-vs-web-app-for-mobile/">Upwork</a></p>
+</div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-7f12f26 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section elementor-inner-section" data-id="7f12f26" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-64143fa elementor-column elementor-col-100 elementor-inner-column" data-id="64143fa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d702908 elementor-widget elementor-widget-heading" data-id="d702908" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">¿Te gustó este post?</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4404a19 elementor-widget elementor-widget-heading" data-id="4404a19" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Tenemos muchas publicaciones como esta!</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-aea6979 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="aea6979" data-element_type="widget" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="New Form">
+			<input type="hidden" name="post_id" value="1040"/>
+			<input type="hidden" name="form_id" value="aea6979"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-75 elementor-field-required">
+					<label for="form-field-email" class="elementor-field-label elementor-screen-only">Email</label><input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Correo Electrónico" required="required" aria-required="true">				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-25">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span >
+																						<span class="elementor-button-text">Enviar</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-90064ba elementor-widget elementor-widget-heading" data-id="90064ba" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Solo te enviaremos contenido de calidad. Prometido!</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-709e042 elementor-post-navigation-borders-yes elementor-widget elementor-widget-post-navigation" data-id="709e042" data-element_type="widget" data-widget_type="post-navigation.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-post-navigation elementor-grid">
+			<div class="elementor-post-navigation__prev elementor-post-navigation__link">
+				<a href="https://www.intercoud.com/blog/articulo/creacion-de-un-mockup-de-una-pagina-web/" rel="prev"><span class="post-navigation__arrow-wrapper post-navigation__arrow-prev"><i class="fa fa-caret-left" aria-hidden="true"></i><span class="elementor-screen-only">Prev</span></span><span class="elementor-post-navigation__link__prev"><span class="post-navigation__prev--label">Anterior</span><span class="post-navigation__prev--title">Creación de un mockup de una página web</span></span></a>			</div>
+							<div class="elementor-post-navigation__separator-wrapper">
+					<div class="elementor-post-navigation__separator"></div>
+				</div>
+						<div class="elementor-post-navigation__next elementor-post-navigation__link">
+				<a href="https://www.intercoud.com/blog/articulo/el-tiempo-es-mas-que-oro/" rel="next"><span class="elementor-post-navigation__link__next"><span class="post-navigation__next--label">Siguiente</span><span class="post-navigation__next--title">El tiempo es más que oro</span></span><span class="post-navigation__arrow-wrapper post-navigation__arrow-next"><i class="fa fa-caret-right" aria-hidden="true"></i><span class="elementor-screen-only">Next</span></span></a>			</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-96bef55 intercoud-comments elementor-widget elementor-widget-post-comments" data-id="96bef55" data-element_type="widget" data-widget_type="post-comments.theme_comments">
+				<div class="elementor-widget-container">
+			 
+<section id="comments" class="comments-area clr">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/articulo/estructura-de-una-aplicacion-web/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://www.intercoud.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<div class="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="100" class="textarea-comment" placeholder="Tu comentario aquí..."></textarea></div><div class="comment-form-author"><input type="text" name="author" id="author" value="" placeholder="Nombre (obligatorio)" size="22" tabindex="101" aria-required="true" class="input-name" /></div>
+<div class="comment-form-email"><input type="text" name="email" id="email" value="" placeholder="Correo electrónico (obligatorio)" size="22" tabindex="102" aria-required="true" class="input-email" /></div>
+<div class="comment-form-url"><input type="text" name="url" id="url" value="" placeholder="Sitio web" size="22" tabindex="103" class="input-website" /></div>
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='1489' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</section><!-- #comments -->		</div>
+				</div>
+				<section class="elementor-element elementor-element-4e70b3f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4e70b3f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b9cb663 elementor-column elementor-col-100 elementor-inner-column" data-id="b9cb663" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-35fef56 elementor-widget elementor-widget-html" data-id="35fef56" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div id="amzn-assoc-ad-a59f093f-4654-46fe-a037-8fbb7ac4db6a"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=a59f093f-4654-46fe-a037-8fbb7ac4db6a"></script>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-57a2d67 elementor-column elementor-col-50 elementor-top-column" data-id="57a2d67" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-73c5e9e elementor-hidden-tablet elementor-hidden-phone elementor-search-form--skin-classic elementor-search-form--button-type-icon elementor-search-form--icon-search elementor-widget elementor-widget-search-form" data-id="73c5e9e" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;classic&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-search-form" role="search" action="https://www.intercoud.com" method="get">
+						<div class="elementor-search-form__container">
+								<input placeholder="Buscar..." class="elementor-search-form__input" type="search" name="s" title="Buscar" value="">
+								<button class="elementor-search-form__submit" type="submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+						<span class="elementor-screen-only">Buscar</span>
+									</button>
+											</div>
+		</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a27abca elementor-align-left elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-post-info" data-id="a27abca" data-element_type="widget" data-widget_type="post-info.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+					<li class="elementor-icon-list-item elementor-repeater-item-f4d1ec3 elementor-inline-item" itemprop="about">
+									<span class="elementor-icon-list-icon">
+							<i class="fa fa-tags" aria-hidden="true"></i>
+					</span>
+								<span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+										<span class="elementor-post-info__terms-list">
+				<a href="https://www.intercoud.com/blog/etiquetas/innovacion/" class="elementor-post-info__terms-list-item">Innovación</a>, <a href="https://www.intercoud.com/blog/etiquetas/software/" class="elementor-post-info__terms-list-item">Software</a>, <a href="https://www.intercoud.com/blog/etiquetas/tecnologia/" class="elementor-post-info__terms-list-item">Tecnología</a>				</span>
+					</span>
+								</li>
+				</ul>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-506bea0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="506bea0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c42136a elementor-column elementor-col-100 elementor-inner-column" data-id="c42136a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f043496 elementor-widget elementor-widget-html" data-id="f043496" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Anuncios Sidebar Rectangular -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="3327483376"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-08da8ef elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="08da8ef" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7144e94 elementor-column elementor-col-100 elementor-inner-column" data-id="7144e94" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-022e22f elementor-widget elementor-widget-heading" data-id="022e22f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Artículos Recientes</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4cd45de elementor-grid-1 elementor-posts--thumbnail-left elementor-posts--align-left elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="4cd45de" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;classic_columns_tablet&quot;:&quot;1&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;}" data-widget_type="posts.classic">
+				<div class="elementor-widget-container">
+					<div class="elementor-posts-container elementor-posts elementor-grid elementor-posts--skin-classic">
+				<article class="elementor-post elementor-grid-item post-1826 articulo type-articulo status-publish has-post-thumbnail hentry etiquetas-hardware etiquetas-internet etiquetas-internet-inalambrico etiquetas-tutoriales etiquetas-wifi etiquetas-wireless-internet entry has-media">
+				<a class="elementor-post__thumbnail__link" href="https://www.intercoud.com/blog/articulo/como-medir-tu-velocidad-de-internet/">
+			<div class="elementor-post__thumbnail"><img width="768" height="515" src="https://www.intercoud.com/wp-content/uploads/2019/03/ip-768x515.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://www.intercoud.com/wp-content/uploads/2019/03/ip-768x515.png 768w, https://www.intercoud.com/wp-content/uploads/2019/03/ip-300x201.png 300w, https://www.intercoud.com/wp-content/uploads/2019/03/ip-1024x687.png 1024w, https://www.intercoud.com/wp-content/uploads/2019/03/ip.png 1078w" sizes="(max-width: 768px) 100vw, 768px" /></div>
+		</a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://www.intercoud.com/blog/articulo/como-medir-tu-velocidad-de-internet/">
+				¿Cómo medir tu velocidad de internet?			</a>
+		</h3>
+					<a class="elementor-post__read-more" href="https://www.intercoud.com/blog/articulo/como-medir-tu-velocidad-de-internet/">
+				Leer Artículo »			</a>
+				</div>
+				</article>
+				<article class="elementor-post elementor-grid-item post-1816 articulo type-articulo status-publish has-post-thumbnail hentry etiquetas-hardware etiquetas-ieee etiquetas-internet etiquetas-internet-inalambrico etiquetas-tecnologia etiquetas-wifi etiquetas-wireless etiquetas-wireless-internet entry has-media">
+				<a class="elementor-post__thumbnail__link" href="https://www.intercoud.com/blog/articulo/que-es-el-wi-fi-historia-y-significado/">
+			<div class="elementor-post__thumbnail"><img width="768" height="510" src="https://www.intercoud.com/wp-content/uploads/2019/03/office-624749-768x510.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="https://www.intercoud.com/wp-content/uploads/2019/03/office-624749-768x510.jpg 768w, https://www.intercoud.com/wp-content/uploads/2019/03/office-624749-300x199.jpg 300w, https://www.intercoud.com/wp-content/uploads/2019/03/office-624749-1024x680.jpg 1024w" sizes="(max-width: 768px) 100vw, 768px" /></div>
+		</a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://www.intercoud.com/blog/articulo/que-es-el-wi-fi-historia-y-significado/">
+				¿Qué es el Wi-Fi? Historia y significado			</a>
+		</h3>
+					<a class="elementor-post__read-more" href="https://www.intercoud.com/blog/articulo/que-es-el-wi-fi-historia-y-significado/">
+				Leer Artículo »			</a>
+				</div>
+				</article>
+				<article class="elementor-post elementor-grid-item post-1669 articulo type-articulo status-publish has-post-thumbnail hentry etiquetas-computacion etiquetas-hardware etiquetas-hd etiquetas-imagenes etiquetas-tecnologia entry has-media">
+				<a class="elementor-post__thumbnail__link" href="https://www.intercoud.com/blog/articulo/video-progresivo-y-entrelazado/">
+			<div class="elementor-post__thumbnail"><img width="768" height="576" src="https://www.intercoud.com/wp-content/uploads/2018/11/tv-antigua-768x576.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="https://www.intercoud.com/wp-content/uploads/2018/11/tv-antigua-768x576.jpg 768w, https://www.intercoud.com/wp-content/uploads/2018/11/tv-antigua-300x225.jpg 300w, https://www.intercoud.com/wp-content/uploads/2018/11/tv-antigua-1024x768.jpg 1024w" sizes="(max-width: 768px) 100vw, 768px" /></div>
+		</a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://www.intercoud.com/blog/articulo/video-progresivo-y-entrelazado/">
+				Video Progresivo y Entrelazado			</a>
+		</h3>
+					<a class="elementor-post__read-more" href="https://www.intercoud.com/blog/articulo/video-progresivo-y-entrelazado/">
+				Leer Artículo »			</a>
+				</div>
+				</article>
+				<article class="elementor-post elementor-grid-item post-1659 articulo type-articulo status-publish has-post-thumbnail hentry etiquetas-motivacion etiquetas-productividad entry has-media">
+				<a class="elementor-post__thumbnail__link" href="https://www.intercoud.com/blog/articulo/al-que-madruga/">
+			<div class="elementor-post__thumbnail"><img width="768" height="508" src="https://www.intercoud.com/wp-content/uploads/2018/11/madrugar-810x536-768x508.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="https://www.intercoud.com/wp-content/uploads/2018/11/madrugar-810x536-768x508.jpg 768w, https://www.intercoud.com/wp-content/uploads/2018/11/madrugar-810x536-300x199.jpg 300w, https://www.intercoud.com/wp-content/uploads/2018/11/madrugar-810x536.jpg 810w" sizes="(max-width: 768px) 100vw, 768px" /></div>
+		</a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://www.intercoud.com/blog/articulo/al-que-madruga/">
+				Al Que Madruga			</a>
+		</h3>
+					<a class="elementor-post__read-more" href="https://www.intercoud.com/blog/articulo/al-que-madruga/">
+				Leer Artículo »			</a>
+				</div>
+				</article>
+				</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7fb8439 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="7fb8439" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-66ff430 elementor-column elementor-col-100 elementor-inner-column" data-id="66ff430" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a000383 elementor-widget elementor-widget-html" data-id="a000383" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Sidebar Banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="9333229341"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-efae8f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="efae8f8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2c110d6 elementor-column elementor-col-100 elementor-inner-column" data-id="2c110d6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d6ce754 elementor-widget elementor-widget-heading" data-id="d6ce754" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Dale Me gusta!</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9943dcd elementor-widget elementor-widget-facebook-page" data-id="9943dcd" data-element_type="widget" data-widget_type="facebook-page.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-facebook-widget fb-page" data-href="https://www.facebook.com/intercoud.pa/" data-tabs="timeline,events,messages" data-height="550px" data-small-header="false" data-hide-cover="false" data-show-facepile="true" data-hide-cta="false" data-adapt-container-width="true" style="min-height: 1px;height:550px"></div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-e160772 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="e160772" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:66,&quot;sticky_effects_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0eb2851 elementor-column elementor-col-100 elementor-inner-column" data-id="0eb2851" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8f03116 elementor-widget elementor-widget-heading" data-id="8f03116" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Compártelo con tus amigos</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dccc75e elementor-share-buttons--view-icon elementor-share-buttons--skin-boxed elementor-grid-3 elementor-share-buttons--shape-square elementor-share-buttons--color-official elementor-widget elementor-widget-share-buttons" data-id="dccc75e" data-element_type="widget" data-widget_type="share-buttons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-grid">
+							<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_facebook">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on facebook</span>
+							</span>
+																	</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_google">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-google-plus" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on google</span>
+							</span>
+																	</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_twitter">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on twitter</span>
+							</span>
+																	</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_linkedin">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-linkedin" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on linkedin</span>
+							</span>
+																	</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_pinterest">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-pinterest" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on pinterest</span>
+							</span>
+																	</div>
+				</div>
+								<div class="elementor-grid-item">
+					<div class="elementor-share-btn elementor-share-btn_whatsapp">
+													<span class="elementor-share-btn__icon">
+								<i class="fa fa-whatsapp" aria-hidden="true"></i>
+								<span class="elementor-screen-only">Share on whatsapp</span>
+							</span>
+																	</div>
+				</div>
+						</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-2ec8351 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2ec8351" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1932b94 elementor-column elementor-col-100 elementor-inner-column" data-id="1932b94" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3cd52b3 elementor-widget elementor-widget-html" data-id="3cd52b3" data-element_type="widget" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:240,&quot;sticky_effects_offset&quot;:0}" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Anuncios Sidebar Rectangular -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4332068414096217"
+     data-ad-slot="3327483376"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-10e90e17 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="10e90e17" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-56eec8c3 elementor-column elementor-col-50 elementor-top-column" data-id="56eec8c3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5169e7da elementor-widget elementor-widget-text-editor" data-id="5169e7da" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>intercoud <span style="color: #f9ea3b;">{</span> developing with love;</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3cebc8e5 elementor-column elementor-col-50 elementor-top-column" data-id="3cebc8e5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5823d730 elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="5823d730" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-pulse" href="https://www.facebook.com/intercoud.pa/" target="_blank">
+					<span class="elementor-screen-only">Facebook</span>
+					<i class="fa fa-facebook"></i>
+				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-pulse" href="https://twitter.com/intercoud" target="_blank">
+					<span class="elementor-screen-only">Twitter</span>
+					<i class="fa fa-twitter"></i>
+				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-pulse" href="https://www.instagram.com/intercoud/" target="_blank">
+					<span class="elementor-screen-only">Instagram</span>
+					<i class="fa fa-instagram"></i>
+				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-pulse" href="https://www.linkedin.com/company/intercoud/" target="_blank">
+					<span class="elementor-screen-only">Linkedin</span>
+					<i class="fa fa-linkedin"></i>
+				</a>
+							<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-pulse" href="https://www.youtube.com/channel/UChyPIhIwajeIPJaJifKZJ0Q?view_as=subscriber" target="_blank">
+					<span class="elementor-screen-only">Youtube</span>
+					<i class="fa fa-youtube"></i>
+				</a>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div data-elementor-type="popup" data-elementor-id="1801" class="elementor elementor-1801 elementor-bc-flex-widget elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInLeft&quot;,&quot;close_button_delay&quot;:2,&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;prevent_close_on_esc_key&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;page_load_delay&quot;:15,&quot;page_load&quot;:&quot;yes&quot;},&quot;timing&quot;:[]}">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-2c5e5416 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="2c5e5416" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1cd07445 elementor-column elementor-col-100 elementor-top-column" data-id="1cd07445" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7dcdf4a6 elementor-widget elementor-widget-heading" data-id="7dcdf4a6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Solicita tu sitio web</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7149c58 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="7149c58" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i class="fa fa-check" aria-hidden="true"></i>
+						</span>
+										<span class="elementor-icon-list-text">Portada + 4 secciones + Contacto + Footer</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i class="fa fa-check" aria-hidden="true"></i>
+						</span>
+										<span class="elementor-icon-list-text">100% adaptable a todos los dispositivos</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i class="fa fa-check" aria-hidden="true"></i>
+						</span>
+										<span class="elementor-icon-list-text">Diseño a la medida</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-f2b385e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="f2b385e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-124af7c elementor-column elementor-col-50 elementor-inner-column" data-id="124af7c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9e8cd0c elementor-widget elementor-widget-heading" data-id="9e8cd0c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">{</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-287c5c5 elementor-column elementor-col-50 elementor-inner-column" data-id="287c5c5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e3b9d22 elementor-widget elementor-widget-heading" data-id="e3b9d22" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$299.99</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-6dfc5b4e elementor-widget elementor-widget-divider" data-id="6dfc5b4e" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator"></span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-04e5cd9 elementor-widget elementor-widget-heading" data-id="04e5cd9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">¿Quieres recibir una sección adicional?</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-779127d6 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="779127d6" data-element_type="widget" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="Website Form">
+			<input type="hidden" name="post_id" value="1801"/>
+			<input type="hidden" name="form_id" value="779127d6"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+					<label for="form-field-email" class="elementor-field-label elementor-screen-only">Nombre</label><input size="1" type="text" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Nombre" required="required" aria-required="true">				</div>
+								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_1 elementor-col-100 elementor-field-required">
+					<label for="form-field-field_1" class="elementor-field-label elementor-screen-only">Telefono</label><input size="1" type="tel" name="form_fields[field_1]" id="form-field-field_1" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Teléfono" required="required" aria-required="true" pattern="[0-9()#&amp;+*-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted.">				</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-field_2 elementor-col-100">
+					<label for="form-field-field_2" class="elementor-field-label elementor-screen-only">Correo</label><input size="1" type="email" name="form_fields[field_2]" id="form-field-field_2" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Correo Electrónico">				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span >
+																						<span class="elementor-button-text">Enviar</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='https://www.intercoud.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.6.4'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.6.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"disabled","sidrSource":"#sidr-close, #site-navigation, #top-bar-nav","sidrDisplace":"1","sidrSide":"right","sidrDropdownTarget":"link","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.6.4'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.6.4'></script>
+<![endif]-->
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor-pro/assets/lib/social-share/social-share.min.js?ver=0.2.17'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor/assets/js/frontend-modules.js?ver=2.5.11'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.5.4'></script>
+<script type='text/javascript'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.intercoud.com\/wp-admin\/admin-ajax.php","nonce":"66e1a707f7","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},
+"facebook_sdk":{"lang":"es_ES","app_id":""}};
+</script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.5.4'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.1'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=4.4.6'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.5.11","urls":{"assets":"https:\/\/www.intercoud.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},
+"post":{"id":1489,"title":"Estructura de una aplicaci\u00f3n web","excerpt":""}};
+</script>
+<script type='text/javascript' src='https://www.intercoud.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.5.11'></script>
+	</body>
+</html>

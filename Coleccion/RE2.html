@@ -1,0 +1,480 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Optimizaciones de Renderizado</title>
+<meta name="description" content="El Manual de Unity le ayudará a aprender y usar el motor de Unity. Con el motor de Unity usted puede crear juegos 2D y 3D, aplicaciones y experiencias.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1470737551"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1470737551"></script><script type="text/javascript" src="docdata/toc.js?ts=1470737551"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1470737551"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1470737551">
+</head>
+<body>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="http://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Buscar en el manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="http://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>5.3</b> (<a href="http://docs.unity3d.com/540/Documentation/Manual">switch to 5.4b</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Idioma: <span class="b">Español</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/">English</a></li>
+<li><a href="/ja/current/Manual/">日本語</a></li>
+<li><a href="/es/current/Manual/">Español</a></li>
+<li><a href="/kr/current/Manual/">한국어</a></li>
+<li><a href="/ru/current/Manual/">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Manual de Unity</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Manual de Unity</a></li>
+<li><a href="PlatformSpecific.html">Indicaciones Específicas de Plataforma</a></li>
+<li><a href="MobileDeveloperChecklist.html">Lista de Verificación para Desarrolladores en Móviles</a></li>
+<li><a href="MobileOptimizationPracticalGuide.html">Guía Práctica para la Optimización en Móviles</a></li>
+<li>Optimizaciones de Renderizado</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationScriptingMethods.html"></a></span><div class="tip">Métodos de Scripting y Gameplay</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalScriptingOptimizations.html"></a></span><div class="tip">Optimizando Scripts</div>
+</div>
+</div></div>
+<h1>Optimizaciones de Renderizado</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Esta sección introduce los tecnicismos de la optimización del renderizado. Muestra cómo bake los resultados de la iluminación para un mejor rendimiento, y cómo los desarrolladores de Shadowgun lograron texturas de alto contraste, con una iluminación baked, para hacer que su juego se viera genial. Si usted está mirando por información en general acerca de cómo un juego móvil optimizado se ve, revise la página <a href="MobileOptimizationGraphicsMethods.html">Graphics Methods</a> </p>
+
+<h2>Vuélvase Artístico!</h2>
+
+<p>A veces optimizar el renderizado en su juego requiere algo de trabajo sucio. Toda la estructura que Unity proporciona hace que sea fácil comenzar a trabajar rápido, pero si usted requiere una fidelidad en hardware limitado de alta categoría, hacer las cosas por usted mismo y soslayando la estructura es la manera de ir, proporciona que usted pueda introducir un cambio clave estructural que hace que las cosas sean más rápido. Sus herramientas de elección son scripts del editor, shaders simples, y una producción de arte pasado de moda.</p>
+
+<h3>Cómo entrar debajo del capote</h3>
+
+<p>Primero que todo, revise esto <a href="Shaders.html">introducción a cómo los shaders están escritos</a>.</p>
+
+<ul>
+<li><a href="http://unity3d.com/support/resources/assets/built-in-shaders">Shaders Integrados</a></li>
+<li>Examine el código fuente de los shaders integrados. A menudo, si usted quiere hacer que un nuevo shader haga algo diferente, usted lo puede lograr al tomar las partes de dos shaders ya existentes y colocarlos juntos.</li>
+<li>Depuración del Surface Shader (<code>#pragma debug</code>)</li>
+<li>Un CG Shader es generado de cada surface shader, y luego compilado completamente desde ahí. Si usted agrega <code>#pragma debug</code> a la parte arriba de su surface shader, cuando usted abra el shader compilado vía el inspector, usted verá el código CG intermediario. Esto es útil para inspeccionar cómo una parte especifica de un shader es en realidad calculado, y puede también ser de gran ayuda para agarrar ciertos aspectos que usted quiera de un surface shader y luego aplicarlos a un shader CG.</li>
+<li>Shader incluye los archivos</li>
+<li>Mucho código ayuda de shader es incluido en cada shader, y por lo usual no es utilizado, pero esto es por qué a veces usted verá shaders llamar funciones como WorldReflectionVector que no parecen estar definidos en cualquier parte. Unity tiene varios archivos incluidos de shaders integrados que contienen estas funciones de ayuda. Para encontrar una función en especifico, usted necesitará buscar a través de todos los diferentes includes.</li>
+<li>Estos archivos son una parte importante de la estructura interna que Unity utiliza para que sea fácil escribir shaders; los archivos proporcionan cosas como sombras en tiempo real, diferentes tipos de luz, lightmaps, y soporte multi-plataforma.</li>
+<li>Documentación de Hardware
+<a href="http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/OpenGLESPlatforms/OpenGLESPlatforms.html%23//apple_ref/doc/uid/TP40008793-CH106-SW6">hardware</a> and <a href="http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html">best practices for writing shaders</a>. Tenga en cuenta que nosotros vamos a sugerir ser más agresivos con la precisión de los puntos flotantes sin embargo.</li>
+</ul>
+
+<h2>
+<a href="http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/">Shadowgun</a> con profunidad</h2>
+
+<p>Shadowgun es un logro gráfico excelente considerando el hardware en el que corre. Mientras que la calidad del arte parece ser la clave al rompe-cabeza, hay un par te trucos para lograr tal calidad que los programadores pueden lograr para maximizar su potencial artístico.</p>
+
+<p>En la página de <a href="MobileOptimizationGraphicsMethods.html">Graphics Methods</a> nosotros utilizamos la estatua de oro en Shadowgun como un ejemplo de una optimización genial; en vez de utilizar un mapa normal para darle a su estatua algo de definición solida, ellos simplemente baked el detalle de la iluminación a la textura. Aquí, nosotros vamos a mostrarle cómo y por qué usted debería utilizar una técnica similar en su propio juego.</p>
+
+<h3>Código Shader para En Tiempo Real vs Estatua Dorada Baked</h3>
+
+<pre><code>// This is the pixel shader code for drawing normal-mapped
+// specular highlights on static lightmapped geometry
+
+// 5 texture reads, lots of instructions
+
+SurfaceOutput o;
+
+fixed4 tex = tex2D(_MainTex, IN.uv_MainTex);
+fixed4 c = tex * _Color;
+o.Albedo = c.rgb;
+
+o.Gloss = tex.a;
+o.Specular = _Shininess;
+
+o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
+
+float3 worldRefl = WorldReflectionVector (IN, o.Normal);
+fixed4 reflcol = texCUBE (_Cube, worldRefl);
+reflcol *= tex.a;
+o.Emission = reflcol.rgb * _ReflectColor.rgb;
+o.Alpha = reflcol.a * _ReflectColor.a;
+
+fixed atten = LIGHT_ATTENUATION(IN);
+fixed4 c = 0;
+
+half3 specColor;
+fixed4 lmtex = tex2D(unity_Lightmap, IN.lmap.xy);
+fixed4 lmIndTex = tex2D(unity_LightmapInd, IN.lmap.xy);
+
+const float3x3 unity_DirBasis = float3x3( 
+float3( 0.81649658,  0.0, 0.57735028),
+float3(-0.40824830,  0.70710679, 0.57735027),
+float3(-0.40824829, -0.70710678, 0.57735026) );
+
+half3 lm = DecodeLightmap (lmtex);
+
+half3 scalePerBasisVector = DecodeLightmap (lmIndTex);
+
+half3 normalInRnmBasis = saturate (mul (unity_DirBasis, o.Normal));
+lm *= dot (normalInRnmBasis, scalePerBasisVector);
+
+return half4(lm, 1);
+</code></pre>
+
+<pre><code>// This is the pixel shader code for lighting which is
+// baked into the texture
+
+// 2 texture reads, very few instructions
+
+fixed4 c = tex2D (_MainTex, i.uv.xy);   
+
+c.xyz += texCUBE(_EnvTex,i.refl) * _ReflectionColor * c.a;
+
+return c;
+</code></pre>
+
+<p><img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-0.gif" alt="Reflective Bumped Specular">
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-1.jpg" alt="">
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-2.gif" alt="Una luz baked con Reflexión">
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-3.jpg" alt=""></p>
+
+<h3>Render to Texel</h3>
+
+<p>La luz en tiempo real es en realidad de mayor calidad, pero el aumento de rendimiento de una versión baked es masivo. Entonces cómo se hace esto? Una herramienta del editor llamada Render to Texel fue creada para este propósito. Este bake la luz a la textura a través del siguiente proceso:</p>
+
+<ul>
+<li>Transforme la tangente del espacio del normal map a espacio del mundo vía script.</li>
+<li>Cree un mapa de posición del espacio del mundo vía script.</li>
+<li>Renderice a Textura un pase de pantalla completa de una textura entera utilizando dos mapas previos, con un pase adicional por luz.</li>
+<li>Promedie resultados de varios puntos panorámicos para producir algo que se ve plausibles con todo alrededor, o al menos de unos ángulos de vista comunes en su juego.</li>
+</ul>
+
+<p>Esto es cómo las mejoras optimizaciones gráficas funciona. Ellos eluden toneladas de cálculos al realizarlas en el editor o antes de que el juego corra. En general, esto es lo que usted quiere hacer:</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-4.jpg" alt="">
+</figure>
+
+<ul>
+<li>Cree algo que se ve genial no se preocupe por el rendimiento.</li>
+<li>Utilice herramientas como el lightmapper de Unity y extensiones del editor como Render to Texel y Sprite Packer para bake a algo que sea muy simple de renderizar.</li>
+<li>Hacer sus propias herramientas es la mejor manera de hacer esto, usted puede crear las herramientas perfectas que encajen a cualquier problema que su juego presente.</li>
+<li>Cree shaders y scripts que modulan su output baked para darle algo de “brillo”; un efecto llamativo para crear una ilusión de una luz dinámica.</li>
+</ul>
+
+<h3>Concepto de Frecuencia de luz</h3>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-5.jpg" alt="">
+</figure>
+
+<p>Tal como el Bass (Bajo) y Treble (Agudos) de una pista de audio, las imágenes también tienen componentes de alta frecuencia y baja frecuencia, y cuando usted está renderizando, es mejor manejarlas de maneras diferentes, similar a cómo los estéreos utilizan subwoofers y tweeters para producir un sonido de cuerpo completo. Una manera de visualizar las diferentes frecuencias de una imagen es utilizar el filtro “High Pass” en Photoshop. <strong>Filters-&gt;Other-&gt;High Pass</strong>. Si usted ha hecho trabajo de audio antes, usted reconocerá el nombre High Pass. Esencialmente lo que hace es cortar todas las frecuencias menores que X, el parámetro que usted pase al filtro. Para imágenes, un Gaussian Blur (Desenfoque gaussiano) es equivalente al Low Pass.</p>
+
+<p>Esto aplica a las gráficas en tiempo real ya que la frecuencia es una buena manera de separar cosas y determinar cómo manejar qué. Por ejemplo, en un entorno lightmapped, la imagen final es obtenida por lo compuesto del lightmap, el cual es baja frecuencia, y las texturas, que son de alta frecuencia. En Shadowgun, la luz de baja frecuencia es aplicada al personaje rápidamente con unos light probes (sondas de luz), la luz de alta frecuencia es falsificadaa través del uso de un shader bumpmapped simple con una dirección de luz arbitraría.</p>
+
+<p>En general, al utilizar diferentes métodos para renderizar diferentes frecuencias de luz, por ejemplo, baked vs dynamic (dinámico), por objeto vs por nivel, por pixel vs por vértice, etc, usted puede crear cuerpos completos de imagen en hardware limitado. Opciones de estilo a parte, por lo general es una buena idea intentar tener una fuerte variación de colores o valores en altas y bajas frecuencias.</p>
+
+<h3>Frecuencia en Práctica: Descomposición de Shadowgun</h3>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationPracticalRenderingOptimizations-6.jpg" alt="">
+</figure>
+
+<ul>
+<li>Fila de arriba
+
+<ul>
+<li>Ultra-Low-Frequency Specular Vertex Light (Dynamic) | Un canal Alpha de Alta Frecuencia | Un Lightmap de Baja Frecuencia | Un Albedo de Alta Frecuencia</li>
+</ul>
+</li>
+<li>Fila de la Mitad
+
+<ul>
+<li>Specular Vertex Light * Alpha | Detalles Aditivos de Alta Frecuencia | Lightmap * Canal de Color</li>
+</ul>
+</li>
+<li>Fondo</li>
+<li>Final Sum</li>
+</ul>
+
+<p><strong>Tenga en cuenta:</strong> Usualmente estas descomposiciones se refieren a los pasos e un renderizador deferred, pero este no es el caso aquí. Todo esto es hecho en un solo pass. Estos son los dos shaders relevantes con los cuales esta composición se baso:</p>
+
+<h4>Lightmapped con Virtual Gloss Per-Vertex Additive</h4>
+
+<pre><code>Shader "MADFINGER/Environment/Virtual Gloss Per-Vertex Additive (Supports Lightmap)" {
+Properties {
+    _MainTex ("Base (RGB) Gloss (A)", 2D) = "white" {}
+    //_MainTexMipBias ("Base Sharpness", Range (-10, 10)) = 0.0
+    _SpecOffset ("Specular Offset from Camera", Vector) = (1, 10, 2, 0)
+    _SpecRange ("Specular Range", Float) = 20
+    _SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+    _Shininess ("Shininess", Range (0.01, 1)) = 0.078125
+    _ScrollingSpeed("Scrolling speed", Vector) = (0,0,0,0)
+}
+
+SubShader {
+    Tags { "RenderType"="Opaque" "LightMode"="ForwardBase"}
+    LOD 100
+
+
+
+    CGINCLUDE
+    #include "UnityCG.cginc"
+    sampler2D _MainTex;
+    float4 _MainTex_ST;
+    samplerCUBE _ReflTex;
+
+    #ifndef LIGHTMAP_OFF
+    float4 unity_LightmapST;
+    sampler2D unity_Lightmap;
+    #endif
+
+    //float _MainTexMipBias;
+    float3 _SpecOffset;
+    float _SpecRange;
+    float3 _SpecColor;
+    float _Shininess;
+    float4 _ScrollingSpeed;
+
+    struct v2f {
+        float4 pos : SV_POSITION;
+        float2 uv : TEXCOORD0;
+        #ifndef LIGHTMAP_OFF
+        float2 lmap : TEXCOORD1;
+        #endif
+        fixed3 spec : TEXCOORD2;
+    };
+
+
+    v2f vert (appdata_full v)
+    {
+        v2f o;
+        o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+
+        o.uv = v.texcoord + frac(_ScrollingSpeed * _Time.y);
+
+        float3 viewNormal = mul((float3x3)UNITY_MATRIX_MV, v.normal);
+        float4 viewPos = mul(UNITY_MATRIX_MV, v.vertex);
+        float3 viewDir = float3(0,0,1);
+        float3 viewLightPos = _SpecOffset * float3(1,1,-1);
+
+        float3 dirToLight = viewPos.xyz - viewLightPos;
+
+        float3 h = (viewDir + normalize(-dirToLight)) * 0.5;
+        float atten = 1.0 - saturate(length(dirToLight) / _SpecRange);
+
+        o.spec = _SpecColor * pow(saturate(dot(viewNormal, normalize(h))), _Shininess * 128) * 2 * atten;
+
+        #ifndef LIGHTMAP_OFF
+        o.lmap = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+        #endif
+        return o;
+    }
+    ENDCG
+
+
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        fixed4 frag (v2f i) : SV_Target
+        {
+            fixed4 c = tex2D (_MainTex, i.uv);
+
+            fixed3 spec = i.spec.rgb * c.a;
+
+            #if 1
+            c.rgb += spec;
+            #else           
+            c.rgb = c.rgb + spec - c.rgb * spec;
+            #endif
+
+            #ifndef LIGHTMAP_OFF
+            fixed3 lm = DecodeLightmap (tex2D(unity_Lightmap, i.lmap));
+            c.rgb *= lm;
+            #endif
+
+            return c;
+        }
+        ENDCG 
+    }   
+}
+}
+
+</code></pre>
+
+<h3>Lightprobes con Virtual Gloss Per-Vertex Additive</h3>
+
+<pre><code>Shader "MADFINGER/Environment/Lightprobes with VirtualGloss Per-Vertex Additive" {
+Properties {
+    _MainTex ("Base (RGB) Gloss (A)", 2D) = "white" {}
+    _SpecOffset ("Specular Offset from Camera", Vector) = (1, 10, 2, 0)
+    _SpecRange ("Specular Range", Float) = 20
+    _SpecColor ("Specular Color", Color) = (1, 1, 1, 1)
+    _Shininess ("Shininess", Range (0.01, 1)) = 0.078125    
+    _SHLightingScale("LightProbe influence scale",float) = 1
+}
+
+SubShader {
+    Tags { "RenderType"="Opaque" "LightMode"="ForwardBase"}
+    LOD 100
+
+
+
+    CGINCLUDE
+    #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
+    #include "UnityCG.cginc"
+    sampler2D _MainTex;
+    float4 _MainTex_ST;
+
+
+    float3 _SpecOffset;
+    float _SpecRange;
+    float3 _SpecColor;
+    float _Shininess;
+    float _SHLightingScale;
+
+    struct v2f {
+        float4 pos : SV_POSITION;
+        float2 uv : TEXCOORD0;
+        float3 refl : TEXCOORD1;
+        fixed3 spec : TEXCOORD3;
+        fixed3 SHLighting: TEXCOORD4;
+    };
+
+
+    v2f vert (appdata_full v)
+    {
+        v2f o;
+        o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+        o.uv = v.texcoord;
+
+        float3 worldNormal = mul((float3x3)_Object2World, v.normal);        
+        float3 viewNormal = mul((float3x3)UNITY_MATRIX_MV, v.normal);
+        float4 viewPos = mul(UNITY_MATRIX_MV, v.vertex);
+        float3 viewDir = float3(0,0,1);
+        float3 viewLightPos = _SpecOffset * float3(1,1,-1);
+
+        float3 dirToLight = viewPos.xyz - viewLightPos;
+
+        float3 h = (viewDir + normalize(-dirToLight)) * 0.5;
+        float atten = 1.0 - saturate(length(dirToLight) / _SpecRange);
+
+        o.spec = _SpecColor * pow(saturate(dot(viewNormal, normalize(h))), _Shininess * 128) * 2 * atten;
+
+        o.SHLighting    = ShadeSH9(float4(worldNormal,1)) * _SHLightingScale;
+
+        return o;
+    }
+    ENDCG
+
+
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        fixed4 frag (v2f i) : SV_Target
+        {
+            fixed4 c    = tex2D (_MainTex, i.uv);
+
+            c.rgb *= i.SHLighting;
+            c.rgb += i.spec.rgb * c.a;
+
+            return c;
+        }
+        ENDCG 
+    }   
+}
+}
+</code></pre>
+
+<h2>Mejores Prácticas</h2>
+
+<h3>Optimización de GPU: Alpha-Testing</h3>
+
+<p>Algunos GPUs, particularmente aquellos encontrado en dispositivos móviles, incurren en una sobre carga de rendimiento alta por alpha-testing (o uso de las operaciones <strong>discard</strong> y <strong>clip</strong> en shaders pixel). Usted debería remplazar los shaders alpha-test con alpha-blended si es posible- Dónde alpha-testing no puede ser evitado, usted debería mantener el número general de pixeles alpha-tested visibles a un mínimo.</p>
+
+<h3>Compresión de Textura iOS</h3>
+
+<p>Algunas imágenes, especialmente si se está utilizando la compresión de textura iOS/Android PVR, son propensos a defectos visuales en el canal alpha. En tales casos, usted podría necesitar ajustar los parámetros de compresión PVRT directamente en su software de imágenes. Usted puede hacer eso al instalar el <strong>PVR export plugin</strong> o utilizando [PVRTexTool](http://www.imgtec.com/powervr/insider/powervr-pvrtextool.asp de Imagination Tech, los creadores del formato PVRTC. El archivo de la imagen comprimida resultante con una extensión <strong>.pvr</strong> será importada por el editor de Unity directamente y los parámetros de compresión serán preservados. Si texturas comprimidas PVRT no le dan una calidad visual suficientemente buena o usted necesita en especial una imagen nitida (como usted podría hacerlo para texturas GUI) entonces usted debería considerar utilizar texturas 16-bit más bien de 32-bit. Al hacer esto, usted va a reducir el ancho de banda de memoria y los requerimientos de almacenamiento por la mitad.</p>
+
+<h3>Compresión de Textura para Android</h3>
+
+<p>Todos los dispositivos Android con soporte para OpenGL ES 2.0 también soporta el <a href="../ScriptReference/MobileTextureSubtarget.ETC.html">formato de compresión ETC1</a>; por lo tanto se alienta a que cuando se posible se utilice ETC1 como el formato de textura preferido.</p>
+
+<p>Si se está apuntando a una arquitectura especifica de gráficas, tal como Nvidia Tegra o Qualcomm Snapdragon, puede valer la pena considerar utilizar los formatos de compresión de propiedad disponibles en esas arquitecturas. El mercado de Android también le permite un filtro basado en el formato de compresión de textura soportado, significando un archivo de distribución (.apk) con por ejemplo <a href="class-Texture3D.html">DXT compressed textures</a> pueden prevenirse de ser descargados en un dispositivo que no los soporta.</p>
+
+<h3>Un ejercicio</h3>
+
+<p>Descargue <a href="http://u3d.as/content/forest-johnson/render-to-texel-baker/3fD">Render to Texel</a>.
+Bake iluminación a su modelo.
+Corra el filtro High Pass en el resultado en Photoshop.
+Edite el shader “Mobile/Cubemapped”, incluido en el paquete Render to Texel, para que los detalles de luz de baja frecuencia sean remplazados por una vertex light. </p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationScriptingMethods.html"></a></span><div class="tip">Métodos de Scripting y Gameplay</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalScriptingOptimizations.html"></a></span><div class="tip">Optimizando Scripts</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">© 2016 Todos los derechos reservados. Unity Technologies. Publication 5.3-Q</div>
+<div class="menu">
+<a href="http://unity3d.com/learn">Tutoriales</a><a href="http://answers.unity3d.com">Respuestas de la Comunidad</a><a href="https://support.unity3d.com/hc/en-us">Base de Conocimientos</a><a href="http://forum.unity3d.com">Foros</a><a href="http://unity3d.com/asset-store">Asset Store (Tienda de Assets/Paquetes)</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MC35ML');</script>
+</body>
+</html>

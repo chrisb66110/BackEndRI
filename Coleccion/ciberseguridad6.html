@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html class="ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es-ES" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!--[if lt IE 9]>
+    <script src="https://www.ticbeat.com/src/themes/voice/js/html5.js?x32709"></script>
+    <![endif]-->
+
+    <script id="oil-configuration" type="application/configuration">
+    {
+        "config_version": 1,
+        "publicPath":"https://cmp.axelspringer.es/",
+        "timeout": -1,
+        "locale_url":"https://cmp.axelspringer.es/locale/es.json",
+        "advanced_settings":true,
+        "advanced_settings_purposes_default":true,
+        "default_to_optin": true,
+        "cookie_expires_in_days":365
+    }
+    </script>
+
+    <script src="https://cmp.axelspringer.es/oilstub.1.2.5-RELEASE.min.js" type="text/javascript" charset="UTF-8"></script>
+
+        <script type="text/javascript">
+        var asCMP = asCMP || {};
+        (function () {
+            asCMP = {
+                /**
+                 * Check user purpose consent
+                 */
+                havePurposeConsent: function (purpose) {
+                    return 1;
+                }
+            }
+        })();
+    </script>
+
+    <title>6 claves para entender la ciberseguridad, según el hacker Deepak Daswani</title>
+
+<!-- All in One SEO Pack 2.10.1 by Michael Torbert of Semper Fi Web Design[1479,1574] -->
+<meta name="description"  content="Recogemos los seis principales temas que el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani trata en su libro &#039;La amenaza hacker&#039;, recién publicado por la editorial DEUSTO." />
+
+<link rel="canonical" href="https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="TICbeat &raquo; Feed" href="https://www.ticbeat.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TICbeat &raquo; RSS de los comentarios" href="https://www.ticbeat.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.ticbeat.com\/core\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.9"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='vce_font_0-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400&#038;subset=latin%2Clatin-ext&#038;ver=2.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_font_1-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A400&#038;subset=latin%2Clatin-ext&#038;ver=2.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_style-css'  href='https://www.ticbeat.com/src/themes/voice/css/min.css?x32709' type='text/css' media='screen, print' />
+<style id='vce_style-inline-css' type='text/css'>
+body {background-color:#f0f0f0;}body,.mks_author_widget h3,.site-description,.meta-category a,textarea {font-family: 'Open Sans';font-weight: 400;}h1,h2,h3,h4,h5,h6,blockquote,.vce-post-link,.site-title,.site-title a,.main-box-title,.comment-reply-title,.entry-title a,.vce-single .entry-headline p,.vce-prev-next-link,.author-title,.mks_pullquote,.widget_rss ul li .rsswidget,#bbpress-forums .bbp-forum-title,#bbpress-forums .bbp-topic-permalink {font-family: 'Roboto Slab';font-weight: 400;}.main-navigation a,.sidr a{font-family: 'Roboto Slab';font-weight: 400;}.vce-single .entry-content,.vce-single .entry-headline,.vce-single .entry-footer{width: 600px;}.vce-lay-a .lay-a-content{width: 600px;max-width: 600px;}.vce-page .entry-content,.vce-page .entry-title-page {width: 600px;}.vce-sid-none .vce-single .entry-content,.vce-sid-none .vce-single .entry-headline,.vce-sid-none .vce-single .entry-footer {width: 600px;}.vce-sid-none .vce-page .entry-content,.vce-sid-none .vce-page .entry-title-page,.error404 .entry-content {width: 600px;max-width: 600px;}body, button, input, select, textarea{color: #444444;}h1,h2,h3,h4,h5,h6,.entry-title a,.prev-next-nav a,#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-topic-permalink,.woocommerce ul.products li.product .price .amount{color: #232323;}a,.entry-title a:hover,.vce-prev-next-link:hover,.vce-author-links a:hover,.required,.error404 h4,.prev-next-nav a:hover,#bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover,.woocommerce ul.products li.product h3:hover,.woocommerce ul.products li.product h3:hover mark,.main-box-title a:hover{color: #cf4d35;}.vce-square,.vce-main-content .mejs-controls .mejs-time-rail .mejs-time-current,button,input[type="button"],input[type="reset"],input[type="submit"],.vce-button,.pagination-wapper a,#vce-pagination .next.page-numbers,#vce-pagination .prev.page-numbers,#vce-pagination .page-numbers,#vce-pagination .page-numbers.current,.vce-link-pages a,#vce-pagination a,.vce-load-more a,.vce-slider-pagination .owl-nav > div,.vce-mega-menu-posts-wrap .owl-nav > div,.comment-reply-link:hover,.vce-featured-section a,.vce-lay-g .vce-featured-info .meta-category a,.vce-404-menu a,.vce-post.sticky .meta-image:before,#vce-pagination .page-numbers:hover,#bbpress-forums .bbp-pagination .current,#bbpress-forums .bbp-pagination a:hover,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce ul.products li.product .added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce ul.products li.product .added_to_cart:hover,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.comments-holder .navigation .page-numbers.current,.vce-lay-a .vce-read-more:hover,.vce-lay-c .vce-read-more:hover{background-color: #cf4d35;}#vce-pagination .page-numbers,.comments-holder .navigation .page-numbers{background: transparent;color: #cf4d35;border: 1px solid #cf4d35;}.comments-holder .navigation .page-numbers:hover{background: #cf4d35;border: 1px solid #cf4d35;}.bbp-pagination-links a{background: transparent;color: #cf4d35;border: 1px solid #cf4d35 !important;}#vce-pagination .page-numbers.current,.bbp-pagination-links span.current,.comments-holder .navigation .page-numbers.current{border: 1px solid #cf4d35;}.widget_categories .cat-item:before,.widget_categories .cat-item .count{background: #cf4d35;}.comment-reply-link,.vce-lay-a .vce-read-more,.vce-lay-c .vce-read-more{border: 1px solid #cf4d35;}.entry-meta div,.entry-meta div a,.comment-metadata a,.meta-category span,.meta-author-wrapped,.wp-caption .wp-caption-text,.widget_rss .rss-date,.sidebar cite,.site-footer cite,.sidebar .vce-post-list .entry-meta div,.sidebar .vce-post-list .entry-meta div a,.sidebar .vce-post-list .fn,.sidebar .vce-post-list .fn a,.site-footer .vce-post-list .entry-meta div,.site-footer .vce-post-list .entry-meta div a,.site-footer .vce-post-list .fn,.site-footer .vce-post-list .fn a,#bbpress-forums .bbp-topic-started-by,#bbpress-forums .bbp-topic-started-in,#bbpress-forums .bbp-forum-info .bbp-forum-content,#bbpress-forums p.bbp-topic-meta,span.bbp-admin-links a,.bbp-reply-post-date,#bbpress-forums li.bbp-header,#bbpress-forums li.bbp-footer,.woocommerce .woocommerce-result-count,.woocommerce .product_meta{color: #9b9b9b;}.main-box-title, .comment-reply-title, .main-box-head{background: #ffffff;color: #232323;}.main-box-title a{color: #232323;}.sidebar .widget .widget-title a{color: #232323;}.main-box,.comment-respond,.prev-next-nav{background: #f9f9f9;}.vce-post,ul.comment-list > li.comment,.main-box-single,.ie8 .vce-single,#disqus_thread,.vce-author-card,.vce-author-card .vce-content-outside,.mks-bredcrumbs-container,ul.comment-list > li.pingback{background: #ffffff;}.mks_tabs.horizontal .mks_tab_nav_item.active{border-bottom: 1px solid #ffffff;}.mks_tabs.horizontal .mks_tab_item,.mks_tabs.vertical .mks_tab_nav_item.active,.mks_tabs.horizontal .mks_tab_nav_item.active{background: #ffffff;}.mks_tabs.vertical .mks_tab_nav_item.active{border-right: 1px solid #ffffff;}#vce-pagination,.vce-slider-pagination .owl-controls,.vce-content-outside,.comments-holder .navigation{background: #f3f3f3;}.sidebar .widget-title{background: #ffffff;color: #232323;}.sidebar .widget{background: #f9f9f9;}.sidebar .widget,.sidebar .widget li a,.sidebar .mks_author_widget h3 a,.sidebar .mks_author_widget h3,.sidebar .vce-search-form .vce-search-input,.sidebar .vce-search-form .vce-search-input:focus{color: #444444;}.sidebar .widget li a:hover,.sidebar .widget a,.widget_nav_menu li.menu-item-has-children:hover:after,.widget_pages li.page_item_has_children:hover:after{color: #cf4d35;}.sidebar .tagcloud a {border: 1px solid #cf4d35;}.sidebar .mks_author_link,.sidebar .tagcloud a:hover,.sidebar .mks_themeforest_widget .more,.sidebar button,.sidebar input[type="button"],.sidebar input[type="reset"],.sidebar input[type="submit"],.sidebar .vce-button,.sidebar .bbp_widget_login .button{background-color: #cf4d35;}.sidebar .mks_author_widget .mks_autor_link_wrap,.sidebar .mks_themeforest_widget .mks_read_more{background: #f3f3f3;}.sidebar #wp-calendar caption,.sidebar .recentcomments,.sidebar .post-date,.sidebar #wp-calendar tbody{color: rgba(68,68,68,0.7);}.site-footer{background: #373941;}.site-footer .widget-title{color: #ffffff;}.site-footer,.site-footer .widget,.site-footer .widget li a,.site-footer .mks_author_widget h3 a,.site-footer .mks_author_widget h3,.site-footer .vce-search-form .vce-search-input,.site-footer .vce-search-form .vce-search-input:focus{color: #f9f9f9;}.site-footer .widget li a:hover,.site-footer .widget a,.site-info a{color: #cf4d35;}.site-footer .tagcloud a {border: 1px solid #cf4d35;}.site-footer .mks_author_link,.site-footer .mks_themeforest_widget .more,.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.site-footer .vce-button,.site-footer .tagcloud a:hover{background-color: #cf4d35;}.site-footer #wp-calendar caption,.site-footer .recentcomments,.site-footer .post-date,.site-footer #wp-calendar tbody,.site-footer .site-info{color: rgba(249,249,249,0.7);}.top-header,.top-nav-menu li .sub-menu{background: #3a3a3a;}.top-header,.top-header a{color: #ffffff;}.top-header .vce-search-form .vce-search-input,.top-header .vce-search-input:focus,.top-header .vce-search-submit{color: #ffffff;}.top-header .vce-search-form .vce-search-input::-webkit-input-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input::-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-ms-input-placeholder { color: #ffffff;}.header-1-wrapper{height: 130px;padding-top: 15px;}.header-2-wrapper,.header-3-wrapper{height: 130px;}.header-2-wrapper .site-branding,.header-3-wrapper .site-branding{top: 15px;left: 0px;}.site-title a, .site-title a:hover{color: #232323;}.site-description{color: #aaaaaa;}.main-header{background-color: #ffffff;}.header-bottom-wrapper{background: #fcfcfc;}.vce-header-ads{margin: 20px 0;}.header-3-wrapper .nav-menu > li > a{padding: 55px 15px;}.header-sticky,.sidr{background: rgba(252,252,252,0.95);}.ie8 .header-sticky{background: #ffffff;}.main-navigation a,.nav-menu .vce-mega-menu > .sub-menu > li > a,.sidr li a,.vce-menu-parent{color: #4a4a4a;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul li:hover > a,.nav-menu ul .current-menu-item a,.nav-menu ul .current_page_item a,.vce-menu-parent:hover,.sidr li a:hover,.main-navigation li.current-menu-item.fa:before{color: #cf4d35;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul,.header-sticky .nav-menu > .current_page_item:hover > a,.header-sticky .nav-menu > .current-menu-item:hover > a,.header-sticky .nav-menu > .current-menu-ancestor:hover > a,.header-sticky .main-navigation a.vce-item-selected:hover{background-color: #ffffff;}.search-header-wrap ul{border-top: 2px solid #cf4d35;}.vce-border-top .main-box-title{border-top: 2px solid #cf4d35;}.tagcloud a:hover,.sidebar .widget .mks_author_link,.sidebar .widget.mks_themeforest_widget .more,.site-footer .widget .mks_author_link,.site-footer .widget.mks_themeforest_widget .more,.vce-lay-g .entry-meta div,.vce-lay-g .fn,.vce-lay-g .fn a{color: #FFF;}.vce-featured-header .vce-featured-header-background{opacity: 0.5}.vce-featured-grid .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}#back-top {background: #323232}.meta-image:hover a img,.vce-lay-h .img-wrap:hover .meta-image > img,.img-wrp:hover img,.vce-gallery-big:hover img,.vce-gallery .gallery-item:hover img,.vce_posts_widget .vce-post-big li:hover img,.vce-featured-grid .owl-item:hover img,.vce-post-img:hover img,.mega-menu-img:hover img{-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);-ms-transform: scale(1.1);transform: scale(1.1);}
+</style>
+<link rel='stylesheet' id='vce_child_load_scripts-css'  href='https://www.ticbeat.com/src/themes/voice-child/style.css?x32709' type='text/css' media='screen' />
+<link rel='stylesheet' id='meks-social-widget-css'  href='https://cdn3.ticbeat.com/src/plugins/meks-smart-social-widget/css/style.css?x32709' type='text/css' media='all' />
+<link rel='stylesheet' id='et-builder-modules-style-css'  href='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/styles/frontend-builder-plugin-style.css?x32709' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://cdn3.ticbeat.com/src/plugins/divi-builder/includes/builder/styles/magnific_popup.css?x32709' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.ticbeat.com/core/wp-includes/js/jquery/jquery.js?x32709'></script>
+<script type='text/javascript' src='https://www.ticbeat.com/core/wp-includes/js/jquery/jquery-migrate.min.js?x32709'></script>
+<link rel='https://api.w.org/' href='https://www.ticbeat.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ticbeat.com/core/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ticbeat.com/core/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.9" />
+<link rel="alternate" type="application/json+oembed" href="https://www.ticbeat.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ticbeat.com%2Fseguridad%2F6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.ticbeat.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ticbeat.com%2Fseguridad%2F6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani%2F&#038;format=xml" />
+<script type='text/javascript'>window._taboola = window._taboola || [];
+_taboola.push({article:'auto'});
+_taboola.push({listenTo:'render',handler:function(p){TRC.modDebug.logMessageToServer(2,"wordpress-integ");}});
+_taboola.push({additional_data:{sdkd:{
+    "os" : "Wordpress",
+    "osv" : "4.9.9",
+    "sdkt" : "Taboola Wordpress Plugin",
+    "sdkv" : "1.0.9"
+}}});
+!function (e, f, u) {
+	e.async = 1;
+  e.src = u;
+  f.parentNode.insertBefore(e, f);
+}(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/axelspringerspain-ticbeat/loader.js');
+</script>        <script async type="application/javascript" src="https://platform.sunmedia.tv/integrations/5bf2cb3d-65cb-41cb-a111-0d7726e55aab.js"></script>
+    
+
+<!-- wpsso meta tags begin -->
+<!-- generated on 2019-04-05T04:23:27+00:00 for none -->
+<meta name="wpsso:mark" content="wpsso meta tags begin"/>
+<!-- generator:1 --><meta name="generator" content="WPSSO 3.34.2-1/G"/>
+<link rel="publisher" href="https://plus.google.com/114133900736054495299/"/>
+<link rel="shortlink" href="https://www.ticbeat.com/?p=277684"/>
+<meta property="og:url" content="https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:section" content="Technology"/>
+<!-- article:tag:1 --><meta property="article:tag" content="ciberseguridad"/>
+<!-- article:tag:2 --><meta property="article:tag" content="hacker"/>
+<!-- article:tag:3 --><meta property="article:tag" content="hackers"/>
+<!-- article:tag:4 --><meta property="article:tag" content="hacking"/>
+<!-- article:tag:5 --><meta property="article:tag" content="libros"/>
+<!-- article:tag:6 --><meta property="article:tag" content="seguridad"/>
+<!-- article:tag:7 --><meta property="article:tag" content="trending"/>
+<meta property="article:published_time" content="2018-11-12T09:00:01+00:00"/>
+<meta property="article:modified_time" content="2018-11-12T09:14:34+00:00"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:site_name" content="TICbeat"/>
+<meta property="og:title" content="6 claves para entender la ciberseguridad, seg&uacute;n el hacker Deepak..."/>
+<meta property="og:description" content="Recogemos los seis principales temas que el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani trata en su libro &#039;La amenaza hacker&#039;, reci&eacute;n publicado por la editorial DEUSTO. #ciberseguridad #hacker #hackers"/>
+<meta property="article:publisher" content="https://www.facebook.com/TICbeat/"/>
+<!-- og:image:1 --><meta property="og:image:secure_url" content="https://cdn3.ticbeat.com/src/uploads/2018/11/deepak-daswani-600x315.jpg?x32709"/>
+<!-- og:image:1 --><meta property="og:image" content="https://cdn3.ticbeat.com/src/uploads/2018/11/deepak-daswani-600x315.jpg?x32709"/>
+<!-- og:image:1 --><meta property="og:image:width" content="600"/>
+<!-- og:image:1 --><meta property="og:image:height" content="315"/>
+<meta name="twitter:domain" content="www.ticbeat.com"/>
+<meta name="twitter:site" content="@ticbeat"/>
+<meta name="twitter:title" content="6 claves para entender la ciberseguridad, seg&uacute;n el hacker Deepak..."/>
+<meta name="twitter:description" content="Recogemos los seis principales temas que el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani trata en su libro &#039;La amenaza hacker&#039;, reci&eacute;n... #ciberseguridad #hacker #hackers"/>
+<meta name="twitter:creator" content="@httpstwittercom"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cdn1.ticbeat.com/src/uploads/2018/11/deepak-daswani-600x418.jpg?x32709"/>
+<meta itemprop="url" content="https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/"/>
+<meta itemprop="name" content="6 claves para entender la ciberseguridad, seg&uacute;n el hacker Deepak..."/>
+<meta itemprop="description" content="Recogemos los seis principales temas que el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani trata en su libro &#039;La amenaza hacker&#039;, reci&eacute;n publicado por la editorial DEUSTO."/>
+<meta name="author" content="Alberto Iglesias Fraga"/>
+<noscript itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<meta itemprop="name" content="Alberto Iglesias Fraga"/>
+	<meta itemprop="description" content="Periodista especializado en tecnolog&iacute;a e innovaci&oacute;n que ha dejado su impronta en medios como TICbeat, La Raz&oacute;n, El Mundo, ComputerWorld, CIO Espa&ntilde;a, Business Insider, Kelisto, Todrone, Movilonia, iPhonizate o el blog Think Big, entre otros. Tambi&eacute;n ha sido consultor de comunicaci&oacute;n en Indie PR. Ganador del XVI Premio Accenture de Periodismo, ganador del Premio D&iacute;a de Internet 2018 a mejor marca personal en RRSS y finalista en los European Digital Mindset Awards 2016, 2017 y 2018."/>
+</noscript>
+<noscript itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+	<meta itemprop="url" content="https://cdn2.ticbeat.com/src/uploads/2018/11/deepak-daswani.jpg?x32709"/>
+	<meta itemprop="width" content="720"/>
+	<meta itemprop="height" content="501"/>
+</noscript>
+<meta name="wpsso:mark" content="wpsso meta tags end"/>
+<!-- wpsso meta tags end -->
+
+<link rel="amphtml" href="https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/?amp"><link rel="shortcut icon" href="https://cdn1.ticbeat.com/src/uploads/2016/01/favicon.png?x32709" type="image/x-icon" /><link rel="apple-touch-icon" href="https://cdn3.ticbeat.com/src/uploads/2016/01/apple.png?x32709" /><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="https://cdn1.ticbeat.com/src/uploads/2016/01/metro.png?x32709" /><style type="text/css">.page-id-215418 .main-header, .page-id-215418 .header-sticky, .page-id-215418 .vce-ad-below-header, .page-id-215418 .vce-ad-above-footer, .page-id-215418 .site-footer { display: none; } .page-id-215418 .site-content { display: none; } body.page-id-215418 { background-color: #000000; }</style><!-- Begin Google Analytics new -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11447733-26', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics new -->
+
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "6034990", cs_ucfr: getOneTrustGroupConsent(3)});
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6034990&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '924713857586244'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=924713857586244&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type='text/javascript'>var googletag = googletag || {};googletag.cmd = googletag.cmd || [];googletag.cmd.push(function () {var mapping_megas = googletag.sizeMapping().addSize([1280, 0], [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]).addSize([780, 0], [728, 90]).addSize([0, 0], [[300, 50], [320, 100], [320, 50], [300, 100]]).build();var mapping_robas = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();var mapping_desktop_tablet = googletag.sizeMapping().addSize([0, 0], []).addSize([480, 0], [[300, 300], [300, 600], [300, 250]]).build();var mapping_mobile = googletag.sizeMapping().addSize([0, 0], []).addSize([320, 0], [[300, 300], [300, 600], [300, 250]]).addSize([480, 0], []).build();var mapping_catfish = googletag.sizeMapping().addSize([480, 0], []).addSize([320, 0], [[320, 100], [300, 100], [320, 50], [300, 50]]).addSize([0, 0], []).build();
+    if (!asCMP.havePurposeConsent(3)) {
+      googletag.pubads().setRequestNonPersonalizedAds(1);
+    }
+  googletag.defineSlot('/313092790/TIcBeat/otros/otros/mega_1', [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90], [300, 50], [320, 100], [320, 50], [300, 100]],'dfp_mega_1').defineSizeMapping(mapping_megas).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/roba_1', [[300, 300], [300, 600], [300, 250]],'dfp_roba_1').defineSizeMapping(mapping_desktop_tablet).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/roba_2', [[300, 300], [300, 600], [300, 250]],'dfp_roba_2').defineSizeMapping(mapping_robas).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/roba_3', [[300, 300], [300, 600], [300, 250]],'dfp_roba_3').defineSizeMapping(mapping_robas).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/mega_inferior', [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90], [300, 50], [320, 100], [320, 50], [300, 100]],'dfp_mega_inferior').defineSizeMapping(mapping_megas).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/Intext_mobile', [[300, 300], [300, 600], [300, 250]],'dfp_Intext_mobile').defineSizeMapping(mapping_mobile).addService(googletag.pubads());googletag.defineSlot('/313092790/TIcBeat/otros/otros/catfish', [[320, 100], [300, 100], [320, 50], [300, 50]],'dfp_catfish').defineSizeMapping(mapping_catfish).addService(googletag.pubads());googletag.defineOutOfPageSlot('/313092790/TIcBeat/otros/otros/1x1', 'dfp_ofp_1x1').addService(googletag.pubads());googletag.pubads().setTargeting("categoria","seguridad");googletag.pubads().setTargeting("tag",["ciberseguridad","hacker","hackers","hacking","libros","seguridad","trending"]);googletag.pubads().enableSingleRequest();googletag.enableServices();});</script>
+    <script src="https://cmp.axelspringer.es/oil.1.2.5-RELEASE.min.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script type="text/javascript">
+        jQuery(window).on("load", function () {
+            jQuery(window).scroll(function() {
+                if (jQuery(".as-oil-content-overlay:not([data-fired])").is(':visible')) {
+                    var x=jQuery(document).height()-jQuery(window).height();
+                    0===x&&(x=jQuery(window).height());
+                    if (3<100*jQuery(window).scrollTop()/x){
+                        jQuery(".as-oil-content-overlay").attr("data-fired", true);
+                        AS_OIL.triggerOptIn();
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="post-template-default single single-post postid-277684 single-format-standard chrome vce-sid-right et_divi_builder">
+
+<div id="vce-main">
+
+    <header id="header" class="main-header">
+                    <div class="top-header">
+	<div class="container">
+
+					<div class="vce-wrap-left">
+					<div class="menu-social-container"><ul id="vce_social_menu" class="soc-nav-menu"><li id="menu-item-153179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153179"><a href="http://facebook.com/ticbeat" target="_blank"><span class="vce-social-name">Facebook</span></a></li>
+<li id="menu-item-153180" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153180"><a href="http://twitter.com/ticbeat" target="_blank"><span class="vce-social-name">Twitter</span></a></li>
+<li id="menu-item-153181" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153181"><a href="https://www.linkedin.com/company/ticbeat-com" target="_blank" rel="nofollow"><span class="vce-social-name">LinkedIn</span></a></li>
+<li id="menu-item-153182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153182"><a href="https://www.ticbeat.com/feed/"><span class="vce-social-name">RSS</span></a></li>
+</ul></div>			</div>
+				
+					<div class="vce-wrap-right">
+					<ul id="vce_top_navigation_menu" class="top-nav-menu"><li id="menu-item-153187" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153187"><a title="ComputerHoy.com" href="http://computerhoy.com" target="_blank">ComputerHoy.com</a></li>
+</ul>			</div>
+		
+		
+
+
+	</div>
+</div>                <div class="container header-1-wrapper header-main-area">	
+		<div class="vce-res-nav">
+	<a class="vce-responsive-nav" href="#sidr-main"><i class="fa fa-bars"></i></a>
+</div>
+<div class="site-branding">
+		
+	
+	<span class="site-title">
+		<a href="https://www.ticbeat.com/" title="TICbeat" class="has-logo"><img src="https://cdn3.ticbeat.com/src/uploads/2019/01/ticbeat-logo-1x.png?x32709" alt="TICbeat" /></a>
+	</span>
+
+	
+
+</div></div>
+
+<div class="header-bottom-wrapper">
+	<div class="container">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<ul id="vce_main_navigation_menu" class="nav-menu"><li id="menu-item-153167" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-153167 vce-cat-1666"><a href="https://www.ticbeat.com/tecnologias/">Tecnología</a>
+<ul class="sub-menu">
+	<li id="menu-item-198734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198734 vce-cat-6825"><a href="https://www.ticbeat.com/tecnologias/motor/">Motor</a>	<li id="menu-item-198735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198735 vce-cat-2292"><a href="https://www.ticbeat.com/cyborgcultura/">Entretenimiento</a>	<li id="menu-item-198728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198728 vce-cat-1668"><a href="https://www.ticbeat.com/socialmedia/">Social Media</a>	<li id="menu-item-153174" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153174 vce-cat-6436"><a href="https://www.ticbeat.com/lab/">TICbeat LAB</a></ul>
+<li id="menu-item-153169" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-153169 vce-cat-1653"><a href="https://www.ticbeat.com/innovacion/">Innovación</a>
+<ul class="sub-menu">
+	<li id="menu-item-198736" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198736 vce-cat-6826"><a href="https://www.ticbeat.com/innovacion/startup/">Startups</a>	<li id="menu-item-198738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198738 vce-cat-6827"><a href="https://www.ticbeat.com/innovacion/fintech/">Fintech</a>	<li id="menu-item-198737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198737 vce-cat-6828"><a href="https://www.ticbeat.com/innovacion/energia/">Energía</a></ul>
+<li id="menu-item-153172" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153172 vce-cat-6437"><a href="https://www.ticbeat.com/empresa-b2b/">Empresa</a><li id="menu-item-153170" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-153170 vce-cat-1729"><a href="https://www.ticbeat.com/seguridad/">Seguridad</a><li id="menu-item-153171" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153171 vce-cat-1655"><a href="https://www.ticbeat.com/educacion/">Educación</a><li id="menu-item-170861" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-170861 vce-cat-6654"><a href="https://www.ticbeat.com/salud/">Salud</a><li class="search-header-wrap"><a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a><ul class="search-header-form-ul"><li><form class="search-header-form" action="https://www.ticbeat.com/" method="get">
+		<input name="s" class="search-input" size="20" type="text" value="¿Qué estás buscando?" onfocus="(this.value == '¿Qué estás buscando?') && (this.value = '')" onblur="(this.value == '') && (this.value = '¿Qué estás buscando?')" placeholder="¿Qué estás buscando?" />
+		</form></li></ul></li></ul></nav>	</div>
+</div>    </header>
+
+    <div id="main-wrapper">
+
+
+	<div class="vce-ad-below-header vce-ad-container"><!-- /313092790/TIcBeat/otros/otros/mega_1 -->
+<div id='dfp_mega_1'>
+<script>
+googletag.cmd.push(function() { googletag.display('dfp_mega_1'); });
+</script>
+</div></div>
+
+
+<div id="content" class="container site-content">
+
+				
+	<div id="primary" class="vce-main-content">
+
+		<main id="main" class="main-box main-box-single">
+
+		
+			<article id="post-277684" class="vce-single post-277684 post type-post status-publish format-standard has-post-thumbnail hentry category-seguridad tag-ciberseguridad tag-hacker tag-hackers tag-hacking tag-libros tag-seguridad tag-trending">
+
+			<header class="entry-header">
+							<span class="meta-category"><a href="https://www.ticbeat.com/seguridad/" class="category-1729">Seguridad</a></span>
+			
+			<h1 class="entry-title">6 claves para entender la ciberseguridad, según el hacker Deepak Daswani</h1>
+			<div class="entry-meta"><div class="meta-item date"><span class="updated">12 noviembre, 2018</span></div></div>
+		</header>
+	
+	
+					
+			 	
+			 	<div class="meta-image">
+					<img width="720" height="501" src="https://cdn2.ticbeat.com/src/uploads/2018/11/deepak-daswani.jpg?x32709" class="attachment-vce-lay-a size-vce-lay-a wp-post-image" alt="" srcset="https://cdn2.ticbeat.com/src/uploads/2018/11/deepak-daswani.jpg?x32709 720w, https://cdn3.ticbeat.com/src/uploads/2018/11/deepak-daswani-300x209.jpg?x32709 300w, https://cdn1.ticbeat.com/src/uploads/2018/11/deepak-daswani-145x100.jpg?x32709 145w, https://cdn1.ticbeat.com/src/uploads/2018/11/deepak-daswani-600x418.jpg?x32709 600w" sizes="(max-width: 720px) 100vw, 720px" data-wp-pid="277693" />
+									</div>
+
+				
+					
+	    	    				    <div class="entry-headline">
+			    	<p>Recogemos los seis principales temas que el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani trata en su libro &#8216;La amenaza hacker&#8217;, recién publicado por la editorial DEUSTO.</p>
+			    </div>
+				    
+		
+	<div class="entry-content">
+		<p>Las ciberamenazas no cesan en nuestros tiempos modernos, <a href="https://www.ticbeat.com/seguridad/los-ciberdelincuentes-roban-casi-un-millon-de-euros-al-minuto/">la nueva gran plaga digital del siglo XXI.</a> Así lo demuestran los datos, como un reciente estudio de <a href="https://www.ptsecurity.com/ww-en/analytics/cybersecurity-threatscape-2018-q2/" target="_blank" rel="nofollow noopener">Positive Technologies</a> según el cual<strong> los ataques cibernéticos aumentaron un 47% durante el segundo trimestre del año.</strong> Más todavía: <a href="https://www.ticbeat.com/seguridad/una-de-cada-seis-empresas-no-esta-preparada-para-un-ciberataque/">otro estudio arroja que la gran mayoría de las organizaciones está preocupadas por la seguridad (73 por ciento),</a> pero <strong>una de cada seis no tiene un plan establecido para hacer frente a una ciberamenaza.</strong></p>
+<h3 style="text-align: center;"><a href="https://www.ticbeat.com/seguridad/tras-un-inicio-de-ano-somnoliento-los-ciberdelincuentes-encaran-estos-meses-en-plena-forma/">Tras un inicio de año “somnoliento”, los ciberdelincuentes encaran estos meses en plena forma</a></h3>
+<p>Precisamente, <strong>el hacker, exasesor del INCIBE y experto en estas lides Deepak Daswani centra su libro &#8216;La amenaza hacker&#8217; (DEUSTO, 2018)</strong> <a href="https://www.ticbeat.com/seguridad/el-ciudadano-comun-el-nuevo-gran-objetivo-de-los-ciberatacantes-durante-2018/">en torno a la realidad de la ciberseguridad</a>, el rol de los hackers en esta batalla, la desmitificación de muchos de estos términos a veces llevados por la ficción y el sensacionalismo o la ejemplificación de las principales campañas de la historia.</p>
+<p>A continuación, <strong>recogemos seis de los principales argumentos y explicaciones que el autor expresa en su obra y que nos pueden ayudar a entender mejor el incesante panorama de la ciberseguridad a escala global:</strong></p>
+<h2>La realidad del cibercrimen</h2>
+<p>En opinión de Deepak Daswani, &#8220;<strong>el cibercrimen es la actividad delictiva más lucrativa de la actualidad: ocasiona pérdidas de cerca de 500.000 millones de dólares en la economía mundial</strong>, según un estudio de McAfee. Los ciberataques y los fallos en infraestructuras críticas están en el top 5 de los riesgos identificados por el Foro Económico Mundial (&#8230;) <strong>A día de hoy, el cibercrimen mueve más dinero en el mundo que el narcotráfico, el contrabando de armas o la trata de blancas.</strong> Estos datos confirman que el cibercrimen representa un problema real. Frente a lo que algunos piensan, no se trata de insuflar miedo entre la población para generar negocio&#8221;.</p>
+<h2>Nuestra vida física y digital es la misma</h2>
+<p>&#8220;La penetración de la tecnología en nuestras vidas tiene como contrapartida la exposición a una serie de riesgos que hasta la fecha eran desconocidos o menospreciados por la gran mayoría de la gente.<strong> Quizá porque hasta ahora muchos no eran conscientes del vínculo existente entre el mundo físico y el virtual, y piensan que todo lo que sucede en este último no tiene trascendencia o impacto real sobre nuestra vida</strong> (&#8230;) Nada más lejos de la realidad: en las sociedades desarrolladas, nuestra vida digital y nuestra vida física están enormemente solapadas&#8221;, dice el experto en ciberseguridad.</p>
+<h2>Contra la definición de &#8216;hacker&#8217; de la RAE</h2>
+<p>&#8220;<strong>Un hacker no es un pirata informático como dice el diccionario de la RAE (&#8230;) Un hacker es una persona inquieta, que no se conforma con utilizar la tecnología a nivel de usuario, sino que ansía profundizar en cada detalle</strong>; una persona apasionada por ahondar en el conocimiento de los sistemas, por superar los límites que la tecnología nos impone  y hacer cosas parar las que, originalmente, no fueron concebidos&#8221;, expone Daswani en &#8216;La amenaza hacker&#8217;. &#8220;¿Cómo? Descubriendo vulnerabilidades. Encontrarlas es fruto de horas y horas de aprendizaje, lectura, experimentación e investigación&#8221;.</p>
+<h2>Las 3 motivaciones del cibercrimen</h2>
+<p>Para Deepak Daswani, existen tres motivaciones principales para los ciberatacantes a la hora de realizar sus actividades maliciosas sobre usuarios y organizaciones:</p>
+<ul>
+<li><strong>El lucro económico</strong>, &#8220;la finalidad única y exclusiva del cibercrimen, como es evidente&#8221;.</li>
+<li><strong>El control de la información:</strong> &#8220;es lo que mueve a los gobiernos y sus agencias de inteligencia, que centran sus esfuerzos en intentar monitorizar las comunicaciones de sus propios ciudadanos, de elementos hostiles y de otros Estados. (&#8230;) También empresas que desarrollan su actividad en sectores como el químico, el petrolífero o el energético, donde el I+D+i y la propiedad intelectual son fundamentales&#8221;.</li>
+<li><strong>El hacktivismo:</strong> &#8220;los activistas usan la red para manifestarse y lograr notoriedad con sus acciones. Pese a que incurren en delitos, su objetivo no es el robo de información ni de dinero, sino reivindicar una causa o idea&#8221;.</li>
+</ul>
+<h2>La ingeniería social</h2>
+<p>&#8220;La ingeniería social es el arte del engaño o la persuasión. Un arte que ha existido desde que existe la especie humana. En este caso, se aplica al contexto tecnológico, pero si lo trasladamos a cualquier ámbito de la vida, podremos comprobar que muchos de nosotros utilizamos a diario la ingeniería social en nuestro comportamiento cotidiano con diversos fines, quizá sin saberlo.<strong> La ingeniería social está presente en prácticamente todos los esquemas de ataque que se contemplan en la actualidad.</strong> Constituye la fase inicial de la ofensiva en la mayoría de los ataques recibidos por parte de empresas e instituciones&#8221;, dice el autor.</p>
+<p><iframe frameborder="0" width="810" height="455" src="https://www.dailymotion.com/embed/video/x42ov87" allowfullscreen allow="autoplay"></iframe></p>
+<p>&#8220;El engaño al usuario es la base. Si el usuario no cae en la trampa, el ataque no se materializa (&#8230;) Con excepciones,<strong> la gran mayoría de las personas pueden ser manipuladas con éxito, sobre todo a la hora de comprometer su seguridad en el ámbito tecnológico. De ahí que muchos de los esquemas de ataque usados por los ciberdelincuentes para cometer fraude y estafa funcionen a pesar de ser genéricos</strong>. Se lanzan de manera masiva para intentar obtener el máximo número de víctimas y resultan rentables porque siempre hay quien pica en la trampa. Si además, la ingeniería social se prepara de manera personalizada para un objetivo en concreto, recolectando previamente información de su entorno y circunstancias y planificando el ataque a conciencia, aumentan muchísimo las probabilidades de que el atacante logre su propósito&#8221;.</p>
+<h2>Cuando nosotros somos el producto</h2>
+<p>El autor también traza un análisis sobre el uso de los datos personales por parte de las grandes compañías tecnológicas: &#8220;En plena era del Big Data, uno de los temas que preocupa cada vez más al conjunto social es el valor que tienen nuestros datos y el uso o abuso que hacen de ellos los gigantes tecnológicos. <strong>La gran mayoría de usuarios es consciente de que proveedores como Facebook, Google, Twitter o Instagram nos proporcionan una serie de servicios con funcionalidades increíbles de manera gratuita y asumen como algo normal facilitar a cambio sus datos e información personal.</strong> No en vano, una de las frases más recurrentes a la hora de abordar el tema es: &#8216;Cuando algo es gratis, el producto eres tú&#8217;. Es evidente que las compañías tecnológicas que nos ofrecen esta amalgama de servicios no viven del aire. Su modelo de negocio se sostiene rentabilizando la información que millones de usuarios vierten en sus sistemas, por ejemplo, vendiéndola a anunciantes con fines comerciales&#8221;.</p>
+<span id='tbdefault'></span><script type='text/javascript'>function insertAfter(e,t){t.parentNode.insertBefore(e,t.nextSibling)}function getElementByXPath(e,t){if(!t)t=document;if(t.evaluate)return t.evaluate(e,document,null,9,null).singleNodeValue;while(e.charAt(0)=="/")e=e.substr(1);var n=t;var r=e.split("/");for(var i=0;i<r.length;i++){var a=r[i].split(/(\w*)\[(\d*)\]/gi).filter(function(e){return!(e==""||e.match(/\s/gi))},this);var l=a[0];var o=a[1]?a[1]-1:0;if(i<r.length-1)n=n.getElementsByTagName(l)[o];else return n.getElementsByTagName(l)[o]}}if(!Array.prototype.filter){Array.prototype.filter=function(e){var t=this.length>>>0;if(typeof e!="function"){throw new TypeError}var n=[];var r=arguments[1];for(var i=0;i<t;i++){if(i in this){var a=this[i];if(e.call(r,a,i,this)){n.push(a)}}}return n}}function injectWidgetByXpath(e){var t=getElementByXPath(e);if(t==null){t=document.getElementById("tbdefault")}innerInject(t)}function injectWidgetByMarker(e){var t=document.getElementById(e);innerInject(t.parentNode)}function innerInject(e){var t=document.createElement("span");var n=document.createElement("script");var r="if JS crashes here, the first innerHTML value should be enclosed with single quotes instead of double, go to the minified version and change it";t.innerHTML="<div id='taboola-below-article'></div>";n.innerHTML="window._taboola = window._taboola || [];_taboola.push({mode:'alternating-thumbnails-b', container:'taboola-below-article', placement:'below-article', target_type: 'mix'});";insertAfter(t,e);insertAfter(n,t)}injectWidgetByXpath('//main[contains(@class, \'main-box-single\')]');</script>	</div>
+
+	
+			<footer class="entry-footer">
+			<div class="meta-tags">
+				<a href="https://www.ticbeat.com/tag/ciberseguridad/" rel="tag">ciberseguridad</a> <a href="https://www.ticbeat.com/tag/hacker/" rel="tag">hacker</a> <a href="https://www.ticbeat.com/tag/hackers/" rel="tag">Hackers</a> <a href="https://www.ticbeat.com/tag/hacking/" rel="tag">hacking</a> <a href="https://www.ticbeat.com/tag/libros/" rel="tag">Libros</a> <a href="https://www.ticbeat.com/tag/seguridad/" rel="tag">Seguridad</a> <a href="https://www.ticbeat.com/tag/trending/" rel="tag">Trending</a>			</div>
+		</footer>
+	
+		  	
+	<div class="vce-share-bar">
+		<ul class="vce-share-items">
+			<li><a class="fa fa-facebook" href="javascript:void(0);" data-url="http://www.facebook.com/sharer/sharer.php?u=https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/&amp;t=6 claves para entender la ciberseguridad, según el hacker Deepak Daswani"></a></li><li><a class="fa fa-twitter" href="javascript:void(0);" data-url="http://twitter.com/intent/tweet?url=https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/&amp;text=6 claves para entender la ciberseguridad, según el hacker Deepak Daswani"></a></li><li><a class="fa fa-google-plus" href="javascript:void(0);" data-url="https://plus.google.com/share?url=https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/"></a></li><li><a class="fa fa-pinterest" href="javascript:void(0);" data-url="http://pinterest.com/pin/create/button/?url=https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/&amp;media=https://cdn2.ticbeat.com/src/uploads/2018/11/deepak-daswani.jpg&amp;description=6 claves para entender la ciberseguridad, según el hacker Deepak Daswani"></a></li><li><a class="fa fa-linkedin" href="javascript:void(0);" data-url="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ticbeat.com/seguridad/6-claves-para-entender-la-ciberseguridad-segun-el-hacker-deepak-daswani/&amp;title=6 claves para entender la ciberseguridad, según el hacker Deepak Daswani"></a></li>		</ul>
+	</div>
+	
+	 
+</article>
+		
+		
+		</main>
+
+		
+		
+					<section class="main-box mbt-border-top author-box">
+
+	<h3 class="main-box-title">Sobre el autor</h3>
+
+	<div class="main-box-inside">
+
+	<div class="data-image">
+		<img alt='' src='https://secure.gravatar.com/avatar/dcb646427fc8d926f6610a580a2e02a2?s=112&#038;d=mm&#038;r=g' srcset="https://secure.gravatar.com/avatar/dcb646427fc8d926f6610a580a2e02a2?s=224&#038;d=mm&#038;r=g 2x" class='avatar avatar-112 photo' height='112' width='112' />	</div>
+	
+	<div class="data-content">
+		<h4 class="author-title">Alberto Iglesias Fraga</h4>
+		<div class="data-entry-content">
+			<p>Periodista especializado en tecnología e innovación que ha dejado su impronta en medios como TICbeat, La Razón, El Mundo, ComputerWorld, CIO España, Business Insider, Kelisto, Todrone, Movilonia, iPhonizate o el blog Think Big, entre otros. También ha sido consultor de comunicación en Indie PR. Ganador del XVI Premio Accenture de Periodismo, ganador del Premio Día de Internet 2018 a mejor marca personal en RRSS y finalista en los European Digital Mindset Awards 2016, 2017 y 2018.</p>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="vce-content-outside">
+		<div class="data-links">
+				<a href="https://www.ticbeat.com/author/alberto-iglesias/" class="vce-author-link vce-button">Ver todos los artículos</a>
+		</div>
+		<div class="vce-author-links">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+												<a href="https://es.linkedin.com/in/albertoiglesiasfraga" target="_blank" class="fa fa-linkedin"></a>
+							
+										
+										
+										
+										
+										
+										
+										
+										
+												<a href="@httpstwittercom" target="_blank" class="fa fa-twitter"></a>
+							
+										
+										
+										
+										
+										
+										
+								
+		</div>
+	</div>
+
+</section>		
+		
+
+	</div>
+
+		<aside id="sidebar" class="sidebar right">
+		<div id="vce_adsense_widget-24" class="widget vce_adsense_widget vce_adsense_expand">		<div class="vce_adsense_wrapper">
+			<div id="dfp_roba_1">
+<script>
+googletag.cmd.push(function() {
+googletag.display("dfp_roba_1");
+});
+</script>
+</div>		</div>
+	
+		</div><div id="rss-9" class="widget widget_rss"><h4 class="widget-title"><span><a class="rsswidget" href="http://computerhoy.com/flipboard/list/latest"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://www.ticbeat.com/core/wp-includes/images/rss.png?x32709" alt="RSS" /></a> <a class="rsswidget" href="https://computerhoy.com/rss_all/all/rss.xml">En ComputerHoy.com</a></span></h4><ul><li><a class='rsswidget' href='https://computerhoy.com/listas/motor/5-errores-novato-seguro-cometiste-nada-sacar-carnet-conducir-397799'>5 errores de novato que seguro cometiste nada más sacar el carnet de conducir</a></li><li><a class='rsswidget' href='https://computerhoy.com/noticias/tecnologia/amazon-pondra-orbita-3236-satelites-llevar-internet-todo-mundo-400371'>Amazon pondrá en órbita 3236 satélites para llevar Internet a todo el mundo</a></li><li><a class='rsswidget' href='https://computerhoy.com/listas/entretenimiento/debes-saber-antes-ver-vengadores-4-endgame-400105'>Lo que debes saber antes de ver Vengadores 4: Endgame</a></li><li><a class='rsswidget' href='https://computerhoy.com/noticias/life/perovskita-mineral-pondra-paneles-solares-alcance-todos-398603'>Perovskita, el mineral que pondrá los paneles solares al alcance de todos</a></li><li><a class='rsswidget' href='https://computerhoy.com/noticias/tecnologia/ipad-pro-2018-oferta-ebay-solo-699-euros-400315'>iPad Pro de 2018, en oferta en eBay por solo 699 euros, 180 euros de descuento</a></li></ul></div><div id="vce_adsense_widget-25" class="widget vce_adsense_widget vce_adsense_expand">		<div class="vce_adsense_wrapper">
+			<div id="dfp_roba_2">
+<script>
+googletag.cmd.push(function() {
+googletag.display("dfp_roba_2");
+});
+</script>
+</div>		</div>
+	
+		</div><div id="vce_posts_widget-18" class="widget vce_posts_widget"><h4 class="widget-title"><span>Entrevistas</span></h4>
+		
+		<ul class="vce-post-big">
+
+			
+		 		<li>
+		 					 			
+		 			<a href="https://www.ticbeat.com/entrevistas/sito-veracruz-fairbnb-la-tecnologia-es-nuestra-arma-para-luchar-contra-las-desigualdades/" class="featured_image_sidebar" title="Sito Veracruz (Fairbnb): &#8220;La tecnología es nuestra arma para luchar contra las desigualdades&#8221;"><span class="vce-post-img"><img width="380" height="260" src="https://cdn1.ticbeat.com/src/uploads/2018/10/sito-veracruz-e1539952170534-380x260.jpg?x32709" class="attachment-vce-fa-grid size-vce-fa-grid wp-post-image" alt="Sito Veracruz (Fairbnb): &quot;La tecnología es nuestra arma para luchar contra las desigualdades&quot;" srcset="https://cdn1.ticbeat.com/src/uploads/2018/10/sito-veracruz-e1539952170534-380x260.jpg?x32709 380w, https://cdn1.ticbeat.com/src/uploads/2018/10/sito-veracruz-e1539952170534-145x100.jpg?x32709 145w" sizes="(max-width: 380px) 100vw, 380px" data-wp-pid="275585" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://www.ticbeat.com/entrevistas/sito-veracruz-fairbnb-la-tecnologia-es-nuestra-arma-para-luchar-contra-las-desigualdades/" title="Sito Veracruz (Fairbnb): &#8220;La tecnología es nuestra arma para luchar contra las desigualdades&#8221;" class="vce-post-link">Sito Veracruz (Fairbnb): &#8220;La tecnología es nuestra...</a>
+			 					 			</div>
+		 		</li>
+			
+		 		<li>
+		 					 			
+		 			<a href="https://www.ticbeat.com/entrevistas/pantallas-y-algoritmos-los-nuevos-profesores-de-ingles-de-los-mas-pequenos/" class="featured_image_sidebar" title="Pantallas y algoritmos: los nuevos profesores de inglés de los más pequeños"><span class="vce-post-img"><img width="380" height="260" src="https://cdn2.ticbeat.com/src/uploads/2018/10/niños-usando-tablets-y-smartphones-380x260.jpg?x32709" class="attachment-vce-fa-grid size-vce-fa-grid wp-post-image" alt="niños usando tablets y smartphones" srcset="https://cdn2.ticbeat.com/src/uploads/2018/10/niños-usando-tablets-y-smartphones-380x260.jpg?x32709 380w, https://cdn1.ticbeat.com/src/uploads/2018/10/niños-usando-tablets-y-smartphones-145x100.jpg?x32709 145w" sizes="(max-width: 380px) 100vw, 380px" data-wp-pid="274629" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://www.ticbeat.com/entrevistas/pantallas-y-algoritmos-los-nuevos-profesores-de-ingles-de-los-mas-pequenos/" title="Pantallas y algoritmos: los nuevos profesores de inglés de los más pequeños" class="vce-post-link">Pantallas y algoritmos: los nuevos profesores de inglés de...</a>
+			 					 			</div>
+		 		</li>
+			
+		  </ul>
+		
+		
+		</div><div id="rss-12" class="widget widget_rss"><h4 class="widget-title"><span><a class="rsswidget" href="https://www.businessinsider.es/feeds/sticky-content.rss"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://www.ticbeat.com/core/wp-includes/images/rss.png?x32709" alt="RSS" /></a> <a class="rsswidget" href="https://www.businessinsider.es/feeds/sticky-content.rsss">En Business Insider España</a></span></h4><ul><li><a class='rsswidget' href='https://www.businessinsider.es/puede-afectar-plan-estrategico-santander-cotizacion-400109'>Así ven los expertos cómo puede afectar el plan estratégico de Santander a su cotización</a></li><li><a class='rsswidget' href='https://www.businessinsider.es/oposiciones-2019-sectores-convocan-plazas-399631'>Oposiciones 2019: en qué sectores se convocan más plazas</a></li><li><a class='rsswidget' href='https://www.businessinsider.es/25-importantes-directivos-fallaron-pronosticos-tecnologicos-271271'>25 famosos directivos que fallaron estrepitosamente en sus pronósticos tecnológicos</a></li></ul></div><div id="vce_adsense_widget-26" class="widget vce_adsense_widget vce_adsense_expand">		<div class="vce_adsense_wrapper">
+			<div id="dfp_roba_3">
+<script>
+googletag.cmd.push(function() {
+googletag.display("dfp_roba_3");
+});
+</script>
+</div>		</div>
+	
+		</div><div id="custom_html-7" class="widget_text widget widget_custom_html"><h4 class="widget-title"><span>Smartphones más buscados</span></h4><div class="textwidget custom-html-widget"><ul>
+ 	<li><a href="https://computerhoy.com/fichas/apple-iphone-xr" target="_blank">Apple iPhone XR</a></li>
+ 	<li><a href="https://computerhoy.com/fichas/honor-view-20" target="_blank">Honor View 20</a></li>
+ 	<li><a href="https://computerhoy.com/fichas/huawei-p20-lite" target="_blank">Huawei P20 Lite</a></li>
+ 	<li><a href="https://computerhoy.com/fichas/samsung-galaxy-s10" target="_blank">Samsung Galaxy S10</a></li>
+ 	<li><a href="https://computerhoy.com/fichas/xiaomi-redmi-note-7" target="_blank">Xiaomi Redmi Note 7</a></li>
+</ul>
+<p style="text-align: center;"><a href="http://computerhoy.com/fichas" target="_blank">Ver más</a></p></div></div><div id="rss-15" class="widget widget_rss"><h4 class="widget-title"><span><a class="rsswidget" href="https://www.hobbyconsolas.com/rss/guias"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://www.ticbeat.com/core/wp-includes/images/rss.png?x32709" alt="RSS" /></a> <a class="rsswidget" href="https://www.hobbyconsolas.com/rss/guias">Guías y Trucos en Hobbyconsolas.com</a></span></h4><ul><li><a class='rsswidget' href='https://www.hobbyconsolas.com/guias-trucos/fortnite/usa-diferentes-objetos-lanzan-misma-partida-fortnite-semana-6-temporada-8-400305'>Usa diferentes objetos que se lanzan en una misma partida en Fortnite semana 6 temporada 8</a></li><li><a class='rsswidget' href='https://www.hobbyconsolas.com/guias-trucos/fortnite/donde-llama-metal-fortnite-temporada-8-400263'>Dónde está la llama de metal en Fortnite temporada 8</a></li><li><a class='rsswidget' href='https://www.hobbyconsolas.com/guias-trucos/fortnite/donde-cerdo-piedra-fortnite-temporada-8-400233'>Dónde está el cerdo de piedra en Fortnite temporada 8</a></li><li><a class='rsswidget' href='https://www.hobbyconsolas.com/guias-trucos/fortnite/descubrimiento-semana-6-fortnite-donde-estandarte-oculto-400139'>Descubrimiento semana 6 Fortnite: dónde está el estandarte oculto</a></li><li><a class='rsswidget' href='https://www.hobbyconsolas.com/guias-trucos/fortnite/donde-conejo-madera-fortnite-temporada-8-400175'>Dónde está el conejo de madera en Fortnite temporada 8</a></li></ul></div>	</aside>
+
+</div>
+
+
+	<div class="vce-ad-above-footer vce-ad-container"><!-- /313092790/TIcBeat/otros/otros/mega_inferior -->
+<div id='dfp_mega_inferior'>
+<script>
+googletag.cmd.push(function() { googletag.display('dfp_mega_inferior'); });
+</script>
+</div></div>
+
+	<footer id="footer" class="site-footer">
+
+				<div class="container">
+			<div class="container-fix">
+										<div class="bit-3">
+					<div id="nav_menu-3" class="widget widget_nav_menu"><h4 class="widget-title">Nuestras secciones</h4><div class="menu-secciones-footer-container"><ul id="menu-secciones-footer" class="menu"><li id="menu-item-153345" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153345 vce-cat-1666"><a href="https://www.ticbeat.com/tecnologias/">Tecnología</a></li>
+<li id="menu-item-153346" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153346 vce-cat-1668"><a href="https://www.ticbeat.com/socialmedia/">Social Media</a></li>
+<li id="menu-item-153350" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153350 vce-cat-6437"><a href="https://www.ticbeat.com/empresa-b2b/">Empresa</a></li>
+<li id="menu-item-153347" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153347 vce-cat-1653"><a href="https://www.ticbeat.com/innovacion/">Innovación</a></li>
+<li id="menu-item-153348" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-153348 vce-cat-1729"><a href="https://www.ticbeat.com/seguridad/">Seguridad</a></li>
+<li id="menu-item-153349" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153349 vce-cat-1655"><a href="https://www.ticbeat.com/educacion/">Educación</a></li>
+<li id="menu-item-153351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153351 vce-cat-6519"><a href="https://www.ticbeat.com/trends/">Tendencias</a></li>
+<li id="menu-item-153352" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153352 vce-cat-6436"><a href="https://www.ticbeat.com/lab/">TICbeat LAB</a></li>
+<li id="menu-item-153353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153353"><a href="https://www.ticbeat.com/tendencias">TIC Vips</a></li>
+</ul></div></div><div id="custom_html-5" class="widget_text widget widget_custom_html"><h4 class="widget-title">Newsletter</h4><div class="textwidget custom-html-widget"><a href="https://www.ticbeat.com/suscribete-newsletter/"><img class="aligncenter wp-image-258757 size-full" src="https://cdn2.ticbeat.com/src/uploads/2018/05/icon-newsletter.png?x32709" alt="Newsletter" width="75" height="77" data-wp-pid="258757" /></a>
+
+&nbsp;
+<p style="text-align: center;"><a href="https://www.ticbeat.com/suscribete-newsletter/">Suscríbete a nuestra newsletter y recibe lo mejor de TICbeat en tu correo</a></p></div></div>				</div>
+							<div class="bit-3">
+					<div id="nav_menu-4" class="widget widget_nav_menu"><h4 class="widget-title">Más en TICbeat</h4><div class="menu-mas-footer-container"><ul id="menu-mas-footer" class="menu"><li id="menu-item-153201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153201 vce-cat-1751"><a href="https://www.ticbeat.com/libreriaticbeat/">Whitepapers TICbeat</a></li>
+<li id="menu-item-153202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153202 vce-cat-5"><a href="https://www.ticbeat.com/entrevistas/">Entrevistas</a></li>
+<li id="menu-item-153200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-153200 vce-cat-1779"><a href="https://www.ticbeat.com/especiales/">Especiales</a></li>
+</ul></div></div><div id="mks_social_widget-10" class="widget mks_social_widget"><h4 class="widget-title">Nuestras redes</h4>		
+				
+							<ul class="mks_social_widget_ul">
+		  			  		<li><a href="http://facebook.com/ticbeat" title="Facebook" class="facebook_ico soc_square" target="_blank" style="width: 48px; height: 48px; font-size: 16px;line-height:53px;"><span>facebook</span></a></li>
+		  			  		<li><a href="http://twitter.com/ticbeat" title="Twitter" class="twitter_ico soc_square" target="_blank" style="width: 48px; height: 48px; font-size: 16px;line-height:53px;"><span>twitter</span></a></li>
+		  			  		<li><a href="https://www.linkedin.com/company/ticbeat-com/" title="Linkedin" class="linkedin_ico soc_square" target="_blank" style="width: 48px; height: 48px; font-size: 16px;line-height:53px;"><span>linkedin</span></a></li>
+		  			  		<li><a href="https://plus.google.com/114133900736054495299" title="Google Plus" class="google-plus_ico soc_square" target="_blank" style="width: 48px; height: 48px; font-size: 16px;line-height:53px;"><span>google-plus</span></a></li>
+		  			  		<li><a href="https://www.ticbeat.com/feed/" title="RSS" class="rss_ico soc_square" target="_blank" style="width: 48px; height: 48px; font-size: 16px;line-height:53px;"><span>rss</span></a></li>
+		  			  </ul>
+		
+
+		</div><div id="text-44" class="widget widget_text"><h4 class="widget-title">Partners Tecnológicos</h4>			<div class="textwidget"><a href="http://sp.depositphotos.com/" rel='nofollow' target='_blank' rel="attachment wp-att-153772"><img class="aligncenter wp-image-153773 size-full" src="https://cdn3.ticbeat.com/src/uploads/2016/11/Depositphotos-Logo-Light_bajo.png?x32709" alt="" width="211" height="39" data-wp-pid="153772" /></a></div>
+		</div>				</div>
+							<div class="bit-3">
+					<div id="linkcat-6520" class="widget widget_links"><h4 class="widget-title">Otras webs de Axel Springer</h4>
+	<ul class='xoxo blogroll'>
+<li><a href="http://formula1.autobild.es" title="Formula 1">AutoBild Fórmula 1</a></li>
+<li><a href="http://www.autobild.es" title="Coches, motos, F1">AutoBild.es</a></li>
+<li><a href="http://store.axelspringer.es/" target="_blank">Axel Springer Store</a></li>
+<li><a href="https://www.businessinsider.es/">Business Insider España</a></li>
+<li><a href="https://computerhoy.com" title="Tecnología, gadgets, Internet" target="_blank">ComputerHoy.com</a></li>
+<li><a href="https://computerhoy.com/cupones" title="Cupones descuento y códigos promocionales para tiendas online en España">Cupones en ComputerHoy.com</a></li>
+<li><a href="https://computerhoy.com/fichas" title="Fichas técnicas y comparador de smartphones y tablets">Fichas Smartphones en Computerhoy.com</a></li>
+<li><a href="https://www.hobbyconsolas.com/guias-trucos" title="Guías y trucos de juegos de PS4, Xbox, Nintendo Switch y más">Guías y trucos de HobbyConsolas.com</a></li>
+<li><a href="http://www.hobbyconsolas.com/industria" title="Todo sobre la industria del videojuego">Hobby Industria</a></li>
+<li><a href="http://www.hobbyconsolas.com" title="Videojuegos, cine, series y comics">HobbyConsolas.com</a></li>
+<li><a href="http://ozio.axelspringer.es/" target="_blank">Ozio, el club del suscriptor</a></li>
+<li><a href="https://www.topgear.es" title="La web de motor más gamberra">TopGear.es</a></li>
+
+	</ul>
+</div>
+<div id="linkcat-6534" class="widget widget_links"><h4 class="widget-title">Webs amigas</h4>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.sinembargo.mx/" rel="nofollow" target="_blank">sinembargo</a></li>
+
+	</ul>
+</div>
+				</div>
+						</div>
+		</div>
+		
+					<div class="container-full site-info">
+				<div class="container">
+											<div class="vce-wrap-left">
+							<p>Una web de <a href="https://www.axelspringer.es" target="_blank">Axel Springer España</a>.</p>						</div>
+					
+											<div class="vce-wrap-right">
+								<ul id="vce_footer_menu" class="bottom-nav-menu"><li id="menu-item-153163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153163"><a href="https://www.ticbeat.com/acerca-de/">Quiénes somos</a></li>
+<li id="menu-item-154178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154178"><a href="https://www.ticbeat.com/equipo/">Equipo</a></li>
+<li id="menu-item-153164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153164"><a href="https://www.ticbeat.com/aviso-legal/">Condiciones de uso</a></li>
+<li id="menu-item-153166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153166"><a href="https://www.ticbeat.com/poltica-de-privacidad/">Política de Privacidad</a></li>
+<li id="menu-item-153165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153165"><a href="https://www.ticbeat.com/politica-de-cookies/">Política de Cookies</a></li>
+<li id="menu-item-153162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153162"><a href="https://www.ticbeat.com/contacto/">Contacto</a></li>
+</ul>						</div>
+						
+
+					
+			
+				</div>
+			</div>
+		
+
+	</footer>
+
+
+</div>
+</div>
+
+<a href="javascript:void(0)" id="back-top"><i class="fa fa-angle-up"></i></a>
+
+<script type='text/javascript'>window._taboola = window._taboola || [];
+_taboola.push({flush: true});</script><script type="text/javascript">/* <![CDATA[ */ jQuery(document).ready( function() { jQuery.post( "https://www.ticbeat.com/core/wp-admin/admin-ajax.php", { action : "entry_views", _ajax_nonce : "10581dbd72", post_id : 277684 } ); } ); /* ]]> */</script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js?x32709'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vce_js_settings = {"sticky_header":"1","sticky_header_offset":"600","sticky_header_logo":"","logo_retina":"https:\/\/www.ticbeat.com\/src\/uploads\/2019\/01\/ticbeat-logo-2x.png","logo_mobile":"","rtl_mode":"0","ajax_url":"https:\/\/www.ticbeat.com\/core\/wp-admin\/admin-ajax.php","ajax_mega_menu":"1","mega_menu_slider":"","mega_menu_subcats":"","lay_fa_grid_center":"","full_slider_autoplay":"","grid_slider_autoplay":"","fa_big_opacity":{"1":"0.5","2":"0.7"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.ticbeat.com/src/themes/voice/js/min.js?x32709'></script>
+<script type='text/javascript' src='https://www.ticbeat.com/src/themes/voice-child/js/catfish.js?x32709'></script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js?x32709'></script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/waypoints.min.js?x32709'></script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js?x32709'></script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js?x32709'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"https:\/\/www.ticbeat.com\/core\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.ticbeat.com\/src\/themes\/voice\/images","builder_images_uri":"https:\/\/www.ticbeat.com\/src\/plugins\/divi-builder\/includes\/builder\/images","et_frontend_nonce":"4a42118266","subscription_failed":"Por favor, revise los campos a continuaci\u00f3n para asegurarse de que la informaci\u00f3n introducida es correcta.","et_ab_log_nonce":"729ee6e482","fill_message":"Por favor, rellene los siguientes campos:","contact_error_message":"Por favor, arregle los siguientes errores:","invalid":"De correo electr\u00f3nico no v\u00e1lida","captcha":"Captcha","prev":"Anterior","previous":"Anterior","next":"Siguiente","wrong_captcha":"Ha introducido un n\u00famero equivocado de captcha.","is_builder_plugin_used":"1","is_divi_theme_used":"","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"277684","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn2.ticbeat.com/src/plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js?x32709'></script>
+<script type='text/javascript' src='https://www.ticbeat.com/core/wp-includes/js/wp-embed.min.js?x32709'></script>
+<script type="text/javascript">
+				/* <![CDATA[ */
+					window._seedtagq = window._seedtagq || []; window._seedtagq.push(['_setId', '6576-3682-01']); (function () { var st = document.createElement('script'); st.type = 'text/javascript'; st.async = true; st.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random(); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(st, s); })();
+				/* ]]> */
+				</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"e1ea0e896a","applicationID":"6099117","transactionName":"MhBSZQoZVhZSUU1eWAtacVIMEVcLHEFQWVAJEA==","queueTime":0,"applicationTime":284,"atts":"HldRE0IDRRg=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 187/211 objects using memcached
+Content Delivery Network via cdn1.ticbeat.com
+
+Served from: www.ticbeat.com @ 2019-04-05 06:23:27 by W3 Total Cache
+-->

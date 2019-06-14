@@ -1,0 +1,1898 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Algoritmos Genéticos</TITLE>
+</HEAD>
+<BODY LINK="blue" vlink="gray" alink="blue"><SCRIPT LANGUAGE="javascript1.2">
+<!-- //
+window.open('http://usuariosgaleon.hispavista.com/publicidad/banner.html?codArea=hv_galeon.informatica&codPais=0','Publi','width=600,height=500,toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,top=0,left=0');
+// -->
+</SCRIPT>
+<iframe src="http://www2.hispavista.com/htm/recomendados.htm" width=0 height=0></iframe><script LANGUAGE="JavaScript1.1">
+fecha = new Date();
+bust = fecha.getTime();
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.hispavista.com/js.ng/area=hv_galeon.informatica&pos=popup1&e=0&site=hv_galeon_lateral&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+</script><SCRIPT LANGUAGE="javascript1.2">
+<!-- //
+runPopupTagJS('hv_galeon.informatica');
+// -->
+</SCRIPT>
+<noscript>Alojamiento ofrecido por el Grupo HispaVista <a href="http://www.hispavista.com" alt="HispaVista: Internet está aquí" target="_blank">HispaVista</a></noscript>
+
+
+<SCRIPT LANGUAGE="javascript1.2" SRC="http://www.google-analytics.com/urchin.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+<!-- //
+_uacct="UA-152964-6";
+urchinTracker();
+// -->
+</SCRIPT>
+
+
+<FONT SIZE=6><H1 ALIGN="center">ALGORITMOS GENETICOS</H1>
+</FONT><FONT SIZE=5><H1 ALIGN="center">ÍNDICE</H1>
+
+</FONT>
+<UL><P><b>1. Introducción</b></P>
+<UL>
+<P>1.1 Antecedentes</P>
+<P>1.2 Definición</P>
+<P>1.3 Problemática</P>
+<P>1.4 Ventajas y Desventajas</P>
+<P>1.5 Limitaciones</P>
+<P>1.6 Como saber si es posible usar un Algoritmo Genético</P>
+<P>1.7 Marco de Desarrollo</P>
+<P>1.8 Comparación con otros Métodos de Optimización</P>
+</UL>
+</UL>
+<br>
+<UL><B>2. El Algoritmo Genético Simple</B>
+<UL>
+<P>2.1. Codificación </P>
+<P>2.2. Ejemplo </P>
+</UL>
+</UL>
+<UL><B>3. Extensiones y Modificaciones del Algoritmo Genético Simple </B>
+<UL>
+<P>3.1. Población </P>
+<UL>
+<P>3.1.1. Tamaño de la población </P>
+<P>3.1.2. Población inicial </P>
+</UL>
+<P>3.2. Función objetivo </P>
+<P>3.3. Selección </P>
+<P>3.4. Cruce </P>
+<P>3.5. Mutación </P>
+<P>3.6. Reducción </P>
+<P>3.7. Algoritmos Genéticos Paralelos </P>
+</UL>
+</UL>
+<UL><B>4. Lógica Borrosa (fuzzy logic) y Algoritmos Genéticos</B>
+<UL>
+<P>4.1. Funciones Borrosas </P>
+<P>4.2. Algoritmos Genéticos basados en Lógica Borrosa</P>
+</UL>
+</UL>
+<UL><B>5. Ejemplos de Aplicación</B>
+<UL>
+<P>5.1 Ejemplo 1
+<P>5.2 Ejemplo 2</P>  
+</UL>
+</UL>
+<UL><B>6. Conclusiones</B></UL>
+<UL><B>7. Referencias (Bibliografía)</B></UL>
+
+<FONT SIZE=5>
+<H1 ALIGN="center">1. Introducción</H1>
+
+</FONT><B><DL>
+<DT>1.1. Antecedentes 
+</B><DT>El algoritmo genético es una técnica de búsqueda basada en la teoría de la evolución de Darwin, que ha cobrado tremenda popularidad en todo el mundo durante los últimos años. Se presentarán aquí los conceptos básicos que se requieren para abordarla, así como unos sencillos ejemplos que permitan a los lectores comprender cómo aplicarla al problema de su elección. </DT></DL>
+<P>En los últimos años, la comunidad científica internacional ha mostrado un creciente interés en una nueva técnica de búsqueda basada en la teoría de la evolución y que se conoce como el <B>algoritmo genético</B>. Esta técnica se basa en los mecanismos de selección que utiliza la naturaleza, de acuerdo a los cuales los individuos más aptos de una población son los que sobreviven, al adaptarse más fácilmente a los cambios que se producen en su entorno. Hoy en día se sabe que estos cambios se efectúan en los genes de un individuo (unidad básica de codificación de cada uno de los atributos de un ser vivo), y que sus atributos más deseables (i.e., los que le permiten adaptarse mejor a su entorno) se transmiten a sus descendientes cuando éste se reproduce sexualmente. </P>
+<P>Un investigador de la Universidad de Michigan llamado John Holland era consciente de la importancia de la selección natural, y a fines de los 60s desarrolló una técnica que permitió incorporarla a un programa. Su objetivo era lograr que las computadoras aprendieran por sí mismas. A la técnica que inventó Holland se le llamó originalmente "planes reproductivos", pero se hizo popular bajo el nombre "algoritmo genético" tras la publicación de su libro en 1975. </P>
+<P>Una definición bastante completa de un algoritmo genético es la propuesta por John Koza:</P>
+<DL>
+<DT>"Es un algoritmo matemático altamente paralelo que transforma un conjunto de objetos matemáticos individuales con respecto al tiempo usando operaciones modeladas de acuerdo al principio Darwiniano de reproducción y supervivencia del más apto, y tras haberse presentado de forma natural una serie de operaciones genéticas de entre las que destaca la recombinación sexual. Cada uno de estos objetos matemáticos suele ser una cadena de caracteres (letras o números) de longitud fija que se ajusta al modelo de las cadenas de cromosomas, y se les asocia con una cierta función matemática que refleja su aptitud. " </DT>
+</DL>
+<FONT SIZE=2>
+<P>&nbsp;</P>
+</FONT><B><P>1.2. Definición</P>
+</B><FONT SIZE=2>
+</FONT><P ALIGN="justify">Los Algoritmos Genéticos (AGs) son métodos adaptativos que pueden usarse para resolver problemas de búsqueda y optimización. Están basados en el proceso genético de los organismos vivos. A lo largo de las generaciones, las poblaciones evolucionan en la naturaleza de acorde con los principios de la selección natural y la supervivencia de los más fuertes, postulados por Darwin. Por imitación de este proceso, los Algoritmos Genéticos son capaces de ir creando soluciones para problemas del mundo real. La evolución de dichas soluciones hacia valores óptimos del problema depende en buena medida de una adecuada codificación de las mismas.</P>
+<P ALIGN="justify">Un <B>algoritmo genético</B> consiste en una función matemática o una rutina de software que toma como entradas a los ejemplares y retorna como salidas cuales de ellos deben generar descendencia para la nueva generación.</P>
+<P ALIGN="justify">Versiones más complejas de algoritmos genéticos generan un ciclo iterativo que directamente toma a la especie (el total de los ejemplares) y crea una nueva generación que reemplaza a la antigua una cantidad de veces determinada por su propio diseño. Una de sus características principales es la de ir perfeccionando su propia heurística en el proceso de ejecución, por lo que no requiere largos períodos de entrenamiento especializado por parte del ser humano, principal defecto de otros métodos para solucionar problemas, como los Sistemas Expertos. </P>
+<P ALIGN="justify"></P>
+<B><P ALIGN="justify">1.3. Problemática</P>
+</B><P ALIGN="justify">Los principios básicos de los Algoritmos Genéticos fueron establecidos por Holland, y se encuentran bien descritos en varios textos . Goldberg, Davis, Michalewicz, Reeves.</P>
+<P ALIGN="justify">En la naturaleza los individuos de una población compiten entre sí en la búsqueda de recursos tales como comida, agua y refugio. Incluso los miembros de una misma especie compiten a menudo en la búsqueda de un compañero. Aquellos individuos que tienen más éxito en sobrevivir y en atraer compañeros tienen mayor probabilidad de generar un gran número de descendientes. Por el contrario individuos poco dotados producirán un menor número de descendientes. Esto significa que los genes de los individuos mejor adaptados se propagarán en sucesivas generaciones hacia un número de individuos creciente. La combinación de buenas características provenientes de diferentes ancestros, puede a veces producir descendientes "superindividuos", cuya adaptación es mucho mayor que la de cualquiera de sus ancestros. De esta manera, las especies evolucionan logrando unas<BR>
+características cada vez mejor adaptadas al entorno en el que viven.</P>
+<P ALIGN="justify">Los Algoritmos Genéticos usan una analogía directa con el comportamiento natural. Trabajan con una población de individuos, cada uno de los cuales representa una solución factible a un problema dado. A cada individuo se le asigna un valor ó puntuación, relacionado con la bondad de dicha solución. En la naturaleza esto equivaldría al grado de efectividad de un organismo para competir por unos determinados recursos. Cuanto mayor sea la adaptación de un individuo al problema, mayor será la probabilidad de que el mismo sea seleccionado para reproducirse, cruzando su material genético con otro individuo seleccionado de igual forma. Este cruce producirá nuevos individuos . descendientes de los anteriores . los cuales comparten algunas de las características de sus padres. Cuanto menor sea la adaptación de un individuo, menor será la probabilidad de que dicho individuo sea seleccionado para la reproducción, y por tanto de que su material genético se propague en sucesivas generaciones.</P>
+<P ALIGN="justify">De esta manera se produce una nueva población de posibles soluciones, la cual reemplaza a la anterior y verifica la interesante propiedad de que contiene una mayor proporción de buenas características en comparación con la población anterior. Así a lo largo de las generaciones las buenas características se propagan a través de la población. Favoreciendo el cruce de los individuos mejor adaptados, van siendo exploradas las áreas más prometedoras del espacio de búsqueda. Si el Algoritmo Genético ha sido bien diseñado, la, población convergerá hacia una solución óptima del problema.</P>
+<P ALIGN="justify"></P>
+<H4>1.4. Ventajas y Desventajas</H4>
+<FONT SIZE=2>
+</FONT><P>No necesitan conocimientos específicos sobre el problema que intentan resolver.</P>
+
+<UL>
+<LI>Operan de forma simultánea con varias soluciones, en 
+  vez de trabajar de forma secuencial como las técnicas tradicionales. 
+  
+<LI>Cuando se usan para problemas de optimización 
+  maximizar una función objetivo- resultan menos afectados por los máximos 
+  locales (falsas soluciones) que las técnicas tradicionales. 
+  
+<LI>Resulta sumamente fácil ejecutarlos en las modernas 
+  arquitecturas masivamente paralelas. 
+  
+<LI>Usan operadores probabilísticos, en vez de los típicos 
+  operadores determinísticos de las otras técnicas. 
+  
+<LI>Pueden tardar mucho en converger, o no converger en 
+  absoluto, dependiendo en cierta medida de los parámetros que se utilicen 
+  tamaño de la población, número de generaciones, etc.-. 
+  
+<LI>Pueden converger prematuramente debido a una serie de problemas de diversa índole. </LI></UL>
+
+<DL>
+<DT></DT>
+</DL>
+<B><P ALIGN="justify">1.5. Limitaciones</P>
+</B><P ALIGN="justify">El poder de los Algoritmos Genéticos proviene del hecho de que se trata de una técnica robusta, y pueden tratar con éxito una gran variedad de problemas provenientes de diferentes áreas, incluyendo aquellos en los que otros métodos encuentran dificultades. Si bien no se garantiza que el Algoritmo Genético encuentre la solución óptima, del problema, existe evidencia empírica de que se encuentran soluciones de un nivel aceptable, en un tiempo competitivo con el resto de algoritmos de optimización combinatoria. En el caso de que existan técnicas especializadas para resolver un determinado problema, lo más probable es que superen al Algoritmo Genético, tanto en rapidez como en eficacia. El gran campo de aplicación de los Algoritmos Genéticos se relaciona con aquellos problemas para los cuales no existen técnicas especializadas. Incluso en el caso en que dichas técnicas existan, y funcionen bien, pueden efectuarse mejoras de las mismas hibridándolas con los Algoritmos Genéticos.</P>
+<P ALIGN="justify"></P>
+<H4>1.6. Como Saber si es Posible usar un Algoritmo Genético</H4>
+<P>La aplicación más común de los algoritmos genéticos ha sido la solución de problemas de optimización, en donde han mostrado ser muy eficientes y confiables. Sin embargo, no todos los problemas pudieran ser apropiados para la técnica, y se recomienda en general tomar en cuenta las siguientes características del mismo antes de intentar usarla: </P>
+
+<UL>
+<LI>Su espacio de búsqueda (i.e., sus posibles soluciones) 
+  debe estar delimitado dentro de un cierto rango. 
+  
+<LI>Debe poderse definir una función de aptitud que nos 
+  indique qué tan buena o mala es una cierta respuesta. 
+  
+<LI>Las soluciones deben codificarse de una forma que resulte relativamente fácil de implementar en la computadora. </LI></UL>
+
+<P>El primer punto es muy importante, y lo más recomendable es intentar resolver problemas que tengan espacios de búsqueda discretos aunque éstos sean muy grandes. Sin embargo, también podrá intentarse usar la técnica con espacios de búsqueda continuos, pero preferentemente cuando exista un rango de soluciones relativamente pequeño. </P>
+<P>La <B>función de aptitud </B>no es más que la función objetivo de nuestro problema de optimización. El algoritmo genético únicamente maximiza, pero la minimización puede realizarse fácilmente utilizando el recíproco de la función maximizante (debe cuidarse, por supuesto, que el recíproco de la función no genere una división por cero). Una característica que debe tener esta función es que tiene ser capaz de "castigar" a las malas soluciones, y de "premiar" a las buenas, de forma que sean estas últimas las que se propaguen con mayor rapidez. </P>
+<P>La <B>codificación</B> más común de las soluciones es a través de cadenas binarias, aunque se han utilizado también números reales y letras. El primero de estos esquemas ha gozado de mucha popularidad debido a que es el que propuso originalmente Holland, y además porque resulta muy sencillo de implementar.</P>
+<P ALIGN="justify"></P>
+<H4>1.7. Marco de Desarrollo</H4>
+<P>Antes de continuar ahondando en la técnica de los Algoritmos Genéticos sería interesante dejarla situada dentro de un marco más amplio. Nos referimos a la rama de la Inteligencia Artificial que se ha denominado Computación Evolutiva.</P>
+<P>El término Computación Evolutiva se refiere al estudio de los fundamentos y aplicaciones de ciertas técnicas heurísticas de búsqueda basadas en los principios naturales de la evolución. Una gran variedad de algoritmos evolutivos han sido propuestos pero principalmente pueden clasificarse en: Algoritmos Genéticos, Programación Evolutiva, Estrategias Evolutivas, Sistemas Clasificadores y Programación Genética. Esta clasificación se basa sobre todo en detalles de desarrollo histórico más que en el hecho de un funcionamiento realmente diferente, de hecho las bases biológicas en las que se apoyan son esencialmente las mismas. Las diferencias entre ellos se centra en los operadores que se usan en cada caso y en general en la forma de implementar la selección, reproducción y sustitución de individuos en una población.</P>
+<P>Aunque los detalles de la evolución no han sido completamente comprendidos, incluso hoy en día, existen algunos puntos en los que se fundamentan:</P>
+
+<UL>
+<LI>La evolución es un proceso que opera a nivel de 
+  cromosomas, y no a nivel de individuos. Cada individuo es codificado como un 
+  conjunto de cromosomas. 
+  
+<LI>La selección natural es el mecanismo mediante el cual 
+  los individuos mejor adaptados son los que tienen mayores posibilidades de 
+  reproducirse. 
+  
+<LI>El proceso evolutivo tiene lugar en la etapa de la reproducción. Es en esta etapa donde se producen la mutación, que es la causante de que los cromosomas de los hijos puedan ser diferentes a los de los padres, y el cruce, que combina los cromosomas de los padres para que los hijos tengan cromosomas diferentes. </LI></UL>
+
+<P>De forma breve, pasamos a comentar cada una de los algoritmos mencionados anteriormente, para que el lector pueda tener una idea de las similitudes y diferencias entre ellos.</P>
+<P>Los Algoritmos Genéticos resuelven los problemas generando poblaciones sucesivas a las que se aplican los operadores de mutación y cruce. Cada individuo representa una solución al problema, y se trata de encontrar al individuo que represente a la mejor solución. </P>
+<P>La Programación Genética funciona igual que la técnica anterior pero se centra en el estudio de problemas cuya solución es un programa. De manera que los individuos de la población son programas que se acercan más o menos a realizar una tarea que es la solución.</P>
+<P>La Programación Evolutiva es otro enfoque de los algoritmos genéticos, en este caso el estudio se centra en conseguir operadores genéticos que imiten lo mejor posible a la naturaleza, en cada caso, más que en la relación de los padres con su descendencia. En este caso no se utiliza el operador de cruce, tomando la máxima importancia el operador de mutación.</P>
+<P>Estrategias Evolutivas se centran en el estudio de problemas de optimización e incluyen una visión del aprendizaje en dos niveles: a nivel de genotipo, y a nivel de fenotipo. Y por último los Sistemas Clasificadores engloban el estudio de problemas en los que la solución buscada se corresponde con toda una población. </P>
+<P>Para finalizar se muestra un esquema en el que se sitúan las técnicas mencionadas con respecto a otros procedimientos de búsqueda conocidos.</P>
+
+<B><P>1.8 Comparación con otros  métodos de  optimización</P>
+<br>
+</B><H4>Algoritmos Genéticos y Matemáticos</H4>
+<P>Existen problemas de optimización que pueden ser resueltos por la implementación de un algoritmo tradicional. En este caso lo más conveniente es utilizarlo.</P>
+<P>Por ejemplo: Si tenemos la función "Es el doble de" , ésta puede ser interpretada como :</P>
+<B><P>Ecuación 1</P>
+</B><P ALIGN="center"><IMG height=22 src="Image1.gif" width=68></P>
+<P>Esto también es válido para funciones booleanas (retornan un valor de Verdadero o Falso ). Por ejemplo la función "Es mayor que" , puede ser interpretada como</P>
+<B><P>Ecuación 2</P>
+</B><P ALIGN="center"><IMG height=22 src="Image2.gif" width=146> </P>
+<P>Para resolver un problema que requiera como solución saber solamente cual número es mas grande, resulta mas eficaz utilizar el algoritmo matemático directamente.</P>
+<P>Sin embargo , éstos no son aplicables a problemas que posean algunas de estas características: </P>
+
+<UL>
+<LI>La función representativa del problema no es continua. 
+  En este caso el mismo no es computable. Los algoritmos genéticos pueden 
+  trabajar con todo tipo de funciones ya que encontrarán un mínimo aceptable si 
+  no es posible encontrar el óptimo. 
+  
+<LI>La función representativa es dinámica: La relación entre las variable cambia dependiendo de los valores que tomen las mismas. Esta relación puede ser advertida o no. Las reglas del tipo </LI></UL>
+
+
+<P ALIGN="center">"X es igual a Y si el valor de X es chico; </P>
+<P ALIGN="center">X es 1.5 de y si el valor de X es grande </P>
+<P ALIGN="center">no se sabe que pasa para valores medios de X"</P>
+<P ALIGN="center"></P>
+<P>no pueden ser convertidas en un algoritmo algebraico ya que existen valores que se desconocen. A diferencia de un algoritmo tradicional , un algoritmo genético puede ser diseñado para trabajar bajo estas condiciones.</P>
+
+<H4>Algoritmos Genéticos y Métodos Enumerativos</H4>
+<P>Existe la posibilidad teórica de encontrar soluciones a problemas a optimización enumerando todas las soluciones posibles para todos los casos y posteriormente buscando la misma en la base de datos resultante. Los problemas se limitan entonces a un sistema de búsqueda eficiente del caso concreto. Por ejemplo los libros con tablas de logaritmos tradicionales constan de una larga serie de cálculos para todos los valores usuales. La solución consiste simplemente en buscar en la lista el número decimal y retornar el logaritmo dado. </P>
+<P>La memorización de las tablas de multiplicar que se enseñan a los niños es otro ejemplo usual. Se espera que ante la pregunta ¿Cuánto es siete por cinco? los niños respondan instantáneamente "35" sin tener que estar calculando mentalmente la multiplicación. </P>
+<P>Este método es factible siempre que el número de valores sea manejable. De otra manera el simple cálculo de los mismos se vuelve imposible. Ejemplo: Generar una tabla que contenga todas las movidas de todos los partidos posibles de un juego de damas resultaría imposible de hacer en la práctica.</P>
+<P>La " memorización " de una serie de datos no es otra cosa que la construcción en la memoria del equivalente a una base de datos en donde se busca la pregunta y se encuentra automáticamente la respuesta.</P>
+<P>Los algoritmos genéticos usan heurística para la resolución de problemas , lo cual limita drásticamente el número de datos a utilizar.</P>
+
+<H4>Algoritmos Genéticos y Sistemas Expertos</H4>
+<P>Un <B>Sistema Experto</B> es un programa de computadora que encuentra soluciones a problemas del tipo condicional con la estructura: </P>
+<P>Si ocurren los hechos A,B,C,D , cual sería el valor del suceso E</P>
+<P>Ejemplo: Si un análisis médico detecta los síntomas A , B 
+, C y D en un paciente , ¿Cual será la enfermedad del sujeto? </P>
+<P>Ejemplo: Si el análisis geológico de una capa de suelo 
+detecta la presencia de los compuestos químicos A , B , C y D ¿Es factible que 
+exista petróleo en la misma?.</P>
+<P>Si bien existen en la literatura ejemplos de la utilidad 
+de ésta técnica , las reglas deben ser provistas por un especialista ( o varios 
+) en el tema. Por ende , se requiere que los conocimientos estén disponibles, 
+que sean estructurados o factibles de ser estructurados ( convertidos a reglas 
+heurísticas ) y que los hechos de la realidad sean relativamente estáticos , es 
+decir que las causas para arribar a una determinada conclusión no cambien , ya 
+que cada vez que esto sucede , los expertos deben reelaborrar las reglas , lo 
+cual dificulta y retarda considerablemente la operatoria del sistema.</P>
+<P>Las condiciones básicas necesarias para la implementación 
+efectiva de un sistema experto pueden observarse en el cuadro GA005.</P>
+<P>Los Sistemas Expertos tuvieron su apogeo en la década de 
+los 80<SUP>`s , </SUP>aproximadamente de 1979 a 1985. En esa 
+época se los llegó a considerar verdaderas panaceas que resolverían muchos de 
+los problemas cotidianos del hombre. Incluso se formaron en ese entonces varias 
+compañías con el objeto específico de realizarlos y comercializarlos. Algunos 
+fueron exitosos y funcionaron bien , pero las dificultades planteadas 
+anteriormente no tardaron en aparecer. En particular: </P>
+<UL>
+  <LI>Existen temas en los cuales el conocimiento no es 
+  estático , sino que la aparición de nueva información altera las pautas o 
+  reglas de inferencia de los resultados. La necesidad permanentes de reevaluar 
+  las reglas por medio de expertos humanos lleva al sistema a una operatoria 
+  lenta y burocrática. Cada conocimiento nuevo implica reentrenar manualmente el 
+  sistema. Los Sistemas Expertos demostraron no ser útiles en este campo. 
+  <LI>Existen temas en los cuales la interrelación de 
+  ciertas variables no es conocida. Si la información disponible de cierto 
+  asunto es limitada , y no se conoce el comportamiento de algunas de sus 
+  variables , el Sistema experto tendrá grandes dificultades de programarse ya 
+  que sus reglas serán imprecisas. </LI></UL>
+<P>El Cuadro GA5 muestra las condiciones básicas necesarias 
+para la implementación efectiva de un sistema experto</P><B>
+<P align=center></P>
+<P align=center>Condiciones básicas necesarias para la 
+implementación efectiva de un sistema experto</P></B>
+<P align=center><IMG height=467 src="Image3.gif" width=417 ></P>
+<UL>
+  <LI>Los expertos no siempre estructuran su conocimiento. 
+  Existen numerosas personas que razonan por métodos empíricos. Esto hace que 
+  les resulte muy difícil traducir sus pensamientos o su método deductivo a 
+  reglas que la computadora pueda interpretar. Un Sistema experto no podrá 
+  llegar a resultados valederos cuando los especialistas en un tema no puedan 
+  tener estructurados sus pensamientos. Por ejemplo: supóngase que se quiera 
+  programar un sistema experto para calificar obras de arte. Difícilmente se 
+  encontrará un crítico de arte que pueda estructurar las razones por las cuales 
+  considera "buena" o "mala" a una obra de arte. En general las palabras que 
+  pueda decir resultarán a los oídos del programador del Sistema como una serie 
+  de subjetividades imposibles de sistematizar. </LI></UL>
+<P>Luego de observar todo esto, se empezó a considerar a los 
+Sistemas expertos como aptos solamente para entornos reducidos y con condiciones 
+de ejecución acotadas. La idea del Sistema Experto como " resolvedor universal 
+de problemas " quedó sepultada.</P>
+<P>Si bien la investigación básica de los algoritmos 
+genéticos es contemporánea a la de los sistemas expertos , la renovada 
+importancia que se les dio en el ámbito científico se produjo en paralelo a la 
+desvalorización que sufrieron estos últimos.</P>
+<P>Los algoritmos genéticos se revalorizaron ya que poseen 
+las siguientes ventajas competitivas:</P>
+<UL>
+  <LI>Solo necesitan asesoramiento del experto cuando se 
+  agregan o suprimen variables al modelo. Los Sistemas Expertos requieren la 
+  presencia del mismo ante cada modificación del entorno. 
+  <LI>Los algoritmos genéticos solo requieren el 
+  asesoramiento del experto para identificar las variables pertinentes , aunque 
+  no es necesario que éstos definan sus valores ni sus relaciones (las reglas) 
+  iniciales o finales. Los Sistemas Expertos solo trabajan con las reglas y 
+  valores que les dictan los seres humanos. </LI></UL>
+<DL>
+  <DT></DT></DL>
+<H4>Algoritmos Genéticos y Redes Neuronales</H4>
+<P>Una <B>red neuronal</B> es el intento 
+de poder realizar una simulación computacional del comportamiento de partes del 
+cerebro humano mediante la réplica en pequeña escala de los patrones que éste 
+desempeña para la formación de resultados a partir de los sucesos percibidos. El 
+cerebro consta de unidades llamadas neuronas, las cuales están conectadas entre 
+si formando una red (de ahí la denominación " red neuronal ")</P>
+<P>Concretamente, se trata de poder analizar y reproducir el 
+mecanismo de aprendizaje de sucesos que poseen los animales más 
+evolucionados.</P>
+<P>La red simula grupos de neuronas , llamados " capas " las 
+cuales están relacionadas unas con otras. Los datos se introducen en la primera 
+capa , llamada "capa de entradas" Cada capa transfiere la información a sus 
+vecinas., teniendo un peso o ponderación para los valores , lo que va 
+modificando los mismos en su paso a través de la red </P>
+<P>Cuando los datos llegan a la última de las capas , 
+llamada " capa de salida " el valor resultante es tomado como el resultado de la 
+red. La red puede ser entrenada para diversos usos , entre ellos como mecanismo 
+de optimización. En este sentido, se puede expresar que serían un modelo 
+alternativo competitivo con los algoritmos genéticos , si se las programara para 
+este fin. En rigor de verdades , la literatura sugiere que se podrían hacer 
+modelos mixtos o híbridos en donde se combinen las ventajas de las redes 
+neuronales y los algoritmos genéticos , aunque hay muy poco material disponible 
+en este campo. Tal vez esto se deba al hecho que los GA y el estudio de las 
+redes forman dos ramas o escuelas separadas dentro de la inteligencia artificial 
+, por lo que existe una preferencia en los investigadores en perfeccionar alguno 
+de los dos modelos antes que tratar de unirlos. </P><FONT size=2>
+<P>&nbsp;</P>
+<P><IMG height=510 src="Image20.gif" width=622 ></P></FONT>
+<P align=justify></P>
+<P align=justify>&nbsp;</P>
+<OL>
+  <H4 align=center>
+  <LI></H4><FONT size=5>
+  <H1 align=center>
+  <LI>El Algoritmo Genético Simple</H1></FONT>
+  <P align=justify>El Algoritmo Genético Simple, también 
+  denominado Canónico, se representa en la Figura . 1. Como se verá a 
+  continuación, se necesita una codificación o representación del problema, que 
+  resulte adecuada al mismo. Además se requiere una función de ajuste ó 
+  adaptación al problema, la cual asigna un número real a cada posible solución 
+  codificada. Durante la ejecución del algoritmo, los padres deben ser 
+  seleccionados para la reproducción, a continuación dichos padres seleccionados 
+  se cruzarán generando dos hijos, sobre cada uno de los cuales actuará un 
+  operador de mutación. El resultado de la combinación de las anteriores 
+  funciones será un conjunto de individuos (posibles soluciones al problema), 
+  los cuales en la evolución del Algoritmo Genético formarán parte de la 
+  siguiente población.</P><FONT size=2>
+  <P align=center><IMG height=322 src="3d5ca201.jpg" width=400 ></P></FONT>
+  <P align=center>Figura 1</P>
+  <H2 align=justify>2.1. Codificación </H2>
+  <P align=justify>Se supone que los individuos (posibles 
+  soluciones del problema), pueden representarse como un conjunto de parámetros 
+  (que denominaremos penes), los cuales agrupados forman una ristra de valores 
+  (a menudo referida como cromosoma). Si bien el alfabeto utilizado para 
+  representar los individuos no debe necesariamente estar constituido por el (0, 
+  l), buena parte de la teoría en la que se fundamentan los Algoritmos Genéticos 
+  utiliza dicho alfabeto. En términos biológicos, el conjunto de parámetros 
+  representando un cromosoma particular se denomina fenotipo. El fenotipo 
+  contiene la información requerida para construir un organismo, el cual se 
+  refiere como genotipo. Los mismos términos se utilizan en el campo de los 
+  Algoritmos Genéticos. La adaptación al problema de un individuo depende de la 
+  evaluación del genotipo. Esta última puede inferirse a partir del fenotipo, es 
+  decir puede ser computada a partir del cromosoma, usando la función de 
+  evaluación. La función de adaptación debe ser diseñada para cada problema de 
+  manera específica. Dado un cromosoma particular, la función de adaptación le 
+  asigna un número real, que se supone refleja el nivel de adaptación al 
+  problema del individuo representado por el cromosoma.</P>
+  <P align=justify>Durante la fase reproductiva se 
+  seleccionan los individuos de la población para cruzarse y producir 
+  descendientes, que constituirán, una vez. mutados, la siguiente generación de 
+  individuos. La selección de padres se efectúa al azar usando un procedimiento 
+  que favorezca a los individuos mejor adaptados, ya que a cada individuo se le 
+  asigna una probabilidad<BR>de ser seleccionado que es 
+  proporcional a su función de adaptación. Este procedimiento se dice que está 
+  basado en la ruleta sesgada. Según dicho esquema, los individuos bien 
+  adaptados se escogerán probablemente varias veces por generación, mientras 
+  que, los pobremente adaptados al problema, no se escogerán más que de vez en 
+  cuando.</P>
+  <P align=justify>Una vez seleccionados dos padres, sus 
+  cromosomas se combinan, utilizando habitualmente los operadores de cruce y 
+  mutación. Las formas básicas de dichos operadores se describen a 
+  continuación.</P>
+  <P align=justify>El <I>operador de 
+  cruce</I>, coge dos padres seleccionados y corta sus ristras de cromosomas en 
+  una posición escogida al azar, para producir dos subristras iniciales y dos 
+  subristras finales. Después se intercambian las subristras finales, 
+  produciéndose dos nuevos cromosomas completos (véase la Figura 2). Ambos 
+  descendientes heredan genes de cada uno de los padres. Este operador se conoce 
+  como operador de cruce basado en un punto. Habitualmente el operador de cruce 
+  no se aplica a todos los pares de individuos que han</P><FONT size=2 
+  >
+  <P align=center><IMG height=158 src="3d5ca202.jpg" width=400 ></FONT>&nbsp;Figura 
+  2</P>
+  <P align=justify>sido seleccionados para emparejarse, sino 
+  que se aplica de manera aleatoria, normalmente con una probabilidad 
+  comprendida entre 0.5 y 1.0. En el caso en que el operador de cruce no se 
+  aplique, la descendencia se obtiene simplemente duplicando los padres.</P>
+  <P align=justify>El operador de mutación se aplica a cada 
+  hijo de manera individual, y consiste en la alteración aleatoria (normalmente 
+  con probabilidad pequeña) de cada gen componente del cromosoma. La Figura 3 
+  muestra la mutación del quinto gen del cromosoma. Sí bien</P><FONT size=2 
+  >
+  <P align=center><IMG height=181 src="3d5ca203.jpg" width=400 ></P></FONT>
+  <P align=center>Figura 3</P>
+  <P align=justify>puede en principio pensarse que el 
+  operador de cruce es más importante que el operador de mutación, ya que 
+  proporciona una exploración rápida del espacio de búsqueda, éste último 
+  asegura que ningún punto del espacio de búsqueda tenga probabilidad cero de 
+  ser examinado, y es de capital importancia para asegurar la convergencia de 
+  los Algoritmos Genéticos.</P>
+  <P align=justify>Para criterios prácticos, es muy útil la 
+  definición de convergencia introducida en este campo por De Jong en su tesis 
+  doctoral. Si el Algoritmo Genético ha sido correctamente implementado, la 
+  población evolucionará a lo largo de las generaciones sucesivas de tal manera 
+  que la adaptación media extendida a todos los individuos de la población, así 
+  como la adaptación del mejor individuo se irán incrementando hacia el óptimo 
+  global. El concepto de convergencia está relacionado con la progresión hacia 
+  la uniformidad: un gen ha convergido cuando al menos el 95 % de los individuos 
+  de la población comparten el mismo valor para dicho gen. Se dice que la 
+  población converge cuando todos los genes han convergido. Se puede generalizar 
+  dicha definición al caso en que al menos un poco de los individuos de la 
+  población hayan convergido.</P>
+  <P align=justify>La Figura 4 muestra como varía la 
+  adaptación media y la mejor adaptación en un Algoritmo Genético Simple 
+  típico.</P><FONT size=2>
+  <P align=center><IMG height=184 src="3d5ca204.jpg" width=400 ></P></FONT>
+  <P align=center>Figura 4</P>
+  <P align=justify>A medida que el número de generaciones 
+  aumenta, es más probable que la adaptación media se aproxime a la del mejor 
+  individuo.</P>
+  <H2 align=justify>2.2. Ejemplo</H2>
+  <P align=justify>Como ilustración de los diferentes 
+  componentes del Algoritmo Genético Simple, supongamos el problema . adaptado 
+  de Goldberg de encontrar el máximo de la función f(z) = x<SUP 
+  >2</SUP> sobre los enteros (1,2,...,32). Evidentemente para 
+  lograr dicho óptimo, bastaría actuar por búsqueda exhaustiva, dada la baja 
+  cardinalidad del espacio de búsqueda. Se trata por tanto de un mero ejemplo 
+  con el que pretendemos ilustrar el comportamiento del algoritmo anteriormente 
+  descrito. Consultando él pseudocódigo de la Figura 1, vemos que el primer paso 
+  a efectuar consiste en determinar el tamaño de la población inicial, para a 
+  continuación obtener dicha población al azar y computar la función de 
+  evaluación de cada uno de sus individuos.</P>
+  <P align=justify>Suponiendo que el alfabeto utilizado para 
+  codificar los individuos esté constituido por (0, 1), necesitaremos ristras de 
+  longitud 5 para representar los 32 puntos del espacio de búsqueda.</P>
+  <P align=justify>En la Tabla 1, hemos representado los 4 
+  individuos que constituyen la población inicial, junto con su función de 
+  adaptación al problema, así como la probabilidad de que cada uno de dichos 
+  individuos sea seleccionado . según el modelo de ruleta sesgada . para 
+  emparejarse.</P>
+  <P align=justify>Volviendo a consultar el pseudocódigo 
+  expresado en la Figura 1, vemos que el siguiente paso consiste en la selección 
+  de 2 parejas de individuos. Para ello es suficiente, con obtener 4 números 
+  reales provenientes de una distribución de probabilidad uniforme en el 
+  intervalo</P><FONT size=2>
+  <P align=center><IMG height=164 src="3d5ca205.jpg" width=400 ></P></FONT>
+  <P align=center>Tabla 1</P><FONT size=2 
+  >
+  <P align=center><IMG height=195 src="3d5ca206.jpg" width=400 ></P>
+  <P align=center></FONT>Tabla 2</P>
+  <P align=justify>(0, 1), y compararlos con la última 
+  columna de la Tabla l. Así por ejemplo, supongamos que dichos 4 números hayan 
+  sido: 0.58; 0.84; 0.11 y 0.43. Esto significa que los individuos seleccionados 
+  para el cruce han sido: el individuo 2 junto con el individuo 4, así como el 
+  individuo 1 junto con el individuo 2.</P>
+  <P align=justify>Para seguir con el Algoritmo Genético 
+  Simple, necesitamos determinar la probabilidad de cruce, p,. Supongamos que se 
+  fije en p, = 0.8. Valiéndonos al igual que antes de, 2 en este caso, números 
+  provenientes de la distribución uniforme, determinaremos si los 
+  emparejamientos anteriores se llevan a cabo. Admitamos, por ejemplo, que los 
+  dos números extraídos sean menores que 0.8, decidiéndose por tanto efectuar el 
+  cruce entre las dos parejas. Para ello escogeremos un número al azar entre l y 
+  1 . 1 (siendo l la longitud de la ristra utilizada para representar el 
+  individuo). Notése que la restricción impuesta al escoger el número entre 1 y 
+  l . l, y no l, se realiza con la finalidad de que los descendientes no 
+  coincidan con los padres.</P>
+  <P align=justify>Supongamos, tal y como se indica en la 
+  Tabla 2, que los puntos de cruce resulten ser 2 y 3. De esta manera 
+  obtendríamos los 4 descendientes descritos en la tercera columna de la Tabla 
+  2. A continuación siguiendo el pseudocódigo de la Figura 1, mutaríamos con una 
+  probabilidad, p, cercana a cero, cada uno de los bit de las cuatro ristras de 
+  individuos. En este caso suponemos que el único bit mutado corresponde al 
+  primer gen del tercer individuo. En las dos últimas columnas se pueden 
+  consultar los valores de los individuos, así como las funciones de adaptación 
+  correspondientes. Como puede observarse, tanto el mejor individuo como la 
+  función de adaptación media han mejorado sustancialmente al compararlos con 
+  los resultados de la Tabla 1.</P>
+  <P align=justify>&nbsp;</P><FONT size=5 
+  >
+  <H1 align=center>
+  <LI>Extensiones y Modificaciones del Algoritmo Genético 
+  Simple</H1></LI></OL></FONT>
+<P>En este apartado se introducirán algunas extensiones y 
+modificaciones del Algoritmo Genético Simple. Se comenzará dando un pseudocódigo 
+para un Algoritmo Genético Abstracto (AGA), para a continuación introducir 
+algunas variantes que se han ido proponiendo en trabajos desarrollados en estos 
+últimos años.</P><FONT size=2>
+<P align=center><IMG height=194 src="3d5ca301.jpg" width=400 ></P></FONT>
+<P align=center>Figura 5</P>
+<H2>3.1. Población</H2>
+<H3>3.1.1. Tamaño de la población</H3>
+<P>Una cuestión que uno puede plantearse es la relacionada 
+con el tamaño idóneo de la población. Parece intuitivo que las poblaciones 
+pequeñas corren el riesgo de no cubrir adecuadamente el espacio de búsqueda, 
+mientras que el trabajar con poblaciones de gran tamaño puede acarrear problemas 
+relacionados con el excesivo costo computacional.</P>
+<P>Goldberg efectuó un estudio teórico, obteniendo como 
+conclusión que el tamaño óptimo de la población para ristras de longitud I, con 
+codificación binaria, crece exponencialmente con el tamaño de la ristra.</P>
+<P>Este resultado traería como consecuencia que la 
+aplicabilidad de los Algoritmos Genéticos en problemas reales sería muy 
+limitada, ya que resultarían no competitivos con otros métodos de optimización 
+combinatoria. Alander, basándose en evidencia empírica sugiere que un tamaño de 
+población comprendida entre l y 21 es suficiente para atacar con éxito los 
+problemas por el considerados.</P>
+<H3>3.1.2. Población inicial</H3>
+<P>Habitualmente la población inicial se escoge generando 
+ristras al azar, pudiendo contener cada gen uno de los posibles valores del 
+alfabeto con probabilidad uniforme. Nos podríamos preguntar que es lo que 
+sucedería si los individuos de la población inicial se obtuviesen como resultado 
+de alguna técnica heurística o de optimización local. En los pocos trabajos que 
+existen sobre este aspecto, se constata que esta inicialización no aleatoria de 
+la población inicial, puede acelerar la convergencia del Algoritmo Genético. Sin 
+embargo en algunos casos la desventaja resulta ser la prematura convergencia del 
+algoritmo, queriendo indicar con esto la convergencia hacia óptimos locales.</P>
+<H2>3.2. Función objetivo</H2>
+<P>Dos aspectos que resultan cruciales en el comportamiento 
+de los Algoritmos Genéticos son la determinación de una adecuada función de 
+adaptación o función objetivo, así como la codificación utilizada. </P>
+<P>Idealmente nos interesaría construir funciones objetivo 
+con "ciertas regularidades", es decir funciones objetivo que verifiquen que para 
+dos individuos que se encuentren cercanos en el espacio de búsqueda, sus 
+respectivos valores en las funciones objetivo sean similares. Por otra parte una 
+dificultad en el comportamiento del Algoritmo Genético puede ser la existencia 
+de gran cantidad de óptimos locales, así como el hecho de que el óptimo global 
+se encuentre muy aislado.</P>
+<P>La regla, general para construir una buena función 
+objetivo es que ésta debe reflejar el valor del individuo de una manera "real", 
+pero en muchos problemas de optimización combinatoria, donde existe gran 
+cantidad de restricciones, buena parte de los puntos del espacio de búsqueda 
+representan individuos no válidos.</P>
+<P>Para este planteamiento en el que los individuos están 
+sometidos a restricciones, se han propuesto varias soluciones. La primera sería 
+la que podríamos denominar absolutista, en la que 'aquellos individuos que no 
+verifican las restricciones, no son considerados como tales, y se siguen 
+efectuando cruces y mutaciones hasta obtener individuos válidos, o bien, a 
+dichos individuos se les asigna una función objetivo igual a cero.</P>
+<P>Otra posibilidad consiste en reconstruir aquellos 
+individuos que no verifican las restricciones. Dicha reconstrucción suele 
+llevarse a cabo por medio de un nuevo operador que se acostumbra a denominar 
+reparador.</P>
+<P>Otro enfoque está basado en la penalización de la función 
+objetivo. La idea general consiste en dividir la función objetivo del individuo 
+por una cantidad (la penalización) que guarda relación con las restricciones que 
+dicho individuo viola. Dicha cantidad puede simplemente tener en cuenta el 
+número de restricciones violadas ó bien el denominado costo esperado de 
+reconstrucción, es decir el coste asociado a la conversión de dicho individuo en 
+otro que no viole ninguna restricción.</P>
+<P>Otra técnica que se ha venido utilizando en el caso en 
+que la computación de la función objetivo sea muy compleja es la denominada 
+evaluación aproximada de la función objetivo. En algunos casos la obtención de n 
+funciones objetivo aproximadas puede resultar mejor que la evaluación exacta de 
+una única función objetivo (supuesto el caso de que la evaluación aproximada 
+resulta como mínimo n veces más rápida que la, evaluación exacta).</P>
+<P>Un problema habitual en las ejecuciones de los Algoritmos 
+Genéticos surge debido a la velocidad con la que el algoritmo converge. En 
+algunos casos la convergencia es muy rápida, lo que suele denominarse 
+convergencia prematura, en la cual el algoritmo converge hacia óptimos locales, 
+mientras que en otros casos el problema es justo el contrario, es decir se 
+produce una convergencia lenta del algoritmo. Una posible solución a estos 
+problemas pasa por efectuar transformaciones en la función objetivo. El problema 
+de la convergencia prematura, surge a menudo cuando la selección de individuos 
+se realiza de manera proporcional a su función objetivo. En tal caso, pueden 
+existir individuos con una adaptación al problema muy superior al resto, que a 
+medida que avanza el algoritmo "dominan" a la población. Por medio de una 
+transformación de la función objetivo, en este caso una comprensión del rango de 
+variación de la función objetivo, se pretende que dichos "superindividuos" no 
+lleguen a dominar a la población.</P>
+<P>El problema de la lenta convergencia del algoritmo, se 
+resolvería de manera análoga, pero en este caso efectuando una expansión del 
+rango de la función objetivo.</P>
+<P>La idea de especies de organismos, ha sido imitada en el 
+diseño de los Algoritmos Genéticos en un método propuesto por Goldberg y 
+Richardson, utilizando una modificación de la función objetivo de cada 
+individuo, de tal manera que individuos que estén muy cercanos entre sí devalúen 
+su función objetivo, con objeto de que la población gane en diversidad. 
+</P><FONT size=2>
+<P align=center><IMG height=174 src="3d5ca302.jpg" width=500 ></P></FONT>
+<P align=center>Función</P>
+<H2>3.3 Selección</H2>
+<P>La función de selección de padres más utilizada, es la 
+denominada función de selección proporcional a la función objetivo, en la cual 
+cada individuo tiene una, probabilidad de ser seleccionado como padre que es 
+proporcional al valor de su función objetivo.</P>
+<P>Denotando por (p super prop sub j,t) la probabilidad de 
+que el individuo (I super j sub t) sea seleccionado como padre, se tiene 
+que:</P><FONT size=2>
+<P align=center><IMG height=98 src="3d5ca303.jpg" width=263 ></P></FONT>
+<P align=center>Función</P>
+<P>Esta función de selección es invariante ante un cambio de 
+escala, pero no ante una traslación.</P>
+<P>Una de las maneras de superar el problema relacionado con 
+la rápida convergencia proveniente de los superindividuos, que surge al aplicar 
+la anterior función de selección, es el efectuar la selección proporcional al 
+rango del individuo, con lo cual se produce una repartición más uniforme de la 
+probabilidad de selección, tal y como se ilustra en la Figura 6. Si denotamos 
+por rango(g(I super j sub t)) el rango de la función objetivo del individuo (I 
+super j sub t) cuando</P>
+<P align=center></P><FONT size=2>
+<P align=center><IMG height=194 src="3d5ca304.jpg" width=500 ></P></FONT>
+<P align=center>Figura 6</P>
+<P>los individuos de la población han sido ordenados de 
+menor a mayor (es decir el peor individuo tiene rango 1, mientras que el 
+individuo con mejor función objetivo tiene rango lambda), y sea (p super rango 
+sub j,t) la probabilidad de que el individuo (I super j sub t) sea seleccionado 
+como padre cuando la selección se efectúa proporcionalmente al rango del 
+individuo, se tiene que</P><FONT size=2>
+<P align=center><IMG height=92 src="3d5ca305.jpg" width=269 ></P></FONT>
+<P align=center>Función</P>
+<P>La suma de los rangos, lambda(lambda + 1)/2, constituye 
+la constante de normalización.</P>
+<P>La función de selección basada en el rango es invariante 
+frente a la translación y al cambio de escala.</P>
+<P>Otro posible refinamiento del modelo de selección 
+proporcional, es el modelo de selección del valor esperado, el cual actúa de la 
+manera siguiente: para, cada individuo If, se introduce un contador, 
+inicialiazado en g(I super j sub t)/gt, donde, gt denota la media, de. ) a 
+función objetivo en la generación t. Cada vez que el individuo (I super j sub t) 
+es seleccionado para el cruce, dicho contador decrece en una cantidad c (c 
+pertenece a (0, 5;.1)). El individuo en cuestión dejará de poder ser 
+seleccionado en esa generación, cuando su contador sea negativo.</P>
+<P>Un esquema de selección, introducido por Brindle, y que 
+empíricamente ha proporcionado buenos resultados, es el denominado muestreo 
+estocástico con reemplazamiento del resto, en el cual cada individuo es 
+seleccionado un número de veces que coincide con la parte entera del número 
+esperado de ocurrencias de dicho suceso, compitiendo los individuos por los 
+restos. Es decir, si denotamos por n(I super j sub t) el número de veces que el 
+individuo (I super j sub t) es seleccionado para el cruce, tenemos que:</P><FONT 
+size=2>
+<P align=center><IMG height=82 src="3d5ca306.jpg" width=500 ></P></FONT>
+<P align=center>Función</P>
+<P>Baker introduce un método denominado muestreo universal 
+estocástico, el cual utiliza un único giro de la ruleta siendo los sectores 
+circulares proporcionales a la función objetivo. Los individuos son 
+seleccionados a partir de marcadores (véase Figura 7), igualmente espaciados y 
+con comienzo aleatorio.</P>
+<P>Efectuando un paralelismo con los métodos de muestreo 
+estadísticos, este último tipo</P><FONT size=2>
+<P align=center><IMG height=196 src="3d5ca307.jpg" width=500 ></P></FONT>
+<P align=center>Figura 7</P>
+<P>de selección de padres se relaciona con el muestreo 
+sistemático, mientras que la selección proporcional a la función objetivo, está 
+basada en el muestreo estratificado con fijación proporcional al tamaño. También 
+el procedimiento de selección que hemos denominado muestreo estocástico con 
+reemplazamiento del resto, mantiene un paralelismo con el muestreo estratificado 
+con fijación de compromiso.</P>
+<P>En el modelo de selección elitista se fuerza a que el 
+mejor individuo de la población en el tiempo t, sea seleccionado como padre.</P>
+<P>La selección por torneo, constituye un procedimiento de 
+selección de padres muy extendido y en el cual la idea consiste en escoger al 
+azar un número de individuos de la población, tamaño del torneo, (con o sin 
+reemplazamiento), seleccionar el mejor individuo de este grupo, y repetir el 
+proceso hasta que el número de individuos seleccionados coincida con el tamaño 
+de la población. Habitualmente el tamaño del torneo es 2, y en tal caso se ha 
+utilizado una versión probabilística en la cual se permite la selección de 
+individuos sin que necesariamente sean los mejores.</P>
+<P>Una posible clasificación de procedimientos de selección 
+de padres consistirá en: métodos de selección dinámicos, en los cuales las 
+probabilidades de selección varían de generación a generación, (por ejemplo la 
+selección proporcional a la función objetivo), frente a métodos de selección 
+estáticos, en los cuales dichas probabilidades permanecen constantes (por 
+ejemplo la selección basada en rangos).</P>
+<P>Si se asegura que todos los individuos tienen asignada 
+una probabilidad de selección distinta de cero el método de selección se 
+denomina preservativo. En caso contrario se acostumbra a denominarlo 
+extintivo.</P>
+<H2>3.4. Cruce</H2>
+<P>El Algoritmo Genético Canónico descrito anteriormente 
+utiliza el cruce basado en un punto, en el cual los dos individuos seleccionados 
+para jugar el papel de padres, son recombinados por medio de la selección de un 
+punto de corte, para posteriormente intercambiar las secciones que se encuentran 
+a la derecha de dicho punto.</P>
+<P>Se han investigado otros operadores de cruce, 
+habitualmente teniendo en cuenta más de un punto de cruce. De Jong investigó el 
+comportamiento del operador de cruce basado en múltiples puntos, concluyendo que 
+el cruce basado en dos puntos, representaba una mejora mientras que añadir más 
+puntos de cruce no beneficiaba el comportamiento del algoritmo. La ventaja de 
+tener más de un punto de cruce radica en que el espacio de búsqueda puede ser 
+explorado más fácilmente, siendo la principal desventaja el hecho de aumentar la 
+probabilidad de ruptura de buenos esquemas.</P>
+<P>En el operador de cruce basado en dos puntos, los 
+cromosomas (individuos) pueden contemplarse como un circuito en el cual se 
+efectúa la selección aleatoria de dos puntos, tal y como se indica en la Figura 
+8.</P><FONT size=2>
+<P align=center><IMG height=249 src="3d5ca308.jpg" width=400 ></P></FONT>
+<P align=center>Figura 8</P>
+<P>Desde este punto de vista, el cruce basado en un punto, 
+puede verse como un caso particular del cruce basado en dos puntos, en el cual 
+uno de los puntos de corte se encuentra fijo al comienzo de la ristra que 
+representa al individuo. Véase Figura,9.</P>
+<P>En el denominado operador de cruce uniforme (Syswerda) 
+cada gen, en la descendencia se crea copiando el correspondiente gen de uno de 
+los dos padres, escogido de acuerdo ' a una "máscara de cruce" generada 
+aleatoriamente. Cuando existe un l en la "máscara de cruce", el gen es copiado 
+del primer padre, mientras que cuando exista un 0 en la</P><FONT size=2>
+<P align=center><IMG height=121 src="3d5ca309.jpg" width=400 ></P></FONT>
+<P align=center>Figura 9</P>
+<P>"máscara de cruce", el gen se copia del segundo padre, 
+tal y como se muestra en la Figura 10. En la literatura, el término operador de 
+cruce uniforme se relaciona con la obtención</P>
+<P align=center><IMG height=239 src="3d5ca310.jpg" width=400 ></P>
+<P align=center>Figura 10</P>
+<P>de la "máscara de cruce" uniforme, en el sentido de que 
+cualquiera de los elementos del alfabeto tenga asociada la misma probabilidad. 
+Hablando en términos de la teoría de la probabilidad la máscara de cruce está 
+compuesta por una muestra aleatoria de tamaño A extraída de una distribución de 
+probabilidad de Bernouilli de parámetro l/2.</P>
+<P>Si tuviésemos en cuenta el valor de la función de 
+adaptación de cada padre en el momento de generar la "máscara de cruce", de tal 
+manera que cuanto mayor sea la función de adaptación de un individuo, más 
+probable sea heredar sus características, podríamos definir, véase Larrañaga y 
+Poza [26], un operador de cruce basado en la función objetivo, en el cual la 
+"máscara de cruce" se interpreta como una muestra aleatoria de tamaño l 
+proveniente de una distribución de Bernouilli de parámetro</P><FONT size=2>
+<P align=center><IMG height=60 src="3d5ca311.jpg" width=306 ></P></FONT>
+<P align=center>Función</P>
+<P>donde (I super j sub t) y I(super i sub t) denotan los 
+padres seleccionados para ser cruzados.</P>
+<P>El concepto de "máscara de cruce" puede también servir 
+para representar los cruces basados en un punto y basados en múltiples puntos, 
+tal y como se muestra en Figura 11.</P>
+<P>Sirag y Weiser, modifican el operador de cruce en el 
+sentido del Simulated Annealing. De esta manera el operador de cruce se modifica 
+definiendo un umbral de energía H. y una temperatura T, las cuales influencian 
+la manera en la que se escogen los bits individuales. Según el operador 
+propuesto el bit (i + 1)-ésimo se tomará del padre opuesto al que se ha tomado 
+el bit i-ésimo, con probabilidad exp( . (tetha sub c)/T), donde T es el 
+parámetro "temperatura" el cual, al igual que en Simulated Annealing, decrecerá 
+lentamente por medio de un programa de enfriamiento. Con altas temperaturas el 
+comportamiento se asemeja al del operador de cruce uniforme, es decir con 
+probabilidad cercana a la unidad los bits se van escogiendo alternativamente de 
+cada padre. Por otra parte cuando el valor</P><FONT size=2>
+<P align=center><IMG height=163 src="3d5ca312.jpg" width=500 ></P></FONT>
+<P align=center>Figura 11</P>
+<P>del parámetro temperatura se acerca a cero el hijo 
+"resultante coincide prácticamente con uno de los padres.</P>
+<P>Existen otros operadores de cruce específicos para un 
+determinado problema como son, por ejemplo, los definidos para el problema del 
+agente de comercio.</P>
+<P>Por otra parte, la idea de que el cruce debería de ser 
+más probable en algunas posiciones ha sido descrita por varios autores (Schaffer 
+y Morishima, Holland, Davis, Levenick).</P>
+<H2>3.5. Mutación</H2>
+<P>La mutación se considera un operador básico, que 
+proporciona un pequeño elemento de aleatoriedad en la vecindad (entorno) de los 
+individuos de la población. Si bien se admite que el operador de cruce es el 
+responsable de efectuar la búsqueda a lo largo del espacio de posibles 
+soluciones, también parece desprenderse de los experimentos efectuados por 
+varios investigadores que el operador de mutación va ganando en importancia a 
+medida que la población de individuos va convergiendo (Davis).</P>
+<P>Schaffer y col. encuentran que el efecto del cruce en la 
+búsqueda es inferior al que previamente se esperaba. Utilizan la denominada 
+evolución primitiva, en la cual, el proceso evolutivo consta tan sólo de 
+selección y mutación. Encuentran que dicha evolución primitiva supera con creces 
+a una evolución basada exclusivamente en la selección y el cruce. Otra 
+conclusión de su trabajo es que la determinación del valor óptimo de la 
+probabilidad de mutación es mucho más crucial que el relativo a la probabilidad 
+de cruce.</P>
+<P>La búsqueda del valor óptimo para la probabilidad de 
+mutación, es una cuestión que ha sido motivo de varios trabajos. Así, De Jong 
+recomienda la utilización de una probabilidad de mutación del bit de (l super 
+-1), siendo l la longitud del string. Schaffer y col. utilizan resultados 
+experimentales para estimar la tasa óptima proporcional a l /(lambda super 
+0.9318),(l super 0.4535), donde lambda denota el número de individuos en la 
+población.</P>
+<P>Si bien en la mayoría de las implementaciones de 
+Algoritmos Genéticos se asume que tanto la probabilidad de cruce como la de 
+mutación permanecen constantes, algunos autores han obtenido mejores resultados 
+experimentales modificando la probabilidad de mutación a medida que aumenta el 
+número de iteraciones. Pueden consultarse los trabajos de Ackley, Bramlette, 
+Fogarty y Michalewicz y Janikow.</P>
+<H2>3.6. Reducción</H2>
+<P>Una vez obtenidos los individuos descendientes de una 
+determinada población en el tiempo t, el proceso de reducción al tamaño 
+original, consiste en escoger lambda individuos de entre los Lambda individuos 
+que forman parte de la población en el tiempo t, y los lambda individuos 
+descendientes de los mismos. Dicho proceso se suele hacer fundamentalmente de 
+dos formas distintas.</P>
+<P>O bien los lambda individuos descendientes son los que 
+forman parte de la población en el tiempo t + 1, es lo que se denomina reducción 
+simple, o bien se escogen de entre los 2lambra individuos, los lambda individuos 
+más adaptados al problema, siguiendo lo que podemos denominar un criterio de 
+reducción elitista de grado lambda. Podemos también considerar otros 
+procedimientos de reducción que se colocan entre los anteriores, por ejemplo, si 
+escogemos los (lambda sub 1) mejores de entre padres y descendientes, 
+escogiéndose los lambda . (lambda sub 1)y restantes de entre los descendientes 
+no seleccionados hasta el momento.</P>
+<P>El concepto de reducción está ligado con el de tasa de 
+reemplazamiento generacional, (t sub rg) es decir en el porcentaje de hijos 
+generados con respecto del tamaño de la, población.</P>
+<P>Si bien en la idea primitiva de Holland [22] dicho 
+reemplazamiento se efectuaba, de l en 1, es decir (t sub gr)=(lambda super -1), 
+habitualmente dicho reemplazamiento se efectúa en bloque, (t sub gr)= 1. De Jong 
+[13] introdujo el concepto de tasa de reemplazamiento generacional con el 
+objetivo de efectuar un solapamiento controlado entre padres e hijos. En su 
+trabajo, en cada paso una proporción, t,~, de la población es seleccionada para 
+ser cruzada. Los hijos resultantes podrán reemplazar a miembros de la población 
+anterior. Este tipo de Algoritmos Genéticos se conocen bajo el nombre de SSGA 
+(Steady State Genetie Algorithm), un ejemplo de los cuales lo constituye GENITOR 
+(Whitley y Kauth, Whitley).</P>
+<P>Michalewicz introduce un algoritmo que denomina Algoritmo 
+Genético Modificado, (MOD sub GA), en el cual para llevar a cabo el 
+reemplazamiento generacional, selecciona al azar r1 individuos para la 
+reproducción, así como r2 individuos (distintos de los anteriores) destinados a 
+morir. Estas selecciones aleatorias tienen en consideración el valor de la 
+función objetivo de cada individuo, de tal manera que cuanto mayor es la función 
+objetivo, mayor es la probabilidad de que sea seleccionado para la reproducción, 
+y menor es la probabilidad de que dicho individuo fallezca. El resto de los 
+lambda . (r1 + r2) individuos son considerados como neutros y pasan directamente 
+a formar parte de la población en la siguiente generación.</P>
+<H2>3.7. Algoritmos Genéticos Paralelos</H2>
+<P>En este apartado se introducirán tres maneras diferentes 
+de explotar el paralelismo de los Algoritmos Genéticos, por medio de los 
+denominados modelos de islas. Para una profundización sobre el tema puede 
+consultarse Stender.</P><I>
+<P>Modelos de islas.</P></I>
+<P>La idea básica consiste en dividir la población total en 
+varias subpoblaciones en cada una de las cuales se lleva, a cabo un Algoritmo 
+Genético. Cada cierto número de generaciones, se efectúa un intercambio de 
+información entre las subpoblaciones, proceso que se denomina migración. La 
+introducción de la migración hace que los modelos de islas sean capaces de 
+explotar las diferencias entre las diversas subpoblaciones, obteniéndose de esta 
+manera una fuente de diversidad genética. Cada subpopulación es una "isla", 
+definiéndose un procedimiento por medio del cual se mueve el material genético 
+de una "isla" a otra. La determinación de la, tasa de migración, es un asunto de 
+capital importancia, ya que de ella puede depender la convergencia prematura de 
+la búsqueda.<BR>Se pueden distinguir diferentes modelos de 
+islas en función de la comunicación entre las<BR>subpoblaciones. Algunas comunicaciones típicas son las 
+siguientes:</P>
+<UL>
+  <LI>Comunicación en estrella, en la cual existe una 
+  subpoblación que es seleccionada como maestra (aquella que tiene mejor media 
+  en el valor de la función objetivo), siendo las demás consideradas como 
+  esclavas. Todas las subpoblaciones esclavas mandan sus h1 mejores individuos 
+  (h1, &gt; 1) a la subpoblación maestra la cual a su vez manda sus h2 mejores 
+  individuos (h2 &gt; 1) a cada una de las subpoblaciones esclavas. Véase Figura 
+  12. </LI></UL><FONT size=2>
+<P align=center><IMG height=172 src="3d5ca313.jpg" width=500 ></P></FONT>
+<P align=center>Figura 12</P>
+<UL>
+  <LI>Comunicación en red, en la cual no existe una 
+  jerarquía entre las subpoblaciones, mandando todas y cada una de ellas sus h3 
+  (h3 &gt; 1) mejores individuos al resto de las subpoblaciones. Véase Figura 
+  13. </LI></UL><FONT size=2>
+<P align=center><IMG height=182 src="3d5ca314.jpg" width=500 ></P></FONT>
+<P align=center>Figura 13</P>
+<UL>
+  <LI>Comunicación en anillo, en la cual cada subpoblación 
+  envía sus h4 mejores individuos (h4 &gt; 1), a una población vecina, 
+  efectuándose la migración en un único sentido de flujo. Véase Figura 14. 
+</LI></UL>
+<P>El modelo de islas ha sido utilizado por varios autores 
+(Whitley y Starkweather, Gorges-Schleuter, Tanese).</P><FONT size=2>
+<P align=center><IMG height=180 src="3d5ca315.jpg" width=500 ></P></FONT>
+<P align=center>Figura 14</P><B><FONT 
+size=5><EM>
+<P align=center>4. Lógica borrosa (fuzzy logic) y 
+algoritmos genéticos</P></B></FONT></EM>
+<P>La lógica borrosa trata de acercar la matemática al 
+lenguaje impreciso del hombre común. El ser humano se maneja habitualmente con 
+conceptos vagos , los cuales no pueden ser representados por la matemática 
+tradicional.</P>
+<P>Si se pregunta a una serie de personas acerca del estado 
+del clima , es factible que las respuestas sean del tipo:</P>
+<UL>
+  <LI>"Hace mucho calor". 
+  <LI>"Hace frio" 
+  <LI>"Hoy llovió mucho" 
+  <LI>"No llovió casi nada: Apenas unas gotitas" </LI></UL>
+<P>Si alguien responde a la pregunta en forma concreta , su 
+respuesta se parecería a :</P>
+<P>"En este momento hay 30 grados centigrados y se espera 
+que para el resto del día la temperatura se eleve hasta los 35 grados , para 
+luego decaer a 20 grados a lo largo dela noche"</P>
+<P>Este tipo de respuesta parece extractada del parte 
+meteorológico del noticiero. Esperamos oír algo similar cuando miramos la 
+televisión , pero no tenemos la expectativa de hacerlo cuando le preguntamos al 
+compañero de trabajo que acaba de llegar si hace calor afuera del edificio.</P>
+<P>Tenemos entonces que el hombre se maneja con términos 
+vagos para muchas de las acciones de su vida. Una matemática estructurada para 
+trabajar con conceptos precisos no puede entonces representar estos conceptos. 
+La lógica borrosa trata de poder incorporar métodos para que conceptos vagos 
+puedan ser utilizados como funciones matemáticas. </P>
+<P>Esta ha tenido una utilidad práctica inmediata en los 
+mecanismos de control de las maquinarias. La lógica borrosa no es un mecanismo 
+de optimización en si mismo , pero vuelve mas flexibles a los sistemas de 
+control de los dispositivos electrónicos , por lo que podríamos decir que se 
+trata de un método optimizado de control.. La difusión que ha tenido en el mundo 
+se le debe en gran parte a la incorporación que han hecho los japoneses durante 
+la década de los 80's de estas técnicas en los productos que comercializan 
+mundialmente , en especial los electrodomésticos. (No es raro ver un lavarropas 
+o una heladera de marca japonesa con el logotipo de<I> 
+Fuzzy Logic</I> incorporado). Si se utiliza lógica borrosa , un dispositivo 
+automático puede ser programado con órdenes del tipo expuesto en el Cuadro 
+GA6</P>
+<P>&nbsp;</P><B>
+<P align=center>Tipo de Órdenes plausibles de ser 
+implementadas en un contexto de lógica borrosa</P></B>
+<P align=center><IMG height=373 src="Image4.gif" width=288 ></P>
+<DIV> <br>La formulación de este tipo de reglas es mucho 
+mas sencilla de entender y explicar por los expertos humanos que deben 
+introducir las mismas. Así mismo , la programación del software es mas simple al 
+igual que su mantenimiento.</DIV><B>
+<P>4.1. Funciones Borrosas</P></B>
+<P>La lógica borrosa trabaja con las llamadas funciones 
+borrosas , las cuales permiten efectuar las condiciones descriptas 
+precedentemente.</P>
+<P>Ejemplo: Para definir la función " mucho " dentro de una 
+serie de valores se procede de la siguiente manera:</P>
+<UL>
+  <LI>Se toma la serie , se la ordena de mayor a menor y se 
+  extrae el valor mas grande y el valor mas chico. Estos valores corresponden al 
+  límite superior y al límite inferior de la serie. </LI></UL>
+<P>Tenemos entonces que dada una serie variando de a<SUB>0</SUB> hasta a<SUB>n 
+</SUB>elementos:</P>
+<H5>Ecuación 3</H5>
+<P align=center><IMG height=24 src="Image5.gif" width=178 ></P>
+<P align=center><IMG height=24 src="Image6.gif" width=182 ></P>
+<UL>
+  <LI>Se establece como amplitud de la serie la diferencia 
+  del límite superior y el inferior: </LI></UL><B>
+<P align=center>Ecuación 4</P></B>
+<P align=center><IMG height=24 src="Image7.gif" width=173 ></P>
+<UL>
+  <LI>La función " mucho " queda definida como: </LI></UL><B>
+<P align=center>Ecuación 5</P></B>
+<P align=center><IMG height=41 src="Image8.gif" width=81 ></P>
+<P>En una serie de números naturales , cuyos valores estén 
+entre 0 y 1000 ; A=(LS-LI) ; A=(1000-0) ; A=1000</P>
+<P>La función " mucho " fue definida como x/A , por lo que 
+variará desde 0/1000 para x=0 hasta 1000/1000 para x=1000. Tendremos entonces un 
+rango de valores entre 0 y 1.</P><B>
+<P align=center>Ecuación 6</P></B>
+<P align=center><IMG height=22 src="Image9.gif" width=97 ></P>
+<P>Para facilitar los cálculos , si la serie no comienza de 
+0 o contiene valores negativos, conviene convertirla en serie de números 
+positivos sumando a cada término el valor máximo negativo.</P>
+<P>Ejemplo: la serie de {-3 -2 -1 0 1 2 3 4 5} puede ser 
+convertida en {0 1 2 3 4 5 6 7 8} sumándole 3 a todos los términos.</P>
+<P>La serie {3,4,5,6} puede ser convertida en {0,1,2,3} 
+restándole 3 a todos los términos.</P>
+<P>Por ello , la ecuación 3 se transforma en:</P><B>
+<P align=center>Ecuación 7</P></B>
+<P align=center><IMG height=24 src="Image10.gif" width=184 ></P>
+<P align=center><IMG height=24 src="Image11.gif" width=189 ></P>
+<P>Donde<I> LI</I><SUB>0 </SUB>y <I>LS</I><SUB>0</SUB> representan los límites originales. Estos límites 
+se normalizan a <I>LS</I><SUB>1 
+</SUB>y <I>LI</I><SUB>1</SUB> llevando 
+la serie al rango {0.<I>.n</I>}.</P><B>
+<P align=center>Ecuación 8</P></B>
+<P align=center><IMG height=24 src="Image12.gif" width=261 ></P>
+<P align=center><IMG height=24 src="Image13.gif" width=240 ></P>
+<P>Veamos un caso concreto: </P>
+<P>Supongamos la siguiente serie de temperaturas:</P>
+<P align=center>
+<CENTER>
+<TABLE border=1 borderColor=#000000 cellPadding=4 cellSpacing=1 width=467>
+  <TBODY>
+  <TR>
+    <TD bgColor=#000080 vAlign=top width="31%"><B 
+      ><I><FONT color=#ffffff 
+      >
+      <P align=center>ÍTEM</P>
+      <P align=center>( </B>t</I><B 
+      ><SUB>i </SUB><I 
+      >)</B></I></FONT></P></TD>
+    <TD bgColor=#000080 vAlign=top width="35%"><B 
+      ><I><FONT color=#ffffff 
+      >
+      <P align=center>HORA</B></I></FONT></P></TD>
+    <TD bgColor=#000080 vAlign=top width="35%"><B 
+      ><I><FONT color=#ffffff 
+      >
+      <P align=center>TEMPERATURA (GRADOS 
+      CELSIUS)</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>1</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>9</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>3</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>2</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>10</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>5</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>3</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>11</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>7</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>4</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>12</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>9</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>5</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>13</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>11</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>6</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>14</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>14</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>7</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>15</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>16</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>8</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>16</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>18</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>9</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>17</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>22</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>10</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>18</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>25</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>11</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>9</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>27</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>12</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>10</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>29</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>13</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>11</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>30</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>14</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>12</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>32</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>15</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>13</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>33</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>16</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>14</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>34</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>17</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>15</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>35</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>18</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>16</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>34</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>19</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>17</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>30</FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><B 
+      >
+      <P align=center>20</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><B 
+      >
+      <P align=center>18</B></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="35%"><FONT 
+      color=#000080>
+      <P align=center>25</FONT></P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P>La pregunta que se sesea que se responda es ¿Hizo mucho 
+calor a las 16 hs?. Esta pregunta es imposible de responder por los métodos 
+tradicionales ya que la computadora solo puede retornar el valor 34 , pero no 
+discriminar si eso es mucho o no. veamos como trabaja entonces la función " 
+mucho "</P><B>
+<P>Ecuación 9</P></B>
+<P align=center><IMG height=163 src="Image14.gif" width=265 ></P>
+<P>Observamos que en definitiva la función " mucho " 
+retorna un número representativo del 96,85%. Cuanto mas se acerque el número a 1 
+o 100% mas valedera será la afirmación. Cuanto mas se acerque a 0 , menos 
+valedera será la misma. Solo en el caso que el resultado sea 0 o 1 (0% o 100%) 
+se puede decir taxativamente que el enunciado es verdadero o falso., blanco o 
+negro. Todos los valores intermedios caen bajo la categoría de "gris ". Un valor 
+tendrá un " gris mas oscuro " ( que lo acercará al negro ) cuando su valor 
+tienda a 1 . De la misma forma , será un " gris mas claro " ( que lo acercará al 
+blanco ) si tiende a 0. No existen , entonces límites precisos para las 
+categorías. volviéndose imprecisos los mismos ( de ahí la nomenclatura de lógica 
+borrosa )</P>
+<P>Dado que la función se acerca al 100% obtendremos como 
+resultado que efectivamente hizo mucho calor a la hora señalada.</P>
+<P>De la misma manera ,la función " Poco " puede ser 
+descripta como la inversa de la función " mucho " , por lo que tendremos que 
+:</P><B>
+<P align=center>Ecuación 10</P></B>
+<P align=center><IMG height=21 src="Image15.gif" width=171 ></P><B>
+<P align=center></P>
+<P align=center><IMG height=163 src="Image16.gif" width=321 ></P>
+<P align=center>Ecuación 11</P></B><FONT size=2>
+<P align=center>&nbsp;</P></FONT>
+<P>Dado que el resultado de la función se acerca al 0% 
+obtendremos como resultado que NO hizo poco calor a la hora señalada.</P><B><EM>
+<P>4.2. Algoritmos Genéticos basados en Lógica 
+borrosa</P></B></EM>
+<P>Existe la posibilidad de planear la arquitectura de un 
+GA para que sus funciones de convergencia y control, así como sus operadores 
+genéticos estén basados en lógica borrosa. El GA estaría entonces programado 
+para la supervivencia ante entornos borrosos. Esto acarrearía por un lado la 
+ventaja de la programación de las mismas, aunque tendría un efecto en la 
+supervivencia indistinta de ciertos especímenes con similar valor de la función 
+borrosa aunque diferente valor absoluto. Ejemplo: Si se programa el GA para 
+seleccionar los especímenes con valores " altos " , esto dará igual ponderación 
+a un ejemplar con un 90% de performance (de la función "alto" ) que a uno con el 
+92% de la misma función.(Ambos son "altos"). </P>
+<P>Sin lógica borrosa el segundo ejemplar sería mas 
+competitivo que el primero y lo aniquilaría. Dado que el efecto de utilizar o no 
+esta lógica cambia la arquitectura del GA , su implementación no es en si misma 
+ni buena ni mala , dependiendo de los objetivos del programador y de los 
+resultados esperados.</P>
+<P>Las diferencias entre un GA con y sin lógica borrosa 
+pueden ser apreciadas en el Cuadro GA7</P><B>
+<P align=center></P></B><FONT size=2>
+<P align=center><IMG height=477 src="Image17.gif" width=446 ></P>
+<P align=center></FONT><B>Cuadro GA7 Diferencias entre un 
+GA con y sin lógica borrosa</P></B><FONT size=2>
+<P align=center>&nbsp;</P></FONT>
+<DL>
+  <DT>
+  <DT></DT></DL><B><FONT size=5>
+<P align=center>5. Ejemplos de Aplicación</P></B></FONT>
+<H4>5.1. Ejemplo1</H4>
+<P>Veamos cómo funciona un algoritmo genético:</P>
+<P>Vamos a partir de una función f(x) muy sencilla:</P>
+<DIR>
+<DIR>
+<P>f(x)=x<SUP>2</SUP> </P></DIR></DIR>
+<P>Imagina que deseas encontrar el valor de x que hace que 
+la función f(x) alcance su valor máximo, pero restringiendo a la variable x a 
+tomar valores comprendidos entre 0 y 31. Aún más, a x sólo le vamos a permitir 
+tomar valores enteros, es decir: 0,1,2,3,...,30, 31. Obviamente el máximo se 
+tiene para x = 31, donde f vale 961. No necesitamos saber algoritmos genéticos 
+para resolver este problema, pero su sencillez hace que el algoritmo sea más 
+fácil de comprender.</P>
+<P>Lo primero que debemos hacer es encontrar una manera de 
+codificar las posibles soluciones(posibles valores de x). Una manera de hacerlo 
+es con la codificación binaria. Con esta codificación un posible valor de x es 
+(0,1,0,1,1). ¿Cómo se interpreta esto? Muy sencillo: multiplica la última 
+componente (un 1) por 1, la penúltima (un 1) por 2, la anterior (un 0) por 4, la 
+segunda (un 1) por 8 y la primera(un 0) por 16 y a continuación haz la suma: 11. 
+Observa que (0,0,0,0,0) equivale a x = 0 y que (1,1,1,1,1) equivale a x = 
+31.</P>
+<P>A cada posible valor de la variable x en representación 
+binaria le vamos a llamar individuo. Una colección de individuos constituye lo 
+que se denomina población y el número de individuos que la componen es el tamaño 
+de la población. Una vez que tenemos codificada la solución, debemos escoger un 
+tamaño de población. Para este ejemplo ilustrativo vamos a escoger 6 
+individuos.</P>
+<P>Debemos partir de una población inicial. Una manera de 
+generarla es aleatoriamente: coge una moneda y lánzala al aire; si sale cara, la 
+primera componente del primer individuo es un 0 y en caso contrario un 1. Repite 
+el lanzamiento de la moneda y tendremos la segunda componente del primer 
+individuo (un 0 sí sale cara y un 1 sí sale cruz). Así hasta 5 veces y obtendrás 
+el primer individuo. Repite ahora la secuencia anterior para generar los 
+individuos de la población restantes. En total tienes que lanzar 5 * 6 = 30 
+veces la moneda.</P>
+<P>Nuestro siguiente paso es hacer competir a los 
+individuos entre sí. Este proceso se conoce como selección. La tabla 1 resume el 
+proceso.</P>
+<P>&nbsp;</P><B>
+<P>Tabla 1.- </B>SELECCION</P>
+<P align=center>
+<CENTER>
+<TABLE border=1 cellSpacing=1 width=322>
+  <TBODY>
+  <TR>
+    <TD vAlign=center width="20%"><FONT size=2 
+      >
+      <P></FONT>(1)</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(2)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>(3)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>(4)</P></TD>
+    <TD vAlign=center width="16%">
+      <P>(5)</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>1</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(0,1,1,0,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>12</P></TD>
+    <TD vAlign=center width="19%">
+      <P>144</P></TD>
+    <TD vAlign=center width="16%">
+      <P>6</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>2</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(1,0,0,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>18</P></TD>
+    <TD vAlign=center width="19%">
+      <P>324</P></TD>
+    <TD vAlign=center width="16%">
+      <P>3</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>3</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(0,1,1,1,1)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>15</P></TD>
+    <TD vAlign=center width="19%">
+      <P>225</P></TD>
+    <TD vAlign=center width="16%">
+      <P>2</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>4</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(1,1,0,0,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>24</P></TD>
+    <TD vAlign=center width="19%">
+      <P>576</P></TD>
+    <TD vAlign=center width="16%">
+      <P>5</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>5</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(1,1,0,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>26</P></TD>
+    <TD vAlign=center width="19%">
+      <P>676</P></TD>
+    <TD vAlign=center width="16%">
+      <P>4</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>6</P></TD>
+    <TD vAlign=center width="26%">
+      <P>(0,0,0,0,1)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD>
+    <TD vAlign=center width="16%">
+      <P>1</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=center>Cada fila en la tabla 1 está asociada a un 
+individuo de la población inicial. El significado de cada columna de la tabla es 
+el siguiente:</P>
+<BLOCKQUOTE>(1) = Número que le asignamos al 
+individuo.</BLOCKQUOTE>
+<BLOCKQUOTE>(2)= Individuo en codificación 
+binaria.</BLOCKQUOTE>
+<BLOCKQUOTE>(3) = Valor de x.</BLOCKQUOTE>
+<BLOCKQUOTE>(4) = Valor de f(x).</BLOCKQUOTE>
+<P>Observa que el mejor individuo es el 5 con f = 676. 
+Calcula la media de f y obtendrás fmed=324.3. En cuanto a la columna (5) ahora 
+te lo explico. Una manera de realizar el proceso de selección es mediante un 
+torneo entre dos. A cada individuo de la población se le asigna una pareja y 
+entre ellos se establece un torneo: el mejor genera dos copias y el peor se 
+desecha. La columna (5) indica la pareja asignada a cada individuo, lo cual se 
+ha realizado aleatoriamente. Existen muchas variantes de este proceso de 
+selección, aunque este método nos vale para ilustrar el ejemplo.</P>
+<P>Después de realizar el proceso de selección, la 
+población que tenemos es la mostrada en la columna (2) de la tabla 2. Observa, 
+por ejemplo, que en el torneo entre el individuo 1 y el 6 de la población 
+inicial, el primero de ellos ha recibido dos copias, mientras que el segundo cae 
+en el olvido.</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P><B>
+<P>Tabla 2</B>.- CRUCE</P>
+<P align=center>
+<CENTER>
+<TABLE border=1 cellSpacing=1 width=251>
+  <TBODY>
+  <TR>
+    <TD vAlign=center width="20%"><FONT size=2 
+      >
+      <P></FONT>(1)</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(2)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>(3)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>(4)</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>1</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(0,1,1,0,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>5</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>2</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(0,1,1,0,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>3</P></TD>
+    <TD vAlign=center width="19%">
+      <P>3</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>3</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(1,0,0,1,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>2</P></TD>
+    <TD vAlign=center width="19%">
+      <P>3</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>4</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(1,0,0,1,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>6</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>5</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(1,1,0,1,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>1</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="20%">
+      <P>6</P></TD>
+    <TD vAlign=center width="39%">
+      <P>(1,1,0,1,0)</P></TD>
+    <TD vAlign=center width="23%">
+      <P>4</P></TD>
+    <TD vAlign=center width="19%">
+      <P>1</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=justify>Tras realizar la selección, se realiza el 
+cruce. Una manera de hacerlo es mediante el cruce 1X: se forman parejas entre 
+los individuos aleatoriamente de forma similar a la selección. Dados dos 
+individuos pareja se establece un punto de cruce aleatorio, que no es más que un 
+número aleatorio entre 1 y 4 (la longitud del individuo menos 1). Por ejemplo, 
+en la pareja 2-3 el punto de cruce es 3, lo que significa que un hijo de la 
+pareja conserva los tres primeros bits del padre y hereda los dos últimos de la 
+madre, mientras que el otro hijo de la pareja conserva los tres primeros bits de 
+la madre y hereda los dos últimos del padre. La población resultante se muestra 
+en la columna (2) de la tabla 3. </P><B>
+<P>Tabla 3</B>.- POBLACION TRAS EL CRUCE</P>
+<P align=center>
+<CENTER>
+<TABLE border=1 cellSpacing=1 width=349>
+  <TBODY>
+  <TR>
+    <TD height=43 vAlign=center width="15%"><FONT size=2 
+      >
+      <P></FONT>(1)</P></TD>
+    <TD height=43 vAlign=center width="40%">
+      <P>(2)</P></TD>
+    <TD height=43 vAlign=center width="19%">
+      <P>(3)</P></TD>
+    <TD height=43 vAlign=center width="26%">
+      <P>(4)</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>1</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(0,1,0,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>10</P></TD>
+    <TD vAlign=center width="26%">
+      <P>100</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>2</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(1,1,1,0,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>28</P></TD>
+    <TD vAlign=center width="26%">
+      <P>784</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>3</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(0,1,1,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>14</P></TD>
+    <TD vAlign=center width="26%">
+      <P>196</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>4</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(1,0,0,0,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>16</P></TD>
+    <TD vAlign=center width="26%">
+      <P>256</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>5</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(1,1,0,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>26</P></TD>
+    <TD vAlign=center width="26%">
+      <P>676</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="15%">
+      <P>6</P></TD>
+    <TD vAlign=center width="40%">
+      <P>(1,0,0,1,0)</P></TD>
+    <TD vAlign=center width="19%">
+      <P>18</P></TD>
+    <TD vAlign=center width="26%">
+      <P>324</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P>
+<P align=justify>En la columna (3) tienes el valor de x; en 
+la siguiente tienes el valor de f correspondiente. Fíjate en que ahora el valor 
+máximo de f es 784 (para el individuo 2), mientras que antes de la selección y 
+el cruce era de 676. Además fmed ha subido de 324.3 a 389.3. ¿Qué quiere decir 
+esto? Simplemente que los individuos después de la selección y el cruce son 
+mejores que antes de estas transformaciones.</P>
+<P align=justify>El siguiente paso es volver a realizar la 
+selección y el cruce tomando como población inicial la de la tabla 3. Esta 
+manera de proceder se repite tantas veces como número de iteraciones tú fijes. Y 
+¿cuál es el óptimo?. En realidad un algoritmo genético no te garantiza la 
+obtención del óptimo pero, si está bien construido, te proporcionará una 
+solución razonablemente buena. Puede que obtengas el óptimo, pero el algoritmo 
+no te confirma que lo sea. Así que quédate con la mejor solución de la última 
+iteración. También es buena idea ir guardando la mejor solución de todas las 
+iteraciones anteriores y al final quedarte con la mejor solución de las 
+exploradas.</P><B>
+<P>Consideraciones adicionales</P></B>
+<P align=justify>En problemas reales en los que se aplican 
+los algoritmos genéticos, existe la tendencia a la homegeinización de la 
+población, es decir a que todos los individuos de la misma sean idénticos. Esto 
+impide que el algoritmo siga explorando nuevas soluciones, con lo que podemos 
+quedar estancados en un mínimo local no muy bueno.</P>
+<P align=justify>Existen técnicas para contrarrestar esta 
+"deriva genética". El mecanismo más elemental, aunque no siempre suficientemente 
+eficaz, es introducir una mutación tras la selección y el cruce. Una vez que has 
+realizado la selección y el cruce escoges un número determinado de bits de la 
+población y los alteras aleatoriamente. En nuestro ejemplo consiste simplemente 
+en cambiar algunos(s) bit(s) de 1 a 0 ó de 0 a 1.</P>
+<DL>
+  <DT></DT></DL>
+<OL start=2>
+  <OL start=2>
+    <H4>
+    <LI>Ejemplo 2</H4></LI></OL></OL><FONT size=2></FONT>
+<P>Con la finalidad de aclarar mejor los conceptos 
+cubiertos previamente, presentaremos ahora una sencilla aplicación del algoritmo 
+genético a un problema de optimización:</P>
+<P>Un grupo de financieros mexicanos ha resuelto invertir 
+10 millones de pesos en la nueva marca de vino "Carta Nueva". Así pues, en 4 
+ciudades de las principales de México se decide iniciar una vigorosa campaña 
+comercial: México en el centro, Monterrey en el noroeste, Guadalajara en el 
+occidente y Veracruz en el oriente. A esas 4 ciudades van a corresponder las 
+zonas comerciales I, II, III y IV. Un estudio de mercado ha sido realizado en 
+cada una de las zonas citadas y han sido establecidas curvas de ganancias 
+medias, en millones de pesos, en función de las inversiones totales (almacenes, 
+tiendas de venta, representantes, publicidad, etc.) Estos datos se ilustran en 
+la tabla 2 y en la figura 4. Para simplificar los cálculos, supondremos que las 
+asignaciones de créditos o de inversiones deben hacerse por unidades de 1 millón 
+de pesos. La pregunta es: ¿en dónde se deben de asignar los 10 millones de pesos 
+de los que se dispone para que la ganancia total sea máxima? </P>
+<P align=center>
+<CENTER>
+<TABLE border=1 cellPadding=5 cellSpacing=1 width=425>
+  <TBODY>
+  <TR>
+    <TD vAlign=center width="22%"><FONT size=2 
+      >
+      <P align=center></FONT><B 
+      >Inversión<BR>(en 
+      millones)</B></P></TD>
+    <TD vAlign=center width="20%"><B>
+      <P align=center>Beneficio I</B></P></TD>
+    <TD vAlign=center width="20%"><B>
+      <P align=center>Beneficio II</B></P></TD>
+    <TD vAlign=center width="18%"><B>
+      <P align=center>Beneficio III</B></P></TD>
+    <TD vAlign=center width="20%"><B>
+      <P align=center>Beneficio IV</B></P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>0</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>1</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.28</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.25</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.15</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.20</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>2</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.45</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.41</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.25</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.33</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>3</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.65</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.55</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.40</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.42</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>4</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.78</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.65</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.50</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.48</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>5</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.90</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.75</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.62</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.53</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>6</P></TD>
+    <TD vAlign=center width="20%">
+      <P>1.02</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.80</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.73</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.56</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>7</P></TD>
+    <TD vAlign=center width="20%">
+      <P>1.13</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.85</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.82</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.58</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>8</P></TD>
+    <TD vAlign=center width="20%">
+      <P>1.23</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.88</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.90</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.60</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>9</P></TD>
+    <TD vAlign=center width="20%">
+      <P>1.32</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.90</P></TD>
+    <TD vAlign=center width="18%">
+      <P>0.96</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.60</P></TD></TR>
+  <TR>
+    <TD vAlign=center width="22%">
+      <P>10</P></TD>
+    <TD vAlign=center width="20%">
+      <P>1.38</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.90</P></TD>
+    <TD vAlign=center width="18%">
+      <P>1.00</P></TD>
+    <TD vAlign=center width="20%">
+      <P>0.60</P></TD></TR></TBODY></TABLE></CENTER>
+<P></P><I>
+<P align=center>Tabla 1. Datos obtenidos con la 
+investigación de mercado en cada una de las regiones en estudio</P></I>
+<P>1) <B>Representación:</B> Para 
+poder aplicar el algoritmo genético, lo primero que necesitamos determinar es 
+cuál será el esquema a utilizarse para representar las posibles soluciones del 
+problema. En este caso necesitamos 4 bits (2^4 = 16) para representar cada 
+solución, porque cada una admite 11 valores posibles (de 0 a 10). Como existen 4 
+valores independientes (uno por cada zona de estudio), se requieren entonces 16 
+bits (4 x 4) por cada cromosoma. Es importante hacer notar que se requiere una 
+función de codificación (i.e., que transforme el valor de la inversión a 
+binario) y una de decodificación (i.e., que realice el proceso inverso). Debido 
+a que en este caso los 4 bits utilizados para representar una solución pueden 
+producir más valores de los que se necesitan, se usará una función de ajuste que 
+haga que los resultados producidos siempre se encuentren en el rango válido. 
+</P>
+<P>2) <B>Función de Aptitud:</B> Dado 
+que el objetivo es obtener las inversiones que sumen 10, y que tengan un 
+beneficio máximo, podemos usar la siguiente función de aptitud penalizada: </P><PRE>                           c1+c2+c3+c4 
+                     F(x)=-------------
+                             500*V+1</PRE>
+<P>donde c1, c2, c3 y c4 son las ganancias por zona, que se 
+calculan de acuerdo a los valores de la tabla 2, y v es el valor absoluto de la 
+diferencia entre la suma obtenida de las inversiones y 10. Nótese que cuando no 
+se viole ninguna restricción (i.e., cuando la suma de inversiones sea 
+exactamente 10) la función de aptitud no será "castigada". </P>
+<P>3) <B>Operadores:</B> Se usará una 
+cruza de 2 puntos. La probabilidad que se dará a la misma será del 80%. En 
+cuanto a la mutación, se le asignará una probabilidad baja, que será del 1%. El 
+tamaño de población manejado para este ejemplo será de 50 cromosomas, y se 
+correrá el algoritmo genético durante 20 generaciones. </P>
+<P>4) <B>Resultados:</B> El resultado 
+obtenido en una corrida típica es un beneficio de 1.81 millones de pesos, 
+correspondiente a invertir 4 millones en la zona comercial I, 3 millones en la 
+zona II, 1 millón en la zona III y 2 millones en la zona IV. Esta es la solución 
+óptima, la cual se obtuvo originalmente mediante programación dinámica. El 
+tiempo que le tomó al algoritmo genético encontrar este valor fue de sólo 13 
+segundos. Debe hacerse notar que, en este caso, si deseáramos analizar 
+inversiones que sumen otra cantidad, y en unidades menores al millón, el 
+algoritmo genético tendría que modificarse de manera mínima, mientras que la 
+programación dinámica requeriría una cantidad tal de trabajo que prácticamente 
+se volvería inoperante. </P>
+<OL start=5>
+  <DL>
+    <DT ALIGN="CENTER">
+    <B><FONT size=5 ><DT ALIGN="CENTER">
+    <LI>Bibliografía </LI></DT></DL></OL></B></FONT><FONT 
+size=2>
+<P>&nbsp;</P>
+<UL></FONT>
+  <LI>"Aplicaciones de la Computación Evolutiva" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.geocities.com/SiliconValley/7491/aplce_c.htm" 
+  >http://www.geocities.com/SiliconValley/7491/aplce_c.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Evaluación del comportamiento de los Algoritmos 
+  Genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.geocities.com/SiliconValley/9802/3d5ca400.htm" 
+  >http://www.geocities.com/SiliconValley/9802/3d5ca400.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Introducción a la vida artificial" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://içgeocities.com/CapeCanaveral/8104/ivan.htm" 
+  >http://içgeocities.com/CapeCanaveral/8104/ivan.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Construcción de bases de conocimiento con 
+  Computación Evolutiva" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.fciencias.unam.mx/revista/soluciones/N17/Vlad1.html" 
+  >http://www.fciencias.unam.mx/revista/soluciones/N17/Vlad1.html</A></BLOCKQUOTE>
+<UL>
+  <LI>"Introducción a los algoritmos genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.fciencias.unam.mx/revista/soluciones/coello2.html" 
+  >http://www.fciencias.unam.mx/revista/soluciones/Coello2.html</A></BLOCKQUOTE>
+<UL>
+  <LI>"Los placeres existenciales de los algoritmos 
+  genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.fciencias.unam.mx/revista/soluciones/N17/Gold3.html" 
+  >http://www.fciencias.unam.mx/revista/soluciones/N17/Gold3.html</A></BLOCKQUOTE>
+<UL>
+  <LI>"Algoritmos Genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.iamnet.com/users/jcontre/genetic/ag.htm" 
+  >http://www.iamnet.com/users/jcontre/genetic/ag.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Operadores genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.iamnet.com/users/jcontre/genetic/operadores.htm" 
+  >http://www.iamnet.com/users/jcontre/genetic/operadores.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Travelling Salesman problem using genetic algoritms" 
+  </LI></UL>
+<BLOCKQUOTE><A href="http://www.lalena.com/ai/TSP" 
+  >http://www.lalena.com/ai/TSP</A></BLOCKQUOTE>
+<UL>
+  <LI>"Algoritmos genéticos" </LI></UL>
+<BLOCKQUOTE><A href="http://www.uv.es/~rmarti/genet.html" 
+  >http://www.uv.es/~rmarti/genet.html</A></BLOCKQUOTE>
+<UL>
+  <LI>"Introducción.(Tantas veces va el cántaro al agua 
+  hasta que se rompe)" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://homepages.mty.itesm.mx/~lagrado/al-gen.htm" 
+  >http://homepages.mty.itesm.mx/~lagrado/al-gen.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"Algoritmos Genéticos" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.iamnet.com/users/jcontre/genetic/ag.htm" 
+  >http://www.iamnet.com/users/jcontre/genetic/ag.htm</A></BLOCKQUOTE>
+<UL>
+  <LI>"MannaMouse" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.caplet.com/MannaMouse.html" 
+  >http://www.caplet.com/MannaMouse.html#parameters</A></BLOCKQUOTE>
+<UL>
+  <LI>"The flying circus" (contiene acceso al programa 
+  ejecutable Match) </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://www.wi.leidenuniv.nl/~gusz/Flying_Circus/index.html" 
+  >http://www.wi.leidenuniv.nl/~gusz/Flying_Circus/index.html</A></BLOCKQUOTE>
+<UL>
+  <LI>"The Hitch-Hiker. s guide to Evolutionary 
+  Computation" </LI></UL>
+<BLOCKQUOTE><A 
+  href="http://gnomics.udg.es/~encore/www/top.htm" 
+  >http://gnomics.udg.es/~encore/www/top.htm</A></BLOCKQUOTE><FONT 
+size=2>
+<P>&nbsp;</P></FONT>
+<P>[1] Holland, J.H., "Adaptation in Natural and Artificial 
+Systems", University of Michigan Press, 1975, 211 p. </P>
+<P>[2] Koza, J.R., "Genetic Programming. On the Programming 
+of Computers by Means of Natural Selection", The MIT Press, 1992, 819 p. </P>
+<P>[3] Buckles, B.P., and Petry, F.E., "Genetic 
+Algorithms", IEEE Computer Society Press, 1992, 109 p. </P>
+<P>[4] Goldberg, D.E., "Genetic Algorithms in Search, 
+Optimization and Machine Learning", Addison- Wesley Publishing Company, 1989, 
+412 p. </P>
+<P>[5] Booker, L.B.; Goldberg, D.E., and Holland, J.H., 
+"Classifier Systems and Genetic Algorithms", Artificial Intelligence, 40, 1989, 
+pp. 235-282. </P>
+<P>[6] Davis, L. (Editor), "Handbook of Genetic 
+Algorithms", Van Nostrand Reinhold, 1991, 385 p. </P>
+<P>[7] Forrest, S., "Genetic Algorithms: Principles of 
+Natural Selection Applied to Computation", Science, Vol. 261, No. 5123, August 
+13, 1993, pp. 872-878. </P>
+<P>[8] Smith, R.E.; Goldberg, D.E., and Earickson, J.A., 
+"SGA-C : A C-language Implementation of a Simple Genetic Algorithm", TCGA Report 
+No. 91002, The Clearinghouse for Genetic Algorithms, The University of Alabama, 
+May 14, 1991. </P>
+<P>[9] Ribeiro Filho, J.L.; Treleaven, Ph.C., and Alippi, 
+C., "Genetic-Algorithm Programming Environments", IEEE Computer, June 1994, pp. 
+28-43. </P>
+<P>[10] Srinivas, M., and Patnaik, L.M., "Genetic 
+Algorithms : A Survey", IEEE Computer, June 1994, pp. 17-26. </P>
+<P>[11] Rawlins, G.J.E. (Editor), "Foundations of Genetic 
+Algorithms", Morgan Kaufmann Publishers, 1991, 341 p. </P>
+<P>[12] Whitley, L.D. (Editor), "Foundations of Genetic 
+Algorithms 2", Morgan Kaufmann Publishers, 1993, 322 p. </P>
+<P>[13] Kaufmann, A., y Faure, R., "Invitación a la 
+Investigación de Operaciones", Segunda Edición, CECSA, México, 1977, 311 p. </P>
+<P>[14] Porter, K., "Handling Huge Arrays", Dr. Dobb's 
+Journal of Software Tools for the Professional Programmer, Vol. 13, No. 3, 1988, 
+pp. 60-3. </P>
+<P>[15] Koza, J., "Genetic Programming II : Automatic 
+Discovery of Reusable Programs", The MIT Press, 1992, 746 p. </P>
+<P>[16 ] Francisco J. Varedas&amp;Francisco J.Vico 
+,"Computación Evolutiva Basada en un modelo de codificaión implicita", 
+Inteligencia Artificial, Nº 5, pag 20-25.</P>
+<P align=justify></P></BODY>
+</HTML>

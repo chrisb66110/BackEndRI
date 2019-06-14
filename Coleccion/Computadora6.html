@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.privacyrights.org/sites/default/files/favicon_0_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="NOTA: lo sentimos pero no tenemos la capacidad de asistir a consumidores en español. Para obtener asistencia contacte a la Comisión Federal de Comercio al (877 mpg board) FTC-HELP o en www.ftc.gov/index_es.shtml." />
+<link rel="canonical" href="https://www.privacyrights.org/c%C3%B3mo-proteger-su-computadora-y-su-privacidad" />
+<link rel="shortlink" href="https://www.privacyrights.org/node/67457" />
+  <title>Cómo proteger su computadora y su privacidad | Privacy Rights Clearinghouse</title>
+  <link type="text/css" rel="stylesheet" href="https://www.privacyrights.org/sites/default/files/css/css_Vjsq4tGuPhsw3zvH9huX5tN0k0TtqRjhvbZdgxJlLlk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.privacyrights.org/sites/default/files/css/css_dLtXCNlcOjjasYRokvvNK5MQgG3diWmQVnyyrWfmKG4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.privacyrights.org/sites/default/files/css/css__AnA06v-oC191ciXWx5vfLgRNk_F_fmk7Otj9F-gG_o.css" media="all" />
+
+<!--[if IE 9]>
+<link type="text/css" rel="stylesheet" href="https://www.privacyrights.org/sites/all/themes/custom/local/css/fix-ie9.css?ppdpbz" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.privacyrights.org/sites/default/files/css/css_LnRmR5dXeVvAWP_oJcFlfxD3wIi81vwt2kCr3rWD2rw.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="https://www.privacyrights.org/sites/default/files/js/js_xvYJgU6LChHqbcSh4y1AvdXfD5QBIwT3GVGVUeuksbM.js"></script>
+<script src="https://www.privacyrights.org/sites/default/files/js/js_iy1BPyKMkvflsOcbcfD8cqxrpHiq1yEX9uM7Z6dL4XU.js"></script>
+<script src="https://www.privacyrights.org/sites/default/files/js/js_i9-mZxF1wrIj_pHo8CcygMfG3cz35Mlm6odAjzL19fk.js"></script>
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://analytics.privacyrights.org/" : "https://analytics.privacyrights.org/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src="https://www.privacyrights.org/sites/default/files/matomo/piwik.js?ppdpbz";s.parentNode.insertBefore(g,s);})();</script>
+<script src="//use.typekit.net/ppl1hso.js"></script>
+<script>try{Typekit.load({ async: false });}catch(e){}</script>
+<script src="https://www.privacyrights.org/sites/default/files/js/js_OaaAR5w5u9fR8voEQjLaleTA9blW6FA2VqAsLgB9Az4.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"local","theme_token":"yi_riOkDC44vMT0b4jqkBX6p7QSStl7Rm4-BCYEqJow","js":{"sites\/all\/themes\/contrib\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/jump-menu.js":1,"sites\/all\/modules\/contrib\/toc_filter\/toc_filter.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/matomo\/matomo.js":1,"0":1,"\/\/use.typekit.net\/ppl1hso.js":1,"1":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/custom\/local\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/custom\/local\/js\/local.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/toc_filter\/toc_filter.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/custom\/local\/css\/fix-ie9.css":1,"sites\/all\/themes\/custom\/local\/css\/style.css":1,"sites\/all\/themes\/custom\/sageboot\/fontawesome\/css\/font-awesome.min.css":1}},"toc_filter_smooth_scroll_duration":"","better_exposed_filters":{"views":{"privacy_topics":{"displays":{"col1":{"filters":[]},"col2":{"filters":[]},"col3":{"filters":[]},"block":{"filters":[]}}}}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":1,"extExclude":"","extInclude":"\\.pdf","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"matomo":{"trackMailto":1},"urlIsAjaxTrusted":{"\/c%C3%B3mo-proteger-su-computadora-y-su-privacidad":true},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":0,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body role="document" class="html not-front not-logged-in no-sidebars page-node page-node- page-node-67457 node-type-espanol">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="navbar" role="banner" class="navbar container-fluid navbar-default">
+          <div class="container-fluid utility-bar small">
+          <div class="region region-utility">
+    <section id="block-search-form" class="block block-search clearfix">
+
+      
+  <form class="form-search content-search" action="/c%C3%B3mo-proteger-su-computadora-y-su-privacidad" method="post" id="search-block-form" accept-charset="UTF-8"><div><div>
+      <h2 class="element-invisible">Search form</h2>
+    <div class="input-group"><input title="Enter the terms you wish to search for." placeholder="Search our site" class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" /><span class="input-group-btn"><button type="submit" class="btn btn-primary"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div><div class="form-actions form-wrapper form-group" id="edit-actions"><button class="element-invisible btn btn-primary form-submit" type="submit" id="edit-submit" name="op" value="Search">Search</button>
+</div><input type="hidden" name="form_build_id" value="form-8caGMT5rj-b-cywENGjjHdnyUutAn86lpv4VToP_T6M" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</section>
+<section id="block-menu-menu-utility" class="block block-menu clearfix">
+
+      
+  <ul class="menu nav"><li class="first leaf pull-right" id="login-menu-item"><a href="/user">Log in</a></li>
+<li class="leaf pull-right" id="my-account-item"><a href="/user">My Account</a></li>
+<li class="leaf pull-right cta-item" id="submit-question-item"><a href="/ask-question" title="Click here to submit a question" id="submit-question" class="btn-utility">Ask a Question</a></li>
+<li class="leaf pull-right cta-item" id="submit-complaint-item"><a href="/submit-complaint" title="Click here to submit a complaint." id="submit-complaint" class="btn-utility">Submit a Complaint</a></li>
+<li class="leaf pull-left social-menu-item" id="social-youtube"><a href="https://www.youtube.com/user/PrivacyToday" class="social-badge">YouTube</a></li>
+<li class="leaf pull-left social-menu-item" id="social-twitter"><a href="http://www.twitter.com/privacytoday" class="social-badge">Twitter</a></li>
+<li class="last leaf pull-left social-menu-item" id="social-facebook"><a href="http://www.facebook.com/privacyrights" class="social-badge">Facebook</a></li>
+</ul>
+</section>
+  </div>
+      </div>
+      <div class="container-fluid navbar-container">
+    <div class="navbar-header">
+              <a class="logo pull-left" href="/" title="Home"></a>
+      
+      
+              <button type="button" class="btn-mobile navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <a href="/user" class="btn-mobile user-link"></a>
+        <a href="/search" class="btn-mobile search-toggle"><i class="fa fa-2x fa-search"></i></a>
+          </div>
+
+          <div class="navbar-collapse collapse">
+        <nav role="navigation">
+                      <ul class="menu nav navbar-nav"><li class="first leaf hidden-md hidden-lg responsive-menu-cta" id="submit-complaint-responsive-item"><a href="/submit-complaint" id="submit-complaint-responsive-link">Submit a Complaint</a></li>
+<li class="leaf hidden-md hidden-lg responsive-menu-cta" id="submit-question-responsive-item"><a href="/submit-question" id="submit-question-responsive-link">Submit a Question</a></li>
+<li class="leaf"><a href="/">Home</a></li>
+<li class="leaf"><a href="/learn">Learn</a></li>
+<li class="leaf"><a href="/blog">Blog</a></li>
+<li class="leaf"><a href="/data-breaches">Data Breaches</a></li>
+<li class="leaf"><a href="/policy-reports">Policy &amp; Reports</a></li>
+<li class="leaf" id="search-menu-item"><a href="/search" id="search-menu-link">Search</a></li>
+<li class="leaf responsive-only social-item" id="facebook-responsive-item"><a href="http://www.facebook.com/privacyrights">Facebook</a></li>
+<li class="leaf responsive-only social-item" id="twitter-responsive-item"><a href="http://www.twitter.com/privacytoday">Twitter</a></li>
+<li class="last leaf responsive-only social-item" id="youtube-responsive-item"><a href="https://www.youtube.com/user/PrivacyToday">Youtube</a></li>
+</ul>                                      </nav>
+      </div>
+      </div>
+</header>
+
+<div class="main-container container-fluid">
+
+  <header role="banner" id="page-header">
+    
+      </header> <!-- /#page-header -->
+
+  <div class="container content">
+    <div class="row">
+      
+      <section class="content-head">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Cómo proteger su computadora y su privacidad</li>
+</ol>        <a id="main-content"></a>
+                          <h1 class="page-header">Cómo proteger su computadora y su privacidad</h1>
+          <div class="title-divider-line"></div>
+                                                                        </section>
+
+      
+      <section class="col-sm-12">
+          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <article id="node-67457" class="node node-espanol clearfix">
+    <div class="field field-name-field-posted-date field-type-date field-label-above"><div class="field-label">Original Posted Date:&nbsp;</div><div class="field-items"><div class="field-item even"><span class="date-display-single">July 2012</span></div></div></div><div class="field field-name-field-revised-date field-type-date field-label-above"><div class="field-label">Revised Date:&nbsp;</div><div class="field-items"><div class="field-item even"><span class="date-display-single">July 2012</span></div></div></div><div class="field field-name-taxonomy-vocabulary-6 field-type-taxonomy-term-reference field-label-above"><div class="field-label">Espanol categories:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/category/espanol-categories/educaci%C3%B3n">educación</a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p><span class="text14-black"><strong>NOTA: </strong>lo sentimos pero no
+tenemos la capacida</span><span class="text14-black"><span class="text14-black">d</span> de asistir a consumidores en español. Para obtener
+asistencia contacte a la Comisión Federal de Comercio al (877 mpg board)
+FTC-HELP o en <a href="http://www.ftc.gov/index_es.shtml">www.ftc.gov/index_es.shtml</a>. </span></p>
+
+
+
+<ol><li class="text14-black"><a href="#introducción">Introducción</a></li><li class="text14-black"><a href="#sistema-operativo-y-software">Cómo escoger su sistema operativo y software</a></li><li class="text14-black"><a href="#el-uso-de-firewalls-programas-antivirus-y-programas-maliciosos">El uso de firewalls, programas antivirus y programas
+maliciosos</a></li><li class="text14-black"><a href="#cómo-usar-su-computadora-de-forma-segura">Cómo usar su computadora de forma segura</a></li><li class="text14-black"><a href="#Wi-Fi">El uso de conexiones inalámbricas al Internet (Wi-Fi)</a></li><li class="text14-black"><a href="#cómo-deshacerse-de-su-computadora-de-forma-segura">Cómo deshacerse de su computadora de forma segura</a></li><li class="text14-black"><a href="#recursos-adicionales">Recursos adicionales</a></li></ol><p class="text14-black" align="center"><strong><a name="introducción" id="introducción"></a>1.
+Introducción</strong></p>
+
+
+
+<p class="text14-black">Es esencial mantener
+su computadora segura para proteger su privacidad, reducir el riesgo del robo
+de identidad y evitar que los hackers controlen su computadora.
+Desafortunadamente, no siempre es fácil proteger su computadora. Los hackers
+con frecuencia parecen estar un paso más adelante del público, incluso de las
+personas que utilizan los mejores métodos de seguridad.</p>
+
+
+
+<p class="text14-black">Para proteger su
+privacidad e información sensitiva usted necesita tomar varias medidas,
+incluyendo prevenir, detectar y responder a una gran variedad de ataques. Hay
+muchos riesgos, y unos son más serios que otros. Algunos de los peligros son:</p>
+
+
+
+<ul><li class="text14-black">Virus que
+infectan todo su sistema.</li><li class="text14-black">Personas que
+entran a su sistema y hacen modificaciones a sus archivos.</li><li class="text14-black">Hackers que
+usan su computadora para atacar a otros.</li><li class="text14-black">Ladrones que
+roban su computadora y su información personal.</li></ul><p class="text14-black">No existen garantías
+de que algunas de estas cosas no sucedan, incluso si usted toma las mejores
+precauciones. Sin embargo, usted puede tomar medidas para minimizar los riesgos
+a su computadora e información personal. Finalmente, la seguridad de su
+computadora depende de usted.</p>
+
+
+
+
+
+
+
+<p class="text14-black" align="center"> <strong>   <br /></strong></p>
+
+
+
+<p class="text14-black" align="center"><strong><a name="sistema-operativo-y-software" id="sistema-operativo-y-software"></a>2. Cómo
+escoger su sistema operativo y software</strong> </p>
+
+<p class="text14-black"><strong>Su sistema operativo. </strong>El sistema
+operativo es el programa principal de la computadora. Tiene una variedad de
+funciones: determina qué tipo de software se puede instalar, coordina el
+funcionamiento de las aplicaciones y permite que sus aplicaciones de software
+(navegadores, procesadores de palabras y email) operen con normalidad. Cuando
+usted compra una computadora, generalmente usted también está escogiendo un
+sistema operativo. Los fabricantes típicamente transportan las computadoras con
+un sistema operativo incluido. La mayoría de las computadoras PC cuentan con el
+sistema operativo más reciente de Windows. Las computadoras Apple utilizan el
+sistema operativo de Macintosh.</p>
+
+
+
+<p class="text14-black">Los sistemas
+operativos de Windows tradicionalmente han sido el blanco de ataques más que
+otros sistemas operativos. Esto podría deberse a una base mayor de
+instalaciones de Windows, lo cual lo hace más atractivo. De hecho, las
+computadoras Macintosh han sido sujetas tradicionalmente a menos ataques que
+las computadoras de Windows. Sin embargo, los productos de Apple
+definitivamente no son inmunes a las fallas de seguridad. Conforme Apple
+aumenta su participación en el mercado, también aumenta la probabilidad de que
+existan más programas maliciosos hechos para productos de Apple.</p>
+
+
+
+
+
+<p class="text14-black">Para los
+profesionistas de seguridad de informática, uno de los asuntos más contenciosos
+es la pregunta "¿cuál sistema operativo es más seguro?" El consenso
+general entre los investigadores de seguridad informática es que el sistema
+operativo de Macintosh de Apple no es más seguro que Windows. Usted puede leer
+un artículo interesante que contiene citas de 32 expertos de seguridad de
+informática que hablan sobre este tema: <a href="http://news.cnet.com/8301-27080_3-10444561-245.html">http://news.cnet.com/8301-27080_3-10444561-245.html</a> (en inglés). De hecho, el sistema
+operativo más seguro es aquel que no tiene contacto con el mundo exterior.</p>
+
+<p class="text14-black">Algunos expertos de
+seguridad de informática consideran que Linux, así como otros sistemas
+operativos menos conocidos, son más seguros. Esto se debe principalmente a que
+no son el blanco de ataques. Para quienes están interesados en probar el
+sistema operativo Linux, muchas personas recomiendan Ubuntu, un
+sistema operativo gratuito y de código abierto Linux disponible en <a href="http://www.ubuntu.com/">www.ubuntu.com/</a> (en inglés).</p>
+
+
+
+<p class="text14-black">Independientemente del
+sistema operativo que usted utilice, es importante que sea actualizado de forma
+regular. Los sistemas operativos de Windows son actualizados una vez al mes,
+típicamente durante un martes llamado "Patch Tuesday", o "martes
+de parches". Otros sistemas operativos no son actualizados tan
+frecuentemente o de forma tan regular. Lo mejor es configurar el sistema
+operativo para que se actualice automáticamente. El método que usted utilice
+dependerá en gran parte del sistema operativo que tenga.</p>
+
+
+
+<p class="text14-black">Anteriormente, los
+expertos de seguridad decían que los sistemas operativos eran el talón de
+Aquiles de la seguridad de informática. Sin embargo, más recientemente los
+expertos han considerado que los programas de software instalados en las
+computadoras representan un riesgo aún mayor. Con esto en mente, usted podría
+reconsiderar el software que utiliza para navegar el Internet y para leer
+documentos PDF.</p>
+
+
+
+<p class="text14-black"><strong>Su navegador web</strong>. Muchas
+personas consideran que Mozilla Firefox es un navegador superior a Internet
+Explorer de Microsoft. Mozilla tiende a "parchar" las
+vulnerabilidades de seguridad de Firefox con mayor frecuencia que Microsoft.
+Una de las ventajas de Firefox es que es un programa de "código
+abierto". Esto permite que los profesionales de seguridad participen más
+en arreglar errores y crear funciones más fuertes de seguridad. Otra ventaja de
+Firefox es que cuenta con los llamados "Add-Ons"
+que se pueden utilizar para fortalecer las funciones de privacidad de seguridad
+de Firefox. Nosotros recomendamos tres "Add-Ons" para Firefox: NoScript,
+Better Privacy, and HTTPS Everywhere.</p>
+
+
+
+<p class="text14-black"><em>NoScript</em>.
+Cuando usted instala NoScript, el programa bloquea de forma predeterminada la
+secuencia de comandos o "scripts" como JavaScript, Java, Flash,
+Silverlight y otros. Usted puede permitir que los <em>scripts</em> funcionen en un sitio que usted confía (por ejemplo, su
+banco) con simplemente hacer un clic con el mouse. Usted puede autorizar los <em>scripts</em> para una sesión en particular o
+de forma permanente si confía en el sitio web.</p>
+
+
+
+<p class="text14-black">NoScript
+lo protege contra las descargas automáticas en donde un programa malicioso
+podría ser bajado y ejecutado en su computadora con el simple hecho de visitar
+un sitio web. Los delincuentes utilizan fallas en la programación de los
+navegadores para instalar programas maliciosos en su computadora sin que usted
+se dé cuenta. Por ejemplo, esto ocurre cuando usted visita un sitio web
+legítimo que involuntariamente contiene publicidad que contiene programas
+maliciosos, también conocidos como <em>maladvertisements</em>,
+una palabra que combina las palabras malware y publicidad: <a href="http://blogs.computerworld.com/defending_against_drive_by_downloads" target="_blank">http://blogs.computerworld.com/defending_against_drive_by_downloads</a> (en inglés). Usted puede descargar NoScript
+aquí: <a href="http://noscript.net/getit" target="_blank">http://noscript.net/getit</a> (en inglés).</p>
+
+<p class="text14-black"><em>Better
+Privacy</em>. Muchos sitios web han
+comenzado utilizar un tipo de cookie llamado "flash cookie" (también conocido como "supercookie")
+que es más resistente que un cookie regular. Los procedimientos normales para
+borrar cookies estándares, el historial de navegación, la memoria caché o para
+borrar información privada dentro del navegador no afectan a los "flash
+cookies". Por lo tanto, podrían persistir en su computadora a pesar de sus
+mejores esfuerzos por borrar todas los cookies. El programa "Add-On"
+de Firefox llamado "BetterPrivacy" podría ayudarlo a borrar estos "flash
+cookies": <a href="https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/betterprivacy/</a> (en
+inglés).</p>
+
+<p class="text14-black"><em>HTTPS
+Everywhere. </em>HTTPS Everywhere codifica las conexiones de más de 1,000
+sitios de Internet. Sin HTTPS, sus actividades son vulnerables al espionaje y
+sus cuentas son vulnerables a los hackers. HTTPS Everywhere lo ayuda a mantener
+privados sus nombres, contraseñas e historiales de navegación.</p>
+
+<p class="text14-black">Es
+importante recalcar que HTTPS Everywhere <em>solamente
+lo protege cuando usted utiliza sitios que funcionan con HTTPS y que tienen
+reglas establecidas por el programa</em>. HTTPS Everywhere depende totalmente de
+las funciones de seguridad de los sitios individuales que usted visita. En
+otras palabras, <em>activa</em> esas funciones
+de seguridad, pero no puede <em>crearlas</em>
+si no existen. Si usted utiliza un sitio que no funciona con HTTPS Everywhere o
+un sitio que transmite información de forma insegura, HTTPS Everywhere no puede
+proveer protección adicional. Usted puede leer más sobre las limitaciones de
+HTTPS Everywhere en <a href="https://www.eff.org/https-everywhere/faq">www.eff.org/https-everywhere/faq</a> (en inglés). También puede
+descargarlo aquí: <a href="http://www.eff.org/https-everywhere">www.eff.org/https-everywhere</a> (en inglés).</p><p class="text14-black">Usted puede leer más
+sobre otros add-ons de Firefox en <a href="http://www.networkworld.com/cgi-bin/mailto/x.cgi?pagetosend=/news/2010/031210-seven-firefox-plug-ins-that-improve.html&amp;pagename=/news/2010/031210-seven-firefox-plug-ins-that-improve.html&amp;pageurl=http://www.networkworld.com/news/2010/031210-seven-firefox-plug-ins-that-improve.html&amp;site=printpage" target="_blank">addons</a> (en
+inglés).</p>
+
+
+
+<p class="text14-black">Independientemente
+del navegador que usted use es importante que lo actualice con cada versión
+nueva que fortalece la protección contra las vulnerabilidades de seguridad. El
+navegador Firefox cuenta con actualizaciones automáticas y relativamente
+frecuentes, por lo general cada varias semanas. Hay otros navegadores que no
+tienen actualizaciones tan frecuentes y que no lo hacen de forma automática.</p>
+
+
+
+<p class="text14-black">El equipo
+nacional de emergencias cibernéticas U.S. Computer Emergency Readiness Team
+(US-CERT, por sus siglas en inglés) ha preparado una guía práctica sobre cómo
+mejorar la seguridad de su navegador. Contiene instrucciones detalladas con
+imágenes capturadas de las pantallas de los navegadores Internet Explorer,
+Mozilla Firefox, y Apple Safari. Este recurso está disponible en: <a href="http://www.us-cert.gov/reading_room/securing_browser/">www.us-cert.gov/reading_room/securing_browser/</a>  (en inglés).</p>
+
+
+
+<p class="text14-black"><strong>Lector portátil de documentos</strong>. La mayoría de las personas utilizan Adobe
+Reader para leer e imprimir documentos portátiles (documentos PDF) como
+formularios y publicaciones. Adobe Reader es tan popular como Internet Explorer
+y por lo tanto se ha convertido en el blanco de gente, con malas intenciones. Adobe
+tiende a ser lento cuando se trata de eliminar las vulnerabilidades de
+seguridad. Muchos expertos de seguridad creen que es mejor utilizar otros
+lectores de documentos. Foxit PDF probablemente es la alternativa más popular.
+Si usted decide descargar Foxit tenga cuidado y opte por no aceptar las
+configuraciones que cambien el buscador predeterminado de su computadora, su
+página principal o la barra de herramientas de su navegador. Más información: <span style="text-decoration: underline;"><a href="http://www.foxitsoftware.com/pdf/reader/ ">http://www.foxitsoftware.com/pdf/reader/ </a></span>(en
+inglés).</p>
+
+
+
+<p class="text14-black"><strong>Adobe Flash Player</strong>. La mayoría de las computadoras tienen instalado el Flash
+Player de Adobe. En muchos casos, los usuarios podrían estar utilizando
+versiones viejas del tocador de flash que podrían contener numerosas vulnerabilidades
+de seguridad. Usted puede actualizar su Flash Player aquí: <a href="http://get.adobe.com/flashplayer/">http://get.adobe.com/flashplayer/</a> (en inglés). Cuando haga su descarga, asegúrese de
+excluir el paquete de McAfee Security Scan Plus si usted no lo quiere.</p><p class="text14-black"> </p>
+
+
+
+<p class="text14-black" align="center"><strong><a name="el-uso-de-firewalls-programas-antivirus-y-programas-maliciosos" id="el-uso-de-firewalls-programas-antivirus-y-programas-maliciosos"></a>3. El uso de
+firewalls, programas antivirus y programas maliciosos</strong></p>
+
+
+
+<p class="text14-black">Todos los usuarios de
+computadoras deberían estar familiarizados con los<strong> </strong>firewalls, programas antivirus y programas maliciosos. Estos
+programas trabajan en conjunto y deben utilizarse para proveer el máximo nivel
+de seguridad para proteger su computadora. Son necesarios para protegerlo de
+amenazas que tienen como fin dañar, frustrar o infligir actividad ilegítima en
+su computadora.</p>
+
+
+
+<p class="text14-black">El término malware
+significa software malicioso. Entre los tipos más comunes de malware destacan
+los virus, gusanos, virus troyanos, de espionaje y de publicidad. El daño
+infligido por el malware puede variar desde cuestiones menores que solamente lo
+fastidian hasta problemas más serios como el robo de información confidencial,
+la destrucción de datos y la desactivación de su computadora. </p>
+
+
+
+<p class="text14-black">En realidad no es
+necesario que usted entienda todas las diferencias técnicas de estas amenazas,
+pero puede leer una buena explicación de ellas aquí: <a href="http://www.cisco.com/web/about/security/intelligence/virus-worm-diffs.html">www.cisco.com/web/about/security/intelligence/virus-worm-diffs.html</a> (en
+inglés). Hay literalmente docenas de diferentes tipos de amenazas. Puede
+leer más sobre ellas aquí: <a href="http://www.sophos.com/medialibrary/PDFs/marketing%20material/sophosthreatsaurusazen.pdf" target="_blank">Sophos Threatsaurus: The a-z of computer and data security threats</a> (en
+inglés; formato PDF).</p>
+
+
+
+<p class="text14-black">La mayoría del software
+de seguridad pre instalado en su computadora solamente funciona por un pequeño
+período de tiempo a menos de que usted pague una tarifa de suscripción. En
+estos casos, el software de seguridad solamente lo protege contra amenazas
+nuevas si usted lo actualiza. Por eso es tan importante que su software de
+seguridad se actualice automáticamente.</p>
+
+
+
+<p class="text14-black">Los firewalls, programas antivirus y programas anti malware
+son fundamentales para proteger su información. Sin embargo, ninguno de ellos
+garantiza que usted estará protegido de un ataque. La mejor manera de reducir
+el riesgo es combinar estas tecnologías con buenos hábitos de seguridad.
+Algunos programas antivirus también tienen la capacidad de combatir malware.
+Sin embargo, debido a la creciente sofisticación de los programas de malware,
+lo mejor es utilizar dos diferentes programas anti malware además de un
+programa antivirus. Cada uno se especializa en detectar amenazas ligeramente
+distintas, por lo tanto su uso colectivo podría ofrecerle mayor seguridad.</p>
+
+
+
+<p class="text14-black">De acuerdo a un artículo de<em> Consumer
+Reports</em> los programas gratuitos deben ser suficientes para
+proteger prácticamente a todos los usuarios del malware, con excepción de los
+usuarios que están en mayor riesgo en Internet. Por lo tanto, el pagar por
+software le brinda comodidad y algunas funciones adicionales: <a href="http://www.consumerreports.org/cro/magazine-archive/2010/june/electronics-computers/security-software/overview/index.htm" target="_blank">www.consumerreports.org/cro/magazine-archive/2010/june/electronics-computers/security-software/overview/index.htm</a> (en
+inglés).</p>
+
+<p class="text14-black"><strong>Firewalls. </strong>Un
+firewall ayuda a prevenir que la información entre o salga de su computadora
+sin su permiso.<strong> </strong>Lo ayuda a que
+usted sea invisible en Internet y bloquea las comunicaciones de fuentes no
+autorizadas.</p><p class="text14-black">Cada computadora que está
+conectada al  Internet debe tener un firewall
+activado en todo momento. Hay dos tipos de firewalls: software y hardware. Los
+dos pueden funcionar simultáneamente. De hecho, es buena idea utilizar firewalls
+de software y hardware. Pero nunca active dos firewalls de software
+simultáneamente.</p>
+
+
+
+<p class="text14-black">Algunos
+sistemas operativos ya vienen con firewalls de software. Un ejemplo de un firewall
+de software es el que viene incluido en los siguientes sistemas operativos de
+Windows: Windows 7, Vista and XP Service Packs 2 y 3. Los firewalls de estos
+sistemas operativos están activados de forma predeterminada. Usted debería
+dejar el firewall de Windows activado a menos de que lo reemplace con otro firewall
+de software. Usted puede leer más sobre los firewalls que vienen incluidos en los
+productos de Windows en <a href="http://www.microsoft.com/security/pc-security/firewalls-using.aspx">www.microsoft.com/security/pc-security/firewalls-using.aspx</a> (en
+inglés).</p>
+
+
+
+<p class="text14-black">Hay otros firewalls
+de software disponibles de distintos proveedores, o podrían formar parte de un
+paquete comercial de seguridad. Los firewalls de software deben estar
+configurados apropiadamente para que sean efectivos. Usted puede encontrar una
+selección de firewalls de software gratuitos en: <a href="http://download.cnet.com/" target="_blank">http://download.cnet.com</a> (en
+inglés).</p>
+
+
+
+<p class="text14-black">Los firewalls de hardware se venden como productos
+individuales o pueden estar incluidos en los routers de banda ancha que
+utilizan las funciones de un firewall. El router se encuentra entre su módem y
+su computadora o su red. Es difícil hackear su computadora si usted está escondido
+detrás de un firewall de hardware. Sin embargo, es importante configurar
+apropiadamente su router. Cambie la contraseña predeterminada de su router por
+una que sea difícil de descifrar. Para asegurarse que su firewall de hardware
+esté apropiadamente configurado, consulte las instrucciones del producto.</p>
+
+
+
+<p class="text14-black">Para conocer más sobre firewalls consulte esta
+publicación del US-CERT: <a href="http://www.us-cert.gov/cas/tips/ST04-004.html" target="_blank">www.us-cert.gov/cas/tips/ST04-004.html</a> (en
+inglés). Para probar la efectividad de su firewall haga la prueba GRC Shields
+Up!: <a href="https://www.grc.com/x/ne.dll?bh0bkyd2">www.grc.com/x/ne.dll?bh0bkyd2</a> (en inglés).</p>
+
+
+
+<p class="text14-black"><strong>Programas
+antivirus</strong>. Un virus es sólo un programa de computadora. Puede
+hacer lo mismo que cualquier otro programa instalado en su computadora. Un
+virus es un programa que primero se multiplica infectando archivos o ciertas
+áreas del sistema para después hacer copias de sí mismo. Aunque algunos virus
+son inofensivos, otros pueden dañar sus archivos, destruirlos o infectar otras
+computadoras.</p>
+
+
+
+<p class="text14-black">Los programas antivirus
+de software ayudan a proteger su computadora de virus que
+pueden destruir datos, hace que el desempeño de su computadora sea más lento o
+que se bloquee más. El software antivirus escanea su computadora para detectar
+patrones que pueden indicar que el aparato ha sido infectado. Estos patrones se
+basan en firmas, definiciones o virus que ya son conocidos. Los autores de los
+virus continuamente están actualizando o desplegando nuevos virus. Por lo
+tanto, es importante que usted tenga las más recientes definiciones instaladas
+en su computadora. Hay muchas compañías que producen software antivirus. La
+decisión sobre qué programa usar puede depender de recomendaciones, funciones o
+el costo de estos programas (muchos están disponibles de forma gratuita).</p>
+
+
+
+<p class="text14-black">Microsoft Security Essentials fue clasificado como el
+mejor programa de antivirus gratuito en 2010 por AV Comparatives, una
+organización sin fines de lucro independiente que se dedica a evaluar
+productos: <a href="http://windows.microsoft.com/en-US/windows/products/security-essentials/product-information?T1=overview">www.microsoft.com/en-us/security_essentials/ProductInformation.aspx</a> (en inglés). Vea <a href="http://www.av-comparatives.org/images/stories/test/ondret/avc_report26.pdf%20">www.av-comparatives.org/images/stories/test/ondret/avc_report26.pdf </a> (en inglés; formato PDF) y <a href="http://lifehacker.com/5559102/microsoft-security-essentials-finds-unknown-malware-but-avoids-false-positives" target="_blank">http://lifehacker.com/5559102/microsoft-security-essentials-finds-unknown-malware-but-avoids-false-positives</a> (en inglés). Para instalar Microsoft
+Security Essentials necesita tener una PC con una versión auténtica de Windows.</p>
+
+
+
+<p class="text14-black">El resumen
+del informe anual de AV Comparatives cuenta con evaluaciones
+adicionales de programas antivirus: <a href="http://www.av-comparatives.org/images/stories/test/summary/summary2010.pdf">www.av-comparatives.org/images/stories/test/summary/summary2010.pdf</a> (en inglés; formato PDF).</p>
+
+
+
+<p class="text14-black">Usted no debería tener
+dos programas antivirus activos y funcionando al mismo tiempo. Esto podría
+ocasionar que uno de los programas genere conflictos potenciales que afecten el
+desempeño de su computadora. Asegúrese de desactivar o remover cualquier
+programa antivirus que usted ya no está utilizando o que usted ya no está
+actualizando.</p><p class="text14-black">Por otra parte, es
+permisible que usted haga un escaneo con un segundo programa antivirus (por
+ejemplo, un escaneo de virus en línea) siempre y cuando el programa no sea el
+principal de su computadora.</p>
+
+
+
+<p class="text14-black">Conozca más sobre lo
+que son los virus aquí: <a href="http://www.us-cert.gov/reading_room/virus.html">www.us-cert.gov/reading_room/virus.html</a> (en inglés). Para leer más
+sobre programas antivirus consulte: <a href="http://www.us-cert.gov/cas/tips/ST04-005.html" target="_blank">www.us-cert.gov/cas/tips/ST04-005.html</a> (en inglés). Usted puede
+encontrar una selección gratuita de programas antivirus aquí: <a href="http://download.cnet.com/" target="_blank">http://download.cnet.com</a> (en inglés).</p>
+
+
+
+<p class="text14-black"><strong>Programas
+anti malware (anti espía)</strong>. La palabra
+malware abarca una amplia categoría de amenazas incluyendo spyware (software espía), adware (software publicitario), caballos de Troya y otros
+programas no deseados que podrían ser instalados en su computadora sin su
+conocimiento o consentimiento. El spyware puede recopilar su información a
+través de su conexión de Internet sin que usted lo note. Una vez que el spyware
+ha sido instalado, el programa puede desplegar una serie de archivos en su
+sistema. Podría ser difícil encontrar y eliminar estos archivos porque algunos
+están muy bien escondidos.</p>
+
+
+
+<p class="text14-black">El
+spyware, una vez que está activado en su computadora, puede interceptar
+prácticamente cualquier dato. Por lo general intercepta su actividad en
+Internet, sus correos electrónicos, contactos y lo que escribe en la
+computadora. El spyware también puede rastrear su actividad en línea,
+identificar sitios que usted ha visitado así como información financiera
+relacionada a los números de su tarjeta de crédito u otros datos financieros
+incluyendo números de cuenta en su pantalla, hábitos y compras en Internet y
+contraseñas. El spyware comienza a recopilar información cuando usted teclea
+palabras clave de interés como nombres de bancos o pagos por Internet.</p>
+
+
+
+<p class="text14-black">Los
+programas de spyware podrían estar incluidos en el software que usted use todos
+los días. Cuando usted da su consentimiento al descargar un programa, como un
+programa para intercambiar música, usted también podría estar dando su
+consentimiento para descargar spyware. Quizás usted no esté consciente de que
+usted acordó instalar spyware porque su consentimiento está escondido en el
+contrato de la licencia de uso, conocido por sus siglas en inglés como EULA.</p>
+
+
+
+<p class="text14-black">Sea precavido de hacer
+clic en ventanillas que aparecen repentinamente. Los programas de spyware
+podrían crear una ventanilla aparte en donde usted contesta una pregunta
+haciendo clic en "si" o "no". Si usted hace clic en
+cualquiera de las dos opciones, su navegador podría pensar que usted desea
+descargar el de spyware.</p>
+
+
+
+<p class="text14-black">Los programas anti
+malware y anti spyware ayudan a eliminar muchas de estas amenazas. Los expertos
+de seguridad recomiendan que usted utilice por lo menos dos, y preferentemente
+tres programas anti malware y anti spyware ya que no se ha encontrado a un solo
+programa que sea totalmente efectivo en detectar y remover este tipo de
+amenazas. Para obtener más información sobre spyware y malware consulte: <a href="http://www.us-cert.gov/cas/tips/ST04-016.html" target="_blank">www.us-cert.gov/cas/tips/ST04-016.html</a> (en inglés).</p>
+
+<p class="text14-black">Los siguientes son
+ejemplos de sitios que ofrecen programas gratuitos de anti malware:</p>
+
+
+
+<p><span class="text14-black">· Malwarebytes <a href="http://es.malwarebytes.org/">http://es.malwarebytes.org/</a></span> </p>
+
+<p class="text14-black">· Spybot
+Search and Destroy <a href="http://www.safer-networking.org/en/index.html">www.safer-networking.org/en/index.html</a>
+(en inglés).</p>
+
+
+
+<p class="text14-black">· Super Anti-Spyware <a href="http://www.superantispyware.com/">www.superantispyware.com/</a> (en inglés). </p>
+
+<p class="text14-black">Usted puede encontrar una selección adicional de
+programas anti malware gratuitos aquí: <a href="http://download.cnet.com/" target="_blank">http://download.cnet.com</a> (en inglés). Puede
+leer más sobre spyware aquí: <a href="http://www.us-cert.gov/reading_room/spywarehome_0905.pdf">www.us-cert.gov/reading_room/spywarehome_0905.pdf</a> (en inglés; formato PDF).</p>
+
+<p class="text14-black" align="center"><strong><a name="cómo-usar-su-computadora-de-forma-segura" id="cómo-usar-su-computadora-de-forma-segura"></a>4. Cómo usar
+su computadora de forma segura</strong></p>
+
+<p class="text14-black"><strong>Utilice una cuenta estándar o de acceso
+limitado</strong>. La mayoría de las versiones del sistema operativo de
+Windows le permiten crear una cuenta estándar o limitada sin privilegios
+administrativos. Esta cuenta limitada es para personas que tienen prohibido
+cambiar las configuraciones de la computadora y borrar archivos importantes. Un
+usuario con una cuenta limitada generalmente no puede instalar software o
+hardware. Sin embargo, puede acceder programas que ya fueron instalados en la
+computadora. Por otra parte, la cuenta del administrador es para alguien que
+tiene permitido hacer cambios en la computadora e instalar software.</p>
+
+<p class="text14-black">Los
+profesionistas de seguridad recomiendan que usted tenga una cuenta limitada un
+estándar y la utilice en todo momento excepto cuando usted necesita instalar
+software o hardware o cambiar la configuración de su sistema. Entre a su cuenta
+de administrador solamente cuando necesite hacer cambios al sistema.</p>
+
+
+
+
+
+<p class="text14-black">El
+utilizar sus derechos administrativos con moderación podría ayudarlo a proteger
+su computadora de muchas vulnerabilidades. Una cuenta sin derechos
+administrativos puede ofrecerle mucha protección. El crear y utilizar una
+cuenta limitada para funciones cotidianas como leer correos y navegar en
+Internet lo ayudará a reducir la cantidad y el tipo de malware que pudiera
+afectar su computadora. Para infectar una computadora, muchos tipos de malware
+requieren que el usuario sea un administrador. Sin embargo, el uso de una
+cuenta limitada estándar reduce la efectividad de muchos tipos de malware.</p>
+
+<p class="text14-black">Usted
+puede leer más sobre cómo establecer una cuenta limitada o estándar en los
+sistemas operativos de Windows Vista y Windows 7 aquí: <a href="http://www.howtohaven.com/system/standard-user-account.shtml">www.howtohaven.com/system/standard-user-account.shtml</a>
+(en inglés). </p>
+
+
+
+<p class="text14-black"><strong>Mantenga su software actualizado</strong>. Los hackers siempre están buscando maneras nuevas de penetrar las
+defensas de los programas de software de su computadora. Las compañías de
+software responden con parches para cerrar esas fallas de seguridad. Para
+mantenerse protegido, usted necesita descargar e instalar los parches tanto
+para su sistema operativo como sus aplicaciones de software cada vez que estén
+disponibles. Los parches de software o las actualizaciones generalmente
+solucionan los problemas o vulnerabilidades de un programa.</p>
+
+
+
+<p class="text14-black">A veces, las compañías
+de software lanzan una versión nueva de su software, aunque es posible que no
+digan que la actualización es un parche. Es importante instalar el parche lo
+más pronto posible para proteger su computadora de los hackers que desean
+aprovecharse de las vulnerabilidades. Los hackers podrían usar estas
+vulnerabilidades durante varios meses o años incluso después de que los parches
+estén disponibles.</p>
+
+
+
+<p class="text14-black">Algunos de estos
+programas revisan automáticamente si hay actualizaciones disponibles, y algunas
+compañías ofrecen a los usuarios la opción de recibir notificaciones
+automáticas de actualizaciones por correo electrónico. Si estas notificaciones
+automáticas están disponibles, aprovéchelas. Si no están disponibles, consulte
+la página de Internet de la compañía de software periódicamente para ver si hay
+actualizaciones disponibles. Solamente descargue parches de seguridad de
+páginas en las que usted confíe. No confíe en los enlaces que vienen en un
+mensaje de email. Tenga cuidado con mensajes de email que dicen incluir un
+parche en el mensaje ya que generalmente estos documentos adjuntos contienen un
+virus.</p>
+
+
+
+<p class="text14-black">Si usted está
+utilizando Windows XP o Windows 7, usted puede configurar las actualizaciones
+automáticas para que sea notificado cuando una actualización esté disponible.
+Conozca cómo hacerlo aquí: <a href="http://support.microsoft.com/kb/306525">http://support.microsoft.com/kb/306525</a>
+(en inglés).</p>
+
+
+
+<p class="text14-black">También es muy importante mantener sus
+otros programas de software actualizados. Esta puede ser una tarea difícil dado
+que las computadoras contienen docenas de programas de software. Muchos
+programas ya están instalados cuando usted compra su computadora. Los hackers
+constantemente se aprovechan de las debilidades de programas populares como Adobe
+PDF Reader<strong>, </strong>Adobe Flash Player, QuickTime, y Java.</p>
+
+<p class="text14-black">Secunia
+Personal Software Inspector (PSI) ofrecer una buena solución al problema de la actualización de software
+de su computadora. Secunia PSI es un programa de software gratuito que
+detecta programas vulnerables y anticuados en las computadoras que utilizan
+Windows. Este programa lo alerta cuando sus programas requieren actualizaciones
+para mantenerse seguros. Usted puede descargar Secunia PSI aquí: <a href="http://secunia.com/vulnerability_scanning/personal/">http://secunia.com/vulnerability_scanning/personal/</a> (en inglés).</p>
+
+<p class="text14-black"><strong>Use contraseñas seguras</strong>.
+Cuando usted tenga la oportunidad de crear y utilizar una contraseña para
+proteger su información, asegúrese de que use una contraseña segura. Las
+contraseñas generalmente son lo único que protege su información privada.
+Muchos sitios que almacenan su información personal (por ejemplo sitios que
+almacenan emails, fotos o documentos) requieren una contraseña. Sin embargo,
+muchos de estos sitios se están haciendo más vulnerables porque frecuentemente
+los usuarios utilizan las mismas contraseñas en muchos sitios. Las contraseñas
+seguras pueden ayudar a individuos a protegerse de hackers, del robo de
+identidad y otras invasiones a su privacidad. Para leer 10 consejos sobre cómo
+crear una contraseña que sea difícil de descifrar por hackers consulte nuestra
+alerta aquí: <a href="https://www.privacyrights.org/ar/alertstrongpasswords.htm" target="_blank">www.privacyrights.org/ar/alertstrongpasswords.htm</a> (en inglés).</p>
+
+<p class="text14-black"><strong>Como evitar el spam, o emails no deseados</strong>.
+En términos generales, se le llama spam a mensajes de email no deseados o no
+solicitados que provienen de un remitente que usted no conoce. Los emails de
+spam se mandan en grandes volúmenes y su contenido es casi idéntico. Billones
+de mensajes de spam inundan los buzones de las computadoras cada año.</p>
+
+<p class="text14-black">El spam se divide en dos categorías:</p>
+
+<ul><li class="text14-black"><em>Mensajes que molestan</em>, como solicitaciones para que compre
+productos o servicios.</li><li class="text14-black"><em>Emails maliciosos</em> que buscan engañarlo para que usted
+revele su información personal para que alguien pueda defraudarlo o dañar su
+computadora.</li></ul><p class="text14-black">La gran mayoría del spam pertenece la
+primera categoría. Dado que esta hoja informativa solamente abarca temas
+relacionados a la seguridad de su computadora, nos enfocaremos en esta segunda
+parte.</p>
+
+<p class="text14-black">Lo mejor que puede hacer para proteger su
+computadora de amenazas es nunca abrir los mensajes no solicitados. Podrían
+exponer a su computadora a un código malicioso. Para protegerse debe utilizar
+el filtro de spam de su programa de email. Los servicios de email de sitios
+como Gmail y Yahoo actualizan con frecuencia sus filtros de
+spam. Si usted utiliza Outlook,
+Outlook Express, Windows Mail, Windows Live Mail o Thunderbird, usted puede
+descargar el software gratuito Spamfighter: <a href="http://www.spamfighter.com/Lang_ES/Product_Info.asp">http://www.spamfighter.com/Lang_ES/Product_Info.asp</a>.
+</p>
+
+
+
+
+
+<p class="text14-black">Para obtener más
+información sobre el spam por favor lea nuestra página informativa “Anti-Spam
+Resources” (recursos anti spam): <a href="https://www.privacyrights.org/fs/fs20-spam.htm">https://www.privacyrights.org/fs/fs20-spam.htm</a> (en inglés).</p>
+
+
+
+<p class="text14-black"><strong>Sea escéptico</strong>. Piense antes
+de hacer clic. No abra documentos adjuntos de correos electrónicos provenientes
+de personas que usted no conoce. El hecho de que un email
+aparente venir de una persona no significa que necesariamente proviene de ella.
+Los estafadores pueden engañarlo y aparentar que el mensaje vino de alguien
+más. Si puede, cerciórese con la persona que supuestamente mandó el mensaje
+para asegurarse de que sea legítimo antes de abrir un documento adjunto. Para
+obtener más información vea el siguiente recurso: <a href="http://www.us-cert.gov/cas/tips/ST04-010.html" target="_blank">www.us-cert.gov/cas/tips/ST04-010.html</a> (en inglés).</p>
+
+
+
+<p class="text14-black">No haga clic en
+enlaces que vienen en los correos electrónicos. Generalmente es más seguro ir a
+la página de la compañía directamente desde su navegador que hacer clic en un
+enlace a menos de que usted está absolutamente seguro de que el email proviene de
+la persona o compañía que dice haber mandado el mensaje. Esto lo ayudará a
+evitar ser víctima de "phishing" o “pesca”. Esta es una
+estafa que busca obtener información personal sensitiva haciéndose pasar por
+una entidad confiable. La estafa se lleva a cabo principalmente por email y
+generalmente le pide a los usuarios que ingresen detalles personales en sitios
+que son idénticos a sitios legítimos. Para obtener más información consulte:</p>
+
+
+
+<ul><li class="text14-black"><a href="http://www.antiphishing.org/consumer_recs.html" target="_blank">www.antiphishing.org/consumer_recs.html</a> (en inglés).</li><li class="text14-black"><a href="http://www.us-cert.gov/reading_room/emailscams_0905.pdf">www.us-cert.gov/reading_room/emailscams_0905.pdf</a> (en inglés; formato PDF).</li></ul><p class="text14-black">Spear phishing, o pesca con arpón, es un tipo de ataque
+de pesca que aparenta venir de un colega, empleador o amigo, e incluye un
+enlace o un documento para descargar. La pesca con arpón generalmente va tras
+ejecutivos de organizaciones que podrían tener información valiosa almacenada
+en sus computadoras. Estos mensajes podrían ser personalizados para que
+aparenten ser genuinos en base a información disponible públicamente. Por lo
+tanto son más difíciles de detectar que la "pesca" regular. Los
+enlaces o los documentos incluidos en estos mensajes podrían ser maliciosos y
+podrían incluir virus o sitios web falsos que solicitan información personal.
+Para obtener más información vea: <a href="http://www.infoworld.com/d/security/how-stop-your-executives-being-harpooned-946?source=footer" target="_blank">www.infoworld.com/d/security/how-stop-your-executives-being-harpooned-946?source=footer</a> (en inglés).</p><p class="text14-black">No importa qué tan
+oficial aparente ser el email, nunca consulte su cuenta financiera desde un
+enlace incluido en uno de estos mensajes. Si el correo es fraudulento, el
+estafador podría utilizar el número de su cuenta y su contraseña para robar su
+identidad y robarle su dinero. Una manera de protegerse contra esto es utilizar
+la contraseña incorrecta la primera vez que ingrese la información. Un sitio que
+está "pescando" aceptará una contraseña incorrecta mientras que un
+sitio legítimo no. Evite hablar a cualquier número telefónico en un correo no
+solicitado a menos de que usted tenga confirmación de que se trata de un número
+legítimo.</p>
+
+
+
+<p class="text14-black">Usted probablemente ha
+visto emails que prometen premios, regalos u ofertas que son "demasiado
+buenas para ser realidad". Sin embargo, independientemente de lo que
+prometen los emails, seguramente no hay muchos desconocidos adinerados que
+están desesperados por mandarle dinero o regalarle algo. Tenga cuidado con las
+promesas ya que probablemente son spam, engaños o estafas que buscan
+"pescarlo".</p>
+
+
+
+<p class="text14-black">Evite ataques de
+ingeniería social. La ingeniería social es el proceso de obtener información de
+alguien usando las habilidades sociales. El objetivo de la ingeniería social es
+engañar al usuario para que comprometa su sistema de computación y revele
+información sensitiva.</p>
+
+
+
+<p class="text14-black">Las estafas de
+ingeniería social se aprovechan de la naturaleza humana para engañar a personas
+y hacerlas instalar malware o revelar información personal. Al usuario se le
+presenta la tentación de realizar una actividad que finalmente dañe su
+computadora. Esto ocurre cuando el usuario recibe un mensaje con instrucciones
+de abrir un archivo, ir a una página web o ver un video. Generalmente estos
+trucos están relacionados a celebridades, desastres naturales o eventos
+populares.</p>
+
+
+
+<p class="text14-black">Un truco común es
+mostrar un análisis antivirus falso de su computadora que indique que su
+sistema ha sido infectado y pedirle que descargue una herramienta para eliminar
+la infección. Otro truco es prometer que le van a mostrar un video solamente si
+usted instala un plug-in que es "requerido" para ver el
+contenido.</p>
+
+
+
+<p class="text14-black">Estos trucos a veces
+se presentan como ventanillas que aparecen automáticamente en su navegador, o
+pop-ups. Para cerrar una de estas ventanillas, haga clic cuidadosamente en la X
+en la parte derecha superior, y no en la ventanilla misma. Para evitar estas
+ventanillas automáticas, active el bloqueador de ventanillas de su navegador o
+use un software que tenga esa misma función.</p>
+
+
+
+<p class="text14-black">Es importante
+reconocer que ningún tipo de tecnología tiene la capacidad de proteger a los
+usuarios de la ingeniería social. Usted sólo debe instalar software o
+ventanillas automáticas de su navegador si ya estaba buscando estas cosas.
+Siempre asegúrese de que usted descargue el software directamente de la fuente
+o de un sitio confiable como <a href="http://download.cnet.com/" target="_blank">http://download.cnet.com</a> (en inglés).</p>
+
+
+
+<p class="text14-black">Usted puede leer más
+sobre la ingeniería social aquí:</p>
+
+
+
+<ul><li class="text14-black"><a href="http://www.securingourecity.org/resources/whitepapers/Social_Engineering_Borghello.pdf">www.securingourecity.org/resources/whitepapers/Social_Engineering_Borghello.pdf</a> (en inglés; formato PDF).</li><li class="text14-black"><a href="http://www.us-cert.gov/cas/tips/ST04-014.html">www.us-cert.gov/cas/tips/ST04-014.html</a> (en inglés).</li></ul><p class="text14-black"><strong>Manipulación de buscadores</strong>. Usted
+probablemente se dado cuenta que las compañías pueden "manipular" a
+Google y otros buscadores. A esto se le llama optimización en buscadores o search
+engine optimization (SEO, por sus siglas en inglés). Aunque la optimización en
+buscadores puede ser enfadosa, especialmente si genera resultados malos, por lo
+general no hace daño.</p>
+
+
+
+<p class="text14-black">Desafortunadamente, la optimización en buscadores se
+puede utilizar para atacar a las personas que están buscando información cada
+vez que ocurre un evento noticioso importante. Los hackers pueden acaparar los
+resultados de búsquedas con enlaces a sitios maliciosos. La firma de seguridad
+de Internet Blue Coat dice que la manipulación de las búsquedas de
+Internet representa la amenaza número uno en cuanto a malware, ya que
+representan el 40% de los ataques de malware: <a href="http://finance.yahoo.com/blogs/the-exchange/poisoned-search-results-more-malware-threat-probably-think-150643365.html" target="_blank">http://finance.yahoo.com/blogs/the-exchange/poisoned-search-results-more-malware-threat-probably-think-150643365.html</a> (en inglés).</p>
+
+<p class="text14-black">Los enlaces patrocinados en los buscadores (por
+ejemplo, los enlaces de publicidad) también podrían estar contaminados. Por
+ejemplo, la búsqueda del término "descargas de Adobe Flash Player" en
+Bing y Yahoo contienen enlaces contaminados. Las descargas en estos sitios
+contienen malware: <a href="http://www.computerworld.com/s/article/9220859/Bing_Yahoo_sponsored_results_lead_to_hard_to_remove_rootkit">www.computerworld.com/s/article/9220859/Bing_Yahoo_sponsored_results_lead_to_hard_to_remove_rootkit</a> (en inglés)</p>
+
+<p class="text14-black">Puede ser difícil evitar la manipulación de
+buscadores. La manera de evitar los sitios maliciosos es haciendo clic
+solamente en sitios en los que usted confía o fijándose cuidadosamente que los
+URL de los sitios son los correctos y no sitios imitadores. Lea el reporte
+titulado “The Web's Most Dangerous Search Terms” (Las búsquedas
+más peligrosas en Internet): <a href="http://us.mcafee.com/en-us/local/docs/most_dangerous_searchterm_us.pdf">http://us.mcafee.com/en-us/local/docs/most_dangerous_searchterm_us.pdf</a>
+(en inglés; formato PDF).</p>
+
+<p class="text14-black"><strong>Tenga cuidado cuando comparta documentos con otros</strong>. Los usuarios tienen la capacidad de compartir
+archivos a través de redes informales de computadoras que utilizan el mismo
+software. Esta tecnología permite a los usuarios acceder a una gran cantidad de
+información, incluyendo música, juegos y software. Aunque este tipo de
+tecnología se puede utilizar con fines legítimos, mucho del contenido que se
+comparte incluye material protegido por los derechos de autor. Compartir estos
+datos es ilegal y una violación de las leyes de derechos de autor.</p>
+
+
+
+<p class="text14-black">Millones de usuarios
+comparten documentos en línea todos los días. Para compartir archivos a través
+de una red necesita descargar un software que conecta su computadora con la computadora
+de otros que utilizan el mismo software. Es posible que millones de usuarios
+estén conectados a través del software al mismo tiempo. Generalmente el
+software es gratuito.</p>
+
+
+
+<p class="text14-black">Sin embargo, hay
+muchos riesgos relacionados con compartir archivos. Por ejemplo, cuando usted
+está conectado a programas que le permiten compartir archivos, usted podría,
+sin saberlo, permitir que otros copien archivos privados. Incluso podría estar
+dando acceso a carpetas y subcarpetas que usted nunca tuvo la intención de compartir.
+Usted podría verse en problemas legales al descargar material que está
+protegido por las leyes de derechos de autor. También podría descargar un
+virus, malware o spyware o permitir una filtración de datos de
+seguridad. Sin saberlo, también podría descargar pornografía que está
+categorizada como alguna otra cosa. Por estas razones le recomendamos que tenga
+mucho cuidado cuando utilice software para compartir archivos. Para obtener más
+información sobre este tema consulte: <a href="http://alertaenlinea.gov/articulos/s0016-programas-para-compartir-archivos">http://alertaenlinea.gov/articulos/s0016-programas-para-compartir-archivos</a>.</p>
+
+
+
+<p class="text14-black"><strong>Apague su computadora o desconéctese del Internet</strong>. Si no está utilizando su computadora por
+un periodo largo de tiempo, lo mejor es apagarla. Los módems de cable y las
+líneas DSL permite que las computadoras estén conectadas en
+todo momento. Esto es conveniente. Sin embargo tiene varios riesgos. La
+probabilidad de que su computadora esté expuesta a estos riesgos es mucho más
+alta si su computadora siempre está conectada al Internet. Para desconectarse
+del Internet hay que apagar la conexión inalámbrica, apagar la computadora o
+módem, o desconectar cables, dependiendo del método que se utiliza. Esto puede
+reducir las probabilidades que una computadora maliciosa penetre remotamente su
+computadora.</p>
+
+
+
+<p class="text14-black">Asimismo, usted simplemente puede apagar su
+computadora. Así podrá ahorrar energía. Además siempre es una buena idea apagar
+su computadora periódicamente dado que Windows vuelve empezar cada vez que
+prende su computadora. <em>Este</em> proceso
+limpia archivos en su computadora que podrían bajar el rendimiento de su
+aparato.</p>
+
+
+
+<p class="text14-black"><strong>Respalde
+todos sus datos</strong>. Aunque su computadora podría costar mucho dinero, el
+aparato es reemplazable. Sin embargo, la información que se encuentra en sus
+archivos personales puede ser difícil o imposible de reemplazar. Siempre existe
+la posibilidad de que algo suceda que resulte en la destrucción de su
+información, independientemente si usted toma medidas para protegerse.</p>
+
+
+
+<p class="text14-black">El respaldar los datos en su computadora puede reducir
+la probabilidad de que su computadora tenga un mal funcionamiento. Usted decide
+qué tan frecuentemente desea respaldar sus datos. Usted no necesita respaldar
+software que usted tiene en formato CD-ROM o DVD-ROM, ya que simplemente puede
+reinstalar el software de la fuente original.</p>
+
+
+
+<p class="text14-black">Hay muchas alternativas de hardware y software que le
+permiten respaldar sus datos, incluyendo USB flash drives o discos duros
+externos (hardware) así como programas de archivo y de discos (software). Cada
+método tiene sus ventajas y desventajas. Una solución sencilla puede ser
+respaldar sus archivos importantes en un USB flash drive que codifique la
+información. Siempre es una buena idea mantener sus archivos respaldados en un
+lugar seguro y bajo llave.</p>
+
+
+
+<p class="text14-black">Usted puede leer más sobre cómo respaldar sus datos
+con el siguiente recurso titulado "opciones para respaldar su
+computadora": <a href="http://www.eset.com/fileadmin/Images/US/Docs/Home/Staying_Secure/2205_19_0_EsetWP-OptionsBackingUpComputer.pdf">www.eset.com/fileadmin/Images/US/Docs/Home/Staying_Secure/2205_19_0_EsetWP-OptionsBackingUpComputer.pdf</a> (en inglés; formato PDF).</p>
+
+
+
+<p class="text14-black"><strong>Teclee con
+cuidado</strong>. Los estafadores a veces crean sitios con direcciones
+de palabras que la gente típicamente escribe mal. Ponga atención al URL de un
+sitio. Los sitios maliciosos podrían estar idénticos a los sitios legítimos,
+pero el URL podría utilizar una variación del nombre o un dominio distinto (por
+ejemplo .com vs.net.</p>
+
+
+
+<p class="text14-black"><strong>Proteja su
+información sensitiva</strong>. No revele información personal o
+financiera por correo electrónico y no responda a ofrecimientos por email,
+incluyendo enlaces contenidos dentro del mensaje. No mande información
+sensitiva por Internet si no antes revisar la seguridad del sitio.</p><p class="text14-black"><strong>Codifique
+los archivos en su computadora, laptop o aparato portátil</strong>.
+Todos los días hay computadoras robadas, pérdidas o hackeadas. Como resultado,
+la información personal podría estar disponible a cualquier persona lo cual
+podría resultar en la invasión de su privacidad o en el robo de identidad.
+Muchas computadoras y otros aparatos contienen archivos sensitivos como
+expedientes financieros, impuestos, historiales médicos y otros archivos
+personales.</p>
+
+
+
+<p class="text14-black">Muchos
+usuarios usan las computadoras portátiles así como otros aparatos portátiles
+porque son pequeños y se pueden transportar con facilidad. Pero aunque son
+convenientes, también son atractivos para los ladrones. Asegúrese de proteger
+sus aparatos portátiles, tanto los propios aparatos como la información que
+contienen. Es importante codificar cualquier información sensitiva en estos
+aparatos. Para obtener otros consejos vea: <a href="http://www.us-cert.gov/cas/tips/ST04-017.html" target="_blank">www.us-cert.gov/cas/tips/ST04-017.html</a> (en inglés).</p>
+
+<p class="text14-black">Los
+USB flash drives también tienen riesgos similares, por lo tanto úselos con
+cuidado. Algunos flash drives permiten que los datos sean codificados. Para
+leer más consejos sobre el uso apropiado de USB flash drives vea <a href="http://www.us-cert.gov/cas/tips/ST08-001.html">www.us-cert.gov/cas/tips/ST08-001.html</a>
+(en inglés).</p>
+
+<p class="text14-black">La
+codificación de datos es una manera de mejorar la seguridad de un archivo o una
+carpeta ya que mezcla su contenido para que solamente pueda ser leído por
+alguien que tiene la llave para decodificarlo.</p><p class="text14-black">Los
+archivos que no han sido codificados en su computadora pueden ser leídos por
+cualquiera incluso <em>si su computadora está
+protegida por una contraseña</em>. Hay métodos que se pueden utilizar para
+acceder los archivos codificados de su computadora sin tener la contraseña de
+Windows. Por lo tanto es importante codificar los archivos sensitivos incluso
+si tiene una computadora desktop que está protegida por una contraseña.</p>
+
+<p class="text14-black">Windows
+cuenta con un programa de codificación de datos llamado Encrypting File System
+(EFS). EFS le permite almacenar información en su disco duro en un formato
+codificado. Para utilizar el EFS el usuario debe conscientemente escoger un
+archivo, carpeta o subcarpeta. Usted puede obtener más información sobre el EFS
+aquí: <a href="http://windows.microsoft.com/en-US/windows-vista/Encrypt-or-decrypt-a-folder-or-file">http://windows.microsoft.com/en-US/windows-vista/Encrypt-or-decrypt-a-folder-or-file</a> (en inglés).</p>
+
+<p class="text14-black">TrueCrypt
+es un software de código abierto gratuito para almacenar datos en tiempo real. TrueCrypt
+puede ayudarlo a prevenir que usted guarde documentos sensitivos sin que antes
+sean codificados. La información es codificada automáticamente antes de que sea
+salvada sin que usted tenga que hacer algo. En este sentido, TrueCrypt es mejor
+que EFS. Sin embargo, puede ser más difícil de usar. Usted puede descargar TrueCrypt
+aquí: <a href="http://www.truecrypt.org/downloads">www.truecrypt.org/downloads</a> (en inglés).</p>
+
+<p class="text14-black">Usted puede leer más sobre los
+programas gratuitos de codificación de datos de Windows aquí: <a href="http://www.techsupportalert.com/best-free-file-encryption-utility.htm">www.techsupportalert.com/best-free-file-encryption-utility.htm</a> (en inglés).</p>
+
+<p class="text14-black"><strong>Evite hacer lo siguiente:</strong></p>
+
+<ul><li class="text14-black">No descargue salva pantallas gratuitas,
+fondos de escritorios, juegos o barras de herramientas a menos de que usted
+sepa que son seguros. Estas descargas gratuitas podrían contener malware. Lo
+mejor es siempre descargar software de sitios con buena reputación como CNet: <a href="http://download.cnet.com/">http://download.cnet.com/</a> (en inglés). </li><li class="text14-black">No visite sitios dudosos. Los sitios de
+los hackers, los sitios que contienen contenido sexual y los sitios que
+practican la piratería son conocidos por tener malware. El puro hecho de
+visitar una página puede descargar malware a su computadora. McAfee Site
+Advisor puede ayudarlo a ver la seguridad de los sitios. Utiliza un botón de
+color en su barra de herramientas para determinar la seguridad de un sitio.
+Usted puede descargarlo aquí: <a href="http://us.mcafee.com/root/product.asp?Productid=sa">http://us.mcafee.com/root/product.asp?Productid=sa</a> (en inglés).</li><li class="text14-black">No dé a conocer su nombre completo,
+dirección, número telefónico, Número de Seguro Social, números de cuentas
+financieras, fecha de nacimiento entera u otra información personal en salas de
+chat o sitios de redes sociales.</li></ul><p><span class="text14-black">
+
+
+
+
+
+<strong> </strong>
+
+</span></p><p class="text14-black" align="center"><strong><a name="Wi-Fi" id="Wi-Fi"></a>5. El uso de
+conexiones inalámbricas al Internet (Wi-Fi)</strong></p>
+
+<p class="text14-black">Un
+número cada vez más grande de hogares y negocios cuentan con redes inalámbricas
+que enlazan a múltiples computadoras, impresoras y otros aparatos. Una red
+inalámbrica ofrece una ventaja determinante ya que le permite construir una red
+de informática sin cables. Desafortunadamente, muchos de estos sistemas tienen
+las configuraciones de seguridad apagadas cuando recién salen de la caja. Esto
+hace que su instalación sea más fácil pero que también sea más fácil que
+alguien pueda penetrar sus defensas. La mayoría de las redes inalámbricas
+utilizan el protocolo 802.11, también conocido como Wi-Fi.</p>
+
+<p class="text14-black"><strong>Los riesgos de seguridad de las redes
+inalámbricas</strong>. Las redes inalámbricas han creado un pasatiempo que
+se ha convertido en un tipo de guerra entre los aficionados y los espías
+corporativos. El espía de información maneja en una vecindad o distrito
+comercial con una computadora portátil y un software gratuito con el fin de
+localizar redes inalámbricas sin protecciones de seguridad en los alrededores,
+generalmente dentro de un rango de 100 yardas. La computadora captura la
+información que se transmite por la red a computadoras e impresoras. La
+información puede incluir cosas como las finanzas de un hogar o los secretos de
+un negocio. </p>
+
+<p class="text14-black">Con
+el fin de facilitar su instalación, el nombre de la mayoría de los puntos de
+acceso de Wi-Fi del hogar como los routers y gateways utilizan un hombre
+predeterminado (conocido como SSID) y credenciales administrativas
+predeterminadas (nombre de usuario y contraseña). Estas configuraciones
+predeterminadas se deben cambiar una vez que usted instala su red Wi-Fi. La
+típica instalación automatizada desactiva muchas de las configuraciones de seguridad
+para simplificar su instalación. Esto ocasiona que alguien pueda robar, alterar
+y destruir datos, y también agregar programas y computadoras adicionales a su
+red sin que usted se dé cuenta. El riesgo es mayor en vecindades con altas
+densidades de población y en complejos comerciales.</p>
+
+<p class="text14-black">Las
+redes inalámbricas del hogar deben contar con un nivel de seguridad de
+codificación de datos WPA2 (Wi-Fi Protected Access versión 2). Los routers que
+fueron adquiridos en los últimos seis años deben incluir la tecnología de
+seguridad WPA2. Por lo general, usted tiene que activar el WPA2 para poder
+utilizarlo. Las versiones más viejas de codificación de datos WEP se han
+convertido en un blanco fácil de los hackers.</p>
+
+<p class="text14-black">La
+configuración de los puntos de acceso Wi-Fi de su hogar puede ser un proceso
+complejo y por lo tanto va más allá de lo que esta página informativa busca
+explorar. Para asegurarse de que su sistema es 
+seguro, revise los manuales de usuario y los recursos web disponibles
+sobre las cuestiones de seguridad. La alianza Wi-Fi Alliance ofrece consejos
+para instalar una conexión Wi-Fi aquí: <a href="http://www.wi-fi.org/discover-and-learn/security">http://www.wi-fi.org/security</a> (en inglés). También puede
+consultar las siguientes guías útiles:</p>
+
+<ul><li class="text14-black"><a href="http://www.practicallynetworked.com/support/wireless_secure.htm">www.practicallynetworked.com/support/wireless_secure.htm</a> (en inglés).</li><li class="text14-black"><a href="http://www.practicallynetworked.com/support/wireless_secure.htm">www.practicallynetworked.com/support/wireless_secure.htm</a> (en inglés).</li></ul><p class="text14-black"><strong>Los riesgos de utilizar puntos de acceso Wi-Fi</strong>. El número de ubicaciones con puntos de acceso Wi-Fi continúan creciendo
+dramáticamente en escuelas, bibliotecas, cafeterías, aeropuertos y hoteles. Con
+la capacidad de conectarse a través del Wi-Fi,
+usted puede conectarse al Internet casi en cualquier lugar. Usted puede llevar
+a cabo las mismas actividades en línea a través del Wi-Fi que en su casa o
+trabajo, como revisar su correo electrónico y navegar el Internet.</p>
+
+<p class="text14-black">Sin embargo, cuando use un punto de acceso Wi-Fi
+considere los riesgos a su privacidad así como los riesgos de seguridad para su
+computadora portátil o netbook. La mayoría de estos puntos de acceso no
+transmiten datos codificados o de forma segura. Incluso los puntos de acceso de
+paga disponibles en aviones podrían ser tan inseguros como los puntos de acceso
+gratuitos que ofrece la cafetería de la esquina: <a href="http://www.privatewifi.com/flying-naked-why-airplane-wifi-is-so-unsafe/">www.privatewifi.com/flying-naked-why-airplane-wifi-is-so-unsafe</a> (en inglés). Por lo
+tanto, usted tiene que tomar pasos adicionales para proteger su privacidad.</p>
+
+<p class="text14-black">Debido a que los puntos de acceso Wi-Fi no son
+seguros, las conexiones por Internet quedan expuestas a la intrusión. Los
+hackers pueden interceptar el tráfico que atraviesa por la red y robar su
+información.</p>
+
+
+
+
+
+<p class="text14-black">Hay tres amenazas principales a la privacidad en los
+puntos de acceso Wi-Fi: </p>
+
+<ul><li class="text14-black">El ataque de un tercero (conocido en
+inglés como Man-In-The-Middle Attack) se refiere al acto de interceptar una
+conexión entre una computadora y el router inalámbrico que provee la conexión.
+Cuando el ataque es exitoso, el hacker puede colectar toda la información que
+fue transferida y reproducirla en su computadora.</li><li class="text14-black">El
+espionaje se refiere al acto de utilizar software rastreador que roba datos
+transmitidos por una red. Las aplicaciones o aparatos que rastrean datos pueden
+leer, monitorear y capturar información. Esto representa un peligro cuando se
+trasmite información por Internet debido a que los rastreadores pueden
+recuperar detalles de inicio de sesiones así como información importante como
+los números de tarjetas de crédito.</li><li class="text14-black">Mirar sobre
+los hombros de alguien es un acto sencillo para ver sus actividades.</li></ul><p class="text14-black"><strong>Cómo proteger su privacidad en un punto de acceso</strong> <strong>Wi-Fi: lo más básico. </strong>Hay varias maneras de proteger su privacidad cuando
+utiliza un punto de acceso Wi-Fi. Empiece con tener sentido común.
+Cerciórese de que nadie está tratando de ver su computadora a escondidas. No
+deje su computadora sola. Tampoco transmita datos que no son seguros a través
+de un punto de acceso Wi-Fi que no es seguro. Cuando ingrese información
+sensitiva como su Número de Seguro Social, contraseña o número de tarjeta de
+crédito, asegúrese que el sitio codifique la información o que se conexión Wi-Fi
+sea segura. Desactive su adaptador inalámbrico si no está utilizando el
+Internet. De otra forma, podría exponer a su computadora a vulnerabilidades si
+se conecta accidentalmente a la primera red disponible.</p>
+
+<p class="text14-black"><strong>VPN (Virtual Private Network o Red Virtual Privada). </strong>Esta es la primera línea de defensa en contra de
+vulnerabilidades creadas por una conexión Wi-Fi. La
+red VPN transmite información codificada aunque no esté codificada por la
+conexión Wi-Fi. Esto hace que la información interceptada por los hackers no
+sirva de nada. Usted puede obtener software para instalar una red VPN en su
+oficina o en su obrar, o también puede utilizar un servicio de red VPN de un
+proveedor comercial.</p>
+
+
+
+<p class="text14-black"><strong>Navegación segura / SLL</strong>. El agregar
+una "s" después de “http” cuando usted está revisando sus
+correos o realizando alguna transacción importante podría darle una conexión
+segura al sitio (por ejemplo, <a href="https://www.gmail.com/" target="_blank">https://www.gmail.com</a>). Muchos proveedores de email cuentan con este servicio. Esto asegura
+que los detalles de su inicio de sesión estén codificados, por lo tanto no les
+sirve de nada a los hackers. Aunque su inicio de sesión de email podría estar
+codificado, algunos proveedores de email podrían no codificar su buzón o sus
+mensajes.</p>
+
+
+
+<p class="text14-black">Revise los
+certificados SSL (Secure Sockets Layer) en todas las páginas de
+Internet en las cuales usted planea realizar transacciones sensitivas. Estos
+certificados crean una conexión segura entre el cliente y el servidor, lo cual
+le permite mandar cualquier cantidad de datos de forma segura. La organización Trustworthy
+Internet Movement (Movimiento por un Internet seguro) estudia la implementación
+de los certificados SSL en las páginas web
+más populares: <a href="https://www.trustworthyinternet.org/ssl-pulse/">https://www.trustworthyinternet.org/ssl-pulse/</a> (en inglés).</p>
+
+
+
+<p class="text14-black"><strong>Las configuraciones de puntos de acceso</strong> <strong>Wi-Fi. </strong>Asegúrese que su
+computadora no se conecte automáticamente al punto de acceso Wi-Fi
+disponible más cercano. Tenga cuidado ya que esta conexión podría ser un punto
+de acceso a la computadora de un hacker y no a una conexión legítima.</p>
+
+
+
+<p class="text14-black"><strong>Desactive la función de compartir archivos</strong>. Asegúrese que no esté activada la configuración de compartir archivos
+en su computadora para asegurarse que los intrusos no pueden acceder sus
+archivos privados a través de la red. Cuando esta función está activada es
+posible que individuos accedan sus archivos sin su autorización.</p>
+
+
+
+<p class="text14-black"><strong>Firewall.</strong> Instale un
+firewall en su computadora y manténgalo activado en todo momento cuando utilice
+un punto de acceso Wi-Fi. Esto evitará que alguien entre a su computadora
+por los puertos.</p>
+
+
+
+<p class="text14-black"><strong>Actualizaciones de seguridad</strong>. Mantenga el sistema operativo y el
+software de su computadora actualizado. Esto le ayudará a eliminar las vulnerabilidades
+de seguridad en su software o sistema operativo.</p>
+
+
+
+<p class="text14-black">Usted
+puede leer guías prácticas sobre cómo mantenerse seguro cuando utilice las
+redes públicas de Wi-Fi:</p>
+
+
+
+<ul><li class="text14-black"><a href="http://lifehacker.com/5576927/how-to-stay-safe-on-public-wi+fi-networks" target="_blank">http://lifehacker.com/5576927/how-to-stay-safe-on-public-wi+fi-networks</a> (en inglés).</li><li class="text14-black"><a href="http://alertaenlinea.gov/articulos/s0014-redes-wifi-p%C3%BAblicas">http://alertaenlinea.gov/articulos/s0014-redes-wifi-p%C3%BAblicas</a> <a href="http://www.us-cert.gov/reading_room/Wireless-Security.pdf">www.us-cert.gov/reading_room/Wireless-Security.pdf</a> (en inglés; formato PDF).</li></ul><p class="text14-black"> </p>
+
+<p class="text14-black" align="center"><strong><a name="cómo-deshacerse-de-su-computadora-de-forma-segura" id="cómo-deshacerse-de-su-computadora-de-forma-segura"></a>6. Cómo
+deshacerse de su computadora de forma segura</strong></p>
+
+
+
+<p class="text14-black">Antes de que usted
+done, venda o se deshaga de su computadora, usted debe tomar ciertas medidas
+para asegurarse que no dejó datos personales. Aunque usted no lo crea, hay
+cientos de archivos "borrados" que pueden ser recuperados con ciertos
+tipos de software. Cuando un archivo es borrado, en realidad no desaparece el
+disco duro. Lo único que hace es colocar una marca en el disco duro advirtiendo
+que el archivo ya no está disponible. Sin embargo, los contenidos del archivo
+aún están presentes en el disco duro.</p>
+
+
+
+<p class="text14-black">Por lo tanto, para
+asegurarse que sus datos no pueden ser recuperados, su disco duro debe ser
+destruido o borrado por un programa de utilidades diseñado para ese fin. El
+hecho de presionar el botón de borrar no es suficiente ya que cualquier persona
+con habilidades básicas puede recuperar fácilmente la información. Asimismo,
+reformatear el disco duro puede borrar los archivos, pero la información
+continúa estando disponible en algún lugar. Al menos de que esas áreas del disco
+sean reemplazadas por contenido nuevo, es posible que cualquier hacker con
+conocimiento pueda acceder la información.</p>
+
+
+
+<p class="text14-black">Hay varios programas
+gratuitos disponibles que pueden limpiar su disco duro:</p>
+
+
+
+<ul><li class="text14-black">Eraser: <a href="http://eraser.heidi.ie/">http://eraser.heidi.ie/</a> (en inglés).</li><li class="text14-black">Darik’s
+Boot and Nuke: <a href="http://www.dban.org/">www.dban.org/</a> (en
+inglés).</li><li class="text14-black">Killdisk: <a href="http://www.killdisk.com/">www.killdisk.com/</a> (en inglés).</li></ul><p class="text14-black">El
+método exacto para limpiar su disco duro depende si usted desea que el disco
+duro se vuelva a usar. Independientemente de cuáles son sus intenciones, el
+disco duro debe quedar completamente limpio antes que salga de sus manos.</p>
+
+
+
+<p class="text14-black">Un estudio de febrero de 2009 hecho
+por la firma de contaduría forense Kessler International reveló un ejemplo de
+lo que puede suceder: el 40% de los discos duros vendidos en eBay contenían
+información personal sensitiva y comercial: <a href="http://www.investigation.com/articles/library/2008articles/articles19.htm">www.investigation.com/articles/library/2008articles/articles19.htm</a>
+(en inglés).</p><p class="text14-black"> </p>
+
+<p class="text14-black"><strong><a name="recursos-adicionales" id="recursos-adicionales"></a>7. Recursos adicionales</strong></p>
+
+
+
+<p class="text14-black"><strong>Páginas Informativas de</strong> <strong>Privacy
+Rights Clearinghouse (en inglés):</strong></p>
+
+<ul><li class="text14-black"><strong>Página Informativa</strong> <strong>18. </strong><a href="https://www.privacyrights.org/fs/fs18-cyb.htm">Online Privacy: Using
+the Internet Safely</a>
+(La privacidad en línea: cómo
+usar el Internet de forma segura).</li><li class="text14-black"><strong>Página Informativa</strong> <strong>18a. </strong><a href="https://www.privacyrights.org/fs/fs18a-OnlPvcyFAQ.htm">Online Privacy FAQ</a> (Preguntas frecuentes sobre la
+privacidad en línea).</li><li class="text14-black"><strong>Página Informativa</strong> <strong>23. </strong><a href="https://www.privacyrights.org/spanish/pi23.htm">El comercio
+electrónico y usted: Consejos para hacer compras en internet</a>.</li><li class="text14-black"><strong>Página Informativa</strong> <strong>35. </strong><a href="https://www.privacyrights.org/social-networking-privacy">Social
+Networking Privacy: How to be Safe, Secure and Social</a> (La privacidad en las redes
+sociales: cómo ser social y seguro).</li></ul><p class="text14-black"><strong>Recurso del gobierno de Estados Unidos:</strong></p>
+
+
+
+<p class="text14-black">El equipo nacional de emergencias
+cibernéticas U.S. Computer Emergency Readiness Team (US-CERT) ofrece
+numerosos recursos de seguridad de informática en su sitio Internet: <a href="http://www.us-cert.gov/index.html" target="_blank">www.us-cert.gov/index.html</a> (en inglés).Desde
+el sitio se pueden descargar varias publicaciones importantes: <a href="http://www.us-cert.gov/reading_room/" target="_blank">www.us-cert.gov/reading_room/</a> (en inglés).</p>
+
+<p class="text14-black">OnGuardOnline
+es un sitio del gobierno Federal que lo ayuda hacer seguro y responsable en
+línea. El sitio provee consejos para proteger su información y su computadora
+mientras usted está en línea: <a href="http://alertaenlinea.gov/temas/proteja-su-computadora">http://alertaenlinea.gov/temas/proteja-su-computadora</a>.</p>
+
+<p class="text14-black"><strong>Otros recursos útiles:</strong></p>
+
+
+
+<p class="text14-black">GetNetWise es un servicio público traído a usted por
+corporaciones de la industria de Internet y organizaciones de interés público
+que desean ayudar a los usuarios a tener experiencias seguras, constructivas,
+educacionales y entretenidas en línea. Ofrece consejos de seguridad así como otras
+herramientas: <a href="http://security.getnetwise.org/">http://security.getnetwise.org/</a> (en inglés).</p>
+
+
+
+<p class="text14-black">Sophos
+Threatsarus le enseña medidas prácticas para mejorar la seguridad de su
+computadora en casa y en la oficina: <a href="http://www.sophos.com/medialibrary/PDFs/marketing%20material/sophosthreatsaurusazen.pdf">www.sophos.com/medialibrary/PDFs/marketing%20material/sophosthreatsaurusazen.pdf</a> (en inglés; formato PDF).</p>
+
+<p class="text14-black">La alianza de seguridad cibernética National
+Cyber Security Alliance ofrece recursos para ayudarlo a proteger la red
+inalámbrica que utiliza en su hogar así como la privacidad de su familia: <a href="http://www.staysafeonline.org/in-the-home">www.staysafeonline.org/in-the-home</a>
+(en inglés).</p>
+
+<p class="text14-black">McAfee ofrece un glosario de términos que usted puede
+consultar cuando lea sobre la seguridad de Internet y las amenazas
+cibernéticas: <a href="http://home.mcafee.com/VirusInfo/Glossary.aspx">http://home.mcafee.com/VirusInfo/Glossary.aspx</a>
+(en inglés).</p>
+
+
+
+<p class="text14-black">Priveazy ofrece videos, pruebas y lecciones que lo
+ayudarán a mantener su privacidad en línea: <a href="https://www.priveazy.com/" target="_blank">https://www.priveazy.com/</a> (en inglés).</p></div></div></div><div class="field field-name-taxonomy-vocabulary-3 field-type-taxonomy-term-reference field-label-above"><div class="field-label">Tags::&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/category/resource-type/en-espanol">En Espanol</a></div></div></div>    <footer>
+          </footer>
+    </article>
+
+</section>
+  </div>
+      </section>
+
+      
+    </div>
+  </div>
+</div>
+
+  <aside class="fluid-container bottom" role="complementary">
+      <div class="region region-bottom">
+    <section id="block-block-47" class="block block-block donation-section clearfix">
+
+      
+  <div class="donate-container">
+
+<h3 class="donate-heading">Empowering Consumers. Protecting Privacy.</h3>
+
+<p class="donate-text">
+Donations to PRC allow us to create educational privacy resources and raise awareness of current consumer privacy issues.
+</p>
+
+<p>
+<a href="https://privacyrights.networkforgood.com/" class="donate-button">DONATE</a>
+</p>
+</div>
+</section>
+<section id="block-block-48" class="block block-block newsletter-section clearfix">
+
+      
+  <div class="newsletter-block">
+<p class="newsletter-text">Stay Informed - Join our mailing list</p>
+<div class="form-wrapper">
+
+<!--Begin CTCT Sign-Up Form-->
+<!-- EFD 1.0.0 [Wed Apr 05 07:42:36 EDT 2017] -->
+<link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
+<div class="ctct-embed-signup" style="">
+   <div style="">
+       <span id="success_message" style="display:none;">
+           <div style="text-align:center;">Thanks for signing up!</div>
+       </span>
+       <form data-id="embedded_signup:form" class="form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+          
+           <!-- The following code must be included to ensure your sign-up form works properly. -->
+           <input data-id="ca:input" type="hidden" name="ca" value="405a9b9b-0fdf-4c9d-b834-898de7ae8175">
+           <input data-id="list:input" type="hidden" name="list" value="2114738894">
+           <input data-id="source:input" type="hidden" name="source" value="EFD">
+           <input data-id="required:input" type="hidden" name="required" value="list,email">
+           <input data-id="url:input" type="hidden" name="url" value="">
+           <input data-id="Email Address:input" type="text" placeholder="Email Address" name="email" class="phred text-field" value="" maxlength="80">
+           <button type="submit" class="subscribe-button" data-enabled="enabled"><span class="glyphicon glyphicon-send"></span>Sign Up</button>
+       	<div><p class="ctct-form-footer hidden">By submitting this form, you are granting: Privacy Rights Clearinghouse, 3033 Fifth Avenue, San Diego, California, 92103, United States, https://www.privacyrights.org permission to email you. You may unsubscribe via the link found at the bottom of every email.  (See our <a href="http://www.constantcontact.com/legal/privacy-statement" target="_blank">Email Privacy Policy</a> for details.) Emails are serviced by Constant Contact.</p></div>
+       </form>
+   </div>
+</div>
+<script type='text/javascript'>
+   var localizedErrMap = {};
+   localizedErrMap['required'] = 		'This field is required.';
+   localizedErrMap['ca'] = 			'An unexpected error occurred while attempting to send email.';
+   localizedErrMap['email'] = 			'Please enter your email address in name@email.com format.';
+   localizedErrMap['birthday'] = 		'Please enter birthday in MM/DD format.';
+   localizedErrMap['anniversary'] = 	'Please enter anniversary in MM/DD/YYYY format.';
+   localizedErrMap['custom_date'] = 	'Please enter this date in MM/DD/YYYY format.';
+   localizedErrMap['list'] = 			'Please select at least one email list.';
+   localizedErrMap['generic'] = 		'This field is invalid.';
+   localizedErrMap['shared'] = 		'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+	localizedErrMap['state_province'] = 'Select a state/province';
+   localizedErrMap['selectcountry'] = 	'Select a country';
+   var postURL = 'https://visitor2.constantcontact.com/api/signup';
+</script>
+<script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+<!--End CTCT Sign-Up Form-->
+
+</div></div>
+</section>
+<section id="block-views-privacy-topics-block" class="block block-views container clearfix">
+
+        <h2 class="block-title">Privacy Topics</h2>
+    
+  <div class="view view-privacy-topics view-id-privacy_topics view-display-id-block view-dom-id-636e44eba29fe33bef21e04b9fe0c473">
+        
+  
+  
+      <div class="view-empty">
+      <div class="view view-privacy-topics view-id-privacy_topics view-display-id-col1 col-md-4 view-dom-id-21eca06d76ac9daf5e882b5f3fd7055b">
+        
+  
+  
+      <div class="view-content">
+          <ul>          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/banking-finance">Banking &amp; Finance</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/credit-and-credit-reports">Credit &amp; Credit Reports</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/data-breaches">Data Breaches</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/health-medical">Health &amp; Medical</a></span>  </div></li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-privacy-topics view-id-privacy_topics view-display-id-col2 col-md-4 view-dom-id-73daf8daec7ce99c9b5acf000722cc1f">
+        
+  
+  
+      <div class="view-content">
+          <ul>          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/id-theft-social-security-numbers">ID Theft &amp; Social Security Numbers</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/online-privacy">Online</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/people-search-data-brokers">People Search &amp; Data Brokers</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/phone-privacy">Phone</a></span>  </div></li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-privacy-topics view-id-privacy_topics view-display-id-col3 col-md-4 view-dom-id-f3dda3cc9196114bef42170399ded828">
+        
+  
+  
+      <div class="view-content">
+          <ul>          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/privacy-at-home">Privacy at Home</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/safety-security">Safety &amp; Security</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/shopping">Shopping</a></span>  </div></li>
+          <li class="">  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/topics/work-school">Work &amp; School</a></span>  </div></li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</section>
+  </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="container">  
+      <div class="row">
+          <div class="region region-footer">
+    <section id="block-menu-menu-footer" class="block block-menu col-xs-12 col-md-3 clearfix">
+
+      
+  <ul class="menu nav"><li class="first last expanded"><a href="/">Home</a><ul class="menu nav"><li class="first leaf"><a href="/blog">Blog</a></li>
+<li class="leaf"><a href="/data-breaches">Data Breaches</a></li>
+<li class="last leaf"><a href="/user">Log in</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="block-menu-menu-footer-menu-educational-mat" class="block block-menu col-xs-12 col-md-3 clearfix">
+
+      
+  <ul class="menu nav"><li class="first last expanded"><a href="/learn">Learn</a><ul class="menu nav"><li class="first leaf"><a href="/consumer-guides">Consumer Guides</a></li>
+<li class="leaf"><a href="/quick-tips">Quick Tips</a></li>
+<li class="leaf"><a href="/videos">Videos</a></li>
+<li class="last leaf"><a href="/infographics">Infographics</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="block-menu-menu-footer-menu-about" class="block block-menu col-xs-12 col-md-3 clearfix">
+
+      
+  <ul class="menu nav"><li class="first last expanded"><a href="/about">About</a><ul class="menu nav"><li class="first leaf"><a href="/about/mission-and-goals">Mission and Goals</a></li>
+<li class="leaf"><a href="/about/services">Services</a></li>
+<li class="leaf"><a href="/about/staff">Staff</a></li>
+<li class="leaf"><a href="/about/officers-and-board-members">Officers and Board</a></li>
+<li class="leaf"><a href="/about/funding">Funding</a></li>
+<li class="last leaf"><a href="/about/careers">Careers</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="block-menu-menu-footer-menu-contact" class="block block-menu col-xs-12 col-md-3 clearfix">
+
+      
+  <ul class="menu nav"><li class="first last expanded"><a href="/contact">Contact</a><ul class="menu nav"><li class="first leaf"><a href="/contact/funders">Funders</a></li>
+<li class="leaf"><a href="/contact/press">Press</a></li>
+<li class="last leaf"><a href="/contact/consumers">Consumers</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="block-block-44" class="block block-block col-xs-12 copyright clearfix">
+
+      
+  <div class="row">
+<div class="col-xs-12"></div>
+  <div class="copyright-txt">
+    <p>© Privacy Rights Clearinghouse</p>
+  </div>
+  <div class="copyright-links">
+   <a class="sub-footer-link" href="https://www.privacyrights.org/copyright">Copyright</a>
+<a class="sub-footer-link" href="https://www.privacyrights.org/privacy-policy">Privacy Policy</a>
+  </div>
+<a class="sagetree-logo" href="http://www.sagetree.com/"><img src="https://www.privacyrights.org/sites/all/themes/custom/local/img/sagetree.png" alt="Sagetree" class="sagetree-logo" /></a>
+<a href="http://www.sagetree.com/" class="sagetree-link">Creative by</a>
+</div>
+</section>
+  </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://www.privacyrights.org/sites/default/files/js/js_L50O_PWoAuMOxVjnzZCkNSSmI0kFwhZsO1_KS8WnGKw.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"942d5d6d06","applicationID":"25393210","transactionName":"MgRXZ0cEXhFZAUZQDAtOYEFcSh8LVgZXQU0VCUU=","queueTime":0,"applicationTime":12,"atts":"HkNUEQ8eTR8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

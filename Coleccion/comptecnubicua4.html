@@ -1,0 +1,1734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+  <title>Computación Ubicua - Capítulo I</title>
+  <link href="Ubicua04_files/mc.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://www.laflecha.net/images/favicon.png">
+  <script type="text/javascript" src="Ubicua04_files/mc.js"></script>
+  <link rel="alternate" type="application/xml" title="RSS" href="http://www.laflecha.net/laflecha.rss">
+</head><body>
+<div id="rightbar-bg">
+  <div id="header">
+    <div id="userbox">
+    
+          <div id="userbox-login" class="userbox-panel">
+    <form method="post" action="/usuarios/do_login">
+    <input name="redirto" value="/articulos/ciencia/computacion_ubicua/" type="hidden">
+        <div class="userbox-login-btn"><input alt="Iniciar sesión" src="Ubicua04_files/btn_login.png" type="image"></div>
+      <table class="skeletal">
+        <tbody><tr>
+          <td>usuario</td>
+          <td><input class="text" name="login" type="text"></td>
+        </tr>
+        <tr>
+          <td style="padding-top: 2px;">clave</td>
+          <td style="padding-top: 2px;"><input class="text" name="password" type="password"></td>
+        </tr>
+      </tbody></table>
+      
+      <div class="init-session">iniciar sesión</div> <div class="register">
+      	<a href="http://www.laflecha.net/usuarios/alta">regístrate</a></div>
+    </form>
+          </div>
+        
+    </div>
+	<div style="background: transparent url(/images/header.png) repeat-x scroll 0pt -70px; height: 70px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; cursor: pointer;" onclick="document.location='/';" title="Ir a portada">
+		<div style="background: transparent url(/images/header.png) no-repeat scroll 0px -140px; float: right; height: 70px; width: 11px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+		<div style="background: transparent url(/images/header.png) no-repeat scroll 0px 0pt; float: left; height: 70px; width: 387px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+	</div>
+  </div>
+
+
+  <div id="leftbar">
+  <div id="tracker">
+  </div>
+  
+  
+    <div id="search">
+    
+<!-- SiteSearch Google -->
+<form method="get" action="http://www.google.es/custom" target="google_window">
+<input name="domains" value="laflecha.net" type="hidden">
+<input class="text" name="q" maxlength="255" value="" style="width: 95px; margin-left: 4px;" type="text">
+<input name="sitesearch" value="laflecha.net" type="hidden">
+<div style="text-align: center;"><input class="button" name="sa" style="margin: 2px 5px 4px 0pt; padding: 0pt 5px;" value="Buscar" type="submit"></div>
+<input name="client" value="pub-5163442865089966" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="channel" value="6764332872" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:17;LW:100;L:http://laflecha.dev/images/logo2.png;S:http://www.laflecha.net/;LP:1;FORID:1;" type="hidden">
+<input name="hl" value="es" type="hidden">
+</form>
+<!-- SiteSearch Google -->
+    
+    </div>
+
+    <div id="menu">
+      <dl>
+        <dt><a href="http://www.laflecha.net/">Portada</a></dt>
+        <dt>Canales</dt>
+        <dd>
+          <ul>
+
+
+<li><a href="http://www.laflecha.net/canales/x-apple">Apple</a></li>
+<li><a href="http://www.laflecha.net/canales/blackhats">Blackhats</a></li>
+<li><a href="http://www.laflecha.net/canales/ciencia">Ciencia</a></li>
+<li><a href="http://www.laflecha.net/canales/comunicacion">Comunicación</a></li>
+<li><a href="http://www.laflecha.net/canales/curiosidades">Curiosidades</a></li>
+<li><a href="http://www.laflecha.net/canales/e-administracion">e-Administración</a></li>
+<li><a href="http://www.laflecha.net/canales/empresas">Empresas</a></li>
+<li><a href="http://www.laflecha.net/canales/eventos">Eventos</a></li>
+<li><a href="http://www.laflecha.net/canales/hardware">Hardware</a></li>
+<li><a href="http://www.laflecha.net/canales/nombramientos">Nombramientos</a></li>
+<li><a href="http://www.laflecha.net/canales/seguridad">Seguridad</a></li>
+<li><a href="http://www.laflecha.net/canales/software">Software</a></li>
+<li><a href="http://www.laflecha.net/canales/softlibre">Software Libre</a></li>
+<li><a href="http://www.laflecha.net/canales/moviles">Telefonía</a></li>
+<li><a href="http://www.laflecha.net/canales/videojuegos">Videojuegos</a></li>
+<li><a href="http://www.laflecha.net/canales/wireless">Wireless</a></li>          </ul>
+        </dd>
+        <dt>El Periódico</dt>
+        <dd>
+          <ul>
+            <li><a href="http://www.laflecha.net/blogs/">Blogs</a></li>
+            <li><a href="http://www.laflecha.net/editorial/">Editorial</a></li>
+            <li><a href="http://www.laflecha.net/entrevistas/">Entrevistas</a></li>
+            <li><a href="http://www.laflecha.net/gadgets/">Gadgets</a></li>
+            <li><a href="http://www.laflecha.net/perfiles/">Perfiles</a></li>
+            <li><a href="http://www.laflecha.net/tags/">Tags</a></li>
+			<li><a title="Ir al top 10 de noticias" href="http://www.laflecha.net/canales/top_noticias">Top noticias</a></li>
+            <li><a href="http://www.laflecha.net/videorreportajes/">Videorreportajes</a></li>
+            <li><a href="http://www.laflecha.net/webcomics/">Webcómics</a></li>
+          </ul>
+        </dd>
+        <dt>Servicios</dt>
+        <dd>
+          <ul>
+          
+            <li><a href="http://www.laflecha.net/boletines">Boletines</a></li>
+           
+            <li><a href="http://www.laflecha.net/servicios/contactos">Contactos</a></li>
+           
+            <li><a href="http://www.laflecha.net/servicios/empleo">Empleo</a></li>
+           
+            <li><a href="http://www.laflecha.net/formacion">Formación</a></li>
+           
+            <li><a href="http://www.laflecha.net/servicios/juegos_gratis">Minijuegos</a></li>
+           
+            <li><a href="http://tienda.laflecha.net/">Tienda</a></li>
+           
+            <li><a href="http://www.laflecha.net/viviendas">Viviendas</a></li>
+                               </ul>
+        </dd>
+        <dt>Comunidad</dt>
+        <dd>
+          <ul>
+          	<li><a href="http://www.laflecha.net/encuestas/">Encuestas</a></li>
+            <li><a href="http://www.laflecha.net/foros/">Foros</a></li>
+            <li><a href="http://www.laflecha.net/emailslectores/">Emails de los lectores</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="advertisement">
+        <div class="title">Viviendas</div>
+        <div class="content">
+        <form method="get" name="f" id="f" target="_blank" action="http://www.spainhouses.net/es/maps.php">
+         <input name="nivel" value="1" type="hidden">
+        Acción:
+        <select name="sec" id="sec" style="font-size: 9px;">
+          <option value="0"></option>
+          <option value="1" style="color: rgb(136, 136, 136);">Comprar</option>
+          <option value="3" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">En construcción</option>
+          <option value="1" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">A estrenar</option>
+          <option value="1" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">2ª Mano</option>
+          <option value="2" style="color: rgb(136, 136, 136);">Alquilar</option>
+          <option value="2" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Larga temporada</option>
+          <option value="2" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Turístico</option>
+          <option value="2" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Turismo rural</option>
+          <option value="3" style="color: rgb(136, 136, 136);">Otros</option>
+          <option value="3" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Promociones</option>
+          <option value="4" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Viv. Lujo</option>
+          <option value="5" style="margin: 0pt; padding: 0pt 0pt 0pt 3px;">Inversiones</option>
+        </select><br>
+        Propiedad:
+        <select name="tinm" id="tinm" style="font-size: 9px;">
+        <option value="0"></option><option value="1">Estudio</option><option value="2">Apartamento</option><option value="4">Piso</option><option value="8">Dúplex</option><option value="16">Casa</option><option value="32">Bungalow</option><option value="64">Chalet</option><option value="128">Villa</option><option value="256">Oficina</option><option value="512">Local</option><option value="1024">Nave</option><option value="2048">Edificio</option><option value="4096">Finca</option><option value="8192">Solar</option><option value="16384">Parcela</option><option value="32768">Garaje</option>
+        </select><br>
+        Provincia:
+        <select name="prov" id="prov" style="font-size: 9px;">
+        <option value="0"> </option><option value="1">Álava</option><option value="2">Albacete</option><option value="3">Alicante</option><option value="4">Almería</option><option value="33">Asturias</option><option value="5">Ávila</option><option value="6">Badajoz</option><option value="7">Baleares</option><option value="8">Barcelona</option><option value="9">Burgos</option><option value="10">Cáceres</option><option value="11">Cádiz</option><option value="39">Cantabria</option><option value="12">Castellón</option><option value="51">Ceuta</option><option value="13">Ciudad Real</option><option value="14">Córdoba</option><option value="16">Cuenca</option><option value="17">Girona</option><option value="18">Granada</option><option value="19">Guadalajara</option><option value="20">Guipúzcoa</option><option value="21">Huelva</option><option value="22">Huesca</option><option value="23">Jaén</option><option value="15">La Coruña</option><option value="26">La Rioja</option><option value="35">Las Palmas</option><option value="24">León</option><option value="25">Lleida</option><option value="27">Lugo</option><option value="28">Madrid</option><option value="29">Málaga</option><option value="52">Melilla</option><option value="30">Murcia</option><option value="31">Navarra</option><option value="32">Orense</option><option value="34">Palencia</option><option value="36">Pontevedra</option><option value="37">Salamanca</option><option value="40">Segovia</option><option value="41">Sevilla</option><option value="42">Soria</option><option value="43">Tarragona</option><option value="38">Tenerife</option><option value="44">Teruel</option><option value="45">Toledo</option><option value="46">Valencia</option><option value="47">Valladolid</option><option value="48">Vizcaya</option><option value="49">Zamora</option><option value="50">Zaragoza</option>
+        </select>
+        <br>
+        <input name="Submit" value="Buscar" type="submit"><br>
+        Patrocinado por: <br>
+        <a class="slncadt" id="spainhouses-logo-all" target="_blank" href="http://www.spainhouses.net/"><img src="Ubicua04_files/spainhouses_101x30.gif" title="Spainhouses.net - Su casa en España" border="0"></a>
+        </form>
+        </div>
+    </div>
+
+    <div class="advertisement">
+      <div class="title">Tienda</div>
+      <div class="content">
+            <div style="overflow: hidden; width: 100px; height: 140px; position: relative; top: 0px; left: 0px;"><div id="jedi0" style="overflow: hidden; width: 100px; height: 140px; position: absolute; top: 0px; left: 0px;">
+            <iframe style="display: none;" src="Ubicua04_files/ad_tpl.htm" marginwidth="0" marginheight="0" align="center" frameborder="no" height="185" scrolling="no" width="125"></iframe> 
+</div>
+</div>
+      </div>
+    </div>
+	
+    <div class="advertisement">
+      <div class="title">Boletín semanal</div>
+      <div class="content">
+      <form method="post" action="/boletines/iniciar_suscripcion/">
+      Email: <input class="text" name="email" type="text">
+      <input class="button" value="Suscribirme" type="submit">
+      <input name="src" value="sidebar" type="hidden">
+      </form>
+      <div class="slogan"><a href="http://www.laflecha.net/boletines/">Boletines publicados</a></div>
+      </div>
+    </div>
+	  </div>
+
+  
+
+
+<div style="text-align: center;">
+
+<div class="banner-sponsor"><!-- BEGIN PARTNER PROGRAM - DO NOT CHANGE THE PARAMETERS OF THE HYPERLINK -->
+<a class="slncadt" id="channelad-9" href="http://web.epartner.es/click.asp?ref=452308&amp;site=5269&amp;type=b13&amp;bnb=13" target="_blank">
+<img src="Ubicua04_files/view.gif" alt="ADSL  Telefónica" border="0" height="60" width="468"></a><br>
+<!-- END PARTNER PROGRAM -->
+</div>
+
+</div>
+
+
+<style type="text/css">
+	.banner-sponsor { border-top: 0; }
+</style>
+  <div id="navbar" class="sm min" style="margin-top: 10px;">
+    <ul>
+      
+<li style="background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; padding-left: 6px;"><a title="Volver a portada" href="http://www.laflecha.net/"><img style="margin-bottom: -1px;" class="icon" src="Ubicua04_files/home.png"></a></li>
+
+      <li><a href="http://www.laflecha.net/canales/ciencia?_xs=navbar">Ciencia</a></li>
+      <li><a href="http://www.laflecha.net/canales/ciencia/articulos?_xs=navbar">Artículos</a></li>
+
+    </ul>
+    </div>
+
+  <div id="content">
+  	<div id="content-footer-fix">
+        <div id="content-right" class="content-right">
+<dl class="primary">
+  
+
+  <dt class="primary">Ciencia</dt>
+  <dd class="primary articles">
+  <ul>
+  
+    
+    <li><a href="http://www.laflecha.net/canales/ciencia/articulos/los-beneficios-de-las-plantas-en-interiores">Los beneficios de las plantas en interiores</a></li>
+    
+    <li><a href="http://www.laflecha.net/canales/ciencia/articulos/son-las-ciencias-de-la-comunicacion-esencialmente-incompletas">¿Son las ciencias de la comunicación esencialmente incompletas?</a></li>
+    
+    <li><a href="http://www.laflecha.net/canales/ciencia/articulos/haciendo-pilates-con-las-neuronas">Haciendo pilates con las neuronas</a></li>
+    
+    <li><a href="http://www.laflecha.net/canales/ciencia/articulos/el-fin-de-los-aviadores">¿El fin de los aviadores?</a></li>
+    
+    <li><a href="http://www.laflecha.net/canales/ciencia/articulos/el-error-del-espacio-tiempo-ii">El error del espacio-tiempo (II)</a></li>
+        </ul>
+  </dd>
+  <dt class="primary">Del mismo autor</dt>
+  <dd class="primary articles">
+  <ul>
+  
+    
+    <li><a href="http://www.laflecha.net/canales/blackhats/articulos/posibilidades-de-triunfo-de-una-tienda-online-v-el-camino-del-exito">Posibilidades de triunfo de una tienda online V: El camino del éxito</a><div class="sm"><a href="http://www.laflecha.net/articulos/ciencia/computacion_ubicua/blackhats">Blackhats</a></div></li>
+    
+    <li><a href="http://www.laflecha.net/canales/curiosidades/articulos/los-asombrosos-anuncios-de-youtube">Los asombrosos anuncios de  Youtube</a><div class="sm"><a href="http://www.laflecha.net/articulos/ciencia/computacion_ubicua/curiosidades">Curiosidades</a></div></li>
+    
+    <li><a href="http://www.laflecha.net/canales/blackhats/articulos/posibilidades-de-triunfo-de-una-tienda-online-iv-los-productos">Posibilidades de triunfo de una tienda online IV: Los productos</a><div class="sm"><a href="http://www.laflecha.net/articulos/ciencia/computacion_ubicua/blackhats">Blackhats</a></div></li>
+    
+    <li><a href="http://www.laflecha.net/canales/blackhats/articulos/posibilidades-de-triunfo-de-una-tienda-online-iii-trato-al-cliente">Posibilidades de triunfo de una tienda online III: Trato al cliente</a><div class="sm"><a href="http://www.laflecha.net/articulos/ciencia/computacion_ubicua/blackhats">Blackhats</a></div></li>
+    
+    <li><a href="http://www.laflecha.net/canales/blackhats/articulos/posibilidades-de-triunfo-de-una-tienda-online-ii-soluciones">Posibilidades de triunfo de una tienda online II: Soluciones</a><div class="sm"><a href="http://www.laflecha.net/articulos/ciencia/computacion_ubicua/blackhats">Blackhats</a></div></li>
+        </ul>
+  </dd>
+</dl>
+</div>
+
+<div id="content-left" class="content-left">
+  <dl class="primary">
+    <dd class="primary">
+      <h1>Computación Ubicua - Capítulo I</h1>
+      <div class="summary"><div class="top-right"><div class="bottom-left"><div class="bottom-right"><div class="content-text" style="overflow: hidden;"><p></p><p>Según los teóricos de la computación, estamos entrando en una
+nueva era en la tecnología digital dominada por la Computación
+Ubicua, conocida también como Inteligencia Ambiental. Consideran
+que estamos finalizando el ciclo del Ordenador Personal, que siguió
+a la era, ya superada, de los grandes ordenadores o
+"Mainframes".</p>
+<p></p>
+
+</div></div></div></div></div>
+      <div class="sm article">26 Dic 2004 | <strong>José Manuel Gimeno</strong></div>
+              <div class="content-text"><sup>
+</sup>Al inicio de la tecnología digital, se diseñaron grandes
+ordenadores con el fin de dar servicio con un solo equipo a
+múltiples usuarios. Se caracterizaban por ser equipos de elevado
+coste y complejo manejo, solo al alcance de empresas poderosas con
+personal altamente cualificado.
+<p><br></p><p>Esa era acabó con el uso
+generalizado del PC, que permite una computación más democrática,
+donde cada persona posee y controla un ordenador de moderado coste,
+que progresivamente ha ido haciéndose más sencillo de manejar, de
+forma que personas sin preparación técnica, pueden hoy personalizar
+y adaptar a sus necesidades aplicaciones, ideadas para el gran
+consumo, que cada vez son más intuitivas y sencilla de manejar.</p>
+<p></p>
+<p><strong>La era de la Computación
+Ubicua</strong></p>
+<p><br></p>
+<p>Ahora parece que entramos en el
+albor de una nueva era, la de la <u><a href="http://www.ubiq.com/hypertext/weiser/UbiHome.html">Computación
+Ubic</a>ua</u>, caracterizada porque a cada persona actuará sobre
+una multitud de dispositivos programables. Dada su abundancia,
+necesariamente han de ser manejados con ninguno o mínimo esfuerzo,
+siendo en la mayor parte de los casos la interactividad entre el
+sujeto y la máquina absolutamente transparente, pues bastará con la
+maquina perciba su presencia para que interactúe con él, sin que en
+la mayoría de los casos el usuario tenga que hacer nada de forma
+consciente para ordenarlos, por lo que en la mayoría de los casos
+ni se percatara de su presencia.</p>
+<p></p>
+<p><strong>La sensibilidad de los
+objetos</strong></p>
+<p></p>
+<p>De acuerdo <u><a href="http://www.baquia.com/com/legacy/14184.html">con la Ley de
+Moore</a></u>, se espera que los dispositivos electrónicos
+continúen reduciendo su tamaño y precio en el futuro. Ello es
+aplicable por igual a cualquier componente, sean procesadores,
+dispositivos de almacenamiento o sistemas de comunicación. Por
+tanto, es previsible que en un futuro próximo, sea económica y
+físicamente factible, incrustar dispositivos digitales en cualquier
+objeto de uso común, lo que les dotará de lo que se ha dado en
+llamar "sensibilidad", (smartness), o la propiedad, a
+modo de camaleones digitales, de cambiar su comportamiento de
+acuerdo con las circunstancias ambientales que le rodean.</p>
+<p><br></p>
+<p>Por ejemplo, se espera que las
+lavadoras apliquen la temperatura y programa de lavado adecuado a
+las características de las prendas a lavar, pues estas llevará un
+chip RFID en la etiqueta que indicará las condiciones para el
+lavado. Igualmente, ese mismo chip puede controlar la temperatura
+de la plancha o de la secadora, o seleccionar los disolventes a
+utilizar en las limpiezas en seco. De modo similar una bicicleta de
+gimnasia podrá modificar el esfuerzo necesario para moverla, en
+función de la fuerza y grado cansancio del usuario etc.</p>
+<p><br></p>
+<p>Otros equipos como los microondas
+pueden llegar a detectar cuando la temperatura de cocción ha
+alcanzado el interior de los alimentos y parar automáticamente.
+Poco a poco estos aparatos están llegando de puntillas a nuestras
+vidas y son de tan fácil uso que no reparamos normalmente en ellos.
+El que con ayuda de un telemando el televisor busque
+automáticamente los canales, que mediante un teléfono se pueda, no
+solo seleccionar la temperatura sino programar la hora de inicio y
+fin del funcionamiento de la calefacción del hogar, o que el
+automóvil desbloquee las puertas y encienda los pilotos con solo
+pulsar un botón de una llave electrónica, nos parece operaciones
+tan sencillo que no reparamos que para efectuarlas se precisa el
+concurso de un pequeño procesador.</p>
+<p><br></p>
+<p></p>
+<p><strong>Comportamiento coordinado de
+varios objetos</strong></p>
+<p><br></p>
+<p>Las posibilidades que se presentan
+con esta capacidad de cambio de comportamiento de los objetos,
+cuando estos cambios se pueden llevar a cabo de modo coordinado
+entre diversos aparatos, son precisamente lo que se explora en
+estos momentos en los laboratorios de Computación Ubicua. Como su
+nombre indica se buscan conseguir acciones realizadas de forma
+coordinada por procesadores situados en multitud de objetos
+pertenecientes a la vida cotidiana por ello también se les domina
+procesos de Inteligencia Ambiental.</p>
+<p><br></p>
+<p>Para hacer posible esta interacción,
+se necesitará que estos pequeños y baratos procesadores estén
+conectados a sensores y actuadores colocados en objetos del entorno
+del usuario y que se encuentren formando una red que soporte el que
+entran en juego mediante procesos distribuidos, donde cada
+procesador, aparte de modificar el comportamiento de un objeto,
+interactúa e intercambia información con los demás para conseguir
+un objetivo que precisa del trabajo coordinado de todos ellos.</p>
+<p><br></p>
+<p>Igualmente es necesario el concurso
+de la computación móvil, pues parte de los procesos acompañen al
+individuo en sus desplazamientos, tanto próximos, como el deambular
+por un edificio, como lejanos, como los desplazamientos en un
+vehículo. Ello exige que algunos de estos dispositivos sean de
+fácil transporte y que tengan la capacidad de conectarse
+automáticamente a las redes existentes, allá donde se les
+traslade.</p>
+<p><br></p>
+<p>Finalizamos aquí la presentación de
+la Computación Ubicua, dejando para la semana que viene presentar
+las características que según los expertos debe llegar a adquirir
+el Hardware y Software implicado en estos procesos de Computación
+Ubicua, y en un tercer y cuarto capítulo comentaremos algunas
+realidades y proyectos que ya están en marcha siguiendo las
+directrices de esta tecnología.</p>
+
+</div>
+
+      
+<div class="tags-list sm">Tags: <strong><a href="http://www.laflecha.net/tags/computacion_ubicua">computacion_ubicua</a></strong>, <strong><a href="http://www.laflecha.net/tags/inteligencia_ambiental">inteligencia_ambiental</a></strong></div> 
+
+      
+	  <div style="text-align: center;"><div style="margin-top: 10px; width: 200px; margin-left: auto; margin-right: auto; text-align: left;">
+
+
+</div></div>
+    </dd>
+  </dl>
+</div>
+
+<dl class="primary">
+    <dt class="primary">Comentarios</dt>
+    <dd class="primary comments"><div id="comments">
+<script type="text/javascript">var comments = [];</script> 
+  <div class="sm small-letter centered" style="margin-bottom: 10px;">LaFlecha.net no se hace responsable del contenido de los comentarios publicados.</div>
+
+
+
+<script type="text/javascript">function show_full_comment(comment_id) {
+	slnc.hide('comment'+comment_id+'preview');
+	slnc.show('comment'+comment_id+'full');
+}</script>
+
+<div id="comment129585" class="comment">
+  
+  <script type="text/javascript">comments[129585] = new Array(1106504624, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment129585editlink"><a href="http://www.laflecha.net/comentarios/editar/129585?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment129585dellink"><a href="http://www.laflecha.net/comentarios/borrar/129585?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#1</span> | <span class="sm">23 Ene 2005, 19:23</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Aldus</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Todo para tratar al usuario como un estupido, y que ademas lo pueda ser.
+</p><p>No desidas nada, que las maquinas lo hacen por vos. Bueno seguro
+que solo si tenes dinero tendras estas opciones, pensandolo de otra
+manera eso es bueno.
+</p><p>Que los que tegan mas dinero se vuelvan cadaves mas inutiles y
+dependientes de las maquinas y asi los que piensan desde los que hacen
+las maquina, areglan... etc. se lleva el dinero.
+</p><p>suerte.</p></div>
+</div>
+
+<div id="comment127743" class="comment">
+  
+  <script type="text/javascript">comments[127743] = new Array(1112545271, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment127743editlink"><a href="http://www.laflecha.net/comentarios/editar/127743?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment127743dellink"><a href="http://www.laflecha.net/comentarios/borrar/127743?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#2</span> | <span class="sm">03 Abr 2005, 18:21</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Charlie Mike</strong> <img class="icon" src="Ubicua04_files/pe.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Como
+Analista de Sistemas veo muy positivo y acertadada esta tecnologia que
+por si fuera poco nos ingresa a un nuevo mundo NET, explico es decir
+estamos siendo parte de una Super Red Domestica en la cual todos los
+artefactos electrodomesticos ya interactuan en este nuevo ambiente
+dandonos un mayor tiempo de nuestra vida cotidiana (aclaro este punto
+pues no creo que nos estamos voviendo inuties, inconsientemente nos
+metemos al mundo de la programacion) Vease hoy como niños de 3 años ya
+saben operar un mando de Control Remoto de Television (Este niño ya es
+un programador). Bueno en fin felicito a la empresas que le dan el
+empuje a esta nueva tecnologia en COMPUTACION UBICUA.
+</p><p>
+</p><p>Saludos a todos
+</p><p>
+</p><p>MOQUEGUA  - PERU</p></div>
+</div>
+
+<div id="comment128316" class="comment">
+  
+  <script type="text/javascript">comments[128316] = new Array(1114198809, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment128316editlink"><a href="http://www.laflecha.net/comentarios/editar/128316?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment128316dellink"><a href="http://www.laflecha.net/comentarios/borrar/128316?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#3</span> | <span class="sm">22 Abr 2005, 21:40</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> La neurona inquieta</strong> <img class="icon" src="Ubicua04_files/es.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Está
+muy bien todo eso del comportamiento coordinado de cualquier
+dispositivo que actualmente manejamos de forma manual. Pero... ¿no
+deberían preocuparse un poco más por el comportamiento coordinado de
+los goviernos para apañar esto un poco en vez de inventar chorradas
+binarias para evitar que movamos el culo y así convertirnos en
+vegetales cada día más al servicio de estos goviernos?
+</p><p>
+</p><p>Barcelona -spain-</p></div>
+</div>
+
+<div id="comment127590" class="comment">
+  
+  <script type="text/javascript">comments[127590] = new Array(1115235100, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment127590editlink"><a href="http://www.laflecha.net/comentarios/editar/127590?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment127590dellink"><a href="http://www.laflecha.net/comentarios/borrar/127590?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#4</span> | <span class="sm">04 May 2005, 21:31</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Sb</strong> </div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Me
+parece excelente idea, aunque los humanos deberiamos controlar algo.
+Pero el avance tecnologico de la Computacion ubicua me parece una gran
+idea, en especial con el auge de los microcontroladores, y las formas
+de comunicarlos con otros elementos.</p></div>
+</div>
+
+<div id="comment127677" class="comment">
+  
+  <script type="text/javascript">comments[127677] = new Array(1115283786, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment127677editlink"><a href="http://www.laflecha.net/comentarios/editar/127677?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment127677dellink"><a href="http://www.laflecha.net/comentarios/borrar/127677?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#5</span> | <span class="sm">05 May 2005, 11:03</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> KLC</strong> <img class="icon" src="Ubicua04_files/cr.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Me
+parece también una muy buena idea. El solo hecho de que todos los
+dispositivos esten conectados de alguna forma y que se pueden comunicar
+entre sí es un avance considerable. </p><p>Sin embargo, todo tiene su costo, en este caso serían los
+gastos en investigación para desarrollar los sistemas de seguridad y
+además la miniaturización cada vez más de los componentes electricos.
+</p><p>
+</p><p>Saludos a todos
+</p><p>
+</p><p>San Jose - Costa Rica</p></div>
+</div>
+
+<div id="comment129407" class="comment">
+  
+  <script type="text/javascript">comments[129407] = new Array(1123666157, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment129407editlink"><a href="http://www.laflecha.net/comentarios/editar/129407?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment129407dellink"><a href="http://www.laflecha.net/comentarios/borrar/129407?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#6</span> | <span class="sm">10 Ago 2005, 11:29</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> J. Roa</strong> <img class="icon" src="Ubicua04_files/es.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>En
+muchas áreas del conocimiento es normal encontrar cierta resistencia al
+cambio, más cuando los involucrados no hacen el intento de desligarse
+del yugo que los paradigmas ejercen. Si vemos el cambio desde el punto
+de vista de la evolución natural, podríamos hacer una comparación que
+puede parecer burda, en el reino animal irracional solo los más aptos y
+fuertes sobreviven, así mismo, la parte racional del mismo reino a la
+cual pertenecemos, basa su competitividad en la inteligencia y el
+conocimiento para sobrevivir. Por lo tanto la computación ubicua así
+como muchas ramas de la ciencia, ayudaran a que la humanidad avance a
+un futuro tecnológico que nos permitirá sobrevivir en este mundo
+monetario. Es claro que no nos haremos más o menos inteligentes o
+estaremos más o menos preparados físicamente si pulsamos un botón para
+seleccionar la temperatura de la plancha o la lavadora, o si dejamos
+que los aparatos se encarguen de eso. Por el contrario este tipo de
+tecnologías nos facilitaran la vida y permitirán que tengamos mas
+tiempo para trabajar, estudiar, hacer deporte etc. Entonces si
+rechazamos estos avances lo único que conseguiremos es quedarnos en el
+atraso mental y tecnológico, exponiéndonos a la eliminación natural
+racional.
+</p><p>
+</p><p>¿Quien no ha deseado en un día frío llegar a casa y encontrar una taza de café recién hecho?
+</p><p>
+</p><p>Bucaramanga - Colombia</p></div>
+</div>
+
+<div id="comment128875" class="comment">
+  
+  <script type="text/javascript">comments[128875] = new Array(1126500874, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment128875editlink"><a href="http://www.laflecha.net/comentarios/editar/128875?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment128875dellink"><a href="http://www.laflecha.net/comentarios/borrar/128875?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#7</span> | <span class="sm">12 Sep 2005, 06:54</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> NcL</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Mientras
+mas tiempo uno tenga; mas uno podrá desarrollarse, así sea con practica
+o conocimiento pero con seguridad llegaremos mas lejos.
+</p><p> Quien no desea tener tiempo para terminar de de leer una
+revisa o de mejorar en su deporte preferido; de estudiar lo que a uno
+le apasiona o simplemente tener ese tiempo para pensar, que es lo que
+nos caracteriza como humanos. Si pudiera tener mas tiempo... no lo
+dudaría.
+</p><p>    Estamos en una época en la que abunda la información y si no tenemos tiempo para consumirla... ¿de que nos sirve?</p></div>
+</div>
+
+<div id="comment129909" class="comment">
+  
+  <script type="text/javascript">comments[129909] = new Array(1127833791, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment129909editlink"><a href="http://www.laflecha.net/comentarios/editar/129909?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment129909dellink"><a href="http://www.laflecha.net/comentarios/borrar/129909?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#8</span> | <span class="sm">27 Sep 2005, 17:09</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> luis miguel banderas</strong> <img class="icon" src="Ubicua04_files/mx.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Deseo
+saber mas sobre esta tecnologia que evidentemente es muy asombrosa
+quisas tengan un articulo o una monografia relacionada a la computacion
+ubicua por favor haganmelo saber.</p></div>
+</div>
+
+<div id="comment128379" class="comment">
+  
+  <script type="text/javascript">comments[128379] = new Array(1129701685, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment128379editlink"><a href="http://www.laflecha.net/comentarios/editar/128379?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment128379dellink"><a href="http://www.laflecha.net/comentarios/borrar/128379?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#9</span> | <span class="sm">19 Oct 2005, 08:01</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Marco Antonio Muñoz</strong> <img class="icon" src="Ubicua04_files/pe.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Me
+gustaria investigar, conocer y analizar mucho mas sobre este
+interesante tema, a aquellas personas que hayan realizado
+investigaciones o trabajos previos favor de enviarlo a <a href="mailto:mmunoz@derrama.org.pe">mmunoz@derrama.org.pe</a> de antemano los agradezco.
+</p><p>
+</p><p>
+</p><p>HUancayo - Peru</p></div>
+</div>
+
+<div id="comment127998" class="comment">
+  
+  <script type="text/javascript">comments[127998] = new Array(1129990015, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment127998editlink"><a href="http://www.laflecha.net/comentarios/editar/127998?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment127998dellink"><a href="http://www.laflecha.net/comentarios/borrar/127998?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#10</span> | <span class="sm">22 Oct 2005, 16:06</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> criminologo</strong> <img class="icon" src="Ubicua04_files/do.htm"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>yo
+solo kiero k esta tecnologia futurista sea lo suficientemente buena
+como para k no hayan mas crimenes y si los hay se sepa al instante kien
+lo comete para k se le de su merecido.Si este es el camino k lleva esta
+tecnologia es buena, de lo contrario es mala.</p></div>
+</div>
+
+<div id="comment128118" class="comment">
+  
+  <script type="text/javascript">comments[128118] = new Array(1130009140, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment128118editlink"><a href="http://www.laflecha.net/comentarios/editar/128118?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment128118dellink"><a href="http://www.laflecha.net/comentarios/borrar/128118?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#11</span> | <span class="sm">22 Oct 2005, 21:25</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Andy Ros</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Aldus: 3 en Expresión, 2 en ortografía, eres de los que necesitarán de la C.U. para sobrevivir. Suerte...requerirás.
+</p><p>Neurona inquieta: yo diría mas bien estática. 2 en ortografía. Gobierno.Borrico.
+</p><p>Criminólogo: Los mensajitos te dañaron el neocortex muchacho.
+Sin embargo tus deseos de sacarte de encima los bad boys no me parece
+desacertada.
+</p><p> 
+</p><p>Pero como piensa J. Roa la teconología computacional marcha
+hacia esos rumbos y difícilmente se detenga. Nos acostumbraremos a
+utilizarla como hoy lo hacemos con los dispositivos tecnológicos que
+empleamos a diario.</p></div>
+</div>
+
+<div id="comment130361" class="comment">
+  
+  <script type="text/javascript">comments[130361] = new Array(1142536857, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130361editlink"><a href="http://www.laflecha.net/comentarios/editar/130361?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130361dellink"><a href="http://www.laflecha.net/comentarios/borrar/130361?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#12</span> | <span class="sm">16 Mar 2006, 20:20</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> UNIMAR</strong> <img class="icon" src="Ubicua04_files/ve.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>no entendi nada</p></div>
+</div>
+
+<div id="comment130360" class="comment">
+  
+  <script type="text/javascript">comments[130360] = new Array(1142536888, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130360editlink"><a href="http://www.laflecha.net/comentarios/editar/130360?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130360dellink"><a href="http://www.laflecha.net/comentarios/borrar/130360?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#13</span> | <span class="sm">16 Mar 2006, 20:21</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> UNIMAR</strong> <img class="icon" src="Ubicua04_files/ve.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>tienen que ser explisitos</p></div>
+</div>
+
+<div id="comment130418" class="comment">
+  
+  <script type="text/javascript">comments[130418] = new Array(1143247697, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130418editlink"><a href="http://www.laflecha.net/comentarios/editar/130418?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130418dellink"><a href="http://www.laflecha.net/comentarios/borrar/130418?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#14</span> | <span class="sm">25 Mar 2006, 01:48</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> AnitA</strong> <img class="icon" src="Ubicua04_files/pe.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>jajaja es verdad neurona inquieta creo q ya expiraste jajaja burra</p></div>
+</div>
+
+<div id="comment130799" class="comment">
+  
+  <script type="text/javascript">comments[130799] = new Array(1147960190, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130799editlink"><a href="http://www.laflecha.net/comentarios/editar/130799?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130799dellink"><a href="http://www.laflecha.net/comentarios/borrar/130799?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#15</span> | <span class="sm">18 May 2006, 15:49</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> arpauara</strong> <img class="icon" src="Ubicua04_files/co.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Me
+parece que aldus dijo algunas puntos importantes. Pero indudablemente
+estamos en un proceso de evoluciòn donde algunos seran los esclavos de
+los otos, el rico sera el inteligente que sabe dominar las maquinas, el
+pobre sera el estupido que lo dominan las maquinas!</p></div>
+</div>
+
+<div id="comment130861" class="comment">
+  
+  <script type="text/javascript">comments[130861] = new Array(1148698308, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130861editlink"><a href="http://www.laflecha.net/comentarios/editar/130861?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130861dellink"><a href="http://www.laflecha.net/comentarios/borrar/130861?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#16</span> | <span class="sm">27 May 2006, 04:51</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Jolmaf</strong> <img class="icon" src="Ubicua04_files/pe.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Dejen
+de discutir si se deberia o no investigar y desarrollar sobre esta
+nueva tecnologia, porque mientras discuten ello, otros ya estan
+avanzando y al final seremos solo usuarios de lo que otros
+desarrollan... lo digo sobre todo para aquellos que somos de paises
+"SubDesarrollados" porque es en el campo del desarrollo de software
+donde esta la posibilidad de encontrar el camino al desarrollo
+general... asi que empiecen ya!! a compartir enlaces, docuemntos,
+traducciones sobre esta tecnologia y EVOLUCIONEMOS... como bien dijeron
+algunos... lineas arriba ...
+</p><p>
+</p><p>Lima - PERU</p></div>
+</div>
+
+<div id="comment130959" class="comment">
+  
+  <script type="text/javascript">comments[130959] = new Array(1149337408, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment130959editlink"><a href="http://www.laflecha.net/comentarios/editar/130959?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment130959dellink"><a href="http://www.laflecha.net/comentarios/borrar/130959?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#17</span> | <span class="sm">03 Jun 2006, 14:23</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Timón el misántropo Cácer</strong> <img class="icon" src="Ubicua04_files/es.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Andy
+Ros, el de la vocación de profesor de lengua castellana, permiteme
+defender a quienes tu has criticado que precisamente son los que han
+tratado de iniciar algún debate:
+</p><p>+La neurona inquieta: no tiene un nombre anglosajón (andy) pero
+esa ortografía del norte ya le llega hasta las entrañas (goverment),
+ese fallo lo he tenido yo alguna vez. Sin embargo, y puede que me
+equivoque, me pareces de esos tipos que van de progres y llevan todos
+los temas a la política y concluyen: el mundo apesta, no a todo. Si
+hubieses criticado el capitalismo tendría una confirmación.
+</p><p>+Aldus: es argentino o algo ¿no? Con el pc escribe igual q habla supongo ¿qué más da? Propone una conversación interesante.
+</p><p>Antes de unirme a ella, una lección de sintaxis para el corrector:
+</p><p>"Sin embargo tus deseos de sacarte de encima los bad boys no me parece desacertada" 
+</p><p>tus deseos-&gt;masc.plu.
+</p><p>desacertada-&gt;fem.sing.
+</p><p>Por favor, andy ros, no puntues el castellano ajeno si no sabes
+puntuar en castellano (lo de las comas y eso) y, además, no sabes lo
+que es la concordancia.
+</p><p>
+</p><p>Volviendo a la computación ubicua y sus repercusiones sociales,
+cualquier avance tecnológico es positivo (más tiempo para consumir
+información). Además, el hecho de que exista un interfaz apto para
+deficientes mentales no te obliga a usarlo: fijensé en estos "locos
+osados" q usan linux (y hasta debian) en lugar de windows XP.
+Efectivamente, las facilidades no impulsan el aprendizaje y los ricos
+mimados serán cada vez más inútiles. Yo digo "Sí a la nobleza y a la
+aristocrácia, No a la posibilidad de herederla". Comparto con Jolmaf
+que el exportar información es el futuro de los países
+subdesarrollados, el software libre y el hardware antiguo es la toda la
+infrastructura necesaria.</p></div>
+</div>
+
+<div id="comment131197" class="comment">
+  
+  <script type="text/javascript">comments[131197] = new Array(1152589353, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment131197editlink"><a href="http://www.laflecha.net/comentarios/editar/131197?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment131197dellink"><a href="http://www.laflecha.net/comentarios/borrar/131197?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#18</span> | <span class="sm">11 Jul 2006, 05:42</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> andres benoit</strong> <img class="icon" src="Ubicua04_files/ve.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Creo
+que la nueva era de la computacion va a ser muy llamativa para los
+jovenes ya que en el futuro las personas que no sepan mas de 3 idiomas
+y no sepan de computacion seran analfabetas y me estoy preparando para
+se un ingeniero un gran personaje todos me recordaran tengo ideas
+creativas en mente aunq solo tengo 12 años.
+</p><p>
+</p><p>todos dicen q soy anticuado yo no pienso eso ya que quiero ser alguin grande.
+</p><p>
+</p><p>en mi salon de clase estabamos discutiendo moises y yo ya que el
+tambien es apasionado por la computacion y hablabamos del mp2 luego
+sale una niña y se burla de nosotros y nos dice q tal aparato no
+existe, veo un futuro oscuro para ella.
+</p><p>
+</p><p>mp2 viene de la rama musical y tambien de la  multimedia.
+</p><p>
+</p><p>ella no se da cuenta que cuando usa limewire para bajar su
+musica la descarga se realiza mp2, mp3,wma, y yo hice q se tragara sus
+palabras ahora estoy estudiando en un curso gratis en la red para ser
+hacker. </p><p>
+</p><p>espero q estudien</p></div>
+</div>
+
+<div id="comment144333" class="comment">
+  
+  <script type="text/javascript">comments[144333] = new Array(1161099404, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment144333editlink"><a href="http://www.laflecha.net/comentarios/editar/144333?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment144333dellink"><a href="http://www.laflecha.net/comentarios/borrar/144333?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#19</span> | <span class="sm">17 Oct 2006, 17:36</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> El ser Humano</strong> <img class="icon" src="Ubicua04_files/co.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Todos
+estos avances mejoran la calidad de vida pero esperemos que esa forma
+de etiquetar a los objetos, en un futuro ya sea lejano o cercano no se
+use para "etiquetar a las personas". Gracias por su lectura</p></div>
+</div>
+
+<div id="comment156444" class="comment">
+  
+  <script type="text/javascript">comments[156444] = new Array(1168711798, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment156444editlink"><a href="http://www.laflecha.net/comentarios/editar/156444?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment156444dellink"><a href="http://www.laflecha.net/comentarios/borrar/156444?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#20</span> | <span class="sm">13 Ene 2007, 19:09</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> el realista</strong> <img class="icon" src="Ubicua04_files/ve.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>unimar
+eres un bruto! ahhh ya sé! es porque estudias alli... bueno en serio,
+la computacion ubicua es algo que poco a poco y sin darnos cuenta se
+esta introduciendo en la sociedad a medida que avanza la tecnologia.
+</p><p>cada vez las computadoras son mas pequeñas, los celulares
+tienen mas capacidad de navegabilidad en internet y programas
+especiales, los reproductores mp3 los puedes encontrar hasta en un
+reloj, pendrives minimos de hasta 10 gigas, etc, etc, etc, todo esto es
+un pequeño ejemplo de la ubicomp y que sera el 3er paradigma de la
+computacion que venga a este mundo.
+</p><p>denle la bienvenida a esta tecnologia que nos va a ser muy util
+en nuestra vida cotidiana en un breve futuro y suerte a todos con la
+C.U.
+</p><p>
+</p><p>isla de margarita - VENEZUELA</p></div>
+</div>
+
+<div id="comment202195" class="comment">
+  
+  <script type="text/javascript">comments[202195] = new Array(1178138919, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment202195editlink"><a href="http://www.laflecha.net/comentarios/editar/202195?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment202195dellink"><a href="http://www.laflecha.net/comentarios/borrar/202195?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#21</span> | <span class="sm">02 May 2007, 22:48</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> gustavo coronel</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>me
+parece un tema bastante bueno, del cual no tenia conocimiento si bien
+estamos en contacto con una era en la cual trasciende los avances
+tecnologicos muchas veces ignoramos su significado.</p></div>
+</div>
+
+<div id="comment202817" class="comment">
+  
+  <script type="text/javascript">comments[202817] = new Array(1178292801, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment202817editlink"><a href="http://www.laflecha.net/comentarios/editar/202817?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment202817dellink"><a href="http://www.laflecha.net/comentarios/borrar/202817?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#22</span> | <span class="sm">04 May 2007, 17:33</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Anónimo</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p><img class="smiley" src="Ubicua04_files/aplausos.gif"> esta muy buena la pag. y tiene muy buena infornmacion</p></div>
+</div>
+
+<div id="comment208208" class="comment">
+  
+  <script type="text/javascript">comments[208208] = new Array(1179588725, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment208208editlink"><a href="http://www.laflecha.net/comentarios/editar/208208?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment208208dellink"><a href="http://www.laflecha.net/comentarios/borrar/208208?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#23</span> | <span class="sm">19 May 2007, 17:32</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Anónimo</strong> <img class="icon" src="Ubicua04_files/pe.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>ELTEMA ES SUPER   INTERESANTEY YO TAMVIEN  QUISIERA PERFECCIONARME                </p><p> QUISIERA QUE ME DEAEEN ALGUNAS INTRCCIONES O COMENTARIOS </p><p><a href="mailto:axel_a8@hotmail.com">axel_a8@hotmail.com</a>                                                                    <img class="smiley" src="Ubicua04_files/abrazo.gif"></p></div>
+</div>
+
+<div id="comment232655" class="comment">
+  
+  <script type="text/javascript">comments[232655] = new Array(1186290591, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment232655editlink"><a href="http://www.laflecha.net/comentarios/editar/232655?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment232655dellink"><a href="http://www.laflecha.net/comentarios/borrar/232655?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#24</span> | <span class="sm">05 Ago 2007, 07:09</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> mailen</strong> <img class="icon" src="Ubicua04_files/ar.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>entendi todo tengo 9 años y estendi no soy komo una ke puso ke no estendio jajajjaja</p></div>
+</div>
+
+<div id="comment321642" class="comment">
+  
+  <script type="text/javascript">comments[321642] = new Array(1195427061, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment321642editlink"><a href="http://www.laflecha.net/comentarios/editar/321642?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment321642dellink"><a href="http://www.laflecha.net/comentarios/borrar/321642?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#25</span> | <span class="sm">19 Nov 2007, 00:04</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Dhaniel</strong> <img class="icon" src="Ubicua04_files/mx.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p><img class="smiley" src="Ubicua04_files/aplausos.gif"> Me interesa mucho esto de la computación ubicua y llamaría mas atención porque serian circuitos digitales y sensores </p><p>Baja California/México</p></div>
+</div>
+
+<div id="comment361222" class="comment">
+  
+  <script type="text/javascript">comments[361222] = new Array(1201021189, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment361222editlink"><a href="http://www.laflecha.net/comentarios/editar/361222?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment361222dellink"><a href="http://www.laflecha.net/comentarios/borrar/361222?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#26</span> | <span class="sm">22 Ene 2008, 17:59</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> anonimo</strong> <img class="icon" src="Ubicua04_files/mx.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>es la pagina mas chafa  <img class="smiley" src="Ubicua04_files/abajo.gif"></p></div>
+</div>
+
+<div id="comment361228" class="comment">
+  
+  <script type="text/javascript">comments[361228] = new Array(1201021301, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment361228editlink"><a href="http://www.laflecha.net/comentarios/editar/361228?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment361228dellink"><a href="http://www.laflecha.net/comentarios/borrar/361228?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#27</span> | <span class="sm">22 Ene 2008, 18:01</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> anonimo</strong> <img class="icon" src="Ubicua04_files/mx.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>yo diria que es mejor si pusieran mas informacion no tiene casi nada de informacion  <img class="smiley" src="Ubicua04_files/babeo.gif"></p></div>
+</div>
+
+<div id="comment362437" class="comment">
+  
+  <script type="text/javascript">comments[362437] = new Array(1201180976, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment362437editlink"><a href="http://www.laflecha.net/comentarios/editar/362437?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment362437dellink"><a href="http://www.laflecha.net/comentarios/borrar/362437?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#28</span> | <span class="sm">24 Ene 2008, 14:22</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> Anónimo</strong> <img class="icon" src="Ubicua04_files/mx.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>que pagina tan pirata no tiene nada <img class="smiley" src="Ubicua04_files/abajo.gif"></p></div>
+</div>
+
+<div id="comment415254" class="comment">
+  
+  <script type="text/javascript">comments[415254] = new Array(1206706405, 0);</script>
+
+
+  <div class="author">
+    <div class="comment-author-right">
+    <div class="comment-author-left">
+    
+    
+    <div class="comment-controls sm tstamp">
+  <span class="hidden" id="comment415254editlink"><a href="http://www.laflecha.net/comentarios/editar/415254?redir_to=/articulos/ciencia/computacion_ubicua/&amp;content_id=100">Editar</a> |</span>
+  <span class="hidden" id="comment415254dellink"><a href="http://www.laflecha.net/comentarios/borrar/415254?content_id=100&amp;redir_to=%2Farticulos%2Fciencia%2Fcomputacion_ubicua%2F" onclick="return confirm('¿Estás seguro de que quieres borrar este comentario?');">Borrar</a> |</span>
+  <span class="comment-number">#29</span> | <span class="sm">28 Mar 2008, 13:13</span>
+
+  </div>
+  
+  <strong><img class="comment-user-icon" src="Ubicua04_files/anon.gif"> EduGN</strong> <img class="icon" src="Ubicua04_files/es.gif"></div>
+    </div>
+  </div>
+
+  <div class="avatar"><img src="Ubicua04_files/blank.gif" style="height: 50px; width: 50px;" class="icon"></div>
+  <div class="text"><p>Creo
+que la computacion movil supone un avance simplemente en la dirección
+de mejorar la calidad de vida, aunque siempre existirá la incertidumbre
+que plantea la aplicación de tecnicas no exactas (heurísticas).</p></div>
+</div>
+
+
+
+
+
+    
+      <div class="sm centered" style="margin-top: 20px; line-height: 12px; font-weight: bold;"><a title="Suscríbete con un lector RSS y mantente informado de los últimos comentarios" href="http://www.laflecha.net/rss/comentarios/Article/136"><img class="icon" src="Ubicua04_files/rss.gif" style="vertical-align: middle;"></a> <a title="Suscríbete con un lector RSS y mantente informado de los últimos comentarios en este contenido" href="http://www.laflecha.net/rss/comentarios/Article/136">Entérate de cuándo hay nuevos comentarios</a></div>
+           
+  
+
+      <br>
+      <script type="text/javascript">
+      function evaluate_terms_of_commenting(value)
+      {
+        var author  = document.getElementById('comment_author');
+        var comment = document.getElementById('comment_comment');
+        var submit  = document.getElementById('comment_submit');
+
+        if (value)
+        {
+          author.disabled = false;
+          comment.disabled = false;
+          submit.disabled = false;
+        }
+        else
+        {
+          author.disabled = true;
+          comment.disabled = true;
+          submit.disabled = true;
+        }
+        // todo save cookie
+      }
+      </script>
+    <form method="post" action="/comentarios/crear?check=3bd9bff973a11b63ce39576bdf3ea221801c3063">
+      <input name="redir_to" value="/articulos/ciencia/computacion_ubicua/" type="hidden">
+      <input name="content_id" value="100" type="hidden">
+      
+    <p class="sm">No se permitirán los comentarios que :<br>
+- puedan resultar ofensivos o injuriosos<br>
+- incluyan insultos, alusiones sexuales innecesarias y palabras soeces o vulgares <br>
+- apoyen la pedofilia, el terrorismo o la xenofobia</p>
+    <input value="add_comment" id="commentaction" name="action_commentableItem" type="hidden">
+    <div style="width: 100%;">
+    <table>
+      
+      <tbody><tr valign="top">
+        <td style="width: 125px;">Autor</td>
+        <td><input id="comment_author" class="text" name="author" maxlength="25" style="width: 90%;" value="" type="text"></td>
+      </tr>
+            <tr valign="top">
+        <td style="width: 125px;" class="w125"><strong>Comentario</strong><br>
+				
+          <div style="border: 1px solid rgb(243, 243, 243); background: rgb(251, 251, 251) none repeat scroll 0% 0%; overflow: auto; margin-top: 10px; height: 154px; padding-top: 3px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:666:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/666.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:abajo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/abajo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:abrazo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/abrazo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:angel:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/angel.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:aplausos:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/aplausos.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:babeo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/babeo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:bote:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/bote.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cabezota:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cabezota.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cansado:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cansado.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:chincha2:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/chincha2.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:chincha:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/chincha.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:chiton:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/chiton.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cool:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cool.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cry:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cry.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:eek:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/eek.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:flame:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/flame.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:flipo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/flipo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:flirteo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/flirteo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:grin:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/grin.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:griton:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/griton.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:grr:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/grr.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:happy:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/happy.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:huh:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/huh.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:inclino:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/inclino.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:indifferent:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/indifferent.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:jdt:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/jdt.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:ko:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/ko.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:leche:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/leche.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:lipsrsealed:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/lipsrsealed.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:lloron:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/lloron.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:meneito:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/meneito.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:modesto:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/modesto.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:morreo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/morreo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:nono:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/nono.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:nooo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/nooo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:ok:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/ok.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:pedo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/pedo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:rofl:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/rofl.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:roll:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/roll.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:sad:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/sad.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:sartenazo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/sartenazo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:smile:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/smile.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:tongue:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/tongue.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:ugh:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/ugh.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:uh:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/uh.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:undecided:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/undecided.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:wee:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/wee.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:wink:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/wink.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:zumbao:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/zumbao.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:zzz:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/zzz.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:malaleche:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/malaleche.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:dentuo:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/dentuo.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:idea:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/idea.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:pirata:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/pirata.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cook:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cook.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:cool2:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/cool2.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:dance:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/dance.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:dead:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/dead.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:duende:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/duende.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:enfermito:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/enfermito.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt0">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:et:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/et.gif">
+  </span>
+
+  <span style="margin: 2px;" class="alt1">
+    <img class="smiley" style="cursor: pointer;" title="Insertar smiley" onclick="document.getElementById('comment_comment').value = document.getElementById('comment_comment').value + ' [:music:] '; document.getElementById('comment_comment').focus();" src="Ubicua04_files/music.gif">
+  </span>
+
+</div>
+
+		          </td>
+        <td><textarea id="comment_comment" name="text" style="width: 95%; height: 175px; font-size: 12px; font-family: verdana;"></textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="text-align: right; padding-right: 25px;">
+				<input name="_xca" value="xab19-0" type="hidden">
+		<input class="icon" alt="Enviar comentario" src="Ubicua04_files/btn_send2.gif" onclick="return check_comment();" type="image">
+				
+		</td>
+      </tr>
+	  </tbody></table>
+	  <script type="text/javascript">function check_comment() {
+	  	if ($('comment_comment').value == '') {
+			alert('El comentario está en blanco.')
+			return false;
+			}
+			else {
+				return true;
+			}
+	  	}</script>
+	  <table>
+      <tbody><tr>
+        <td><span class="sm">BBCode (<strong><a href="http://www.laflecha.net/site/bbcode" onclick="window.open('/site/bbcode', 'ayuda_bbcode', 'width=635,height=520'); return false;">Ayuda</a></strong>): [b], [i], [quote], [code]</span></td>
+      </tr>
+    </tbody></table>
+  </div>
+    </form>
+    <script type="text/javascript" language="JavaScript">
+      document.getElementById('commentaction').value = 'add_comment';
+    </script>
+</div>
+</dd>
+    <dt class="primary">Publicidad</dt> <dd><script type="text/javascript"><!--
+google_ad_client = "pub-5163442865089966";
+google_alternate_color = "ffffff";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al";
+google_ad_channel ="0326307795";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "47537E";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script style="display: none;" type="text/javascript" src="Ubicua04_files/show_ads.js">
+</script>
+<br>
+<iframe style="display: none;" src="Ubicua04_files/ad_tpl_002.htm" marginwidth="0" marginheight="0" align="center" frameborder="no" height="90" scrolling="no" width="468"></iframe>
+</dd>
+</dl>
+  </div>
+  </div>
+
+
+
+  <div id="footer"><div>
+    <ul>
+      <li><a href="http://www.laflecha.net/site/acercade">Acerca de LaFlecha</a></li>
+      <li><a href="http://www.laflecha.net/site/contactar">Contactar</a></li>
+      <li><a href="http://www.laflecha.net/site/privacidad">Política de privacidad</a></li>
+      <li><a title="Archivo RSS disponible con las últimas noticias" href="http://www.laflecha.net/laflecha.rss">RSS/RDF</a></li>
+    </ul></div>
+  </div>
+</div>
+<div id="rightbar">
+  <dl>
+    <dd class="advertisings">
+    <ul>
+    <li class="google">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-5163442865089966";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></script>
+<script style="display: none;" type="text/javascript" src="Ubicua04_files/show_ads.js"></script>
+</li>
+
+<li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-3-title" target="_blank" title="Abansys" href="http://www.abansys.com/"><img style="border: 0pt none ; display: none;" src="Ubicua04_files/registro_de_dominios_abansys.gif"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-3-footer" href="http://www.abansys.com/" title="Registro de dominios">Registro de Dominios</a><br>
+<a class="slncadt" id="sidead-3-footer" href="http://www.abansys.com/alojamiento_web_hosting.html" title="Alojamiento Web">Alojamiento Web</a><br>
+<a class="slncadt" id="sidead-3-footer" href="http://www.abansys.com/servidores_dedicados.php" title="Servidores Dedicados">Servidores Dedicados</a><br>
+<a class="slncadt" id="sidead-3-footer" href="http://www.buscaprof.es/" title="Buscador de Empresas">Buscador de Empresas</a>
+</div></li><li><div class="slogan top"><a class="slncadt" id="sidead-49-top" target="_blank" href="http://www.ciao.es/"><img src="Ubicua04_files/capturapantallabanner.gif" style="border: 0pt none ;"></a></div><div class="slogan bottom"></div></li><li><div class="slogan top"><a class="slncadt" id="sidead-4-top" href="http://www.pixmania.com/es/es/rebajas-verano-2008/index.html?srcid=1053&amp;tag=banpixjuin">Pixmania</a></div><div class="img"><a class="slncadt" id="sidead-4-title" target="_blank" title="Logo de Pixmania" href="http://www.pixmania.com/es/es/rebajas-verano-2008/index.html?srcid=1053&amp;tag=banpixjuin"><img style="border: 0pt none ;" src="Ubicua04_files/004_120x90_es.gif"></a></div><div class="slogan bottom"></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-8-title" target="_blank" title="" href="http://www.entersoftweb.com/"><img style="border: 0pt none ; display: none;" src="Ubicua04_files/entersoftweb.gif"></a></div><div class="slogan bottom"></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-36-title" target="_blank" title="Grito" href="http://hospedaje.grito.net/"><img style="border: 0pt none ;" src="Ubicua04_files/036_grito.gif"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-36-footer" href="http://hospedaje.grito.net/">Alojamiento  web</a></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-42-title" target="_blank" title="Eventos Barcelona" href="http://www.groupeventosbarcelona.com/"><img style="border: 0pt none ;" src="Ubicua04_files/042_eventosbarcelona.jpg"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-42-footer" href="http://www.groupeventosbarcelona.com/">Eventos Barcelona</a></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-41-title" target="_blank" title="Digital Futura" href="http://www.digitalfutura.es/"><img style="border: 0pt none ;" src="Ubicua04_files/041_dfban.gif"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-41-footer" href="http://www.digitalfutura.es/">Alojamiento Web</a></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-50-title" target="_blank" title="Limusinas" href="http://www.limousinehummer.es/"><img style="border: 0pt none ;" src="Ubicua04_files/050_bannerhummer.gif"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-50-footer" href="http://www.limousinehummer.es/">Alquiler Limusinas</a></div></li><li><div class="slogan top"></div><div class="img"><a class="slncadt" id="sidead-52-title" target="_blank" title="Fotografos" href="http://www.planomedio.com/"><img style="border: 0pt none ;" src="Ubicua04_files/052_planomedio.jpg"></a></div><div class="slogan bottom"><a class="slncadt" id="sidead-52-footer" href="http://www.planomedio.com/">Fotografos Bodas</a></div></li><li><div class="slogan top"></div><div class="slogan bottom"><a class="slncadt" id="sidead-51-footer" href="http://www.casinoen-linea.es/">Casino Online</a></div></li><li><div class="slogan top"></div><div class="slogan bottom"><b><a class="slncadt" id="sidead-40-footer" href="http://www.lulu.com/content/1151136" target="_blank" style="font-size: 11px; color: rgb(51, 102, 153);">¿Quieres saberlo todo sobre Hacking?</a></b></div></li>
+    </ul>
+    </dd>
+  </dl>
+  </div>
+<script type="text/javascript">cfgPage('canales', 'articulo', '136', undefined, '%7B%2219%22%3A+%220%22%7D');</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Ubicua04_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-156887-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body></html>

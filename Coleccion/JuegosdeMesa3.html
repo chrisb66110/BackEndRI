@@ -1,0 +1,1468 @@
+    <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'CR';
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ";";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+               <script>
+  var PREBID_TIMEOUT = 2000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651984"}},{"bidder":"criteo","params":{"zoneId":"1079595"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286629"}},{"bidder":"ix","params":{"siteId":"310891","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310891","size":[728,90]}},{"bidder":"ix","params":{"siteId":"310891","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651994"}},{"bidder":"criteo","params":{"zoneId":"1079591"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286630"}},{"bidder":"ix","params":{"siteId":"310893","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310893","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310893","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651988"}},{"bidder":"criteo","params":{"zoneId":"1079585"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286631"}},{"bidder":"ix","params":{"siteId":"310895","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310895","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310895","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652006"}},{"bidder":"criteo","params":{"zoneId":"1079593"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286632"}},{"bidder":"ix","params":{"siteId":"310897","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310897","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652160"}},{"bidder":"criteo","params":{"zoneId":"1079586"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286633"}},{"bidder":"ix","params":{"siteId":"310899","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310899","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652164"}},{"bidder":"criteo","params":{"zoneId":"1079584"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286634"}},{"bidder":"ix","params":{"siteId":"310901","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310901","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({ priceGranularity: 'dense' });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/XTK-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/XTK-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/XTK-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/XTK-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/XTK-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/XTK-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 apstag.setDisplayBids();
+         pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+   <script src="/js/prebid.js" async></script>
+            <title>El enorme reto de diseñar un juego de mesa desde cero</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Si quieres conseguir una copia de &amp;#039;Virus!&amp;#039;, el primer juego de Tranjis Games, más te vale ser amigo de uno de sus creadores porque su primera edición está agotadísima. A ojos del lego en la materia puede parecer una baraja de c..." />
+  <meta name="news_keywords" content="Juegos de mesa, Fiebre por los juegos de mesa, Literatura, comics y juegos, "/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="41267802635" />
+<meta name="application-name" content="Xataka"/>
+<meta name="msapplication-tooltip" content="Gadgets y tecnología: últimas tecnologías en electrónica de consumo - XATAKA"/>
+<meta name="msapplication-starturl" content="https://www.xataka.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.xataka.com/lomejor;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-lomejor-icon.ico" />
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=https://www.xataka.com/respuestas;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-respuestas-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+xataka" />
+   <link rel="alternate" type="application/rss+xml" title="Xataka - todas las noticias" href="/index.xml" />
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/v6/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/565f53/troll-allue-prototipo/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/565f53/troll-allue-prototipo/840_560.jpg" />
+  <meta property="og:title" content="El enorme reto de diseñar un juego de mesa desde cero" />
+  <meta property="og:description" content="Si quieres conseguir una copia de &amp;#039;Virus!&amp;#039;, el primer juego de Tranjis Games, más te vale ser amigo de uno de sus creadores porque su primera edición está agotadísima. A ojos del lego en la materia puede parecer una baraja de c..." />
+  <meta property="og:url" content="https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2016-08-01T16:08:38+00:00" />
+  <meta name="DC.Creator" content="Alkar" />
+  <meta name="DC.Date" content="21 enero 2016" />
+  <meta name="DC.date.issued" content="2016-08-01T16:08:38+00:00" />
+  <meta name="DC.Source" content="Xataka" />
+  <meta property="article:modified_time" content="2016-08-01T16:08:38+00:00">
+  <meta property="article:published_time" content="2016-01-21T17:01:20+00:00">
+          <link rel="canonical" href="https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/565f53/troll-allue-prototipo/1366_521.jpg"><meta name="twitter:site" content="@xataka"><meta name="twitter:title" content="El enorme reto de diseñar un juego de mesa desde cero"><meta name="twitter:description" content="Si quieres conseguir una copia de &amp;#039;Virus!&amp;#039;, el primer juego de Tranjis Games, más te vale ser amigo de uno de sus creadores porque su primera edición está agotadísima. A ojos del lego en la materia puede parecer una baraja de c..."><meta name="twitter:creator" content="@bidorto">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/main.css?v=1554376308">
+  <link rel="amphtml" href="https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>var _sf_startpt=(new Date()).getTime()</script>
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/XTK-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+     googletag.defineSlot('/1018282/XTK-TXT-interior', [320,112], 'div-gpt-txt').addService(googletag.pubads());
+  googletag.defineOutOfPageSlot('/1018282/XTK-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/XTK-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["literatura-comics-y-juegos"];
+    var GPTtags = ["juegos-de-mesa", "fiebre-por-los-juegos-de-mesa"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ 
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.xataka.com\/literatura-comics-y-juegos\/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero",
+    "headline": "El enorme reto de dise\u00f1ar un juego de mesa desde cero",
+    "datePublished": "2016-01-21T17:01:20",
+    "dateModified": "2016-08-01T16:08:38",
+    "description": "Si quieres conseguir una copia de &#039;Virus!&#039;, el primer juego de Tranjis Games, m\u00e1s te vale ser amigo de uno de sus creadores porque su primera edici\u00f3n est\u00e1 agotad\u00edsima. A ojos del lego en la materia puede parecer una baraja de c...",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xataka",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/xataka\/p\/amp\/images\/logo.png?v=1554376308",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/565f53\/troll-allue-prototipo\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Alkar"
+    },
+    "url": "https:\/\/www.xataka.com\/literatura-comics-y-juegos\/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero",
+    "thumbnailUrl": "https:\/\/i.blogs.es\/565f53\/troll-allue-prototipo\/1366_2000.jpg",
+    "articleSection": "Literatura, comics y juegos",
+    "creator": "Alkar",
+    "keywords": "Juegos de mesa, Fiebre por los juegos de mesa, Literatura, comics y juegos, "
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-2", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "alkar");
+ __gaTracker('set', 'contentGroup3', "literatura-comics-y-juegos");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "160121");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "alkar");
+ __gaTracker('rollUp.set', 'contentGroup3', "literatura-comics-y-juegos");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "160121");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad head-container-with-corner m-favicons-compact m-head-masthead">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container">
+ <nav class="head-favicons">
+     <div class="head-favicons-index head-webedia-logo">
+    <a id="favicons-toggle" href="https://www.webedia.es/" data-target="#head-favicons"><abbr title="Webedia">Webedia</abbr></a>
+   </div>
+   </nav>
+</section>
+   <div class="masthead-site-lead ">
+ <div class="masthead-container">
+  <div class="masthead-logo">
+   <div class="masthead-logo-brand">
+    <a href="/" class="masthead-brand">Xataka</a>
+   </div>
+     </div>
+       <nav class="masthead-actions">
+    <ul class="masthead-actions-list">
+     <li class="masthead-actions-list-item"><a href="#sections" class="masthead-actions-menu m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+     <li class="masthead-actions-list-item"><a href="#headlines" class="masthead-actions-nuevo m-v1 js-toggle">Nuevo</a></li>
+    </ul>
+   </nav>
+   </div>
+</div>       <div class="masthead-nav-container js-nano-container">
+ <nav class="masthead-nav ">
+     <a href="#search" class="masthead-nav-search js-toggle" data-searchbox="#search-field-2"></a>
+   <ul class="masthead-nav-topics">
+      <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/analisis">Análisis</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/seleccion">Xataka Selección</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/moviles">Móviles</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/inteligencia-artificial">Inteligencia Artificial</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/medicina-y-salud">Ciencia</a></li>
+   </ul>
+   <ul class="masthead-nav-social">
+    <li class="masthead-nav-social-item"><a href="https://flipboard.com/@xataka" class="masthead-nav-social-anchor masthead-social-flipboard" rel="nofollow">Flipboard</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://instagram.com/xataka" class="masthead-nav-social-anchor masthead-social-instagram" rel="nofollow">Instagram</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="masthead-nav-social-anchor masthead-social-youtube" rel="nofollow">Youtube</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://twitter.com/xataka" class="masthead-nav-social-anchor masthead-social-twitter" rel="nofollow">Twitter</a></li>
+
+ </ul>
+ </nav>
+</div>
+  </div>
+</section>
+ 
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-featured  ">
+                                         <div class="article-content-wrapper">
+            <div class="article-content-inner">
+              <div class="article-header article-featured-header">
+  <header>
+   <div class="article-featured-cover js-post-images-container">
+    <img alt="El enorme reto de diseñar un juego de mesa desde cero" srcset="https://i.blogs.es/565f53/troll-allue-prototipo/450_1000.jpg 450w, https://i.blogs.es/565f53/troll-allue-prototipo/650_1200.jpg 650w, https://i.blogs.es/565f53/troll-allue-prototipo/1024_2000.jpg 1024w, https://i.blogs.es/565f53/troll-allue-prototipo/1366_2000.jpg 1366w, https://i.blogs.es/565f53/troll-allue-prototipo/2560_3000.jpg 2560w" src="https://i.blogs.es/565f53/troll-allue-prototipo/450_1000.jpg" data-pin-no-hover="true" sizes="100vw">
+    <span></span>
+   </div>
+   <div class="article-featured-title-container">
+    <div class="article-featured-title">
+     <div class="article-featured-category">
+      <a href="/categoria/literatura-comics-y-juegos">Literatura, comics y juegos</a>
+     </div>
+     <h1><span>El enorme reto de diseñar un juego de mesa desde cero</span></h1>
+    </div>
+   </div>
+  </header>
+ </div>
+                          <div class="article-aside m-blob-aside">
+ <div class="article-aside-content">
+          <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Xataka</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                   <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                    <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                   <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+           </ul>
+    </nav>
+     </div>
+ </div>
+     <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+    <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+
+      <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+   </div>
+</div>
+           <div class="article-metadata-container">
+            <div class="article-metadata">
+              <div class="article-actions m-in-featured">
+      <div class="article-comments"><a title="13 comentarios" href="#comments" class="js-smooth-scroll">13 comentarios</a></div>
+ </div>
+             <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2016-01-21T17:01:20+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1470067718"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/alkar" rel="author"><img alt="alkar" src="//www.gravatar.com/avatar/c3cbc59981ca696d5c9bfeb158e2a7e0?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/alkar" rel="author">Alkar</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/bidorto">@bidorto</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Si quieres conseguir una copia de 'Virus!', el primer juego de Tranjis Games, más te vale ser amigo de uno de sus creadores porque su primera edición está agotadísima. A ojos del lego en la materia puede parecer una baraja de cartas de colores, pero <strong>tras la creación de un juego de éxito hay un gran trabajo de equipo</strong> que os queremos mostrar.</p>
+
+<p>Hablamos para ello con <strong>varios creadores de juegos del panorama nacional</strong>, como el equipo de <a href="http://www.tranjisgames.com">Tranjis</a>, <a href="http://www.idealudica.com/">Josep M. Allué (Idea Lúdica)</a>, <a href="http://www.jugamostodos.org">Jesús Torres Castro (Jugamos Todos)</a>, el equipo de <a href="http://abbagames.com/">Abba Games</a>, <a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fzacatrus.es">Javier Yohn Planells (Zacatrus)</a>, y <a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fzacatrus.es%2Flos-aprendices.html">Alberto Corazón (creador de 'Los Aprendices')</a>.</p>
+
+<!--more-->
+
+<h2>La mecánica es el alma de un juego</h2>
+
+<p>Lo que define un juego es su mecánica, sus reglas, lo que los jugadores deben llevar a cabo para vencer. La gran labor del creador de juegos es <strong>conseguir un conjunto de reglas que estén equilibradas</strong> y permitan disfrutar a los jugadores.</p>
+
+<p>Mecánicas hay infinitas, y deben adaptarse al tipo de juego que queramos crear. ¿Deseamos que el azar tenga mucha, poca, o ninguna importancia? ¿Debe ser un reto intelectual de estrategia pura y exigente? ¿debe ser un entretenimiento rápido y sin complicaciones pero que siempre arranque risas? ¿para un jugador o para catorce? ¿competitivo, colaborativo o mixto? ¿roles ocultos? ¿gestión de recursos? ¿exploración?</p>
+
+<p><strong>Cada creador tiene su método</strong>. Josep M. Allué, que ha desarrollado numerosos juegos dentro del proyecto educativo IdeaLúdica, nos comenta que por lo general “se empieza a partir de una dinámica básica (me gustaría hacer un juego de ganar tarjetas con tiradas de dados) o un tema (vamos a hacer un juego de zombies a caballo).” Sobre este germen vas ”añadiéndole capas y efectos, que muchas veces has de desmontar luego para dejarlo ágil y jugable al final”.</p>
+
+<div class="article-asset-summary article-asset-normal"><div class="asset-content"><div class="sumario">"Se empieza a partir de una dinámica básica ("me gustaría hacer un juego de ganar tarjetas con tiradas de dados") o un tema ("vamos a hacer un juego de zombies a caballo"). Vale, poco futuro ahí, pero nunca se sabe dónde vas a acabar" <br>-Josep M. Allué</div></div></div>
+
+<p>Por su parte, <strong>en Tranjis trabajan en cadena</strong> y cada uno se encarga de un apartado del juego: “diseñamos los juegos que a nosotros nos gusta jugar: fillers familiares ligeros y, sobre todo, divertidos. Sabemos qué tipo de juego queremos hacer porque sabemos qué juegos nos gustan. En nuestro caso siempre partimos de una temática. Imaginamos el universo que nos gustaría crear y tratamos de darle forma.”</p>
+
+<p><strong>Jesús Torres Castro</strong> no sólo es creador, también es fundador de <strong>Jugamos Todos</strong>, la asociación cultural detrás del prestigioso <strong>Festival Internacional de Juegos de Córdoba</strong>. “Cada autor podrá contarte diversas anécdotas sobre cómo ha nacido cada una de sus creaciones”, nos cuenta. “Algunas de mis ideas han venido por una temática concreta y otras han estado más relacionadas con una mecánica de juego inicial. Incluso se pueden tener ideas a partir de un componente o un material extraño”.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="supercaption  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/450_1000.jpg 450w, https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/650_1200.jpg 681w, https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/1024_2000.jpg 1024w, https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/450_1000.jpg" alt="Una posible idea de Allué, y un juego desarrolllado por Goliath"><noscript><img alt="Una posible idea de Allué, y un juego desarrolllado por Goliath" src="https://i.blogs.es/a12716/creacion-juegos-allue-vs-goliath/450_1000.jpg"></noscript> <div class="caption abajo izquierda "> A la izquierda, una imagen en el archivo "daparajuego" de Allué. A la derecha, un juego que Goliath desarrolló con ese mismo concepto. </div> </div></div></div>
+
+<p>De eso sabe bastante Allué: “con el paso del tiempo he ido ampliando la tipología de los puntos de partida para crear un juego y creo que hace tiempo que invento mis juegos <strong>a partir de cualquier elemento que me motive</strong> y me haga saltar una chispa, ya sea una dinámica, un tema, una acción, un material, una reacción... No importa el qué sino lo que motiva en los jugadores. Personalmente tengo dos ‘almacenes de ideas’, un archivo de texto en mi móvil llamado ‘ideas’ con anotaciones como ‘dos personas dicen la misma palabra a la vez’ y un archivo de imágenes titulado ‘daparajuego’. A veces, me encuentro juegos recién publicados que casan perfectamente con una de las ideas con lo cual pienso, ‘sabía que ahí había algo bueno’”.</p>
+
+<p>En <strong>Abba Games</strong> están ampliando su oferta de juegos, que hasta el momento cubrían un nicho de mercado muy delimitado: las <strong>adaptaciones de programas y concursos de televisión</strong>. “Un peso importante de nuestros productos de televisión son concursos, por lo que es bastante directa la adaptación al juego de mesa. En cualquier caso, en la mayoría de los casos, nos tenemos que inventar alternativas para poder emular según qué partes del programa. Otro principio básico en este tipo de productos es la sencillez de mecánicas. También es muy importante en este nicho de mercado, tener muy claro los componentes del producto puesto que puede llegar a encarecer mucho el producto dejando de ser atractivo. El precio final del producto en este segmento es vital para poder atraer a tu cliente”.</p>
+
+<p>Por su parte, <strong>Alberto Corazón</strong> está embarcado en la promoción de <a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fzacatrus.es%2Flos-aprendices.html">'Los Aprendices'</a>, creado entre él y Javier Yohn Planells de Zacatrus. Es otro juego en el que <strong>la mecánica nació mucho antes que la ambientación</strong>, decidida tras varios cambios ya durante el desarrollo del juego. “Yo al principio pensé en un mundo postapocalíptico y él me hizo varias propuestas que no cuajaron. Luego llegó con la propuesta de la Alquimia y ya no hubo que buscar más. Javier ha hecho todos los reglamentos de nuestros juegos, y, si te fijas, siempre tienen un toque literario, procura darle valor añadido y que no sean solo instrucciones.”</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="caption-img  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/93da8d/jesus-torres/450_1000.jpg 450w, https://i.blogs.es/93da8d/jesus-torres/650_1200.jpg 681w, https://i.blogs.es/93da8d/jesus-torres/1024_2000.jpg 1024w, https://i.blogs.es/93da8d/jesus-torres/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/93da8d/jesus-torres/450_1000.jpg" alt="Jesus Torres"><noscript><img alt="Jesus Torres" src="https://i.blogs.es/93da8d/jesus-torres/450_1000.jpg"></noscript> <span> Jesús Torres </span> </div></div></div>
+
+<p>La inspiración puede surgir de la forma más imposible. La de Jesús Torres para <strong><a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fwww.amazon.es%2FWATSON-HOLMES-DIARIOS-DEL-221B%2Fdp%2FB017XX1HWG%2Fref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1453194912%26sr%3D8-1">'Watson &amp; Holmes: diarios del 221B'</a> surgió del autor de otro juego</strong> de similar ambientación: “221b Baker Street”, de Jay Moriarty. Investigando si era pseudónimo o un nombre real (era real), le llevó a trabar una buena amistad y a crear un juego diferente pero de espíritu similar, y con resultado beneficioso para ambos: “con Jay Moriaty he establecido una buena amistad. Él creó juegos en los 1970s pero después ha estado desconectado de este mundillo.”</p>
+
+<div class="article-asset-summary article-asset-normal"><div class="asset-content"><div class="sumario">Los juegos de mesa tienen todavía poca protección jurídica pero en el mercado alemán, principal motor de esta afición, existe un código de conducta entre editoriales y autores que está dando muy buenos resultados. <br>- Jesús Torres</div></div></div>
+
+<p>Durante este tiempo, el juego de Moriarty fue plagiado y pirateado. Gracias al aviso de Torres, ha pactado acuerdos con las editoriales que vendían sin licencia su obra: “gracias a mí conoció la existencia de las versiones piratas de sus juegos en Sudamérica, contactó con la empresa responsable en Brasil y ha acabado llegando a un acuerdo para cobrar paulatina y retrospectivamente sus derechos de autor de las pasadas décadas”.</p>
+
+<h2>Probando las mecánicas: el prototipo</h2>
+
+<p>La mejor forma de saber si un juego funciona es jugando, y esto es cierto incluso en aquellos que aún no han sido creados. Así que cada autor se las ingenia para <strong>desarrollar sus prototipos con los que probar</strong> sus bocetos de reglas, afinarlas y ajustarlas para convertirlas en un gran juego.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="supercaption  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/450_1000.jpg 450w, https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/650_1200.jpg 681w, https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/1024_2000.jpg 1024w, https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/450_1000.jpg" alt="Creacion de Juegos: prototipo vs final de Tornado Ellie, de Allué"><noscript><img alt="Creacion de Juegos: prototipo vs final de Tornado Ellie, de Allué" src="https://i.blogs.es/72563c/creacion-juegos-allue-tornado-ellie/450_1000.jpg"></noscript> <div class="caption arriba izquierda invertido"> Prototipo vs resultado final de Tornado Ellie, de Josep M. Allué </div> </div></div></div>
+
+<p>¿<strong>Cómo de sofisticado tiene que ser el prototipo</strong>, cómo de parecido al juego terminado? Hoy tenemos tiendas online donde comprar fichas, dados, cartas y tableros personalizados, pero no suele ser lo habitual. En Tranjis, “la primera fase de un prototipo siempre suele ser con cartulinas y rotuladores 'carioca'. Tenemos una buena colección de componentes que compramos en la pasada feria de Essen. Si vemos que la cosa funciona pasamos a darle forma en el ordenador. Los aspectos de diseño evolucionan desde el primer momento y cambian en función de las modificaciones del juego”.</p>
+
+<div class="article-asset-summary article-asset-normal"><div class="asset-content"><div class="sumario">"En los últimos meses tenía una maqueta más o menos final, hecha de cartón pluma, con un diseño de los tableros que me hizo una amiga y unos dados que encargué para poder hacer todas las pruebas. Y todo lo llevaba dentro de la caja de otro juego de mesa." <br>- Alberto Corazón</div></div></div>
+
+<p>Para Jesús Torres, los <strong>prototipos demasiado trabajados son “un esfuerzo innecesario pero habitual</strong> en muchas personas que quieren crear juegos”. Desde su punto de vista, “gastar dinero y esfuerzo en ilustraciones, por ejemplo, es una labor que no corresponde al autor y sí a una hipotética editorial futura”, y recomienda usar trozos de papel y componentes sueltos, pero no cogerlos de otros juegos para no “dejarlos cojos”.</p>
+
+<p>Aunque con una buena impresora a mano se pueden hacer bocetos resultones, siempre con la idea clara en mente de que <strong>el objetivo del prototipo es evaluar el juego en fase de desarrollo</strong>. Allué nos cuenta que en IdeaLúdica tienen “prototipos hechos con cartulina impresa en blanco y negro y recortada y otros que parecen casi juegos ya editados”. Desarrollar un juego es, entiende, una actividad creativa, así que cada autor elige el camino que más le motive en cada momento.</p>
+
+<p>En Abba Games optaron por la vía tecnológica, con éxito: “Lo que sí que hemos hecho con acierto fue [...] <strong>adquirir una impresora 3D</strong>. Y esto ha sido un paso muy importante para nosotros puesto que podemos rápidamente diseñar un componente y en un par de horas poder probarlo.”</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="supercaption  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/e18b87/prototipos-ruleta-morth/450_1000.jpg 450w, https://i.blogs.es/e18b87/prototipos-ruleta-morth/650_1200.jpg 681w, https://i.blogs.es/e18b87/prototipos-ruleta-morth/1024_2000.jpg 1024w, https://i.blogs.es/e18b87/prototipos-ruleta-morth/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/e18b87/prototipos-ruleta-morth/450_1000.jpg" alt="Prototipos Ruleta Morth"><noscript><img alt="Prototipos Ruleta Morth" src="https://i.blogs.es/e18b87/prototipos-ruleta-morth/450_1000.jpg"></noscript> <div class="caption arriba derecha invertido"> Dos prototipos de la ruleta de Portal of Morth, en azul la definitiva </div> </div></div></div>
+
+<p>Esta estrategia resultó ser crucial con su último juego, “<a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fwww.amazon.es%2FAbba-Games-Portal-of-Morth%2Fdp%2FB019CS3L56%2Fref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1453195111%26sr%3D8-1">'Portal of Morth'</a>”, que incluye una ruleta de plástico donde se lanzan los dados, que se distribuyen en las casillas de la ruleta: “Tuvimos que rehacer la primera muestra de la ruleta unas cuantas veces hasta que dimos con el formato ideal. De no haber dispuesto de esta herramienta, el proceso creativo hubiera sido de varias semanas al tener que enviar el archivo al fabricante, éste fabricarlo, enviarlo y testearlo por nuestra parte… teniendo que volver a repetir el proceso varias veces hasta conseguir lo que nosotros conseguimos con la impresora 3D en un par de días.”</p>
+
+<h2>Probar, probar y probar</h2>
+
+<p>Una vez que contamos con un prototipo de juego prometedor, <strong>llega el momento de ponerlo a prueba</strong>. Todo juego pasa por una fase en la que toca jugarlo a mansalva para recibir consejos y recomendaciones del público, calcular el tiempo que dura una partida, ver si hay reglas que no terminan de cuadrar, pulirlo, y en definitiva, enfrentarlo a jugadores reales para <strong>ver si hemos logrado el objetivo de crear una buena obra</strong>. Lo primero es probarlo con tus compañeros de juego, y abrirlo a nuevos jugadores cuando se tiene una versión funcional.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="caption-img  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/9b1a68/prototipo-virus/450_1000.jpg 450w, https://i.blogs.es/9b1a68/prototipo-virus/650_1200.jpg 681w, https://i.blogs.es/9b1a68/prototipo-virus/1024_2000.jpg 1024w, https://i.blogs.es/9b1a68/prototipo-virus/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/9b1a68/prototipo-virus/450_1000.jpg" alt="Prototipo de Virus!"><noscript><img alt="Prototipo de Virus!" src="https://i.blogs.es/9b1a68/prototipo-virus/450_1000.jpg"></noscript> <span> Prototipo de Virus! </span> </div></div></div>
+
+<p>Porque se corre el riesgo de <strong>aburrir a tu círculo cercano</strong>, que suele ser cerrado, así que no es mala cosa acudir a jornadas lúdicas. Como bien dice Alberto, durante la fase pruebas de 'Los Aprendices' “tenía un grupo más o menos fijo, pero al final acabé con su paciencia, así que me di una vuelta por jornadas, por asociaciones. Iba con mi libreta a todas partes para apuntar estadísticas, tiempo de juegos, jugadas probables... Fue probablemente el trabajo más duro”.</p>
+
+<p>En Tranjis con su 'Virus!' pasaron “un año testeando el juego, primero entre nosotros y luego con nuestro grupo de amigos”. A veces ese encuentro con jugadores funciona incluso mejor de lo previsto. <strong>Llegaron a vender prototipos de su juego</strong>: “producimos una edición artesanal del juego, fabricada por nosotros mismos y nos fuimos al Festival Internacional de Córdoba a presentarlo. Vendimos 90 juegos fancine en un fin de semana. Eso fue lo que nos animó a lanzarnos a esta aventura editorial”.</p>
+
+<p>Para Abba Games, “el testeo normalmente no dura menos de 3 meses. Se debe probar con el público al que irá dirigido además de cualquier otro tipo de público que en un momento dado pueda aportar conclusiones interesantes. Por lo tanto, no siempre utilizamos a las mismas personas para el testeo. Si el producto va dirigido al público infantil, nos volcamos con este en el test, mientras que si el producto es más especializado, solemos acudir a jornadas lúdicas para recibir las sugerencias y reacciones”.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="caption-img  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/3554bc/final-virus/450_1000.jpg 450w, https://i.blogs.es/3554bc/final-virus/650_1200.jpg 681w, https://i.blogs.es/3554bc/final-virus/1024_2000.jpg 1024w, https://i.blogs.es/3554bc/final-virus/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/3554bc/final-virus/450_1000.jpg" alt="Virus! versión comercial"><noscript><img alt="Virus! versión comercial" src="https://i.blogs.es/3554bc/final-virus/450_1000.jpg"></noscript> <span> Virus! en su versión definitiva </span> </div></div></div>
+
+<p>Pero, <strong>¿y cuando no puedes jugar a tu propio juego?</strong> Le pasó a Jesús Torres con su 'Watson &amp; Holmes'. Ya que el objetivo es seguir pistas y resolver un crimen, el autor “no había jugado ni una vez al mismo, dadas sus características - Pues yo conozco la solución de cada misterio. Con el juego publicado ya hay gente que se está animando a escribir aventuras y por fin recientemente he jugado mi primera partida. ¡Gracias!”.</p>
+
+<div class="article-asset-summary article-asset-normal"><div class="asset-content"><div class="sumario">"Tengo a toda la maravillosa gente de Jugamos Tod@s. Es duro pedirles una vez tras otra que gasten su tiempo jugando a prototipos. ¿He dicho que quiero mucho a mis amigas y amigos?" <br>- Jesús Torres</div></div></div>
+
+<h2>El papel del editor</h2>
+
+<p>Cuando el juego está terminado, en realidad no lo está: <strong>ahora hay que producirlo</strong>, y aquí aparece el papel del editor. Hay que diseñar los componentes finales, el arte de las cartas, el fondo del tablero. Grandes juegos se pierden en esta fase y, por qué no, obras mediocres se camuflan con buenas ilustraciones.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="caption-img  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/19b57e/los-aprendices-en-juego/450_1000.jpg 450w, https://i.blogs.es/19b57e/los-aprendices-en-juego/650_1200.jpg 681w, https://i.blogs.es/19b57e/los-aprendices-en-juego/1024_2000.jpg 1024w, https://i.blogs.es/19b57e/los-aprendices-en-juego/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/19b57e/los-aprendices-en-juego/450_1000.jpg" alt="Los Aprendices En Juego"><noscript><img alt="Los Aprendices En Juego" src="https://i.blogs.es/19b57e/los-aprendices-en-juego/450_1000.jpg"></noscript> <span> Una partida de Los Aprendices </span> </div></div></div>
+
+<p>El editor puede ayudar a dar el toque definitivo para que un buen juego termine de cuadrar, tenga tirón comercial, y en función del grado de implicación, <strong>incluso cambiar al completo la ambientación y temática del juego</strong>. Como editores, Javier y Zacatrus son parte fundamental de 'Los Aprendices': “El mercado de juegos de mesa es muy parecido al de libros. El proceso de creación es similar. Hay un autor que presenta una maqueta y lo normal es que la editorial pula esa maqueta, se preocupe del arte del juego, de la producción y de la distribución. Al final, el creador del juego de mesa se suele llevar un porcentaje, igual que un escritor.”</p>
+
+<p><div class="article-asset-summary article-asset-normal"><div class="asset-content"><div class="sumario">"El mercado del juego de mesa está muy verde aún pero está creciendo. Eso significa que hay muchas cosas por construir y muchos experimentos que hacer." <br>- Javier Yohn Planells</p></div></div></p>
+
+<p>En el primer borrador de Alberto, ambientado en un futuro postapocalíptico, no terminaba de funcionar. Con el paso del tiempo, las pruebas, y las sugerencias e ideas del editor, ahora 'Los Aprendices' es un juego en el que estudiantes de alquimia compiten por obtener las mejores habilidades y conocimientos. El rol del editor en este caso “<strong>sirvió para salir de cierto bloqueo</strong> con la parte de diseño. Tuve que delegarlo porque yo no era capaz de explicarlo bien”, en palabras del propio autor, que a veces necesita orientación externa para que su inspiración se convierta en algo tangible.</p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <div class="caption-img  "> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/982d61/templar-secret-treasures/450_1000.jpg 450w, https://i.blogs.es/982d61/templar-secret-treasures/650_1200.jpg 681w, https://i.blogs.es/982d61/templar-secret-treasures/1024_2000.jpg 1024w, https://i.blogs.es/982d61/templar-secret-treasures/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/982d61/templar-secret-treasures/450_1000.jpg" alt="Templar The Secret Treasures"><noscript><img alt="Templar The Secret Treasures" src="https://i.blogs.es/982d61/templar-secret-treasures/450_1000.jpg"></noscript> <span> Templar: The Secret Treasures </span> </div></div></div>
+
+<p>Cuando se trabaja con una gran editorial, los cambios pueden venir <strong>incluso al comercializar la traducción de un juego ya producido</strong>. Le pasó a Jesús Torres con su <strong>'Palacio de Viana'</strong>, que bajo la mano de <strong>Queen Games se ha reconvertido en '<a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fzacatrus.es%2Ftemplar.html">Templar</a>'</strong>, cambiando patios cordobeses por una abadía templaria: “se suelen reservar el derecho a cambiar la temática de un juego que contratan. Son ellos quienes lo van a vender y por tanto es su responsabilidad dar forma comercial al producto y toda la publicidad que conlleva.”</p>
+
+<p>El autor no queda al margen: “Dependiendo del caso, el autor puede participar opinando o dando ideas en todas las fases del proyecto. En un principio el juego que acabó siendo 'Templar' iba a tener la misma temática de patios cordobeses que 'Palacio de Viana', pero tras un estudio de mercado de Queen, decidieron cambiarlo. Una vez en ese punto pensamos en muchas posibles ideas y finalmente llegamos a la Edad Media templaria. Yo hubiese preferido claro el tema original, pero por fortuna la adaptación es perfecta.”</p>
+
+<p><strong>Inspiración, mecánica, pruebas, ambientación, edición y producción</strong>. El proceso puede durar meses o años, como cualquier otra labor creativa, y el resultado pueden ser horas y horas de entretenimiento, charlas, sobremesas y nuevas amistades. Recuérdalo cuando quites el film de plástico al próximo nuevo juego, o inspírate para empezar a dar forma a ese juego que te da vueltas en la cabeza desde hace un tiempo. <strong>Es un gran momento para jugar y crear</strong>.</p>
+
+<p>Gracias a todos los autores y editores que han ayudado a escribir este artículo, pero sobre todo gracias por los cientos de hora de diversión.</p>
+
+<p>En Xataka | <a href="https://www.xataka.com/tag/fiebre-por-los-juegos-de-mesa">Fiebre por los juegos de mesa</a></p>
+
+<p>Imágenes | Cedidas por los autores, y <a href="http://lairadecrom.blogspot.com.es/2015/09/watson-holmes-entrevista-su-autor-jesus.html">Jesús Torres en La Ira de Crom</a></p>
+                                        </div>
+                                                                 <div class="af-box-container">
+                              <div itemscope itemtype="http://schema.org/Product" class="af-box af-box-inverted" data-details="">
+           <a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fwww.amazon.es%2Fdp%2FB019CS3L56&amp;category=literatura-comics-y-juegos" rel="nofollow" target="_blank" class="af-image">
+       <img itemprop="image" alt="Product Image" src="https://images-eu.ssl-images-amazon.com/images/I/51YHQiDB70L.jpg">
+      </a>
+          <div class="af-data">
+      <h2>
+       <a href="https://www.xataka.com/redirect?url=http%3A%2F%2Fwww.amazon.es%2Fdp%2FB019CS3L56&amp;category=literatura-comics-y-juegos" rel="nofollow" target="_blank">
+        <span itemprop="name">Portal of Morth</span>
+       </a>
+      </h2>
+      <p class="af-buy">
+       <a itemprop="offers" itemscope itemtype="http://schema.org/Offer" href="https://www.xataka.com/redirect?url=http%3A%2F%2Fwww.amazon.es%2Fdp%2FB019CS3L56&amp;category=literatura-comics-y-juegos" rel="nofollow" target="_blank">
+        <span class="af-name"><span>Comprar por</span></span>
+        <strong itemprop="price" class="af-price">29.99</strong>
+        <strong itemprop="priceCurrency" class="content">EUR</strong>
+       </a>
+      </p>
+     </div>
+    </div>
+      </div>
+                                                  <section class="section-instagram-container">
+  <div class="section-instagram">
+   <header>
+    <p class="section-header-instagram">
+     <a href="https://www.instagram.com/xataka/">
+      Xataka en Instagram
+     </a>
+    </p>
+   </header>
+   <ul class="section-instagram-list">
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bv2E7yRliV3/" data-link="https://www.instagram.com/p/Bv2E7yRliV3/" data-number="1"><img src="https://scontent.cdninstagram.com/vp/6008f927f00801334abea806ab8d4273/5D46F5C0/t51.2885-15/e35/s150x150/54198917_314088255948800_1208798482487111905_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Esto de las opciones al ‘notch’ y las “pantallas completas” se nos está yendo de las manos. La más reciente patente de OPPO apunta a una locura que nos ofrecería dos pantallas en un smartph"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bv1Rp4KF0Nv/" data-link="https://www.instagram.com/p/Bv1Rp4KF0Nv/" data-number="2"><img src="https://scontent.cdninstagram.com/vp/e395d7c6b8ebe3121cb903c0963a5c65/5CA8DAAC/t51.2885-15/e35/s150x150/56547455_1019758161548005_4832225408629340198_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="La gravedad en la Luna 🌕 es exactamente de 1,62 m/s² (mientras que en la Tierra es 9,8 m/s²), lo cual quiere decir que caminar y desplazarse no es nada fácil. 👨🚀Los astronautas se entrenan"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bvz6HTBFCTD/" data-link="https://www.instagram.com/p/Bvz6HTBFCTD/" data-number="3"><img src="https://scontent.cdninstagram.com/vp/9c6799408e273b89b1b7d2e28b0ba0a2/5D4C8596/t51.2885-15/e35/c74.0.931.931/s150x150/56161766_134273174372026_1536667652215543897_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Hace 46 años, Martin Cooper realizó la primera llamada desde un teléfono móvil usando un DynaTAC de Motorola. 📞 •
+•
+•
+•
+•
+#smartphone #mobile #phone #motorola #history #tech #technolo"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BvzwLqpF3cX/" data-link="https://www.instagram.com/p/BvzwLqpF3cX/" data-number="4"><img src="https://scontent.cdninstagram.com/vp/ec86b9772630e5042a56ce1584d16a7e/5D3ACD91/t51.2885-15/e35/c180.0.720.720/s150x150/56544824_162863611379293_6797171165516909301_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya está disponible la beta 2 de Android Q, la nueva versión del operativo móvil de Google. 😱
+•
+📸: @daniespla •
+👨🏻‍💻Más info en el link de nuestra bio👩🏻‍💻
+•
+•
+�"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BvzqE18F-oz/" data-link="https://www.instagram.com/p/BvzqE18F-oz/" data-number="5"><img src="https://scontent.cdninstagram.com/vp/7a554169818cc7f29b9ffaea17cd6633/5D429517/t51.2885-15/e35/s150x150/55855659_307089403318341_219179060867766207_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya están aquí los nuevos auriculares inalámbricos de Apple: los Beats Powerbeats Pro, los cuales cuentan con mucha de la tecnología que tenemos en los AirPods, sólo que ahora están pensados en e"></a>
+     </li>
+       </ul>
+   <div class="section-instagram-nav-container">
+    <p class="section-instagram-follow">
+     <a class="btn-instagram-follow" href="https://www.instagram.com/xataka/">Seguir</a>
+    </p>
+   </div>
+  </div>
+ </section>
+
+                        <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">El enorme reto de diseñar un juego de mesa desde cero</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/179747%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=El%20enorme%20reto%20de%20dise%C3%B1ar%20un%20juego%20de%20mesa%20desde%20cero&via=xataka" class="btn-twitter js-btn-twitter" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">Twitter</a></li>
+ <li><a href="mailto:?subject=El%20enorme%20reto%20de%20dise%C3%B1ar%20un%20juego%20de%20mesa%20desde%20cero&body=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/literatura-comics-y-juegos">Literatura, comics y juegos</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/juegos-de-mesa">Juegos de mesa</a></li>
+     <li><a class="article-topic-link" href="/tag/fiebre-por-los-juegos-de-mesa">Fiebre por los juegos de mesa</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-featured">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/179747%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=El%20enorme%20reto%20de%20dise%C3%B1ar%20un%20juego%20de%20mesa%20desde%20cero&via=xataka" class="btn-twitter js-btn-twitter" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">Twitter</a></li>
+ <li><a href="mailto:?subject=El%20enorme%20reto%20de%20dise%C3%B1ar%20un%20juego%20de%20mesa%20desde%20cero&body=https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div class="comment-wrapper">
+    <div class="alert-message">Comentarios cerrados</div>
+   </div>
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">13 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"974595","post_id":"179747","date":1453398091,"content_filtered":"<p>Lo dif\u00edcil hoy en d\u00eda es encontrar con quien jugar a estos juegos. A la mayor\u00eda de la gente le dices que son partidas de 2 o 3 horas (o m\u00e1s dependiendo del juego) adem\u00e1s de tener que aprender la mec\u00e1nica de juego y hace rato que dejaron de escucharte...<\/p>","content":"Lo dif\u00edcil hoy en d\u00eda es encontrar con quien jugar a estos juegos. A la mayor\u00eda de la gente le dices que son partidas de 2 o 3 horas (o m\u00e1s dependiendo del juego) adem\u00e1s de tener que aprender la mec\u00e1nica de juego y hace rato que dejaron de escucharte...","karma":"113.00","parent":"0","comment_edited_date":1453398124,"vote_count":"6","comment_level":2,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"182905","author":"","webpage":"","user_name":"indignos","karma_level":"22.00","iseditor":"0","global_id":"1079793","facebook_uid":null,"user_status":"active","index":2,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/952016be5fd1dc2e83fea72ea226390b","abuse_users":[]},{"id":"974735","post_id":"179747","date":1453454805,"content_filtered":"<p>Hombre, depende mucho de tus circunstancias y tu entorno. El a\u00f1o pasado por navidades echamos muchas tardes\/noches de juego con familia y amigos. Este a\u00f1o el peque y nosotros hemos estado pochos y nos ha sido imposible repetirlo. Al final en reuniones familiares solemos acabar con alg\u00fan filler asequible, y de higos a brevas conseguimos jugar a algo m\u00e1s sofisticado. Tengo juegos casi desechos, pero al menos dos pendientes de estrenar desde hace ya meses.<\/p>","content":"Hombre, depende mucho de tus circunstancias y tu entorno. El a\u00f1o pasado por navidades echamos muchas tardes\/noches de juego con familia y amigos. Este a\u00f1o el peque y nosotros hemos estado pochos y nos ha sido imposible repetirlo. Al final en reuniones familiares solemos acabar con alg\u00fan filler asequible, y de higos a brevas conseguimos jugar a algo m\u00e1s sofisticado. Tengo juegos casi desechos, pero al menos dos pendientes de estrenar desde hace ya meses.","karma":"10.00","parent":"974595","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"26403","author":"Alkar","webpage":"","user_name":"alkar","karma_level":"27.00","iseditor":"0","global_id":"208","facebook_uid":null,"user_status":"active","index":8,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/208_4.png","abuse_users":[]},{"id":"974600","post_id":"179747","date":1453399833,"content_filtered":"<p>Pero en una videoconsola no hay problema en gastar esas 2 o 3 horas...y si hace falta mas jeje<\/p>","content":"Pero en una videoconsola no hay problema en gastar esas 2 o 3 horas...y si hace falta mas jeje","karma":"5.00","parent":"974595","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"178898","author":"","webpage":"","user_name":"speedter","karma_level":"22.00","iseditor":"0","global_id":"973196","facebook_uid":null,"user_status":"active","index":3,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/84aed6da5b9dbc1b677484d6014a671d","abuse_users":[]},{"id":"974601","post_id":"179747","date":1453399886,"content_filtered":"<p>No te digo que no sea dif\u00edcil, pero empezando con juegos rapiditos de 30 min m\u00e1x. de duraci\u00f3n y reglas sencillas, ya te digo que de ah\u00ed pasan a cosas como Cat\u00e1n o Aventureros al Tren y luego ya cualquier juego que les llame aunque dure 4 horas :P<\/p>","content":"No te digo que no sea dif\u00edcil, pero empezando con juegos rapiditos de 30 min m\u00e1x. de duraci\u00f3n y reglas sencillas, ya te digo que de ah\u00ed pasan a cosas como Cat\u00e1n o Aventureros al Tren y luego ya cualquier juego que les llame aunque dure 4 horas :P","karma":"5.00","parent":"974595","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"156850","author":"","webpage":"","user_name":"lathspell","karma_level":"22.00","iseditor":"0","global_id":"76317","facebook_uid":null,"user_status":"active","index":4,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/27f20a8c5624dea482d7ea4cab2d033d","abuse_users":[]},{"id":"981236","post_id":"179747","date":1455117814,"content_filtered":"<p>Pero esos son los mas \"hardcore\" hay muchos de iniciaci\u00f3n tipo Stone Age... <br \/>\nDe todas maneras con lo de moda que estan, hay asociaciones, y ahi encuentras gente que comparte el gusto por los juegos de mesa ;)<\/p>","content":"Pero esos son los mas \"hardcore\" hay muchos de iniciaci\u00f3n tipo Stone Age... \nDe todas maneras con lo de moda que estan, hay asociaciones, y ahi encuentras gente que comparte el gusto por los juegos de mesa ;)","karma":"5.00","parent":"974595","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"136104","author":"","webpage":"","user_name":"camaan","karma_level":"25.00","iseditor":"0","global_id":"115668","facebook_uid":"527314894","user_status":"active","index":10,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/115668_3.png","abuse_users":[]},{"id":"974638","post_id":"179747","date":1453407630,"content_filtered":"<p>Yo a\u00fan recuerdo aquellas partidas de cinco, seis, siete horas jugando al Monopoly. Las normas se aplicaban durante las primeras tres horas como mucho, luego empezaban los chanchullos, los trapicheos y los \"te cambio esta calle por tal y te ofrezco tanto\". A partir de la quinta hora reinaba la anarqu\u00eda absoluta, se hab\u00edan formado bandos y algunos ya se arruinaban a prop\u00f3sito para perder. Con un poco de suerte alguien se cabreaba, el tablero saltaba por los aires y se acababa aquella tortura. Definitivamente los juegos de mesa tienen ese algo especial que no consiguen los videojuegos<\/p>","content":"Yo a\u00fan recuerdo aquellas partidas de cinco, seis, siete horas jugando al Monopoly. Las normas se aplicaban durante las primeras tres horas como mucho, luego empezaban los chanchullos, los trapicheos y los \"te cambio esta calle por tal y te ofrezco tanto\". A partir de la quinta hora reinaba la anarqu\u00eda absoluta, se hab\u00edan formado bandos y algunos ya se arruinaban a prop\u00f3sito para perder. Con un poco de suerte alguien se cabreaba, el tablero saltaba por los aires y se acababa aquella tortura. Definitivamente los juegos de mesa tienen ese algo especial que no consiguen los videojuegos","karma":"38.00","parent":"0","comment_edited_date":"","vote_count":"2","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"172661","author":"","webpage":"","user_name":"gonperper97","karma_level":"25.00","iseditor":"0","global_id":"1028292","facebook_uid":null,"user_status":"active","index":5,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/926b6f9f7d33f0c6b451160c347bb25e","abuse_users":[]},{"id":"974713","post_id":"179747","date":1453448085,"content_filtered":"<p>Yo echo mucho de menos las partidas a la fuga de Coldtiz que me pegaba con mis amigos. Ahora me resulta pr\u00e1cticamente imposible juntar a nadie para jugar una partida de algo y no digamos ya si la partida dura m\u00e1s de una hora. Total, que acabo tirando de videojuegos por no encontrar gente con la que jugar. Cuando leo un art\u00edculo de estos me entran ganas de comprarme 10 juegos de mesa.<\/p>","content":"Yo echo mucho de menos las partidas a la fuga de Coldtiz que me pegaba con mis amigos. Ahora me resulta pr\u00e1cticamente imposible juntar a nadie para jugar una partida de algo y no digamos ya si la partida dura m\u00e1s de una hora. Total, que acabo tirando de videojuegos por no encontrar gente con la que jugar. Cuando leo un art\u00edculo de estos me entran ganas de comprarme 10 juegos de mesa.","karma":"28.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"56923","author":"","webpage":"","user_name":"juaner","karma_level":"56.00","iseditor":"0","global_id":"301541","facebook_uid":null,"user_status":"active","index":6,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/301541_1.png","abuse_users":[]},{"id":"974785","post_id":"179747","date":1453465998,"content_filtered":"<p>Te comprendo, y no sabes hasta qu\u00e9 punto. Si leer te da ganas de comprar juegos, imagina lo que he sentido al estar tratando con estos monstruos y al redactar el art\u00edculo.<\/p>","content":"Te comprendo, y no sabes hasta qu\u00e9 punto. Si leer te da ganas de comprar juegos, imagina lo que he sentido al estar tratando con estos monstruos y al redactar el art\u00edculo.","karma":"10.00","parent":"974713","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"26403","author":"Alkar","webpage":"","user_name":"alkar","karma_level":"27.00","iseditor":"0","global_id":"208","facebook_uid":null,"user_status":"active","index":9,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/208_4.png","abuse_users":[]},{"id":"974718","post_id":"179747","date":1453449870,"content_filtered":"<p>Publico hay ..o ni se crearan juegos nuevos, las personas est\u00e1n demandando experiencias ! <\/p>","content":"Publico hay ..o ni se crearan juegos nuevos, las personas est\u00e1n demandando experiencias !  ","karma":"8.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"172777","author":"","webpage":"","user_name":"johanandresortiz1","karma_level":"22.00","iseditor":"0","global_id":"1028912","facebook_uid":"10206841356059983","user_status":"active","index":7,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/10206841356059983\/picture","abuse_users":[]},{"id":"974587","post_id":"179747","date":1453396789,"content_filtered":"<p>Y m\u00e1s dif\u00edcil sobre todo por la dura competencia de los videojuegos en todos sus formatos<\/p>","content":"Y m\u00e1s dif\u00edcil sobre todo por la dura competencia de los videojuegos en todos sus formatos","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"183367","author":"","webpage":"","user_name":"altamira","karma_level":"25.00","iseditor":"0","global_id":"382417","facebook_uid":null,"user_status":"active","index":1,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/b310220437932bda39e1497a25ce9967","abuse_users":[]},{"id":"1000974","post_id":"179747","date":1459972213,"content_filtered":"<p>No me gusto jejeje<\/p>","content":"No me gusto jejeje","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"187152","author":"","webpage":"","user_name":"paulaandrea2","karma_level":"17.00","iseditor":"0","global_id":"1102052","facebook_uid":"1149581398419538","user_status":"active","index":11,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/1149581398419538\/picture","abuse_users":[]},{"id":"1034433","post_id":"179747","date":1469011479,"content_filtered":"<p>Buenas! interesante articulo, felicidades.<br \/>\nSi quisiera sacar un juego de cartas de venta al p\u00fablico, que datos legales deber\u00eda tener?<\/p><p>Codigo de barras?<br \/>\nDeposito legal?<br \/>\nISBN?<br \/>\n\u2026<\/p><p>Muchas gracias de antemano<\/p>","content":"Buenas! interesante articulo, felicidades.\nSi quisiera sacar un juego de cartas de venta al p\u00fablico, que datos legales deber\u00eda tener?\n\nCodigo de barras?\nDeposito legal?\nISBN?\n\u2026\n\nMuchas gracias de antemano","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"191535","author":"","webpage":"","user_name":"caligulas","karma_level":"17.00","iseditor":"0","global_id":"13112","facebook_uid":null,"user_status":"active","index":12,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/cc996a49ab9a2e28f6667832459a3818","abuse_users":[]},{"id":"1037664","post_id":"179747","date":1470067718,"content_filtered":"<p>Que buen art\u00edculo. Gracias a un amigo emprend\u00ed el camino creando un juego de mesa. Y es jodido pero muy gratificante mientras ves q va tomando forma. Y lo peor de todo es que lo comence haciendo con solo 3 juegos en mi lomo el estanciero, el uno y el teg. Pero bueno es lindo desaf\u00edo. Y lo peor de todo es que mi cerebro lo va jugando solo y espero pronto pulirlo yo y pasar al testeo en grupo. Pero siempre encuentro algo para mejorar antes de terminar el beta Jajaja.<\/p>","content":"Que buen art\u00edculo. Gracias a un amigo emprend\u00ed el camino creando un juego de mesa. Y es jodido pero muy gratificante mientras ves q va tomando forma. Y lo peor de todo es que lo comence haciendo con solo 3 juegos en mi lomo el estanciero, el uno y el teg. Pero bueno es lindo desaf\u00edo. Y lo peor de todo es que mi cerebro lo va jugando solo y espero pronto pulirlo yo y pasar al testeo en grupo. Pero siempre encuentro algo para mejorar antes de terminar el beta Jajaja.","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"192063","author":"","webpage":"","user_name":"eladversario","karma_level":"17.00","iseditor":"0","global_id":"1125192","facebook_uid":"146234875811307","user_status":"active","index":13,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/146234875811307\/picture","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":13,"order":"valued","totalCount":13,"commentStatus":"closed"}};
+  AML.Comments.config.postId = 179747;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "closed";
+  AML.Comments.config.campaignDate = "05_Apr_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+       <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+         <div class="head-menu-extras">
+    <p class="nav-heading">Destacamos</p>
+    <ul>
+                     <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="https://premios.xataka.com/">
+      Premios Xataka
+      </a></li>
+                          <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="/black-friday">
+      Black Friday
+      </a></li>
+         </ul>
+   </div>
+       <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Xataka" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/componentes">Componentes</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/ordenadores">Ordenadores</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/videojuegos">Videojuegos</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/analisis">Análisis</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/moviles">Móviles</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/apple">Apple</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/samsung">Samsung</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/netflix">Netflix</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/xiaomi">Xiaomi</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/despeja-la-x">Despeja la X</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/captcha-ia">Captcha IA</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                     <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+             <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+             <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Xataka: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="/respuestas">Xataka Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/user/xatakatv?sub_confirmation=1">Xataka
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasion</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Magnet</a></li></ul></li>         <li><a href="#head-channel-videojuegos" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Videojuegos
+        <span class="head-item-meta m-desc">Consolas, juegos, PC, PS4, Switch, Nintendo 3DS y Xbox...</span></a><ul id="head-channel-videojuegos" class="head-channel-list"><li><a class="head-list-item tech-3djuegos js-track-header-event"   href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=footer">3DJuegos</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tech-ign js-track-header-event"   href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=footer">IGN</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li><li><a class="head-list-item tech-3djuegos js-track-header-event"   href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=footer">Trasgo</a></li></ul></li>         <li><a href="#head-channel-entretenimiento" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Entretenimiento
+        <span class="head-item-meta m-desc">Series, cine, estrenos en cartelera, premios, rodajes, nuevas películas, televisión...</span></a><ul id="head-channel-entretenimiento" class="head-channel-list"><li><a class="head-list-item oci-sensacine js-track-header-event"   href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=footer">Sensacine</a></li><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-gastronomia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Gastronomía
+        <span class="head-item-meta m-desc">Recetas, recetas de cocina fácil, pinchos, tapas, postres...</span></a><ul id="head-channel-gastronomia" class="head-channel-list"><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Decoesfera</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Compradiccion</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Familia y Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Participamos en
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="http://www.cocacolaespana.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey España</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.coca-colamexico.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="http://www.cocacolaportugal.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey Portugal</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/ecologia-y-naturaleza/oceanix-city-ciudad-flotante-a-prueba-desastres-naturales-auto-sostenible-que-onu-quiere-hacer-realidad" class="head-new-item">
+ Oceanix City, la ciudad flotante &quot;a prueba de desastres naturales&quot; y auto sostenible que la ONU quiere hacer realidad
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-05T02:25:19+00:00"></time></span></a></li> <li><a href="/inteligencia-artificial/wayve-reclama-que-su-coche-autonomo-ha-sido-primero-completar-trayecto-recurriendo-solo-a-ia-navegador-gps" class="head-new-item">
+ Wayve reclama que su coche autónomo ha sido el primero en completar un trayecto recurriendo tan sólo a la IA y un navegador GPS 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-05T00:01:57+00:00"></time></span></a></li> <li><a href="/accesorios/amazon-prepara-unos-auriculares-inalambricos-alexa-para-competir-airpods-apple-bloomberg" class="head-new-item">
+ Amazon prepara unos auriculares inalámbricos con Alexa para competir contra los AirPods de Apple, según Bloomberg
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T22:50:32+00:00"></time></span></a></li> <li><a href="/vehiculos/pilotos-boeing-737-max-ethiopian-airlines-siguieron-procedimiento-no-funciono-informe-preliminar" class="head-new-item">
+ Los pilotos del Boeing 737 MAX de Ethiopian Airlines siguieron el procedimiento de emergencia pero no funcionó, según el informe preliminar
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T21:03:46+00:00"></time></span></a></li> <li><a href="/energia/muerte-carbon-europa-solo-gif-asi-se-va-a-descarbonizar-viejo-continente" class="head-new-item">
+ La muerte del carbón en Europa en un solo gif: así se va a &#039;descarbonizar&#039; el Viejo Continente
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T17:31:26+00:00"></time></span></a></li> <li><a href="/aplicaciones/todos-que-quieren-ser-age-of-empires-movil-no-estan-consiguiendo" class="head-new-item">
+ Todos los que quieren ser el &#039;Age of Empires&#039; del móvil y no lo están consiguiendo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T16:31:26+00:00"></time></span></a></li> <li><a href="https://www.xatakamovil.com/analisis/sony-xperia-10-analisis-caracteristicas-precio-especificaciones?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Sony Xperia 10, análisis: la pantalla 21:9 brilla por sí misma, ahora solo falta poder disfrutarla 
+ <span class="head-item-meta">
+  en Xataka Móvil <time class="js-header-post" datetime="2019-04-04T17:09:51+00:00"></time></span></a></li> <li><a href="/espacio/project-kuiper-ambicioso-plan-amazon-3-236-satelites-para-ofrecer-acceso-a-internet-espacio" class="head-new-item">
+ &#039;Project Kuiper&#039;, el ambicioso plan de Amazon para lanzar 3.236 satélites y ofrecer acceso a internet desde el espacio
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T15:59:33+00:00"></time></span></a></li> <li><a href="/servicios/wifi-aviones-esto-que-ofrecen-principales-aerolineas-para-navegar-a-bordo" class="head-new-item">
+ WiFi en aviones: esto es lo que ofrecen las principales aerolíneas para navegar a bordo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T15:01:26+00:00"></time></span></a></li> <li><a href="/empresas-y-economia/netflix-a-xiaomi-asi-como-ganan-dinero-principales-empresas-tecnologicas-2-despeja-x-1x43" class="head-new-item">
+ De Netflix a Xiaomi: así es como ganan dinero las principales empresas tecnológicas #2 (Despeja la X, 1x43)
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T14:00:19+00:00"></time></span></a></li> <li><a href="/videojuegos/17-juegos-que-han-vendido-historia-nintendo-switch" class="head-new-item">
+ Los 17 juegos que más han vendido en la historia de Nintendo Switch
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T13:01:26+00:00"></time></span></a></li> <li><a href="/medicina-y-salud/mayores-empresas-pruebas-geneticas-dice-tener-responsabilidad-moral-compartir-sus-datos-policia" class="head-new-item">
+ Una de las mayores empresas de pruebas genéticas dice tener la &quot;responsabilidad moral&quot; de compartir sus datos con la policía
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T12:01:26+00:00"></time></span></a></li> <li><a href="/entrevistas/tenemos-claro-que-nuestra-competencia-dinero-efectivo-waler-pimenta-vp-soluciones-digitales-mastercard" class="head-new-item">
+ &quot;Tenemos claro que nuestra competencia es el dinero en efectivo&quot;: Walter Pimenta, VP de soluciones digitales en Mastercard
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T10:01:26+00:00"></time></span></a></li> <li><a href="/moviles/redmi-pro-2-apunta-a-ser-primer-buque-insignia-nueva-marca-xiaomi-camara-retractil-snapdragon-855" class="head-new-item">
+ El Redmi Pro 2 apunta a ser el primer buque insignia de la nueva marca de Xiaomi con cámara retráctil y Snapdragon 855
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T09:31:26+00:00"></time></span></a></li> <li><a href="/cine-y-tv/no-eres-mainstream-que-no-ha-habido-versiones-porno-tus-referencias-culturales" class="head-new-item">
+ No eres mainstream hasta que no ha habido versiones porno de tus referencias culturales
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T09:01:26+00:00"></time></span></a></li> <li><a href="/moviles/motorola-volvera-nuevo-buque-insignia-cuatro-camaras-al-estilo-nokia-ultima-filtracion" class="head-new-item">
+ Motorola busca regresar por todo lo alto con un nuevo móvil de cuatro cámaras al estilo Nokia, según la última filtración
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T08:01:26+00:00"></time></span></a></li> <li><a href="/inteligencia-artificial/hay-guerra-google-acerca-quien-decidira-etica-su-inteligencia-artificial" class="head-new-item">
+ Hay una guerra en Google acerca de quién decidirá la ética de su inteligencia artificial
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T07:32:57+00:00"></time></span></a></li> <li><a href="/aplicaciones/adobe-after-effects-ahora-nos-permitira-borrar-forma-sencilla-cualquier-objeto-no-deseado-nuestros-videos" class="head-new-item">
+ Adobe After Effects ahora nos permitirá borrar de una forma más sencilla cualquier objeto no deseado de nuestros vídeos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T02:00:45+00:00"></time></span></a></li> <li><a href="https://www.vidaextra.com/cultura/senor-anillos-este-escenario-temporal-que-va-a-basarse-serie-estos-juegos-que-nos-han-mostrado?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ El Señor de los Anillos: éste es el escenario temporal en el que va a basarse la serie y estos son los juegos que nos los han mostrado 
+ <span class="head-item-meta">
+  en Vidaextra <time class="js-header-post" datetime="2019-04-04T06:54:40+00:00"></time></span></a></li> <li><a href="/automovil/toyota-libera-23-740-patentes-su-tecnologia-coches-hibridos-ofrece-gratis-a-fabricantes-para-impulsar-mercado" class="head-new-item">
+ Toyota libera 23.740 patentes de su tecnología de coches híbridos y las ofrece gratis a los fabricantes para &quot;impulsar el mercado&quot;
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T23:00:45+00:00"></time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="xataka">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Posible XIAOMI REDMI 2 PRO, NUEVA CPU de INTEL y ¿un MOTOROLA con 4 CÁMARAS? | XTK Now!" src="https://img.youtube.com/vi/6DWFr6Jbof4/mqdefault.jpg"></span><span class="head-new-video-desc">Posible XIAOMI REDMI 2 PRO, NUEVA CPU de INTEL y ¿un MOTOROLA con 4 CÁMARAS? | XTK Now!</span></a></li> 
+     <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Samsung Galaxy S10+, mes de uso: ser MÁS COMPLETO puede NO SER SUFICIENTE" src="https://img.youtube.com/vi/J5YgFXCI49w/mqdefault.jpg"></span><span class="head-new-video-desc">Samsung Galaxy S10+, mes de uso: ser MÁS COMPLETO puede NO SER SUFICIENTE</span></a></li> 
+     <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="COCHE de XIAOMI, FACEBOOK pide CONTRASEÑAS del correo y AKIRA tiene luz verde | XTK Now!" src="https://img.youtube.com/vi/m00Kc1EEC4Y/mqdefault.jpg"></span><span class="head-new-video-desc">COCHE de XIAOMI, FACEBOOK pide CONTRASEÑAS del correo y AKIRA tiene luz verde | XTK Now!</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="xataka">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Xataka" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+<footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                          <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+         </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Xataka hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/componentes">Componentes</a></li>         <li><a class="list-item foot-list-item" href="/categoria/ordenadores">Ordenadores</a></li>         <li><a class="list-item foot-list-item" href="/categoria/videojuegos">Videojuegos</a></li>         <li><a class="list-item foot-list-item" href="/categoria/analisis">Análisis</a></li>         <li><a class="list-item foot-list-item" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>         <li><a class="list-item foot-list-item" href="/categoria/moviles">Móviles</a></li>             <li><a class="list-item foot-list-item" href="/tag/apple">Apple</a></li>         <li><a class="list-item foot-list-item" href="/tag/samsung">Samsung</a></li>         <li><a class="list-item foot-list-item" href="/tag/netflix">Netflix</a></li>         <li><a class="list-item foot-list-item" href="/tag/xiaomi">Xiaomi</a></li>         <li><a class="list-item foot-list-item" href="/tag/despeja-la-x">Despeja la X</a></li>         <li><a class="list-item foot-list-item" href="/tag/captcha-ia">Captcha IA</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Xataka" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="webedia-brand foot-webedia-brand">
+  <a href="https://www.webedia.es/" class="webedia-logo foot-webedia-logo"><span>Webedia</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+        <div class="links-category">
+    <p class="channel-title"> Tecnología </p><ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Magnet</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Videojuegos </p><ul><li><a class="list-item foot-list-item"  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=footer">3DJuegos</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=footer">IGN</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=footer">Trasgo</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Entretenimiento </p><ul><li><a class="list-item foot-list-item"  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=footer">Sensacine</a></li><li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Gastronomía </p><ul><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Estilo de Vida </p><ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Compradiccion</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Motor </p><ul><li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul><p class="channel-title"> Economía </p><ul><li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul><p class="channel-title"> Familia y Ocio </p><ul><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li></ul>
+  </div>
+ 
+  </div>
+    <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+        <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="http://www.nobbot.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item"  href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item"  href="http://www.bloglenovo.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="https://www.inget.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="list-item foot-list-item"  href="http://blog.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="//www.esportsunlocked.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="//poptv.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pop TV</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="http://www.cocacolaespana.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item"  href="http://www.coca-colamexico.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="http://www.cocacolaportugal.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item"  href="http://zona.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item"  href="https://www.cervezasalhambra.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item"  href="http://www.rentabilibar.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="http://www.circulaseguro.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item"  href="http://www.circulaseguro.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item"  href="http://corrienteelectrica.renault.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="list-item foot-list-item"  href="//hablemosdeempresas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="list-item foot-list-item"  href="https://www.ennaranja.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item"  href="http://blog.sage.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item"  href="https://www.segurosdetuatu.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item"  href="https://www.huellasbysareb.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul>
+  </div>
+ 
+  </div>
+ </div>
+ </div>
+     <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons m-favicons-compact">
+ <div class="head-favicons">
+     <div class="head-favicons-index head-webedia-logo">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Webedia">Webedia</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+              favicon-current
+       " rel="nofollow" href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+       "  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+       "  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+       "  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=favicons">
+       <span>IGN</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+          <div class="favicons-expanded-inner">
+    <ul><li><h4>Tecnología</h4></li><li><a class="favicon tec-xataka"  rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka
+    </a></li><li><a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Móvil
+    </a></li><li><a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Foto
+    </a></li><li><a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Android
+    </a></li><li><a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Smart Home
+    </a></li><li><a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Windows
+    </a></li><li><a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Ciencia
+    </a></li><li><a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Applesfera
+    </a></li><li><a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Genbeta
+    </a></li><li><a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Magnet
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Videojuegos</h4></li><li><a class="favicon tech-3djuegos"  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=favicons"><span></span>3DJuegos
+    </a></li><li><a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Vida Extra
+    </a></li><li><a class="favicon tech-ign"  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=favicons"><span></span>IGN
+    </a></li><li><a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka eSports
+    </a></li><li><a class="favicon tech-3djuegos"  href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=favicons"><span></span>Trasgo
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Entretenimiento</h4></li><li><a class="favicon oci-sensacine"  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=favicons"><span></span>Sensacine
+    </a></li><li><a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Espinof
+    </a></li><li><a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>WATmag
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Gastronomía</h4></li><li><a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Directo al Paladar
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Estilo de Vida</h4></li><li><a class="favicon est-vitonica"  rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Vitónica
+    </a></li><li><a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Trendencias
+    </a></li><li><a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Trendencias Hombre
+    </a></li><li><a class="favicon est-decoesfera"  rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Decoesfera
+    </a></li><li><a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Compradiccion
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Motor</h4></li><li><a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Motorpasión
+    </a></li><li><a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Motorpasión Moto
+    </a></li></ul><ul><li><h4>Economía</h4></li><li><a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>El Blog Salmón
+    </a></li><li><a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Pymes y Autónomos
+    </a></li></ul><ul><li><h4>Familia y Ocio</h4></li><li><a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Bebés y Más
+    </a></li><li><a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Diario del Viajero
+    </a></li></ul>
+  </div>
+ 
+ </div>
+ </aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Xataka: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "355823546895",
+   cookieDomain: "",
+   siteName: "Xataka",
+   imagePath: "https://img.weblogssl.com/css/xataka/p/v6",
+   desktopSiteUrl: "https://www.xataka.com",
+   redirectDesktopRoot: 'false',
+   postId: 179747,
+   postTitle: "El\u0020enorme\u0020reto\u0020de\u0020dise\u00F1ar\u0020un\u0020juego\u0020de\u0020mesa\u0020desde\u0020cero",
+   tweetText: "Comentario%20a%20El%20enorme%20reto%20de%20dise%C3%B1ar%20un%20juego%20de%20mesa%20desde%20cero",
+   twitterName: "xataka",
+   device: "desktop",
+   postUrl: "https://www.xataka.com/literatura-comics-y-juegos/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "XTK",
+    blogDomain: "xataka.com"
+   },
+   adblockLatCampaignTarget: "http://brave.com/xat342",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 0,
+   enableUserOptOutProcess: 1,
+   postSubType: "special",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 1,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.xataka.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+     var _sf_async_config = {};
+_sf_async_config.sections = "xataka.com";
+_sf_async_config.authors = "alkar";
+_sf_async_config.uid = "54296";
+_sf_async_config.domain = "xataka.com";
+_sf_async_config.useCanonical = true;
+(function(){
+ function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement("script");
+  e.setAttribute("language", "javascript");
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+ }
+ var oldonload = window.onload;
+ window.onload = (typeof window.onload != "function") ?
+ loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-edaec3a9.js"></script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/xataka/el-enorme-reto-de-disenar-un-juego-de-mesa-desde-cero/CR/1?category=literatura-comics-y-juegos&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/xataka?picture_tag=1"></script>
+ <script>
+  (function(d) {
+   if ('ES' !== country) {
+    return;
+   }
+
+   var b = d.body;
+   var e = d.createElement('script');
+   e.id = 'parsely-cfg';
+   e.src = '//cdn.parsely.com/keys/xataka.com/p.js';
+   e.async = true;
+   e.setAttribute('data-parsely-site', "xataka.com");
+   b.appendChild(e);
+  })(document);
+ </script>
+                  
+       </div>
+  </div>
+     </body>
+</html>

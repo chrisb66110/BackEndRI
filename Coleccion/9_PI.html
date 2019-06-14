@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>c++ - ¿Por qué no debería usar referencias a punteros inteligentes? - coredump.uno</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62274460-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-62274460-2');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1329347597508497",
+        enable_page_level_ads: true
+    });
+</script>
+<script>
+var ads_enabled = true;
+</script>
+    <meta name="description" content="Recuerdo leer en alguna parte que el uso de referencias a punteros inteligentes puede causar daños en la memoria. ¿Esto se debe simplemente al uso de la referencia del puntero inteligente después de su destrucción? ¿O el recuento de referencias se est">
+    <link href="https://coredump.uno/questions/179105/why-shouldnt-you-use-references-to-smart-pointers" rel="canonical">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+<!--    <link href="/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="/css/atom-one-light.css">
+    <link href="/css/site.css" rel="stylesheet">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="/js/my.js"></script>
+</head>
+<body>
+    <div class="main">
+
+    <nav id="w0" class="navbar-inverse navbar-static-top navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse">
+                <span class="sr-only">Navegación de palanca</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="/favicon-32x32.png" height="40" class="pull-left navbar-img"/>&nbsp; CoreDump.uno</a>
+        </div>
+        <div id="w0-collapse" class="collapse navbar-collapse">
+            <ul id="w1" class="navbar-nav navbar-right nav">
+                <li><a href="/questions">Preguntas</a></li>
+                <li><a href="/tags">Etiquetas</a></li>
+            </ul>
+            <form class='navbar-form navbar-right' role='search'>
+                <div class='form-group has-feedback'>
+                    <input id='searchbox' type='text' placeholder='Buscar...' class='form-control'>
+                    <span id='searchicon' class='fa fa-search form-control-feedback'></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="col-md-9">
+            <div class="col-md-12 publicidad-top" >
+                <br>Aquí podría ser tu PUBLICIDAD<br><br>
+            </div><br>
+            <div itemscope itemtype="http://schema.org/Question">
+                <div class="question-header">
+                    <h1 itemprop="name">¿Por qué no debería usar referencias a punteros inteligentes?</h1>
+                </div>
+                <div class="row">
+                    <div class="votecell mpre col-sm-1">
+                    votos
+                        <div itemprop="upvoteCount" class="vote">
+                            24                        </div>
+                    </div>
+                    <div class="post-text col-sm-11" itemprop="text">
+                        
+<p>Recuerdo leer en alguna parte que el uso de referencias a punteros inteligentes puede causar daños en la memoria. ¿Esto se debe simplemente al uso de la referencia del puntero inteligente después de su destrucción? ¿O el recuento de referencias se estropea?</p>
+
+<p>Gracias por aclararlo</p>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11 col-md-offset-1">
+                        <div class="tags-text" >
+                    <a href="/questions/tagged/c%2B%2B" class="post-tag" rel="tag">c++</a>
+<a href="/questions/tagged/smart-pointers" class="post-tag" rel="tag">smart-pointers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11 col-md-offset-1">
+                        <div class="owner-text" >
+                        Publicado el 07/10/2008 a las 04:41                        <br>
+                            <a class="fuente" href="https://stackoverflow.com/questions/179105" target="_blank" rel="noopener">fuente</a>
+                            por usuario
+                        <a href="https://stackoverflow.com/users/16496" target="_blank">Superpolock </a>                        <hr>
+                        </div>
+                    </div>
+                </div>
+
+                                    <div class="info">
+                        <span itemprop="answerCount">6</span> respuestas
+                    </div><hr>
+                                            <a name="179121"></a>
+                        <div class="answer accepted" itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer" id="answer179121">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        14                                    </div>
+                                    <br><img title="El propietario de la pregunta aceptó esta respuesta como la mejor." src="/img/accept.png" class="accept-img">                                </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>Asumiendo que estás hablando de shared_ptr aquí ...</p>
+
+<blockquote>
+  <p>¿Esto se debe simplemente al uso de la referencia del puntero inteligente después de su destrucción?</p>
+</blockquote>
+
+<p>Esta es una buena respuesta. Es posible que no sepa absolutamente la vida útil del puntero a la que se refiere su referencia también.</p>
+
+<p>Para evitar esto, querrá ver boost :: weak_ptr. No participa en el recuento de referencias. Cuando necesitas usarlo, te da un shared_ptr que desaparece una vez que hayas terminado con él. También le permitirá saber cuándo se ha recopilado el puntero al referido.</p>
+
+<p>De la documentación de <a href="http://www.boost.org/doc/libs/1_36_0/libs/smart_ptr/weak_ptr.htm#expired" rel="noreferrer">weak_ptr</a><font style="vertical-align: inherit;"></font></p>
+
+<blockquote>
+  <p>La plantilla de la clase weak_ptr almacena una "referencia débil" para un objeto que ya está administrado por un shared_ptr. Para acceder al objeto, un weak_ptr se puede convertir a un shared_ptr utilizando el constructor shared_ptr o el bloqueo de función miembro. Cuando el último shared_ptr del objeto desaparece y el objeto se elimina, el intento de obtener un shared_ptr de las instancias weak_ptr que hacen referencia al objeto eliminado fallará: el constructor arrojará una excepción de tipo boost :: bad_weak_ptr, y weak_ptr: : lock devolverá un shared_ptr vacío.</p>
+</blockquote>
+
+<p>Tenga en cuenta que el método caducado () también le indicará si su ptr aún está activo.</p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 07/10/2008 a las 04:44                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/179121" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/8123" target="_blank">Doug T. </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+                            <div class="col-md-12 publicidad-top" >
+                                <br>Aquí podría ser tu PUBLICIDAD<br><br>
+                            </div><br>
+                                                <a name="179218"></a>
+                        <div class="answer " itemscope itemtype="http://schema.org/Answer" id="answer179218">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        5                                    </div>
+                                                                    </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>Cuando se utilizan punteros inteligentes (o cualquier objeto de gestión de asignación) se cuenta con los comportamientos definidos en el constructor / destructor para gestionar refs / derefs / locks / unlocks. Como resultado, esos tipos de objetos deben ser objetos verdaderos para funcionar correctamente. cuando se utilizan referencias a tales objetos (o punteros) se está pasando por alto el mecanismo (y pidiendo un wedgie).</p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 07/10/2008 a las 05:08                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/179218" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/17975" target="_blank">Dan Hewett </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+                        <a name="179377"></a>
+                        <div class="answer " itemscope itemtype="http://schema.org/Answer" id="answer179377">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        3                                    </div>
+                                                                    </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>Todavía hay muchos casos en los que una referencia a un puntero inteligente es una buena idea. Un ejemplo obvio es el método de asignación de la clase de puntero inteligente, que acepta una <em>referencia</em> a otro puntero inteligente como su parámetro.</p>
+
+<p>Hacer un método que acepte una referencia de puntero inteligente significa que el parámetro no incrementa la cuenta de referencia interna del puntero inteligente. Esto puede mejorar el rendimiento, pero probablemente no mucho. Además, hay muchas cosas que el método no puede hacer con la referencia, o con el puntero inteligente original. Si sabes lo que son estas cosas y las evitas, pasar por referencia funciona muy bien. Por supuesto, el propósito de los indicadores inteligentes es evitar tener que saber estas cosas.</p>
+
+<p>Además, si tiene un método que <em>modificará</em> el valor de un parámetro de puntero inteligente, se requiere pasar como referencia, como ocurre con cualquier otro tipo.</p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 07/10/2008 a las 05:48                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/179377" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/25879" target="_blank">Jeff B </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+                        <a name="179388"></a>
+                        <div class="answer " itemscope itemtype="http://schema.org/Answer" id="answer179388">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        1                                    </div>
+                                                                    </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>La parte "inteligente" de los punteros inteligentes es administrada por los constructores, destructores, operadores de asignación y otras funciones de la clase de puntero inteligente. Al usar una referencia, está eludiendo estas operaciones: no se llamará al constructor cuando se inicialice su referencia, y no se llamará al destructor cuando su referencia quede fuera del alcance.  </p>
+
+<p>En esencia, una referencia a un puntero inteligente es un puntero tonto, con todos los riesgos y trampas que este último implica.</p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 07/10/2008 a las 05:49                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/179388" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/1674" target="_blank">JohnMcG </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+                        <a name="19118453"></a>
+                        <div class="answer " itemscope itemtype="http://schema.org/Answer" id="answer19118453">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        0                                    </div>
+                                                                    </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>Pasando una referencia a un puntero inteligente en una función es perfectamente seguro y es una buena idea. El objeto puede desaparecer pero el puntero inteligente no, va a ser sentado allí diciendo nulo al menos hasta que se devuelve la función. Es la mejor manera de poner un alias para un puntero inteligente dentro de su alcance. Si utiliza una referencia con un modificador const en lo que se refiere a continuación, usted tiene una referencia de la observación inteligente:</p>
+
+<pre><code>const smart_ptr&lt;T&gt;&amp;
+</code></pre>
+
+<p>Es interesante y útil, la const le impide utilizar la referencia decir, anular el puntero inteligente y eliminar el objeto pero no detiene el puntero inteligente original del mismo y anulando su referencia reflejará ese cambio. </p>
+
+<p>Volviendo una referencia a puntero inteligente de una función es pidiendo todo tipo de problemas. </p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 01/10/2013 a las 03:10                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/19118453" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/2835233" target="_blank">John Morrison </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+                        <a name="179698"></a>
+                        <div class="answer " itemscope itemtype="http://schema.org/Answer" id="answer179698">
+                                                        <div class="row">
+                                <div class="votecell mpre col-sm-1">
+                                    votos
+                                    <div class="vote" itemprop="upvoteCount">
+                                        0                                    </div>
+                                                                    </div>
+                                <div class="post-text col-sm-11" itemprop="text">
+                                    
+<p>Tenemos smartpointers personalizados y siempre tenemos el hábito de pasar un 'const refsomething &amp;'</p>
+
+<p>no incrementa ni disminuye el puntero inteligente, y como tal, y más importante aún, se evitan las llamadas a InterLockedIncrement / Decrement, que a su vez evita una <a href="http://en.wikipedia.org/wiki/Memory_barrier" rel="nofollow noreferrer">valla de memoria</a> y todas las cosas que lo acompañan: bloqueo de bus, invalidación de caché, ... .</p>                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-11 col-md-offset-1">
+                                <div class="owner-text" >
+                                    Respondida el 07/10/2008 a las 07:14                                    <br>
+                                    <a class="fuente" href="https://stackoverflow.com/questions/179698" target="_blank" rel="noopener">fuente</a>
+                                    por usuario
+                                    <a href="https://stackoverflow.com/users/11572" target="_blank">QBziZ </a>                                </div>
+                                </div>
+                                </div>
+                        </div><hr>
+            </div>
+            </div>
+            <div class="col-md-3 publicidad-right">
+                <br><br><br>Aquí<br>podría<br>ser<br>tu<br><br>PUBLICIDAD<br><br><br><br>
+
+<!--                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--                <!-- top-block -->
+<!--                <ins class="adsbygoogle"-->
+<!--                     style="display:block"-->
+<!--                     data-ad-client="ca-pub-1329347597508497"-->
+<!--                     data-ad-slot="3794990537"-->
+<!--                     data-ad-format="auto"-->
+<!--                     data-full-width-responsive="true"></ins>-->
+<!--                <script>-->
+<!--                    (adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--                </script>-->
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+    <div class="container">
+        <span>Licensed under <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with <a target="_blank" href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">attribution required</a>.</span>
+    </div>
+</footer>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script></body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="application/javascript"> $(document).ready(sysstart); </script>
+
+<!--
+-->
+</body>
+</html>
+

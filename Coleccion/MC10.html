@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html class="avada-html-layout-wide" lang="es-ES" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# og: http://ogp.me/ns#">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUGVVZUDRABU1lWAQYFVQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Cuidados de un perro - Cuidado de mascotas &raquo; Blog de Perros</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v8.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cuidados de un perro - Cuidado de mascotas &raquo; Blog de Perros" />
+<meta property="og:description" content="Cuando se trata de la llegada de nuestro nuevo mejor amigo al hogar, tenemos que asegurarnos de conocer lo mas que podamos sobre cuidados de un perro para prepararnos y brindarles &hellip;" />
+<meta property="og:url" content="https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/" />
+<meta property="og:site_name" content="Blog de Perros" />
+<meta property="article:publisher" content="https://www.facebook.com/cuidamimascotaa/" />
+<meta property="article:author" content="https://www.facebook.com/cuidamimascotaa/" />
+<meta property="article:tag" content="cuidados de mascotas" />
+<meta property="article:tag" content="cuidados de perros" />
+<meta property="article:tag" content="cuidados en los perros" />
+<meta property="article:tag" content="cuidamimascota" />
+<meta property="article:tag" content="mascotas" />
+<meta property="article:tag" content="perros" />
+<meta property="article:tag" content="razas de perros" />
+<meta property="article:section" content="Tips" />
+<meta property="article:published_time" content="2016-05-25T15:05:49-05:00" />
+<meta property="article:modified_time" content="2017-12-01T11:45:26-05:00" />
+<meta property="og:updated_time" content="2017-12-01T11:45:26-05:00" />
+<meta property="og:image" content="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_cuidadosperro.jpeg" />
+<meta property="og:image:secure_url" content="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_cuidadosperro.jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="900" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Cuando se trata de la llegada de nuestro nuevo mejor amigo al hogar, tenemos que asegurarnos de conocer lo mas que podamos sobre cuidados de un perro para prepararnos y brindarles [&hellip;]" />
+<meta name="twitter:title" content="Cuidados de un perro - Cuidado de mascotas &raquo; Blog de Perros" />
+<meta name="twitter:site" content="@cuidamimascota" />
+<meta name="twitter:image" content="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_cuidadosperro.jpeg" />
+<meta name="twitter:creator" content="@cuidamimascota" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/blog.cuidamimascota.com\/","sameAs":["https:\/\/www.facebook.com\/cuidamimascotaa\/","https:\/\/www.instagram.com\/cuidamimascota\/","https:\/\/www.youtube.com\/channel\/UCKLEXRHDqAM-2B12lWQ9E3Q","https:\/\/twitter.com\/cuidamimascota"],"@id":"https:\/\/blog.cuidamimascota.com\/#organization","name":"Cuida Mi Mascota","logo":"http:\/\/blog.cuidamimascota.com\/wp-content\/uploads\/2016\/05\/CMMsinfondo.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Blog de Perros &raquo; Feed" href="https://blog.cuidamimascota.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Blog de Perros &raquo; RSS de los comentarios" href="https://blog.cuidamimascota.com/comments/feed/" />
+		
+		
+		
+		
+				<link rel="alternate" type="application/rss+xml" title="Blog de Perros &raquo; Cuidados de un perro &#8211; Cuidado de mascotas RSS de los comentarios" href="https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/feed/" />
+
+		<meta property="og:title" content="Cuidados de un perro - Cuidado de mascotas"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/"/>
+		<meta property="og:site_name" content="Blog de Perros"/>
+		<meta property="og:description" content="Cuando se trata de la llegada de nuestro nuevo mejor amigo al hogar, tenemos que asegurarnos de conocer lo mas que podamos sobre cuidados de un perro para prepararnos y brindarles las atenciones que pueden llegar a necesitar. Recuerda que entre mas sepas del tema, mayor será tu seguridad para ofrecerle un hogar amoroso y divertido."/>
+
+									<meta property="og:image" content="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_cuidadosperro.jpeg"/>
+									<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.cuidamimascota.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6189cafd6a4e9f918ef0d27624170aa9"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='bbp-default-css'  href='https://blog.cuidamimascota.com/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.14-6684' type='text/css' media='screen' />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://blog.cuidamimascota.com/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sb-font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bodhi-svgs-attachment-css'  href='https://blog.cuidamimascota.com/wp-content/plugins/svg-support/css/svgs-attachment.css?ver=6189cafd6a4e9f918ef0d27624170aa9' type='text/css' media='all' />
+<link rel='stylesheet' id='wp_review-style-css'  href='https://blog.cuidamimascota.com/wp-content/plugins/wp-review/assets/css/wp-review.css?ver=4.0.17' type='text/css' media='all' />
+<link rel='stylesheet' id='avada-stylesheet-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/style.min.css?ver=5.6.2' type='text/css' media='all' />
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='avada-IE-fontawesome-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/font-awesome.min.css?ver=5.6.2' type='text/css' media='all' />
+<![endif]-->
+<!--[if IE]>
+<link rel='stylesheet' id='avada-IE-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/ie.min.css?ver=5.6.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='fusion-dynamic-css-css'  href='https://blog.cuidamimascota.com/wp-content/uploads/fusion-styles/5c32fd0acaa6f5852205a4f837742777.min.css?ver=6189cafd6a4e9f918ef0d27624170aa9' type='text/css' media='all' />
+<link rel='stylesheet' id='avada-max-1c-max-sh-640-max-640-bbpress-max-sh-640-bbpress-css'  href='https://blog.cuidamimascota.com?action=avada-get-styles&#038;mq=max-1c.min%2Cmax-sh-640.min%2Cmax-640-bbpress.min%2Cmax-sh-640-bbpress.min&#038;ver=5.6.2' type='text/css' media='only screen and (max-width: 640px)' />
+<link rel='stylesheet' id='avada-max-2c-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/max-2c.min.css?ver=5.6.2' type='text/css' media='only screen and (max-width: 712px)' />
+<link rel='stylesheet' id='avada-min-2c-max-3c-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-2c-max-3c.min.css?ver=5.6.2' type='text/css' media='only screen and (min-width: 712px) and (max-width: 784px)' />
+<link rel='stylesheet' id='avada-min-3c-max-4c-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-3c-max-4c.min.css?ver=5.6.2' type='text/css' media='only screen and (min-width: 784px) and (max-width: 856px)' />
+<link rel='stylesheet' id='avada-min-4c-max-5c-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-4c-max-5c.min.css?ver=5.6.2' type='text/css' media='only screen and (min-width: 856px) and (max-width: 928px)' />
+<link rel='stylesheet' id='avada-min-5c-max-6c-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-5c-max-6c.min.css?ver=5.6.2' type='text/css' media='only screen and (min-width: 928px) and (max-width: 1000px)' />
+<link rel='stylesheet' id='avada-min-shbp-min-sh-cbp-min-sh-cbp-bbpress-css'  href='https://blog.cuidamimascota.com?action=avada-get-styles&#038;mq=min-shbp.min%2Cmin-sh-cbp.min%2Cmin-sh-cbp-bbpress.min&#038;ver=5.6.2' type='text/css' media='only screen and (min-width: 800px)' />
+<link rel='stylesheet' id='avada-max-shbp-max-sh-shbp-max-sh-cbp-max-sh-sbp-max-sh-cbp-bbpress-max-sh-cbp-eslider-css'  href='https://blog.cuidamimascota.com?action=avada-get-styles&#038;mq=max-shbp.min%2Cmax-sh-shbp.min%2Cmax-sh-cbp.min%2Cmax-sh-sbp.min%2Cmax-sh-cbp-bbpress.min%2Cmax-sh-cbp-eslider.min&#038;ver=5.6.2' type='text/css' media='only screen and (max-width: 800px)' />
+<link rel='stylesheet' id='avada-min-768-max-1024-p-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-768-max-1024-p.min.css?ver=5.6.2' type='text/css' media='only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)' />
+<link rel='stylesheet' id='avada-min-768-max-1024-l-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/min-768-max-1024-l.min.css?ver=5.6.2' type='text/css' media='only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)' />
+<link rel='stylesheet' id='avada-max-shbp-18-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/max-shbp-18.min.css?ver=5.6.2' type='text/css' media='only screen and (max-width: 782px)' />
+<link rel='stylesheet' id='avada-max-shbp-32-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/max-shbp-32.min.css?ver=5.6.2' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='avada-max-640-css'  href='https://blog.cuidamimascota.com/wp-content/themes/Avada/assets/css/media/max-640.min.css?ver=5.6.2' type='text/css' media='only screen and (max-device-width: 640px)' />
+<link rel='stylesheet' id='sib-front-css-css'  href='https://blog.cuidamimascota.com/wp-content/plugins/mailin/css/mailin-front.css?ver=6189cafd6a4e9f918ef0d27624170aa9' type='text/css' media='all' />
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sibErrMsg = {"invalidMail":"Please fill out valid email address","requiredField":"Please fill out required fields","invalidDateFormat":"Please fill out valid date format","invalidSMSFormat":"Please fill out valid phone number"};
+var ajax_sib_front_object = {"ajax_url":"https:\/\/blog.cuidamimascota.com\/wp-admin\/admin-ajax.php","ajax_nonce":"207794bc1d","flag_url":"https:\/\/blog.cuidamimascota.com\/wp-content\/plugins\/mailin\/img\/flags\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/plugins/mailin/js/mailin-front.js?ver=1535391509'></script>
+<link rel='https://api.w.org/' href='https://blog.cuidamimascota.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.cuidamimascota.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.cuidamimascota.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='shortlink' href='https://blog.cuidamimascota.com/?p=1240' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.cuidamimascota.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.cuidamimascota.com%2Fcuidados-de-un-perro-cuidado-de-mascotas%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.cuidamimascota.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.cuidamimascota.com%2Fcuidados-de-un-perro-cuidado-de-mascotas%2F&#038;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//blog.cuidamimascota.com/?wordfence_lh=1&hid=7BF70AE90A58BF3F466E0C9B6CE633C4');
+</script><!--[if IE 7]>
+<link rel="stylesheet" href="https://blog.cuidamimascota.com/wp-content/plugins/wp-review/assets/css/wp-review-ie7.css">
+<![endif]-->
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>		<link rel="icon" href="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/cropped-Manosinfondo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/cropped-Manosinfondo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/cropped-Manosinfondo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/cropped-Manosinfondo-270x270.png" />
+
+		
+	<script type="text/javascript">
+		var doc = document.documentElement;
+		doc.setAttribute('data-useragent', navigator.userAgent);
+	</script>
+
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65087247-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65087247-3');
+</script></head>
+
+<body class="post-template-default single single-post postid-1240 single-format-standard fusion-image-hovers fusion-body ltr no-mobile-totop mobile-logo-pos-center layout-wide-mode has-sidebar fusion-top-header menu-text-align-center mobile-menu-design-modern fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none fusion-search-form-clean fusion-avatar-circle">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+				<div id="wrapper" class="">
+		<div id="home" style="position:relative;top:-1px;"></div>
+				
+		
+		<div id="sliders-container">
+					</div>
+				
+		
+			<header class="fusion-header-wrapper">
+				<div class="fusion-header-v1 fusion-logo-center fusion-sticky-menu- fusion-sticky-logo- fusion-mobile-logo-  fusion-mobile-menu-design-modern">
+					<div class="fusion-header-sticky-height"></div>
+<div class="fusion-header">
+	<div class="fusion-row">
+					<div class="fusion-logo" data-margin-top="31px" data-margin-bottom="31px" data-margin-left="0px" data-margin-right="0px">
+			<a class="fusion-logo-link"  href="https://blog.cuidamimascota.com/" >
+
+						<!-- standard logo -->
+			<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/blog-de-perros-logo.svg" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/blog-de-perros-logo.svg 1x" width="" height="" alt="Blog de Perros Logo" retina_logo_url="" class="fusion-standard-logo" />
+
+			
+					</a>
+		</div>		<nav class="fusion-main-menu" aria-label="Main Menu"><ul role="menubar" id="menu-top-nuevo" class="fusion-menu"><li  id="menu-item-2341"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2341"  ><a  href="https://blog.cuidamimascota.com/" class="fusion-background-highlight" role="menuitem"><span class="menu-text">Inicio</span></a></li><li  id="menu-item-2281"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2281"  ><a  href="https://blog.cuidamimascota.com/category/razas-de-perros/" class="fusion-background-highlight" role="menuitem"><span class="menu-text">Razas de Perros</span></a></li><li  id="menu-item-2279"  class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2279"  ><a  href="https://blog.cuidamimascota.com/category/tips/" class="fusion-background-highlight" role="menuitem"><span class="menu-text">Tips</span></a></li><li  id="menu-item-2283"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2283"  ><a  href="https://blog.cuidamimascota.com/category/entrenamiento/" class="fusion-background-highlight" role="menuitem"><span class="menu-text">Entrenamiento</span></a></li><li  id="menu-item-2280"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2280"  ><a  href="https://blog.cuidamimascota.com/category/extras/" class="fusion-background-highlight" role="menuitem"><span class="menu-text">Extras</span></a></li><li class="fusion-custom-menu-item fusion-main-menu-search"><a class="fusion-main-menu-icon" href="#" aria-label="Buscar" data-title="Buscar" title="Buscar"></a><div class="fusion-custom-menu-item-contents"><form role="search" class="searchform fusion-search-form" method="get" action="https://blog.cuidamimascota.com/">
+	<div class="fusion-search-form-content">
+		<div class="fusion-search-field search-field">
+			<label class="screen-reader-text" for="s">Buscar:</label>
+			<input type="text" value="" name="s" class="s" placeholder="Buscar..." required aria-required="true" aria-label="Buscar..."/>
+		</div>
+		<div class="fusion-search-button search-button">
+			<input type="submit" class="fusion-search-submit searchsubmit" value="&#xf002;" />
+		</div>
+	</div>
+</form>
+</div></li></ul></nav>	<div class="fusion-mobile-menu-icons">
+							<a href="#" class="fusion-icon fusion-icon-bars" aria-label="Alternar menú móvil" aria-expanded="false"></a>
+		
+		
+		
+			</div>
+	
+<nav class="fusion-mobile-nav-holder fusion-mobile-menu-text-align-center"></nav>
+
+					</div>
+</div>
+				</div>
+				<div class="fusion-clearfix"></div>
+			</header>
+			
+							
+		
+						<main id="main" role="main" class="clearfix " style="">
+			<div class="fusion-row" style="">
+
+<section id="content" style="float: left;">
+		
+					<article id="post-1240" class="post post-1240 type-post status-publish format-standard has-post-thumbnail hentry category-tips tag-cuidados-de-mascotas tag-cuidados-de-perros tag-cuidados-en-los-perros tag-cuidamimascota tag-mascotas tag-perros tag-razas-de-perros">
+						
+																								
+															<h1 class="entry-title fusion-post-title">Cuidados de un perro &#8211; Cuidado de mascotas</h1>										<div class="post-content">
+				<p>Cuando se trata de la llegada de nuestro nuevo mejor amigo al hogar, tenemos que asegurarnos de conocer lo mas que podamos sobre cuidados de un perro para prepararnos y brindarles las atenciones que pueden llegar a necesitar. Recuerda que entre mas sepas del tema, mayor será tu seguridad para ofrecerle un hogar amoroso y divertido. CMM quiere ayudarte a esto y por eso te ofrecemos algunos consejos generales sobre su cuidado.</p>
+<ul>
+<li><strong>Identíficalo<br />
+</strong>Los cuidados de un perro dependen de nosotros, y empiezan por su seguridad. Aunque la mayor parte del tiempo en casa, SIEMPRE deberá tener collar y placa de identificación con tu nombre, dirección y teléfono. A pesar de lo cuidadoso que podamos ser como dueños, la posibilidad de perderlo lamentablemente existe y estas medidas aumentan la oportunidad que alguien note que es de casa, lo resguarden y en efecto lo encuentres sano y salvo. Hoy en día también existe la opción del microchip, así aunque llegará a perder su collar, al ser escaneado por un veterinario o refugio, tu información aparecerá y serás contactado.</li>
+</ul>
+<ul>
+<li><strong>Hogar limpio y seguro<br />
+</strong>Adecua tu casa para tener un perro, es decir asegúrate de retirar todos los objetos que pudieran ser peligrosos y recuerda que la limpieza es básica para una buena calidad de vida.</li>
+</ul>
+<ul>
+<li><strong>Agua fresca<br />
+</strong>La hidratación es sumamente importante para su salud y energía, siempre deberá tener agua limpia y fresca disponible.</li>
+</ul>
+<ul>
+<li style="text-align: left;"><strong>Dieta de calidad y saludable<br />
+</strong>Así como en los humanos, el sobrepeso puede afectar notoriamente su salud. Sigue las indicaciones de su veterinario de acuerdo a su raza, tamaño y edad. No olvides también escoger premios saludables. (Ver mas sobre: <a href="http://blog.cuidamimascota.com/alimento-para-perros/">Alimento para perros</a>)</li>
+</ul>
+<ul>
+<li><strong>Consulta a su veterinario con frecuencia<br />
+</strong>El veterinario te ofrecerá la información necesaria sobre cuidados de un perro en cuanto a salud como vacunas, desparasitantes e higiene. Recuerda siempre guardar una copia de su carnet de salud en casa o contigo si viajan. También te orientará en otras decisiones que debas tomar o temas que desconozcas, si en algún momento tienes dudas sobre su salud, contacta a tu veterinario lo antes posible y escoge a quien inspire toda tu confianza y puedas contactar en caso de emergencia.</li>
+</ul>
+<ul>
+<li><strong>Ejercicio frecuente<br />
+</strong>Asegúrate que reciba el ejercicio necesario para mantener su condición. Al estar en forma, tu perro tendrá mejores posibilidades de participar en actividades que seguro disfrutará. Si salen de casa, procura tenerlo siempre con correa y bajo control pues será mejor para ti y para la comunidad. (Ver mas sobre: <a href="http://blog.cuidamimascota.com/nuevo-ano-nuevos-propositos-maneras-de-mantenerte-en-forma-con-tu-mascota/">Maneras de mantenerte en forma</a>)</li>
+</ul>
+<ul>
+<li><strong>Comunicación<br />
+</strong>Los perros son sociables por naturaleza y necesitan interacción con su dueño. El tiempo de calidad que tendrán te ayudará a conocer a tu perro y entender cualquier necesidad en particular que pueda tener en el futuro, así como te facilitará el reconocer algún síntoma temprano de malestar. Sumado a esto, el tiempo que pasen juntos ayudará a prevenir futuros malos comportamientos.</li>
+</ul>
+<ul>
+<li><strong>Compañía<br />
+</strong>Si tu mascota se encuentra afuera y tiene techo o una casa para refugiarse del sol y lluvias ya es ganancia, especialmente para perros grandes y muy activos. De cualquier forma, los perros nunca deben permanecer afuera por largos períodos de tiempo y solos. Como mencionamos antes, necesitan compañía y deberían pasar el mayor tiempo posible con su familia.</li>
+</ul>
+<ul>
+<li><strong>Educación básica<br />
+</strong>El entrenamiento básico para cachorros y perros adultos podría resultar de mucha ayuda. Entre mas fácil le sea seguir ordenes básicas y necesarias, mayores serán las posibilidades de que tenga una vida larga y segura. (Ver mas sobre: <a href="http://blog.cuidamimascota.com/como-educar-a-tu-perro/">Cómo educar a tu perro</a>)</li>
+</ul>
+<ul>
+<li><strong>Reproducción segura<br />
+</strong>Los cuidados de un perro no son solamente salud, ejercicio y apariencia. También esta en nuestras manos la decisión de su reproducción. Si no estas interesado en la cría de cachorros, la <strong>esterilización</strong> o <strong>castración</strong> es una opción. Si planeas continuar con la cría o estas en contra de la esterilización/castración por otras razones, toma las medidas seguras para evitar una cruza no deseada (consulta con tu veterinario opciones) y siempre toma en cuenta a las personas a las que darás los cachorros. Considera que los perros que llevan acabo estos procedimientos tienden a vivir mas tiempo, están mas saludables y tienen menos problemas de conducta (son menos dominantes, marcan menos territorio, es menos probable que muerdan o se escapen, entre otros). Por otro lado, también estarás contribuyendo a la sobrepoblación actual y fomentando la <strong>adopción de perros</strong>. Si tu problema es económico, pregunta en asociaciones de tu localidad por campañas de esterilización.</li>
+</ul>
+<ul>
+<li><strong>Limpieza dental<br />
+</strong>No es sólo por el mal aliento o los dientes amarillos, muchas razas son mas propensas a enfermedades dentales como la gingivitis o la acumulación de placa. A largo plazo podría provocarles infecciones que llevaría a consecuencias como pérdida temprana de dientes y problemas cardiacos, hepáticos o renales. Establece una consulta de revisión con el veterinario cada determinado tiempo.</li>
+</ul>
+<ul>
+<li><strong>Aseo general<br />
+</strong>Los perros de pelo largo pueden tener resequedad en la piel u algún otro problema en la piel por lo que es importante darle su cuidado con frecuencia. También será necesario cuidar sus uñas pues en el caso de perros de la 3ª edad puede dificultarles el caminar y en general podrían romperse lo cual sería algo doloroso.</li>
+</ul>
+<div id="attachment_1242" style="width: 650px" class="wp-caption aligncenter"><img class="wp-image-1242 size-large" src="http://blog.cuidamimascota.com/wp-content/uploads/2016/05/perro_baño-1024x675.jpg" width="640" height="422" data-id="1242" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/perro_baño-300x198.jpg 300w, https://blog.cuidamimascota.com/wp-content/uploads/2016/05/perro_baño-1024x675.jpg 1024w, https://blog.cuidamimascota.com/wp-content/uploads/2016/05/perro_baño.jpg 5289w" sizes="(max-width: 640px) 100vw, 640px" /><p class="wp-caption-text">Cuidados de un perro</p></div>
+<p>El conocimiento es poder. Los cuidados de un perro no son mas que la voluntad de ofrecerle la mejor vida que puedes, infórmate y aprende lo mas posible sobre tu perro, su raza si es el caso. Disfruta tu tiempo con el y siempre dale la oportunidad de aprender conforme pase el tiempo. Nunca te arrepentirás de tu decisión de adquirirlo siempre y cuando le brindes las herramientas para comportarse según tus reglas y en una casa segura, limpia y feliz.</p>
+<p>¿Vas a viajar y no tienes con quien dejar a tu mascota? Reserva con un cuidador y utiliza este cupón para que te lleves un descuento.</p>
+<p><a href="https://www.cuidamimascota.com.mx/?utm_source=Blog%20cup%C3%B3n&amp;utm_medium=Blog%20cup%C3%B3n&amp;utm_campaign=Cup%C3%B3n%20blog"><img class="aligncenter size-full wp-image-2983" src="https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog.png" alt="" width="1100" height="182" data-id="2983" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog-20x3.png 20w, https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog-200x33.png 200w, https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog-400x66.png 400w, https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog-600x99.png 600w, https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog-800x132.png 800w, https://blog.cuidamimascota.com/wp-content/uploads/2017/05/cuponblog.png 1100w" sizes="(max-width: 1100px) 100vw, 1100px" /></a></p>
+							</div>
+
+												<div class="fusion-meta-info"><div class="fusion-meta-info-wrapper"><span class="vcard rich-snippet-hidden"><span class="fn"><a href="https://blog.cuidamimascota.com/author/cuidamimascota/" title="Entradas de cuidamimascota" rel="author">cuidamimascota</a></span></span><span class="updated rich-snippet-hidden">2017-12-01T11:45:26+00:00</span><a href="https://blog.cuidamimascota.com/category/tips/" rel="category tag">Tips</a><span class="fusion-inline-sep">|</span><span class="fusion-comments"><a href="https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/#comments">2 Comentarios</a></span></div></div>													<div class="fusion-sharing-box fusion-single-sharing-box share-box">
+		<h4>¡Comparte estos tips para mascotas!</h4>
+		<div class="fusion-social-networks"><div class="fusion-social-networks-wrapper"><a  class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" style="color:#3b5998;" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.cuidamimascota.com%2Fcuidados-de-un-perro-cuidado-de-mascotas%2F&amp;t=Cuidados%20de%20un%20perro%20%26%238211%3B%20Cuidado%20de%20mascotas" target="_blank" title="Facebook"><span class="screen-reader-text">Facebook</span></a><a  class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" style="color:#55acee;" href="https://twitter.com/share?text=Cuidados%20de%20un%20perro%20%E2%80%93%20Cuidado%20de%20mascotas&amp;url=https%3A%2F%2Fblog.cuidamimascota.com%2Fcuidados-de-un-perro-cuidado-de-mascotas%2F" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="screen-reader-text">Twitter</span></a><a  class="fusion-social-network-icon fusion-tooltip fusion-mail fusion-icon-mail fusion-last-social-icon" style="color:#000000;" href="mailto:?subject=Cuidados%20de%20un%20perro%20%26%238211%3B%20Cuidado%20de%20mascotas&amp;body=https://blog.cuidamimascota.com/cuidados-de-un-perro-cuidado-de-mascotas/" target="_self" rel="noopener noreferrer" title="Email"><span class="screen-reader-text">Email</span></a><div class="fusion-clearfix"></div></div></div>	</div>
+													<section class="related-posts single-related-posts">
+				<div class="fusion-title fusion-title-size-two sep-none fusion-sep-none" style="margin-top:0px;margin-bottom:31px;">
+				<h2 class="title-heading-left">
+					Artículos relacionados				</h2>
+			</div>
+			
+	
+	
+	
+	
+				<div class="fusion-carousel fusion-carousel-title-below-image" data-imagesize="fixed" data-metacontent="yes" data-autoplay="no" data-touchscroll="no" data-columns="5" data-itemmargin="44px" data-itemwidth="180" data-touchscroll="yes" data-scrollitems="1">
+		<div class="fusion-carousel-positioner">
+			<ul class="fusion-carousel-holder">
+																							<li class="fusion-carousel-item">
+						<div class="fusion-carousel-item-wrapper">
+							
+
+<div  class="fusion-image-wrapper fusion-image-size-fixed" aria-haspopup="true">
+	
+	
+				<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/08/doghair-500x383.png" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/08/doghair-500x383.png 1x, https://blog.cuidamimascota.com/wp-content/uploads/2018/08/doghair-500x383@2x.png 2x" width="500" height="383" alt="Caída de pelo en tu perro" />
+
+
+		<div class="fusion-rollover">
+	<div class="fusion-rollover-content">
+
+				
+				
+								
+								
+		
+				<a class="fusion-link-wrapper" href="https://blog.cuidamimascota.com/caida-de-pelo-en-tu-perro/" aria-label="Caída de pelo en tu perro"></a>
+	</div>
+</div>
+
+	
+</div>
+																							<h4 class="fusion-carousel-title">
+									<a class="fusion-related-posts-title-link" href="https://blog.cuidamimascota.com/caida-de-pelo-en-tu-perro/"_self>Caída de pelo en tu perro</a>
+								</h4>
+
+								<div class="fusion-carousel-meta">
+									<span class="fusion-date">agosto 14th, 2018</span>
+
+																	</div><!-- fusion-carousel-meta -->
+													</div><!-- fusion-carousel-item-wrapper -->
+					</li>
+																			<li class="fusion-carousel-item">
+						<div class="fusion-carousel-item-wrapper">
+							
+
+<div  class="fusion-image-wrapper fusion-image-size-fixed" aria-haspopup="true">
+	
+	
+				<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/08/window-1-500x383.png" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/08/window-1-500x383.png 1x, https://blog.cuidamimascota.com/wp-content/uploads/2018/08/window-1-500x383@2x.png 2x" width="500" height="383" alt="Ansiedad por separación en tu perro" />
+
+
+		<div class="fusion-rollover">
+	<div class="fusion-rollover-content">
+
+				
+				
+								
+								
+		
+				<a class="fusion-link-wrapper" href="https://blog.cuidamimascota.com/ansiedad-por-separacion-en-tu-perro/" aria-label="Ansiedad por separación en tu perro"></a>
+	</div>
+</div>
+
+	
+</div>
+																							<h4 class="fusion-carousel-title">
+									<a class="fusion-related-posts-title-link" href="https://blog.cuidamimascota.com/ansiedad-por-separacion-en-tu-perro/"_self>Ansiedad por separación en tu perro</a>
+								</h4>
+
+								<div class="fusion-carousel-meta">
+									<span class="fusion-date">agosto 9th, 2018</span>
+
+																	</div><!-- fusion-carousel-meta -->
+													</div><!-- fusion-carousel-item-wrapper -->
+					</li>
+																			<li class="fusion-carousel-item">
+						<div class="fusion-carousel-item-wrapper">
+							
+
+<div  class="fusion-image-wrapper fusion-image-size-fixed" aria-haspopup="true">
+	
+	
+				<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/como-ligar-con-tu-perro-500x383.jpg" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/como-ligar-con-tu-perro-500x383.jpg 1x, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/como-ligar-con-tu-perro-500x383@2x.jpg 2x" width="500" height="383" alt="¿Cómo ligar gracias a tu perro?" />
+
+
+		<div class="fusion-rollover">
+	<div class="fusion-rollover-content">
+
+				
+				
+								
+								
+		
+				<a class="fusion-link-wrapper" href="https://blog.cuidamimascota.com/como-ligar-gracias-a-tu-perro/" aria-label="¿Cómo ligar gracias a tu perro?"></a>
+	</div>
+</div>
+
+	
+</div>
+																							<h4 class="fusion-carousel-title">
+									<a class="fusion-related-posts-title-link" href="https://blog.cuidamimascota.com/como-ligar-gracias-a-tu-perro/"_self>¿Cómo ligar gracias a tu perro?</a>
+								</h4>
+
+								<div class="fusion-carousel-meta">
+									<span class="fusion-date">julio 12th, 2018</span>
+
+																	</div><!-- fusion-carousel-meta -->
+													</div><!-- fusion-carousel-item-wrapper -->
+					</li>
+																			<li class="fusion-carousel-item">
+						<div class="fusion-carousel-item-wrapper">
+							
+
+<div  class="fusion-image-wrapper fusion-image-size-fixed" aria-haspopup="true">
+	
+	
+				<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/06/paseoblog-500x383.png" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/06/paseoblog-500x383.png 1x, https://blog.cuidamimascota.com/wp-content/uploads/2018/06/paseoblog-500x383@2x.png 2x" width="500" height="383" alt="Un paseo exitoso con tu mascota" />
+
+
+		<div class="fusion-rollover">
+	<div class="fusion-rollover-content">
+
+				
+				
+								
+								
+		
+				<a class="fusion-link-wrapper" href="https://blog.cuidamimascota.com/un-paseo-exitoso-con-tu-mascota/" aria-label="Un paseo exitoso con tu mascota"></a>
+	</div>
+</div>
+
+	
+</div>
+																							<h4 class="fusion-carousel-title">
+									<a class="fusion-related-posts-title-link" href="https://blog.cuidamimascota.com/un-paseo-exitoso-con-tu-mascota/"_self>Un paseo exitoso con tu mascota</a>
+								</h4>
+
+								<div class="fusion-carousel-meta">
+									<span class="fusion-date">junio 21st, 2018</span>
+
+																	</div><!-- fusion-carousel-meta -->
+													</div><!-- fusion-carousel-item-wrapper -->
+					</li>
+																			<li class="fusion-carousel-item">
+						<div class="fusion-carousel-item-wrapper">
+							
+
+<div  class="fusion-image-wrapper fusion-image-size-fixed" aria-haspopup="true">
+	
+	
+				<img src="https://blog.cuidamimascota.com/wp-content/uploads/2018/05/poop-500x383.png" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/05/poop-500x383.png 1x, https://blog.cuidamimascota.com/wp-content/uploads/2018/05/poop-500x383@2x.png 2x" width="500" height="383" alt="¿Por qué da tantas vueltas tu perro para hacer popó?" />
+
+
+		<div class="fusion-rollover">
+	<div class="fusion-rollover-content">
+
+				
+				
+								
+								
+		
+				<a class="fusion-link-wrapper" href="https://blog.cuidamimascota.com/por-que-da-tantas-vueltas-tu-perro-para-hacer-popo/" aria-label="¿Por qué da tantas vueltas tu perro para hacer popó?"></a>
+	</div>
+</div>
+
+	
+</div>
+																							<h4 class="fusion-carousel-title">
+									<a class="fusion-related-posts-title-link" href="https://blog.cuidamimascota.com/por-que-da-tantas-vueltas-tu-perro-para-hacer-popo/"_self>¿Por qué da tantas vueltas tu perro para hacer popó?</a>
+								</h4>
+
+								<div class="fusion-carousel-meta">
+									<span class="fusion-date">mayo 15th, 2018</span>
+
+																	</div><!-- fusion-carousel-meta -->
+													</div><!-- fusion-carousel-item-wrapper -->
+					</li>
+							</ul><!-- fusion-carousel-holder -->
+										<div class="fusion-carousel-nav">
+					<span class="fusion-nav-prev"></span>
+					<span class="fusion-nav-next"></span>
+				</div>
+			
+		</div><!-- fusion-carousel-positioner -->
+	</div><!-- fusion-carousel -->
+</section><!-- related-posts -->
+
+
+																		
+
+
+	<div id="comments" class="comments-container">
+					<div class="fusion-title fusion-title-size-two sep-none fusion-sep-none" style="margin-top:0px;margin-bottom:31px;">
+				<h2 class="title-heading-left">
+							2 Comments						</h2>
+			</div>
+			
+							
+		<ol class="comment-list commentlist">
+							<li class="pingback even thread-even depth-1" id="comment-4091">
+			<div class="the-comment">
+				<div class="avatar"></div>
+				<div class="comment-box">
+					<div class="comment-author meta">
+						<strong><a href='http://brutepetz.com/tricks-to-remove-the-hair-of-your-pet-of-any-surface-take-care-of-my-mascot/' rel='external nofollow' class='url'>Tricks to remove the hair of your pet of any surface – Take care of My Mascot | brutepetz</a></strong>
+												9 marzo, 2018 en 12:33 AM											</div>
+					<div class="comment-text">
+												<p>[&#8230;] telas de muebles, tapizados, alfombras y asientos de auto.  Nuestras mascotas requieren del mejor cuidado posible para estar sanos y felices, por lo que un truco también muy efectivo para que tu mascota no tire tanto pelo por toda tu casa, [&#8230;]</p>
+					</div>
+				</div>
+			</div>
+		</li><!-- #comment-## -->
+				<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3610">
+			<div class="the-comment">
+				<div class="avatar"><img alt='' src='https://secure.gravatar.com/avatar/7966104479f54dc2a6e1eb0de2fff5ea?s=54&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/7966104479f54dc2a6e1eb0de2fff5ea?s=108&#038;d=blank&#038;r=g 2x' class='avatar avatar-54 photo' height='54' width='54' /></div>
+				<div class="comment-box">
+					<div class="comment-author meta">
+						<strong><a href='https://cursoscarretillas.com/' rel='external nofollow' class='url'>curso de carretillero</a></strong>
+												12 enero, 2018 en 2:36 PM											</div>
+					<div class="comment-text">
+												<p>Gracias por los consejos y por difundir como cuidar a nuestros peludos. bss</p>
+					</div>
+				</div>
+			</div>
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+								</div>
+
+
+
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Deja tu comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/cuidados-de-un-perro-cuidado-de-mascotas/#respond" style="display:none;">Cancelar respuesta</a></small></h2>			<form action="https://blog.cuidamimascota.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<div id="comment-textarea"><label class="screen-reader-text" for="comment">Comentar</label><textarea name="comment" id="comment" cols="45" rows="8" aria-required="true" required="required" tabindex="0" class="textarea-comment" placeholder="Comentar..."></textarea></div><div id="comment-input"><input id="author" name="author" type="text" value="" placeholder="Nombre (requerido)" size="30" aria-required='true' required='required' aria-label="Nombre"/>
+<input id="email" name="email" type="email" value="" placeholder="Correo electrónico (requerido)" size="30"  aria-required='true' required='required' aria-label="Correo electrónico"/>
+<input id="url" name="url" type="url" value="" placeholder="Sitio web" size="30" aria-label="URL" /></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="fusion-button fusion-button-default fusion-button-default-size" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='1240' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d5ec5cf4cc" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="136"/></p>			</form>
+			</div><!-- #respond -->
+														</article>
+		</section>
+<aside id="sidebar" role="complementary" class="sidebar fusion-widget-area fusion-content-widget-area fusion-sidebar-right fusion-blogsidebar" style="float: right;" >
+											
+					<section id="pyre_tabs-widget-2" class="widget fusion-tabs-widget">		<div class="fusion-tabs-widget-wrapper fusion-tabs-widget-1 fusion-tabs-classic fusion-tabs-image-default tab-holder">
+			<nav class="fusion-tabs-nav">
+				<ul class="tabset tabs">
+
+											<li class="active"><a href="#" data-link="fusion-tab-popular">Popular</a></li>
+					
+					
+					
+				</ul>
+			</nav>
+
+			<div class="fusion-tabs-widget-content tab-box tabs-container">
+
+				
+					<div class="fusion-tab-popular fusion-tab-content tab tab_content" data-name="fusion-tab-popular">
+						
+						<ul class="fusion-tabs-widget-items news-list">
+																																	<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/alimento-para-perros/" aria-label="Alimento para perros &#8211; Cuidado de mascotas"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_alimentoperros-1-66x66.jpg" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_alimentoperros-1-65x65.jpg 65w, https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_alimentoperros-1-66x66.jpg 66w, https://blog.cuidamimascota.com/wp-content/uploads/2016/05/wp_alimentoperros-1-150x150.jpg 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/alimento-para-perros/">Alimento para perros &#8211; Cuidado de mascotas</a>
+											<div class="fusion-meta">
+												mayo 20th, 2016											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/que-significa-que-tu-perro-se-siente-a-la-puerta/" aria-label="¿Qué significa que tu perro se siente a la puerta?"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2016/02/dog_home-66x66.jpg" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2016/02/dog_home-65x65.jpg 65w, https://blog.cuidamimascota.com/wp-content/uploads/2016/02/dog_home-66x66.jpg 66w, https://blog.cuidamimascota.com/wp-content/uploads/2016/02/dog_home-150x150.jpg 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/que-significa-que-tu-perro-se-siente-a-la-puerta/">¿Qué significa que tu perro se siente a la puerta?</a>
+											<div class="fusion-meta">
+												febrero 4th, 2016											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/la-verdad-sobre-los-criaderos/" aria-label="La verdad sobre los criaderos"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2016/03/criadero_golden-66x66.jpg" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2016/03/criadero_golden-65x65.jpg 65w, https://blog.cuidamimascota.com/wp-content/uploads/2016/03/criadero_golden-66x66.jpg 66w, https://blog.cuidamimascota.com/wp-content/uploads/2016/03/criadero_golden-150x150.jpg 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/la-verdad-sobre-los-criaderos/">La verdad sobre los criaderos</a>
+											<div class="fusion-meta">
+												marzo 3rd, 2016											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/esferas-de-navidad-con-la-huella-de-tu-mascota/" aria-label="Esferas de Navidad con la huella de tu mascota"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2017/11/esfera-66x66.png" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="esfera con huella de tu perro" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2017/11/esfera-65x65.png 65w, https://blog.cuidamimascota.com/wp-content/uploads/2017/11/esfera-66x66.png 66w, https://blog.cuidamimascota.com/wp-content/uploads/2017/11/esfera-150x150.png 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/esferas-de-navidad-con-la-huella-de-tu-mascota/">Esferas de Navidad con la huella de tu mascota</a>
+											<div class="fusion-meta">
+												noviembre 29th, 2017											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/quitar-pelo-de-mascota/" aria-label="Trucos para quitar el pelo de tu mascota de cualquier superficie"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2018/01/doghair-66x66.png" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="pelo de perro en sofá" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/01/doghair-65x65.png 65w, https://blog.cuidamimascota.com/wp-content/uploads/2018/01/doghair-66x66.png 66w, https://blog.cuidamimascota.com/wp-content/uploads/2018/01/doghair-150x150.png 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/quitar-pelo-de-mascota/">Trucos para quitar el pelo de tu mascota de cualquier superficie</a>
+											<div class="fusion-meta">
+												enero 24th, 2018											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/tips-para-evitar-que-tu-perro-jale-de-la-correa/" aria-label="Tips para evitar que tu perro jale de la correa"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2017/11/dogpullingleashfeatured-66x66.jpg" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="perro tirando de la correa" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2017/11/dogpullingleashfeatured-65x65.jpg 65w, https://blog.cuidamimascota.com/wp-content/uploads/2017/11/dogpullingleashfeatured-66x66.jpg 66w, https://blog.cuidamimascota.com/wp-content/uploads/2017/11/dogpullingleashfeatured-150x150.jpg 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/tips-para-evitar-que-tu-perro-jale-de-la-correa/">Tips para evitar que tu perro jale de la correa</a>
+											<div class="fusion-meta">
+												noviembre 9th, 2017											</div>
+										</div>
+									</li>
+																										<li>
+																					<div class="image">
+												<a href="https://blog.cuidamimascota.com/sabes-como-cuidar-perros/" aria-label="¿Sabes como cuidar perros?"><img width="66" height="66" src="https://blog.cuidamimascota.com/wp-content/uploads/2017/09/desayunoperro-66x66.png" class="attachment-recent-works-thumbnail size-recent-works-thumbnail wp-post-image" alt="Sabes como cuidar perros" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2017/09/desayunoperro-65x65.png 65w, https://blog.cuidamimascota.com/wp-content/uploads/2017/09/desayunoperro-66x66.png 66w, https://blog.cuidamimascota.com/wp-content/uploads/2017/09/desayunoperro-150x150.png 150w" sizes="(max-width: 66px) 100vw, 66px" /></a>
+											</div>
+										
+										<div class="post-holder">
+											<a href="https://blog.cuidamimascota.com/sabes-como-cuidar-perros/">¿Sabes como cuidar perros?</a>
+											<div class="fusion-meta">
+												septiembre 22nd, 2017											</div>
+										</div>
+									</li>
+								
+																					</ul>
+					</div>
+
+				
+				
+							</div>
+		</div>
+		</section><section id="social_links-widget-2" class="widget social_links"><div class="heading"><h4 class="widget-title">Te esperamos en</h4></div>
+		<div class="fusion-social-networks">
+
+			<div class="fusion-social-networks-wrapper">
+								
+																																																							<a class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" href="https://www.facebook.com/cuidamimascotaa/"  data-placement="top" data-title="Facebook" data-toggle="tooltip" data-original-title=""  title="Facebook" aria-label="Facebook" rel="noopener noreferrer" target="_self" style="font-size:22px;color:#3b5998;background-color:;border-color:;"></a>
+											
+										
+																																																							<a class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" href="https://twitter.com/cuidamimascota"  data-placement="top" data-title="Twitter" data-toggle="tooltip" data-original-title=""  title="Twitter" aria-label="Twitter" rel="noopener noreferrer" target="_self" style="font-size:22px;color:#55acee;background-color:;border-color:;"></a>
+											
+										
+																																																							<a class="fusion-social-network-icon fusion-tooltip fusion-instagram fusion-icon-instagram" href="https://www.instagram.com/cuidamimascota/"  data-placement="top" data-title="Instagram" data-toggle="tooltip" data-original-title=""  title="Instagram" aria-label="Instagram" rel="noopener noreferrer" target="_self" style="font-size:22px;color:#3f729b;background-color:;border-color:;"></a>
+											
+										
+																																																							<a class="fusion-social-network-icon fusion-tooltip fusion-pinterest fusion-icon-pinterest" href="https://es.pinterest.com/cuidamimascotacom/"  data-placement="top" data-title="Pinterest" data-toggle="tooltip" data-original-title=""  title="Pinterest" aria-label="Pinterest" rel="noopener noreferrer" target="_self" style="font-size:22px;color:#bd081c;background-color:;border-color:;"></a>
+											
+										
+				
+			</div>
+		</div>
+
+		</section><section id="media_image-2" class="widget widget_media_image" style="border-style: dashed;border-color: #f7f7f7;border-width:0px;"><div class="heading"><h4 class="widget-title">Hecho con amor por</h4></div><a href="https://www.cuidamimascota.com" target="_blank"><img width="1200" height="300" src="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm.png" class="image wp-image-3661  attachment-medium size-medium" alt="Cuida Mi Mascota" style="max-width: 100%; height: auto;" title="Cuida Mi Mascota" srcset="https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm-20x5.png 20w, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm-200x50.png 200w, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm-400x100.png 400w, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm-600x150.png 600w, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm-800x200.png 800w, https://blog.cuidamimascota.com/wp-content/uploads/2018/07/logo-rectangular-cmm.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" /></a></section>			</aside>
+					
+				</div>  <!-- fusion-row -->
+			</main>  <!-- #main -->
+			
+			
+			
+										
+				<div class="fusion-footer">
+					
+	
+	<footer id="footer" class="fusion-footer-copyright-area fusion-footer-copyright-center">
+		<div class="fusion-row">
+			<div class="fusion-copyright-content">
+
+				<div class="fusion-copyright-notice">
+		<div>
+		Todos los Derechos Reservados ® 2017 Cuida Mi Mascota | <a href="https://www.cuidamimascota.com.mx/aviso_privacidad">Aviso de Privacidad</a>	</div>
+</div>
+<div class="fusion-social-links-footer">
+	<div class="fusion-social-networks"><div class="fusion-social-networks-wrapper"><a  class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" style="color:#ffffff;" href="https://www.facebook.com/cuidamimascotaa/" target="_blank" rel="noopener noreferrer" title="Facebook"><span class="screen-reader-text">Facebook</span></a><a  class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" style="color:#ffffff;" href="https://twitter.com/cuidamimascota" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="screen-reader-text">Twitter</span></a><a  class="fusion-social-network-icon fusion-tooltip fusion-instagram fusion-icon-instagram" style="color:#ffffff;" href="https://www.instagram.com/cuidamimascota/" target="_blank" rel="noopener noreferrer" title="Instagram"><span class="screen-reader-text">Instagram</span></a><a  class="fusion-social-network-icon fusion-tooltip fusion-pinterest fusion-icon-pinterest" style="color:#ffffff;" href="https://es.pinterest.com/cuidamimascotacom/" target="_blank" rel="noopener noreferrer" title="Pinterest"><span class="screen-reader-text">Pinterest</span></a></div></div></div>
+
+			</div> <!-- fusion-fusion-copyright-content -->
+		</div> <!-- fusion-row -->
+	</footer> <!-- #footer -->
+				</div> <!-- fusion-footer -->
+			
+								</div> <!-- wrapper -->
+
+								<a class="fusion-one-page-text-link fusion-page-load-link"></a>
+
+		<!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://blog.cuidamimascota.com/wp-admin/admin-ajax.php";
+</script>
+				<script type="text/javascript">
+				jQuery( document ).ready( function() {
+					var ajaxurl = 'https://blog.cuidamimascota.com/wp-admin/admin-ajax.php';
+					if ( 0 < jQuery( '.fusion-login-nonce' ).length ) {
+						jQuery.get( ajaxurl, { 'action': 'fusion_login_nonce' }, function( response ) {
+							jQuery( '.fusion-login-nonce' ).html( response );
+						});
+					}
+				});
+				</script>
+				<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.14-6684'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpreview = {"ajaxurl":"https:\/\/blog.cuidamimascota.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/plugins/wp-review/assets/js/main.js?ver=4.0.17'></script>
+<!--[if IE 9]>
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-ie9.js?ver=1'></script>
+<![endif]-->
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/uploads/fusion-scripts/e10ad7f74be8af77f095c65c9f2498df.min.js'></script>
+<script type='text/javascript' src='https://blog.cuidamimascota.com/wp-includes/js/wp-embed.min.js?ver=6189cafd6a4e9f918ef0d27624170aa9'></script>
+<script async="async" type='text/javascript' src='https://blog.cuidamimascota.com/wp-content/plugins/akismet/_inc/form.js?ver=4.0.8'></script>
+<script type='text/javascript' src='//cdn.playbuzz.com/widget/feed.js?ver=6189cafd6a4e9f918ef0d27624170aa9'></script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"64ce1e14db","applicationID":"17846723","transactionName":"M1EGZEIEWRVVAU1bWQobJVNEDFgIGxFQXFEIUQ==","queueTime":0,"applicationTime":1713,"atts":"HxYFEgoeShs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

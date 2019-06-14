@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Puntero inteligente - Wikipedia, la enciclopedia libre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puntero_inteligente","wgTitle":"Puntero inteligente","wgCurRevisionId":108410569,"wgRevisionId":108410569,"wgArticleId":4070056,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Programación","Tipos de datos"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"wgMonthNamesShort":["","ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],"wgRelevantPageName":"Puntero_inteligente","wgRelevantArticleId":4070056,"wgRequestId":"W4VY4ApAIC8AALr9t5sAAACT","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"es","pageLanguageDir":"ltr","pageVariantFallbacks":"es","usePageImages":true,"usePageDescriptions":true},"wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"español","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q1665677","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.gadget.imagenesinfobox":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@00wq302",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"es"});
+});mw.loader.implement("user.tokens@1dqfd7l",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.a-commons-directo","ext.gadget.refToolbar","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.3d","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=ext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=es&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=ext.gadget.imagenesinfobox&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.32.0-wmf.18"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/es.m.wikipedia.org/wiki/Puntero_inteligente"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Puntero_inteligente&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Puntero_inteligente&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (es)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//es.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://es.wikipedia.org/wiki/Puntero_inteligente"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=es&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Puntero_inteligente rootpage-Puntero_inteligente skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="es">Puntero inteligente</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Wikipedia, la enciclopedia libre</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Ir a la navegación</a>
+				<a class="mw-jump-link" href="#p-search">Ir a la búsqueda</a>
+				<div id="mw-content-text" lang="es" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>En <a href="/wiki/Programaci%C3%B3n" title="Programación">programación</a>, un puntero inteligente (o smart pointer) es un <a href="/wiki/Tipo_abstracto_de_datos" class="mw-redirect" title="Tipo abstracto de datos">tipo abstracto de datos</a> que simula el comportamiento de un <a href="/wiki/Puntero_(inform%C3%A1tica)" title="Puntero (informática)">puntero corriente</a> pero añadiendo nuevas características adicionales, como <a href="/wiki/Recolector_de_basura" title="Recolector de basura">recolector de basura</a> automático y comprobador de límites. Estas características adicionales tienen como objetivo reducir errores causados por el mal uso de punteros, manteniendo la eficiencia. Los punteros inteligentes suelen llevar un registro de los objetos a los que apunta con el propósito de gestionar la memoria.
+</p><p>El mal uso de los punteros suele ser la mayor fuente de errores: asignaciones constantes, liberación de memoria y la referencia, que debe ser realizada por un programa usando punteros, introduce el riesgo de pérdidas de memoria. Los punteros inteligentes intentan prevenir las pérdidas de memoria, liberando automáticamente los recursos: cuando un puntero (o el último de una serie de punteros) a un objeto es destruido, porque por ejemplo se sale del ámbito, el objeto apuntado también se elimina.
+</p><p>Existen varios tipos de punteros inteligentes. Algunos trabajan llevando la cuenta de referencias, otros mediante asignación de un objeto a un único puntero. Si el lenguaje soporta recolector de basura automático (por ejemplo, <a href="/wiki/Java_(lenguaje_de_programaci%C3%B3n)" title="Java (lenguaje de programación)">Java</a>), el uso de los punteros inteligentes es innecesario.
+</p><p>En <a href="/wiki/C%2B%2B" title="C++">C++</a>, los punteros inteligentes pueden ser implementados como una "template class" que imita, mediante sobrecarga de operadores, el comportamiento de los punteros tradicionales, pero proporcionando algoritmos de administación de memoria.
+</p><p>Los punteros inteligentes pueden facilitar la programación intencional expresando el uso de un puntero en su propio tipo. Por ejemplo, si una función de C++ devuelve un puntero, no hay forma de saber cuando se debe liberar la memoria, cuando se ha terminado con el uso de la información.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">algun_tipo</span><span class="o">*</span> <span class="nf">function_ambigua</span><span class="p">();</span> <span class="c1">// ¿Qué se debería hacer con el resultado?</span>
+</pre></div>
+<p>Tradicionalmente, esto se habría resuelto con comentarios, pero esto puede ser propenso a errores. Devolviendo un <a href="/w/index.php?title=Auto_ptr&amp;action=edit&amp;redlink=1" class="new" title="Auto ptr (aún no redactado)">auto_ptr</a> de C++:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">auto_ptr</span><span class="o">&lt;</span><span class="n">algun_tipo</span><span class="o">&gt;</span> <span class="n">funcion_obvia1</span><span class="p">();</span>
+</pre></div>
+<p>La función hace explícitamente que el "llamador" tenga la propiedad del resultado y, además, si no se hace nada, no se filtrará memoria. Del mismo modo, si la intención es devolver un puntero a un objeto gestionado en otros lugares, la función podría devolver una referencia:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">algun_tipo</span><span class="o">&amp;</span> <span class="n">funcion_obvia2</span><span class="p">();</span>
+</pre></div>
+<p><br />
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="es" dir="ltr"><h2>Índice</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Punteros_inteligentes_en_Boost"><span class="tocnumber">1</span> <span class="toctext">Punteros inteligentes en Boost</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Scoped_pointer"><span class="tocnumber">1.1</span> <span class="toctext">Scoped pointer</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Shared_pointer"><span class="tocnumber">1.2</span> <span class="toctext">Shared pointer</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Enlaces_externos"><span class="tocnumber">2</span> <span class="toctext">Enlaces externos</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Punteros_inteligentes_en_Boost">Punteros inteligentes en Boost</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Puntero_inteligente&amp;action=edit&amp;section=1" title="Editar sección: Punteros inteligentes en Boost">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La <a href="/wiki/Biblioteca_Boost" class="mw-redirect" title="Biblioteca Boost">biblioteca Boost</a> de <a href="/wiki/C%2B%2B" title="C++">C++</a> nos ofrece varios tipos de punteros inteligentes, los más importantes son:
+</p>
+<ul><li>Scoped Pointer: Puntero no copiable</li>
+<li>Shared Pointer: Puntero copiable</li></ul>
+<h3><span class="mw-headline" id="Scoped_pointer">Scoped pointer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Puntero_inteligente&amp;action=edit&amp;section=2" title="Editar sección: Scoped pointer">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un scoped pointer es una clase de puntero inteligente que no puede copiarse, por lo que solo puede existir un punto de acceso al objeto que apunta.
+Cuando el puntero sale del ámbito, el objeto se destruye y la memoria se libera.
+</p><p>Sintaxis:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">boost</span><span class="o">::</span><span class="n">scoped_ptr</span><span class="o">&lt;</span><span class="n">MiClase</span><span class="o">&gt;</span> <span class="n">MiPuntero</span> <span class="p">(</span><span class="k">new</span> <span class="n">MiClase</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">MiPuntero</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span> <span class="n">MiClase</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</pre></div>
+<p>Se puede acceder al contenido usando el operador *, acceder a la dirección con &amp; y acceder al puntero en bruto con el método get().
+</p><p><b>Ejemplo:</b>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;boost/scoped_ptr.hpp&gt;</span><span class="cp"></span>
+
+<span class="cm">/*</span>
+<span class="cm">  Vamos a crear una clase que informe de cuándo se crea y cuando se</span>
+<span class="cm">  destruye, y lleve un contador de elementos creados.</span>
+<span class="cm">  </span>
+<span class="cm">*/</span>
+
+<span class="k">class</span> <span class="nc">Elemento</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">counter</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">Elemento</span><span class="p">()</span><span class="o">:</span><span class="n">n</span><span class="p">(</span><span class="o">++</span><span class="n">counter</span><span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;* Creando Elemento &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">};</span>
+  
+  <span class="kt">void</span> <span class="nf">lanzar</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">msg</span><span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;* Elemento &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; says: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">};</span>
+  
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">Elemento</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;* So Long, Elemento &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="n">Elemento</span><span class="o">::</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  
+  <span class="cm">/*</span>
+<span class="cm">    Utilizamos corchetes para abrir un nuevo entorno (scope) Vemos</span>
+<span class="cm">    que al terminar el scope, el scoped pointer se libera</span>
+<span class="cm">    automáticamente, mientras que en el caso del puntero clásico, si</span>
+<span class="cm">    no liberamos manulmente se produciría una fuga de memoria.</span>
+<span class="cm">  */</span>
+  
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Inicio del scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">{</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">scoped_ptr</span><span class="o">&lt;</span><span class="n">Elemento</span><span class="o">&gt;</span> <span class="n">miElemento</span><span class="p">(</span><span class="k">new</span> <span class="n">Elemento</span><span class="p">());</span>
+    <span class="n">miElemento</span> <span class="o">-&gt;</span> <span class="n">lanzar</span><span class="p">(</span><span class="s">&quot;Mensaje desde myFun_1&quot;</span><span class="p">);</span>
+    
+    <span class="n">Elemento</span> <span class="o">*</span> <span class="n">classicPointer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Elemento</span><span class="p">();</span>
+    <span class="n">classicPointer</span> <span class="o">-&gt;</span> <span class="n">lanzar</span> <span class="p">(</span><span class="s">&quot;Mensaje del elemento con puntero clásico&quot;</span><span class="p">);</span>
+    
+    <span class="k">delete</span> <span class="n">classicPointer</span><span class="p">;</span> <span class="c1">// Necesario borrarlo manualmente!</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Fin del scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  
+  <span class="cm">/*</span>
+<span class="cm">    Si tenemos un scoped pointer como atributo de una clase, o como</span>
+<span class="cm">    variable suelta, es posible asignarle un valor utilizando el</span>
+<span class="cm">    método reset, que borrará lo que estuviera contenido en el</span>
+<span class="cm">    puntero previamente.</span>
+<span class="cm">  */</span>
+  
+  <span class="n">boost</span><span class="o">::</span><span class="n">scoped_ptr</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">ptrCadena</span><span class="p">;</span>
+  <span class="n">ptrCadena</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span> <span class="n">string</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">));</span>
+  
+  <span class="cm">/*</span>
+<span class="cm">    Los operadores habituales se conservan. En el caso del *, se</span>
+<span class="cm">    devuelve una referencia &amp;. Para acceder al puntero en bruto se</span>
+<span class="cm">    utiliza el método get(), aunque NO SE RECOMIENDA, ya que hacer</span>
+<span class="cm">    modificaciones o borrar el objeto apuntado a través de get()</span>
+<span class="cm">    puede producir errores.</span>
+<span class="cm">  */</span>
+  
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Longitud de cadena: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ptrCadena</span> <span class="o">-&gt;</span> <span class="n">length</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">ptrCadena</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Shared_pointer">Shared pointer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Puntero_inteligente&amp;action=edit&amp;section=3" title="Editar sección: Shared pointer">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un shared pointer es un tipo de puntero inteligente que guarda un contador de referencias al objeto al que apunta. Cada vez que se hace una copia del puntero, se aumenta el contador. Cuando se destruye uno de los shared pointer, el contador disminuye.
+</p><p>Cuando el contador llega a cero, quiere decir que no hay más punteros apuntando al objeto, por lo que este puede destruirse y liberar la memoria que ocupa. Todo esto se hace de forma transparente al usuario.
+</p><p>Sintaxis:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">MiClase</span><span class="o">&gt;</span> <span class="n">MiPuntero</span> <span class="p">(</span><span class="k">new</span> <span class="n">MiClase</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">MiClase</span><span class="o">&gt;</span> <span class="n">OtroPuntero</span> <span class="o">=</span> <span class="n">MiPuntero</span><span class="p">;</span>
+<span class="n">MiPuntero</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span> <span class="n">MiClase</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</pre></div>
+<p><b>Ejemplo:</b>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">tabulados</span><span class="p">;</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;boost/shared_ptr.hpp&gt;</span><span class="cp"></span>
+
+<span class="cm">/*</span>
+<span class="cm">  Tenemos dos clases. La clase Mirador tiene un shared pointer a</span>
+<span class="cm">  Observado. </span>
+<span class="cm">*/</span>
+
+<span class="n">string</span> <span class="nf">tab</span><span class="p">(){</span>
+  <span class="k">return</span> <span class="n">string</span><span class="p">(</span><span class="n">tabulados</span><span class="p">,</span> <span class="sc">&#39;\t&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="n">Observado</span><span class="p">{</span>
+  <span class="n">Observado</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;+ Creando Observado&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+  <span class="o">~</span><span class="n">Observado</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;- Borrando Observado&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">Mirador</span><span class="p">{</span>
+  <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Observado</span><span class="o">&gt;</span> <span class="n">fan</span><span class="p">;</span>
+  
+  <span class="n">Mirador</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;+ Creando Mirador&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+  <span class="o">~</span><span class="n">Mirador</span><span class="p">(){</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;- Borrando Mirador&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="cm">/*</span>
+<span class="cm">  La función popular rellena el atributo del Mirador con un shared</span>
+<span class="cm">  pointer a Observado.</span>
+<span class="cm">  </span>
+<span class="cm">*/</span>
+
+<span class="kt">void</span> <span class="nf">popular</span><span class="p">(</span><span class="n">Mirador</span> <span class="o">&amp;</span> <span class="n">m1</span><span class="p">,</span> <span class="n">Mirador</span> <span class="o">&amp;</span> <span class="n">m2</span><span class="p">){</span>
+  <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Observado</span><span class="o">&gt;</span> <span class="n">O</span><span class="p">(</span><span class="k">new</span> <span class="n">Observado</span><span class="p">);</span>
+  <span class="n">m1</span><span class="p">.</span><span class="n">fan</span> <span class="o">=</span> <span class="n">O</span><span class="p">;</span>
+  <span class="n">m2</span><span class="p">.</span><span class="n">fan</span> <span class="o">=</span> <span class="n">O</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="n">tabulados</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Inicio&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">{</span>
+    <span class="n">tabulados</span> <span class="o">++</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Inicio del primer scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">Mirador</span> <span class="n">M1</span><span class="p">;</span>
+    <span class="p">{</span>
+      <span class="n">tabulados</span> <span class="o">++</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Inicio del segundo scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="n">Mirador</span> <span class="n">M2</span><span class="p">;</span>
+      <span class="n">popular</span><span class="p">(</span><span class="n">M1</span><span class="p">,</span> <span class="n">M2</span><span class="p">);</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Fin del segundo scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">tabulados</span> <span class="o">--</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Final del primer scope&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">tabulados</span><span class="o">--</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;-- Fin&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Enlaces_externos">Enlaces externos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Puntero_inteligente&amp;action=edit&amp;section=4" title="Editar sección: Enlaces externos">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Capítulo de muestra "<a rel="nofollow" class="external text" href="http://www.informit.com/articles/article.aspx?p=25264">Smart Pointers</a>" del libro <i><a rel="nofollow" class="external text" href="http://www.moderncppdesign.com/">Modern C++ Design: Generic Programming and Design Patterns Applied</a></i> por <a href="/w/index.php?title=Andrei_Alexandrescu&amp;action=edit&amp;redlink=1" class="new" title="Andrei Alexandrescu (aún no redactado)">Andrei Alexandrescu</a>, Addison-Wesley, 2001.</li>
+<li>Código de ejemplo "<a rel="nofollow" class="external text" href="http://www.josuttis.com/libbook/cont/countptr.hpp.html">countptr.hpp</a>" del libro <i><a rel="nofollow" class="external text" href="http://www.josuttis.com/libbook/">The C++ Standard Library - A Tutorial and Reference</a></i> por <a href="/w/index.php?title=Nicolai_M._Josuttis&amp;action=edit&amp;redlink=1" class="new" title="Nicolai M. Josuttis (aún no redactado)">Nicolai M. Josuttis</a></li>
+<li>Artículo "<a rel="nofollow" class="external text" href="https://web.archive.org/web/20060324012749/http://www.cuj.com/documents/s=8470/cuj0204karlsson/">Smart Pointers in Boost</a>" <a rel="nofollow" class="external autonumber" href="http://boost.org/libs/smart_ptr/smart_ptr.htm">[1]</a></li>
+<li>Artículo "<a rel="nofollow" class="external text" href="https://web.archive.org/web/20060220195924/http://www.cuj.com/documents/s=7980/cujcexp2008sutter/">The New C++: Smart(er) Pointers</a>" por <a href="/w/index.php?title=Herb_Sutter&amp;action=edit&amp;redlink=1" class="new" title="Herb Sutter (aún no redactado)">Herb Sutter</a></li>
+<li>"<a rel="nofollow" class="external text" href="http://ootips.org/yonat/4dev/smart-pointers.html">Smart Pointers - What, Why, Which?</a>" por <a href="/w/index.php?title=Yonat_Sharon&amp;action=edit&amp;redlink=1" class="new" title="Yonat Sharon (aún no redactado)">Yonat Sharon</a></li>
+<li>"<a rel="nofollow" class="external text" href="http://dlugosz.com/Repertoire/refman/Classics/Smart%20Pointers%20Overview.html">Smart Pointers Overview</a>" por <a href="/w/index.php?title=John_M._Dlugosz&amp;action=edit&amp;redlink=1" class="new" title="John M. Dlugosz (aún no redactado)">John M. Dlugosz</a></li>
+<li><a rel="nofollow" class="external text" href="http://yasper.sourceforge.net/">YASPER library</a> otra implementación de punteros inteligentes en C++</li>
+<li><a rel="nofollow" class="external text" href="http://barrkel.blogspot.com/2008/09/smart-pointers-in-delphi.html">Smart Pointers en Delphi</a></li></ul>
+
+<!-- 
+NewPP limit report
+Parsed by mw1274
+Cached time: 20180809084107
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.084 seconds
+Real time usage: 1.376 seconds
+Preprocessor visited node count: 57/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 16871/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key eswiki:pcache:idhash:4070056-0!canonical and timestamp 20180809084106 and revision id 108410569
+ -->
+<noscript><img src="//es.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtenido de «<a dir="ltr" href="https://es.wikipedia.org/w/index.php?title=Puntero_inteligente&amp;oldid=108410569">https://es.wikipedia.org/w/index.php?title=Puntero_inteligente&amp;oldid=108410569</a>»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías">Categorías</a>: <ul><li><a href="/wiki/Categor%C3%ADa:Programaci%C3%B3n" title="Categoría:Programación">Programación</a></li><li><a href="/wiki/Categor%C3%ADa:Tipos_de_datos" title="Categoría:Tipos de datos">Tipos de datos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menú de navegación</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Herramientas personales</h3>
+						<ul>
+							<li id="pt-anonuserpage">No has accedido</li><li id="pt-anontalk"><a href="/wiki/Especial:MiDiscusi%C3%B3n" title="Discusión sobre ediciones hechas desde esta dirección IP [n]" accesskey="n">Discusión</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:MisContribuciones" title="Una lista de modificaciones hechas desde esta dirección IP [y]" accesskey="y">Contribuciones</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Crear_una_cuenta&amp;returnto=Puntero+inteligente" title="Te recomendamos crear una cuenta e iniciar sesión; sin embargo, no es obligatorio">Crear una cuenta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Puntero+inteligente" title="Te recomendamos iniciar sesión, aunque no es obligatorio [o]" accesskey="o">Acceder</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espacios de nombres</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Puntero_inteligente" title="Ver la página de contenido [c]" accesskey="c">Artículo</a></span></li><li id="ca-talk" class="new"><span><a href="/w/index.php?title=Discusi%C3%B3n:Puntero_inteligente&amp;action=edit&amp;redlink=1" rel="discussion" title="Discusión acerca del artículo (aún no redactado) [t]" accesskey="t">Discusión</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Puntero_inteligente">Leer</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Puntero_inteligente&amp;action=edit" title="Editar esta página [e]" accesskey="e">Editar</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Puntero_inteligente&amp;action=history" title="Versiones anteriores de esta página [h]" accesskey="h">Ver historial</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>Más</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Buscar</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Buscar en Wikipedia" title="Buscar en este wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Buscar" name="title"/><input type="submit" name="fulltext" value="Buscar" title="Busca páginas con este texto." id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir a la página con este nombre exacto si existe" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikipedia:Portada"  title="Visitar la página principal"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navegación</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Wikipedia:Portada" title="Visitar la página principal [z]" accesskey="z">Portada</a></li><li id="n-portal"><a href="/wiki/Portal:Comunidad" title="Acerca del proyecto, lo que puedes hacer, dónde encontrar información">Portal de la comunidad</a></li><li id="n-currentevents"><a href="/wiki/Portal:Actualidad" title="Encuentra información de contexto sobre acontecimientos actuales">Actualidad</a></li><li id="n-recentchanges"><a href="/wiki/Especial:CambiosRecientes" title="Lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li><li id="n-newpages"><a href="/wiki/Especial:P%C3%A1ginasNuevas">Páginas nuevas</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleatoria" title="Cargar una página al azar [x]" accesskey="x">Página aleatoria</a></li><li id="n-help"><a href="/wiki/Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_es.wikipedia.org&amp;uselang=es" title="Apóyanos">Donaciones</a></li><li id="n-bug_in_article"><a href="/wiki/Wikipedia:Informes_de_error">Notificar un error</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Imprimir/exportar</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Libro&amp;bookcmd=book_creator&amp;referer=Puntero+inteligente">Crear un libro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:ElectronPdf&amp;page=Puntero+inteligente&amp;action=show-download-screen">Descargar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Puntero_inteligente&amp;printable=yes" title="Versión imprimible de esta página [p]" accesskey="p">Versión para imprimir</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Herramientas</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Especial:LoQueEnlazaAqu%C3%AD/Puntero_inteligente" title="Lista de todas las páginas del wiki que enlazan aquí [j]" accesskey="j">Lo que enlaza aquí</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:CambiosEnEnlazadas/Puntero_inteligente" rel="nofollow" title="Cambios recientes en las páginas que enlazan con esta [k]" accesskey="k">Cambios en enlazadas</a></li><li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es" title="Subir archivos [u]" accesskey="u">Subir archivo</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li><li id="t-permalink"><a href="/w/index.php?title=Puntero_inteligente&amp;oldid=108410569" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-info"><a href="/w/index.php?title=Puntero_inteligente&amp;action=info" title="Más información sobre esta página">Información de la página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1665677" title="Enlace al elemento conectado del repositorio de datos [g]" accesskey="g">Elemento de Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Puntero_inteligente&amp;id=108410569" title="Información sobre cómo citar esta página">Citar esta página</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">En otros idiomas</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%A4%D8%B4%D8%B1_%D8%B0%D9%83%D9%8A" title="مؤشر ذكي (árabe)" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Smart_pointer" title="Smart pointer (checo)" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Intelligenter_Zeiger" title="Intelligenter Zeiger (alemán)" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Smart_pointer" title="Smart pointer (inglés)" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pointeur_intelligent" title="Pointeur intelligent (francés)" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%BD%D5%A5%D5%AC%D5%A1%D6%81%D5%AB_%D6%81%D5%B8%D6%82%D6%81%D5%AB%D5%B9" title="Խելացի ցուցիչ (armenio)" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Smart_pointer" title="Smart pointer (italiano)" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Sprytny_wska%C5%BAnik" title="Sprytny wskaźnik (polaco)" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Ponteiro_inteligente" title="Ponteiro inteligente (portugués)" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%BC%D0%BD%D1%8B%D0%B9_%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C" title="Умный указатель (ruso)" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D1%83%D0%BC%D0%BD%D1%96_%D0%B2%D0%BA%D0%B0%D0%B7%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8" title="Розумні вказівники (ucraniano)" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88" title="智能指针 (chino)" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1665677#sitelinks-wikipedia" title="Editar enlaces interlingüísticos" class="wbc-editpage">Editar enlaces</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> Esta página se editó por última vez el 3 jun 2018 a las 10:36.</li>
+								<li id="footer-info-copyright">El texto está disponible bajo la <a rel="license" href="//es.wikipedia.org/wiki/Wikipedia:Texto_de_la_Licencia_Creative_Commons_Atribuci%C3%B3n-CompartirIgual_3.0_Unported">Licencia Creative Commons Atribución Compartir Igual 3.0</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+pueden aplicarse cláusulas adicionales. Al usar este sitio, usted acepta nuestros <a href="//wikimediafoundation.org/wiki/Terms_of_Use">términos de uso</a> y nuestra <a href="//wikimediafoundation.org/wiki/Privacy_policy">política de privacidad</a>. <br/>Wikipedia&reg; es una marca registrada de la <a href="//www.wikimediafoundation.org/">Fundación Wikimedia, Inc.</a>, una organización sin ánimo de lucro.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/es" class="extiw" title="m:Privacy policy/es">Política de privacidad</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:Acerca_de" title="Wikipedia:Acerca de">Acerca de Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:Limitaci%C3%B3n_general_de_responsabilidad" title="Wikipedia:Limitación general de responsabilidad">Limitación de responsabilidad</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Desarrolladores</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement/es">Declaración de cookies</a></li>
+								<li id="footer-places-mobileview"><a href="//es.m.wikipedia.org/w/index.php?title=Puntero_inteligente&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versión para móviles</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.084","walltime":"1.376","ppvisitednodes":{"value":57,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16871,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw1274","timestamp":"20180809084107","ttl":1900800,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":84,"wgHostname":"mw1326"});});</script>
+	</body>
+</html>

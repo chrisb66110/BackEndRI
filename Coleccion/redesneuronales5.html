@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+			<script type="text/javascript" src="https://blogs.upv.es/dm-sso-endpoint/1554402048/?dm_action=domainmap-setup-cdsso"></script>
+		<title>¿Qué es y para qué sirve una red neuronal artificial? &#8211; El blog de Víctor Yepes</title>
+<link rel='dns-prefetch' href='//s7.addthis.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="El blog de Víctor Yepes &raquo; Feed" href="https://victoryepes.blogs.upv.es/feed/" />
+<link rel="alternate" type="application/rss+xml" title="El blog de Víctor Yepes &raquo; RSS de los comentarios" href="https://victoryepes.blogs.upv.es/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/victoryepes.blogs.upv.es\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://victoryepes.blogs.upv.es/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slider-css'  href='https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/fonts/font-awesome/css/font-awesome.min.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='upv-style-css'  href='https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/style.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='addthis_all_pages-css'  href='https://victoryepes.blogs.upv.es/wp-content/plugins/addthis/frontend/build/addthis_wordpress_public.min.css?ver=5.1.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://s7.addthis.com/js/300/addthis_widget.js?ver=5.1.1#pubid=wp-1bcdff89e15e948a7464702a8b5d3bd3'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://victoryepes.blogs.upv.es/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.5.4'></script>
+<link rel='https://api.w.org/' href='https://victoryepes.blogs.upv.es/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://victoryepes.blogs.upv.es/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://victoryepes.blogs.upv.es/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='El lenguaje metafórico de los ingenieros' href='https://victoryepes.blogs.upv.es/2017/01/05/el-lenguaje-metaforico-de-los-ingenieros/' />
+<link rel='next' title='¿Qué es un sistema de costes basado en actividades?' href='https://victoryepes.blogs.upv.es/2017/01/10/sistema-costes-actividades/' />
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel="canonical" href="https://victoryepes.blogs.upv.es/2017/01/07/que-es-y-para-que-sirve-una-red-neuronal-artificial/" />
+<link rel='shortlink' href='https://victoryepes.blogs.upv.es/?p=3004' />
+<link rel="alternate" type="application/json+oembed" href="https://victoryepes.blogs.upv.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvictoryepes.blogs.upv.es%2F2017%2F01%2F07%2Fque-es-y-para-que-sirve-una-red-neuronal-artificial%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://victoryepes.blogs.upv.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvictoryepes.blogs.upv.es%2F2017%2F01%2F07%2Fque-es-y-para-que-sirve-una-red-neuronal-artificial%2F&#038;format=xml" />
+<script type="text/javascript" src="https://victoryepes.blogs.upv.es/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1554402048"></script>
+<!-- begin SI CAPTCHA Anti-Spam - login/register form style -->
+<style type="text/css">
+.si_captcha_small { width:175px; height:45px; padding-top:10px; padding-bottom:10px; }
+.si_captcha_large { width:250px; height:60px; padding-top:10px; padding-bottom:10px; }
+img#si_image_com { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_reg { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_log { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_checkout { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_jetpack { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_bbpress_topic { border-style:none; margin:0; padding-right:5px; float:left; }
+.si_captcha_refresh { border-style:none; margin:0; vertical-align:bottom; }
+div#si_captcha_input { display:block; padding-top:15px; padding-bottom:5px; }
+label#si_captcha_code_label { margin:0; }
+input#si_captcha_code_input { width:65px; }
+p#si_captcha_code_p { clear: left; padding-top:10px; }
+.si-captcha-jetpack-error { color:#DC3232; }
+</style>
+<!-- end SI CAPTCHA Anti-Spam - login/register form style -->
+<script data-cfasync="false" type="text/javascript">if (window.addthis_product === undefined) { window.addthis_product = "wpp"; } if (window.wp_product_version === undefined) { window.wp_product_version = "wpp-6.1.8"; } if (window.wp_blog_version === undefined) { window.wp_blog_version = "5.1.1"; } if (window.addthis_share === undefined) { window.addthis_share = {}; } if (window.addthis_config === undefined) { window.addthis_config = {"data_track_clickback":true,"ignore_server_config":true,"ui_atversion":300}; } if (window.addthis_layers === undefined) { window.addthis_layers = {}; } if (window.addthis_layers_tools === undefined) { window.addthis_layers_tools = [{"share":{"counts":"both","numPreferredServices":9,"mobile":false,"position":"left","theme":"transparent"},"sharedock":{"counts":"both","numPreferredServices":9,"mobileButtonSize":"large","position":"bottom","theme":"transparent"}}]; } else { window.addthis_layers_tools.push({"share":{"counts":"both","numPreferredServices":9,"mobile":false,"position":"left","theme":"transparent"},"sharedock":{"counts":"both","numPreferredServices":9,"mobileButtonSize":"large","position":"bottom","theme":"transparent"}});  } if (window.addthis_plugin_info === undefined) { window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","plugin_name":"Share Buttons by AddThis","plugin_version":"6.1.8","plugin_mode":"WordPress","anonymous_profile_id":"wp-1bcdff89e15e948a7464702a8b5d3bd3","page_info":{"template":"posts","post_type":""},"sharing_enabled_on_post_via_metabox":false}; } 
+                    (function() {
+                      var first_load_interval_id = setInterval(function () {
+                        if (typeof window.addthis !== 'undefined') {
+                          window.clearInterval(first_load_interval_id);
+                          if (typeof window.addthis_layers !== 'undefined' && Object.getOwnPropertyNames(window.addthis_layers).length > 0) {
+                            window.addthis.layers(window.addthis_layers);
+                          }
+                          if (Array.isArray(window.addthis_layers_tools)) {
+                            for (i = 0; i < window.addthis_layers_tools.length; i++) {
+                              window.addthis.layers(window.addthis_layers_tools[i]);
+                            }
+                          }
+                        }
+                     },1000)
+                    }());
+                </script><!-- Google Analytics Tracking by Google Analyticator 6.5.4: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-30227451-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-3004 single-format-standard">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Saltar al contenido</a>
+
+	<header id="masthead" class="site-header">
+		<div class="band">
+			<div class="band_first_black"></div>
+			<div class="band_second_black"></div>
+		</div>		
+		<div class="site-branding">
+			<script>
+			//	alert($(window).width());
+				</script>
+				<p class="site-title"><a href="https://victoryepes.blogs.upv.es/" rel="home"><img src="https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/img/logo.png" width="182" height="61" alt="Logo UPV"></a></p>
+				
+				 				 	<ul class="menu_aux">
+					 						 	<li><a href="#" class="smaller">a</a> · <a href="#" class="bigger">A</a></li>
+					 	<li><a href="http://www.upv.es/otros/accesibilidad-es.html">Accesibilidad</a></li>
+					 	<li><a href="http://www.upv.es/otros/mapa-web-es.html">Mapa web</a></li>
+						<li><a href="http://www.upv.es/pls/oalu/sic_mag.MetaBus?ie=utf8&P_IDIOMA=c&q=polilupa">Buscar</a></li>
+						<li><a href="http://www.upv.es/pls/oalu/sic_person.Busca_Persona?p_idioma=c&P_VISTA=normal">Directorio</a></li>
+				 	</ul>	
+				 				
+					  
+				<div class="poliblog"><img src="https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/img/logo-polblogs.png" width="128" height="49" alt="Logo poliBlogs"></div>
+		</div><!-- .site-branding -->
+		
+		<div class="header_mov">
+			<a class="menu-toggle"></a>
+			<form role="search" method="get" class="search-form" action="https://victoryepes.blogs.upv.es/">
+				<label>
+					<span class="screen-reader-text">Buscar:</span>
+					<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Buscar" />
+			</form>		</div>
+		
+		<nav id="site-navigation" class="main-navigation">
+			
+			<div id="primary-menu" class="menu"><ul>
+<li class="page_item page-item-11 page_item_has_children"><a href="https://victoryepes.blogs.upv.es/biografia/">Biografía</a>
+<ul class='children'>
+	<li class="page_item page-item-107"><a href="https://victoryepes.blogs.upv.es/biografia/titulaciones-academicas/">Titulaciones académicas</a></li>
+	<li class="page_item page-item-574"><a href="https://victoryepes.blogs.upv.es/biografia/cargos-universitarios/">Cargos universitarios</a></li>
+	<li class="page_item page-item-311"><a href="https://victoryepes.blogs.upv.es/biografia/actividad-profesional/">Actividad profesional</a></li>
+	<li class="page_item page-item-2905"><a href="https://victoryepes.blogs.upv.es/biografia/comites-editoriales/">Comités editoriales</a></li>
+	<li class="page_item page-item-473"><a href="https://victoryepes.blogs.upv.es/biografia/asociaciones-profesionales/">Asociaciones e instituciones</a></li>
+	<li class="page_item page-item-3267"><a href="https://victoryepes.blogs.upv.es/biografia/revisor-revistas-cientificas/">Revisor revistas científicas</a></li>
+	<li class="page_item page-item-3440"><a href="https://victoryepes.blogs.upv.es/biografia/comites-de-normalizacion/">Comités de normalización</a></li>
+</ul>
+</li>
+<li class="page_item page-item-38 page_item_has_children"><a href="https://victoryepes.blogs.upv.es/docencia/">Docencia</a>
+<ul class='children'>
+	<li class="page_item page-item-58"><a href="https://victoryepes.blogs.upv.es/docencia/asignaturas-impartidas/">Asignaturas impartidas</a></li>
+	<li class="page_item page-item-56"><a href="https://victoryepes.blogs.upv.es/docencia/apuntes-docentes/">Apuntes docentes</a></li>
+	<li class="page_item page-item-54"><a href="https://victoryepes.blogs.upv.es/docencia/ejercicios-final-de-carrera/">Ejercicios Final de Carrera</a></li>
+	<li class="page_item page-item-116 page_item_has_children"><a href="https://victoryepes.blogs.upv.es/docencia/polimedias/">Polimedias</a>
+	<ul class='children'>
+		<li class="page_item page-item-158"><a href="https://victoryepes.blogs.upv.es/docencia/polimedias/calidad/">Calidad</a></li>
+		<li class="page_item page-item-152"><a href="https://victoryepes.blogs.upv.es/docencia/polimedias/construccion/">Construcción</a></li>
+		<li class="page_item page-item-162"><a href="https://victoryepes.blogs.upv.es/docencia/polimedias/optimizacion/">Optimización</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-204"><a href="https://victoryepes.blogs.upv.es/docencia/laboratorios-virtuales/">Laboratorios virtuales</a></li>
+</ul>
+</li>
+<li class="page_item page-item-36 page_item_has_children"><a href="https://victoryepes.blogs.upv.es/investigacion/">Investigación</a>
+<ul class='children'>
+	<li class="page_item page-item-60"><a href="https://victoryepes.blogs.upv.es/investigacion/deas/">DEAs</a></li>
+	<li class="page_item page-item-52"><a href="https://victoryepes.blogs.upv.es/investigacion/proyectos-investigacion/">Proyectos de investigación</a></li>
+	<li class="page_item page-item-22"><a href="https://victoryepes.blogs.upv.es/investigacion/tesis-doctorales/">Tesis doctorales</a></li>
+	<li class="page_item page-item-50"><a href="https://victoryepes.blogs.upv.es/investigacion/trabajos-fin-de-master/">Trabajos Fin de Máster</a></li>
+</ul>
+</li>
+<li class="page_item page-item-33 page_item_has_children"><a href="https://victoryepes.blogs.upv.es/publicaciones/">Publicaciones</a>
+<ul class='children'>
+	<li class="page_item page-item-20"><a href="https://victoryepes.blogs.upv.es/publicaciones/articulos-jcr/">Artículos JCR</a></li>
+	<li class="page_item page-item-44"><a href="https://victoryepes.blogs.upv.es/publicaciones/capitulos-libro/">Capítulos de libro</a></li>
+	<li class="page_item page-item-46"><a href="https://victoryepes.blogs.upv.es/publicaciones/congresos/">Congresos</a></li>
+	<li class="page_item page-item-42"><a href="https://victoryepes.blogs.upv.es/publicaciones/libros/">Libros</a></li>
+	<li class="page_item page-item-48"><a href="https://victoryepes.blogs.upv.es/publicaciones/otros-articulos/">Otros artículos</a></li>
+</ul>
+</li>
+<li class="page_item page-item-7971"><a href="https://victoryepes.blogs.upv.es/personajes/">Personajes</a></li>
+<li class="page_item page-item-10270"><a href="https://victoryepes.blogs.upv.es/tesauro/">Tesauro</a></li>
+<li class="page_item page-item-16"><a href="https://victoryepes.blogs.upv.es/contacto/">Contacto</a></li>
+</ul></div>
+			 				 	<ul class="menu_aux_responsive">
+					 						 	<li><a href="#" class="smaller">a</a> · <a href="#" class="bigger">A</a></li>
+					 	<li><a href="http://www.upv.es/otros/accesibilidad-es.html">Accesibilidad</a></li>
+					 	<li><a href="http://www.upv.es/otros/mapa-web-es.html">Mapa web</a></li>
+						<li><a href="http://www.upv.es/pls/oalu/sic_mag.MetaBus?ie=utf8&P_IDIOMA=c&q=polilupa">Buscar</a></li>
+						<li><a href="http://www.upv.es/pls/oalu/sic_person.Busca_Persona?p_idioma=c&P_VISTA=normal">Directorio</a></li>
+				 	</ul>	
+				 				
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+	<div id="content" class="site-content">
+		
+
+	<div id="primary" class="content-area ">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-3004" class="post-3004 post type-post status-publish format-standard hentry category-algoritmo category-innovacion category-investigacion category-toma-de-decisiones tag-inteligencia-artificial tag-oraculo-de-delfos tag-perceptron tag-ramon-y-cajal tag-redes-neuronales tag-sistemas-inteligentes">
+	<header class="entry-header">
+		<h1 class="entry-title">¿Qué es y para qué sirve una red neuronal artificial?</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<div class="at-above-post addthis_tool" data-url="https://victoryepes.blogs.upv.es/2017/01/07/que-es-y-para-que-sirve-una-red-neuronal-artificial/"></div><p style="text-align: justify"><a href="http://4.bp.blogspot.com/_uoGH2mgklhc/S22lVYVrgZI/AAAAAAAAAAM/Oov7OULjKO0/S660/neurona1.jpg"><img class="alignleft" style="margin-left: 20px;margin-right: 20px" src="http://4.bp.blogspot.com/_uoGH2mgklhc/S22lVYVrgZI/AAAAAAAAAAM/Oov7OULjKO0/S660/neurona1.jpg" alt="" width="450" height="236" /></a>Parece que hoy día, al igual que hace algunos milenios, la profesión de &#8220;oráculo&#8221; es una de las más demandadas, especialmente cuando se afrontan tiempos difíciles y el ser humano pretende predecir qué va a pasar para tomar la decisión correcta. Una de las profesiones de más futuro, según algunos, es la relacionada con &#8220;<a href="http://optimizacionheuristica.blogs.upv.es/2013/02/26/big-data/" target="_blank" rel="noopener">Big Data</a>&#8220;. Pues bien, este post trata de introducir, de forma muy somera, una herramienta que es extraordinariamente potente para predecir relaciones fuertemente no lineales de grandes volúmenes de datos. También es una herramienta que, mal empleada, nos engaña. Todo empezó cuando nuestro Premio Nobel <a href="https://es.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal" target="_blank" rel="noopener">Santiago Ramón y Cajal</a> empezó a describir nuestro sistema nervioso.<br />
+Las <b>redes de neuronas artificiales</b> (denominadas habitualmente como <b>RNA</b> o en inglés como: &#8220;ANN&#8221;) son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el <a title="Sistema nervioso" href="http://es.wikipedia.org/wiki/Sistema_nervioso">sistema nervioso</a> de los animales. Se trata de un sistema de interconexión de <a title="Neurona" href="http://es.wikipedia.org/wiki/Neurona">neuronas</a> que colaboran entre sí para producir un estímulo de salida. En <a title="Inteligencia artificial" href="http://es.wikipedia.org/wiki/Inteligencia_artificial">inteligencia artificial</a> es frecuente referirse a ellas como <b>redes de neuronas</b> o <b>redes neuronales</b>. Forman parte de los denominados &#8220;<a href="http://es.wikipedia.org/wiki/Sistema_inteligente" target="_blank" rel="noopener">Sistemas Inteligentes</a>&#8220;, dentro de la rama de la <a href="http://es.wikipedia.org/wiki/Inteligencia_artificial" target="_blank" rel="noopener">Inteligencia Artificial</a>.</p>
+<p style="text-align: justify">Nuestro grupo de investigación ha publicado algunos artículos empleando esta herramienta en el ámbito del hormigón:</p>
+<ul>
+<li style="text-align: justify">GARCÍA-SEGURA, T.; YEPES, V.; FRANGOPOL, D.M. (2017). <strong>Multi-Objective Design of Post-Tensioned Concrete Road Bridges Using Artificial Neural Networks.</strong> <em>Structural and Multidisciplinary Optimization</em>, (accepted, in press).</li>
+<li style="text-align: justify">MARTÍ-VARGAS, J.R.; FERRI, F.J.; YEPES, V. (2013). <strong>Prediction of the transfer length of prestressing strands with neural networks</strong>. <em>Computers and Concrete</em>, 12(2):187-209. DOI: http://dx.doi.org/10.12989/cac.2013.12.2.187.</li>
+</ul>
+<p style="text-align: justify">Un tutorial muy interesante sobre este tema es: <a href="http://www.gc.ssr.upm.es/inves/neural/ann2/anntutorial.html" target="_blank" rel="noopener">http://www.gc.ssr.upm.es/inves/neural/ann2/anntutorial.html</a> , así como el siguiente: <a href="http://sabia.tic.udc.es/mgestal/cv/RNAtutorial/index.html" target="_blank" rel="noopener">http://sabia.tic.udc.es/mgestal/cv/RNAtutorial/index.html</a></p>
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/RedNeuronalArtificial.png/400px-RedNeuronalArtificial.png"><img class="aligncenter" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/RedNeuronalArtificial.png/400px-RedNeuronalArtificial.png" alt="" width="400" height="223" /></a></p>
+<p>¿Queréis usar una red neural on-line? Os paso el siguiente enlace: <a href="http://playground.tensorflow.org/" target="_blank" rel="noopener">http://playground.tensorflow.org/</a></p>
+<p>Os dejo también unos cuantos vídeos que os pueden ampliar información sobre el tema. Espero que os gusten.</p>
+<p><iframe width="640" height="480" src="https://www.youtube.com/embed/roF7wsNPAdc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p><iframe width="640" height="480" src="https://www.youtube.com/embed/x9U-0xd-SfU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align: center">
+<p><iframe width="640" height="480" src="https://www.youtube.com/embed/xIu768L4cEc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>Este programa de Redes creo que puede ampliar algo más la filosofía subyacente del aprendizaje y la inteligencia:</p>
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/umF-zK50kF0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align: justify">También dejo una presentación de clase sobre el tema:</p>
+<p style="text-align: justify"><iframe src="//docs.google.com/viewer?url=http%3A%2F%2Foptimizacionheuristica.blogs.upv.es%2Ffiles%2F2013%2F03%2FT6_SICivil_2013nn1.pdf&hl=es&embedded=true" class="gde-frame" style="width:100%; height:500px; border: none;" scrolling="no"></iframe>
+</p>
+<!-- AddThis Advanced Settings above via filter on the_content --><!-- AddThis Advanced Settings below via filter on the_content --><!-- AddThis Advanced Settings generic via filter on the_content --><!-- AddThis Share Buttons above via filter on the_content --><!-- AddThis Share Buttons below via filter on the_content --><div class="at-below-post addthis_tool" data-url="https://victoryepes.blogs.upv.es/2017/01/07/que-es-y-para-que-sirve-una-red-neuronal-artificial/"></div><!-- AddThis Share Buttons generic via filter on the_content -->	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="https://victoryepes.blogs.upv.es/2017/01/07/que-es-y-para-que-sirve-una-red-neuronal-artificial/" rel="bookmark"><time class="entry-date published" datetime="2017-01-07T08:00:09+02:00">7 enero, 2017</time><time class="updated" datetime="2019-01-22T13:02:47+02:00">22 enero, 2019</time></a></span> <span class="cat-links"><a href="https://victoryepes.blogs.upv.es/category/algoritmo/" rel="category tag">algoritmo</a>, <a href="https://victoryepes.blogs.upv.es/category/innovacion/" rel="category tag">innovación</a>, <a href="https://victoryepes.blogs.upv.es/category/investigacion/" rel="category tag">investigación</a>, <a href="https://victoryepes.blogs.upv.es/category/toma-de-decisiones/" rel="category tag">toma de decisiones</a></span><span class="tags-links"><a href="https://victoryepes.blogs.upv.es/tag/inteligencia-artificial/" rel="tag">inteligencia artificial</a>, <a href="https://victoryepes.blogs.upv.es/tag/oraculo-de-delfos/" rel="tag">oráculo de Delfos</a>, <a href="https://victoryepes.blogs.upv.es/tag/perceptron/" rel="tag">perceptrón</a>, <a href="https://victoryepes.blogs.upv.es/tag/ramon-y-cajal/" rel="tag">Ramón y Cajal</a>, <a href="https://victoryepes.blogs.upv.es/tag/redes-neuronales/" rel="tag">redes neuronales</a>, <a href="https://victoryepes.blogs.upv.es/tag/sistemas-inteligentes/" rel="tag">sistemas inteligentes</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Navegación de entradas</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://victoryepes.blogs.upv.es/2017/01/05/el-lenguaje-metaforico-de-los-ingenieros/" rel="prev">El lenguaje metafórico de los ingenieros</a></div><div class="nav-next"><a href="https://victoryepes.blogs.upv.es/2017/01/10/sistema-costes-actividades/" rel="next">¿Qué es un sistema de costes basado en actividades?</a></div></div>
+	</nav>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area" role="complementary">
+	<section id="widget_sp_image-2" class="widget widget_sp_image"><h4 class="widget-title"><a class="toggle">Víctor Yepes Piqueras</a></h4><img width="200" height="200" alt="Víctor Yepes Piqueras" class="attachment-full" style="max-width: 100%;" srcset="https://victoryepes.blogs.upv.es/files/2015/03/2ddece9.jpg 200w, https://victoryepes.blogs.upv.es/files/2015/03/2ddece9-150x150.jpg 150w" sizes="(max-width: 200px) 100vw, 200px" src="https://victoryepes.blogs.upv.es/files/2015/03/2ddece9.jpg" /></section><section id="text-3" class="widget widget_text"><h4 class="widget-title"><a class="toggle">Sobre el autor</a></h4>			<div class="textwidget"><p>Doctor Ingeniero de Caminos, Canales y Puertos. Catedrático de Universidad en el área de Ingeniería de la Construcción</p>
+</div>
+		</section><section id="text-4" class="widget widget_text"><h4 class="widget-title"><a class="toggle">“Nihil difficile volenti”</a></h4>			<div class="textwidget"></div>
+		</section><section id="text-7" class="widget widget_text">			<div class="textwidget"><p>“En mi opinión, nadie puede ser un buen proyectista, un buen investigador, un buen líder en la profesión de la ingeniería civil a menos que entienda los métodos y los problemas de los constructores”</p>
+<p>(Ralph B. Peck, 1912-2008)</p>
+</div>
+		</section><section id="text-5" class="widget widget_text"><h4 class="widget-title"><a class="toggle">LICENCIA</a></h4>			<div class="textwidget"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>.
+
+</div>
+		</section><section id="text-6" class="widget widget_text"><h4 class="widget-title"><a class="toggle">NO PLAGIES, VINCULA</a></h4>			<div class="textwidget">Usa el vínculo a este documento o a la pagina principal: victoryepes.blogs.upv.es/</div>
+		</section><section id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://victoryepes.blogs.upv.es/">
+				<label>
+					<span class="screen-reader-text">Buscar:</span>
+					<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Buscar" />
+			</form></section><section id="linkcat-132469" class="widget widget_links"><h4 class="widget-title"><a class="toggle">Mis sitios</a></h4>
+	<ul class='xoxo blogroll'>
+<li><a href="http://excelcon.blogs.upv.es/" title=" Equipo de Innovación y Calidad Educativa EXCELCON (Excelencia e innovación en el proceso de aprendizaje del proceso proyecto-construcción en la ingeniería civil) de la Universitat Politècnica de València." target="_blank">EXCELCON</a></li>
+<li><a href="http://personales.upv.es/vyepesp/" rel="me" title="Página personal de Víctor Yepes" target="_blank">Página personal</a></li>
+<li><a href="http://procedimientosconstruccion.blogs.upv.es/" target="_blank">Procedimientos de construcción</a></li>
+<li><a href="http://bridlife.blogs.upv.es/" target="_blank">Proyecto BRIDLIFE</a></li>
+<li><a href="http://horsost.blogs.upv.es/" target="_blank">Proyecto HORSOST</a></li>
+
+	</ul>
+</section>
+<section id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>enero 2017</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="lunes">L</th>
+		<th scope="col" title="martes">M</th>
+		<th scope="col" title="miércoles">X</th>
+		<th scope="col" title="jueves">J</th>
+		<th scope="col" title="viernes">V</th>
+		<th scope="col" title="sábado">S</th>
+		<th scope="col" title="domingo">D</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://victoryepes.blogs.upv.es/2016/12/">&laquo; Dic</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="https://victoryepes.blogs.upv.es/2017/02/">Feb &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/01/" aria-label="Entradas publicadas el 1 January, 2017">1</a></td>
+	</tr>
+	<tr>
+		<td>2</td><td>3</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/04/" aria-label="Entradas publicadas el 4 January, 2017">4</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/05/" aria-label="Entradas publicadas el 5 January, 2017">5</a></td><td>6</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/07/" aria-label="Entradas publicadas el 7 January, 2017">7</a></td><td>8</td>
+	</tr>
+	<tr>
+		<td>9</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/10/" aria-label="Entradas publicadas el 10 January, 2017">10</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/11/" aria-label="Entradas publicadas el 11 January, 2017">11</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/12/" aria-label="Entradas publicadas el 12 January, 2017">12</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/13/" aria-label="Entradas publicadas el 13 January, 2017">13</a></td><td>14</td><td>15</td>
+	</tr>
+	<tr>
+		<td><a href="https://victoryepes.blogs.upv.es/2017/01/16/" aria-label="Entradas publicadas el 16 January, 2017">16</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/17/" aria-label="Entradas publicadas el 17 January, 2017">17</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/18/" aria-label="Entradas publicadas el 18 January, 2017">18</a></td><td>19</td><td>20</td><td>21</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/22/" aria-label="Entradas publicadas el 22 January, 2017">22</a></td>
+	</tr>
+	<tr>
+		<td>23</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/24/" aria-label="Entradas publicadas el 24 January, 2017">24</a></td><td>25</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/26/" aria-label="Entradas publicadas el 26 January, 2017">26</a></td><td><a href="https://victoryepes.blogs.upv.es/2017/01/27/" aria-label="Entradas publicadas el 27 January, 2017">27</a></td><td>28</td><td>29</td>
+	</tr>
+	<tr>
+		<td>30</td><td><a href="https://victoryepes.blogs.upv.es/2017/01/31/" aria-label="Entradas publicadas el 31 January, 2017">31</a></td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></section><section id="tag_cloud-3" class="widget widget_tag_cloud"><h4 class="widget-title"><a class="toggle">Etiquetas</a></h4><div class="tagcloud"><a href="https://victoryepes.blogs.upv.es/tag/andece/" class="tag-cloud-link tag-link-144529 tag-link-position-1" style="font-size: 8pt;" aria-label="ANDECE (19 elementos)">ANDECE</a>
+<a href="https://victoryepes.blogs.upv.es/tag/arco/" class="tag-cloud-link tag-link-635077 tag-link-position-2" style="font-size: 9.0120481927711pt;" aria-label="arco (22 elementos)">arco</a>
+<a href="https://victoryepes.blogs.upv.es/tag/bridlife/" class="tag-cloud-link tag-link-631752 tag-link-position-3" style="font-size: 13.228915662651pt;" aria-label="BRIDLIFE (40 elementos)">BRIDLIFE</a>
+<a href="https://victoryepes.blogs.upv.es/tag/calidad/" class="tag-cloud-link tag-link-635044 tag-link-position-4" style="font-size: 14.240963855422pt;" aria-label="calidad (46 elementos)">calidad</a>
+<a href="https://victoryepes.blogs.upv.es/tag/cimbra/" class="tag-cloud-link tag-link-92879 tag-link-position-5" style="font-size: 8.3373493975904pt;" aria-label="cimbra (20 elementos)">cimbra</a>
+<a href="https://victoryepes.blogs.upv.es/tag/cimentaciones/" class="tag-cloud-link tag-link-635099 tag-link-position-6" style="font-size: 12.89156626506pt;" aria-label="cimentaciones (38 elementos)">cimentaciones</a>
+<a href="https://victoryepes.blogs.upv.es/tag/cimentacion/" class="tag-cloud-link tag-link-13712 tag-link-position-7" style="font-size: 8pt;" aria-label="cimentación (19 elementos)">cimentación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/compactacion/" class="tag-cloud-link tag-link-635081 tag-link-position-8" style="font-size: 9.6867469879518pt;" aria-label="compactación (24 elementos)">compactación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/costas/" class="tag-cloud-link tag-link-635073 tag-link-position-9" style="font-size: 8.3373493975904pt;" aria-label="costas (20 elementos)">costas</a>
+<a href="https://victoryepes.blogs.upv.es/tag/costes/" class="tag-cloud-link tag-link-635083 tag-link-position-10" style="font-size: 8pt;" aria-label="costes (19 elementos)">costes</a>
+<a href="https://victoryepes.blogs.upv.es/tag/dimalife/" class="tag-cloud-link tag-link-881563 tag-link-position-11" style="font-size: 11.542168674699pt;" aria-label="DIMALIFE (31 elementos)">DIMALIFE</a>
+<a href="https://victoryepes.blogs.upv.es/tag/docencia-2/" class="tag-cloud-link tag-link-86458 tag-link-position-12" style="font-size: 9.3493975903614pt;" aria-label="docencia (23 elementos)">docencia</a>
+<a href="https://victoryepes.blogs.upv.es/tag/edificacion/" class="tag-cloud-link tag-link-635096 tag-link-position-13" style="font-size: 10.530120481928pt;" aria-label="edificación (27 elementos)">edificación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/empresa/" class="tag-cloud-link tag-link-598 tag-link-position-14" style="font-size: 8.6746987951807pt;" aria-label="empresa (21 elementos)">empresa</a>
+<a href="https://victoryepes.blogs.upv.es/tag/encofrado/" class="tag-cloud-link tag-link-134261 tag-link-position-15" style="font-size: 8pt;" aria-label="encofrado (19 elementos)">encofrado</a>
+<a href="https://victoryepes.blogs.upv.es/tag/estructuras/" class="tag-cloud-link tag-link-635061 tag-link-position-16" style="font-size: 10.698795180723pt;" aria-label="estructuras (28 elementos)">estructuras</a>
+<a href="https://victoryepes.blogs.upv.es/tag/estructuras-de-contencion/" class="tag-cloud-link tag-link-109232 tag-link-position-17" style="font-size: 8pt;" aria-label="estructuras de contención (19 elementos)">estructuras de contención</a>
+<a href="https://victoryepes.blogs.upv.es/tag/geotecnia/" class="tag-cloud-link tag-link-635078 tag-link-position-18" style="font-size: 10.530120481928pt;" aria-label="geotecnia (27 elementos)">geotecnia</a>
+<a href="https://victoryepes.blogs.upv.es/tag/gestion/" class="tag-cloud-link tag-link-635054 tag-link-position-19" style="font-size: 11.710843373494pt;" aria-label="gestión (32 elementos)">gestión</a>
+<a href="https://victoryepes.blogs.upv.es/tag/historia/" class="tag-cloud-link tag-link-635064 tag-link-position-20" style="font-size: 15.590361445783pt;" aria-label="historia (55 elementos)">historia</a>
+<a href="https://victoryepes.blogs.upv.es/tag/hormigon/" class="tag-cloud-link tag-link-635063 tag-link-position-21" style="font-size: 22pt;" aria-label="hormigón (134 elementos)">hormigón</a>
+<a href="https://victoryepes.blogs.upv.es/tag/hormigon-prefabricado/" class="tag-cloud-link tag-link-120520 tag-link-position-22" style="font-size: 11.710843373494pt;" aria-label="hormigón prefabricado (32 elementos)">hormigón prefabricado</a>
+<a href="https://victoryepes.blogs.upv.es/tag/horsost/" class="tag-cloud-link tag-link-152580 tag-link-position-23" style="font-size: 10.530120481928pt;" aria-label="HORSOST (27 elementos)">HORSOST</a>
+<a href="https://victoryepes.blogs.upv.es/tag/ingenieria-civil/" class="tag-cloud-link tag-link-635074 tag-link-position-24" style="font-size: 15.590361445783pt;" aria-label="ingeniería civil (55 elementos)">ingeniería civil</a>
+<a href="https://victoryepes.blogs.upv.es/tag/innovacion/" class="tag-cloud-link tag-link-635053 tag-link-position-25" style="font-size: 9.855421686747pt;" aria-label="innovación (25 elementos)">innovación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/litoral/" class="tag-cloud-link tag-link-86404 tag-link-position-26" style="font-size: 8pt;" aria-label="litoral (19 elementos)">litoral</a>
+<a href="https://victoryepes.blogs.upv.es/tag/maquinaria/" class="tag-cloud-link tag-link-635067 tag-link-position-27" style="font-size: 15.759036144578pt;" aria-label="maquinaria (56 elementos)">maquinaria</a>
+<a href="https://victoryepes.blogs.upv.es/tag/movimiento-de-tierras/" class="tag-cloud-link tag-link-635093 tag-link-position-28" style="font-size: 10.698795180723pt;" aria-label="movimiento de tierras (28 elementos)">movimiento de tierras</a>
+<a href="https://victoryepes.blogs.upv.es/tag/optimizacion/" class="tag-cloud-link tag-link-635087 tag-link-position-29" style="font-size: 17.78313253012pt;" aria-label="optimización (74 elementos)">optimización</a>
+<a href="https://victoryepes.blogs.upv.es/tag/optimizacion-heuristica/" class="tag-cloud-link tag-link-132479 tag-link-position-30" style="font-size: 9.0120481927711pt;" aria-label="optimización heurística (22 elementos)">optimización heurística</a>
+<a href="https://victoryepes.blogs.upv.es/tag/perforacion/" class="tag-cloud-link tag-link-635105 tag-link-position-31" style="font-size: 11.204819277108pt;" aria-label="perforación (30 elementos)">perforación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/pilote/" class="tag-cloud-link tag-link-142446 tag-link-position-32" style="font-size: 11.542168674699pt;" aria-label="pilote (31 elementos)">pilote</a>
+<a href="https://victoryepes.blogs.upv.es/tag/planificacion/" class="tag-cloud-link tag-link-21248 tag-link-position-33" style="font-size: 8pt;" aria-label="planificación (19 elementos)">planificación</a>
+<a href="https://victoryepes.blogs.upv.es/tag/playas/" class="tag-cloud-link tag-link-635072 tag-link-position-34" style="font-size: 9.0120481927711pt;" aria-label="playas (22 elementos)">playas</a>
+<a href="https://victoryepes.blogs.upv.es/tag/polimedia/" class="tag-cloud-link tag-link-635048 tag-link-position-35" style="font-size: 9.6867469879518pt;" aria-label="Polimedia (24 elementos)">Polimedia</a>
+<a href="https://victoryepes.blogs.upv.es/tag/procedimientos-de-construccion/" class="tag-cloud-link tag-link-635071 tag-link-position-36" style="font-size: 18.120481927711pt;" aria-label="procedimientos de construcción (78 elementos)">procedimientos de construcción</a>
+<a href="https://victoryepes.blogs.upv.es/tag/puente/" class="tag-cloud-link tag-link-86392 tag-link-position-37" style="font-size: 20.313253012048pt;" aria-label="puente (107 elementos)">puente</a>
+<a href="https://victoryepes.blogs.upv.es/tag/puentes-2/" class="tag-cloud-link tag-link-86385 tag-link-position-38" style="font-size: 14.072289156627pt;" aria-label="puentes (45 elementos)">puentes</a>
+<a href="https://victoryepes.blogs.upv.es/tag/sostenibilidad/" class="tag-cloud-link tag-link-635060 tag-link-position-39" style="font-size: 16.939759036145pt;" aria-label="sostenibilidad (67 elementos)">sostenibilidad</a>
+<a href="https://victoryepes.blogs.upv.es/tag/toma-de-decisiones/" class="tag-cloud-link tag-link-635082 tag-link-position-40" style="font-size: 9.3493975903614pt;" aria-label="toma de decisiones (23 elementos)">toma de decisiones</a>
+<a href="https://victoryepes.blogs.upv.es/tag/trenchless/" class="tag-cloud-link tag-link-109239 tag-link-position-41" style="font-size: 9.3493975903614pt;" aria-label="trenchless (23 elementos)">trenchless</a>
+<a href="https://victoryepes.blogs.upv.es/tag/turismo/" class="tag-cloud-link tag-link-635043 tag-link-position-42" style="font-size: 9.855421686747pt;" aria-label="turismo (25 elementos)">turismo</a>
+<a href="https://victoryepes.blogs.upv.es/tag/tunel/" class="tag-cloud-link tag-link-107703 tag-link-position-43" style="font-size: 9.0120481927711pt;" aria-label="túnel (22 elementos)">túnel</a>
+<a href="https://victoryepes.blogs.upv.es/tag/universitat-politecnica-de-valencia/" class="tag-cloud-link tag-link-133015 tag-link-position-44" style="font-size: 14.746987951807pt;" aria-label="Universitat Politècnica de València (49 elementos)">Universitat Politècnica de València</a>
+<a href="https://victoryepes.blogs.upv.es/tag/zanjas/" class="tag-cloud-link tag-link-92926 tag-link-position-45" style="font-size: 8pt;" aria-label="zanjas (19 elementos)">zanjas</a></div>
+</section>		<section id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widget-title"><a class="toggle">Histórico</a></h4>		<ul>
+											<li>
+					<a href="https://victoryepes.blogs.upv.es/2019/04/03/demolicion-del-puente-de-los-ingleses/">Demolición del Puente de los Ingleses</a>
+									</li>
+											<li>
+					<a href="https://victoryepes.blogs.upv.es/2019/04/02/extendedora-de-gravilla/">Extendedora de gravilla</a>
+									</li>
+											<li>
+					<a href="https://victoryepes.blogs.upv.es/2019/04/01/vibrohincador-de-pilotes-y-tablestacas-para-el-acople-a-retroexcavadora/">Vibrohincador de pilotes y tablestacas para el acople a retroexcavadora</a>
+									</li>
+											<li>
+					<a href="https://victoryepes.blogs.upv.es/2019/03/29/la-zapata-aislada/">La zapata aislada</a>
+									</li>
+											<li>
+					<a href="https://victoryepes.blogs.upv.es/2019/03/28/pipe-express-instalacion-de-tuberias-semi-trenchless/">Pipe Express: Instalación de tuberías semi-trenchless</a>
+									</li>
+					</ul>
+		</section></aside><!-- #secondary -->
+	</div><!-- #content -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="col_first">
+			<div class="menu_f">
+								<a href="http://www.upv.es/otros/como-llegar-upv/index-es.html">Cómo llegar</a>
+				<a href="http://www.upv.es/plano/plano-2d-es.html">Planos</a>
+				<a href="http://www.upv.es/otros/contacto-es.html">Contacto</a>
+						</div>
+			<div class="clear"></div>
+			<p class="contact">Universitat Polit&egrave;cnica de Val&egrave;ncia &copy; 2019 &middot; Tel. (+34) 96 387 90 00 &middot; <a href="mailto:informacion@upv.es">informacion@upv.es</a></p>
+		</div>
+		
+		<div class="col_second">
+			<a href="http://campushabitat5u.es/" target="_blank"><img src="https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/img/campus_excelenciaH5.png" alt="CAMPUS HABITAT"></a>
+			
+			<a href="http://www.vlc-campus.com/" target="_blank"><img src="https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/img/campus_excelenciaVLC.png" alt="VLC-CAMPUS"></a>			
+		</div>
+		
+		<div class="col_third">
+			<a href="http://www.upv.es/entidades/AMAPUOC/" target="_blank"><img src="https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/img/EMASupv.png" alt="EMAS" width="33" height="62"></a>	
+		</div>
+		
+	</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+<script type='text/javascript' src='https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/js/custom.js?ver=20151215'></script>
+<script type='text/javascript' src='https://victoryepes.blogs.upv.es/wp-content/themes/upv2017/js/skip-link-focus-fix.js?ver=20151215'></script>
+<script type='text/javascript' src='https://victoryepes.blogs.upv.es/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+
+</body>
+</html>

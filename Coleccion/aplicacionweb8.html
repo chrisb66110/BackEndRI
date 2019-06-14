@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="es-ES" >
+<head style="display: none;">
+	<meta name="viewport" id="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimal-ui"/>
+	<meta name="dcterms.rights" content="© Copyright IBM Corp. 2017">
+	<script type="text/javascript">document.write("<base href='" + document.location.protocol + "//" + document.location.host + "/support/knowledgecenter/' />");</script>
+	<!--[if IE]>
+		<script>
+			(function() {
+				var emptyFn = function () {};
+				var methods = ['assert','clear','count','debug','dir','dirxml','error','exception','group','groupCollapsed','groupEnd','info','log','markTimeline','profile','profileEnd','table','time','timeEnd','timeStamp','trace','warn'];
+				var l = methods.length;
+				var console = window.console = window.console || {};
+				var method;
+				while (l--) {
+					method = methods[l];
+					console[method] = console[method] || emptyFn;
+				}
+			}());
+		</script>
+	<![endif]-->
+	
+	<!-- Global variables -->
+	<script id="kcGlobals">
+		var kcGlobals = {
+			'activeNavigationTabSelector': '.js-content__button',
+			'buildInfoEnabled': false,
+			'buildDateTime': "20190311_0551",
+			'locale': "es",
+			'country': "ES",
+			'idaEnabled': true,
+			'pdfEnabled': true,
+			'gitEditEnabled': false,
+			'hopscotchEnabled': true,
+			'deflectUrlEnabled': true,
+			'disqusEnabled': true,
+			'kcSession': undefined,
+			'hasRouting': true,
+			'tealeafInject': true,
+			'translation': {
+				'common.home': 'Inicio',
+				'common.products': 'Todos los productos',
+				'common.selectProduct': 'Seleccione un producto',
+				'common.help':'Ayuda',
+				'search.pagination.previous':'Anterior',
+				'search.pagination.next':'Siguiente',
+				'content.breadcrumb':'Rastro de navegación',
+				'content.select':'Seleccionar',
+				'content.version':'Versión',
+				'content.print':'Imprimir',
+				'content.gitTooltip':'Editar en GitHub',
+				'content.showMore':'Mostrar más',
+				'content.printTooltip':'Imprimir este tema',
+				'content.pdfButton':'PDF',
+				'content.pdfDownloadPage':'[Beta] Descargar esta página',
+				'content.pdfDownloadSection':'[Beta] Descargar esta sección',
+				'content.pdfSuccessMessage':'[Beta] Su solicitud de PDF se ha enviado satisfactoriamente. Le informaremos cuando esté listo para descargar.',
+				'content.pdfClose':'Cerrar, ',
+				'content.pdfErrorMessage':'[Beta] No hemos podido procesar su solicitud de PDF',
+				'content.pdfSuccessMessageRequestDownload':'[Beta] El PDF que ha solicitado, ',
+				'content.pdfSuccessMessageDownload':', está listo para descargar.',
+				'footer.contactUsMailtoSubject':'Comentarios a IBM Knowledge Center',
+				'content.moreTopics':'Temas relacionados:',
+				'content.doYouWantTo':'¿Desea...',
+				'content.toc.open':'Abrir tabla de contenido',
+				'content.toc.pin':'Anclar tabla de contenido',
+				'content.toc.close':'Cerrar tabla de contenido',
+				'content.changeVersion':'Cambiar versión',
+				'content.changeVersionOrProduct':'Cambiar versión o producto',
+				'content.selectDiffProduct':'Seleccionar otro producto',
+				'content.openTicket':'Abrir una incidencia y descargar arreglos de IBM Support Portal',
+				'content.findTutorial':'Buscar un tutorial técnico en developerWorks',
+				'content.networkWithUsers':'Establezca contacto con usuarios y expertos de IBM en <strong>nuestra comunidad de usuarios</strong>',				
+				'content.networkWithUsersLabel':'Establecer contacto con usuarios y expertos de IBM de la comunidad',								
+				'content.findBestPractice':'Buscar práctica recomendada para la integración de tecnologías en IBM Redbooks',				
+				'content.skillsGateway':'Explorar, aprender y tener éxito con cursos de formación de IBM Skills Gateway',
+				'content.searchPlaceholder.allProducts':'Buscar en todos los productos...',
+				'content.searchPlaceholder':'Buscar en este producto...',
+				'content.searchInAllProducts':'Buscar en todos los productos',
+				'content.searchInAllProducts.status.checked':'Seleccionado. Para conmutar, pulse Intro.',
+				'content.searchInAllProducts.status.unchecked':'Deseleccionado. Para conmutar, pulse Intro.',
+				'content.eosNewVersion':'Se ha encontrado la página que solicitaba en una versión más reciente de ',
+				'search.allProducts':'Todos los productos',
+				'advancedSearch.title':'Seleccionar ámbito para precisar la búsqueda',
+				'advancedSearch.apply':'Aplicar',
+				'advancedSearch.cancel':'Cancelar',
+				'common.close':'Cerrar',
+				'advancedSearch.allOfProduct':'Todo',
+				'advancedSearch.scope':'Ámbito',
+				'notification.close':'Cerrar notificación',
+				'otherversion.selectDifferentProduct':'Seleccionar otro producto',
+				'versionsNotification.message': 'No hemos encontrado un tema coincidente en la versión del producto que ha solicitado. ¿Desea ir a la página de inicio _VERSIONNAME_?',
+				'versionsNotification.confirm': 'Sí',
+				'versionsNotification.cancel': 'Cancelar',
+
+				'hopscotch.nextBtn':'Next',
+				'hopscotch.prevBtn':'Back',
+				'hopscotch.doneBtn':'Done',
+				'hopscotch.closeBtn':'Close',
+				'hopscotch.content.step1.title':'Welcome to IBM Knowledge Center',
+				'hopscotch.content.step1.content':'This brief tour will show you the main things you can do from any topic page.',
+				'hopscotch.content.step2.title':'Search just in this product ',
+				'hopscotch.content.step2.content':'When you search from a topic page, search is automatically scoped to that specific product (and version, if there is one). To search across all of IBM Knowledge Center, click the "Search in all products" checkbox.',
+				'hopscotch.content.step3.title':'Show the table of contents',
+				'hopscotch.content.step3.content':'Click the Table of contents link. To keep the Table of contents open, click on the pushpin next to the link. Otherwise, when your mouse leaves the area, the Table of contents will hide. When you\'ve "pinned" the Table of contents, it will stay that way till you close it. Also, depending on your screen size, you may not see the "third column" in IBM Knowledge Center at the same time.',
+				'hopscotch.content.step4.title':'Change version or product',
+				'hopscotch.content.step4.content':'You can see the same page in another version of the same product, if available, or select a completely different product. If you see a version in italic text, it means IBM KC did not find a matching topic in that version. You can still go to the home page for that version, however.',
+				'hopscotch.content.step5.title':'Move through a document with previous / next',
+				'hopscotch.content.step6.title':'Print and PDF',
+				'hopscotch.content.step6.content':'Print will print just the topic content, while the PDF menu will let you create a PDF of the current page, or of current "section" of the documentation. Note there is a 1000 topic limit when creating PDFs of the section.',
+				'hopscotch.content.step7.title':'Getting help and contacting us',
+				'hopscotch.content.step7.content':'You can get more detailed help from the "Help" link. If you need support on IBM Knowledge Center, or you want to contact us, send us an email at <a href="mailto:ibmkc@us.ibm.com">ibmkc@us.ibm.com</a>',
+				'hopscotch.content.step8.title':'Related Topics show you other topics from the current section',
+				'hopscotch.content.step8.content':'The topics that surround the topic you\'re currently looking at.',
+				'hopscotch.content.step9.title':'Investigate other IBM resources outside IBM Knowledge Center',
+				'hopscotch.content.step9.content':'You can get to IBM Support, explore the resources at IBM Developer, read a Redbook, or build your skills. Just follow the links.',
+
+			},
+			'idaData': {
+				'ibmEV': 'content',
+				'ibmEvModule': 'content navigation',
+				'ibmEvLinkTitle': document.querySelector("head meta[name='DC.Title']") ? document.querySelector("head meta[name='DC.Title']").getAttribute("content") : '',
+				'ibmEvSection': document.querySelector("head meta[name='Description']") ? document.querySelector("head meta[name='Description']").getAttribute("content") : '',
+			},
+			'disqus': {
+				'application': 'ibm-knowledge-center',
+				'api.public.key': '7O1kG8Dkbdlevjvhp8lq2uZZ778TOBpJvqotU5hXXcBpllwTQF4tkZXurkjq6ndw',
+				'authorize.url': 'https://disqus.com/api/oauth/2.0/authorize/',
+				'access.token.url': 'https://disqus.com/api/oauth/2.0/access_token/',
+				'access.token': 'f45bbf0463694a50a9b309d7492061f0',
+				'domains': 'ibm.com',
+				'website': 'https://www.ibm.com/support/knowledgecenter'
+			},
+			'notification': {
+				'isEnabled': false,
+				'message': ''
+			},
+		};
+	</script>
+	
+	<!--Hotjar tracking --><!--END Hotjar tracking --><!--Digital Data -->
+
+	<script type="text/javascript">
+		window.digitalData = {
+			page: {
+				category: {
+					primaryCategory: 'ELSKCS'				//formerly IBM.WTMCategory meta tag
+				},
+				pageInfo: {
+					effectiveDate: '2014-10-24',		//formerly IBM.Effective meta tag
+					expiryDate: '2019-12-18',			//formerly IBM.Expires meta tag
+					language: 'es',	//formerly DC.Language meta tag
+					publishDate: '2014-10-24',			//formerly DC.Date meta tag, same as dcterms.date
+					publisher: 'IBM Corporation',		//formerly DC.Publisher meta tag
+					version: 'v18',						//version part of Source meta tag (e.g. v17)
+					ibm: {
+						contentDelivery: '',	//"delivery" portion of Source meta tag
+						contentProducer: '',	//"authoring" portion of the Source meta tag
+						country: 'ES',					//formerly IBM.Country meta tag, same as geo.country
+						ibmDynamicCm: true,				//formerly the meta tag to enable dynamic contact module.
+						industry: 'ZZ',					//formerly IBM.Industry meta tag
+						owner: 'IBM Knowledge Center/Pittsburgh/IBM',	//formerly Owner meta tag
+						siteID: 'ESTKCS',				//formerly IBM.WTMSite meta tag
+						subject: 'SU400',				//formerly DC.Subject meta tag
+						type: 'CT701',					//formerly DC.Type meta tag
+						config: {
+							masthead: {
+								type: "alternate",
+								search: {
+									enabled: true
+								},
+								profileAlways: {
+									enabled: true
+								},
+							},
+							footer: {
+								enabled: false,
+							},
+							feedbacklink: {
+								enabled: false
+							},
+							feedbacklink: {
+  								enabled: false
+  							},
+							localeselector: {
+								enabled: false
+							},
+							sbs: {
+								enabled: false
+							},
+							backtotop: {
+								enabled: true,
+								container: ".kc-main"
+							},
+							errorchecking: {
+								enabled: false
+							},
+							survey: {
+								global_percent: parseInt('5'),
+								enabled: true,
+								intercept: {
+									enabled: true,
+									percent: parseInt('5'),
+									presentDelay: parseInt('90'),
+									start: 'January 20 2019',
+									stop: 'March 31 2019',
+									invitation: {
+										title: "Tell IBM what you think",
+										content: "Would you take one minute to complete this survey?",
+										yes_label: "Yes",
+										no_label: "No Thanks"
+									},
+									survey: {
+										type: 'medallia',
+										id: 'web-supp-comm',
+										width: 960,
+										height: 800,
+										metaData: 'type=2&pgroup=eknowcent&pparent=eknowcent&pmain=eSupport'
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		window.digitalData.page.pageInfo.ibm.config.masthead.search.enabled = true;
+	</script>
+	<!--END Digital Data -->
+<script	src="//1.www.s81c.com/common/v18/r128/js/www.js?v=20190311_0551"></script>
+<script	src="//1.www.s81c.com/common/v18/r128/js/forms.js?v=20190311_0551"></script>
+
+
+	<link rel="stylesheet" href="//1.www.s81c.com/common/v18/r128/css/www.css">
+	<link rel="stylesheet" href="//1.www.s81c.com/common/v18/r128/css/forms.css">
+	<link rel="stylesheet" href="/support/knowledgecenter/css/kc.css?v=20190311_0551">
+	<link rel="stylesheet" href="//1.www.s81c.com/common/v18/r128/css/grid-fluid.css">
+
+	<!--Hopscotch --><!--“The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0: Hopscotch”-->
+	<link rel="stylesheet" href="/support/knowledgecenter/js/resources/external/hopscotch/hopscotch.css">
+	<!--END Hopscotch --><!--IDA --><!-- IDA -->
+		<script>
+			window.bindPageViewWithAnalytics = window.bindPageViewWithAnalytics || function(){};
+			window.digitalData = window.digitalData || {};
+			window.digitalData.page = window.digitalData.page || {};
+			window.digitalData.page.pageInfo = window.digitalData.page.pageInfo || {};
+			window.digitalData.page.pageInfo.ibm = window.digitalData.page.pageInfo.ibm || {};
+			var contextPath = window.location.href.replace(/http:\/\/|https:\/\//gi,'') || '';
+
+			if((typeof ibmStats !== 'undefined') && ibmStats){
+				var data ={
+					"ibmEV": kcGlobals.idaData.ibmEV || '',
+					"ibmEvModule": kcGlobals.idaData.ibmEvModule || '',
+					"ibmEvAction": contextPath || '',
+					"ibmEvTarget":  contextPath || '',
+					"ibmEvLinkTitle": kcGlobals.idaData.ibmEvLinkTitle || '',
+					"ibmEvCountry": document.querySelector("html").getAttribute("lang") || "en-US",
+					"ibmEvSection": kcGlobals.idaData.ibmEvSection || '',
+					"ibmEvGroup": 'IBM Knowledge Center'
+				};
+				ibmStats.event(data);
+			}
+			window.digitalData.page.pageInfo.pageID = contextPath;
+			window.digitalData.page.pageInfo.language = document.querySelector("html").getAttribute("lang") || "en-US";
+			window.digitalData.page.pageInfo.ibm.country = window.digitalData.page.pageInfo.language.split("-")[1] || 'US';
+			if(!kcGlobals.hasRouting) bindPageViewWithAnalytics();
+		</script>
+		<script src="//1.www.s81c.com/common/stats/ida_stats.js"></script>
+		<!-- end of IDA --><!--END IDA -->
+
+	<title>IBM Knowledge Center</title>
+</head>
+
+<body id="ibm-com" class="ibm-type kc-user-unsigned ibm-sitenav-menu " data-widgets="disabled">
+	<div id="ibm-top" class="ibm-landing-page js-frame kc-frame kc-content-page">
+		<!--HEADERs-->
+<div id="ibm-masthead" role="banner" aria-label="IBM">
+  <div id="ibm-mast-options">
+    <ul role="toolbar" aria-labelledby="ibm-masthead">
+      <li id="ibm-geo" role="presentation">
+        <a href="//www.ibm.com/planetwide/select/selector.html">United States</a></li>
+    </ul>
+  </div>
+  <div id="ibm-universal-nav">
+    <div id="ibm-home"><a href="//www.ibm.com/us-en/">IBM®</a></div>
+    <div class="ibm-parent-site-name js-home__button"><a href="/support/knowledgecenter" tabindex="0">IBM Knowledge Center</a></div>
+    <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+      <li><a href="//www.ibm.com/sitemap/us/en/">Site map</a></li>
+    </ul>
+    <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+      <form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+        <p>
+          <label for="q"><span class="ibm-access">Buscar</span></label>
+          <input type="text" maxlength="350" value="" name="q" id="q" placeholder="Buscar en este producto..."/>
+          <span class="ibm-search-scope">
+            <input class="ibm-styled-checkbox" type="checkbox" name="sn" value="search" checked id="scopeoption" />
+            <label for="scopeoption">Buscar en IBM Knowledge Center</label>
+          </span>
+          <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit" />
+        </p>
+      </form>
+      <form class="ibm-hide" id="kc-search-form" action="/search" method="get">
+        <input type="text" name="terms">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- NAVIGATION BEGIN-->
+<nav role="navigation" aria-label="IBM Knowledge Center">
+  <div class="ibm-sitenav-menu-container">
+  <div class="ibm-sitenav-menu-name"></div>
+    <!-- OTHER VERSIONS -->
+    <div class="ibm-sitenav-menu-list kc-left-navigation js-hide-on-mobile">
+      <ul role="menubar" class="ibm-plex-sans-regular js-other-versions">
+        <li role="presentation" class="js-products__button ibm-hide"><a href="" tabindex="-1" role="menuitem">Todos los productos</a></li>
+        <li role="presentation" class="js-help__button ibm-ind-link ibm-hide"><a class="help-button-header" class="ibm-help-alt-link" href="" tabindex="-1" role="menuitem">Ayuda</a></li>
+      </ul>
+    </div>
+    <!-- END OF OTHER VERSIONS -->
+  </div>
+</nav>
+<!-- NAVIGATION END -->
+<noscript>
+  <p style="line-height:2; padding: 50px;">IBM Knowledge Center utiliza JavaScript. Parece que los scripts están inhabilitados o no son compatibles con el navegador. Habilite el uso de JavaScript y vuélvalo a intentar,</p>
+</noscript><!--END OF HEADER--><!--MAIN-->
+		<div class="js-kc-main kc-main" role="main">
+			<div id="ibm-content-main">
+				<div class="js-toolbar-container kc-toolbar"></div>
+				<div id="ibm-content-wrapper" class="js-screen-container kc-screen">
+					<div stateid="content" class="kc-content js-kc-content">
+						<!-- CONTENT -->
+						<div class="js-content-container">
+							<div class="js-notification-container"></div>
+							<div class="js-versions-notification-container"></div>
+							<header class="ibm-alternate-background kc-content-header" role="banner" aria-label="Barra de herramientas">
+								<div class="ibm-fluid kc-row-important ibm-nospacing ibm-fullwidth">
+									<div class="ibm-col-12-9">
+										<!-- BREADCRUMBS --><div class="ibm-fleft js-breadcrumbs kc-breadcrumbs"></div><!-- END BREADCRUMBS -->
+									</div>
+									<div class="ibm-col-12-3">
+										<div class="ibm-fright">
+											<!-- CONTENT NAVIGATION -->
+											<div class="js-navigation-controls kc-navigation-controls">
+												<a class="ibm-small js-content-nav-previous kc-disabled" title="Anterior" tabindex="-1">Anterior</a>
+												<a class="ibm-small js-content-nav-next kc-disabled" title="Siguiente" tabindex="-1">Siguiente</a>
+											</div><!-- END OF CONTENT NAVIGATION -->
+										</div>
+									</div>
+								</div>
+
+								<div class="ibm-fluid kc-row-important kc-h3-row ibm-nospacing ibm-fullwidth">
+									<div class="ibm-col-12-9 ibm-col-medium-12-12 ibm-nospacing">
+										<h1 class="js-topic-title ibm-h2 ibm-padding-content" dir="auto"></h1>
+									</div>
+									<div class="ibm-col-12-3 kc-nav-header-wrapper">
+										<div class="kc-context-nav-header ibm-col-12-12">
+											<div class="js-adv-srch-trigger kc-adv-srch-trigger ibm-small"></div>
+											<div class="js-search-all-scope"></div>
+											<form class="kc-content-search">
+												<label for="kc-search-in-product" tabindex="0" class="ibm-access">Buscar en este producto...</label>
+												<input id="kc-search-in-product" class="ibm-styled-input js-search__input kc-search__input" type="text" placeholder="Buscar en este producto..." style="width:100%;" autocomplete="off"/>
+												<button role="button" id="ibm-kc-search" class="ibm-search-link kc-search__button" value="Buscar"><span class="ibm-access">Buscar</span></button>
+											</form>										
+											<div data-kc-widget="typeahead" id="kc-suggestion" class="kc-search-typeahead js-search-typeahead" style="display: none;">
+												<!--TYPEAHEAD-->
+												<div class="kc-search-typeahead__element">
+													<div class="kc-search-typeahead__dropdown">
+														<ul class="kc-search-topicHints ibm-plain-list"></ul>
+														<h2 class="kc-typeahead-heading kc-search-products"><span>Páginas de producto</span></h2>
+														<ul class="kc-search-products ibm-plain-list"></ul>
+														<h2 class="kc-typeahead-heading kc-search-history"><span>Búsquedas anteriores</span></h2>
+														<ul class="kc-search-history ibm-plain-list"></ul>
+													</div>
+												</div>
+												<!--END TYPEAHEAD-->
+											</div>												
+										</div>
+									</div>
+								</div>
+								<div class="ibm-fluid kc-row ibm-nospacing ibm-fullwidth ibm-alternate-background kc-horizontal-tool-bar">
+									<div class="kc-menu-panel-left ibm-col-12-7">
+										<div class="ibm-fleft kc-under-title-menu">
+											<a href="javascript:void(0)" class="js-toc-open kc-toc-button ibm-toc-link ibm-fleft">Tabla de contenido</a>
+											<span class="js-pick-container">
+												<span class="js-product-other-versions"></span>											
+												<span class="ibm-ind-link kc-select-product js-select-product">
+													<a href="/support/knowledgecenter/es/products"
+													class="ibm-bee-link" title="Seleccione un producto" aria-label="Seleccione un producto">Seleccione un producto</a>
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="kc-menu-panel-right ibm-col-12-5">
+										<div class="kc-horizontal-toolbar">
+											<span class="js-tools-print-button ibm-ind-link"></span>
+											<!-- PDF  -->
+											<span class="ibm-ind-link"><a class="js-tools-pdf-button kc-pdf-dropdown ibm-document-link">
+													</a></span>
+											<!-- END OF PDF -->
+											<span class="ibm-ind-link ibm-small js-help-button kc-help-button">
+											</span>
+											<span class="ibm-button-link ibm-padding-bottom-0 kc-start-tour ibm-hide">
+												<a class="kc-content-tour-button ibm-btn-sec ibm-btn-white js-start-tour ibm-margin-bottom-0" tabindex="0"	role="button">Take a tour</a>
+											</span>
+										</div>
+									</div>									
+								</div>
+							</header>
+							<main aria-label="Knowledge Center Content">
+								<div class="ibm-fluid ibm-nospacing ibm-fullwidth">
+									<div class="js-pinned-toc-placeholder ibm-col-12-3 kc-hide"></div>
+									<!-- TOC COLUMN-->
+									<div class="js-left-column kc-left-column ibm-nospacing kc-hide ibm-col-12-3">
+										<div class="js-toc-hover kc-toc-hover ibm-hidden-small">
+											<p class=" ibm-chevron-right-light-link"></p>
+										</div>
+										<!-- TOC -->
+										<div class="js-toc-wrapper kc-toc-wrapper ibm-background-white-core ibm-border-neutral-white-40"></div>
+										<!-- END TOC -->
+									</div>
+									<!-- END OF TOC COLUMN --><!-- MAIN CONTENT COLUMN-->
+									<div class="js-main-column kc-main-column ibm-col-12-9 ibm-nospacing">
+									<!-- NOTIFICATION BAR -->
+										<div class="kc-eos-new-version-msg ibm-fullwidth ibm-ind-link ibm-vertical-center"></div>
+										<div class="js-notification-bar kc-notification-bar ibm-center-block ibm-padding-top-1 ibm-col-12-10"></div>
+										<div class="js-git-button ibm-fullwidth ibm-right-block"></div>
+										<!-- END OF NOTIFICATION BAR --><!-- CONTENT IFRAME -->
+										<div class="content js-content ibm-padding-content" data-role="content"></div>
+										<!-- END OF CONTENT IFRAME --><!-- DISQUS -->
+										<div class="ibm-padding-content">
+											<div class="kc-discussion ibm-hide">
+												<div>
+													<p class="ibm-textcolor-gray-40 ibm-small kc-discussion-paragraph">
+													Please note that DISQUS operates this forum. When you sign in to comment, IBM will provide your email, first name and last name to DISQUS. That information, along with your comments, will be governed by 
+														<a class="ibm-intercept-exit-survey" href="https://help.disqus.com/customer/en/portal/articles/466259-privacy-policy" target="_blank">DISQUS’ privacy policy</a>. By commenting, you are accepting the 														 
+														<a class="nh-link-color-restore ibm-intercept-exit-survey" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service" target="_blank">DISQUS terms of service</a>.
+													</p>
+													<p><button class="ibm-btn-pri ibm-btn-blue-50 ibm-hide js-disqus-login" aria-label="Iniciar sesión">Iniciar sesión</button></p>
+												</div>
+												<div id="disqus_thread"></div>
+											</div>
+										</div>
+										<!-- END OF DISQUS -->
+									</div>
+									<div class="js-right-column js-context-navigation ibm-col-12-3 ibm-nospacing">
+									</div>
+								</div>
+								<!-- END OF MAIN CONTENT COLUMN -->
+							</main>
+						</div>
+						<!-- END OF CONTENT -->
+					</div>
+				</div>
+					<div class="js-advsrch-overlay"></div>
+			</div>
+		</div>
+		<!--END MAIN--><!--FOOTER-->
+<script>
+setTimeout(function() {
+	document.getElementById('contactlink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[0].url);
+	document.getElementById('privacylink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[1].url);
+	document.getElementById('termslink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[2].url);
+	document.getElementById('accessibilitylink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[3].url);
+}, 500);
+</script>
+<div class="js-footer-container kc-footer">
+  <footer role="contentinfo" aria-label="footer" class="js-footer">
+    <div class="kc-footer-content">
+      <div class="ibm-columns">
+        <div class="ibm-col-1-1">
+          <div class="ibm-footer-corporate-links ibm-col-6-4">
+            <ul class="ibm-plain-list">
+              <li><a id="contactlink" href="https://www.ibm.com/contact/us/en/" target="_self">Contacto</a></li>
+              <li><a id="privacylink" href="https://www.ibm.com/privacy/us/en/" target="_self">Privacidad</a></li>
+              <li><a id="termslink" href="https://www.ibm.com/legal/us/en/" target="_self">Condiciones de uso</a></li>
+              <li><a id="accessibilitylink" href="https://www.ibm.com/accessibility/us/en/" target="_self">Accesibilidad</a></li>
+              <li><a id="feedbacklink" data-ibm-contact="contact-link" href="javascript:void();" target="_self">Comentarios</a></li>
+            </ul>
+          </div>
+          <div class="js-language-selector kc-language-selector ibm-col-6-2">
+            <div class="kc-footer-locale-selector">
+              <form action="https://www.ibm.com/links" method="get" data-widget="selectlistnav">
+                <p>
+                  <select id="languageselect" name="url" class="ibm-fullwidth js-select2" aria-label="Select a server" role="listbox" >
+                      <option data-locale-value="ar" value="ar/">
+                      Árabe / عربية
+                      </option>
+                      <option data-locale-value="bs" value="bs/">
+                      Bosnio / Bosanski 
+                      </option>
+                      <option data-locale-value="bg" value="bg/">
+                      Búlgaro / Български
+                      </option>
+                      <option data-locale-value="ca" value="ca/">
+                      Catalán / Català
+                      </option>
+                      <option data-locale-value="zh" value="zh/">
+                      Chino simplificado / 简体中文
+                      </option>
+                      <option data-locale-value="zh-tw" value="zh-tw/">
+                      Chino tradicional / 繁體中文
+                      </option>
+                      <option data-locale-value="hr" value="hr/">
+                      Croata / Hrvatski
+                      </option>
+                      <option data-locale-value="cs" value="cs/">
+                      Checo / Čeština
+                      </option>
+                      <option data-locale-value="da" value="da/">
+                      Danés / Dansk
+                      </option>
+                      <option data-locale-value="nl" value="nl/">
+                      Holandés / Nederlands
+                      </option>
+                      <option data-locale-value="en" value="en/" selected="selected">
+                      Inglés / English
+                      </option>
+                      <option data-locale-value="fi" value="fi/">
+                      Finlandés / Suomi
+                      </option>
+                      <option data-locale-value="fr" value="fr/">
+                      Francés / Français
+                      </option>
+                      <option data-locale-value="de" value="de/">
+                      Alemán / Deutsch
+                      </option>
+                      <option data-locale-value="el" value="el/">
+                      Griego / Ελληνικά
+                      </option>
+                      <option data-locale-value="he" value="he/">
+                      Hebreo / עברית
+                      </option>
+                      <option data-locale-value="hu" value="hu/">
+                      Húngaro / Magyar
+                      </option>
+                      <option data-locale-value="it" value="it/">
+                      Italiano / Italiano
+                      </option>
+                      <option data-locale-value="ja" value="ja/">
+                      Japonés / 日本語
+                      </option>
+                      <option data-locale-value="kk" value="kk/">
+                      Kazajo / Қазақша
+                      </option>
+                      <option data-locale-value="ko" value="ko/">
+                      Coreano / 한국어
+                      </option>
+                      <option data-locale-value="mk" value="mk/">
+                      Macedonio / македонски
+                      </option>
+                      <option data-locale-value="no" value="no/">
+                      Noruego / Norsk
+                      </option>
+                      <option data-locale-value="pl" value="pl/">
+                      Polaco / polski
+                      </option>
+                      <option data-locale-value="pt-br" value="pt-br/">
+                      Portugués/Brasil/Brazil / Português/Brasil
+                      </option>
+                      <option data-locale-value="pt" value="pt/">
+                      Portugués/Portugal / Português/Portugal
+                      </option>
+                      <option data-locale-value="ro" value="ro/">
+                      Rumano / Română
+                      </option>
+                      <option data-locale-value="ru" value="ru/">
+                      Ruso / Русский
+                      </option>
+                      <option data-locale-value="sr" value="sr/">
+                      Serbio / srpski
+                      </option>
+                      <option data-locale-value="sk" value="sk/">
+                      Eslovaco / Slovenčina
+                      </option>
+                      <option data-locale-value="sl" value="sl/">
+                      Esloveno / Slovenščina
+                      </option>
+                      <option data-locale-value="es" value="es/">
+                      Español / Español
+                      </option>
+                      <option data-locale-value="sv" value="sv/">
+                      Sueco / Svenska
+                      </option>
+                      <option data-locale-value="th" value="th/">
+                      Tailandés / ภาษาไทย
+                      </option>
+                      <option data-locale-value="tr" value="tr/">
+                      Turco / Türkçe
+                      </option>
+                      <option data-locale-value="vi" value="vi/">
+                      Vietnamita / Tiếng Việt
+                      </option>
+                    </select>
+                  
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!--END FOOTER--><!-- Medallia feedback link -->
+
+<script>
+	IBMCore.common.util.config.set({
+		feedbacklink: {
+			enabled: true
+			, surveyId: "web-supp-comm"
+			, metaData: "type=2&fname=Knowledge&lname=Center&email=ibmkc@us.ibm.com&pgroup=eknowcent"
+		}
+	})
+	IBMCore.common.module.feedbacklink.init();
+</script><!-- END Medallia feedback link -->
+<div id="ibm-contact-module" role="region" aria-label="Contact module" class="ibm-hide">
+	<h2 class="ibm-h2 ibm-bold">Comentarios</h2>
+	<h3 class="ibm-h3 ibm-regular">Póngase en contacto con IBM</h3>
+	<h4 class="ibm-h4 ibm-regular">Comentar este contenido</h4>
+	<ul class="ibm-live-assistance-list">
+		<li><a class="js-kc-email-link ibm-light ibm-email-link ibm-padding-bottom-1" href="mailto:ibmkc@us.ibm.com?Subject=Comentarios a IBM Knowledge Center">Envíe comentarios por correo electrónico al servicio de soporte de IBM</a></li>
+	</ul>
+	<div class="ibm-footer-corporate-links">
+		<ul class="ibm-live-assistance-list">
+			<li class="ibm-feedbacklink ibm-hide"><a class="ibm-light ibm-forward-link" href="javascript:void(0)">Cuéntele a IBM lo que piensa</a></li>
+			<li class="js-feedbacklink"><a id="feedbackLink" class="ibm-light ibm-forward-link" href="javascript:void(0)">Cuéntele a IBM lo que piensa</a></li>
+			<script>
+				document.querySelector('.js-feedbacklink a').addEventListener('click', function(){
+					document.querySelector('.ibm-feedbacklink').click();
+					IBMCore.common.module.contactmodule.showContactModule(false);
+				});
+			</script>
+		</ul>
+	</div>
+	<h4 class="ibm-h4 ibm-regular">Soporte general de IBM</h4>
+	<ul class="ibm-live-assistance-list">
+		<li class="kc-noborder"><a class="ibm-light ibm-phone-link" href="javascript:void(0)"><span >1-800-IBM-7378</span> (USA)</a></li>
+		<li class="kc-noborder"><a class="ibm-light ibm-external-link" href="http://www.ibm.com/planetwide/" target="_blank">Directorio de contactos en todo el mundo</a></li>
+		<li><a class="ibm-light ibm-email-link" href="http://www.ibm.com/scripts/contact/contact/us/en" target="_blank">Envíe comentarios por correo electrónico al servicio de soporte de IBM</a></li>
+	</ul>
+</div>
+
+<script>setTimeout(function() {IBMCore.common.module.contactmodule.init();}, 0);</script>
+	</div>
+	<div class="js-dialog dialog"></div>
+	<!--“The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0: Hopscotch”-->
+	<script src="/support/knowledgecenter/js/content.build.js?v=20190311_0551"></script>
+</body>
+</html>

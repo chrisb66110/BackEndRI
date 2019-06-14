@@ -1,0 +1,1433 @@
+   <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'CR';
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ";";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+               <script>
+  var PREBID_TIMEOUT = 2000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651984"}},{"bidder":"criteo","params":{"zoneId":"1079595"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286629"}},{"bidder":"ix","params":{"siteId":"310891","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310891","size":[728,90]}},{"bidder":"ix","params":{"siteId":"310891","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651994"}},{"bidder":"criteo","params":{"zoneId":"1079591"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286630"}},{"bidder":"ix","params":{"siteId":"310893","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310893","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310893","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651988"}},{"bidder":"criteo","params":{"zoneId":"1079585"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286631"}},{"bidder":"ix","params":{"siteId":"310895","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310895","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310895","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652006"}},{"bidder":"criteo","params":{"zoneId":"1079593"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286632"}},{"bidder":"ix","params":{"siteId":"310897","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310897","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652160"}},{"bidder":"criteo","params":{"zoneId":"1079586"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286633"}},{"bidder":"ix","params":{"siteId":"310899","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310899","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652164"}},{"bidder":"criteo","params":{"zoneId":"1079584"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286634"}},{"bidder":"ix","params":{"siteId":"310901","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310901","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({ priceGranularity: 'dense' });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/XTK-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/XTK-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/XTK-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/XTK-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/XTK-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/XTK-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 apstag.setDisplayBids();
+         pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+   <script src="/js/prebid.js" async></script>
+            <title>Las redes neuronales: qué son y por qué están volviendo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="¿Qué es una red neuronal? Explicamos cómo funcionan, qué se puede hacer con ellas, por qué son tan importantes y por qué están volviendo a resurgir" />
+  <meta name="news_keywords" content="Inteligencia artificial, Redes neuronales, Robótica e IA"/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="41267802635" />
+<meta name="application-name" content="Xataka"/>
+<meta name="msapplication-tooltip" content="Gadgets y tecnología: últimas tecnologías en electrónica de consumo - XATAKA"/>
+<meta name="msapplication-starturl" content="https://www.xataka.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.xataka.com/lomejor;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-lomejor-icon.ico" />
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=https://www.xataka.com/respuestas;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-respuestas-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+xataka" />
+   <link rel="alternate" type="application/rss+xml" title="Xataka - todas las noticias" href="/index.xml" />
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/v6/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/87f99e/650_1000_network/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/87f99e/650_1000_network/840_560.jpg" />
+  <meta property="og:title" content="Las redes neuronales: qué son y por qué están volviendo" />
+  <meta property="og:description" content="¿Qué es una red neuronal? Explicamos cómo funcionan, qué se puede hacer con ellas, por qué son tan importantes y por qué están volviendo a resurgir" />
+  <meta property="og:url" content="https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2016-01-21T11:00:54+00:00" />
+  <meta name="DC.Creator" content="Guillermo Julián" />
+  <meta name="DC.Date" content="30 diciembre 2014" />
+  <meta name="DC.date.issued" content="2016-01-21T11:00:54+00:00" />
+  <meta name="DC.Source" content="Xataka" />
+  <meta property="article:modified_time" content="2016-01-21T11:00:54+00:00">
+  <meta property="article:published_time" content="2014-12-30T11:00:40+00:00">
+          <link rel="canonical" href="https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/87f99e/650_1000_network/1366_521.jpg"><meta name="twitter:site" content="@xataka"><meta name="twitter:title" content="Las redes neuronales: qué son y por qué están volviendo"><meta name="twitter:description" content="¿Qué es una red neuronal? Explicamos cómo funcionan, qué se puede hacer con ellas, por qué son tan importantes y por qué están volviendo a resurgir"><meta name="twitter:creator" content="@gjulianm">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/main.css?v=1554376308">
+  <link rel="amphtml" href="https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>var _sf_startpt=(new Date()).getTime()</script>
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/XTK-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+     googletag.defineSlot('/1018282/XTK-TXT-interior', [320,112], 'div-gpt-txt').addService(googletag.pubads());
+  googletag.defineOutOfPageSlot('/1018282/XTK-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/XTK-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["robotica-e-ia"];
+    var GPTtags = ["inteligencia-artificial", "redes-neuronales"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ 
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.xataka.com\/robotica-e-ia\/las-redes-neuronales-que-son-y-por-que-estan-volviendo",
+    "headline": "Las redes neuronales: qu\u00e9 son y por qu\u00e9 est\u00e1n volviendo",
+    "datePublished": "2014-12-30T11:00:40",
+    "dateModified": "2016-01-21T11:00:54",
+    "description": "\u00bfQu\u00e9 es una red neuronal? Explicamos c\u00f3mo funcionan, qu\u00e9 se puede hacer con ellas, por qu\u00e9 son tan importantes y por qu\u00e9 est\u00e1n volviendo a resurgir",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xataka",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/xataka\/p\/amp\/images\/logo.png?v=1554376308",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/87f99e\/650_1000_network\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Guillermo Juli\u00e1n"
+    },
+    "url": "https:\/\/www.xataka.com\/robotica-e-ia\/las-redes-neuronales-que-son-y-por-que-estan-volviendo",
+    "thumbnailUrl": "https:\/\/i.blogs.es\/87f99e\/650_1000_network\/1366_2000.jpg",
+    "articleSection": "Rob\u00f3tica e IA",
+    "creator": "Guillermo Juli\u00e1n",
+    "keywords": "Inteligencia artificial, Redes neuronales, Rob\u00f3tica e IA"
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-2", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "guillermo julián");
+ __gaTracker('set', 'contentGroup3', "robotica-e-ia");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "141230");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "guillermo julián");
+ __gaTracker('rollUp.set', 'contentGroup3', "robotica-e-ia");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "141230");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad head-container-with-corner m-favicons-compact m-head-masthead">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container">
+ <nav class="head-favicons">
+     <div class="head-favicons-index head-webedia-logo">
+    <a id="favicons-toggle" href="https://www.webedia.es/" data-target="#head-favicons"><abbr title="Webedia">Webedia</abbr></a>
+   </div>
+   </nav>
+</section>
+   <div class="masthead-site-lead ">
+ <div class="masthead-container">
+  <div class="masthead-logo">
+   <div class="masthead-logo-brand">
+    <a href="/" class="masthead-brand">Xataka</a>
+   </div>
+     </div>
+       <nav class="masthead-actions">
+    <ul class="masthead-actions-list">
+     <li class="masthead-actions-list-item"><a href="#sections" class="masthead-actions-menu m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+     <li class="masthead-actions-list-item"><a href="#headlines" class="masthead-actions-nuevo m-v1 js-toggle">Nuevo</a></li>
+    </ul>
+   </nav>
+   </div>
+</div>       <div class="masthead-nav-container js-nano-container">
+ <nav class="masthead-nav ">
+     <a href="#search" class="masthead-nav-search js-toggle" data-searchbox="#search-field-2"></a>
+   <ul class="masthead-nav-topics">
+      <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/analisis">Análisis</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/seleccion">Xataka Selección</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/moviles">Móviles</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/inteligencia-artificial">Inteligencia Artificial</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/medicina-y-salud">Ciencia</a></li>
+   </ul>
+   <ul class="masthead-nav-social">
+    <li class="masthead-nav-social-item"><a href="https://flipboard.com/@xataka" class="masthead-nav-social-anchor masthead-social-flipboard" rel="nofollow">Flipboard</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://instagram.com/xataka" class="masthead-nav-social-anchor masthead-social-instagram" rel="nofollow">Instagram</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="masthead-nav-social-anchor masthead-social-youtube" rel="nofollow">Youtube</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://twitter.com/xataka" class="masthead-nav-social-anchor masthead-social-twitter" rel="nofollow">Twitter</a></li>
+
+ </ul>
+ </nav>
+</div>
+  </div>
+</section>
+ 
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-normal  ">
+                               <div class="article-header article-normal-header">
+  <header>
+   <h1><span>Las redes neuronales: qué son y por qué están volviendo</span></h1>
+  </header>
+ </div>
+           <div class="article-content-wrapper">
+            <div class="article-content-inner">
+             <div class="article-header article-normal-header">
+ <header>
+  <div class="article-normal-header-content">
+       <div class="article-asset-big article-asset-image js-post-images-container">
+     <img alt="Las redes neuronales: qué son y por qué están volviendo" srcset="https://i.blogs.es/87f99e/650_1000_network/450_1000.jpg 450w, https://i.blogs.es/87f99e/650_1000_network/650_1200.jpg 650w, https://i.blogs.es/87f99e/650_1000_network/1024_2000.jpg 1024w, https://i.blogs.es/87f99e/650_1000_network/1366_2000.jpg 1366w" src="https://i.blogs.es/87f99e/650_1000_network/450_1000.jpg" sizes="100vw"><span></span>
+    </div>
+          <div class="article-actions">
+               <div class="article-comments"><a title="8 Comentarios" href="#comments" class="js-smooth-scroll">8 Comentarios</a></div>
+    </div>
+     </div>
+ </header>
+              <div class="article-aside m-normal-first-aside">
+  <div class="article-aside-content">
+               <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Xataka</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                   <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                    <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                   <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+           </ul>
+    </nav>
+     </div>
+ </div>
+               <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+          <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+
+             <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+         </div>
+ </div>
+</div>
+                        <div class="article-metadata-container">
+            <div class="article-metadata">
+                          <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2014-12-30T11:00:40+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1453374054"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/guillermo-julian" rel="author"><img alt="guillermo-julian" src="//www.gravatar.com/avatar/8785b166a0b006b9368bb29961a73123?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/guillermo-julian" rel="author">Guillermo Julián</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/gjulianm">@gjulianm</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Últimamente las <strong>redes neuronales</strong> están volviendo a la actualidad por los logros que están consiguiendo. Por ejemplo, Google ha logrado <a href="https://www.genbeta.com/web/un-captcha-sin-captcha-google-ya-sabe-cuando-no-eres-un-robot">derrotar a su propio reCAPTCHA con redes neuronales</a>, en Stanford han conseguido generar pies de fotos automáticamente... Metas bastante impresionantes y que cada vez se acercan más a esa idea original de <strong>reproducir el funcionamiento del cerebro humano en un ordenador</strong>.</p>
+
+<p>Ahora bien, ¿en qué consisten estos modelos? <strong>¿Cómo puede imitar un ordenador el proceso de aprendizaje</strong> y acabar desarrollando una "cosa" que funciona? Hoy en Xataka vamos a profundizar un poco en este tema que tanta atención está logrando, y vamos a empezar, como siempre, por el principio.<!--more--></p>
+
+<h2>¿Cómo funciona una red neuronal?</h2>
+
+<p>A pesar de su nombre, las redes neuronales no tienen un concepto demasiado complicado detrás de ellas. El nombre, como podéis imaginar, viene de la idea de <strong>imitar el funcionamiento de las redes neuronales de los organismos vivos:</strong> un conjunto de neuronas conectadas entre sí y que trabajan en conjunto, sin que haya una tarea concreta para cada una. Con la experiencia, las neuronas van creando y reforzando ciertas conexiones para "aprender" algo que se queda fijo en el tejido.</p>
+
+<p>Ahora bien, por bonito que suene esto, el enfoque biológico no ha sido especialmente útil: las redes neuronales han ido moviéndose para tener un foco en matemáticas y estadística. Se basan en una idea sencilla: dados unos parámetros hay una forma de combinarlos para predecir un cierto resultado. Por ejemplo, sabiendo los píxeles de una imagen habrá una forma de saber qué número hay escrito, o conociendo la carga de servidores de un Centro de Procesamiento de Datos (CPD), su temperatura y demás existirá una manera de saber <a href="https://www.genbeta.com/actualidad/como-usa-google-redes-neuronales-para-ahorrar-electricidad">cuánto van a consumir, como hacía Google</a>. El problema, claro está, es que <strong>no sabemos cómo combinarlos</strong>. </p>
+
+<div class="article-asset-summary article-asset-small"><div class="asset-content"><p class="sumario_derecha">Las redes neuronales permiten buscar la combinación de parámetros que mejor se ajusta a un determinado problema.</p></div></div>
+
+<p>Las redes neuronales son un modelo para encontrar esa combinación de parámetros y aplicarla al mismo tiempo. En el lenguaje propio, encontrar la combinación que mejor se ajusta es "entrenar" la red neuronal. Una red ya entrenada se puede usar luego para hacer predicciones o clasificaciones, es decir, para "aplicar" la combinación.</p>
+
+<p>Para entender bien cómo funciona esta red vamos a ir con un ejemplo. Supongamos que sois alumnos de una clase en la que el profesor no ha dicho exactamente cómo va a poner las notas. Para empezar, supongamos que sólo habéis hecho dos exámenes y tenéis la nota de cada uno de ellos y la final. </p>
+
+<div class="caption-img"> <div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/a0eae9/perceptron/450_1000.png 450w, https://i.blogs.es/a0eae9/perceptron/650_1200.png 681w, https://i.blogs.es/a0eae9/perceptron/1024_2000.png 1024w, https://i.blogs.es/a0eae9/perceptron/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/a0eae9/perceptron/450_1000.png" alt="Perceptron"><noscript><img alt="Perceptron" src="https://i.blogs.es/a0eae9/perceptron/450_1000.png"></noscript> </div></div> <span>La unidad básica de la red neuronal: el perceptrón. Las entradas son las dos notas, n<sub>1</sub> y n<sub>2</sub>, cada una con su correspondiente peso w<sub>n</sub> (lo que hay que encontrar). La salida, n<sub>f</sub>, será 1 si está aprobado y 0 si se va a septiembre.</span> </div>
+
+<p>¿Cómo usamos una red neuronal para saber cuánto vale cada examen? Aquí nos bastará con la unidad fundamental de la red neuronal: el <strong>perceptrón</strong>. Un perceptrón es un elemento que tiene varias entradas con un cierto peso cada una. Si la suma de esas entradas por cada peso es mayor que un determinado número, la salida del perceptrón es un uno. Si es menor, la salida es un cero.</p>
+
+<p>En nuestro ejemplo, las entradas serían las dos notas de los exámenes. Si la salida es uno (esto es, la suma de las notas por su peso correspondiente es mayor que cinco), es un aprobado. Si es cero, suspenso. Los pesos son lo que tenemos que encontrar con el entrenamiento. En este caso, nuestro entrenamiento consistirá en empezar con dos pesos aleatorios (por ejemplo, 0.5 y 0.5, el mismo peso a cada examen) y ver qué resultado da la red neuronal para cada alumno. Si falla en algún caso, iremos ajustando los pesos poco a poco hasta que esté todo bien ajustado. </p>
+
+<p>Por ejemplo, si un alumno con muy buena nota en el segundo examen ha suspendido el curso, bajaremos el peso del segundo examen porque claramente no influye demasiado. Poco a poco acaberemos encontrando los pesos que se ajusten a las notas que puso el profesor. La idea del ajuste o retroalimentación es ir <strong>adaptando la red a la información "oculta" que tienen los datos</strong> que le pasamos para que aprenda.</p>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/01b829/650_1000_annlayer1/450_1000.png 450w, https://i.blogs.es/01b829/650_1000_annlayer1/650_1200.png 681w, https://i.blogs.es/01b829/650_1000_annlayer1/1024_2000.png 1024w, https://i.blogs.es/01b829/650_1000_annlayer1/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/01b829/650_1000_annlayer1/450_1000.png" alt="Annlayer1"><noscript><img alt="Annlayer1" src="https://i.blogs.es/01b829/650_1000_annlayer1/450_1000.png"></noscript> </div></div>
+
+<p>Como decía antes, esto es el ejemplo simple. Quizás queramos complicarlo más, poniendo más exámenes  (más nodos de entrada) o queriendo sacar más resultados, como pueda ser un perceptrón cuya salida sea uno si el alumno tiene matrícula de honor. </p>
+
+<h3>Multiplicando la potencia: redes multicapa</h3>
+
+<p>El ejemplo que he puesto antes funciona pero no se puede decir que sea demasiado potente. Pero quizás es que es demasiado simple. ¿No decíamos al principio que las redes neuronales eran un grupo de neuronas <em>conectadas entre sí</em>? ¿Cómo se logra esa "conexión" en las redes neuronales?</p>
+
+<p>El concepto que nos falta aquí es el de las <strong>capas</strong>. Y para explicarlo vamos a seguir con nuestro ejemplo del profesor que pone notas sin decir cómo, añadiendo un trabajo que había que entregar.</p>
+
+<p>Resulta que se da una situación curiosa. Hay dos alumnos que tienen la misma nota en los exámenes, dos dieces, pero uno tiene un 7 en el trabajo y otro un 4. El del 7 ha aprobado el curso, pero el del 4 no. Hay un alumno que tiene un 10 en el trabajo y 4.99 en los dos exámenes y que está suspenso. </p>
+
+<p>Podemos intentar entrenar una red neuronal como la de antes todo lo que queramos en esta situación que no va a funcionar bien. Es posible que funcione en muchos casos, pero no va a ser perfecta. Y es que parece que la nota del trabajo no influye salvo que lo suspendas, en cuyo caso estás suspenso directamente. Es un filtro, un uno o un cero que tenemos que sacar en la red neuronal antes de poder dar el resultado de aprobado o suspendido en el curso... Ya deberíais ver por dónde van los tiros.</p>
+
+<p>Efectivamente: <strong>necesitamos más capas</strong>. Necesitamos un perceptrón intermedio que nos diga si el trabajo está aprobado o no, y contar eso en el perceptrón de salida. Una posiblidad sería una red como la siguiente:</p>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/65ec01/650_1000_annlayer2/450_1000.png 450w, https://i.blogs.es/65ec01/650_1000_annlayer2/650_1200.png 681w, https://i.blogs.es/65ec01/650_1000_annlayer2/1024_2000.png 1024w, https://i.blogs.es/65ec01/650_1000_annlayer2/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/65ec01/650_1000_annlayer2/450_1000.png" alt="Annlayer2"><noscript><img alt="Annlayer2" src="https://i.blogs.es/65ec01/650_1000_annlayer2/450_1000.png"></noscript> </div></div>
+
+<p>El primer perceptrón mira si la nota del trabajo multiplicada por menos uno es mayor que menos cinco (o, lo que es lo mismo, si la nota es menor que cinco). Si lo es, entonces su salida es uno. Al multiplicarla por menos diez en la entrada del segundo perceptrón, forzará siempre un suspenso. Si el trabajo está aprobado, la salida del primer perceptrón será 0 y no afectará a la media de los exámenes.</p>
+
+<p>¿Qué hemos logrado con esto? O, más generalmente, ¿para qué nos sirven las capas? Lo que hemos logrado ha sido <strong>añadir información que no estaba antes</strong>. Cogemos los datos de entrada, los exploramos y sacamos las características que mejor nos ayuden a entender qué está pasando. </p>
+
+<p>Lo más interesante de las capas es algo que aquí no hemos visto. En el ejemplo he puesto otra capa muy burdamente, pero lo que se suele hacer es poner varias con varios nodos, cada uno conectado a todas las entradas anteriores. Lo bueno viene cuando, durante el proceso de aprendizaje, cada capa <strong>"aprende" a encontrar y detectar las características que mejor ayudan a clasificar los datos</strong>. En nuestro ejemplo, durante el ajuste la primera capa aprendería que los alumnos con el trabajo suspenso suspenden el curso. Si cogiésemos una red para detectar números escritos a mano, puede que las capas ocultas aprendiesen a detectar trazos rectos o curvados que sirvan para decidir si estamos ante un uno o un ocho, por ejemplo.</p>
+
+<h3>Más allá de perceptrones: sigmoides, redes profundas y redes convolucionales</h3>
+
+<div class="caption-img"> <div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/38022d/650_1000_sigmoid/450_1000.png 450w, https://i.blogs.es/38022d/650_1000_sigmoid/650_1200.png 681w, https://i.blogs.es/38022d/650_1000_sigmoid/1024_2000.png 1024w, https://i.blogs.es/38022d/650_1000_sigmoid/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/38022d/650_1000_sigmoid/450_1000.png" alt="Sigmoid"><noscript><img alt="Sigmoid" src="https://i.blogs.es/38022d/650_1000_sigmoid/450_1000.png"></noscript> </div></div> <span>En rojo, la función "escalón". En azul, la sigmoide, una aproximación más suave pero con la misma idea.</span> </div>
+
+<p>Como siempre, hasta ahora nos hemos centrado en <strong>simplificaciones</strong> para entender bien los conceptos de redes neuronales. En la realidad, las cosas se complican bastante. Por ejemplo, se dejan de usar perceptrones para usar otras "neuronas" con un comportamiento más suave, usando funciones como la <strong>sigmoide</strong>. La idea es que pequeños cambios en los pesos provoquen pequeños cambios en la salida de la red, para así poder hacer más "fácil" el aprendizaje.</p>
+
+<p>Las capas también se complican. Nos podemos encontrar <strong>varias capas intermedias</strong> con varias neuronas cada una, llegando a lo que llaman "redes neuronales profundas". La idea es que con más capas con más neuronas cada una se pueden mejorar las predicciones en conjuntos de datos más complicados. <a href="http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/">Este artículo</a>, por ejemplo, explica desde un punto de vista visual y matemático cómo afectan las multiples capas y unidades al funcionamiento de la red neuronal.</p>
+
+<p>El siguiente paso son <strong>redes convolucionales</strong>, que están funcionando muy bien en reconocimiento de voz y procesamiento de imágenes. En una red neuronal como las que hemos visto antes, pondríamos una neurona para cada píxel de una imagen y después pondríamos varias capas con varias neuronas, todas conectadas entre sí, para tratar de encontrar un número en una foto, por ejemplo. El problema es que no es demasiado efectivo (imaginaos todos los pesos que habría computar para una red que acepte imágenes de 1920x1080 píxeles).</p>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/571a56/convolutionalnetwork/450_1000.png 450w, https://i.blogs.es/571a56/convolutionalnetwork/650_1200.png 681w, https://i.blogs.es/571a56/convolutionalnetwork/1024_2000.png 1024w, https://i.blogs.es/571a56/convolutionalnetwork/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/571a56/convolutionalnetwork/450_1000.png" alt="Convolutionalnetwork"><noscript><img alt="Convolutionalnetwork" src="https://i.blogs.es/571a56/convolutionalnetwork/450_1000.png"></noscript> </div></div>
+
+<p>La idea de las redes convolucionales es tratar de <strong>buscar características locales</strong> en pequeños grupos de entradas (en el caso de las imágenes, de píxeles), como puedan ser bordes o colores más o menos homogéneos. Es la misma idea que comentábamos cuando introducíamos las capas unos párrafos más arriba, pero con una variación: buscamos características no en toda la imagen sino sólo en pequeñas regiones. Además, buscamos siempre detectar la misma característica en todos los grupos, por lo que podemos repetir esa estructura y reducir los ajustes que tenemos que hacer.</p>
+
+<p>Para llevar a cabo esta idea, ponemos un mismo grupo de neuronas por cada grupo de entradas (por ejemplo, un cuadrado de 3x3 píxeles en una imagen o una secuencia de 4 mediciones en un archivo de sonido). La idea es que todos los elementos que metamos en la capa (llamada capa de convolución) tienen los mismos pesos por cada entrada, y se reduce considerablemente el número de parámetros. Si metemos más capas, la red neuronal podrá <strong>descubrir más y más complejas características de la imagen</strong>: se puede empezar por colores o bordes orientados y acabar con capas que se activan con formas circulares o cuadradas, por poner un ejemplo.  </p>
+
+<p>Después de las capas de convolución se suele poner otra red neuronal "tradicional", que ahora tendrá más fácil el trabajo: no tiene que valorar cada píxel por separado sino que mira a un conjunto de características de alto nivel de la imagen. Ya no se trata de decidir si la imagen es un coche sabiendo que el píxel 1208 es amarillo y el 1209 es verde, sino quizás sabiendo que hay una forma rectangular en la imagen con dos formas circulares en la parte inferior. De nuevo, se trata de <strong>extraer la información "oculta" en la entrada</strong> para tratar de encontrar qué es lo que define esos datos.</p>
+
+<h2>¿Una nueva época dorada para redes neuronales?</h2>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/90b90e/650_1000_neural/450_1000.jpg 450w, https://i.blogs.es/90b90e/650_1000_neural/650_1200.jpg 681w, https://i.blogs.es/90b90e/650_1000_neural/1024_2000.jpg 1024w, https://i.blogs.es/90b90e/650_1000_neural/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/90b90e/650_1000_neural/450_1000.jpg" alt="Neural"><noscript><img alt="Neural" src="https://i.blogs.es/90b90e/650_1000_neural/450_1000.jpg"></noscript> </div></div>
+
+<p>Las redes neuronales no son una idea nueva. Datan de los años 40 y 50, cuando se empezaron a publicar los primeros conceptos. Sin embargo, nunca tuvieron un gran éxito, más que nada porque <strong>se necesita una cantidad importante de recursos de un ordenador</strong> para entrenar y ejecutar una red neuronal con buenos resultados.</p>
+
+<p>En los últimos años se han conseguido grandes avances gracias a la mejora de los ordenadores y al uso de <strong>GPUs</strong> para este tipo de computaciones. Hace poco os hablábamos en Xataka de los <a href="https://www.xataka.com/aplicaciones-y-servicios/el-proximo-pie-de-foto-que-encuentres-puede-que-lo-haya-escrito-un-ordenador">pies de foto generados por ordenador</a> gracias a una red neuronal de convolución (para el reconocimiento de imagen) junto con una red neuronal recurrente para formar las frases. <a href="http://cs.stanford.edu/people/karpathy/deepimagesent/">Los investigadores de Stanford</a> usaron tarjetas GPU para poder entrenar y ejecutar este tipo de redes neuronales en un tiempo razonable. </p>
+
+<div class="article-asset-summary article-asset-small"><div class="asset-content"><p class="sumario_izquierda">Reconocimiento de números, de voz, de objetos en imágenes... las redes neuronales están empezando a resolver problemas que se le escapaban a los ordenadores.</p></div></div>
+
+<p>Algo parecido <a href="http://gizmodo.com/google-built-an-insane-neural-network-to-id-house-numbe-1499897368">montó Google con Street View</a>: una <strong>red neuronal convolucional</strong> que lograba una <a href="http://arxiv.org/abs/1312.6082">precisión del 96% a la hora de reconocer números de calle</a> en las imágenes que toman sus coches. Los de Mountain View están bastante enamorados de las redes neuronales, de hecho: también las usaron <a href="https://www.xatakandroid.com/aplicaciones-android/android-mejora-gracias-al-estudio-de-redes-neuronales">para mejorar el reconocimiento de voz de Android</a> o para <a href="https://www.genbeta.com/actualidad/como-usa-google-redes-neuronales-para-ahorrar-electricidad">ahorrar electricidad en sus centros de datos</a>. </p>
+
+<p>Las redes neuronales parece que incluso podrían acabar <a href="http://www.technologyreview.com/view/533496/why-neural-networks-look-set-to-thrash-the-best-human-go-players-for-the-first-time/">dominando uno de los juegos que se les resiste a los ordenadores</a>: el <a href="http://es.wikipedia.org/wiki/Go">juego de Go</a>. En la Universidad de Edimburgo, unos investigadores han logrado usar redes convolucionales para detectar patrones en los tableros y tratar de sacar el mejor movimiento con una efectividad considerable: 90% de juegos ganados contra GNU Go y 10% contra Fuego, dos de los programas que mejor juegan a Go. Aunque pueda parecer poco, hay que tener en cuenta que ambos exploran un buen número de movimientos posibles para ver cuál da más ventaja. La red neuronal sólo mira al estado actual del tablero y emite un veredicto en muchísimo menos tiempo. </p>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/99d87b/650_1000_overfitting-1/450_1000.png 450w, https://i.blogs.es/99d87b/650_1000_overfitting-1/650_1200.png 681w, https://i.blogs.es/99d87b/650_1000_overfitting-1/1024_2000.png 1024w, https://i.blogs.es/99d87b/650_1000_overfitting-1/1366_2000.png 1366w" data-sf-src="https://i.blogs.es/99d87b/650_1000_overfitting-1/450_1000.png" alt="Overfitting 1"><noscript><img alt="Overfitting 1" src="https://i.blogs.es/99d87b/650_1000_overfitting-1/450_1000.png"></noscript> </div></div>
+
+<p>Por supuesto, estas redes <strong>tampoco son la panacea</strong>. A modo de curiosidad, unos investigadores usaron una red neuronal para <a href="http://www.technologyreview.com/news/533596/smart-software-can-be-tricked-into-seeing-what-isnt-there/">generar imágenes que engañaban a otra red neuronal diseñada para reconocer objetos</a>. Así, lo que a nosotros nos parece una imagen aleatoria, para la red neuronal es un bikini o un armadillo. Es parte del problema del sobreajuste: redes que se comportan muy bien para los datos de ejemplo o parecidos, pero que con datos muy distintos dan resultados absurdos. </p>
+
+<p>Sea como sea, es un campo muy interesante y que promete <strong>bastantes avances a corto plazo</strong> sobre todo en reconocimiento de imagen y de sonido. Estaremos atentos para ver qué sorpresas nos deparan.</p>
+
+<p>Imagen | <a href="https://www.flickr.com/photos/centralasian/3988758442/in/photolist-5XhZ1u-7HiWfp-bF9Vjx-cNwVsA-493vbK-4pwthA-6rNawe-aoYNcG-8BZCvh-5Weiy6-52q8RU-etBG8-9hMa2d-auYnbr-75tqVh-869jFp-fnJhzc-96dszx-9thJVu-8JS2ym-67ez7a-99Wjs1-9hM9XQ-68fJ74-7sdJw-x9m1S-6EryDL-9hJ4e4-dnWiv6-6UVCQJ-dB91Ut-dYXAkz-7SGo1D-aFhJjH-btejyK-dYAUZJ-byVYjK-bUC9L5-bxTMss-dRCJAZ-8AJVg-d4Rx7-8W35Xo-bnAxuz-bVAR8A-aFqe3V-e3CMyY-aWjPnz-bUpUKn-6L3BZn/">NetWork</a></p>
+                                        </div>
+                                                                                                                <section class="section-instagram-container">
+  <div class="section-instagram">
+   <header>
+    <p class="section-header-instagram">
+     <a href="https://www.instagram.com/xataka/">
+      Xataka en Instagram
+     </a>
+    </p>
+   </header>
+   <ul class="section-instagram-list">
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bv1Rp4KF0Nv/" data-link="https://www.instagram.com/p/Bv1Rp4KF0Nv/" data-number="1"><img src="https://scontent.cdninstagram.com/vp/e395d7c6b8ebe3121cb903c0963a5c65/5CA8DAAC/t51.2885-15/e35/s150x150/56547455_1019758161548005_4832225408629340198_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="La gravedad en la Luna 🌕 es exactamente de 1,62 m/s² (mientras que en la Tierra es 9,8 m/s²), lo cual quiere decir que caminar y desplazarse no es nada fácil. 👨🚀Los astronautas se entrenan"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bvz6HTBFCTD/" data-link="https://www.instagram.com/p/Bvz6HTBFCTD/" data-number="2"><img src="https://scontent.cdninstagram.com/vp/9c6799408e273b89b1b7d2e28b0ba0a2/5D4C8596/t51.2885-15/e35/c74.0.931.931/s150x150/56161766_134273174372026_1536667652215543897_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Hace 46 años, Martin Cooper realizó la primera llamada desde un teléfono móvil usando un DynaTAC de Motorola. 📞 •
+•
+•
+•
+•
+#smartphone #mobile #phone #motorola #history #tech #technolo"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BvzwLqpF3cX/" data-link="https://www.instagram.com/p/BvzwLqpF3cX/" data-number="3"><img src="https://scontent.cdninstagram.com/vp/ec86b9772630e5042a56ce1584d16a7e/5D3ACD91/t51.2885-15/e35/c180.0.720.720/s150x150/56544824_162863611379293_6797171165516909301_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya está disponible la beta 2 de Android Q, la nueva versión del operativo móvil de Google. 😱
+•
+📸: @daniespla •
+👨🏻‍💻Más info en el link de nuestra bio👩🏻‍💻
+•
+•
+�"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BvzqE18F-oz/" data-link="https://www.instagram.com/p/BvzqE18F-oz/" data-number="4"><img src="https://scontent.cdninstagram.com/vp/7a554169818cc7f29b9ffaea17cd6633/5D429517/t51.2885-15/e35/s150x150/55855659_307089403318341_219179060867766207_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya están aquí los nuevos auriculares inalámbricos de Apple: los Beats Powerbeats Pro, los cuales cuentan con mucha de la tecnología que tenemos en los AirPods, sólo que ahora están pensados en e"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/Bvxh6j9F6uB/" data-link="https://www.instagram.com/p/Bvxh6j9F6uB/" data-number="5"><img src="https://scontent.cdninstagram.com/vp/3228b4d0d6fc7eab9f27ad2cef1f406a/5D3EB713/t51.2885-15/e35/s150x150/54514056_2345869178796814_1672574316266486448_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Los chicos de #lestgodigital vuelven a la carga tras encontrar una patente de Lenovo, la cual muestra un dispositivo plegable que apostaría por un formato de barra 21:9, el cual doblaría la parte ba"></a>
+     </li>
+       </ul>
+   <div class="section-instagram-nav-container">
+    <p class="section-instagram-follow">
+     <a class="btn-instagram-follow" href="https://www.instagram.com/xataka/">Seguir</a>
+    </p>
+   </div>
+  </div>
+ </section>
+
+                        <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">Las redes neuronales: qué son y por qué están volviendo</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/150529%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Las%20redes%20neuronales%3A%20qu%C3%A9%20son%20y%20por%20qu%C3%A9%20est%C3%A1n%20volviendo&via=xataka" class="btn-twitter js-btn-twitter" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">Twitter</a></li>
+ <li><a href="mailto:?subject=Las%20redes%20neuronales%3A%20qu%C3%A9%20son%20y%20por%20qu%C3%A9%20est%C3%A1n%20volviendo&body=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/robotica-e-ia">Robótica e IA</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/inteligencia-artificial">Inteligencia artificial</a></li>
+     <li><a class="article-topic-link" href="/tag/redes-neuronales">Redes neuronales</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-normal">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/150529%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Las%20redes%20neuronales%3A%20qu%C3%A9%20son%20y%20por%20qu%C3%A9%20est%C3%A1n%20volviendo&via=xataka" class="btn-twitter js-btn-twitter" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">Twitter</a></li>
+ <li><a href="mailto:?subject=Las%20redes%20neuronales%3A%20qu%C3%A9%20son%20y%20por%20qu%C3%A9%20est%C3%A1n%20volviendo&body=https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="las-redes-neuronales-que-son-y-por-que-estan-volviendo">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div class="comment-wrapper">
+    <div class="alert-message">Comentarios cerrados</div>
+   </div>
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">8 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"833800","post_id":"150529","date":1419947610,"content_filtered":"<p>Muy buen art\u00edculo! Y con un mont\u00f3n de informaci\u00f3n :)<\/p><p>Adem\u00e1s de por la capacidad de proceso actual, las redes neuronales est\u00e1n siendo muy efectivas por la cantidad de datos de entrenamiento que existen hoy en d\u00eda.<br \/>\nPor eso las usan tanto empresas como Google, Amazon o Facebook que tienen much\u00edsimos datos de los que aprender<\/p>","content":"Muy buen art\u00edculo! Y con un mont\u00f3n de informaci\u00f3n :)\n\nAdem\u00e1s de por la capacidad de proceso actual, las redes neuronales est\u00e1n siendo muy efectivas por la cantidad de datos de entrenamiento que existen hoy en d\u00eda.\nPor eso las usan tanto empresas como Google, Amazon o Facebook que tienen much\u00edsimos datos de los que aprender","karma":"68.00","parent":"0","comment_edited_date":"","vote_count":"3","comment_level":2,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"39062","author":"","webpage":"","user_name":"josealb","karma_level":"22.00","iseditor":"0","global_id":"85319","facebook_uid":null,"user_status":"active","index":2,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/5707596a1bea9d999b2a0c7dde9274e4","abuse_users":[]},{"id":"833786","post_id":"150529","date":1419943694,"content_filtered":"<p>Excelente art\u00edculo, se agradece ver de vez en cuando informaci\u00f3n m\u00e1s t\u00e9cnica y menos de \"telediario\".<\/p>","content":"Excelente art\u00edculo, se agradece ver de vez en cuando informaci\u00f3n m\u00e1s t\u00e9cnica y menos de \"telediario\".","karma":"65.00","parent":"0","comment_edited_date":"","vote_count":"3","comment_level":2,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"177281","author":"","webpage":"","user_name":"rubenmartinez3","karma_level":"22.00","iseditor":"0","global_id":"1053516","facebook_uid":"973073529418190","user_status":"active","index":1,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/973073529418190\/picture","abuse_users":[]},{"id":"833826","post_id":"150529","date":1419954957,"content_filtered":"<p>Grandioso articulo, de lo mejor que he leido en Xataka<\/p>","content":"Grandioso articulo, de lo mejor que he leido en Xataka","karma":"33.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"95729","author":"","webpage":"","user_name":"slevin23","karma_level":"25.00","iseditor":"0","global_id":"377630","facebook_uid":null,"user_status":"active","index":3,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/377630_1.png","abuse_users":[]},{"id":"833828","post_id":"150529","date":1419955127,"content_filtered":"<p>Muchos avances se han logrado observando la naturaleza<\/p>","content":"Muchos avances se han logrado observando la naturaleza","karma":"10.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"128134","author":"","webpage":"","user_name":"wtfomgrofl","karma_level":"30.00","iseditor":"0","global_id":"608679","facebook_uid":null,"user_status":"active","index":4,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/608679_2.png","abuse_users":[]},{"id":"833894","post_id":"150529","date":1419973694,"content_filtered":"<p>Esto lo recuerdo de la uni, no me desarrolle en este campo pero sin duda era y es interesante como esta tomando relevancia nuevamente. Parte de esto es gracias a los procesadores multinucleo que ahora tenemos y a precios que dan riza comparado con lo que se tenia antes. Esto y que ahora tambien si se quiere se programa para usar la GPU que es mas r\u00e1pida para calculos matem\u00e1ticos bueno, cosas buenas van a pasar :D<\/p>","content":"Esto lo recuerdo de la uni, no me desarrolle en este campo pero sin duda era y es interesante como esta tomando relevancia nuevamente. Parte de esto es gracias a los procesadores multinucleo que ahora tenemos y a precios que dan riza comparado con lo que se tenia antes. Esto y que ahora tambien si se quiere se programa para usar la GPU que es mas r\u00e1pida para calculos matem\u00e1ticos bueno, cosas buenas van a pasar :D","karma":"10.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"31729","author":"Puranio23","webpage":"","user_name":"uranio23","karma_level":"22.00","iseditor":"0","global_id":"47596","facebook_uid":"1983516385243653","user_status":"active","index":5,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/1983516385243653\/picture","abuse_users":[]},{"id":"833903","post_id":"150529","date":1419977758,"content_filtered":"<p>eso podria explicar, porque algunos maestros redondean un 5.7 a 5, y te mandan a extraordinario<\/p>","content":"eso podria explicar, porque algunos maestros redondean un 5.7 a 5, y te mandan a extraordinario","karma":"8.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"140544","author":"","webpage":"","user_name":"hibiff","karma_level":"22.00","iseditor":"0","global_id":"846295","facebook_uid":null,"user_status":"active","index":6,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/cb229797cdd1aa096d5b85c6cdcffc52","abuse_users":[]},{"id":"833948","post_id":"150529","date":1419996202,"content_filtered":"<p>Gran articulo, la verdad me gusto mucho!.<\/p><p>Hab\u00eda escuchado este tema, pero siempre lo ve\u00eda aplicado a las ciencias computacionales o ingenier\u00edas de tipo electr\u00f3nicas (no quiere decir que se aplique a mas cosas como explican en el articulo en algunos ejemplos). Mi percepci\u00f3n de esto cambio hace unos meses cuando fui a unas conferencias, donde se explicaban la aplicaci\u00f3n de redes neuronales a sistemas de distribuci\u00f3n de agua potable y sistemas de alcantarillado (que es mi profesi\u00f3n), la verdad quede encantado y jamas imagine que temas como este se aplicaran a mi profesi\u00f3n para en un futuro tener mejores redes de agua potable y alcantarillado. Y ahora que veo esto en Xataka, me entra mas la curiosidad de seguir viendo esto. Muy buen articulo una vez mas, los felicito!<\/p><p>Saludos<\/p>","content":"Gran articulo, la verdad me gusto mucho!.\n\nHab\u00eda escuchado este tema, pero siempre lo ve\u00eda aplicado a las ciencias computacionales o ingenier\u00edas de tipo electr\u00f3nicas (no quiere decir que se aplique a mas cosas como explican en el articulo en algunos ejemplos). Mi percepci\u00f3n de esto cambio hace unos meses cuando fui a unas conferencias, donde se explicaban la aplicaci\u00f3n de redes neuronales a sistemas de distribuci\u00f3n de agua potable y sistemas de alcantarillado (que es mi profesi\u00f3n), la verdad quede encantado y jamas imagine que temas como este se aplicaran a mi profesi\u00f3n para en un futuro tener mejores redes de agua potable y alcantarillado. Y ahora que veo esto en Xataka, me entra mas la curiosidad de seguir viendo esto. Muy buen articulo una vez mas, los felicito!\n\nSaludos","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"158493","author":"","webpage":"","user_name":"fezau","karma_level":"22.00","iseditor":"0","global_id":"79713","facebook_uid":null,"user_status":"active","index":7,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/adc2d4c6901e661f11522e9b93e0b28c","abuse_users":[]},{"id":"835489","post_id":"150529","date":1420517516,"content_filtered":"<p>b\u00e1sico, did\u00e1ctico y sutilmente t\u00e9cnico... Me encanta!! as\u00ed deber\u00edan de ser muchos de los art\u00edculos. <\/p><p>un par de ideas para quien quiera ampliar sus conocimientos generales..:<\/p><p>porque hacer procesamiento con GPU pudiendo hacer procesamiento paralelo utilizando distintos hardware como entradas? .una de las aplicaciones de los captha, ademas de putear, es utilizar las entradas humanas de numeros reales de, por ejemplo, las casas y usarlos para entrenar las redes neuronales para que lean y posicionen los numeros de las fotos que hacen, por ejemplo, los coches de Google Street ).<\/p><p>Otra peque\u00f1a gota de conocimiento: hay algoritmos matem\u00e1ticos que permiten reducir muchiisimo los tiempos de entrenamiento ya que no recalculan todo desde cero sino que hacen una actualizaci\u00f3n de la red usando solo los nuevos datos y la \u00faltima red entrenada (esto es ampliamente usado en algortimos de control y automatizaci\u00f3n, uno de los grandes campos de aplicaci\u00f3n de las redes neuronales). la aplicaci\u00f3n de estos algoritmos junto con la potencia de c\u00e1lculo de los ordenadores actuales hace que se puedan hacer muchas investigaciones en esta l\u00ednea. <\/p><p>enlazando con lo anterior, \u00bfque pasar\u00eda si no ponemos tooodas las interconexiones posibles entre las \"neuronas\" sino que solo ponemos las necesarias para permitir emular bastante bien alguna forma de estructurar los razonamientos humanos? nos encontramos con el \"control inteligente\/ fuzzy control \/ control borroso\", que es una estructura especifica de red neuronal que se comporta de aquella manera. En las ultimas dos d\u00e9cadas est\u00e1 bastante en auge por poder a\u00f1adir conocimiento t\u00e9cnico especializado en los sistemas automatizados.<\/p><p>aqui va otra aplicacion real que actualmente esta en desarrollo, enlazando directamente con lo de reconocimiento de imagenes: imaginaros un control de calidad que se hace mediante la inspecci\u00f3n de una fotograf\u00eda hecha por un operario de, por ejemplo, el montaje de unas tuber\u00edas. se puede entrenar una red neuronal si tenemos un gran historico de fotograf\u00edas de montajes correctos y no correctos de manera que la red neuronal se puede encargar de realizar ese control de calidad de forma realmente r\u00e1pida. <\/p><p>para otro dia algortimos gen\u00e9ticos y evolutivos que, por ejemplo, permiten la autoreparacion fisica de sistemas electr\u00f3nicos en FPGAs.<\/p>","content":"b\u00e1sico,  did\u00e1ctico y sutilmente t\u00e9cnico... Me encanta!! as\u00ed deber\u00edan de ser muchos de los art\u00edculos. \n\nun par de ideas para quien quiera ampliar sus conocimientos generales..:\n\nporque hacer procesamiento con GPU pudiendo hacer procesamiento paralelo utilizando distintos hardware como entradas? .una de las aplicaciones de los captha,  ademas de putear,  es utilizar las entradas humanas de numeros reales de,  por ejemplo,  las casas y usarlos para entrenar las redes neuronales para que  lean y posicionen los numeros de las fotos que hacen, por ejemplo, los coches de Google Street ).\n\nOtra peque\u00f1a gota de conocimiento: hay algoritmos matem\u00e1ticos que permiten reducir muchiisimo los tiempos de entrenamiento ya que no recalculan todo desde cero sino que hacen una actualizaci\u00f3n de la red usando solo los nuevos datos y la \u00faltima red entrenada (esto es ampliamente usado en algortimos de control y automatizaci\u00f3n,  uno de los grandes campos de aplicaci\u00f3n de las redes neuronales). la aplicaci\u00f3n de estos algoritmos junto con la potencia de c\u00e1lculo de los ordenadores actuales hace que se puedan hacer muchas investigaciones en esta l\u00ednea. \n\nenlazando con lo anterior,  \u00bfque pasar\u00eda si no ponemos tooodas las interconexiones posibles entre las \"neuronas\"  sino que solo ponemos las necesarias para permitir emular bastante bien alguna forma de estructurar los razonamientos humanos? nos encontramos con el \"control inteligente\/ fuzzy control \/ control borroso\",  que es una estructura especifica de red neuronal que se comporta de aquella manera. En las ultimas dos d\u00e9cadas est\u00e1 bastante en auge por poder a\u00f1adir conocimiento t\u00e9cnico especializado en los sistemas automatizados.\n\naqui va otra aplicacion real que actualmente esta en desarrollo,  enlazando directamente con lo de reconocimiento de imagenes: imaginaros un control de calidad que se hace mediante la inspecci\u00f3n de una fotograf\u00eda hecha por un operario de,  por ejemplo,  el montaje de unas tuber\u00edas. se puede entrenar  una red neuronal si tenemos  un gran historico de fotograf\u00edas de montajes correctos y no correctos de manera que la red neuronal se puede encargar de realizar ese control de calidad de forma realmente r\u00e1pida. \n\npara otro dia algortimos gen\u00e9ticos y evolutivos que,  por ejemplo,  permiten la autoreparacion fisica de sistemas electr\u00f3nicos en FPGAs.","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"158789","author":"","webpage":"","user_name":"kalaveras","karma_level":"22.00","iseditor":"0","global_id":"957025","facebook_uid":"10208400192021424","user_status":"active","index":8,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/10208400192021424\/picture","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":8,"order":"valued","totalCount":8,"commentStatus":"closed"}};
+  AML.Comments.config.postId = 150529;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "closed";
+  AML.Comments.config.campaignDate = "04_Apr_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+       <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+         <div class="head-menu-extras">
+    <p class="nav-heading">Destacamos</p>
+    <ul>
+                     <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="https://premios.xataka.com/">
+      Premios Xataka
+      </a></li>
+                          <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="/black-friday">
+      Black Friday
+      </a></li>
+         </ul>
+   </div>
+       <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Xataka" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/componentes">Componentes</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/ordenadores">Ordenadores</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/videojuegos">Videojuegos</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/analisis">Análisis</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/moviles">Móviles</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/apple">Apple</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/samsung">Samsung</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/netflix">Netflix</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/xiaomi">Xiaomi</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/despeja-la-x">Despeja la X</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/captcha-ia">Captcha IA</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                     <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+             <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+             <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Xataka: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="/respuestas">Xataka Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/user/xatakatv?sub_confirmation=1">Xataka
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasion</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Magnet</a></li></ul></li>         <li><a href="#head-channel-videojuegos" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Videojuegos
+        <span class="head-item-meta m-desc">Consolas, juegos, PC, PS4, Switch, Nintendo 3DS y Xbox...</span></a><ul id="head-channel-videojuegos" class="head-channel-list"><li><a class="head-list-item tech-3djuegos js-track-header-event"   href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=footer">3DJuegos</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tech-ign js-track-header-event"   href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=footer">IGN</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li><li><a class="head-list-item tech-3djuegos js-track-header-event"   href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=footer">Trasgo</a></li></ul></li>         <li><a href="#head-channel-entretenimiento" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Entretenimiento
+        <span class="head-item-meta m-desc">Series, cine, estrenos en cartelera, premios, rodajes, nuevas películas, televisión...</span></a><ul id="head-channel-entretenimiento" class="head-channel-list"><li><a class="head-list-item oci-sensacine js-track-header-event"   href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=footer">Sensacine</a></li><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-gastronomia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Gastronomía
+        <span class="head-item-meta m-desc">Recetas, recetas de cocina fácil, pinchos, tapas, postres...</span></a><ul id="head-channel-gastronomia" class="head-channel-list"><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Decoesfera</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Compradiccion</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Familia y Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Participamos en
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="http://www.cocacolaespana.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey España</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.coca-colamexico.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="http://www.cocacolaportugal.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey Portugal</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/energia/muerte-carbon-europa-solo-gif-asi-se-va-a-descarbonizar-viejo-continente" class="head-new-item">
+ La muerte del carbón en Europa en un solo gif: así se va a &#039;descarbonizar&#039; el Viejo Continente
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T17:31:26+00:00"></time></span></a></li> <li><a href="/aplicaciones/todos-que-quieren-ser-age-of-empires-movil-no-estan-consiguiendo" class="head-new-item">
+ Todos los que quieren ser el &#039;Age of Empires&#039; del móvil y no lo están consiguiendo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T16:31:26+00:00"></time></span></a></li> <li><a href="https://www.xatakamovil.com/analisis/sony-xperia-10-analisis-caracteristicas-precio-especificaciones?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Sony Xperia 10, análisis: la pantalla 21:9 brilla por sí misma, ahora solo falta poder disfrutarla 
+ <span class="head-item-meta">
+  en Xataka Móvil <time class="js-header-post" datetime="2019-04-04T17:09:51+00:00"></time></span></a></li> <li><a href="/espacio/project-kuiper-ambicioso-plan-amazon-3-236-satelites-para-ofrecer-acceso-a-internet-espacio" class="head-new-item">
+ &#039;Project Kuiper&#039;, el ambicioso plan de Amazon para lanzar 3.236 satélites y ofrecer acceso a internet desde el espacio
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T15:59:33+00:00"></time></span></a></li> <li><a href="/servicios/wifi-aviones-esto-que-ofrecen-principales-aerolineas-para-navegar-a-bordo" class="head-new-item">
+ WiFi en aviones: esto es lo que ofrecen las principales aerolíneas para navegar a bordo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T15:01:26+00:00"></time></span></a></li> <li><a href="/empresas-y-economia/netflix-a-xiaomi-asi-como-ganan-dinero-principales-empresas-tecnologicas-2-despeja-x-1x43" class="head-new-item">
+ De Netflix a Xiaomi: así es como ganan dinero las principales empresas tecnológicas #2 (Despeja la X, 1x43)
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T14:00:19+00:00"></time></span></a></li> <li><a href="/videojuegos/17-juegos-que-han-vendido-historia-nintendo-switch" class="head-new-item">
+ Los 17 juegos que más han vendido en la historia de Nintendo Switch
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T13:01:26+00:00"></time></span></a></li> <li><a href="/medicina-y-salud/mayores-empresas-pruebas-geneticas-dice-tener-responsabilidad-moral-compartir-sus-datos-policia" class="head-new-item">
+ Una de las mayores empresas de pruebas genéticas dice tener la &quot;responsabilidad moral&quot; de compartir sus datos con la policía
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T12:01:26+00:00"></time></span></a></li> <li><a href="/entrevistas/tenemos-claro-que-nuestra-competencia-dinero-efectivo-waler-pimenta-vp-soluciones-digitales-mastercard" class="head-new-item">
+ &quot;Tenemos claro que nuestra competencia es el dinero en efectivo&quot;: Walter Pimenta, VP de soluciones digitales en Mastercard
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T10:01:26+00:00"></time></span></a></li> <li><a href="/moviles/redmi-pro-2-apunta-a-ser-primer-buque-insignia-nueva-marca-xiaomi-camara-retractil-snapdragon-855" class="head-new-item">
+ El Redmi Pro 2 apunta a ser el primer buque insignia de la nueva marca de Xiaomi con cámara retráctil y Snapdragon 855
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T09:31:26+00:00"></time></span></a></li> <li><a href="/cine-y-tv/no-eres-mainstream-que-no-ha-habido-versiones-porno-tus-referencias-culturales" class="head-new-item">
+ No eres mainstream hasta que no ha habido versiones porno de tus referencias culturales
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T09:01:26+00:00"></time></span></a></li> <li><a href="/moviles/motorola-volvera-nuevo-buque-insignia-cuatro-camaras-al-estilo-nokia-ultima-filtracion" class="head-new-item">
+ Motorola busca regresar por todo lo alto con un nuevo móvil de cuatro cámaras al estilo Nokia, según la última filtración
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T08:01:26+00:00"></time></span></a></li> <li><a href="/inteligencia-artificial/hay-guerra-google-acerca-quien-decidira-etica-su-inteligencia-artificial" class="head-new-item">
+ Hay una guerra en Google acerca de quién decidirá la ética de su inteligencia artificial
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T07:32:57+00:00"></time></span></a></li> <li><a href="/aplicaciones/adobe-after-effects-ahora-nos-permitira-borrar-forma-sencilla-cualquier-objeto-no-deseado-nuestros-videos" class="head-new-item">
+ Adobe After Effects ahora nos permitirá borrar de una forma más sencilla cualquier objeto no deseado de nuestros vídeos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-04T02:00:45+00:00"></time></span></a></li> <li><a href="https://www.vidaextra.com/cultura/senor-anillos-este-escenario-temporal-que-va-a-basarse-serie-estos-juegos-que-nos-han-mostrado?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ El Señor de los Anillos: éste es el escenario temporal en el que va a basarse la serie y estos son los juegos que nos los han mostrado 
+ <span class="head-item-meta">
+  en Vidaextra <time class="js-header-post" datetime="2019-04-04T06:54:40+00:00"></time></span></a></li> <li><a href="/automovil/toyota-libera-23-740-patentes-su-tecnologia-coches-hibridos-ofrece-gratis-a-fabricantes-para-impulsar-mercado" class="head-new-item">
+ Toyota libera 23.740 patentes de su tecnología de coches híbridos y las ofrece gratis a los fabricantes para &quot;impulsar el mercado&quot;
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T23:00:45+00:00"></time></span></a></li> <li><a href="/inteligencia-artificial/cientificos-upf-desarrollan-ia-para-capturar-movimiento-violinistas-ayudarles-a-evaluar-mejorar-su-tecnica" class="head-new-item">
+ Científicos de la UPF desarrollan una IA para capturar el movimiento de los violinistas y ayudarles a evaluar y mejorar su técnica 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T21:30:46+00:00"></time></span></a></li> <li><a href="/audio/beats-powerbeats-pro-caracteristicas-precio-ficha-tecnica" class="head-new-item">
+ Beats Powerbeats Pro: los nuevos auriculares inalámbricos de Apple son como los AirPods pero con más autonomía y más caros
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T20:19:43+00:00"></time></span></a></li> <li><a href="/privacidad/encuentran-base-datos-540-millones-datos-usuarios-facebook-servidor-contrasena-cifrado" class="head-new-item">
+ Encuentran una base de datos con 540 millones de datos de usuarios de Facebook en un servidor sin contraseña ni cifrado
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T18:46:13+00:00"></time></span></a></li> <li><a href="/analisis/black-shark-2-analisis-caracteristicas-precio-especificaciones" class="head-new-item">
+ Black Shark 2, análisis: este móvil gaming está ya cerca de ser una auténtica consola portátil
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-04-03T17:00:45+00:00"></time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="xataka">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Posible XIAOMI REDMI 2 PRO, NUEVA CPU de INTEL y ¿un MOTOROLA con 4 CÁMARAS? | XTK Now!" src="https://img.youtube.com/vi/6DWFr6Jbof4/mqdefault.jpg"></span><span class="head-new-video-desc">Posible XIAOMI REDMI 2 PRO, NUEVA CPU de INTEL y ¿un MOTOROLA con 4 CÁMARAS? | XTK Now!</span></a></li> 
+     <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Samsung Galaxy S10+, mes de uso: ser MÁS COMPLETO puede NO SER SUFICIENTE" src="https://img.youtube.com/vi/J5YgFXCI49w/mqdefault.jpg"></span><span class="head-new-video-desc">Samsung Galaxy S10+, mes de uso: ser MÁS COMPLETO puede NO SER SUFICIENTE</span></a></li> 
+     <li><a href="https://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="COCHE de XIAOMI, FACEBOOK pide CONTRASEÑAS del correo y AKIRA tiene luz verde | XTK Now!" src="https://img.youtube.com/vi/m00Kc1EEC4Y/mqdefault.jpg"></span><span class="head-new-video-desc">COCHE de XIAOMI, FACEBOOK pide CONTRASEÑAS del correo y AKIRA tiene luz verde | XTK Now!</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="xataka">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Xataka" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+<footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                          <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+         </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Xataka hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/componentes">Componentes</a></li>         <li><a class="list-item foot-list-item" href="/categoria/ordenadores">Ordenadores</a></li>         <li><a class="list-item foot-list-item" href="/categoria/videojuegos">Videojuegos</a></li>         <li><a class="list-item foot-list-item" href="/categoria/analisis">Análisis</a></li>         <li><a class="list-item foot-list-item" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>         <li><a class="list-item foot-list-item" href="/categoria/moviles">Móviles</a></li>             <li><a class="list-item foot-list-item" href="/tag/apple">Apple</a></li>         <li><a class="list-item foot-list-item" href="/tag/samsung">Samsung</a></li>         <li><a class="list-item foot-list-item" href="/tag/netflix">Netflix</a></li>         <li><a class="list-item foot-list-item" href="/tag/xiaomi">Xiaomi</a></li>         <li><a class="list-item foot-list-item" href="/tag/despeja-la-x">Despeja la X</a></li>         <li><a class="list-item foot-list-item" href="/tag/captcha-ia">Captcha IA</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Xataka" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="webedia-brand foot-webedia-brand">
+  <a href="https://www.webedia.es/" class="webedia-logo foot-webedia-logo"><span>Webedia</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+        <div class="links-category">
+    <p class="channel-title"> Tecnología </p><ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Magnet</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Videojuegos </p><ul><li><a class="list-item foot-list-item"  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=footer">3DJuegos</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=footer">IGN</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=footer">Trasgo</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Entretenimiento </p><ul><li><a class="list-item foot-list-item"  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=footer">Sensacine</a></li><li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Gastronomía </p><ul><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Estilo de Vida </p><ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Compradiccion</a></li></ul>
+  </div>
+   <div class="links-category">
+    <p class="channel-title"> Motor </p><ul><li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul><p class="channel-title"> Economía </p><ul><li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul><p class="channel-title"> Familia y Ocio </p><ul><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li></ul>
+  </div>
+ 
+  </div>
+    <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+        <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="http://www.nobbot.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item"  href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item"  href="http://www.bloglenovo.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="https://www.inget.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="list-item foot-list-item"  href="http://blog.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="//www.esportsunlocked.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="//poptv.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pop TV</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  rel="nofollow"  href="http://www.cocacolaespana.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item"  href="http://www.coca-colamexico.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item"  rel="nofollow"  href="http://www.cocacolaportugal.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item"  href="http://zona.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item"  href="https://www.cervezasalhambra.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item"  href="http://www.rentabilibar.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li></ul>
+  </div>
+   <div class="links-category">
+    <ul></ul>
+  </div>
+   <div class="links-category">
+    <ul><li><a class="list-item foot-list-item"  href="http://www.circulaseguro.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item"  href="http://www.circulaseguro.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item"  href="http://corrienteelectrica.renault.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="list-item foot-list-item"  href="//hablemosdeempresas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="list-item foot-list-item"  href="https://www.ennaranja.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item"  href="http://blog.sage.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item"  href="https://www.segurosdetuatu.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item"  href="https://www.huellasbysareb.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul>
+  </div>
+ 
+  </div>
+ </div>
+ </div>
+     <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons m-favicons-compact">
+ <div class="head-favicons">
+     <div class="head-favicons-index head-webedia-logo">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Webedia">Webedia</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+              favicon-current
+       " rel="nofollow" href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+       "  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+       "  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+       "  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=favicons">
+       <span>IGN</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+          <div class="favicons-expanded-inner">
+    <ul><li><h4>Tecnología</h4></li><li><a class="favicon tec-xataka"  rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka
+    </a></li><li><a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Móvil
+    </a></li><li><a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Foto
+    </a></li><li><a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Android
+    </a></li><li><a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Smart Home
+    </a></li><li><a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Windows
+    </a></li><li><a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka Ciencia
+    </a></li><li><a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Applesfera
+    </a></li><li><a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Genbeta
+    </a></li><li><a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Magnet
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Videojuegos</h4></li><li><a class="favicon tech-3djuegos"  href="//www.3djuegos.com?utm_source=3djuegos&utm_medium=network&utm_campaign=favicons"><span></span>3DJuegos
+    </a></li><li><a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Vida Extra
+    </a></li><li><a class="favicon tech-ign"  href="//es.ign.com?utm_source=ign&utm_medium=network&utm_campaign=favicons"><span></span>IGN
+    </a></li><li><a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Xataka eSports
+    </a></li><li><a class="favicon tech-3djuegos"  href="//trasgo.net?utm_source=trasgo&utm_medium=network&utm_campaign=favicons"><span></span>Trasgo
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Entretenimiento</h4></li><li><a class="favicon oci-sensacine"  href="http://www.sensacine.com?utm_source=sensacine&utm_medium=network&utm_campaign=favicons"><span></span>Sensacine
+    </a></li><li><a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Espinof
+    </a></li><li><a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>WATmag
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Gastronomía</h4></li><li><a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Directo al Paladar
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Estilo de Vida</h4></li><li><a class="favicon est-vitonica"  rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Vitónica
+    </a></li><li><a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Trendencias
+    </a></li><li><a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Trendencias Hombre
+    </a></li><li><a class="favicon est-decoesfera"  rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Decoesfera
+    </a></li><li><a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Compradiccion
+    </a></li></ul>
+  </div>
+   <div class="favicons-expanded-inner">
+    <ul><li><h4>Motor</h4></li><li><a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Motorpasión
+    </a></li><li><a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Motorpasión Moto
+    </a></li></ul><ul><li><h4>Economía</h4></li><li><a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>El Blog Salmón
+    </a></li><li><a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Pymes y Autónomos
+    </a></li></ul><ul><li><h4>Familia y Ocio</h4></li><li><a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Bebés y Más
+    </a></li><li><a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons"><span></span>Diario del Viajero
+    </a></li></ul>
+  </div>
+ 
+ </div>
+ </aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Xataka: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "355823546895",
+   cookieDomain: "",
+   siteName: "Xataka",
+   imagePath: "https://img.weblogssl.com/css/xataka/p/v6",
+   desktopSiteUrl: "https://www.xataka.com",
+   redirectDesktopRoot: 'false',
+   postId: 150529,
+   postTitle: "Las\u0020redes\u0020neuronales\u003A\u0020qu\u00E9\u0020son\u0020y\u0020por\u0020qu\u00E9\u0020est\u00E1n\u0020volviendo",
+   tweetText: "Comentario%20a%20Las%20redes%20neuronales%3A%20qu%C3%A9%20son%20y%20por%20qu%C3%A9%20est%C3%A1n%20volviendo",
+   twitterName: "xataka",
+   device: "desktop",
+   postUrl: "https://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "XTK",
+    blogDomain: "xataka.com"
+   },
+   adblockLatCampaignTarget: "http://brave.com/xat342",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 0,
+   enableUserOptOutProcess: 1,
+   postSubType: "normal",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 1,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.xataka.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+     var _sf_async_config = {};
+_sf_async_config.sections = "xataka.com";
+_sf_async_config.authors = "guillermo julián";
+_sf_async_config.uid = "54296";
+_sf_async_config.domain = "xataka.com";
+_sf_async_config.useCanonical = true;
+(function(){
+ function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement("script");
+  e.setAttribute("language", "javascript");
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+ }
+ var oldonload = window.onload;
+ window.onload = (typeof window.onload != "function") ?
+ loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-edaec3a9.js"></script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/xataka/las-redes-neuronales-que-son-y-por-que-estan-volviendo/CR/1?category=robotica-e-ia&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/xataka?picture_tag=1"></script>
+ <script>
+  (function(d) {
+   if ('ES' !== country) {
+    return;
+   }
+
+   var b = d.body;
+   var e = d.createElement('script');
+   e.id = 'parsely-cfg';
+   e.src = '//cdn.parsely.com/keys/xataka.com/p.js';
+   e.async = true;
+   e.setAttribute('data-parsely-site', "xataka.com");
+   b.appendChild(e);
+  })(document);
+ </script>
+                  
+       </div>
+  </div>
+     </body>
+</html>

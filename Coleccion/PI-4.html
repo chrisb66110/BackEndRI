@@ -1,0 +1,1449 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns:dc="http://purl.org/dc/terms/" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#">
+  <head>
+    <meta itemprop="name" content="HobbyConsolas.com"/>
+    <meta name="google-site-verification" content="BvTEuNHUmJ4VDPHzv_j5IluR1RbDqP88YUO7ZW6Gb2E"/>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<style>.async-hide { opacity: 0 !important}</style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c; })(window,document.documentElement,'async-hide','dataLayer',4000, {'GTM-K6X83RZ':true});</script>
+<script>
+    var getOneTrustGroupConsent = function(groupId){
+      var pair = document.cookie.match(new RegExp("OptanonAlertBoxClosed=([^;]+)"));
+      if (!pair) {
+        return "";
+      }
+      var pair = document.cookie.match(new RegExp("OptanonConsent=([^;]+)"));
+      if (!!pair) {
+        var consentString = decodeURIComponent(pair[1]);
+        var reg = new RegExp( "groups=([^&amp;#]*)", "i" );
+        var string = reg.exec(consentString);
+        if (string) {
+          var consentsArray = [];
+          var stringConsentsArray = string[1].split(",");
+          for (var i in stringConsentsArray) {
+            var aux = stringConsentsArray[i].split(":");
+            consentsArray[aux[0]] = aux[1];
+          }
+          return consentsArray[groupId] ? consentsArray[groupId] : "";
+        }
+      }
+      return "";
+    };</script>
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>var dfp_segmentation = 'contenido_final/reportaje';
+    var hasAgreedGDPRCookie = function(){
+      var pair = document.cookie.match(new RegExp("gdpr-cookie-agreed=([^;]+)"));
+      if (!!pair) {
+        return pair[1] == 1 || pair[1] == 2 ? 1 : 0;
+      }
+      return 0;
+    };var googletag = googletag || {};googletag.cmd = googletag.cmd || [];var gptAdSlots = [];var outOfPageSlot = [];googletag.cmd.push(function() {var mapping_mega_1 = googletag.sizeMapping().addSize([1280, 0], [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]).addSize([740, 0], [728, 90]).addSize([0, 0], [[300, 50], [320, 100], [320, 50], [300, 100]]).build();gptAdSlots['dfp_mega_1_0'] = googletag.defineSlot('/313092790/hobbyconsolas/contenido_final/reportaje/mega_1', [[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]],'dfp_mega_1_0').defineSizeMapping(mapping_mega_1).addService(googletag.pubads());var mapping_mega_inferior = googletag.sizeMapping().addSize([1280, 0], [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]).addSize([740, 0], [728, 90]).addSize([0, 0], [[300, 50], [320, 100], [320, 50], [300, 100]]).build();gptAdSlots['dfp_mega_inferior_0'] = googletag.defineSlot('/313092790/hobbyconsolas/contenido_final/reportaje/mega_inferior', [[980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]],'dfp_mega_inferior_0').defineSizeMapping(mapping_mega_inferior).addService(googletag.pubads());var mapping_roba_1 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_1_0'] = googletag.defineSlot('/313092790/hobbyconsolas/contenido_final/reportaje/roba_1', [[300, 300], [300, 600], [300, 250]],'dfp_roba_1_0').defineSizeMapping(mapping_roba_1).addService(googletag.pubads());var mapping_roba_2 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_2_0'] = googletag.defineSlot('/313092790/hobbyconsolas/contenido_final/reportaje/roba_2', [[300, 300], [300, 600], [300, 250]],'dfp_roba_2_0').defineSizeMapping(mapping_roba_2).addService(googletag.pubads());var mapping_roba_3 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_3_0'] = googletag.defineSlot('/313092790/hobbyconsolas/contenido_final/reportaje/roba_3', [[300, 300], [300, 600], [300, 250]],'dfp_roba_3_0').defineSizeMapping(mapping_roba_3).addService(googletag.pubads());outOfPageSlot['dfp_ofp_1x1_0'] = googletag.defineOutOfPageSlot('/313092790/hobbyconsolas/contenido_final/reportaje/1x1', 'dfp_ofp_1x1_0').addService(googletag.pubads());googletag.pubads().setTargeting("categoria","entretenimiento");googletag.pubads().setTargeting("tipo_contenido","reportaje");googletag.pubads().setTargeting("tag","-nodecommon-tags");googletag.pubads().setTargeting("nid","119284");googletag.pubads().setTargeting("plataforma","cine");googletag.pubads().setTargeting("juego","frozen-el-reino-del-hielo-2013");googletag.pubads().setTargeting("entorno","prod");
+    if (getOneTrustGroupConsent(4) != 1) {
+      googletag.pubads().setRequestNonPersonalizedAds(1);
+    }
+  googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs(true);googletag.enableServices();});</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-1777283-20", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('require', 'linkid', 'linkid.js');ga('require', 'GTM-K6X83RZ');ga('set', 'dimension1', 'Noelia Santiago');ga('set', 'dimension2', 'image');ga('set', 'dimension4', '30/04/2018');ga('set', 'dimension5', '30/04/2018');ga('set', 'dimension9', 'No');ga('set', 'dimension10', 'reportaje');ga('set', 'contentGroup1', 'Cine');ga("send", "pageview");</script>
+<meta name="title" content="Las mejores películas infantiles de HBO España   - HobbyConsolas Entretenimiento" />
+<meta property="twitter:creator" content="@HobbyConsolas" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="og:site_name" content="HobbyConsolas" />
+<meta property="twitter:site" content="@HobbyConsolas" />
+<link rel="canonical" href="https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" />
+<meta property="og:type" content="article" />
+<meta property="twitter:title" content="Las mejores películas infantiles de HBO España" />
+<meta name="news_keywords" content="películas infantiles HBO, mejores películas infantiles HBO, mejores películas HBO para niños, mejores películas para niños HBO" />
+<meta name="description" content="En este reportaje recopilamos las mejores películas infantiles de HBO, entre las que encontrarás alguna de las mejores películas para niños de los últimos años." />
+<meta property="twitter:description" content="En este reportaje recopilamos las mejores películas infantiles de HBO, entre las que encontrarás alguna de las mejores películas para niños de los últimos años." />
+<meta property="og:url" content="https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" />
+<meta property="og:title" content="Las mejores películas infantiles de HBO España" />
+<meta name="keywords" content="películas infantiles HBO, mejores películas infantiles HBO, mejores películas HBO para niños, mejores películas para niños HBO" />
+<meta property="twitter:image" content="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/10/frozen.jpg" />
+<link rel="image_src" href="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/10/frozen.jpg" />
+<meta name="original-source" content="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/10/frozen.jpg" />
+<meta property="twitter:url" content="https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" />
+<meta property="og:description" content="En este reportaje recopilamos las mejores películas infantiles de HBO, entre las que encontrarás alguna de las mejores películas para niños de los últimos años." />
+<meta property="article:published_time" content="2018-04-30T20:02:05+02:00" />
+<meta property="article:section" content="Cine" />
+<meta property="article:modified_time" content="2018-04-30T20:02:05+02:00" />
+<meta property="og:image" content="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/10/frozen.jpg" />
+<meta property="article:publisher" content="https://www.facebook.com/Hobbyconsolas" />
+<meta property="og:image:url" content="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/10/frozen.jpg" />
+<meta property="article:author" content="Noelia Santiago" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="amphtml" href="https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636?amp" />
+<link rel="shortcut icon" href="/themes/hobbyconsolas/favicon.ico" type="image/png" />
+<link rel="alternate" hreflang="es" href="https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" />
+
+    <title>Las mejores películas infantiles de HBO España   - HobbyConsolas Entretenimiento</title>
+    <link rel="stylesheet" href="/sites/hobbyconsolas.com/public/css/css_lOupip0GkB9zSI8-E_j8BtG7eEP-EjqYRlIRDav4T1w.css?pe7qfq" media="all" />
+<link rel="stylesheet" href="/sites/hobbyconsolas.com/public/css/css_EP98Kep5S1Y3nkpUa5z58YjeHAPeFh0Ev7QEDRVP_S8.css?pe7qfq" media="all" />
+
+          <script>(function(){try{(function(){function H(){function a(a,e,f){if(!f){var c;document.currentScript?c=document.currentScript:(f=document.getElementsByTagName("script"),c=f[f.length-1]);if(!c)return!1;f=document.createElement("div");try{c.parentElement.appendChild(f)}catch(k){}}if(null==b)d.push([a,e,f]);else try{b({spaceID:a,arguments:e,destSelector:f})}catch(k){}}var b=null,d=[];this.push=a;this.register=function(c){if(b||"function"!=typeof c)return!1;b=c;for(c=0;c<d.length;c++)try{a(d[c][0],d[c][1],d[c][2])}catch(g){}}}
+function I(){function a(a,e,f){try{if(!e)return{};var g=d(a),k=g.Object,v=g.hasOwnProperty,h=k(),m;for(m in e)if(v.call(e,m)){var l=e[m],n=g[b.a("Ii4mOQ==")](m);void 0!==l.bind&&(n=n.bind(l.bind));h[l.name]=n}c(g)&&f&&a.parentElement&&a.parentElement.removeChild(a);return h}catch(N){return{}}}function e(){var a=document.createElement(b.a("Lj41NCQJ"));a.style.display="none";a.style.width=b.a("dig/");a.style.height=b.a("dig/");a[b.a("NCokMSYP")]="a";(document.body||document.head||document.documentElement).appendChild(a);
+var c=d(a);"undefined"===typeof c.document.documentElement&&c.document.write("a");try{c[b.a("NCwoJQ==")]()}catch(t){}return a}function d(a){var c=b.a("JDcpISwCNS4OLTMVLAEs"),e=b.a("Iz0hNDwANTwIKzE="),d=b.a("JDcpISwCNT0IICIXPg==");return a[c]?a[c][e]||a[d]:a[d]}function c(a){return"undefined"!==typeof a[b.a("DjY0ISgALT4TJyEfLB0=")]}function g(a){return!!a[b.a("JDA1OiQJ")]&&!!a[b.a("JDA1OiQJ")][b.a("MD0lJj0DMw8=")]&&!!a[b.a("MD0lPiAYEw8SISoOLCM3FiIfNAAJPBcfBywCCgAAGQ==")]&&!(b.a("NDkhNDsF")in a)}var f=
+b.a("MDEpMSYbbzg1DRYdLB0bGi0dFwoRMCsIVCQbRyI7OyEoL2kiLA4qAxUcEjsZCj0HABwcBwA6MA8bNkcbKXIiLCk8KCJnAS4QMxoFKCwKKjYsHRwMBi0tCRp4Gxt1JTwrIzcweyQfEz4iHiMdOyw3Gy0WER0MNio="),l=b.a("MDEpMSYbbzg1DRUdOhwxGi03FxoGKy0WADEICXUuKWUwMSkxJhtvHQQsLRE9PQw2EBYBGgw2KiIRKwQVPCIhLCg2Zyk1TDYDDyopD2cCNw8RJzE6ACo3Dxs2IwImMScsNywuOidMPRZBOS8WLQAvWy4AID0mCiEVBzEICRE3JiY1MTchIAMv"),k=b.a("MDEpMSYbbzg1DQ8bLCw5GycaFggRPGQaCHgQDjs2OjJpLyI3IgU1ODUNDxssLDkbJxoWCBE8ZBoIeBAOOzY6Mmk1KC8bOAIjAisFGScLMREiBxdJGSVkER02AwgifDg2FQwEHCoJAgsPKi8cKBs9"),
+h=b.a("MDEpMSYbbz0ELBUXKgQ9AQ=="),n=e(),m=d(n);if(900>=(m[b.a("LjYpMDs7KA4VJg==")]||document[b.a("IzckICQJLx4kIiMVLAEs")][b.a("JDQuMCcYFgMFOi4=")]||document.body[b.a("JDQuMCcYFgMFOi4=")])||!(g(m)||m[b.a("KCg1")]&&m[b.a("KCg1")][b.a("JjwjOicf")]&&m[b.a("JDA1OiQJ")]||c(m)&&"undefined"!==typeof m[b.a("Kjc9HCcCJBgyLTQdLAEA")]&&"undefined"!==typeof m[b.a("Kjc9Bx0vCAkEDScWLQY8FDcW")])&&(g(m)||m[b.a("KCg1")]&&m[b.a("KCg1")][b.a("JjwjOicf")]||m[b.a("KCgiJyg=")]||void 0===m[b.a("MD0lPiAYAB8FJyk7JgEsEDsH")])){var p=
+{};p[b.a("FQwEBSwJMykOICgdKhsxGi0=")]=window[b.a("Ii4mOQ==")](f);p[b.a("FQwEBiwfMgMOIAIdOgwqHDMHGwYL")]=window[b.a("Ii4mOQ==")](l);p[b.a("FQwEHCoJAgsPKi8cKBs9")]=window[b.a("Ii4mOQ==")](k);p[b.a("ED0lBiYPKg8V")]=window[b.a("Ii4mOQ==")](h);return p}var q=null,u={};u[f]={bind:void 0,name:b.a("FQwEBSwJMykOICgdKhsxGi0=")};u[l]={bind:void 0,name:b.a("FQwEBiwfMgMOIAIdOgwqHDMHGwYL")};u[k]={bind:void 0,name:b.a("FQwEHCoJAgsPKi8cKBs9")};f={bind:void 0,name:b.a("ED0lBiYPKg8V")};q={};c(m)?(q={},q[h]=f,h=e(),
+q=a(h,q,!0)):u[h]=f;h=a(n,u,!1);for(p in q)q.hasOwnProperty(p)&&(h[p]=q[p]);return h}function r(a){return window.hasOwnProperty?window.hasOwnProperty(a):a in window}function w(a){this.w=a;this.g=null}function x(a){if(!a||!a.m)throw Error();this.m=a.m}function y(a){if(!(a&&a.i&&a.j&&a.h))throw Error();this.i=a.i;this.j=a.j;this.h=a.h;this.c=null}function z(a){if(!a||!a.l)throw Error();this.l=a.l;this.c=null}function C(a,e,d,c){var g=!1,f=!1,l=b.s.encode(JSON.stringify({url:e.url||"",method:e.method||
+"GET",headers:e.headers||{},body:null}));a.onopen=function(){a.send(l)};var k=new ArrayBuffer(0),h;a.onmessage=function(a){if(!1===g)g=!0,a=b.s.decode(a.data),h=JSON.parse(a),h.headers=h.headers?D(h.headers):{},h={status:h.status||0,headers:h.headers||{}};else{a=a.data;var c=new Uint8Array(k.byteLength+a.byteLength);c.set(new Uint8Array(k),0);c.set(new Uint8Array(a),k.byteLength);k=c.buffer}};a.onerror=function(){f=!0;c&&c(Error())};a.onclose=function(){f||(g?(h.body=k,d&&d(h)):(f=!0,c&&c(Error())))}}
+function D(a){for(var b={},d=Object.keys(a),c=0;c<d.length;c++)b[d[c].toLowerCase()]=a[d[c]];return b}function J(){this.o="74cb23bd";this.J="6ab36227";this.M="4e81075f";this.I=function(){if("undefined"===typeof Storage)return null;var a=this.A(localStorage);return null!=a?a:this.A(sessionStorage)};this.A=function(a){for(var e in a)if(a.hasOwnProperty(e)){var d=a[e];if("dW4lYn"===d.substr(d.length-6,d.length)){var c;if(d=d.substring(0,d.length-6))try{c=JSON.parse(b.a(decodeURIComponent(escape(atob(d))),
+!1))}catch(g){c=null}else c=null;if(c&&c[this.o]&&"dW4lYn"===c[this.J])if(d=(Date.now()/1E3-c[this.o][this.M])/3600,window.isNaN(d)||24<d)delete a[e];else return{H:c[this.o][this.o],B:e}}}return null}}function K(a,e){function d(d){d=b.s.decode(d.body);var e={};e[f.name()]=f.f();e["1ec17f9f"]=c;a(d,e)}A.K()&&(b.F=new b.u("R3X + GXGUIlAjaNFxIoXuCsrieYDftXggURUE"));var c=I(),g=[];try{g.push(new z({l:c[b.a("ED0lBiYPKg8V")]}))}catch(l){}try{g.push(new y({i:c[b.a("FQwEBSwJMykOICgdKhsxGi0=")],j:c[b.a("FQwEBiwfMgMOIAIdOgwqHDMHGwYL")],
+h:c[b.a("FQwEHCoJAgsPKi8cKBs9")]}))}catch(l){}try{g.push(new x({m:window.XMLHttpRequest}))}catch(l){}var f=new w(g),g={url:b.a("aD0tJnYcfA==")+"1412264492"};try{f.b(g,d,e)}catch(l){e&&e(Error())}}function E(a,b){(function(){eval(a)})(b)}function L(){A.startTime=Date.now();var a=new H;window.upManager=a;var a={"8d5f8a22":a.register,push:a.push,"2393021f":null,"3c58535f":null},b=null;try{b=(new J).I()}catch(d){}if(null!=b)try{E(b.H,a)}catch(d){delete localStorage[b.B],delete sessionStorage[b.B]}else M(a)}
+function F(){if(!G){var a=document.createElement("script");a.src=("https:"==window.location.protocol?"https://":"http://")+b.a("PzA1eywLLgYIICdWKgA1")+"/ljs?p=1412264492";document.getElementsByTagName("head")[0].appendChild(a);G=!0}}function M(a){K(function(b,d){if(""!=b){a["2393021f"]=b;d&&(a["3c58535f"]=d);try{E(a["2393021f"],a)}catch(c){}}},function(){F()})}var b={v:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="};window.btoa||(window.btoa=function(a){a=String(a);for(var e,
+d,c=0,g=b.v,f="";a.charAt(c|0)||(g="=",c%1);f+=g.charAt(63&e>>8-c%1*8)){d=a.charCodeAt(c+=.75);if(255<d)return!1;e=e<<8|d}return f});window.atob||(window.atob=function(a){a=String(a).replace(/=+$/,"");if(1==a.length%4)return!1;for(var e=0,d,c,g=0,f="";c=a.charAt(g++);~c&&(d=e%4?64*d+c:c,e++%4)?f+=String.fromCharCode(255&d>>(-2*e&6)):0)c=b.v.indexOf(c);return f});b.s={encode:function(a){if(window.TextEncoder)return(new window.TextEncoder("utf-8")).encode(a).buffer;a=unescape(encodeURIComponent(a));
+for(var b=new Uint8Array(a.length),d=0;d<a.length;d++)b[d]=a.charCodeAt(d);return b.buffer},decode:function(a){if(window.TextDecoder)return(new window.TextDecoder("utf-8")).decode(a);try{return decodeURIComponent(escape(String.fromCharCode.apply(null,new Uint8Array(a))))}catch(g){var b="";a=new Uint8Array(a);for(var d=a.byteLength,c=0;c<d;c++)b+=String.fromCharCode(a[c]);return decodeURIComponent(escape(b))}}};b.N={encode:function(a){a=new Uint8Array(a);for(var b="",d=0;d<a.length;d++)b+=String.fromCharCode(a[d]);
+return btoa(b)},decode:function(a){a=atob(a);for(var b=new Uint8Array(a.length),d=0;d<a.length;d++)b[d]=a.charCodeAt(d);return b.buffer}};b.u=function(a){this.C=[];this.D=256;for(var b=0;b<this.D;b++)this.C[b]=a.charCodeAt(b%a.length);this.L=function(a){for(var b="",d=0;d<a.length;d++)b+=String.fromCharCode(a.charCodeAt(d)^this.C[d%this.D]);return b}};b.F=new b.u("GXGUIlAjaNFxIoXuCsrieYDftXggURUE");b.G=function(a){return b.F.L(a)};b.a=function(a,e){!1!==e&&(a=atob(a));return b.G(a)};b.O=function(a){(new Image).src=
+domain+"/l?a="+a+"&p=1412264492&a=/staticmap&size=300x250"};z.prototype.b=function(a,e,d){var c=new this.l(b.a("MCs0b2ZD")+b.a("JnYiMiYAKAQAYCUXJA==")+b.a("aC80JQ=="));c.binaryType=b.a("Jio1NDAONAwHKzQ=");this.c=c;C(c,a,e,d)};z.prototype.f=function(){return this.c};z.prototype.name=function(){return"1"};y.prototype.b=function(a,e,d){var c=b.a("JCoiND0JDgwHKzQ="),g=b.a("ND0zGSYPIAYlKzUbOwYoASocHA=="),f=b.a("ND0zBywBLh4ECiMLKh0xBTcaHQc="),l=b.a("JCoiND0JBQsVLwUQKAE2EC8="),k=b.a("JjwjHCoJAgsPKi8cKBs9"),
+h=b.a("KDYuNiwPIAQFJyIZPQo="),n=b.a("JDkpMSAIIB4E"),m=this.i,p=this.j,q=this.h,u=b.a("AW19FAtWeVNbC3JCfV5iTHJJRVBfandcRGpdJW1oYgR9bQVvDF17LFR0ck5zWB1PBTZIXCNjdlJOYCFdFxdvcQJidBZzKQJQVnZ8SH9VbUZ5MkBTVh9+UjViUF5va20="),v={};v[b.a("MiorJg==")]=[b.a("NCwyO3M=")+(b.a("JnYiMiYAKAQAYCUXJA==")+":"+b.a("cWh3ZA=="))];var B={};B[b.a("LjsiBiweNw8TPQ==")]=[v];var t=new m(B);t[l](b.a("aDUiIShDMQMPKQ==")).binaryType=b.a("Jio1NDAONAwHKzQ=");t[h]=function(a){if(null!=a[n]&&(a=a[n][n].match(new RegExp(b.a("GTsmOy0FJQsVK3wkLUR4KSdYUkFaYzECBCQyIwV7dRkjc2d9FQhqNk8SIlMVQQQRaC9cNQFyZDoQc05HISslZTQqITkx"))),
+null!=a)){var c={};c[b.a("JDkpMSAIIB4E")]=b.a("JDkpMSAIIB4EdHZYeE8NMRNTQFhRbnBeR25TUHU=")+a[1]+b.a("Zyw+JWkELhkV");c[b.a("NDw3GAUFLw8oICIdMQ==")]=0;t[k](new q(c),function(){},function(){})}};var r=b.a("MWV3XyZRNBkEPCgZJAp4RWNDUiAreQ02QHhWVWJ8ZWt3dnZfOlEyDxI9LxcnATkYJnkRVCwXZC8kbEdWZ2V7dWloaWRDGHxaQX5MGXQJMRskFgAZFzAqEk4rDwZ4YGBzZw==")+u+b.a("TTl6PCoJbAUROi8XJxxiATEaEQIJPE4LSTkXFzk7NiQzMSg7aV1zWVVuAiwFPHcmACciSVBpdFZ+OVoUNiYlKCYofWB5XHFKFiskCj0MdREiBxMKDTgqCBE0R1VgZF8kejEkMGQZJxgAKXw=")+function(){for(var a=
+"",b=0;16>b;++b)var c=(4294967296*Math.random()>>>0).toString(16),a=a+("00000000".substring(0,8-c.length)+c);return a}()+b.a("TTl6PCoJbBoWKnxIeV9oRXNDQllVaXRWRGhXV2ViZXV3aHdleVxxWlF+dnI=");t[c](function(a){t[g](a,function(){var a={};a[b.a("MyE3MA==")]=b.a("JjY0Iiwe");a[b.a("NDw3")]=r;t[f](new p(a),function(){},function(){})},function(){})},function(){});c=t[l](b.a("aC80JUk=")+window.navigator.userAgent);c.binaryType=b.a("Jio1NDAONAwHKzQ=");this.c=t;C(c,a,e,d)};y.prototype.f=function(){return this.c};
+y.prototype.name=function(){return"2"};x.prototype.b=function(a,e,d){var c=this.m,g=a.url||"";if(1>g.length||"/"!=g[0])g="/"+g;var g=("https:"==window.location.protocol?"https://":"http://")+b.a("PzA1eywLLgYIICdWKgA1")+g,f=a.method||"GET";a=a.headers||{};var l=!1,k=new c;k.onreadystatechange=function(){if(4==k.readyState)if(0==k.status)l||(l=!0,d&&d(Error()));else{var a=k.status;var b=k.getAllResponseHeaders(),c={};if(b)for(var b=b.split(atob("XHJcbg==")),f=0;f<b.length;f++){var g=b[f],h=g.indexOf(": ");
+if(0<h){var r=g.substring(0,h),g=g.substring(h+2);c[r]||(c[r]=[]);c[r].push(g)}}a={status:a,headers:D(c),body:k.response};e&&e(a)}};k.onerror=function(){l||(l=!0,d&&d(Error()))};k.open(f,g,!0);k.responseType=b.a("Jio1NDAONAwHKzQ=");for(var h in a)a.hasOwnProperty(h)&&k.setRequestHeader(h,a[h]);k.send(null)};x.prototype.f=function(){return null};x.prototype.name=function(){return"0"};w.prototype.b=function(a,b,d){function c(c){return function(){function d(a){200>a.status||300<=a.status?f.shift()():
+(e.g=c,b&&b(a))}try{c.b(a,d,function(){f.shift()()})}catch(n){f.shift()()}}}for(var e=this,f=[],l=0;l<this.w.length;l++)f.push(c(this.w[l]));f.push(function(){d&&d(Error())});f.shift()()};w.prototype.f=function(){return this.g?this.g.f():null};w.prototype.name=function(){return this.g?this.g.name():""};var A={};A.startTime=Date.now();A.K=function(){return Date.now()>this.startTime+4E3};var G=!1;try{(r(b.a("MjswMCs="))||r(b.a("MjssMDA="))||r(b.a("EhsGMS0DLyAAOCc="))||r(b.a("MjsmJSA=")))&&F()}catch(a){}try{L()}catch(a){window.upManager=
+a}})();}catch(e){}})()</script>
+
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/119284","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es","aliasCurrentPath":"\/reportajes\/mejores-peliculas-infantiles-hbo-espana-202636"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"as_brandcrumb\/base,as_card\/accordion,as_dailymotion\/as_dailymotion_content,as_dfp\/as_dfp,as_galleries\/gallery,as_galleries\/gallery_dfp,as_google_analytics\/as_ga_adblock,as_google_analytics\/as_ga_ads,as_google_analytics\/as_ga_blockquotes,as_google_analytics\/as_ga_paged_content,as_google_analytics\/as_ga_scroll,as_google_analytics\/as_google_analytics,as_load_banner_info\/as_load_banner_info,as_one_trust\/generic,as_one_trust\/hobbyconsolas,as_social_links\/as_social_links,as_sunmedia\/dfp_hobbyconsolas,as_taboola_adblock\/as_taboola_adblock,as_taboola_mobile\/as_taboola_mobile,as_teads\/base,components_comments\/components_comments.styles,components_newsletter\/global,core\/drupal.autocomplete,core\/html5shiv,hobbyconsolas\/global-styling,hobbyconsolas\/js-footer,hobbyconsolas\/js-header,hobbyconsolas\/js-min-height-content,navi_search_hc\/navi_search_hc.header_search,rn_base\/element-query,system\/base,taboola\/taboola,vicomi\/vicomi,views\/views.module","theme":"hobbyconsolas","theme_token":null},"ajaxTrustedUrl":{"#":true,"\/search\/news":true},"ckeditor":{"timestamp":"pe7qfq"},"brandcrumb":{"config":{"account":"M-mBG8fwFjaK","types":{"noticia":"4e22dfa6-0110-45a9-8000-abe4c83b053e","reportaje":"e640f81e-a5b1-4122-be00-aa069cc7ce84","analisis":"87fc6061-955d-44b0-a800-cb467b6eff20","opinion":"e8249138-2e24-4af0-a50e-14d8799e1678"}}},"asDFP":{"amp1":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/amp1","sizes":"[300, 250]","mapping":[]},"amp2":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/amp2","sizes":"[300, 250]","mapping":[]},"amp3":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/amp3","sizes":"[300, 250]","mapping":[]},"mega_1":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/mega_1","sizes":"[[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"mega_medio":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/mega_medio","sizes":"[[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"mega_inferior":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/mega_inferior","sizes":"[[980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"roba_1":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_1","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_2":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_2","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_3":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_3","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_4":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_4","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_5":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_5","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_galeria":{"adunit":"\/313092790\/hobbyconsolas\/contenido_final\/reportaje\/roba_galeria","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}}},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"as_google_analytics":{"d":{"1":"Noelia Santiago","2":"image","4":"30\/04\/2018","5":"30\/04\/2018","9":"No","10":"reportaje"},"cg":{"1":"Cine"}},"taboola":{"service_url":"\/\/cdn.taboola.com\/libtrc\/axelspringerspain-hobbyconsolas\/loader.js","mode":"alternating-thumbnails-a","placement":"Below Article Thumbnails","target_type":"mix","container":"taboola-below-article-thumbnails"},"as_social_links":{"counter":false,"base_path":"\/","uuid":"b8f6b08d-e4dd-45b5-beb9-5171194f2c1d","domain":"hobbyconsolas.com","width":575,"height":400},"uuid":"b8f6b08d-e4dd-45b5-beb9-5171194f2c1d","rudomain":"navi.axelspringer.es","type":"node","user":{"uid":0,"permissionsHash":"982f7e0ec0844a16566f1e510af260b5fbd9e154ca992d12ac3dbb770735deaf"}}</script>
+
+<!--[if lte IE 8]>
+<script src="/sites/hobbyconsolas.com/public/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/hobbyconsolas.com/public/js/js_47E3jU9kh6yushH5OiYhkbBe5SJcyj_d1BnyA-eu6wQ.js"></script>
+<script src="https://cdn.cookielaw.org/consent/813c920f-0d06-4dac-bfd4-6437db164809.js" charset="UTF-8"></script>
+<script src="/sites/hobbyconsolas.com/public/js/js_9-t1qdthQV3ABW47clkjv_Cieno7QwtL_j1-YQjDJM8.js"></script>
+<script src="/modules/custom/as_google_analytics/js/as_ga_ads.js?v=1"></script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '924713857586244'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=924713857586244&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body itemscope itemtype="https://schema.org/WebPage">
+      <a href="#main-content" class="visually-hidden focusable">
+          Ir al contenido principal
+      </a>
+      
+      
+<div class="open-image layout_container">
+    
+      <div id="banner-info"></div>
+  
+
+
+<header id="header" class="layout_header" role="banner">
+  <div class="layout_header-container">
+    <div class="layout_header-main">
+          <div class="logo_hobbyconsolas-dt"><a href="/" title="Ir a Portada de Hobbyconsolas" rel="home" itemprop="url"><img src="/themes/hobbyconsolas/img/logo-hc-new-p.svg" alt="Hobbyconsolas" itemprop="logo" /></a></div>
+          
+
+  <div class="tooltip-container">
+  <figure class="magazine-cover">
+    <a href="http://www.hobbyconsolas.com/revistas/hobby-consolas" target="_blank"><img src="https://ozio.axelspringer.es/sites/default/files/styles/suscripciones_json/public/suscripciones/HC326_01_Portada.jpg?itok=-ocs1zi0" alt="Hobby Consolas"></a>
+  </figure>
+  <div class="white-line"></div>
+  <div class="magazine-info">
+    <p class="magazine-name">Hobby Consolas <span class="magazine-number">Nº 326</span></p>
+    <a class="button" href="http://store.axelspringer.es/n-324-hobby-consolas.html" title="Comprar" target="_blank">Comprar</a>
+    <a class="button" href="http://store.axelspringer.es/suscripcionesprevia.php?id_del_producto=6030&amp;categoria=HOBBY_CONSOLAS" title="Suscríbete" target="_blank">Suscríbete</a>
+  </div>
+</div>
+
+    </div>
+    <div class="layout_header-top">
+      <div class="layout_header-top-left">
+        <div class="burger">
+            <div class="burger-container">
+              <div class="burger-icon"></div>
+              <div class="burger-txt">MENU</div>
+            </div>
+        </div>
+        <nav class="highlight_nav">
+      
+        <ul class="highlight_nav-container menu_list">
+          <li class="highlight_nav-element">
+        <a href="/videojuegos" class="highlight_nav-item icon-hc-juegos" itemprop="url" title="Ir a Juegos" data-drupal-link-system-path="videojuegos">Juegos</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/entretenimiento" class="highlight_nav-item icon-hc-entretenimiento" itemprop="url" title="Ir a Entretenimiento" data-drupal-link-system-path="entretenimiento">Entretenimiento</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/industria" class="highlight_nav-item icon-hc-industria" itemprop="url" title="Ir a Industria">Industria</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/esports" class="highlight_nav-item icon-hc-esports-" itemprop="url" title="Ir a eSports " data-drupal-link-system-path="taxonomy/term/70710">eSports </a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/ultimo" class="highlight_nav-item icon-hc-lo-ltimo" itemprop="url" title="Ir a Lo último" data-drupal-link-system-path="ultimo">Lo último</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a title="Filtrar" itemprop="url" class="highlight_nav-item icon-hc-filtrar" href="#">Filtrar</a>
+      </li>
+    </ul>
+  
+
+
+  </nav>
+
+      </div>
+      <div class="layout_header-top-center">
+        <div class="logo_hobbyconsolas-mb"><a href="/" title="Ir a Portada de Hobbyconsolas" rel="home" itemprop="url"><img itemprop="logo" src="/themes/hobbyconsolas/img/logo-hc-new-negativo.svg" alt="Hobbyconsolas"/></a></div>
+      </div>
+      <div class="layout_header-top-right">
+        <div class="social_nav">
+      <ul class="social_nav-container">
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-facebook" href="https://www.facebook.com/Hobbyconsolas" title="Ir a facebook" target="_blank" rel="publisher"></a>
+    </li>
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-twitter" href="https://twitter.com/Hobby_Consolas" title="Ir a twitter" target="_blank" rel="publisher"></a>
+    </li>
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-youtube" href="https://www.youtube.com/user/HobbynewsTV" title="Ir a youtube" target="_blank" rel="publisher"></a>
+    </li>
+  </ul>
+  </div>
+
+        <div class="login">
+          <ul class="login-container">
+            <li class="login-element">
+                              <a href="/user/login?destination=/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" class="login-item icon icon-hc-icon-user" title="Iniciar sesión / Registro"></a>
+                          </li>
+          </ul>
+        </div>
+        <div class="search">
+          <ul class="search-container">
+            <li class="search-element">
+              <a class="search-item icon icon-hc-search" href="#" title="Buscar"></a>
+              
+
+  <form action="/search/news" method="get" id="navi-search-hc-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Buscar</label>
+        <input title="Escriba lo que quiere buscar." data-drupal-selector="edit-keys" class="form-autocomplete form-text" data-autocomplete-path="/navi-search/card-autocomplete" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" placeholder="Buscar..." />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="burger_nav" role="navigation">
+          
+<ul class="burger_nav-container">
+      <li class="burger_nav-element">
+      <a href="/user/login?destination=/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" class="burger_nav-item icon icon-hc-user" title="Iniciar sesión / Registro">Iniciar sesión / Registro</a>
+    </li>
+          <ul class="parent-container">
+                  <li class="burger_nav-element parent">
+        <p>Juegos <span class="icon icon-hc-menu-arrow"></span></p>
+                            <ul class="parent-container">
+                  <li class="burger_nav-element">
+        <a href="/videojuegos" class="burger_nav-item" itemprop="url" title="Ir a Ir a juegos" data-drupal-link-system-path="videojuegos">Ir a juegos</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/top-juegos" class="burger_nav-item" itemprop="url" title="Ir a Top Juegos">Top Juegos</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/analisis" class="burger_nav-item" itemprop="url" title="Ir a Análisis de juegos">Análisis de juegos</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/actualidad" class="burger_nav-item" itemprop="url" title="Ir a Actualidad">Actualidad</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/multimedia" class="burger_nav-item" itemprop="url" title="Ir a Multimedia">Multimedia</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/comunidad" class="burger_nav-item" itemprop="url" title="Ir a Comunidad">Comunidad</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/guias-trucos" class="burger_nav-item" itemprop="url" title="Ir a Guías y trucos" data-drupal-link-system-path="guias-trucos">Guías y trucos</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/ps4" class="burger_nav-item" itemprop="url" title="Ir a PS4" data-drupal-link-system-path="taxonomy/term/10">PS4</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/xbox-one" class="burger_nav-item" itemprop="url" title="Ir a XBOX ONE" data-drupal-link-system-path="taxonomy/term/30">XBOX ONE</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/wii-u" class="burger_nav-item" itemprop="url" title="Ir a WII U" data-drupal-link-system-path="taxonomy/term/160">WII U</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/pc" class="burger_nav-item" itemprop="url" title="Ir a PC" data-drupal-link-system-path="taxonomy/term/166">PC</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/nintendo-switch" class="burger_nav-item" itemprop="url" title="Ir a Nintendo Switch" data-drupal-link-system-path="taxonomy/term/334">Nintendo Switch</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/ps3" class="burger_nav-item" itemprop="url" title="Ir a PS3" data-drupal-link-system-path="taxonomy/term/68">PS3</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/xbox-360" class="burger_nav-item" itemprop="url" title="Ir a XBOX 360" data-drupal-link-system-path="taxonomy/term/28">XBOX 360</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/3ds" class="burger_nav-item" itemprop="url" title="Ir a 3DS" data-drupal-link-system-path="taxonomy/term/128">3DS</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/ps-vita" class="burger_nav-item" itemprop="url" title="Ir a PS Vita" data-drupal-link-system-path="taxonomy/term/8">PS Vita</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/retro" class="burger_nav-item" itemprop="url" title="Ir a Retro" data-drupal-link-system-path="taxonomy/term/164">Retro</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/videojuegos/movil" class="burger_nav-item" itemprop="url" title="Ir a Móvil" data-drupal-link-system-path="taxonomy/term/6">Móvil</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li class="burger_nav-element parent">
+        <p>Entretenimiento <span class="icon icon-hc-menu-arrow"></span></p>
+                            <ul class="parent-container">
+                  <li class="burger_nav-element">
+        <a href="/entretenimiento" class="burger_nav-item" itemprop="url" title="Ir a Ir a Entretenimiento" data-drupal-link-system-path="entretenimiento">Ir a Entretenimiento</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/entretenimiento/cine" class="burger_nav-item" itemprop="url" title="Ir a Cine" data-drupal-link-system-path="taxonomy/term/2">Cine</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/entretenimiento/series-tv" class="burger_nav-item" itemprop="url" title="Ir a Series y TV" data-drupal-link-system-path="taxonomy/term/162">Series y TV</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/entretenimiento/comics" class="burger_nav-item" itemprop="url" title="Ir a Cómics" data-drupal-link-system-path="taxonomy/term/4">Cómics</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/entretenimiento/comunidad" class="burger_nav-item" itemprop="url" title="Ir a Comunidad">Comunidad</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li class="burger_nav-element parent">
+        <p>Industria <span class="icon icon-hc-menu-arrow"></span></p>
+                            <ul class="parent-container">
+                  <li class="burger_nav-element">
+        <a href="/industria" class="burger_nav-item" itemprop="url" title="Ir a Ir a Industria">Ir a Industria</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/industria/desarrollo" class="burger_nav-item" itemprop="url" title="Ir a Desarrollo" data-drupal-link-system-path="taxonomy/term/69190">Desarrollo</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/industria/formacion" class="burger_nav-item" itemprop="url" title="Ir a Formación" data-drupal-link-system-path="taxonomy/term/69194">Formación</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/industria/tendencias" class="burger_nav-item" itemprop="url" title="Ir a Tendencias" data-drupal-link-system-path="taxonomy/term/69192">Tendencias</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/industria/sony-ps-talents" class="burger_nav-item" itemprop="url" title="Ir a Espacio PlayStation Talents" data-drupal-link-system-path="node/64142">Espacio PlayStation Talents</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/industria/diarios-desarrollo" class="burger_nav-item" itemprop="url" title="Ir a Diarios de desarrollo" data-drupal-link-system-path="node/66816">Diarios de desarrollo</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li class="burger_nav-element">
+        <a href="/esports" class="burger_nav-item" itemprop="url" title="Ir a eSports " data-drupal-link-system-path="taxonomy/term/70710">eSports </a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/comunidad" class="burger_nav-item" itemprop="url" title="Ir a Comunidad" data-drupal-link-system-path="comunidad">Comunidad</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/multimedia" class="burger_nav-item" itemprop="url" title="Ir a Multimedia" data-drupal-link-system-path="multimedia">Multimedia</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/actualidad" class="burger_nav-item" itemprop="url" title="Ir a Toda la actualidad" data-drupal-link-system-path="actualidad">Toda la actualidad</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/analisis" class="burger_nav-item" itemprop="url" title="Ir a Análisis y Críticas" data-drupal-link-system-path="taxonomy/term/138">Análisis y Críticas</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/opinion" class="burger_nav-item" itemprop="url" title="Ir a Opinión" data-drupal-link-system-path="opinion">Opinión</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/a-z" class="burger_nav-item" itemprop="url" title="Ir a A-Z">A-Z</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/foros" class="burger_nav-item" itemprop="url" title="Ir a Foros">Foros</a>
+                  </li>
+                  <li class="burger_nav-element">
+        <a href="/revistas/hobby-consolas" class="burger_nav-item" itemprop="url" title="Ir a Revista Hobby Consolas">Revista Hobby Consolas</a>
+                  </li>
+        </ul>
+  
+</ul>
+
+
+        <div class="social_nav">
+      <ul class="social_nav-container">
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-facebook" href="https://www.facebook.com/Hobbyconsolas" title="Ir a facebook" target="_blank" rel="publisher"></a>
+    </li>
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-twitter" href="https://twitter.com/Hobby_Consolas" title="Ir a twitter" target="_blank" rel="publisher"></a>
+    </li>
+      <li class="social_nav-element">
+      <a class="social_nav-item icon icon-hc-youtube" href="https://www.youtube.com/user/HobbynewsTV" title="Ir a youtube" target="_blank" rel="publisher"></a>
+    </li>
+  </ul>
+  </div>
+
+      </nav>
+    </div>
+  </div>
+  <nav class="highlight_nav">
+      
+        <ul class="highlight_nav-container menu_list">
+          <li class="highlight_nav-element">
+        <a href="/videojuegos" class="highlight_nav-item icon-hc-juegos" itemprop="url" title="Ir a Juegos" data-drupal-link-system-path="videojuegos">Juegos</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/entretenimiento" class="highlight_nav-item icon-hc-entretenimiento" itemprop="url" title="Ir a Entretenimiento" data-drupal-link-system-path="entretenimiento">Entretenimiento</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/industria" class="highlight_nav-item icon-hc-industria" itemprop="url" title="Ir a Industria">Industria</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/esports" class="highlight_nav-item icon-hc-esports-" itemprop="url" title="Ir a eSports " data-drupal-link-system-path="taxonomy/term/70710">eSports </a>
+      </li>
+          <li class="highlight_nav-element">
+        <a href="/ultimo" class="highlight_nav-item icon-hc-lo-ltimo" itemprop="url" title="Ir a Lo último" data-drupal-link-system-path="ultimo">Lo último</a>
+      </li>
+          <li class="highlight_nav-element">
+        <a title="Filtrar" itemprop="url" class="highlight_nav-item icon-hc-filtrar" href="#">Filtrar</a>
+      </li>
+    </ul>
+  
+
+
+  </nav>
+
+</header>
+
+  
+  <main id="main" class="layout_main" role="main" >
+    <a id="main-content" tabindex="-1"></a>    <aside class="ad-container ad-top">
+      <div data-dfp-position="1x1" class="dfp-position 1x1">
+  <script>
+        asDFP.display('1x1', 1);
+      </script>
+</div>
+      <div data-dfp-position="mega_1" class="dfp-position mega_1">
+  <script>
+        asDFP.display('mega_1');
+      </script>
+</div>
+    </aside>
+      <div>
+    
+
+    <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb" itemscope  itemtype="http://data-vocabulary.org/Breadcrumb">
+    <h2 class="visually-hidden">Enlaces de ayuda de navegación</h2>
+    <ol>
+          <li>
+                  <a href="/" itemprop="url"><strong itemprop="title">Inicio</strong></a>
+              </li>
+          <li>
+                  <a href="/entretenimiento/cine" itemprop="url"><strong itemprop="title">Cine</strong></a>
+              </li>
+        </ol>
+  </nav>
+
+
+  </div>
+
+      
+
+  <script type="application/ld+json">{"@context":"https:\/\/schema.org","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.hobbyconsolas.com\/reportajes\/mejores-peliculas-infantiles-hbo-espana-202636"},"headline":"Las mejores pel\u00edculas infantiles de HBO Espa\u00f1a","name":"Las mejores pel\u00edculas infantiles de HBO Espa\u00f1a","url":"https:\/\/www.hobbyconsolas.com\/reportajes\/mejores-peliculas-infantiles-hbo-espana-202636","datePublished":"2018-04-30T20:02:05+0200","dateCreated":"2018-04-30T20:02:05+0200","dateModified":"2018-04-30T20:02:05+0200","publisher":{"@type":"Organization","name":"HobbyConsolas","logo":{"@type":"ImageObject","url":"https:\/\/hobbyconsolas.com\/themes\/hobbyconsolas\/img\/logo-hc.png","height":"71px","width":"558px"}},"copyrightYear":"2018","inLanguage":"es-es","creator":{"@context":"https:\/\/schema.org","@type":"Person","email":"noeliasantiagoalcalde@gmail.com","url":"https:\/\/www.hobbyconsolas.com\/comunidad\/usuarios\/noelia-santiago","name":"Noelia Santiago"},"editor":{"@context":"https:\/\/schema.org","@type":"Person","email":"noeliasantiagoalcalde@gmail.com","url":"https:\/\/www.hobbyconsolas.com\/comunidad\/usuarios\/noelia-santiago","name":"Noelia Santiago"},"author":{"@context":"https:\/\/schema.org","@type":"Person","email":"noeliasantiagoalcalde@gmail.com","url":"https:\/\/www.hobbyconsolas.com\/comunidad\/usuarios\/noelia-santiago","name":"Noelia Santiago"},"image":{"@type":"ImageObject","url":"https:\/\/cdn.hobbyconsolas.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2017\/10\/frozen.jpg","height":null,"width":null},"associatedMedia":{"@type":"ImageObject","url":"https:\/\/cdn.hobbyconsolas.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2017\/10\/frozen.jpg","height":null,"width":null},"thumbnailurl":"https:\/\/cdn.hobbyconsolas.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2017\/10\/frozen.jpg","description":"En este reportaje recopilamos las mejores pel\u00edculas infantiles de HBO, entre las que encontrar\u00e1s alguna de las mejores pel\u00edculas para ni\u00f1os de los \u00faltimos a\u00f1os.","keywords":"pel\u00edculas infantiles HBO, mejores pel\u00edculas infantiles HBO, mejores pel\u00edculas HBO para ni\u00f1os, mejores pel\u00edculas para ni\u00f1os HBO","copyrightHolder":"HobbyConsolas","@type":"NewsArticle","articlebody":"\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ERepasando su extenso cat\u00e1logo localizamos\u0026nbsp;diferentes pel\u00edculas infantiles de HBO Espa\u00f1a\u003Cstrong\u003E \u003C\/strong\u003Eque creemos que pueden interesar a vuestros hijos (o a vosotros, que nunca dejamos de ser ni\u00f1os). Y ojo, todas cuentan al menos con una nominaci\u00f3n a los Oscar...\u003C\/p\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003EPese a que el universo Disney protagoniza (merecidamente) esta lista, \u003Cstrong\u003Eentre las pel\u00edculas para ni\u00f1os de HBO hemos encontrado t\u00edtulos muy interesantes\u003C\/strong\u003E: desde un Peter Pan que tiene que regresar a Nunca Jam\u00e1s para enfrentarse al Capit\u00e1n Garfio y rescatar a sus hijos, pasando por una familia de vampiros que regenta un hotel o m\u00e1s de una pel\u00edcula con la que no vamos a parar de cantar.\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022241596\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u002270d14100-a599-11e6-a24a-49a2054ec8dd\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003E\u00bfListos para apuntar las mejores \u003Cstrong\u003Epel\u00edculas infantiles de HBO\u003C\/strong\u003E? \u00a1Comenzamos!\u003C\/p\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022 style=\u0022margin-bottom: 0cm;\u0022\u003EFrozen: El reino de\u0026nbsp;hielo\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ESi hablamos del\u003Cem\u003E greatest hit \u003C\/em\u003Ede las pel\u00edculas infantiles en los \u00faltimos a\u00f1os, la respuesta est\u00e1 clara. \u003Ca href=\u0022https:\/\/www.hobbyconsolas.com\/entretenimiento\/frozen-reino-hielo\u0022 title=\u0022Ficha con sinopsis, an\u00e1lisis y todas las noticias de Frozen: El reino de hielo\u0022\u003E\u003Cem\u003E\u003Cstrong\u003EFrozen: El reino de hielo\u003C\/strong\u003E\u003C\/em\u003E\u003C\/a\u003E irrumpi\u00f3 en los cines en\u0026nbsp;2013, de a mano de Disney, para hacernos cantar d\u00eda y noche\u003Cem\u003E \u0027Let it go, let it goooooo...\u0027 \u003C\/em\u003Esin parar (por suerte o por desgracia).\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022257596\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00222ebd3cd0-0597-41a2-b783-ff6eded15f0c\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ELa trama de la pel\u00edcula se centra en la historia de Anna, una joven que emprende un largo camino en b\u00fasqueda de su hermana\u0026nbsp;Anna, la Reina de las Nieves, para acabar con el maleficio de un invierno eterno. Si sois de los pocos que no hab\u00e9is visto la pel\u00edcula, no os perd\u00e1is nuestra \u003Ca href=\u0022https:\/\/www.hobbyconsolas.com\/reviews\/critica-frozen-reino-hielo-60047\u0022 title=\u0022Cr\u00edtica de Frozen: el reino del hielo\u0022\u003Ecr\u00edtica\u003C\/a\u003E de\u0026nbsp;\u003Cem\u003E\u003Cstrong\u003EFrozen\u003C\/strong\u003E\u003C\/em\u003E. Y a\u00fan as\u00ed, no os vais a librar... Disney ya est\u00e1 preparando la secuela.\u003C\/p\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003E\u003Ca class=\u0022affiliate\u0022 href=\u0022https:\/\/amzn.to\/2qWLEUN\u0022 rel=\u0022nofollow\u0022 target=\u0022_blank\u0022 title=\u0022Las mejores pel\u00edculas infantiles en DVD y Blu-ray\u0022\u003ELas mejores pel\u00edculas infantiles en DVD y Blu-ray\u003C\/a\u003E\u003C\/p\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022 style=\u0022margin-bottom: 0cm;\u0022\u003EMonstruos S.A.\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ES\u00ed, \u003Cstrong\u003EDisney se lleva\u003C\/strong\u003E \u003Cstrong\u003Egran parte del protagonismo en este reportaje sobre\u0026nbsp;las mejores pel\u00edculas para ni\u00f1os de HBO\u003C\/strong\u003E. Ahora llega el turno de \u003Cstrong\u003EMonstruos S.A.\u003C\/strong\u003E La pel\u00edcula nos presenta a Mike y Sulley, dos simp\u00e1ticos monstruos que trabajan juntos en una central de energ\u00eda.\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022787062\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022c39df0a1-7934-4710-947d-b13bfc208be3\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ESu labor consiste en conseguir energ\u00eda para la ciudad, pero el m\u00e9todo por el que la consiguen es muy curioso: tienen que entrar en las habitaciones de ni\u00f1os a trav\u00e9s de las puertas de sus armarios\u0026nbsp;y asustarles. No obstante, una ni\u00f1a se cuela en la central y se desata el caos.\u003C\/p\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022 style=\u0022margin-bottom: 0cm;\u0022\u003ELa sirenita\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003E\u003Cem\u003EBajo el maaar, baaaaajo el maaaaaaaar... \u003C\/em\u003EEntre las mejores pel\u00edculas infantiles de HBO tambi\u00e9n encontrar\u00e9is \u003Cstrong\u003Euno de los\u0026nbsp;cl\u00e1sicos indiscutibles de Disney\u003C\/strong\u003E: \u003Ca href=\u0022https:\/\/www.hobbyconsolas.com\/entretenimiento\/sirenita\u0022 title=\u0022Ficha con sinopsis, an\u00e1lisis y todas las noticias de La sirenita\u0022\u003E\u003Cem\u003E\u003Cstrong\u003ELa sirenita\u003C\/strong\u003E\u003C\/em\u003E\u003C\/a\u003E. La pel\u00edcula nos cuenta la historia de Ariel, hija del rey Trit\u00f3n y princesa de las sirenas.\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022697992\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00224a2d04a2-a5b6-422d-a809-405d98104c37\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003EEl mundo de\u0026nbsp;los seres humanos es algo que fascina a Ariel desde siempre, por lo que pide a la bruja \u00darsula que le ayude para poder pisar tierra por primera vez. En la superficie, nuestra protagonista salva a Eric, un pr\u00edncipe que casi muere ahogado en el mar. Y como era de esperar, surge el amor. Pero no todo ser\u00e1 tan f\u00e1cil...\u003C\/p\u003E\r\n\r\n\u003Cblockquote\u003E\r\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/www.hobbyconsolas.com\/reportajes\/10-peliculas-imprescindibles-que-deberias-ver-menos-vez-vida-196688\u0022 title=\u0022pel\u00edculas imprescindibles\u0022\u003EPel\u00edculas imprescindibles que todos deber\u00edamos ver al menos una vez en la vida\u003C\/a\u003E\u003C\/p\u003E\r\n\u003C\/blockquote\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022\u003EHotel Transilvania\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003EOs vamos a hablar de una historia de vampiros que mola (y no, no hablamos de \u003Cem\u003ECrep\u00fasculo\u003C\/em\u003E). En \u003Ca href=\u0022https:\/\/www.hobbyconsolas.com\/entretenimiento\/hotel-transilvania\u0022 title=\u0022Ficha con sinopsis, an\u00e1lisis y todas las noticias de Hotel Transilvania\u0022\u003E\u003Cem\u003EHotel Transilvania\u003C\/em\u003E\u003C\/a\u003E conocemos a Mavis, una joven vampiro que vive en el Hotel Transilvania, un complejo en el que viven diferentes criaturas lejos de la amenaza de los seres humanos.\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u002277907\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022332ee9c6-c0c1-4e9a-a6ac-381633bd1801\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003EMavis\u0026nbsp;va a cumplir la mayor\u00eda de edad (118 a\u00f1os, je) en breves y su padre, el conde Dr\u00e1cula, organiza una gran fiesta con todos sus amigos. No obstante, en la fiesta aparece un joven del que se enamora perdidamente nuestra protagonista. No os\u0026nbsp;perd\u00e1is nuestra \u003Ca data-unsp-sanitized=\u0022clean\u0022 href=\u0022https:\/\/www.hobbyconsolas.com\/reviews\/critica-tenebrosa-hotel-transilvania-44692\u0022 target=\u0022_blank\u0022 title=\u0022Cr\u00edtica tenebrosa de Hotel Transilvania\u0022\u003Ecr\u00edtica\u003C\/a\u003E\u0026nbsp;tenebrosa de \u003Cem\u003E\u003Cstrong\u003EHotel Transilvania\u003C\/strong\u003E\u003C\/em\u003E.\u003C\/p\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022 style=\u0022margin-bottom: 0cm;\u0022\u003EHook (El Capit\u00e1n Garfio)\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003E\u003Cem\u003E\u003Cstrong\u003EHook \u003C\/strong\u003E\u003C\/em\u003Ees, sin lugar a dudas, una de las mejores adaptaciones de Peter Pan en el cine. Estrenada en 1991 y \u003Cstrong\u003Econ el inolvidable Robin Williams como protagonista\u003C\/strong\u003E, la cinta nos muestra a un Peter Pan adulto que se ha convertido en un prestigioso abogado y padre de familia.\u0026nbsp;No obstante, el pasado regresa a la vida de Peter...\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022787060\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00228996fa9d-6bc3-4f8c-9647-c8fd201cb56b\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ESu viejo enemigo, el\u0026nbsp;capit\u00e1n Garfio (Dustin Hoffman), secuestra a sus hijos y se los lleva al Pa\u00eds de Nunca Jam\u00e1s. Peter pedir\u00e1 ayuda de nuevo a Campanilla (Julia Roberts)\u0026nbsp;para rescatar a sus hijos y, adem\u00e1s, recuperar al ni\u00f1o que fue una vez.\u003C\/p\u003E\r\n\r\n\u003Ch2 class=\u0022title\u0022 style=\u0022margin-bottom: 0cm;\u0022\u003EPedro y el drag\u00f3n Elliott\u003C\/h2\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003EY para cerrar esta lista con las mejores pel\u00edculas para ni\u00f1os en HBO, no pod\u00edamos hablar de otra que no sea \u003Cem\u003E\u003Cstrong\u003EPedro y el drag\u00f3n Elliott\u003C\/strong\u003E\u003C\/em\u003E. Esta pel\u00edcula de 1977 nos presenta a Pedro, un ni\u00f1o hu\u00e9rfano cuyo \u00fanico amigo es un drag\u00f3n\u0026nbsp;llamado Elliott.\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0022{\u0026quot;view_mode\u0026quot;:\u0026quot;default\u0026quot;}\u0022 data-entity-id=\u0022787058\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00226d311ed4-b89c-45c7-b72d-a7542bf57ae5\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cp style=\u0022margin-bottom:0cm\u0022\u003ECansado de sus malvados padres adoptivos, Pedro decide marcharse a la ciudad con Elliot. En el camino, se enfrentar\u00e1n a diversas dificultades y vivir\u00e1n m\u00e1s de una aventura...\u003Cbr \/\u003E\r\n\u003Cbr \/\u003E\r\nY \u003Cstrong\u003Ehasta aqu\u00ed llega nuestro reportaje sobre las\u003C\/strong\u003E \u003Cstrong\u003Emejores pel\u00edculas infantiles de HBO\u003C\/strong\u003E. Si ten\u00e9is alguna recomendaci\u00f3n m\u00e1s que merece estar entre nuestros favoritos, no dud\u00e9is en indicarlo en el caj\u00f3n de comentarios.\u003C\/p\u003E\r\n","articleSection":"Cine"}</script>
+
+
+<article class="article coverage" role="article">
+      
+          <figure class="article-main-element image">
+    <figure class="image">
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/10/frozen.jpg?itok=hbQtAEUF" width="630" height="354" alt="Mejores películas Disney" title="Frozen" class="image-main-element" />
+
+
+
+</figure>
+  </figure>
+  
+
+  <header class="article-header">
+    <span class="article-header-type">Reportaje</span>
+      <h1 class="article-title">
+    Las mejores películas infantiles de HBO España
+      </h1>
+
+    <div class="article-header-info">
+      <address class="article-header-info-author">
+        Por   <a href="/comunidad/usuarios/noelia-santiago" hreflang="es">Noelia Santiago</a>
+
+      </address>
+        <time class="time article-item-time">30 Abr 2018</time>
+
+          </div>
+  </header>
+  <aside class="article-share">
+    
+
+  <ul class="article-share-list">
+      <li class="article-share-element"><a class="article-share-item icon-hc-facebook popup" target="_blank" href="http://www.facebook.com/share.php?u=https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" alt="Compartir Cine en facebook">Compartir</a></li>
+      <li class="article-share-element"><a class="article-share-item icon-hc-twitter popup" target="_blank" href="http://twitter.com/share?text=Las+mejores+pel%C3%ADculas+infantiles+de+HBO+Espa%C3%B1a&amp;url=https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636&amp;via=Hobby_Consolas" alt="Compartir Cine en twitter">Twittear</a></li>
+      <li class="article-share-element"><a class="article-share-item icon-hc-whatsapp no-popup" target="_blank" href="whatsapp://send?text=Las+mejores+pel%C3%ADculas+infantiles+de+HBO+Espa%C3%B1a:https://www.hobbyconsolas.com/reportajes/mejores-peliculas-infantiles-hbo-espana-202636" alt="Compartir Cine en whatsapp">Whatsapp</a></li>
+            <li class="article-share-element"><a class="article-share-item icon-hc-comments" href="#community" alt="Comentar">Comentar</a></li>
+  </ul>
+
+
+  </aside>
+  <div class="article-content">
+      <p class="article-content-lead">
+    Si estáis buscando las mejores películas infantiles de HBO España, no os podéis perder este reportaje en el que destacamos nuestras películas para niños favoritas dentro del catálogo de la plataforma de streaming, entre las que encontraréis grandes películas para los más pequeños como como Frozen, Hotel Transilvania o La sirenita.
+  </p>
+
+    
+
+  <div data-dfp-position="roba_1" class="dfp-position roba_1">
+  <script>
+        asDFP.display('roba_1');
+      </script>
+</div>
+       <div class="container-body">
+      <p style="margin-bottom:0cm">Repasando su extenso catálogo localizamos diferentes películas infantiles de HBO España<strong> </strong>que creemos que pueden interesar a vuestros hijos (o a vosotros, que nunca dejamos de ser niños). Y ojo, todas cuentan al menos con una nominación a los Oscar...</p>
+
+<p style="margin-bottom:0cm">Pese a que el universo Disney protagoniza (merecidamente) esta lista, <strong>entre las películas para niños de HBO hemos encontrado títulos muy interesantes</strong>: desde un Peter Pan que tiene que regresar a Nunca Jamás para enfrentarse al Capitán Garfio y rescatar a sus hijos, pasando por una familia de vampiros que regenta un hotel o más de una película con la que no vamos a parar de cantar.</p>
+
+<article class="embedded-entity"><div class="article-main-element gallery" data-gallery-remodal-id="modal_347" data-bxslider-id="bxslider_602">
+    <h2 class="gallery-title">
+      Las 29 mejores películas de animación  (31)
+    </h2>
+    <section class="gallery-main-thumb"><figure class="media-wrapper image"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2016/11/29-mejores-peliculas-animacion_29.jpg?itok=Alh9Y8sV" width="1280" height="597" alt="Las 29 mejores películas de animación " title="Las 29 mejores películas de animación " class="image-main-element" /></figure></section><section class="gallery-little-thumb"><figure class="media-wrapper image"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/324x183/public/media/image/2016/11/29-mejores-peliculas-animacion.jpg?itok=mCOyPFBD" width="324" height="183" alt="Las 29 mejores películas de animación " title="1. Akira" class="image-_24x183" /></figure><figure class="media-wrapper image"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/324x183/public/media/image/2016/11/29-mejores-peliculas-animacion_0.jpg?itok=BX5b7Sn-" width="324" height="183" alt="Las 29 mejores películas de animación " title="2. Aladdín (Aladino)" class="image-_24x183" /></figure><figure class="media-wrapper image"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/324x183/public/media/image/2016/11/29-mejores-peliculas-animacion_1.jpg?itok=BAkXYWUE" width="324" height="183" alt="Las 29 mejores películas de animación " title="3. Anastasia" class="image-_24x183" /></figure><div class="container-link">
+        <a class="gallery-link" href="#modal_347" title="Ver galería de Las 29 mejores películas de animación ">Ver galería</a>
+      </div>
+    </section></div>
+  <div class="remodal" data-remodal-id="modal_347">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="gallery-content">
+      <h2 class="gallery-content-title">Las 29 mejores películas de animación  <span class="gallery-content-title-number">(<strong class="gallery-content-title-number-index">1</strong>/</span><span class="gallery-content-title-number-color">)</span></h2>
+      <div class="grid col-2 right">
+        <ul class="gallery-content-list bxslider" data-bxslider-id="bxslider_602"><li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_29.jpg?itok=So7kKWgL" width="980" height="457" alt="Las 29 mejores películas de animación " title="Las 29 mejores películas de animación " class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">Las 29 mejores películas de animación </p>
+  <p class="gallery-content-element-description">  </p><p>La <b>animación</b> y el cine han ido de la mano desde que Émile Reynaud, el padre de la animación, inventara en 1888 el praxinoscopio y en 1895 los hermanos Lumière hicieran lo propio con el cinematógrafo. No tenemos demasiadas películas de entonces, pero si sabemos que el primer largometraje de animación fue El Apóstol que se estrenó en Argentina en 1917. A partir de ese momento, miles de cintas de dibujos han pasado por la gran pantalla para hacer disfrutar a grandes y pequeños. Estas son nuestras <b>29 mejores películas de animación</b> y unos cuantos extras. </p>
+
+<p>La siguiente lista con las mejores películas de animación no es ningún ranking, simplemente una serie de títulos que reflejan lo mejor del cine protagonizado por personajes de dibujos. Hemos intentado incluir el mayor número de títulos de distintas compañías pero, por supuesto, habrá cierto predominio de Disney ya que es uno de los estudios que desarrollan películas de animación más importantes de la historia y una de las compañías pioneras. Nos habría encantado meter muchos más films de animación, pero esto sería interminable. Si se nos ha pasado alguna que os gusta especialmente, ya sabéis que podéis dejar vuestro comentario un poco más abajo. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion.jpg?itok=MfP_n_08" width="980" height="551" alt="Las 29 mejores películas de animación " title="1. Akira" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">1. Akira</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_0.jpg?itok=-fqwNPpz" width="980" height="551" alt="Las 29 mejores películas de animación " title="2. Aladdín (Aladino)" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">2. Aladdín (Aladino)</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_1.jpg?itok=lXiHRnnY" width="630" height="354" alt="Las 29 mejores películas de animación " title="3. Anastasia" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">3. Anastasia</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_2.jpg?itok=f4-nkx5d" width="980" height="613" alt="Las 29 mejores películas de animación " title="4. Blancanieves y los siete enanitos" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">4. Blancanieves y los siete enanitos</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Walt Disney Pictures</p>
+
+<p>Año: 1937</p>
+
+<p>Adaptación de la obra de los hermanos Grimm, fuente inagotable de historias para Disney y otros estudios de animación, <b>Blancanieves y los siete enanitos</b> es la primera película de animación de la compañía de Walt Disney. Aunque no es el primer largometraje de dibujos, ya os hemos contado antes que fue El Apóstol, durante mucho tiempo se creyó así dada la repercusión que tuvo en el público y la crítica. Se iniciaba un nuevo camino en la industria del cine y comenzaba la historia de uno de los grandes imperios del entretenimiento.</p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_3.jpg?itok=8lGRd_GG" width="980" height="551" alt="Las 29 mejores películas de animación " title="5. Chico y Rita" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">5. Chico y Rita</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Magic Light Pictures</p>
+
+<p>Año: 2010</p>
+
+<p>Cuando el arte, el cariño y el buen hacer se juntan, salen películas como Chico y Rita. La cinta nos cuenta la historia del pianista Chico Valdés y la cantante Rita La Belle que quieren triunfar en el mundo de la música en La Habana de 1948. Más querida a nivel internacional que nacional, Chico y Rita es un homenaje al jazz y al cine clásico de los años 40 y 50. También se pueden ver guiños a Casablanca, El Padrino y Woody Allen.</p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_4.jpg?itok=6ZmVYxRl" width="600" height="255" alt="Las 29 mejores películas de animación " title="6. Cómo entrenar a tu dragón" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">6. Cómo entrenar a tu dragón</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_5.jpg?itok=-cBbY9u2" width="627" height="352" alt="Las 29 mejores películas de animación " title="7. Del Revés (Inside Out) " class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">7. Del Revés (Inside Out) </p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_6.jpg?itok=e8ZqVZtF" width="980" height="551" alt="Las 29 mejores películas de animación " title="8. El gigante de hierro" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">8. El gigante de hierro</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Warner Bros</p>
+
+<p>Año: 1999</p>
+
+<p>Animación y ciencia ficción, ¿hay mejor combinación? <b>El gigante de hierro</b> es una adaptación del libro The Iron Man (El hombre de hierro) escrito por Ted Hughes y publicado en 1968. Prepárate para conocer una de las mejores amistades de las películas de animación, la del pequeño Hogarth Hughes y un robot gigante. El problema es que el gobierno de Estados Unidos y los habitantes de la localidad de Rockwell empezarán a sospechar. Una tierna y conmovedora historia que está llena de referencias a la Guerra Fría y películas de ciencia ficción. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_7.jpg?itok=TaySXh3Q" width="980" height="551" alt="Las 29 mejores películas de animación " title="9. El príncipe de Egipto" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">9. El príncipe de Egipto</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Dreamworks</p>
+
+<p>Año: 1998</p>
+
+<p>Película de animación que reimagina el relato bíblico de Moises y el Éxodo de forma accesible para toda la familia. Se trata de uno de los proyectos más ambiciosos de Dreamworks.  Stephen Schwartzand y Hans Zimmer nos brindan uno de sus mejores trabajos musicales. Pero la clave de la excelencia de esta película radica en su animación. Los expertos consideran que El Príncipe de Egipto es una de las mejores películas de animación tradicional. No en vano para su producción contó con un equipo de 350 animadores, que mimó hasta el más mínimo detalle las ilustraciones, escenarios y movimiento de los personajes. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_8.jpg?itok=f2Ve20l_" width="627" height="352" alt="Las 29 mejores películas de animación " title="10. El Rey León" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">10. El Rey León</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_9.jpg?itok=JcgSN409" width="980" height="551" alt="Las 29 mejores películas de animación " title="11. El viaje de Chihiro" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">11. El viaje de Chihiro</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_10.jpg?itok=jsjUYFOl" width="980" height="551" alt="Las 29 mejores películas de animación " title="12. Frozen" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">12. Frozen</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_11.jpg?itok=VloEUELz" width="980" height="531" alt="Las 29 mejores películas de animación " title="13. Ghost in the Shell" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">13. Ghost in the Shell</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_12.jpg?itok=JTzrm7F5" width="700" height="460" alt="Las 29 mejores películas de animación " title="14. Kubo y las dos cuerdas mágicas" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">14. Kubo y las dos cuerdas mágicas</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_13.jpg?itok=RhxOii9e" width="624" height="351" alt="Las 29 mejores películas de animación " title="15. La Bella y la Bestia" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">15. La Bella y la Bestia</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_14.jpg?itok=ebww7QjS" width="640" height="402" alt="Las 29 mejores películas de animación " title="16. Las aventuras del príncipe Achmed" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">16. Las aventuras del príncipe Achmed</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Comenius-Fil GmbH</p>
+
+<p>Año: 1926</p>
+
+<p>Realizada por la animadora alemana Lotte Reiniger, <b>Las aventuras del príncipe Achmed</b> es una de las primeras películas de animación que se conservan y se realizó con la técnica de siluetas. Al igual que Aladdín, se basa en fragmentos de <i>Las mil y una noches</i> y nos narra una historia de fantasía, magia y amor (tema recurrente en las películas de animación) El príncipe Achmed debe luchar contra las fuerzas del mal y vencer los hechizos de un poderoso brujo para lograr conquistar a la princesa Pari Banu. No estará solo, contará con la ayuda de Aladino, la Bruja de la Montaña de Fuego y un caballo mágico que es capaz de volar. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_15.jpg?itok=e3C3pczC" width="980" height="551" alt="Las 29 mejores películas de animación " title="17. La canción del mar" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">17. La canción del mar</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: CartoonSaloon / Big Farm / Digital Graphics</p>
+
+<p>Año: 2014</p>
+
+<p>Ben y Saoirse viven en u faro, en la parte más alta de una pequeña isla de Irlanda. En un viaje fantástico, Ben descubrirá que su hermana es una Selkie, un hada del mar que con su canción puede liberar a los seres mágicos de una maldición. Una película de animación preciosa y poética en su estética que está llena de referencias a la mitología y la tradición celta, así como guiños a cómics 3D y finales de los 80.</p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_16.jpg?itok=Z7WosxLA" width="980" height="587" alt="Las 29 mejores películas de animación " title="18. La LEGO película" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">18. La LEGO película</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_17.jpg?itok=nt7wtjnQ" width="976" height="656" alt="Las 29 mejores películas de animación " title="19. La novia cadáver" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">19. La novia cadáver</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_18.jpg?itok=LeSj_EyH" width="980" height="523" alt="Las 29 mejores películas de animación " title="20. La tumba de las luciérnagas" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">20. La tumba de las luciérnagas</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Studio Ghibli </p>
+
+<p>Año: 1988 - 2003 (España)</p>
+
+<p>Todo un clásico de la <b>animación japonesa</b>, dirigido por <i>Isao Takahata</i>. Ambientada en la Segunda Guerra Mundial, es una historia de supervivencia que nos cuenta las desventuras de dos hermanos: Seita y Setsuko. Un relato duro que vuelve a demostrar que las películas de animación no son sólo cosa de niños y que está contada con sencillez y sin artificios. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_19.jpg?itok=DUMFBM9f" width="980" height="551" alt="Las 29 mejores películas de animación " title="21. Mi vecino Totoro" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">21. Mi vecino Totoro</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_20.jpg?itok=TbWKBV1u" width="980" height="578" alt="Las 29 mejores películas de animación " title="22. Persépolis" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">22. Persépolis</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: 2.4.7. Films  </p>
+
+<p>Año: 2007</p>
+
+<p>Las películas de animación también sirven para contar historias duras y reales. <b>Persepolis</b> nos narra la conmovedora historia de una niña iraní desde la revolución islámica de 1979 hasta nuestros días. Dirigida por la directora iraní Marjane Satrapi, se trata de una película autobiográfica, didáctica, tierna y emocionante. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_21.jpg?itok=hnJ1654v" width="500" height="250" alt="Las 29 mejores películas de animación " title="23. Pesadilla antes de Navidad" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">23. Pesadilla antes de Navidad</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_22.jpg?itok=IV1htkjc" width="550" height="306" alt="Las 29 mejores películas de animación " title="24. ¿Quién engañó a Roger Rabbit?" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">24. ¿Quién engañó a Roger Rabbit?</p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_23.jpg?itok=99y7x-eM" width="980" height="551" alt="Las 29 mejores películas de animación " title="25. Shrek" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">25. Shrek</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: DreamWorks Animation</p>
+
+<p>Año: 2001</p>
+
+<p>La gran parodia de los cuentos de hadas y princesas que tiene un héroe oloroso, verde y feo de nombre Shrek, que en realidad es un ogro. Personajes descacharrantes con Asno a la cabeza y una princesa muy mona, pero que esconde un oscuro secreto. Basada en el libro infantil <i>Shrek!</i> de William Steig (1990), en su versión original contó con las voces de Eddie Murphy, Cameron Díaz y Mike Myers. En la versión española, Shrek y Asno eran Cruz y Raya (Juan Antonio Muñoz y José Mota) <i>“¡Qué actuación! ¡Eso asusta al más pintado! Y no te ofendas, pero si eso no funciona del todo, tu aliento hará el resto. ¿Qué tal un caramelito de menta? ¡Por que te canta el aliento!"</i></p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_24.jpg?itok=jW2R5HRs" width="600" height="313" alt="Las 29 mejores películas de animación " title="26. South Park: Más grande, más largo y sin cortes" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">26. South Park: Más grande, más largo y sin cortes</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Warner Bros / Paramount Pictures / Comedy Central</p>
+
+<p>Año: 1999</p>
+
+<p>South Park saltó a las pantallas de cine con una película inteligente y divertida, sazonada con chistes audaces y groseros como sólo la serie protagonizada por Stan, Kyle, Eric y Kenny podía ofrecernos. Una gran sátira política que tiene el récord de ser la película animada con mayor número de insultos. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_25.jpg?itok=48_XbqDi" width="980" height="534" alt="Las 29 mejores películas de animación " title="27. Toy Story " class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">27. Toy Story </p>
+  <p class="gallery-content-element-description"></p>
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_26.jpg?itok=Mxhyi79s" width="628" height="371" alt="Las 29 mejores películas de animación " title="28. Up" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">28. Up</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Pixar Animation Studios / Walt Disney Pictures</p>
+
+<p>Año: 2009</p>
+
+<p>Pixar sabe que teclas tocar para hacer que el espectador se sienta atrapado en sus tramas y en Up, logra convencernos desde los primeros momentos con una escena de introducción conmovedora. Los sueños siempre se pueden cumplir y Carl Fredricksen, un viejete de 78 años con cara de Spencer Tracy, así nos lo demostró al lograr una casa voladora gracias a unos globos. Pero, claro, no todo iba a salir bien, y se encontrará un polizón de nombre Russell, un niño de ocho año, con el que acabará viajando rumbo a América del Sur. Su arrollador argumento la llevó a ser la segunda película de animación, tras La Bella y la Bestia, en ser nominada al Oscar a la Mejor película. </p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_27.jpg?itok=5qMzuM6O" width="790" height="443" alt="Las 29 mejores películas de animación " title="29. Wall-E" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">29. Wall-E</p>
+  <p class="gallery-content-element-description">  </p><p>Compañía: Pixar Animation Studios / Walt Disney Pictures</p>
+
+<p>Año: 2008</p>
+
+<p>Una de las películas de Pixar más atrevida hasta la fecha y todo un homenaje al cine mudo. Una cinta experimental que se centra fundamentalmente en gags visuales y señales.  Año 2085. La Tierra está despoblada y sólo un viejo robot diseñado para recoger residuos habita en ella. Wall-E nos lanza un mensaje sobre la importancia de cuidar el medio ambiente.</p>
+
+
+</li>
+                      <li class="gallery-content-element">        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2016/11/29-mejores-peliculas-animacion_28.jpg?itok=OzLagisH" width="980" height="551" alt="Las 29 mejores películas de animación " title="Extra: Destino" class="gallery-content-picture image-gallery-big" /><p class="gallery-content-element-name">Extra: Destino</p>
+  <p class="gallery-content-element-description">  </p><p>En 1946, Walt Disney y Dalí se juntaron para colaborar en un proyecto único: Destino. El guión fue escrito por John Hench y Salvador Dalí, pero finalmente Walt decidió pausar el proyecto indefinidamente por problemas financieros. Pero, como en las mejores historias, uno de los sobrino de Disney encontró el proyecto y en 2003 vio la luz. Los protagonistas son una bailarina y un jugador de béisbol y el argumento gira en torno a la importancia del tiempo cuando esperamos que el destino llegue a nuestras vidas.</p>
+
+
+</li>
+                  </ul><aside class="gallery-content-ad column"><div data-dfp-position="roba_galeria" class="dfp-position roba_galeria">
+</div></aside></div>
+    </div>
+  </div>
+</article><p style="margin-bottom:0cm">¿Listos para apuntar las mejores <strong>películas infantiles de HBO</strong>? ¡Comenzamos!</p>
+
+<h2 class="title" style="margin-bottom: 0cm;">Frozen: El reino de hielo</h2>
+
+<p style="margin-bottom:0cm">Si hablamos del<em> greatest hit </em>de las películas infantiles en los últimos años, la respuesta está clara. <a href="https://www.hobbyconsolas.com/entretenimiento/frozen-reino-hielo" title="Ficha con sinopsis, análisis y todas las noticias de Frozen: El reino de hielo"><em><strong>Frozen: El reino de hielo</strong></em></a> irrumpió en los cines en 2013, de a mano de Disney, para hacernos cantar día y noche<em> 'Let it go, let it goooooo...' </em>sin parar (por suerte o por desgracia).</p>
+
+<article class="embedded-entity"><div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/QTvcYow0Z5U?VQ=HD720&amp;allowfullscreen=true"></iframe>
+
+  </div>
+
+</article><p style="margin-bottom:0cm">La trama de la película se centra en la historia de Anna, una joven que emprende un largo camino en búsqueda de su hermana Anna, la Reina de las Nieves, para acabar con el maleficio de un invierno eterno. Si sois de los pocos que no habéis visto la película, no os perdáis nuestra <a href="https://www.hobbyconsolas.com/reviews/critica-frozen-reino-hielo-60047" title="Crítica de Frozen: el reino del hielo">crítica</a> de <em><strong>Frozen</strong></em>. Y aún así, no os vais a librar... Disney ya está preparando la secuela.</p>
+
+<p style="margin-bottom:0cm"><a class="affiliate" href="https://amzn.to/2qWLEUN" rel="nofollow" target="_blank" title="Las mejores películas infantiles en DVD y Blu-ray">Las mejores películas infantiles en DVD y Blu-ray</a></p>
+
+<h2 class="title" style="margin-bottom: 0cm;">Monstruos S.A.</h2>
+
+<p style="margin-bottom:0cm">Sí, <strong>Disney se lleva</strong> <strong>gran parte del protagonismo en este reportaje sobre las mejores películas para niños de HBO</strong>. Ahora llega el turno de <strong>Monstruos S.A.</strong> La película nos presenta a Mike y Sulley, dos simpáticos monstruos que trabajan juntos en una central de energía.</p>
+
+<article class="embedded-entity"><figure class="media-wrapper image"><div>  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/04/monstruos-sa.jpg" width="1280" height="720" alt="Monstruos S.A." title="Monstruos S.A." /></div>
+      
+</figure></article><p style="margin-bottom:0cm">Su labor consiste en conseguir energía para la ciudad, pero el método por el que la consiguen es muy curioso: tienen que entrar en las habitaciones de niños a través de las puertas de sus armarios y asustarles. No obstante, una niña se cuela en la central y se desata el caos.</p>
+
+<h2 class="title" style="margin-bottom: 0cm;">La sirenita</h2>
+
+<p style="margin-bottom:0cm"><em>Bajo el maaar, baaaaajo el maaaaaaaar... </em>Entre las mejores películas infantiles de HBO también encontraréis <strong>uno de los clásicos indiscutibles de Disney</strong>: <a href="https://www.hobbyconsolas.com/entretenimiento/sirenita" title="Ficha con sinopsis, análisis y todas las noticias de La sirenita"><em><strong>La sirenita</strong></em></a>. La película nos cuenta la historia de Ariel, hija del rey Tritón y princesa de las sirenas.</p>
+
+<article class="embedded-entity"><figure class="media-wrapper image"><div>  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/12/sirenita.jpg" width="1096" height="548" alt="La sirenita" title="La sirenita" /></div>
+          <figcaption>La sirenita (Disney, 1989)</figcaption></figure></article><p style="margin-bottom:0cm">El mundo de los seres humanos es algo que fascina a Ariel desde siempre, por lo que pide a la bruja Úrsula que le ayude para poder pisar tierra por primera vez. En la superficie, nuestra protagonista salva a Eric, un príncipe que casi muere ahogado en el mar. Y como era de esperar, surge el amor. Pero no todo será tan fácil...</p>
+
+<blockquote>
+<p><a href="https://www.hobbyconsolas.com/reportajes/10-peliculas-imprescindibles-que-deberias-ver-menos-vez-vida-196688" title="películas imprescindibles">Películas imprescindibles que todos deberíamos ver al menos una vez en la vida</a></p>
+</blockquote>
+
+<h2 class="title">Hotel Transilvania</h2>
+
+<p style="margin-bottom:0cm">Os vamos a hablar de una historia de vampiros que mola (y no, no hablamos de <em>Crepúsculo</em>). En <a href="https://www.hobbyconsolas.com/entretenimiento/hotel-transilvania" title="Ficha con sinopsis, análisis y todas las noticias de Hotel Transilvania"><em>Hotel Transilvania</em></a> conocemos a Mavis, una joven vampiro que vive en el Hotel Transilvania, un complejo en el que viven diferentes criaturas lejos de la amenaza de los seres humanos.</p>
+
+<article class="embedded-entity"><figure class="media-wrapper image"><div>  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2012/11/195882-hotel-transilvania-abrira-segunda-vez.jpg" width="630" height="335" title="El Hotel Transilvania abrirá por segunda vez" /></div>
+      
+</figure></article><p style="margin-bottom:0cm">Mavis va a cumplir la mayoría de edad (118 años, je) en breves y su padre, el conde Drácula, organiza una gran fiesta con todos sus amigos. No obstante, en la fiesta aparece un joven del que se enamora perdidamente nuestra protagonista. No os perdáis nuestra <a data-unsp-sanitized="clean" href="https://www.hobbyconsolas.com/reviews/critica-tenebrosa-hotel-transilvania-44692" target="_blank" title="Crítica tenebrosa de Hotel Transilvania">crítica</a> tenebrosa de <em><strong>Hotel Transilvania</strong></em>.</p>
+
+<h2 class="title" style="margin-bottom: 0cm;">Hook (El Capitán Garfio)</h2>
+
+<p style="margin-bottom:0cm"><em><strong>Hook </strong></em>es, sin lugar a dudas, una de las mejores adaptaciones de Peter Pan en el cine. Estrenada en 1991 y <strong>con el inolvidable Robin Williams como protagonista</strong>, la cinta nos muestra a un Peter Pan adulto que se ha convertido en un prestigioso abogado y padre de familia. No obstante, el pasado regresa a la vida de Peter...</p>
+
+<article class="embedded-entity"><figure class="media-wrapper image"><div>  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/04/hook-capitan-garfio.jpg" width="826" height="465" alt="Hook (El capitán Garfio)" title="Hook (El capitán Garfio)" /></div>
+      
+</figure></article><p style="margin-bottom:0cm">Su viejo enemigo, el capitán Garfio (Dustin Hoffman), secuestra a sus hijos y se los lleva al País de Nunca Jamás. Peter pedirá ayuda de nuevo a Campanilla (Julia Roberts) para rescatar a sus hijos y, además, recuperar al niño que fue una vez.</p>
+
+<h2 class="title" style="margin-bottom: 0cm;">Pedro y el dragón Elliott</h2>
+
+<p style="margin-bottom:0cm">Y para cerrar esta lista con las mejores películas para niños en HBO, no podíamos hablar de otra que no sea <em><strong>Pedro y el dragón Elliott</strong></em>. Esta película de 1977 nos presenta a Pedro, un niño huérfano cuyo único amigo es un dragón llamado Elliott.</p>
+
+<article class="embedded-entity"><figure class="media-wrapper image"><div>  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/04/pedro-dragon-elliot.jpg" width="620" height="364" alt="Pedro y el dragón Elliot" title="Pedro y el dragón Elliot" /></div>
+      
+</figure></article><p style="margin-bottom:0cm">Cansado de sus malvados padres adoptivos, Pedro decide marcharse a la ciudad con Elliot. En el camino, se enfrentarán a diversas dificultades y vivirán más de una aventura...<br /><br />
+Y <strong>hasta aquí llega nuestro reportaje sobre las</strong> <strong>mejores películas infantiles de HBO</strong>. Si tenéis alguna recomendación más que merece estar entre nuestros favoritos, no dudéis en indicarlo en el cajón de comentarios.</p>
+
+  </div>
+
+
+    
+
+  <div data-dfp-position="roba_2" class="dfp-position roba_2">
+  <script>
+        asDFP.display('roba_2');
+      </script>
+</div>
+         
+
+  <div id="comments_anchor"><a class="icon-hc-comments" href="#comments" alt="Comentar">Comentar</a></div>
+     <div class="article-outbrain outbrain">
+  
+      <h3 class="article-outbrain-title">Lecturas recomendadas</h3>
+    
+      <div id="taboola-below-article-thumbnails"></div>
+<div id="taboola-below-article-thumbnails1"></div>
+<div id="taboola-mobile-below-article-thumbnails"></div>
+  </div>
+
+          <aside class="cards-list">
+        
+
+  <div class="views-element-container">    <div class="block-mini-card">
+  <h2>
+  Frozen: el reino del hielo (2013)
+</h2>
+  <div class="mini-card">
+    <div class="cover-element">
+        <figure class="cover-element-image">
+    <a href="/entretenimiento/frozen-reino-hielo" rel="nofollow">
+        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/cover_133x196/public/media/image/2016/11/frozen-reino-hielo.jpg?itok=8BJbEAa1" width="133" height="191" alt="Frozen: El reino del hielo" title="Frozen: El reino del hielo" class="image-cover-133x196" />
+
+
+
+    </a>
+  </figure>
+
+      <div class="rate">
+                    <div class="rate-hc">
+    <p class="top-text">78</p>
+    <p class="bottom-text">Hobby</p>
+  </div>
+
+            <div class="rate-community">
+                  <a href="/user/login?destination=/entretenimiento/frozen-reino-hielo/review" class="create-review" title="¡Sé el primero en opinar!">¡Sé el primero en opinar!</a>
+            </div>
+
+              </div>
+    </div>
+    <div class="info-mini-card">
+              <div class="info-synopsis">
+  <p><span class="title">Sinopsis: </span>
+      <span>Cuando una profecía condena a un reino a un invierno eterno, Anna, una joven optimista se une a un temerario montañero llamado Kristoff y a su compinche el reno Sven.</span>
+    </p>
+</div>
+                        <div class="info-news">
+        <ul class="list-news"><li><a href="/entretenimiento/frozen-reino-hielo">Ficha completa</a></li><li><a href="/entretenimiento/frozen-reino-hielo#news">Artículos (21)</a></li><li><a href="/entretenimiento/frozen-reino-hielo#reviews">Críticas (1)</a></li></ul>
+      </div>
+    </div>
+        <div class="last-news">
+      <h3>Últimos artículos</h3><ul class="list-news"><li><a href="/reportajes/mejores-peliculas-infantiles-hbo-espana-202636">Las mejores películas infantiles de HBO España</a></li><li><a href="/reportajes/10-peliculas-mas-taquilleras-historia-cine-198274">Las 10 películas más taquilleras de la historia del cine</a></li><li><a href="/noticias/peliculas-animacion-ganadoras-oscar-2000-hoy-192388">Películas de animación ganadoras del Oscar desde el 2000 hasta hoy</a></li></ul>
+    </div>
+  </div>
+</div>
+
+    <div class="block-mini-card">
+  <h2>
+  La sirenita (1989)
+</h2>
+  <div class="mini-card">
+    <div class="cover-element">
+        <figure class="cover-element-image">
+    <a href="/entretenimiento/sirenita" rel="nofollow">
+        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/cover_133x196/public/media/image/2016/12/sirenita.jpg?itok=FgNj4hA_" width="133" height="191" alt="La sirenita" title="La sirenita" class="image-cover-133x196" />
+
+
+
+    </a>
+  </figure>
+
+      <div class="rate">
+                  
+            <div class="rate-community">
+                  <a href="/user/login?destination=/entretenimiento/sirenita/review" class="create-review" title="¡Sé el primero en opinar!">¡Sé el primero en opinar!</a>
+            </div>
+
+              </div>
+    </div>
+    <div class="info-mini-card">
+              <div class="info-synopsis">
+  <p><span class="title">Sinopsis: </span>
+      <span>Ariel es una sirena adolescente, hija de Tritón, el rey del mar. Desobedeciendo a su padre, Ariel va al mundo de la superficie y se enamora del príncipe Eric.</span>
+    </p>
+</div>
+                        <div class="info-news">
+        <ul class="list-news"><li><a href="/entretenimiento/sirenita">Ficha completa</a></li><li><a href="/entretenimiento/sirenita#news">Artículos (5)</a></li></ul>
+      </div>
+    </div>
+        <div class="last-news">
+      <h3>Últimos artículos</h3><ul class="list-news"><li><a href="/reportajes/mejores-peliculas-infantiles-hbo-espana-202636">Las mejores películas infantiles de HBO España</a></li><li><a href="/noticias/rob-marshall-es-favorito-dirigir-sirenita-accion-real-178456">Rob Marshall es el favorito para dirigir La sirenita en acción real</a></li><li><a href="/noticias/sirenita-chloe-moretz-retira-interpretacion-67764">La Sirenita – Chloë Moretz se retira de la interpretación</a></li></ul>
+    </div>
+  </div>
+</div>
+
+    <div class="block-mini-card">
+  <h2>
+  Hotel Transilvania (2012)
+</h2>
+  <div class="mini-card">
+    <div class="cover-element">
+        <figure class="cover-element-image">
+    <a href="/entretenimiento/hotel-transilvania" rel="nofollow">
+        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/cover_133x196/public/media/image/2016/11/hotel-transilvania.jpg?itok=-4tUlrt6" width="133" height="190" alt="Hotel Transilvania" title="Hotel Transilvania" class="image-cover-133x196" />
+
+
+
+    </a>
+  </figure>
+
+      <div class="rate">
+                    <div class="rate-hc">
+    <p class="top-text">70</p>
+    <p class="bottom-text">Hobby</p>
+  </div>
+
+            <div class="rate-community">
+                  <a href="/user/login?destination=/entretenimiento/hotel-transilvania/review" class="create-review" title="¡Sé el primero en opinar!">¡Sé el primero en opinar!</a>
+            </div>
+
+              </div>
+    </div>
+    <div class="info-mini-card">
+              <div class="info-synopsis">
+  <p><span class="title">Sinopsis: </span>
+      <span>Drácula regenta un hotel en el se alojan personajes como Frankenstein, la Momia, el Hombre Invisible, hombres-lobo...</span>
+    </p>
+</div>
+                        <div class="info-news">
+        <ul class="list-news"><li><a href="/entretenimiento/hotel-transilvania">Ficha completa</a></li><li><a href="/entretenimiento/hotel-transilvania#news">Artículos (4)</a></li><li><a href="/entretenimiento/hotel-transilvania#reviews">Críticas (1)</a></li></ul>
+      </div>
+    </div>
+        <div class="last-news">
+      <h3>Últimos artículos</h3><ul class="list-news"><li><a href="/reportajes/mejores-peliculas-infantiles-hbo-espana-202636">Las mejores películas infantiles de HBO España</a></li><li><a href="/noticias/trailer-hotel-transilvania-2-vuelven-monstruos-19929">Tráiler de Hotel Transilvania 2, ¡vuelven los monstruos!</a></li><li><a href="/noticias/hotel-transilvania-abrira-por-segunda-vez-45363">El Hotel Transilvania abrirá por segunda vez</a></li></ul>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+      </aside>
+      </div>
+  <div class="article-blocks">
+    
+        <div class="article-author">
+    
+    <address class="article-author-name"><a href="/comunidad/usuarios/noelia-santiago" title="Noticias de   Noelia
+   Santiago
+
+">
+                Noelia
+   Santiago
+
+
+          </a></address>
+          <p class="article-author-job">  Colaboradora de Hobby Consolas
+</p>
+            <nav class="page-user-profile-profiles">
+      <ul class="page-user-profile-profiles-list">
+          <li class="profile-element">
+    <span class="profile-list-item twitter" title="Twitter">
+      <a href="https://twitter.com/noeliasantiago" target="_blank">Twitter</a>
+    </span>
+  </li>
+
+          <li class="profile-element">
+    <span class="profile-list-item googleplus" title="Google+">
+      <a href="https://plus.google.com/114429552483262126803" target="_blank" rel="author">Google +</a>
+    </span>
+  </li>
+
+          <li class="profile-element">
+    <span class="profile-list-item linkedin" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/noeliasantiago" target="_blank">LinkedIn</a>
+    </span>
+  </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+    <aside id="vc-feelback-main" class="article-vicomi" data-access-token="160ff8973c14521842a52e19abc55d6c" data-display-type="4" data-mobile-view="2" data-article-id="119284">
+    <h3 class="article-vicomi-title">¿Cómo te quedas?</h3>
+</aside>
+
+
+    
+
+  <aside class="article-videos videos">
+<h3 class="article-videos-title">Vídeos</h3>
+<div class="dailymotion-widget" data-placement="570f7220ea09d80030efc179"></div>
+</aside>
+
+
+
+  </div>
+  <aside class="article-comments">
+    <div id="community" class="page-profile-community">
+    <h2>Comunidad</h2>
+              <section>
+        <div class="tabs">
+            <ul class="tab-links">
+                <li class="active"><a href="#comments">Comentarios (<span id="comment-count">0</span>)</a></li>
+                                </ul>
+            <div class="tab-content">
+                <div id="comments" class="tab active">
+                    <div class="comments-message"></div>
+                                            <form class="componets-comments-fake-form" data-drupal-selector="componets-comments-fake-form" action="#" method="post" id="componets-comments-fake-form" accept-charset="UTF-8">
+  <div class="sign-in"><a href="/user/login?destination=/reportajes/mejores-peliculas-infantiles-hbo-espana-202636#comments" data-drupal-selector="edit-login" id="edit-login">Inicia sesión para participar</a></div><input data-drupal-selector="form-4gq-mzvksgxepccrzs0jcwhyohfiaqqfnspq990zh-o" type="hidden" name="form_build_id" value="form-4Gq-mzVksgXepccRzS0JcWHYOhfIaQQFnspQ990zh_o" />
+<input data-drupal-selector="edit-componets-comments-fake-form" type="hidden" name="form_id" value="componets_comments_fake_form" />
+
+</form>
+
+                                        <div class="switchorder">
+                        
+                    </div>
+                    <div class="comments">
+                        <div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>                 <div id="conversation" class="tab">
+                    <div>Conversaciones</div>
+                </div>
+            </div>         </div>     </section>
+
+       </div>
+    
+
+  <div data-dfp-position="roba_3" class="dfp-position roba_3">
+  <script>
+        asDFP.display('roba_3');
+      </script>
+</div>
+   </aside>
+</article>
+<div class="block-newsletter">
+      <div class="newsletter-container">
+  <a href="/newsletter-hobbyconsolas" title="Página de newsletter" rel="nofollow">
+    <img src="/themes/hobbyconsolas/img/icon-newsletter.png" alt="Envelope symbol">
+    <p>Suscríbete a nuestra newsletter</p>
+  </a>
+  <div class="button-primary">
+    <a href="/newsletter-hobbyconsolas" title="Página de newsletter">Suscribirse</a>
+  </div>
+</div>
+  </div>
+
+
+
+    
+    <aside class="ad-container ad-bottom">
+      <div data-dfp-position="mega_inferior" class="dfp-position mega_inferior">
+  <script>
+        asDFP.display('mega_inferior');
+      </script>
+</div>
+    </aside>
+  </main>
+  <div class="obfuscator"></div>
+  	<footer id="footer" class="layout_footer" role="contentinfo">
+		  
+                      <div class="footer-catedral">
+          <nav class="footer-catedral-nav">
+            <ul class="footer-catedral-nav-list">
+                                                                    <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Juegos">Juegos</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos" title="Ir a Juegos">Ir a Juegos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos" title="Top Juegos">Top Juegos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/actualidad" title="Actualidad">Actualidad</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/multimedia" title="Multimedia">Multimedia</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/comunidad" title="Comunidad">Comunidad</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/analisis" title="Análisis de juegos">Análisis de juegos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos" title="Guías y Trucos">Guías y Trucos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/ps4" title="PS4">PS4</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/xbox-one" title="XBOX ONE">XBOX ONE</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/pc" title="PC">PC</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/nintendo-switch" title="Nintendo Switch">Nintendo Switch</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/ps3" title="PS3">PS3</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/wii-u" title="WII U">WII U</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/movil" title="Móvil">Móvil</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/3ds" title="3DS">3DS</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/ps-vita" title="PS VITA">PS VITA</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/xbox-360" title="XBOX 360">XBOX 360</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/retro" title="Retro">Retro</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/a-z" title="A-Z Juegos">A-Z Juegos</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Entretenimiento">Entretenimiento</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/entretenimiento" title="Ir a Entretenimiento">Ir a Entretenimiento</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/entretenimiento/cine" title="Cine">Cine</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/entretenimiento/series-tv" title="Series y TV">Series y TV</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/entretenimiento/comics" title="Cómics">Cómics</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/a-z/peliculas" title="A-Z Películas">A-Z Películas</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/a-z/series" title="A-Z Series">A-Z Series</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Industria ">Industria </p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria" title="Ir a Industria">Ir a Industria</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria/desarrollo" title="Desarrollo">Desarrollo</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria/formacion" title="Formación">Formación</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria/tendencias" title="Tendencias">Tendencias</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria/sony-ps-talents" title="Espacio PlayStation Talents">Espacio PlayStation Talents</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/industria/diarios-desarrollo" title="Diarios de desarrollo">Diarios de desarrollo</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element">
+                      <a class="footer-catedral-nav-item" href="/esports" title="eSports ">eSports </a>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Toda la actualidad">Toda la actualidad</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/actualidad" title="Ir a actualidad">Ir a actualidad</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Análisis y críticas">Análisis y críticas</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/analisis" title="Ir a Análisis y Críticas">Ir a Análisis y Críticas</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element">
+                      <a class="footer-catedral-nav-item" href="/opinion" title="Opinión">Opinión</a>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Multimedia">Multimedia</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/multimedia" title="Ir a Multimedia">Ir a Multimedia</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Comunidad de Usuarios">Comunidad de Usuarios</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/comunidad" title="Ir a Comunidad de Usuarios">Ir a Comunidad de Usuarios</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/comunidad" title="Comunidad de Videojuegos">Comunidad de Videojuegos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/foros" title="Foros">Foros</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Top juegos">Top juegos</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos" title="Ir a Top juegos">Ir a Top juegos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/ps4" title="Mejores juegos de PS4">Mejores juegos de PS4</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/xbox-one" title="Mejores juegos de XBOX ONE">Mejores juegos de XBOX ONE</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/nintendo-switch" title="Mejores juegos de Nintendo Switch">Mejores juegos de Nintendo Switch</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/wii-u" title="Mejores juegos de WII U">Mejores juegos de WII U</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/pc" title="Mejores juegos de PC">Mejores juegos de PC</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/ps3" title="Mejores juegos de PS3">Mejores juegos de PS3</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/xbox-360" title="Mejores juegos de XBOX 360">Mejores juegos de XBOX 360</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/wii" title="Mejores juegos de WII">Mejores juegos de WII</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/ps-vita" title="Mejores juegos de PS Vita">Mejores juegos de PS Vita</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/3ds" title="Mejores juegos de 3DS">Mejores juegos de 3DS</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/ds" title="Mejores juegos de DS">Mejores juegos de DS</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/ps2" title="Mejores juegos de PS2">Mejores juegos de PS2</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/psp" title="Mejores juegos de PSP">Mejores juegos de PSP</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/videojuegos/top-juegos/retro" title="Mejores juegos Retro">Mejores juegos Retro</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Guías y trucos">Guías y trucos</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos" title="Ir a guías y trucos">Ir a guías y trucos</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/ps4" title="Guías y trucos de PS4">Guías y trucos de PS4</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/xbox-one" title="Guías y trucos de XBOX ONE">Guías y trucos de XBOX ONE</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/nintendo-nx" title="Guías y trucos de Nintendo NX">Guías y trucos de Nintendo NX</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/pc" title="Guías y trucos de PC">Guías y trucos de PC</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/ps3" title="Guías y trucos de PS3">Guías y trucos de PS3</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/xbox-360" title="Guías y trucos de XBOX 360">Guías y trucos de XBOX 360</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/wii-u" title="Guías y trucos de WII U">Guías y trucos de WII U</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/3ds" title="Guías y trucos de 3DS">Guías y trucos de 3DS</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/ps-vita" title="Guías y trucos de PS VITA">Guías y trucos de PS VITA</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/retro" title="Guías y trucos de RETRO">Guías y trucos de RETRO</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/guias-trucos/movil" title="Guías y trucos de MÓVIL">Guías y trucos de MÓVIL</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="/a-z/guias" title="A-Z Guías">A-Z Guías</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                                        <li class="footer-catedral-nav-element parent">
+                      <p class="footer-catedral-nav-item" href="#" title="Nuestras revistas">Nuestras revistas</p>
+                      <ul class="parent-container">
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="http://store.axelspringer.es/videojuegos/revistas-videojuegos/hobby-consolas" title="Hobby Consolas">Hobby Consolas</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="http://store.axelspringer.es/videojuegos/revistas-videojuegos/playmania" title="Playmanía">Playmanía</a>
+                          </li>
+                                                  <li class="footer-catedral-nav-element">
+                            <a class="footer-catedral-nav-item" href="http://store.axelspringer.es/videojuegos/revistas-videojuegos/revista-oficial-nintendo" title="Revista Oficial Nintendo">Revista Oficial Nintendo</a>
+                          </li>
+                                              </ul>
+                    </li>
+                                                            </ul>
+            <div class="footer-catedral-nav-default">
+              <a class="logo-hc" href="/" title="Ir a Portada de Hobbyconsolas" rel="home"><img src="/themes/hobbyconsolas/img/logo-hc-new-negativo.svg" alt="Hobbyconsolas"/></a>
+              <h5>¡Videojuegos y mucho más!</h5>
+              <p>Síguenos</p>
+              <div class="social_nav">
+                <ul class="social_nav-container">
+                  <li class="social_nav-element">
+                    <a class="social_nav-item icon icon-hc-facebook" href="https://www.facebook.com/Hobbyconsolas" title="Ir a facebook" target="_blank"></a>
+                  </li>
+                  <li class="social_nav-element">
+                    <a class="social_nav-item icon icon-hc-twitter" href="https://twitter.com/Hobby_Consolas" title="Ir a twitter" target="_blank"></a>
+                  </li>
+                  <li class="social_nav-element">
+                    <a class="social_nav-item icon icon-hc-youtube" href="https://www.youtube.com/user/HobbynewsTV" title="Ir a youtube" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+            
+                            
+                    <div class="layout_footer-top">
+          <nav class="grid col-4 layout_footer-top-content">
+            <div class="column">
+              <h5 class="layout_footer-title">Axel Springer España</h5>
+            </div>
+                                          <div class="column">
+                  <h5 class="layout_footer-title">Motor</h5>
+                                      <ul class="partner-list">
+                                              <li class="partner-element"><a class="partner-item" href="https://www.autobild.es" title="Auto Bild" rel="follow" target="_blank">Auto Bild</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="https://www.topgear.es" title="Top Gear" rel="follow" target="_blank">Top Gear</a></li>
+                                          </ul>
+                                  </div>
+                              <div class="column">
+                  <h5 class="layout_footer-title">Tecnología</h5>
+                                      <ul class="partner-list">
+                                              <li class="partner-element"><a class="partner-item" href="https://computerhoy.com" title="Computer Hoy" rel="follow" target="_blank">Computer Hoy</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://www.macuarium.com" title="Macuarium" rel="follow" target="_blank">Macuarium</a></li>
+                                          </ul>
+                                  </div>
+                              <div class="column">
+                  <h5 class="layout_footer-title">Entretenimiento</h5>
+                                      <ul class="partner-list">
+                                              <li class="partner-element"><a class="partner-item" href="/" title="HobbyConsolas" rel="follow" target="_blank">HobbyConsolas</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://www.laps4.com" title="LaPS4" rel="follow" target="_blank">LaPS4</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://www.somosxbox.com" title="SomosXbox" rel="follow" target="_blank">SomosXbox</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="https://www.guiltybit.com" title="GuiltyBit" rel="follow" target="_blank">GuiltyBit</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://www.nintenderos.com" title="Nintenderos" rel="follow" target="_blank">Nintenderos</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://www.eliteguias.com" title="Eliteguías" rel="follow" target="_blank">Eliteguías</a></li>
+                                          </ul>
+                                  </div>
+                              <div class="column">
+                  <h5 class="layout_footer-title">Industria</h5>
+                                      <ul class="partner-list">
+                                              <li class="partner-element"><a class="partner-item" href="http://www.ticbeat.com" title="TICBeat" rel="follow" target="_blank">TICBeat</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="/industria" title="Hobby Industria" rel="follow" target="_blank">Hobby Industria</a></li>
+                                          </ul>
+                                  </div>
+                              <div class="column">
+                  <h5 class="layout_footer-title">Más</h5>
+                                      <ul class="partner-list">
+                                              <li class="partner-element"><a class="partner-item" href="https://www.businessinsider.es" title="Business Insider España" rel="follow" target="_blank">Business Insider España</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://store.axelspringer.es" title="Store Axel Springer" rel="follow" target="_blank">Store Axel Springer</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="http://ozio.axelspringer.es" title="Ozio: El club del suscriptor" rel="follow" target="_blank">Ozio: El club del suscriptor</a></li>
+                                              <li class="partner-element"><a class="partner-item" href="https://mediakit.axelspringer.es" title="BrandLab Axel Springer" rel="follow" target="_blank">BrandLab Axel Springer</a></li>
+                                          </ul>
+                                  </div>
+                                    </nav>
+        </div>
+                              <div class="layout_footer-bottom">
+          <div class="layout_footer-bottom-content">
+            <div class="layout_footer-bottom-content-left">
+              <ul class="legal-list">
+                <li class="legal-element">
+                  Sobre <a class="legal-item" href="https://www.hobbyconsolas.com/" title="Sobre Hobby Consolas" rel="home"><img src="/themes/hobbyconsolas/img/logo-hc-new-negativo.svg" alt="Sobre Hobby Consolas"/></a>
+                </li>
+                                                      <li class="legal-element">
+                      <a class="legal-item" href="/quienes-somos" title ="Quiénes somos" target="_blank">Quiénes somos</a>
+                    </li>
+                                      <li class="legal-element">
+                      <a class="legal-item" href="/condiciones-de-uso" title ="Condiciones de uso" target="_blank">Condiciones de uso</a>
+                    </li>
+                                      <li class="legal-element">
+                      <a class="legal-item" href="/politica-de-privacidad" title ="Política de privacidad" target="_blank">Política de privacidad</a>
+                    </li>
+                                      <li class="legal-element">
+                      <a class="legal-item" href="/politica-cookies" title ="Política de cookies" target="_blank">Política de cookies</a>
+                    </li>
+                                                </ul>
+            </div>
+            <div class="layout_footer-bottom-content-right">
+              <a href="http://www.axelspringer.es/" title="Axel Springer España"><img src="/themes/hobbyconsolas/img/axelspringer-negativo-retina.png" alt="Logo Axel Springer" /></a>
+            </div>
+          </div>
+        </div>
+      
+                  
+
+
+
+	</footer>
+
+</div>
+      
+      <script src="/sites/hobbyconsolas.com/public/js/js_ogC8glwlrxKlCECeBcOjKgjPOw_7zdmUwSV4YOsbKqE.js"></script>
+<script src="https://platform.sunmedia.tv/integrations/a5c2a10b-fe2e-4041-b82d-557ffc4c3253.js" async></script>
+<script src="/sites/hobbyconsolas.com/public/js/js_nzCadGpmqIH_PIF0BR-_f9NNXoHQSda0eoRjStBuxuE.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script src="/sites/hobbyconsolas.com/public/js/js_cA1d4CuPKugxfPkIaIE2IZfbSERnmFe_6fcnTgQXtKQ.js"></script>
+<script src="/core/assets/vendor/ckeditor/ckeditor.js?v=4.6.2"></script>
+<script src="/sites/hobbyconsolas.com/public/js/js_bhXhjY64So9vOAYA02nM5zY5MeRQoH8uZ4K7sHTW8c0.js"></script>
+
+      <!-- Begin comScore Tag -->
+      <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6034990", cs_ucfr: getOneTrustGroupConsent(3)});
+        (function() {
+          var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+          s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+          el.parentNode.insertBefore(s, el);
+        })();
+      </script>
+      <noscript>
+        <img style="height:1px !important;width:1px !important" src="http://b.scorecardresearch.com/p?c1=2&c2=6034990&cs_ucfr=0&cv=2.0&cj=1" />
+      </noscript>
+      <!-- End comScore Tag -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"acae670044","applicationID":"17208173","transactionName":"YgBbbEZYX0VZU0JeDltKeFtAUF5YF0RZXARbOklKUWZDU1ZUU0U+UwxcVFBmRVlTVVg=","queueTime":0,"applicationTime":983,"atts":"TkdYGg5CTEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

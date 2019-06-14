@@ -1,0 +1,945 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+        <title>JQuery Mobile:  Desarrollo de aplicaciones y portales web para dispositivos móviles</title>
+        <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type"/>  
+        <meta name="keywords" content="jQuery moviles" />        
+        <meta name="description" content=""JQuery Mobile:  Desarrollo de aplicaciones y portales web para dispositivos móviles" />
+  		<link href="/skins/new/styles/SpryRating.css" rel="stylesheet" type="text/css" />
+        <link href="/skins/new/styles/general.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="/scripts/thumbnail_viewer/thumbnailviewer.css" type="text/css" />
+        <link rel="stylesheet" href="/scripts/cmotion_gallery/gallerystyle2.css" />
+        
+        <script type="text/javascript" src="/scripts/pestanyas/pestanya.js"></script>
+        <script type="text/javascript" src="/scripts/rating/SpryRating.js"></script>
+        <script src="/scripts/thumbnail_viewer/thumbnailviewer.js" type="text/javascript" language="javascript"></script>
+ 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js" djConfig="parseOnLoad: true"></script>
+        <script type="text/javascript" src="/scripts/home.js"></script>    
+        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+		<script src="/scripts/jquery-1.6.2.min.js"></script>
+		<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+        
+                <script type="text/javascript" language="javascript">
+            //<![CDATA[
+            _uacct = "UA-1265115-1";
+            urchinTracker();
+            //]]>
+        </script>
+        <script src="/scripts/tiny_mce/tiny_mce.js" type="text/javascript" language="JavaScript"></script>
+        <script language="javascript" type="text/javascript">
+            //<![CDATA[
+            tinyMCE.init({
+            	mode : "specific_textareas",
+            	editor_selector : "tiny",
+            	editor_deselector : "notiny",
+                theme : "simple"
+            });
+            //]]>
+        </script>
+</head>
+<body>
+<div id="layout">
+            <div id="header" class="wrapper">
+				<div id="logo">
+					<a href="/index.php">
+ 						<a href="http://www.terrakas.com" target="_blank"><img src="/imagenes/1x03.png" alt="Adictos al Trabajo" title="Adictos al Trabajo"/></a>
+             
+                    </a>  
+                </div>
+				<div class="patrocinio">
+		                 <div class ="autentia">
+		                  	<a href="http://www.autentia.com/" target="_blank"><img src="/skins/new/images/logos/autentia_new.png" alt="Logotipo Autentia" title="Logotipo Autentia" style="margin-left:-50px;"/></a>
+		                 </div>
+		                 <div class ="enredados">
+		                  	<a href="http://www.enredados.com/" target="_blank"><img src="/skins/new/images/logos/enredados_new.png" alt="Adictos al Enredados" title="Logotipo Enredados"/></a>
+		                 </div>
+	            </div>			
+                <div id="login_panel_new">
+	
+<form name="loginForm" action="http://www.adictosaltrabajo.com//login_panel.php" method="post">
+	<input name="login_form_sended" value="1" type="hidden">
+	<span class="mensajeerror">
+			</span>		
+	<table>
+		<tbody>
+			
+				<div>
+				<p style="float:left; font-size:0.9em; color:#01527F; margin: 9px 0 13px 0;">Entra en Adictos a través de</p>
+				
+				<a id="login_facebook"  href="https://www.facebook.com/dialog/oauth?client_id=352394641441455&redirect_uri=http%3A%2F%2Fwww.adictosaltrabajo.com%2Fsocial-sas%2Flogin-from-facebook-callback.php&state=58cb7c32e205e493854c75ab325064ae" title="Entrar con Facebook"><img style="margin-top:3px;" src="/skins/new/images/icono_facebook.png" alt="Entrar con Facebook" title="Entrar con Facebook" width="22px" height="22px"/></a>
+                <a id="login_twitter" href="http://www.adictosaltrabajo.com/social-sas/login-from-twitter-callback.php?authenticate=1" title="Entrar con Twitter"><img style="margin:0 -5px 0 -2px;" src="/skins/new/images/icono_twiter.png" alt="Entrar con Twitter" title="Entrar con Twitter" width="22px" height="22px"/></a>
+ 				</div>
+			
+				<div colspan="2"><input id="login_email" name="login_email" type="text" title="E-mail" placeholder="E-mail"></div>
+           
+			
+				<div colspan="2"><input id="login_pwd"   name="login_pwd"   type="password" title="Contrase&ntilde;a" placeholder="Contrase&ntilde;a"></div>
+            
+			
+				<div><input id="login_enter" name="login_enter" value="Entrar" type="submit"></div>
+				
+            
+			
+				<div colspan="2">
+					<ul style="margin-top:5px;list-style-type:none; font-size:0.9em;">
+                      	<li><a href="/social-sas/gui/register.inc.php">Deseo registrarme</a></li>
+                      	<li><a href="/forgot_password.php">Olvid&eacute; mi contrase&ntilde;a</a></li>
+					</ul>
+				</div>
+			</tr>
+		</tbody>
+	</table>
+</form>	               
+	</div>
+ 
+            </div>
+
+            
+<div class="bloque_menu">
+  <div id="menu-right" class="wrapper"></div>      
+         
+  <div id="menu" class="wrapper">
+  <ul>
+       <li ><a href="http://www.adictosaltrabajo.com/index.php">Inicio</a></li>
+       <li ><a href="http://www.adictosaltrabajo.com/quienes-somos.php">Quiénes somos</a></li>
+       <li ><a href="http://www.autentia.com/cursos.php" target="_blank">Formaci&oacute;n</a></li>
+       <li ><a href="http://www.adictosaltrabajo.com/comunidad/comunidad.php">Comparador de salarios</a></li>
+       <li  onmouseover="showPestanya('nuestro_libro')" onmouseout="hidePestanyaDelay('nuestro_libro')"><a href="http://www.adictosaltrabajo.com/book_section.inc.php?book=1">Nuestro libro</a></li>
+       <li>
+       		<form method="get" action="http://www.adictosaltrabajo.com/buscador.php" target="_top">
+       			<input type="hidden" name="domains" value="www.adictosaltrabajo.com"></input>     
+       			<input type="hidden" name="client" value="pub-7938614058147015"></input>
+                <input type="hidden" name="forid" value="1"></input>
+                <input type="hidden" name="ie" value="ISO-8859-1"></input>
+                <input type="hidden" name="oe" value="ISO-8859-1"></input>
+                <input type="hidden" name="flav" value="0000"></input>
+                <input type="hidden" name="sig" value="b6bhFcismdVAhLp7"></input>
+                <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:0;LW:0;L:http://www.adictosaltrabajo.com/imagenes/adic000.jpg;S:http://www.adictosaltrabajo.com;FORID:11"></input>
+                <input type="hidden" name="hl" value="es"></input>               
+                <input type="hidden" name="sitesearch" value="www.adictosaltrabajo.com"></input>                        
+                <input type="text" name="q" size="23" maxlength="255" value="" id="sbi"></input>
+                <input type="image" src="/skins/new/images/lupa.gif"  alt="buscar" id="sb">
+            </form>
+       </li>  
+     </ul>     
+  </div>
+  <div id="menu-left" class="wrapper"></div>
+</div>
+<div id="menu_mas" onmouseover="showPestanya('menu_mas')" onmouseout="hidePestanyaDelay('menu_mas')">
+  	<ul>
+       <li><a href="http://www.adictosaltrabajo.com/libros/libros.php">Libros</a></li>
+	   <li><a href="http://www.adictosaltrabajo.com/chistes/chistes.php">Chistes</a></li>     
+  	   <li><a href="http://www.adictosaltrabajo.com/empleo/empleo.php">Empleo</a></li>
+	   <li><a href="http://www.adictosaltrabajo.com/libro_visitas/libro_visitas.php">Libro de Visitas</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/colaboradores.php">Colabora</a></li>  	                                  	    
+	</ul>  
+</div>
+<div id="nuestro_libro" onmouseover="showPestanya('nuestro_libro')" onmouseout="hidePestanyaDelay('nuestro_libro')">
+     <ul>
+     	<li ><a href="http://www.adictosaltrabajo.com/book_section.inc.php?book=1">Comentar libro</a></li>
+       <li><a href="http://www.adictosaltrabajo.com/comic.php">Comic del libro</a></li>
+       <li class="ultimo"><a href="http://www.adictosaltrabajo.com/libros/fotos_libro.php">Fotos libro</a></li>
+     </ul>  
+</div>  
+  				
+	<div id="migas">
+	<ul>
+		<li><span class="xx">&raquo; Estás en:</span></li>
+		<li><a href="/index.php">Inicio</a> </li>
+<li><a href="/tutoriales.php">Tutoriales</a> </li><li>JQuery Mobile:  Desarrollo de aplicaciones y portales web para dispositivos...</li>	</ul>
+	</div>
+                   
+                   
+<div id="kernel" class="wrapper">
+<div id="highlights">
+				<div class="caja">
+				    <div class="border-top">
+							<div class="indent-caja">
+				            	<h2><a href="http://www.autentia.com/index.php">Cat&aacute;logo de servicios Autentia</a></h2>
+				                <div class="bloquecomic">	
+				                	<img src="/skins/new/images/moscaBanner.gif" width="200px" alt="Mosca de AdictosAlTrabajo"/>
+				               	</div>
+				               
+				          	</div>
+				          	
+				    </div>
+				 
+				</div>
+				
+				
+				
+														<div class="monosylagartos">
+<a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=356"><img src="/imagenes/prohibidos-monos-lagartos-300x300.gif" alt="Prohibido monos y lagartos"/>
+</a>
+</div>			<div class="caja">
+			    <div class="border-top">
+			        <div class="border-bottom">
+			            <div class="border-right">
+			                <div class="border-left">
+			                    <div class="corner-top-right">
+			                        <div class="corner-top-left">	
+			                            <div class="corner-bottom-left">
+			                                <div class="corner-bottom-right">
+			                                    <div class="indent-caja_facebook">
+			                                        <h2><a href="http://www.facebook.com/group.php?gid=117232791654259">S&iacute;guenos a trav&eacute;s de:</a></h2>
+			                                        <div class="bloqueredes">
+			                                        	<a target="_blank" href="http://www.adictosaltrabajo.com/feeds.php"><img title="RSS" alt="RSSe" src="/skins/new/images/rss_new.png"></a>
+			                                         	<a target="_blank" href="http://twitter.com/adictosaltrabaj"><img title="twitter" alt="twitter" src="/skins/new/images/icono_twiter.png"></a>
+			                                         	<a target="_blank" href="http://www.facebook.com/pages/AdictosAlTrabajo/353360561767"><img title="facebook" alt="facebook" src="/skins/new/images/icono_facebook.png"></a>
+														<a target="_blank" href="http://www.linkedin.com/groups?mostPopular=&gid=2768318"><img title="linkedid" alt="linkedid" src="/skins/new/images/icono_linkedin.png"></a>
+														<a target="_blank" href="https://www.xing.com/net/pri9ab884x/econ_trabajoadicto"><img title="xing" alt="xing" src="/skins/new/images/xing_logo.png"></a>														
+														<a target="_blank" href="http://www.youtube.com/user/autentiacharlas"><img title="youtube" alt="youtube" src="/skins/new/images/icono_youtube.png"></a>
+			                                         </div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div><div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><a href="/historico-home.php"><span class="titulo_normal">Últimas</span> Noticias</a></h2>
+                                        <div class="bloquenoticias">
+                                        											<p>&raquo;&nbsp;<a href="/detalle-noticia.php?noticia=366">Dime que manejas y te diré lo que ganas</a></p>
+																					<p>&raquo;&nbsp;<a href="/detalle-noticia.php?noticia=365">Socios para mi negocio ¿impar y menor de 2?</a></p>
+																					<p>&raquo;&nbsp;<a href="/detalle-noticia.php?noticia=364">Preventa en post-venta: todo técnico es un comercial</a></p>
+																					<p>&raquo;&nbsp;<a href="/detalle-noticia.php?noticia=363">Ventajas e inconvenientes de emprender</a></p>
+																					<p>&raquo;&nbsp;<a href="/detalle-noticia.php?noticia=362">No te inventes una solución sin contar con quien tiene el problema</a></p>
+												
+  											<p><a href="/historico-home.php">Histórico de noticias</a></p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Últimos </span>Tutoriales</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=agilGrandesOrganizaciones">Implantación de metodologías Ágiles en grandes organizaciones</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=tapestryTutorial">Tapestry frente a JSF</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=mercurialToGit">Migrar repositorios de Mercurial a Git</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=phpunit">TDD con PHP gracias a PHPUnit</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=jbossESB">JBossESB y JBDS</a></p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Últimos </span>Tutoriales del Autor</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=html5-geo-location">Geoposicionamiento Web con HTML5 y Google Maps</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=jquery-validator-plugin">Validación de formularios con el plugin JQuery Validator</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=facebook-comment-plugin">Instalación y uso del plugin de comentarios de Facebook en nuestra Web</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=custom-json-spring-mvc">Construcción personalizada de objetos JSON en cliente (JavaScript)</a></p>
+																				  	<p>&raquo;&nbsp;<a href="/tutoriales/tutoriales.php?pagina=mybatis-generator-core">MyBatis Generator (MGB): Generador de código para MyBatis e iBATIS</a></p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Categor&iacute;as del Tutorial</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>
+										    	<img src="../skins/new/images/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=31"> Otras Técnicas</a>
+										    </p>
+																				  	<p>
+										    	<img src="../skins/new/images/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=21"> Técnicas Avanzadas</a>
+										    </p>
+																				  	<p>
+										    	<img src="../skins/new/images/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=38"> Dispositivos móviles</a>
+										    </p>
+																				  	<p>
+										    	<img src="../skins/new/images/ulttuto.png"><a href="http://www.adictosaltrabajo.com/tutoriales.php?id=53"> Javascript / JQuery</a>
+										    </p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="caja">
+    <div class="border-top">
+        <div class="border-bottom">
+            <div class="border-right">
+                <div class="border-left">
+                    <div class="corner-top-right">
+                        <div class="corner-top-left">	
+                            <div class="corner-bottom-left">
+                                <div class="corner-bottom-right">
+                                    <div class="indent-caja">
+                                        <h2><span class="titulo_normal">Últimas </span>ofertas de empleo</h2>
+                                        <div class="bloquenoticias">
+                                        										  	<p>
+										    	<span class="date">2011-09-08</span><br />
+										      	<img src="../skins/new/images/not.png"><a href="http://www.adictosaltrabajo.com/empleo/resumenoferta.php?oferta=283">Comercial - Ventas - MADRID.</a>										      
+										    </p>
+																				  	<p>
+										    	<span class="date">2011-09-03</span><br />
+										      	<img src="../skins/new/images/not.png"><a href="http://www.adictosaltrabajo.com/empleo/resumenoferta.php?oferta=282">Comercial - Ventas - VALENCIA.</a>										      
+										    </p>
+																				  	<p>
+										    	<span class="date">2011-08-19</span><br />
+										      	<img src="../skins/new/images/not.png"><a href="http://www.adictosaltrabajo.com/empleo/resumenoferta.php?oferta=280">Comercial - Compras - ALICANTE.</a>										      
+										    </p>
+																				  	<p>
+										    	<span class="date">2011-07-12</span><br />
+										      	<img src="../skins/new/images/not.png"><a href="http://www.adictosaltrabajo.com/empleo/resumenoferta.php?oferta=278">Otras Sin catalogar - MADRID.</a>										      
+										    </p>
+																				  	<p>
+										    	<span class="date">2011-07-06</span><br />
+										      	<img src="../skins/new/images/not.png"><a href="http://www.adictosaltrabajo.com/empleo/resumenoferta.php?oferta=277">Otras Sin catalogar - LUGO.</a>										      
+										    </p>
+										                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+      
+</div>
+<div id="content">
+	<div class="separador" style="clear:both"></div>
+    <div class="content_autor">
+		<div class="image_autor" style="float:left;clear:left;width:150px;padding:1em">
+<a href="/usuarios/carlos-garcia"><img src="http://www.adictosaltrabajo.com/tutoriales/autores/CarlosGP.jpg" class="img-izquierda_descripcion" /></a>				<div style="float:left;clear:left;margin:1em;margin-top:.2em;width:122px">
+											<a target="_blank" href="http://twitter.com/cgpcosmad"><img src="/skins/new/images/icono_twiter_mini.png" alt="icono_twiter" title="Sígueme a través de Twitter" width="22px" height="22px" /></a>
+																					<a target="_blank" href="https://www.facebook.com/pages/Carlos-Garc%C3%ADa-Desarrollador-de-aplicaciones/230770136938204"><img src="/skins/new/images/icono_facebook_mini.png" alt="icono Facebook" title="Sígueme a través de Facebook" width="22px" height="22px"/></a>
+																			</div>
+
+
+
+		</div>
+	    <div class="descripcion-info" style="padding:1em;width:700px;">
+				<a href="/usuarios/carlos-garcia">Carlos García Pérez</a><div style="text-align:left">
+  <p>Técnico especialista en informática de empresa (CEU).</p>
+  <p>Ingeniero Técnico en Informática de Sistemas (UPM)</p>
+  <p>Creador de <a href="http://www.mobiletest.es" title="Un complemento educativo para los profesores y sus alumnos" target="_blank">MobileTest</a>, 
+  <a href="http://www.carlos-garcia.es/misproyectos/haaala/haaala.php" target="_blank" title="Haaala! para Android: Facebook y Email con Voz">Haaala!</a>, 
+  <a href="http://www.carlos-garcia.es/misproyectos/girillo/girillo.php"" target="_blank" title="Girillo para Android">Girillo</a>,
+  <a href="http://www.carlos-garcia.es/misproyectos/toi18n/toi18n.php"  title="Traduce tus aplicaciones online" target="_blank">toi18n</a>.
+</p>
+  <p>Charla sobre <a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=247"> desarrollo de aplicaciones en Android</a>.</p>
+
+<p><a href="http://twitter.com/cgpcosmad" class="twitter-follow-button" data-lang="es">@cgpcosmad</a></p>
+
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  
+<p>Puedes encontrarme en <a href="http://www.autentia.com/" target="_blank">Autentia</a>: Ofrecemos servicios de soporte a desarrollo, factoría y formación</p>
+</div>        		<p style="float:right"><a href="/index.php?filter=tutorials&autor=23">Ver todos los tutoriales del autor</a></p>
+	    </div>
+</div><div style="text-align:center;margin:.3em">
+	<script type="text/javascript">
+<!--
+			google_ad_client = "pub-7938614058147015";
+
+			/* 468x60 grafico. creado 04/04/11 */
+			google_ad_slot ="5573441302";google_ad_width = 468;google_ad_height = 60;	
+//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>	<div class="separador" style="clear:both"></div> 
+	<div style="margin:1em 0 1em 0">
+		<h3 style="float:left;padding:0em;margin:0em">Fecha de publicaci&oacute;n del tutorial: 2011-12-19</h3>
+		<div class="iconos" style="float:right;clear:right">
+			<span>Tutorial visitado 3.458 veces</span>
+			<a href="retornapdf.php?pdf=jquery-mobile" target="_blank">Descargar en PDF</a>	
+		</div>
+	</div>
+	
+	<div class="separador" style="clear:both"></div> 
+	<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>JQuery Mobile: Desarrollo de aplicaciones y portales web para dispositivos m&oacute;viles</title>
+<meta name="title"		 content="JQuery Mobile: Desarrollo de aplicaciones y portales web para dispositivos m&oacute;viles"/>
+<meta name="DC.Title"	 content="JQuery Mobile: Desarrollo de aplicaciones y portales web para dispositivos m&oacute;viles"/>
+<meta http-equiv="title" content="JQuery Mobile: Desarrollo de aplicaciones y portales web para dispositivos m&oacute;viles"/>
+<meta content="En este tutorial veremos como desarrollar aplicaciones web y websites especificos para m&oacute;viles usando la librer&iacute;a JQuery Mobile." name="description"/>
+<meta content="En este tutorial veremos como desarrollar aplicaciones web y websites especificos para m&oacute;viles usando la librer&iacute;a JQuery Mobile." name="DC.Description"/>
+<meta content="En este tutorial veremos como desarrollar aplicaciones web y websites especificos para m&oacute;viles usando la librer&iacute;a JQuery Mobile." http-equiv="description"/>
+<meta name="author" content="Carlos Garc&iacute;a P&eacute;rez"/>
+<meta name="language" content="es"/>
+<meta name="DC.Language" content="Spanish"/>
+<meta http-equiv="language" content="es"/>
+<meta content="global" name="distribution"/>
+<meta content="document" name="resource-type"/>
+<meta http-equiv="Pragma" content="cache"/>
+<meta name="expires" content="never"/>
+	<style type="text/css">
+		#contenedor .subrayado {text-decoration:underline}
+		#contenedor .resalte1  {color:darkred; font-weight:bold}
+		#contenedor .negrita   {font-weight:bold}
+		#contenedor div.note   {padding:1em;   background-color:#dadada;border-width:1px;border-color:darkgreen;border-style:solid;border-radius:8px}
+		#contenedor div.note2  {padding:0.8em; background-color:#da9999;border-width:1px;border-color:darkred;border-style:solid;border-radius:8px}
+		#contenedor ul.horizontal {list-style-type: none;}
+		#contenedor ul.horizontal li {display:inline;}
+		#social_share {margin-bottom:1.2em;padding:1em;background-color:#dadada;width:800px;border-width:1px;border-color:darkblue;border-style:solid;border-radius:8px}
+		#social_share a {font-size:large;}
+		#social_share ul li {margin-left:6px;}
+	</style>
+<link type="text/css" rel="stylesheet" href="http://www.adictosaltrabajo.com/sintax/css/SyntaxHighlighter.css">
+<script language="javascript" src="http://www.adictosaltrabajo.com/sintax/js/shCore.js"></script>
+<script language="javascript" src="http://www.adictosaltrabajo.com/sintax/js/shBrushJava.js"></script>
+<script language="javascript" src="http://www.adictosaltrabajo.com/sintax/js/shBrushXml.js"></script>
+
+
+<script type="text/javascript">
+window.onload = function() {
+dp.SyntaxHighlighter.HighlightAll("code");
+}
+</script>
+</head>
+<body>
+	<div id="contenedor">
+		<h1>JQuery Mobile: Desarrollo de aplicaciones y portales web para dispositivos m&oacute;viles</h1>
+		<h2>&Iacute;ndice de contenidos</h2>
+		<div id="indice">
+			<ol>
+				<li><a href="#introduccion">Introducci&oacute;n</a></li>
+				<li><a href="#objetivos">Objetivo: Usabilidad y velocidad</a></li>
+				<li><a href="#ejemplos">Ejemplos de webs construidas con JQuery Mobile</a></li>
+				<li><a href="#aprendiendo">Aprendiendo lo b&aacute;sico de JQuery, haciendo ejemplos</a></li>
+				<li><a href="#detect">&iquest;C&oacute;mo detecto si acceden a trav&eacute;s de un m&oacute;vil o de un ordenador tradicional?</a></li>
+				<li><a href="#referencias">Referencias y enlaces interesantes</a></li>
+				<li><a href="#alternativas">Otros frameworks o librer&iacute;as alternativos para el desarrollo web para m&oacute;viles</a></li>
+				<li><a href="#conclusiones">Conclusiones</a></li>				
+			</ol>
+		</div>	
+<a name="introduccion"></a>
+<h2>Introducci&oacute;n</h2>
+<p>Actualmente gracias a las tarifas planas es muy com&uacute;n navegar por Internet a trav&eacute;s de nuestros tel&eacute;fonos m&oacute;viles, smartphones y tablets (y seguramente pronto ser&aacute; tambi&eacute;n la televisi&oacute;n).</p>
+<p>Sin embargo, la gran mayor&iacute;a de la informaci&oacute;n accesible en Internet est&aacute; pensada teniendo en mente que van ser accedidas a trav&eacute;s de un ordenador de escritorio, pero poco a poco, somos m&aacute;s los que accedemos a trav&eacute;s de nuestros tablets, smartphones,.. <strong>dispositivos mucho m&aacute;s limitados en cuanto a ancho de banda, capacidad de procesamiento, resoluci&oacute;n de pantalla y bater&iacute;a</strong>, lo cual hace que la navegaci&oacute;n sea menos agradable de lo que el usuario espera.</p>
+
+<p>De ah&iacute; que muchos negocios hayan decidido dar <strong>un valor a&ntilde;adido</strong> creando una <span class="resalte1">versi&oacute;n web espec&iacute;fica para dispositivos m&oacute;viles</span> que satisfaga las necesidades de sus usuarios/clientes. </p>
+<p><a href="http://jquerymobile.com/" target="_blank" title="Web oficial de JQuery Mobile">JQuery Mobile</a>, es una de las opciones (<a href="#alternativas" title="Ver otras alternativos para el desarrollo web para m&oacute;viles">otras alternativas</a>) que tenemos los desarrolladores a la hora de crear un web para 
+   m&oacute;vil, se trata de una librer&iacute;a javascript y un conjunto de estilos e im&aacute;genes con las que
+    podremos crear un website (html, css y js) para los clientes m&aacute;s extendidos:  Android, Blackberry, iPhone, iPad, WebOS, etc. <a href="http://jquerymobile.com/gbs/">Listado de plataformas compatibles.</a> </p>
+<a name="objetivos"></a>
+<h2>Objetivo: Usabilidad y velocidad</h2>
+<p>Aunque siempre deber&iacute;a de ser importante, en el caso de los <strong>webs para tablets, smartphones, etc. es de vital importancia</strong> debido a la escasez de recursos (Red, RAM, CPU, etc), usar t&eacute;cnicas de optimizaci&oacute;n as&iacute; como generar
+un <strong>c&oacute;digo HTML de calidad</strong> que adem&aacute;s permita al usuario con una pantalla de reducidas dimensiones trabajar de forma usable.</p>
+
+<p>Por ejemplo, cualquier web se podr&iacute;an mejorar much&iacute;simo realizando cosas como:</p>
+<ul>
+	<li>Usar im&aacute;genes optimizados para que ocupen el m&iacute;nimo n&uacute;mero de KB.</li>
+	<li>Comprimir y optimizar CSS, <a href="http://code.google.com/p/htmlcompressor/" target="_blank">HTML</a> y Javascript.. quitar espacios, funciones no usadas, fusionar varios css en uno, etc.</li>
+	<li>Reducir el n&uacute;mero de im&aacute;genes externas para disminuir el n&uacute;mero de peticiones HTTP. Por ejemplo, creando <span class="subrayado">CSS image sprites</span>.</li>
+	<li>No meter librer&iacute;as de JavaScript que no aportan apenas nada e incrementan el tiempo de carga. (Usa correctamente <a href="http://www.w3schools.com/html5/tag_script.asp" target="_blank"><strong>defer y async</strong></a>) </li>
+	<li>Usar comprensi&oacute;n en la transferencia de datos cuando sea posible (gzip &oacute; deflate).</li>
+	<li>Usar correctamente las cabeceras del protocolo HTTP para cachear los recursos est&aacute;ticos.</li>
+	<li>Usar <strong>AppCache y LocalStorage de HTML5</strong>.</li>
+	<li>etc.</li>
+</ul>
+<p>Pues bien, casi todo esto <span class="negrita">hay que tenerlo en cuenta</span> si deseas una experiencia agradable con tiempos de respuesta r&aacute;pidos en clientes con conexiones lentas y recursos limitados</p>
+<p>Adem&aacute;s, <span class="resalte1">Google tiene en cuenta para el SEO el tiempo de carga de una p&aacute;gina, penalizando las webs que tardan m&aacute;s en cargarse</span>.</p>
+<div class="note">
+	<p>Si quieres analizar una web y ver la calidad en cuanto tiempo de carga de la misma puedes hacerlo usando la herramienta online gratuita <a href="https://developers.google.com/pagespeed/" target="_blank">pagespeed</a> 
+	(por cortes&iacute;a de Google).</p>
+</div>
+<p>En el siguiente enlace os dejo <span class="subrayado">una charla sobre aspectos de optimizaci&oacute;n a tener en cuenta cuando desarrollamos aplicaciones web para m&oacute;viles</span>, <a href="https://www.youtube.com/watch?v=L2YqfVNHQO4" target="_blank">Mobile Web Performance</a></p>	
+<p>El usuario deber&iacute;a de poder usar la aplicaci&oacute;n sin tener que estar usando zooms o haciendo scrolls de pantalla, es decir, <span class="negrita">deber&iacute;a de ser lo m&aacute;s parecido posible a una 
+aplicaci&oacute;n nativa</span>.</p>
+
+<a name="ejemplos"></a>
+<h2>Ejemplos de webs construidas con JQuery Mobile</h2>
+<ul>
+	<li><a href="http://www.jqmgallery.com/"   target="_blank">http://www.jqmgallery.com</a>, un repertorio de bonitas webs construidas con JQuery Mobile</li>
+	<li>Algunas secciones de la web de Bankia, <a href="http://m.bankia.es/"   target="_blank">http://m.bankia.es/</a>.</li>
+	<li>Mi web personal <a href="http://www.carlos-garcia.es/" target="_blank">http://www.carlos-garcia.es</a>, la cual tengo que maquillarla un poco a&uacute;n.</li>
+</ul>
+<a name="aprendiendo"></a>
+<h2>Aprendiendo lo b&aacute;sico de JQuery, haciendo ejemplos</h2>
+<p>JQuery Mobile, est&aacute; construido sobre JQuery core, por lo que es necesario tener conocimientos del mismo para poder usarlo y por lo tanto <strong>requiere tener habilitado el JavaScript</strong>.</p>
+<p>Como una de las finalidades de JQM es construir aplicaciones r&aacute;pidas, en donde el usuario no tenga esperas molestas (debido al ancho de banda reducido), 
+lo que se hace es <strong>almacenar varias pantallas l&oacute;gicas en un &uacute;nico archivo HTML e ir mostr&aacute;ndolas y ocult&aacute;ndolas.</strong></p>
+<p>El desarrollador <span class="resalte1">no tendr&aacute; que aprender un completo nuevo lenguaje para construir sus aplicaciones</span> con JQM, tan s&oacute;lo tendr&aacute; 
+que usar el HTML que ya conoce y alg&uacute;n que otro atributo y elemento nuevo, pero nada que asuste :-)</p>
+<p>Con lo anterior <span class="subrayado">no quiero decir que todo el web deba estar en un &uacute;nico archivo HTML</span>, sino que hay que usar el sentido com&uacute;n e ir agrupando las p&aacute;ginas relacionadas 
+   por sem&aacute;ntica, flujo de navegaci&oacute;n o alguna otra forma de organizaci&oacute;n.</p>
+<p>Se asimilan mejor las ideas poniendolas en pr&aacute;ctica... veamos unos ejemplos:</p> 
+
+<div class="note2">
+<p>Vea primero <a href="jquery-mobile/demo1/home.html" target="_blank">el ejemplo en acci&oacute;n</a> y luego observe el c&oacute;digo fuente del mismo expuesto a continuaci&oacute;n:</p>
+</div>
+
+<p><a href="http://www.opera.com/developer/tools/mobile/" target="_blank">Emulador del navegador</a> de smartphones, m&oacute;viles y tablets para probar nuestras aplicaciones webs.</p>
+
+
+<textarea name="code" class="xml">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Ejemplo 1</title>
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+</head>
+<body>
+<section id="page1" data-role="page">
+	<header data-role="header">
+		<h1>P&aacute;gina 1</h1>
+	</header>
+	<div data-role="content">
+		<p>Inicio contenido de la P&aacute;gina 1</p>
+		<ul>
+      		<li><a href="#page2" title="Ir a la p&aacute;gina 2">P&aacute;gina 2</a></li>
+      		<li><a href="#page3" data-transition="flip">P&aacute;gina 3</a></li>
+			<li><a href="#page3" data-transition="slidedown" data-role="button" 
+				   data-icon="home" data-iconpos="right">P&aacute;gina 3 b</a></li>
+      		<li><a href="#page3" data-rel="dialog">P&aacute;gina 3 (Di&aacute;logo)</a></li>
+     	</ul>
+     	<p>Fin contenido de la P&aacute;gina 1</p>
+	</div>
+	<footer data-role="footer">
+		Pie de la p&aacute;gina 1
+	</footer>
+</section>
+<!-- P&aacute;gina 2 -->
+<section id="page2" data-role="page">
+	<header data-role="header">
+		<h1>P&aacute;gina 2</h1>
+	</header>
+	<div data-role="content">
+		<p>Contenido de la P&aacute;gina 2</p>
+	</div>
+	<footer data-role="footer">
+		Pie de la p&aacute;gina 2
+	</footer>
+</section>
+<!-- P&aacute;gina 3 -->
+<section id="page3" data-role="page">
+	<header data-role="header">
+		<h1>P&aacute;gina 3</h1>
+	</header>
+	<div data-role="content">
+     	<p>Contenido de la P&aacute;gina 3</p>
+	</div>
+	<footer data-role="footer">
+		Pie de la p&aacute;gina 3
+	</footer>
+</section>
+</body>
+</html>
+</textarea>
+
+<p>En el ejemplo anterior podemos ver lo siguiente:</p>
+<ul>
+	<li>El DOCTYPE indica que es una p&aacute;gina HTML versi&oacute;n 5.</li>
+	<li>En la secci&oacute;n &lt;head&gt; de la p&aacute;gina HTML importamos las librer&iacute;as de JQuery y JQuery Mobile, as&iacute; como la hoja de estilos de JQuery Mobile.</li>
+	<li>La p&aacute;gina HTML est&aacute; compuesta por tres p&aacute;ginas l&oacute;gicas, las cuales est&aacute;n delimitadas por las etiquetas<br/><code><strong>&lt;section id=&quot;paginaID&quot; data-role=&quot;page&quot;&gt; y &lt;/section&gt;</code></strong></li>
+	<li>
+		Cada p&aacute;gina (section) est&aacute; compuesta por los elementos:
+		<ul>
+			<li><code>&lt;header data-role=&quot;header&quot;&gt;</code>: Cabecera de la p&aacute;gina.</li>
+			<li><code>&lt;div data-role=&quot;content&quot;&gt;</code>:   Cuerpo de la p&aacute;gina.</li>
+			<li><code>&lt;footer data-role=&quot;footer&quot;&gt;</code>: Pie de la p&aacute;gina.</li>
+		</ul>
+		<p>En realidad, <strong>lo que le indica a JQuery Mobile lo que es una p&aacute;gina, una cabecera, cuerpo o pie, es el atributo data-role=&quot;page&quot;</strong>.</p>
+	</li>
+	<li>Cu&aacute;ndo se carga el HTML, JQuery a trav&eacute;s de JavaScript analizar&aacute; el HTML, lo modificar&aacute; internamente en base a los atributos que reconoce (data-role, etc) y mostrar&aacute; la primera p&aacute;gina que se encuentre.</li>
+	<li>Para navegar de una p&aacute;gina a otra, simplemente debemos crear un enlace y establecer el identificador de la p&aacute;gina destino en su atributo <code>href</code>.</li>
+	<li>Si deseamos aplicar un efecto a la navegaci&oacute;n entre p&aacute;ginas debemos especificar en el enlace el atributo <a href="http://jquerymobile.com/demos/1.0a4.1/docs/pages/docs-transitions.html" target="_blank" title="posibles valores de data-transition">data-transition="xxxx"</a></li>
+	<li>Si deseamos convertir un enlace en un bot&oacute;n debemos especificar en el enlace el atributo <code>data-role=&quot;button&quot;</code></li>
+	<li>Si deseamos decorar un bot&oacute;n con una imagen debemos especificar en el enlace el atributo <a href="http://jquerymobile.com/test/docs/buttons/buttons-icons.html" target="_blank" title="posibles valores de data-icon">data-icon="home"</a></li>
+	<li>Si deseamos que la p&aacute;gina a la que deseamos navegar sea mostrada como un <strong>di&aacute;logo modal</strong>, debemos especificar en el enlace el atributo <code>data-rel=&quot;dialog&quot;</code></li>
+</ul>
+
+<div class="note2">
+<p>Continuemos aprendiendo en base a ejemplos, como antes vea primero <a href="jquery-mobile/demo2/home.html" target="_blank">el ejemplo en acci&oacute;n</a> y luego observe el c&oacute;digo fuente del mismo expuesto a continuaci&oacute;n:</p>
+</div>
+
+<textarea name="code" class="xml">
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Mobile Application</title>
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+</head>
+<body>
+<section id="page1" data-role="page">
+	<header data-role="header">
+		<h1>P&aacute;gina 1</h1>
+	</header>
+	<div data-role="content">
+      	<div class="ui-grid-b">
+          	<div class="ui-block-a"><a href="#listas-anidadas">Listas anidadas</a></div>
+          	<div class="ui-block-b"><a href="#barra-herramientas">Barra de herramientas</a></div>
+         	<div class="ui-block-c"><a href="#formularios">Formularios</a></div>
+         	<!-- fila 2 -->
+          	<div class="ui-block-a"><a href="#listas-anidadas">Listas anidadas</a></div>
+          	<div class="ui-block-b"><a href="#barra-herramientas">Barra de herramientas</a></div>
+         	<div class="ui-block-c"><a href="#formularios">Formularios</a></div>
+     	 </div> 
+	</div>
+	<footer data-role="footer">
+		<h2>Pie P&aacute;gina 1</h2>
+	</footer>
+</section>
+<section id="listas-anidadas" data-role="page">
+	<header data-role="header">
+		<h1>Listas anidadas</h1>
+	</header>
+	<div data-role="content">
+		<ul data-role="listview">
+      		<li><a href="#">Colores <span class="ui-li-count">3</span></a>
+            	<ul>
+              		<li>Rojo</li>
+              		<li>Verde</li>
+              		<li>Azul</li>
+            	</ul> 
+			</li>
+			<li><a href="#">Ciudades <span class="ui-li-count">2</span></a>
+				<ul>
+					<li>Madrid</li>
+					<li>Barcelona</li> 
+				</ul>
+			</li>
+		</ul> 
+	</div>
+</section>
+<section id="barra-herramientas" data-role="page">
+	<header data-role="header">
+		<h1>Barra de herramientas</h1>
+        <nav data-role="navbar">
+            <ul>
+              <li><a href="#barra-herramientas" class="ui-btn-active">Inicio</a></li>
+              <li><a href="#">Proyectos</a></li>
+              <li><a href="#">Acerca de</a></li>
+            </ul>
+            <!-- Observe que si quitamos el UL li la apariencia es diferente -->
+        </nav>
+	</header>
+	<div data-role="content">
+		<p>Contenido de la seccion de inicio</p>
+	</div>
+	<footer data-role="footer" data-position="fixed">
+		<h2>Pie Barra de herramientas</h2>
+	</footer>
+</section>
+<section id="formularios" data-role="page"> 
+  <header data-role="header">
+    <h1>Formularios</h1>
+  </header> 
+  <div class="content" data-role="content">
+      <form id="form1" action="#" method="post">
+          <div data-role="fieldcontain">
+          	<label for="nombre">&iquest;Como se llama?:</label>
+			<input type="text" id="nombre" name="nombre"  placeholder="Nombre completo..."/>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"/>
+			<label for="movil">M&oacute;vil:</label>
+			<input type="phone" id="movil" name="movil"/>
+          	
+          	<label for="numAnios">Num de a&ntilde;os trabajados:</label>  
+            <input type="range" id="numAnios" name="numAnios" min="0" max="50"/>
+            
+			<label for="viajar">Disponibilidad para viajar?</label>
+            <select id="viajar" name="viajar" data-role="slider">
+                        <option value="1">S&iacute;</option>
+                        <option value="0">No</option>
+            </select>
+              <fieldset data-role="controlgroup">
+                	<legend>Idiomas que es capaz de leer:</legend>
+                
+                	<label for="ingles">Ingl&eacute;s</label> 
+                	<input type="checkbox" id="ingles" name="ingles"> 
+
+                	<label for="portuges">Portugu&eacute;s</label> 
+                	<input type="checkbox" id="portuges" name="portuges"> 
+
+                	<label for="aleman">Alem&aacute;n</label> 
+                	<input type="checkbox" id="aleman" name="aleman"> 
+              </fieldset>
+              <label for="estadocivil">Estado civil:</label>
+              <select id="estadocivil" name="estadocivil" data-native-menu="false">
+                    <option value="0">Soltero</option>
+                    <option value="1">Casado</option>
+                    <option value="2">Viudo</option>
+                    <option value="3">Divorciado</option>
+              </select>
+          </div>
+      </form>
+  </div> 
+  <footer data-role="footer" data-position="fixed">
+  	<h2>Pie Formularios</h2>
+  </footer>
+</section>
+</body>
+</html>
+</textarea>
+<p>En el ejemplo anterior podemos ver lo siguiente:</p>
+<ul>
+	<li>Podemos crear estructuras de tablas (celdas y columnas) usando clases css en donde ui-grid-b es una tabla de 3 columnas, ui-grid-c es una tabla de 4 columnas, etc. <a href="http://jquerymobile.com/test/docs/content/content-grids.html" target="_blank">Ver documentaci&oacute;n</a>.</li>
+	<li>Podemos simular N pantallas usando listas html (&lt;ul&gt;) anidadas agreg&aacute;ndoles el atributo <code>data-role=&quot;listview&quot;</code>. <a href="http://jquerymobile.com/test/docs/lists/index.html" target="_blank">Ver documentaci&oacute;n</a>.</li>
+	<li>Existen una gran variedad de controles de formulario con el que podemos recoger y/o mostrar informaci&oacute;n a los usuarios de una manera elegante y usable. <a href="http://jquerymobile.com/test/docs/forms/index.html" target="_blank">Ver documentaci&oacute;n</a>.</li>
+</ul>
+
+  <a name="detect"></a>
+  <h2>&iquest;C&oacute;mo detecto si acceden a trav&eacute;s de un m&oacute;vil o de un ordenador tradicional?</h2>
+  <p>Seguramente s&oacute;lo desees redirigir al usuario a una Web para m&oacute;vil cuando accedan a trav&eacute;s de su mÃ³vil y continuar mostrando la web cl&aacute;sica cuando se accedan desde un pc de sobremesa o port&aacute;til, pues bien, puedes
+  programartelo tu mismo y analizar las cabeceras User-Agent, etc. o bien usar una de las soluciones ya creadas, como por ejemplo:</p>
+  <ul>
+	<li>En Java puedes usar <a href="http://www.springsource.org/spring-mobile" target="_blank">Spring Mobile</a>.</li>
+  	<li>En PHP puedes usar <a href="http://detectmobilebrowsers.mobi/" target="_blank">http://detectmobilebrowsers.mobi/</a>.</li>
+  	<li>etc.</li>
+  </ul>
+  
+  <a name="referencias"></a>
+  <h2>Referencias y enlaces interesantes:</h2>
+  <ul>
+  	<li>Web oficial: <a href="http://jquerymobile.com/" target="_blank" title="Web oficial de JQuery Mobile">P&aacute;gina principal</a></li>
+  	<li>Web oficial: <a href="http://jquerymobile.com/demos/1.0/" title="Ver documentaci&oacute;n" target="_blank">documentaci&oacute;n</a></li>
+  	<li>Otros <a href="http://www.jqmgallery.com/jquery-mobile-tutorials/" title="Tutoriales diversos" target="_blank">tutoriales sobre JQuery Mobile</a> (en Ingl&eacute;s)</li>
+	<li><a href="http://www.opera.com/developer/tools/mobile/" target="_blank">Emulador de dispositivos (smartphones, m&oacute;viles y tablets) para probar nuestras aplicaciones webs</a></li>
+  	<li>Una charla de <srtong>Google IO</strong>: <a href="https://www.youtube.com/watch?v=vV85dNeGRhY" target="_blank" title="Google I/O 2011: Mobile Web Development: From Zero to Hero">Mobile Web Development</a></li>	
+  	<li><a href="http://www.samaxes.com/2011/05/improving-web-performance-with-apache-and-htaccess/" target="_blank">Improving web performance with Apache and htaccess</a></li>
+  	<li><a href="http://httpd.apache.org/docs/2.2/caching.html" target="_blank">Apache Caching Guide</a></li>  	
+  </ul>
+  
+  <a name="alternativas"></a>
+  <h2>Otros frameworks o librer&iacute;as alternativos para el desarrollo web para m&oacute;viles:</h2>	
+  <ul>
+  	<li><a href="http://www.primefaces.org/showcase/touch" target="_blank">http://www.primefaces.org/showcase/touch</a> (para Java Server Faces).</li>
+  	<li><a href="http://jqtouch.com" target="_blank">http://jqtouch.com</a></li>
+	<li><a href="http://phonegap.com" target="_blank">http://phonegap.com</a></li>
+	<li><a href="http://the-m-project.net" target="_blank">http://the-m-project.net</a></li>  	
+ 	<li><a href="http://joapp.com" target="_blank">http://joapp.com</a></li>  
+  	<li><a href="http://www.appcelerator.com" target="_blank">http://www.appcelerator.com</a></li>  	
+  	<li><a href="http://rhomobile.com" target="_blank">http://rhomobile.com</a></li>
+  	<li><a href="http://mobilizejs.com" target="_blank">http://mobilizejs.com</a></li>
+   	<li><a href="http://www.sencha.com/products/touch/" target="_blank">http://www.sencha.com/products/touch/</a></li>
+  </ul>
+
+  <a name="conclusiones"></a>
+  <h2>Conclusiones</h2>
+  <p>Como se ha podido ver en este art&iacute;culo, JQuery Mobile es una excelente soluci&oacute;n para crear una web espec&iacute;fica para m&oacute;viles de manera que permita a los usuarios de las plataformas m&aacute;s extendidas acceder 
+  	 a la informaci&oacute;n de una forma m&aacute;s r&aacute;pida y c&oacute;moda.</p>
+  <p>Si bien le he detectado alguna anomalia, es un proyecto estable en donde se est&aacute;n invirtiendo considerables esfuerzos para continuar madur&aacute;ndolo.</p>
+  <p>Bueno, espero que os sea de utilidad, recuerda que puedes profundizar m&aacute;s, esto es s&oacute;lo una introducci&oacute;n. Si os gusta este tema, podeis continuar viendo las conferencias/charlas que publiqu&eacute; en este tutorial, son bastante interesantes.</p>
+  
+  
+  <p>Un saludo, <a href="http://www.carlos-garcia.es" target="_blank">Carlos Garc&iacute;a</a></p>
+
+
+
+
+	</div>	<!-- Fin de contenedor -->
+</body>
+</html>
+		
+
+	<div id="single_vote" style="align:left;float:none;clear:both;margin-left:0px;margin-top:18px;margin-bottom:18px;height:100px;padding:8px;border-style:solid;border-width:1px;border-color:darkgray">
+	<h2>A continuación puedes evaluarlo: </h2>	
+<p style='clear:both;display:block;margin-top: 20px;margin-bottom:20px'><a href='/register.inc.php'>Regístrate para evaluarlo</a></p>	<form action="#" method="post" name="votacion">
+		<input type="hidden" name="add_voto_form_sended" value="1">
+		<input type="hidden" name="tutorial_id" value="jquery-mobile"/> 
+		<input type="hidden" name="voto" value="0">
+	    <span class="ratingButton"></span>
+	    <span class="ratingButton"></span>
+	    <span class="ratingButton"></span>
+	    <span class="ratingButton"></span>
+	    <span class="ratingButton"></span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var single_vote = new Spry.Widget.Rating("single_vote", {rateHandler: handlerVotacion, readOnly:true});
+	function handlerVotacion () {	
+		fvotacion = document.forms['votacion'];
+		if (fvotacion) {
+			fvotacion.voto.value = single_vote.getValue();
+			fvotacion.submit();
+		}
+	}
+</script>	
+	
+	<div id="tuto_social_share" style="margin-top:18px;margin-bottom:18px;padding:8px;border-style:solid;border-width:1px;border-color:darkgray">
+		<h2>Por favor, vota +1 o comp&aacute;rtelo si te pareci&oacute; interesante</h2>
+		<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+	<a href="http://addthis.com/bookmark.php?v=250&amp;username=xa-4bea90cb722c861e" class="addthis_button_compact">Share</a>
+	<span class="addthis_separator">|</span>
+	<a class="addthis_button_facebook"></a>
+	<a class="addthis_button_twitter"></a>
+	<a class="addthis_button_linkedin"></a>
+	<a class="addthis_button_email"></a>
+	<a class="addthis_button_favorites"></a>
+	<a class="addthis_button_print"></a>
+	<a class="addthis_button_google_plusone"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bea90cb722c861e"></script>
+<!-- AddThis Button END -->	</div>
+	 
+	<div class="content_comentario">
+	<div class="content_titulo_tutorial">
+		An&iacute;mate y com&eacute;ntanos lo que pienses sobre este <span class="negrita">TUTORIAL: </span>
+	</div>
+	<div class="comentario">
+      
+        <form action="#" method="POST" id="sendCommentForm">
+        	<input type="hidden" name="add_comentario_form_sended" value="1"/>
+		  	<input type="hidden" name="comment_ref_type" value="t"/>
+		  	<input type="hidden" name="comment_ref_id"   value="jquery-mobile"/>
+		  	
+          	<textarea name="comment_panel_text" id="comment_panel_text" rows="5" cols="102" style="width:100%" title="Escribe tu comentario"  disabled = "disabled"  > </textarea>
+			
+				<h3><a href="/register.php"><span class="negra">&raquo; Registrate</span> <span class="normal">y accede a esta y otras ventajas</span> <span class="negra">&laquo;</span> </a></h3>
+        </form>
+      </div>
+      <div class="content_pie_tutorial"></div>	
+</div>
+	
+<div id="tutorials">
+	<div class="block_comentarios">
+	
+			<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="http://www.adictosaltrabajo.com/images/authors/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left"/>
+				<p class="fecha">Fecha publicación: <strong>2012-01-25-13:48:02</strong></p>
+			    <p class="autorcomentario">Autor:  <strong></strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				sfsdvsfds			</div>
+	            
+		</div>	
+
+				<div class="coment-text-div" style="border-style:solid;border-width:1px;border-color:#ccc;margin:0 0 1em 0;">
+			<div style="padding:8px;background-color:#f2f2f2;height:150px;"> 
+		 	    <img src="http://www.adictosaltrabajo.com/images/authors/foto-anonimo_thumbail.png" style="width:100px;height:128px; margin:8px" align="left"/>
+				<p class="fecha">Fecha publicación: <strong>2012-01-18-01:17:07</strong></p>
+			    <p class="autorcomentario">Autor:  <strong>ccstudio</strong></p>
+			</div>
+			<div class="comment-text" style="display:block;clear:both;margin-top:.5em;padding:1em;white-space:pre-line;min-height:120px;max-height:320px;overflow:auto;background-color:#fff">
+							
+				Carlos, soy hugo de mendoza argentina, queria hacerte una consulta, resulta que estuve probando tu codigo fuente, y compila absolutamente todo, incluso le doy clean-build y da todo ok, aunque hice unos cambios en el package y en la url donde puso el php, aun asi todo ok, pero cuando ejecuto desde el emulador me dice que esta aplicacion no la puede ejecutar. esta aplicacion tiene una operacion ilegal. la clase no es un midlet. Carlos no entiendo donde puede estar el error, te comento ademas que el php lo coloque en mi localhost, tengo server propio y se que funciona bien y sin problema ya que compilo y ejecuto codigo java, jsp y todo ok, server propio pero ip dinamica, cual piensas puede ser el error, te envio el codigo aunque toque solo dos lineas,  la del package y la del path del prueba.php. uso netbeans 7.1 y win xp3<br/><br/>    package phone;  <br/>      <br/>    import javax.microedition.midlet.*;  <br/>    import javax.microedition.lcdui.*;  <br/>    import javax.microedition.io.*;  <br/>    import java.io.*;  <br/>     <br/>    <br/>      <br/>    /** <br/>     * Formulario principal de la aplicaci&oacute;n <br/>     *  <br/>     * @author Carlos Garc&iacute;a. Autentia Real Business Solutions. <br/>     */  <br/>    public class PhoneTestForm extends Form implements CommandListener,  <br/>            java.lang.Runnable {  <br/>      <br/>        private PhoneTest midlet;  <br/>        private Command cmdExit;  <br/>        private Command cmdTest;  <br/>        private Display display;  <br/>        private String nl;  <br/>      <br/>        /** Constructor */  <br/>        public PhoneTestForm(PhoneTest midlet) {  <br/>            super(&quot;MENU PRINCIPAL&quot;);  <br/>      <br/>            this.midlet = midlet;  <br/>            this.display = Display.getDisplay(midlet);  <br/>      <br/>            this.createUI();  <br/>        }  <br/>      <br/>        /** <br/>         * Crea el interfaz gr&aacute;fico <br/>         */  <br/>        private void createUI(){  <br/>             String nl = this.getLS();  <br/>             this.cmdExit = new Command(&quot;Salir&quot;, Command.EXIT, 0);  <br/>             this.cmdTest = new Command(&quot;Probar&quot;, Command.OK, 0);   <br/>              <br/>             this.append(&quot;Esta aplicaci&oacute;n realiza una prueba de conectividad para ver si su tel&Atilde;&copy;fono es capaz de conectarse a Internet.&quot;);  <br/>             this.append(nl);  <br/>             this.append(&quot;Si la prueba es satisfactoria en unos 10 segundos aparecer&aacute; la palabra OK en la  pantalla de su terminal.&quot;);  <br/>             this.append(nl);  <br/>             this.append(&quot;Autentia Real Business Solutions.&quot;);  <br/>               <br/>             this.addCommand(cmdExit);  <br/>             this.addCommand(cmdTest);  <br/>             this.setCommandListener(this);  <br/>     }  <br/>      <br/>        /** <br/>         * Realiza las operaciones de finalizaci&oacute;n <br/>         */  <br/>        private void cmdExit_click() throws Exception {  <br/>            midlet.destroyApp(false);  <br/>        }  <br/>      <br/>        /** <br/>         * Realiza la prueba <br/>         */  <br/>        private void cmdTestClick() {  <br/>            Thread testThread = new Thread(this);  <br/>            testThread.start();  <br/>        }  <br/>      <br/>        /** <br/>         * Devuelve el separador de linea <br/>         */  <br/>        private String getLS() {  <br/>            String nl = System.getProperty(&quot;line.separator&quot;);  <br/>      <br/>            if (&quot;&quot;.equals(nl) || (nl == null)) {  <br/>                nl = &quot;<br/>&quot;;  <br/>            }  <br/>      <br/>            return nl;  <br/>        }  <br/>      <br/>        /** <br/>         * Realiza la conexi&oacute;n en Background (Es requerido lo dice la <br/>         * especificaci&oacute;n) <br/>         */  <br/>        public void run() {  <br/>            HttpConnection http = null;  <br/>            DataInputStream is = null;  <br/>            String p1 = null;  <br/>            String p2 = null;  <br/>            int code;  <br/>            StringBuffer buffer;  <br/>            byte[] bytes;  <br/>            boolean testOK = false;  <br/>            Exception exception = null;  <br/>            try { // Configura la solicitud  <br/>                p1 = &quot;Profile/&quot; + System.getProperty(&quot;microedition.profiles&quot;) + &quot; Configuration/&quot; + System.getProperty(&quot;microedition.configuration&quot;);  <br/>                p2 = System.getProperty(&quot;microedition.locale&quot;);  <br/>                http = (javax.microedition.io.HttpConnection) Connector.open(&quot;http://localhost:3306/BaseDatos/data/mibasedato/prueba.php&quot;, Connector.READ);<br/>                //o agregar BaseDatos/data/mibasedato/<br/>                http.setRequestMethod(HttpConnection.GET);  <br/>                http.setRequestProperty(&quot;User-Agent&quot;, p1);  <br/>                if (p2 != null) {  <br/>                    http.setRequestProperty(&quot;Accept-Language&quot;, p2);  <br/>                }  <br/>      <br/>                // Leemos la respuesta  <br/>                code = http.getResponseCode();  <br/>                if (code != HttpConnection.HTTP_OK) {  <br/>                    exception = new Exception(http.getResponseMessage());  <br/>                } else {  <br/>                    is = http.openDataInputStream();  <br/>                    bytes = this.readFully(is);  <br/>                    p1 = this.getHeaderField(http, &quot;CABECERA&quot;);  <br/>      <br/>                    try {  <br/>                        p2 = new String(bytes);  <br/>                        p2 = p2.trim();  <br/>                        if (&quot;OK&quot;.equals(p1)  <br/>                                &amp;&amp; &quot;Autentia. Real Business Solutions&quot;.equals(p2)) {  <br/>                            testOK = true;  <br/>                        }  <br/>                    } catch (Exception ex) {  <br/>                        // NADA  <br/>                    }  <br/>                }  <br/>            } catch (java.lang.Exception ex) {  <br/>                exception = ex;  <br/>            }  <br/>      <br/>            // Cerramos la connexi&oacute;n  <br/>            try {  <br/>                http.close();  <br/>            } catch (Exception ex) {  <br/>            }  <br/>      <br/>            try {  <br/>                this.clear();  <br/>            } catch (Exception ex) {  <br/>                // NADA  <br/>            }  <br/>      <br/>            if (testOK) {  <br/>                this.append(&quot;OK&quot;);  <br/>            } else if (exception != null) {  <br/>                this.append(exception.toString());  <br/>            } else {  <br/>                if (p1 == null) {  <br/>                    this.append(&quot;<br/>p1 null&quot;);  <br/>                } else {  <br/>                    this.append(p1);  <br/>                }  <br/>      <br/>                if (nl == null) {  <br/>                    this.append(&quot;<br/>&quot;);  <br/>                } else {  <br/>                    this.append(this.nl);  <br/>                }  <br/>      <br/>                if (p2 == null) {  <br/>                    this.append(&quot;<br/>p2 null&quot;);  <br/>                } else {  <br/>                    this.append(p2);  <br/>                }  <br/>            }  <br/>        }  <br/>      <br/>        /** <br/>         * @return Devuelve todos los bytes disponibles y cierra el stream <br/>         */  <br/>        public byte[] readFully(DataInputStream input) throws java.io.IOException {  <br/>            ByteArrayOutputStream bo = null;  <br/>            int value;  <br/>      <br/>            try {  <br/>                bo = new ByteArrayOutputStream(1024); // 1Kb  <br/>                while (true) {  <br/>                    bo.write(input.readByte());  <br/>                }  <br/>            } catch (java.io.EOFException ex) {  <br/>            }  <br/>      <br/>            byte[] bytes = bo.toByteArray();  <br/>      <br/>            // Cerramos los stream y liberamos recursos  <br/>            bo.close();  <br/>            input.close();  <br/>            bo = null;  <br/>            input = null;  <br/>      <br/>            return bytes;  <br/>        }  <br/>      <br/>        private void clear() {  <br/>            this.removeCommand(cmdTest);  <br/>            for (int i = this.size() - 1; i &gt;= 0; i--) {  <br/>                this.delete(i);  <br/>            }  <br/>        }  <br/>      <br/>        /** <br/>         * Lee una cabecera Http. Algunos terminales tienen un bug en el m&Atilde;&copy;todo <br/>         * getHeader(&quot;CabeceraDeseada&quot;) <br/>         */  <br/>        private String getHeaderField(HttpConnection http, String header)  <br/>                throws java.io.IOException {  <br/>            int index = 0;  <br/>            String name = http.getHeaderFieldKey(index);  <br/>            while (name != null) {  <br/>                if (this.equalsIgnoreCase(name, header)) {  <br/>                    return http.getHeaderField(index);  <br/>                }  <br/>                index++;  <br/>                name = http.getHeaderFieldKey(index);  <br/>            }  <br/>            return null;  <br/>        }  <br/>      <br/>        /** <br/>         * Compara dos cadenas de caracteres de modo case-insentivive <br/>         */  <br/>        private boolean equalsIgnoreCase(String str1, String str2) {  <br/>            str1 = str1.toLowerCase();  <br/>            str2 = str2.toLowerCase();  <br/>            return str1.equals(str2);  <br/>        }  <br/>      <br/>        /** <br/>         * Receptor de eventos <br/>         */  <br/>        public void commandAction(Command cmd, Displayable d) {  <br/>            try {  <br/>                if (cmd == cmdExit) {  <br/>                    this.cmdExit_click();  <br/>                    return;  <br/>                }  <br/>                if (cmd == cmdTest) {  <br/>                    this.cmdTestClick();  <br/>                    return;  <br/>                }  <br/>            } catch (java.lang.Exception ex) {  <br/>                display.setCurrent(new Alert(ex.toString()), this);  <br/>            }  <br/>        }  <br/>    }  <br/><br/><br/><br/><br/><br/><br/>package phone;  <br/>      <br/>    import javax.microedition.midlet.*;  <br/>    import javax.microedition.lcdui.Display;  <br/>      <br/>    /** <br/>     * Esta aplicaci&oacute;n sirve para ver si el dispositivo es capaz o no de conectarse <br/>     * a internet y leer y escribir correctamente <br/>     *  <br/>     * @author Carlos Garc&iacute;a P&Atilde;&copy;rez. Autentia Real Business Solutions <br/>     */  <br/>    public class PhoneTest extends MIDlet {  <br/>        private boolean started;  <br/>      <br/>        /** Constructor */  <br/>        public PhoneTest() {  <br/>            started = false;  <br/>        }  <br/>      <br/>        /** <br/>         * Punto de inicio del MIDLET. Muestra el formulario principal. <br/>         */  <br/>        public void startApp() throws MIDletStateChangeException {  <br/>            if (started) {  <br/>                return;  <br/>            }  <br/>      <br/>            this.started = true;  <br/>            Display display = Display.getDisplay(this);  <br/>            display.setCurrent(new PhoneTestForm(this));  <br/>        }  <br/>      <br/>        /** <br/>         * Liberamos recursos <br/>         */  <br/>        public void destroyApp(boolean unconditional) throws MIDletStateChangeException {  <br/>            this.notifyDestroyed();  <br/>        }  <br/>      <br/>        /** <br/>         * Pause, discontinue .... <br/>         */  <br/>        public void pauseApp() {  <br/>        }  <br/>    }  <br/><br/><br/>muchas gracias			</div>
+	            
+		</div>	
+
+					</div>
+</div>	
+</div>	
+	<div id="tutorialFoot">
+	  <!--Creative Commons License-->
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" target="_blank"><img src="http://creativecommons.org/images/public/somerights20.png" name="graphics1" alt="Creative Commons License" align=bottom width=88 height=31 border=0 class="img-licencia" /></a>
+Esta obra est&aacute; licenciada bajo <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" target="_blank">licencia Creative Commons de 
+Reconocimiento-No comercial-Sin obras derivadas 2.5</a></p><!--/Creative Commons License-->
+<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+<license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.5/es/" />
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by-nc-nd/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/></License></rdf:RDF> -->	</div>
+    <div style="width: 75%">
+      <div class="kcy_karmacracy_widget_h_ID" style="width: 100%; padding-top: 1.5em;padding-bottom: 1.5em"></div><script defer="defer" src="http://rodney.karmacracy.com/widget-1.2/?id=ID&type=h&width=450&sc=1&rb=1&c1=74a3be&c2=01527F&c3=e6e6e6&c4=e6e6e6&c5=040404&c6=ffffff&c7=01527F&c8=040404"></script>    </div>
+			<div class="clear">
+			<div class="bloque_pie">
+			<div id="pie-left" class="wrapper"></div> 
+				<div id="footer">
+					<p id="copyright">Copyright 2003-2012 &copy; All Rights Reserved | <a href="/textolegal.php" target="_blank">Texto legal y condiciones de uso</a> | 
+					<a href="http://www.adictosaltrabajo.com/banners.php" target="_blank">Banners</a> | 
+					<a href="http://www.autentia.com/" target="_blank">Powered by Autentia</a> | 
+					<a href="http://www.autentia.com/contacto.htm" target="_blank">Contacto</a></p>
+					<p id="acronyms">
+						<a href="http://validator.w3.org/check/referer" target="_blank"><img src="/skins/new/images/xhtml.png" alt="xhtml 1.0"></a>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer?warning=no" target="_blank"><img src="/skins/new/images/css.png" alt="css"></a>
+				      	<a href="/feeds.php" target="_blank"><img src="/skins/new/images/rss.png" alt="rss"></a>
+				      	<a href="/feeds.php" target="_blank"><img src="/skins/new/images/atom.png" alt="atom"></a>
+				  	</p>
+				</div>
+				<div id="pie-right" class="wrapper"></div> 
+				</div>
+			</div>	
+		</div>
+		<div style="display: none; visibility: hidden; opacity: 0;" id="lbOverlay"></div>
+		<div style="display: none;" id="lbCenter">
+			<div id="lbImage"><a href="#" id="lbPrevLink"></a><a href="#" id="lbNextLink"></a></div>
+		</div>
+		<div style="display: none;" id="lbBottomContainer">
+			<div id="lbBottom"><a href="#" id="lbCloseLink"></a><div id="lbCaption"></div>
+				<div id="lbNumber"></div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>	
+	</body>
+</html>

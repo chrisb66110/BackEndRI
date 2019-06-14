@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://www.linuxhispano.net/xmlrpc.php">
+	<title>Punteros inteligentes en C++11</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v8.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Pequeño ejemplo sobre punteros inteligentes en C++11."/>
+<link rel="canonical" href="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Punteros inteligentes en C++11" />
+<meta property="og:description" content="Pequeño ejemplo sobre punteros inteligentes en C++11." />
+<meta property="og:url" content="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/" />
+<meta property="og:site_name" content="Linux Hispano" />
+<meta property="article:tag" content="cpp11" />
+<meta property="article:tag" content="inteligentes" />
+<meta property="article:tag" content="punteros" />
+<meta property="article:section" content="Tutoriales" />
+<meta property="article:published_time" content="2014-07-01T16:53:32+02:00" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Linux Hispano &raquo; Feed" href="http://www.linuxhispano.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Linux Hispano &raquo; RSS de los comentarios" href="http://www.linuxhispano.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Linux Hispano &raquo; Punteros inteligentes en C++11 RSS de los comentarios" href="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.linuxhispano.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='http://www.linuxhispano.net/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='realtidbitsPushquote_headcss-css'  href='http://www.linuxhispano.net/wp-content/plugins/pushquote/css/pullquote.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-css'  href='http://www.linuxhispano.net/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-classic-css'  href='http://www.linuxhispano.net/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css'  href='http://www.linuxhispano.net/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='http://www.linuxhispano.net/wp-content/plugins/captcha/css/front_end_style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.linuxhispano.net/wp-includes/css/dashicons.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='http://www.linuxhispano.net/wp-content/plugins/captcha/css/desktop_style.css?ver=4.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.linuxhispano.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/bootstrap/bootstrap.min.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnificpopup-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/css/magnificpopup.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='buzzblog-social-icons-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/bootstrap/hercules-social.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='buzzblog-mainstyle-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='buzzblog-child-style-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog-child/style.css?ver=2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/bootstrap/font-awesome.min.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='buzzblog-responsive-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/responsive.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='owlcarousel-css'  href='http://www.linuxhispano.net/wp-content/themes/buzzblog/css/owl.carousel.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widget-social-icons-styles-css'  href='http://www.linuxhispano.net/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css?ver=20170506' type='text/css' media='all' />
+<link rel='stylesheet' id='upprev-css-css'  href='http://www.linuxhispano.net/wp-content/plugins/upprev/styles/upprev.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-buzzblog_options-css'  href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;ver=1496228937' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://www.linuxhispano.net/wp-content/plugins/jetpack/css/jetpack.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript">
+var iworks_upprev = { animation: 'flyout', position: 'right', offset_percent: 75, offset_element: '#comments', css_width: 360, css_side: 5, compare: 'simple', url_new_window: 0, ga_track_views: 1, ga_track_clicks: 1, ga_opt_noninteraction: 1, title: 'Punteros inteligentes en C++11' };
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var PushquoteAjax = {"show_credits":null,"login":"","api_key":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/pushquote/js/pullquote.js?ver=1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.linuxhispano.net\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Presiona %s para copiar y %s para pegar","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var hercules_likes = {"ajaxurl":"http:\/\/www.linuxhispano.net\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/hercules-likes.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/upprev/scripts/upprev.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.5.4'></script>
+<link rel='https://api.w.org/' href='http://www.linuxhispano.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.linuxhispano.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.linuxhispano.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel='shortlink' href='https://wp.me/p4hWjV-3RP' />
+<link rel="alternate" type="application/json+oembed" href="http://www.linuxhispano.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.linuxhispano.net%2F2014%2F07%2F01%2Fpunteros-inteligentes-cpp11%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.linuxhispano.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.linuxhispano.net%2F2014%2F07%2F01%2Fpunteros-inteligentes-cpp11%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type="text/css">@media (min-width: 1200px) {.container{max-width: 1170px;}}.logo img {width:400px;}.footer-logo .logo img {width:400px;}#primary, .nav__mobile, .top-container .sticky-nav, .top-container-normal, .top-container .sticky-nav.navbar-fixed-top, .navbar-fixed-top {background:#ffffff}#primary {border-top-color:#eeeeee}#primary {border-bottom-color:#eeeeee}#primary {border-top-width:1px;}#primary {border-bottom-width:0px;}.lowestfooter {border-top-color:#eeeeee}.header-overlay {background:rgba(255,255,255,0.6)}.post-header-overlay {background:rgba(0,0,0,0.19)}#primary-menu ul li:not(.buzzblog-widget-menu) > ul {top:-2px}.slideshow-desc {background: rgba(255,255,255,0.94)}body { background-image:url("/wp-content/uploads/sites/3/2016/11/pattern1.png"); background-repeat:repeat; background-position:;  background-attachment:; background-size:;background-color:#ffffff;}.someclass{
+   margin: 0 auto;
+}.post_category:after, .hs_aboutme_text span, .slide-category span, .widget-content h4.subtitle span, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .title-section span, .heading-entrance span {border-top-color:#efa48d}.error404-holder_num, .twitter-list i, .hercules-likes:hover:before, .hercules-likes.active:before {color:#efa48d}.owl-carousel .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot:hover span, .link-image a p, .widget_calendar tbody a, .text-highlight, div.jp-play-bar, div.jp-volume-bar-value, .progress .bar, .buzzblog-cart .badge, .mobile-shopping-cart .badge {background:#efa48d}.menu-mobile ul li.current-menu-item a, .menu-mobile ul li.current-menu-parent > a { color:#efa48d}#primary-menu ul li:hover > a, #primary-menu .has-mega-column > .sub-menu a:hover, #primary-menu .has-mega-column > .sub-menu > .columns-sub-item > a:hover { color:#efa48d}#primary-menu ul li.current-menu-item > a, #primary-menu .has-mega-column > .sub-menu .current-menu-item > a { color:#efa48d}#primary-menu li ul li a, #primary-menu .has-mega-column > .sub-menu a { background:#ffffff}#primary-menu ul li:hover > a, #primary-menu .has-mega-column > .sub-menu a:hover {background:#ffffff}#primary-menu ul li.current-menu-item > a, #primary-menu .has-mega-column > .sub-menu .current-menu-item > a {background:#ffffff}#primary-menu > li > a:hover, #primary-menu > li.current-menu-item > a, #primary-menu > li.current-menu-ancestor > a, #primary-menu li:hover > a { color:#efa48d}#primary-menu > li.current-menu-item > a, #primary-menu > li.current-menu-ancestor > a { color:#efa48d}#primary-menu > li > a {background:#ffffff}#primary-menu > li > a:hover, #primary-menu > li.current-menu-item > a, #primary-menu > li.current-menu-ancestor > a, #primary-menu li:hover > a { background:#ffffff}#primary-menu > li.current-menu-item > a, #primary-menu > li.current-menu-ancestor > a { background:#ffffff}#primary-menu .sub-menu, #primary-menu .has-mega-sub-menu .mega-sub-menu, #primary-menu .has-mega-column > .sub-menu {background:#ffffff}#primary-menu > li.current-menu-ancestor, #primary-menu > li:hover, #primary-menu > li.current_page_item, #primary-menu > li.current-menu-item {border-top: 1px solid transparent;}#primary-menu ul li a {border-color:#eeeeee}#top-menu ul {background:rgba(239,164,141,0.99)}#top-menu ul a, #top-menu .current_page_item ul a, #top-menu ul .current_page_item a, #top-menu .current-menu-item ul a, #top-menu ul .current-menu-item a, #top-menu li:hover > ul a {border-color:#efd6cb}.top-border {background:#ffffff}.modern-layout .meta-space-top, .modern-layout .post_category a, .modern-layout .meta-space-top {color:#ffffff}.modern-layout h1.post-title {color:#ffffff}.ribbon-featured {color:#ffffff}.ribbon-featured {background:#efa48d}.category-filter ul li.current-cat a, .page-numbers .current { color: #ffffff}.footer .instagram-footer .readmore-button a, a.btn, a.comment-reply-link, input[type="submit"], .tagcloud a, .category-filter ul li a, .woocommerce #review_form #respond .form-submit input, .woocommerce .widget_price_filter .price_slider_amount .button, .woocommerce div.product form.cart .button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button { border-color: #efa48d}.page-numbers .current, .page-numbers li a:hover, .footer .instagram-footer .readmore-button a:hover, a.comment-reply-link:hover, input[type="submit"]:hover, .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default,.tagcloud a:hover, .category-filter ul li.current-cat a, .category-filter ul li a:hover, .woocommerce #review_form #respond .form-submit input:hover, .woocommerce .widget_price_filter .price_slider_amount .button:hover, .woocommerce div.product form.cart .button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover { border-color: #efa48d}.footer .instagram-footer .readmore-button a, a.btn, a.comment-reply-link, input[type="submit"], .tagcloud a, .category-filter ul li a, .woocommerce #review_form #respond .form-submit input, .woocommerce .widget_price_filter .price_slider_amount .button, .woocommerce div.product form.cart .button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button { background: #ffffff}.page-numbers .current, .page-numbers li a:hover, .footer .instagram-footer .readmore-button a:hover, a.comment-reply-link:hover, input[type="submit"]:hover, .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default,.tagcloud a:hover, .category-filter ul li.current-cat a, .category-filter ul li a:hover, .woocommerce #review_form #respond .form-submit input:hover, .woocommerce .widget_price_filter .price_slider_amount .button:hover, .woocommerce div.product form.cart .button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover { background: #efa48d}</style><!-- Google Analytics Tracking by Google Analyticator 6.5.4: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-1752374-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<style type="text/css" title="dynamic-css" class="options-output">.main-holder, .buzzblog-cookie-banner-wrap, .mfp-wrap, .social_label, .sidepanel{font-family:"Playfair Display";line-height:31px;letter-spacing:0px;font-weight:400;font-style:normal;color:#525252;font-size:16px;}h1{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:64px;letter-spacing:-3px;font-weight:400;font-style:normal;color:#222222;font-size:56px;}h2{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:62px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#222222;font-size:54px;}h3{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:48px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:44px;}h4{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:28px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:26px;}h5{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:25px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:20px;}h6{font-family:"Playfair Display";text-align:inherit;text-transform:none;line-height:22px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:15px;}.title-section h1{font-family:"Playfair Display";text-align:center;line-height:75px;letter-spacing:-3px;font-weight:400;font-style:normal;color:#222222;font-size:68px;}.title-section h2{font-family:"Playfair Display";text-align:center;text-transform:inherit;line-height:36px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:30px;}.headerstyler{background-color:#ffffff;}#top-menu a{font-family:"Playfair Display";text-transform:uppercase;letter-spacing:0px;font-weight:400;font-style:normal;font-size:13px;}#top-menu a{color:#000000;}#top-menu a:hover{color:#efa48d;}#top-menu a:active{color:#efa48d;}#top-menu ul a, #top-menu .current_page_item ul a, #top-menu ul .current_page_item a, #top-menu .current-menu-item ul a, #top-menu ul .current-menu-item a, #top-menu li:hover > ul a{color:#ffffff;}#top-menu ul a:hover, #top-menu .current_page_item ul a:hover, #top-menu ul .current_page_item a:hover, #top-menu .current-menu-item ul a:hover, #top-menu ul .current-menu-item a:hover, #top-menu li:hover > ul a:hover{color:#efdcd7;}#top-menu ul a:active, #top-menu .current_page_item ul a:active, #top-menu ul .current_page_item a:active, #top-menu .current-menu-item ul a:active, #top-menu ul .current-menu-item a:active, #top-menu li:hover > ul a:active{color:#efdcd7;}.top-container a{color:#000000;}.top-container a:hover{color:#dddddd;}.top-border{border-bottom:1px solid #eeeeee;}a{color:#efa48d;}a:hover{color:#dddddd;}.footer .instagram-footer .readmore-button a, a.btn, a.comment-reply-link, input[type="submit"], .tagcloud a, .category-filter ul li a, .woocommerce #review_form #respond .form-submit input, .woocommerce .widget_price_filter .price_slider_amount .button, .woocommerce div.product form.cart .button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{color:#efa48d;}.footer .instagram-footer .readmore-button a:hover, a.btn:hover, a.comment-reply-link:hover, input[type="submit"]:hover, .tagcloud a:hover, .category-filter ul li a:hover, .woocommerce #review_form #respond .form-submit input:hover, .woocommerce .widget_price_filter .price_slider_amount .button:hover, .woocommerce div.product form.cart .button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover{color:#ffffff;}.logo{margin-top:40px;margin-bottom:40px;}.logo_h__txt, .logo_link{font-family:"Playfair Display";line-height:76px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#000000;font-size:73px;}.logo_h a:hover:hover, .logo_h a:hover{color:#000000;}.logo_h a:hover:active, .logo_h a:active{color:#000000;}.logo_tagline{font-family:"Playfair Display";text-transform:uppercase;line-height:15px;letter-spacing:3px;font-weight:400;font-style:normal;color:#000000;font-size:13px;}.menu-mobile ul li a{font-family:"Playfair Display";text-transform:none;line-height:20px;letter-spacing:0px;font-weight:400;font-style:normal;font-size:13px;}.menu-mobile ul li a{color:#000000;}.menu-mobile ul li a:hover{color:#efa48d;}.menu-mobile ul li a:active{color:#efa48d;}#primary-menu > li > a{font-family:"Playfair Display";text-transform:uppercase;line-height:20px;letter-spacing:0px;font-weight:400;font-style:normal;color:#000000;font-size:16px;}#primary-menu a{padding-top:26px;padding-right:15px;padding-bottom:26px;padding-left:15px;}#primary-menu li ul li a, #primary-menu .has-mega-column > .sub-menu a{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:20px;letter-spacing:0px;font-weight:400;font-style:normal;color:#525252;font-size:13px;}#primary-menu .has-mega-column > .sub-menu > .columns-sub-item > a{line-height:20px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:17px;}#primary-menu .has-mega-column > .sub-menu, #primary-menu .has-mega-sub-menu .mega-sub-menu, #primary-menu > li > ul, #primary-menu ul li:not(.buzzblog-widget-menu) > ul{border-top:2px solid #efa48d;border-bottom:0px solid #efa48d;border-left:0px solid #efa48d;border-right:0px solid #efa48d;}.post-header h2 a, h2.post-title{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:44px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#222222;font-size:40px;}.excerpt p{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:28px;letter-spacing:0px;font-weight:400;font-style:normal;color:#525252;font-size:18px;}.post-header h2 a:hover{color:#dddddd;}.paglink a, .paging a h5{color:#efa48d;}.paglink a:hover, .paging a h5:hover{color:#999999;}.most-commented{background-color:#f9f9f9;}.related-posts h6 a{color:#222222;}.related-posts h6 a:hover{color:#999999;}.carousel-wrap h2 a{color:#000000;}.carousel-wrap, .carousel-wrap .excerpt p{color:#000000;}.grid .post-header h2 a, .grid h2.post-title, .post-grid-block h2.grid-post-title a, .post-grid-block h2.grid-post-title{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:32px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#222222;font-size:30px;}.grid-block h2 a:hover{color:#dddddd;}.list-post h2.list-post-title a, .list-post h2.list-post-title{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:42px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#222222;font-size:36px;}.list-post h2.list-post-title a:hover{color:#dddddd;}h3.gall-title{font-family:"Playfair Display";text-transform:none;line-height:30px;letter-spacing:-1px;font-weight:normal;font-style:400;color:#222222;font-size:26px;}.gallery-meta-line, .gallery-meta-line h4{font-family:"Playfair Display";text-align:center;text-transform:uppercase;line-height:20px;letter-spacing:0px;font-weight:normal;font-style:400;color:#222222;font-size:16px;}.widget-content h4.subtitle{font-family:"Playfair Display";text-align:left;text-transform:uppercase;line-height:20px;letter-spacing:0px;font-weight:400;font-style:normal;color:#222222;font-size:20px;}.my_posts_type_widget h4 a{color:#000000;}.my_posts_type_widget h4 a:hover{color:#dddddd;}.post-list_h h4 a, .post-list_h h4{font-family:"Playfair Display";text-align:left;text-transform:none;line-height:23px;letter-spacing:-1px;font-weight:400;font-style:normal;color:#222222;font-size:20px;}.nav.footer-nav a{line-height:22px;letter-spacing:0px;font-weight:Normal;font-style:normal;color:#000000;font-size:13px;}.nav.footer-nav ul li a:hover{color:#bbbbbb;}.footer-text{color:#666666;}.footer .logo a{color:#dddddd;}.footer .logo a:hover{color:#dddddd;}.footer .logo_tagline{color:#dddddd;}.footer-logo{background-color:#ffffff;}.footer a{color:#cccccc;}.footer a:hover{color:#efa48d;}#hs_signup{background-color:#ffffff;}</style><style type="text/css">
+#upprev_box{bottom:5px;width:360px;right:5px;display:block;right:-415px;display:block;}
+ </style>
+	
+</head>
+<body class="post-template-default single single-post postid-14869 single-format-standard no-touch wide ajax-hercules-likes">
+<div id="st-container" class="st-container">
+<div  class="burger-button "><div class="st-trigger-effects"><div class="bt-menu-trigger nav-icon4"><span></span></div></div></div>
+<div class="st-menu st-effect-4 sidepanel" id="menu-4">
+<div class="logo_h logo_h__txt"><a href="http://www.linuxhispano.net/" title="Noticias, tira, podcast, juegos, Linux y software libre" class="logo_link">Linux Hispano</a></div>											</div>
+
+<div id="hs_signup" class="zoom-anim-dialog mfp-hide" data-showonload="false"><div id="hs_signup_inner">
+Sign up with your email address to be the first to know about new products, VIP offers, blog features & more.</div></div>
+
+<div class="top-panel22 hidden-phone"><div id="small-dialog" class="zoom-anim-dialog mfp-hide"><!-- BEGIN SEARCH FORM -->  
+	<div class="sb-search">
+						<form class="navbar-form" method="get" action="http://www.linuxhispano.net/" accept-charset="utf-8">
+							<input class="sb-search-input" placeholder="Type to Search" type="text" value="" name="s">
+						</form>
+					</div>
+<!-- END SEARCH FORM --></div></div>
+			<div class="st-pusher">
+		
+<div class="mobile-top-panel visible-xs-block visible-sm-block">
+<div class="container">
+        
+<div class="row">
+ 
+    <div class="col-md-12 col-sm-12 col-xs-12 top-left">
+<div class="search-form">
+	<form method="get" action="http://www.linuxhispano.net/" accept-charset="utf-8" class="custom-search-form form-search form-horizontal">
+	<div class="input-append">
+		<input type="text" value="" name="s" class="search-query" placeholder="search">
+		<button type="submit" value="" class="btn"><i class="fa fa-search"></i></button>
+		</div>
+	</form>
+</div><div class="mobile-icons"></div>    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+				<div class="st-content">
+					<div class="st-content-inner">
+		<div class="main-holder">
+		
+
+<header id="headerfix" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="0" data-stellar-vertical-offset="0" class="headerstyler headerphoto header">
+<div class="header-overlay"></div>
+<div class="visible-xs-block visible-sm-block">
+<div class="container">
+<div class="row">
+    <div class="col-md-12"><div class="mobile-logo">
+        <!-- BEGIN LOGO -->                     
+<div class="logo">                            
+						<div class="logo_h logo_h__txt"><a href="http://www.linuxhispano.net/" title="Noticias, tira, podcast, juegos, Linux y software libre" class="logo_link">Linux Hispano</a></div>
+				<!-- Site Tagline -->
+								<p class="logo_tagline">Noticias, tira, podcast, juegos, Linux y software libre</p>
+					
+				
+</div>
+<!-- END LOGO -->    </div></div>
+</div>
+</div>
+</div>
+<div class="visible-md-block visible-lg-block">
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN LOGO -->                     
+<div class="logo">                            
+						<div class="logo_h logo_h__txt"><a href="http://www.linuxhispano.net/" title="Noticias, tira, podcast, juegos, Linux y software libre" class="logo_link">Linux Hispano</a></div>
+				<!-- Site Tagline -->
+								<p class="logo_tagline">Noticias, tira, podcast, juegos, Linux y software libre</p>
+					
+				
+</div>
+<!-- END LOGO -->    </div>
+</div>
+</div>
+<div class="sticky-wrapper"><div class="sticky-nav">
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+    	 
+<nav id="primary" class="sidemenu sidemenu-off" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+				<ul id="primary-menu" class="clearfix primary-menu"><li id='menu-item-12515' class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home" ><a  href="http://www.linuxhispano.net/">Inicio</a> </li>
+<li id='menu-item-12517' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/tiralh/">Tira</a> </li>
+<li id='menu-item-12518' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/podcast/">Podcast</a> </li>
+<li id='menu-item-12519' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/tutoriales/">Tutoriales</a> </li>
+<li id='menu-item-12520' class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-sub-menu" ><a  href="http://www.linuxhispano.net/cursos/">Cursos</a> 
+<ul class="sub-menu">
+<li id='menu-item-12532' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/curso-c-con-mono/">Curso C# con Mono</a> </li>
+<li id='menu-item-12531' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/curso-java/">Curso Java</a> </li>
+<li id='menu-item-12527' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/aprende-octave-con-ejemplos/">Aprende Octave con ejemplos</a> </li>
+<li id='menu-item-12528' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/curso-ado-net-con-mono-y-mysql/">Curso ADO.NET con Mono y MySQL</a> </li>
+<li id='menu-item-12529' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/curso-programacion-de-videojuegos-con-sdl/">Curso programación de videojuegos con SDL</a> </li>
+<li id='menu-item-12530' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/cursos/curso-php-orientado-a-objetos/">Curso PHP orientado a objetos</a> </li>
+</ul>
+</li>
+<li id='menu-item-12522' class="menu-item menu-item-type-post_type menu-item-object-page" ><a  href="http://www.linuxhispano.net/colabora/">Colabora</a> </li>
+<li class="hidden-xs search-icon-link"><a class="search-icon popup-with-zoom-anim md-trigger" href="#small-dialog"><i class="hs hs-search-2"></i></a></li></ul>				<!-- /#main-nav -->
+			</nav>
+			    </div>
+</div></div></div></div></div>
+</header><div class="content-holder clearfix">
+    <div class="container">
+	 <div class="spacer"></div>
+                 <div class="row">
+                                   <div class="col-xs-12 col-sm-8 col-md-8" id="content">
+                        <article id="post-14869" class="post__holder post-14869 post type-post status-publish format-standard hentry category-tutoriales tag-cpp11 tag-inteligentes tag-punteros">
+<div class="post-formats hidden-phone"><i class="hs hs-doc-text"></i></div>	<div class="row">
+	<div class="col-md-12">
+
+		<header class="post-header">
+						<h1 class="post-title">Punteros inteligentes en C++11</h1>
+							<div class="meta-space-top">
+						<span class="vcard author Manuel Ignacio López Quintero">
+		By		<em class="fn"><a href="http://www.linuxhispano.net/author/nacho/" title="Entradas de Manuel Ignacio López Quintero" rel="author" class="url">Manuel Ignacio López Quintero</a></em></span>
+		<span class="posted-on"><i class="hs hs-calendar"></i> <span class="screen-reader-text">Posted on </span><a href="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/" rel="bookmark"><time class="entry-date published updated" datetime="2014-07-01T16:53:32+00:00">julio 1, 2014</time></a></span>		<span class="post_category"><i class="hs hs-cloud"></i> In <a href="http://www.linuxhispano.net/seccion/tutoriales/" rel="category tag">Tutoriales</a></span>
+				<span class="post-comments-footer"><i class="fa fa-comment-o"></i> <a href="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/#comments" class="comments-link" ><span class="dsq-postid" data-dsqidentifier="14869 http://www.linuxhispano.net/?p=14869">1</span></a></span>
+	
+													<span class="meta-space"><i class="hs hs-tag"></i> 
+									<a href="http://www.linuxhispano.net/etiqueta/cpp11/" rel="tag">cpp11</a>, <a href="http://www.linuxhispano.net/etiqueta/inteligentes/" rel="tag">inteligentes</a>								</span>
+										
+	<span><a href="#" class="hercules-likes" id="hercules-likes-14869" title="Like this">0</a></span>	
+</div>
+</header>
+						
+	<!-- Post Content -->
+	<div class="post_content">
+			
+
+	
+			
+	<!-- Post Content -->
+				<div class="isopad">
+		<p>Como se ha dicho otras veces, las mejores de C++11 son evidentes. Tres ejemplos son la facilidad de <a href="http://www.linuxhispano.net/2012/12/20/convertir-entero-int-a-cadena-string-cpp/"><strong>convertir un entero a cadena en C++</strong></a>, <a href="http://www.linuxhispano.net/2014/02/01/for-range-cpp-11/"><strong>utilizar bucles <em>for</em> basados en rangos</strong></a> o <a href="http://www.linuxhispano.net/2014/06/11/ejemplo-expresiones-regulares-cpp11/"><strong>usar expresiones regulares</strong></a>.</p>
+<p>Aquí os muestro, mediante un ejemplo, la facilidad con la que en C++11 se manejan los punteros, olvidándote de tener que liberar memoria:</p>
+<p><!-- HTML generated using hilite.me --></p>
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5b85661edbb37705551987" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;span style="color: #BC7A00"&gt;#include &amp;lt;memory&amp;gt;&lt;/span&gt;
+
+&lt;span style="color: #B00040"&gt;void&lt;/span&gt; &lt;span style="color: #0000FF"&gt;funcion&lt;/span&gt;()
+{
+    &lt;span style="color: #B00040"&gt;int&lt;/span&gt; &lt;span style="color: #666666"&gt;*&lt;/span&gt; p1 &lt;span style="color: #666666"&gt;=&lt;/span&gt; &lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt; &lt;span style="color: #B00040"&gt;int&lt;/span&gt;; &lt;span style="color: #408080; font-style: italic"&gt;// Método tradicional para asignar memoria&lt;/span&gt;
+    
+    &lt;span style="color: #408080; font-style: italic"&gt;/* Código donde se usa el puntero &amp;#39;p1&amp;#39; */&lt;/span&gt;
+    
+    &lt;span style="color: #008000; font-weight: bold"&gt;delete&lt;/span&gt; p1; &lt;span style="color: #408080; font-style: italic"&gt;// ¡Recuerda liberar la memoria!&lt;/span&gt;
+
+    std&lt;span style="color: #666666"&gt;::&lt;/span&gt;shared_ptr&lt;span style="color: #666666"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color: #B00040"&gt;int&lt;/span&gt;&lt;span style="color: #666666"&gt;&amp;gt;&lt;/span&gt; p2(&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt; &lt;span style="color: #B00040"&gt;int&lt;/span&gt;); &lt;span style="color: #408080; font-style: italic"&gt;// Nuevo método para asignar memoria&lt;/span&gt;
+
+    &lt;span style="color: #408080; font-style: italic"&gt;/* Código donde se usa el puntero &amp;#39;p2&amp;#39; */&lt;/span&gt;
+    
+    &lt;span style="color: #408080; font-style: italic"&gt;// ¡Y olvídate de liberar memoria!&lt;/span&gt;
+}
+
+&lt;span style="color: #B00040"&gt;int&lt;/span&gt; &lt;span style="color: #0000FF"&gt;main&lt;/span&gt;()
+{
+    funcion();
+   
+    &lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt; &lt;span style="color: #666666"&gt;0&lt;/span&gt;;
+}</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-2">2</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-4">4</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-6">6</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-8">8</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-10">10</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-12">12</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-14">14</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-16">16</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-18">18</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-20">20</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b85661edbb37705551987-22">22</div><div class="crayon-num" data-line="crayon-5b85661edbb37705551987-23">23</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5b85661edbb37705551987-1"><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #BC7A00"</span><span class="crayon-o">&gt;</span><span class="crayon-p">#include &amp;lt;memory&amp;gt;&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-2">&nbsp;</div><div class="crayon-line" id="crayon-5b85661edbb37705551987-3"><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">void</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #0000FF"</span><span class="crayon-o">&gt;</span><span class="crayon-v">funcion</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-4"><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">int</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;</span><span class="crayon-o">*</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">p1</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;=</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #008000; font-weight: bold"</span><span class="crayon-o">&gt;</span><span class="crayon-r">new</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">int</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">// Método tradicional para asignar memoria&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">/* Código donde se usa el puntero &amp;#39;p1&amp;#39; */</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #008000; font-weight: bold"</span><span class="crayon-o">&gt;</span><span class="crayon-v">delete</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">p1</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">// ¡Recuerda liberar la memoria!&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-10">&nbsp;</div><div class="crayon-line" id="crayon-5b85661edbb37705551987-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">std</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;</span><span class="crayon-o">::</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-v">shared_ptr</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-v">lt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">int</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;</span><span class="crayon-o">&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">p2</span><span class="crayon-sy">(</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #008000; font-weight: bold"</span><span class="crayon-o">&gt;</span><span class="crayon-r">new</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">int</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">// Nuevo método para asignar memoria&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-12">&nbsp;</div><div class="crayon-line" id="crayon-5b85661edbb37705551987-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">/* Código donde se usa el puntero &amp;#39;p2&amp;#39; */</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-15"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #408080; font-style: italic"</span><span class="crayon-o">&gt;</span><span class="crayon-c">// ¡Y olvídate de liberar memoria!&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-16"><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-17">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-18"><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #B00040"</span><span class="crayon-o">&gt;</span><span class="crayon-t">int</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #0000FF"</span><span class="crayon-o">&gt;</span><span class="crayon-v">main</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-19"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-20"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">funcion</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-21"><span class="crayon-h">&nbsp;&nbsp; </span></div><div class="crayon-line crayon-striped-line" id="crayon-5b85661edbb37705551987-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #008000; font-weight: bold"</span><span class="crayon-o">&gt;</span><span class="crayon-st">return</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-e">span </span><span class="crayon-v">style</span><span class="crayon-o">=</span><span class="crayon-s">"color: #666666"</span><span class="crayon-o">&gt;</span><span class="crayon-cn">0</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">span</span><span class="crayon-o">&gt;</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5b85661edbb37705551987-23"><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0057 seconds] -->
+</div>
+<p>El ejemplo se ha mostrado mediante el puntero inteligente <em>shared_ptr</em> que permite compartir el puntero, si estás seguro que el puntero es único usa <em>unique_ptr</em>.</p>
+<div class='yarpp-related'>
+<p>Entradas relacionadas:</p><ol>
+<li><a href="http://www.linuxhispano.net/2010/11/26/como-cambiar-la-fecha-y-la-hora-desde-la-consola/" rel="bookmark" title="¿Cómo cambiar la fecha y la hora desde la consola?">¿Cómo cambiar la fecha y la hora desde la consola? </a></li>
+<li><a href="http://www.linuxhispano.net/2010/12/23/curso-c-con-mono-%e2%80%93-tratamiento-de-excepciones/" rel="bookmark" title="Curso C# con Mono – Tratamiento de excepciones">Curso C# con Mono – Tratamiento de excepciones </a></li>
+<li><a href="http://www.linuxhispano.net/2011/01/18/incluir-google-analytics-en-wordpress/" rel="bookmark" title="Incluir Google Analytics en WordPress">Incluir Google Analytics en WordPress </a></li>
+<li><a href="http://www.linuxhispano.net/2011/04/11/pasar-ripear-cd-audio-a-ogg-mp3-ubuntu-linu/" rel="bookmark" title="Pasar un CD de audio a OGG o a MP3 en Ubuntu Linux">Pasar un CD de audio a OGG o a MP3 en Ubuntu Linux </a></li>
+<li><a href="http://www.linuxhispano.net/2011/06/29/instalar-chromeless/" rel="bookmark" title="Instalar Chromeless">Instalar Chromeless </a></li>
+</ol>
+</div>
+				<div class="clear"></div>
+	</div>
+		<!-- //Post Content -->	
+	</div>
+	
+	
+	
+	
+</div></div>
+
+
+
+<!-- Meta and share buttons -->
+
+	<div class="meta-line">
+	<div class="share-buttons">
+	
+<a class="hs-icon hs hs-facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/"></a>
+ 
+<a class="hs-icon hs hs-twitter" onClick="window.open('http://twitter.com/share?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/&amp;text=Punteros%20inteligentes%20en%20C++11&amp;via=linuxhispano','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/&amp;text=Punteros%20inteligentes%20en%20C++11&amp;via=linuxhispano"></a>
+<a class="hs-icon hs hs-gplus" onClick="window.open('https://plus.google.com/share?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/"></a>
+<a target="_blank" class="hs-icon hs hs-pinterest" href="http://pinterest.com/pin/create/button/?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/&amp;media=&amp;description=Punteros%20inteligentes%20en%20C++11" data-pin-do="buttonPin" data-pin-custom="true"></a>
+<a class="hs-icon hs hs-tumblr" onClick="window.open('http://www.tumblr.com/share/link?url=www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/&amp;name=Punteros%20inteligentes%20en%20C++11','Tumblr','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.tumblr.com/share/link?url=www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/&amp;name=Punteros%20inteligentes%20en%20C++11"></a>
+<a class="hs-icon hs hs-vk" onclick="window.open('http://vk.com/share.php?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/','vkontakte','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://vk.com/share.php?url=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/"></a>
+<a class="hs-icon hs hs-whatsapp visible-xs-inline-block" href="whatsapp://send?text=Punteros%20inteligentes%20en%20C++11-http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/" data-action="share/whatsapp/share"></a>
+<a class="hs-icon hs hs-mail" href="mailto:?subject=Punteros%20inteligentes%20en%20C++11&amp;body=http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/"></a>
+</div><!-- //.share-buttons -->
+	</div>
+
+<!-- //Meta and share buttons -->
+<div class="post-author isopad post-author__page clearfix"><div class="post-author-box">
+
+	<div class="postauthor_gravatar">
+		<img src="http://2.gravatar.com/avatar/2d9d88185bfa11d6820dcc79d36e394b?s=120&#038;d=mm&#038;r=g" width="120" height="120" alt="" class="avatar avatar-120 wp-user-avatar wp-user-avatar-120 photo avatar-default" />	</div>
+
+<h5 class="post-author_h"><small><a href="http://www.linuxhispano.net/author/nacho/" title="Entradas de Manuel Ignacio López Quintero" rel="author" class="url">Manuel Ignacio López Quintero</a></small></h5>
+		<div class="post-author_desc">
+			Doctor en Ingeniería Informática especializado en Sistemas Inteligentes y Visión Artificial. Profesor y coadministrador de Linux Hispano. Para más información o para contactar con él visita su página oficial: </strong><a href="http://milq.github.io">Manuel Ignacio López Quintero</a></strong>.		</div>
+		<div class="author-social">
+																</div>
+		
+</div></div><!--.post-author-->
+</article>					
+				<div class="row paging">
+				
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		
+		<a href="http://www.linuxhispano.net/2014/07/01/aumentar-memoria-en-wordpress-para-evitar-fatal-error-allowed-memory-size-of-n-bytes-exhausted/" title="Aumentar memoria en WordPress para evitar Fatal error: Allowed memory size of N bytes exhausted"><figure class="thumbnail left"><img alt="previously" class="nopin" width="150" height="150" src="https://i1.wp.com/www.linuxhispano.net/wp-content/uploads/2014/07/TAG-php_error_warning350X350.png?fit=96%2C96" /></figure><div class="direct-link-left"><p>previously</p><h5><span>Aumentar memoria en WordPress para evitar Fatal error: Allowed memory size of N bytes exhausted</span></h5></div></a>		
+		</div>
+	
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<a href="http://www.linuxhispano.net/2014/07/03/aligerar-el-peso-de-phpmyadmin/" title="Aligerar el peso de phpMyAdmin"><figure class="thumbnail right"><img alt="up next" class="nopin" width="150" height="150" src="https://i0.wp.com/www.linuxhispano.net/wp-content/uploads/2014/07/logo.png?fit=128%2C74" /></figure><div class="direct-link-right"><p>up next</p><h5><span>Aligerar el peso de phpMyAdmin</span></h5></div></a>	</div>
+	
+	<div class="clear"></div>
+</div>
+			
+<div id="disqus_thread"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 sidebar" id="sidebar">
+                        <div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget_text widget-content"><div class="textwidget custom-html-widget"><a href="https://www.livecasino.com/es/">
+<img src="https://i0.wp.com/www.linuxhispano.net/wp-content/uploads/2018/01/LiveCasino_Banner234x90px2.gif?w=800" alt="Live Casinos" data-recalc-dims="1"/>
+</a></div></div><span></span></div><div id="text-21" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Publicidad<span></span></h4>			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5799969946943985";
+/* SidebarLH */
+google_ad_slot = "8021600199";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+		</div><span></span></div><div id="text-24" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Hosting WordPress<span></span></h4>			<div class="textwidget"><a href="https://clientes.webempresa.com/europa/gestion/aff.php?aff=2317&landing=hosting_wordpress"><img src="https://i1.wp.com/afiliados.webempresa.eu/wordpress_200x200_pruebagratis.gif?resize=200%2C200" width="200" height="200" border="0" alt="alojamiento wordpress" title="Hosting 100% Wordpress" data-recalc-dims="1"></a> 
+
+<strong>¿Quieres ahorrar un 20%?</strong><br/>Haz clic y usa este cupón <strong><a href="https://clientes.webempresa.com/europa/gestion/aff.php?aff=2317&landing=hosting_wordpress">linuxhispano20</a></strong></div>
+		</div><span></span></div><div id="text-22" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Con la colaboración de Wadobo<span></span></h4>			<div class="textwidget"><a href="https://wadobo.com/"><img alt="" src="https://i1.wp.com/www.linuxhispano.net/wp-content/uploads/2017/05/wadobo_logo.png?w=800" data-recalc-dims="1" /></a></div>
+		</div><span></span></div><div id="text-16" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Contacta<span></span></h4>			<div class="textwidget"><span style="text-align: center;">
+<img src="https://i0.wp.com/www.linuxhispano.net/wp-content/uploads/2010/04/linuxhispano.png?w=800" alt="email" data-recalc-dims="1" /> </span></div>
+		</div><span></span></div><div id="text-6" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Síguenos en<span></span></h4>			<div class="textwidget"><div style="width: 170px; margin: auto;">
+<div style="float: left; margin-right: 30px;"><a href="https://twitter.com/#!/linuxhispano"><img title="Linux Hispano en Twitter" alt="Twitter" src="https://i0.wp.com/www.linuxhispano.net/images/banners/twitter.png?w=800" data-recalc-dims="1" /></a></div><a href="http://www.facebook.com/LinuxHispano"><img style="margin-left: 5px;" title="Linux Hispano en Facebook" alt="Facebook" src="https://i1.wp.com/www.linuxhispano.net/images/banners/facebook.png?w=800" data-recalc-dims="1" /></a></div></div>
+		</div><span></span></div><div id="blog_subscription-2" class="widget jetpack_subscription_widget"><div class="widget-content"><h4 class="subtitle fancy">Suscríbete al blog por correo electrónico<span></span></h4>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"><p>Introduce tu correo electrónico para suscribirte a este blog y recibir notificaciones de nuevas entradas.</p>
+</div><p>Únete a otros 4.831 suscriptores </p>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2">
+							Dirección de correo electrónico						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Dirección de correo electrónico" />
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe" />
+						<input type="hidden" name="source" value="http://www.linuxhispano.net/2014/07/01/punteros-inteligentes-cpp11/" />
+						<input type="hidden" name="sub-type" value="widget" />
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2" />
+												<input type="submit" value="Suscribir" name="jetpack_subscriptions_widget" />
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</div><span></span></div><div id="disqus" class="widget disqus_widget_render"><div class="widget-content"><h4 class="subtitle fancy">Últimos comentarios<span></span></h4><script type="text/javascript" src="http://disqus.com/forums/linuxhispano/combination_widget.js?num_items=5&color=orange&default_tab=recent"></script></div><span></span></div><div id="text-4" class="widget widget_text"><div class="widget-content"><h4 class="subtitle fancy">Blogroll<span></span></h4>			<div class="textwidget"><div style="text-align: left;">
+<ul>
+<li><a href="http://alexzelder.wordpress.com/" target="_blank">AlexZelder</a></li>
+<li><a href="http://www.linux.es/" target="_blank">Asociación Linux Español</a></li>
+<li><a href="http://androcode.es/" target="_blank">AndroCode</a></li>
+<li><a href="http://www.linux.es/" target="_blank">Asociación Linux Español</a></li>
+<li><a href="http://www.casidiablo.net/" target="_blank">Casidiablo</a></li>
+<li><a href="http://dasubipar.blogspot.com/">Dasubipar</a></li>
+<li><a href="http://www.dejowindows.cu.cc/">Dejo Windows</a></li>
+<li><a href="http://marvinyfamilia.com/" target="_blank">El blog de Marvin y familia</a></li>
+<li><a href="http://www.espaciolinux.com/" target="_blank">Espacio Linux</a></li>
+<li><a href="http://fotux.es/" target="_blank">FoTux</a></li>
+<li><a href="http://www.glatelier.org/" target="_blank">Geeks & Linux Atelier!</a></li>
+<li><a href="http://humanos.uci.cu/" target="_blank">humanOS</a></li>
+<li><a href="http://www.juanluperez.com/" target="_blank">Juanlu Pérez</a></li>
+<li><a href="http://www.kdeblog.com/" target="_blanck">KDE Blog</a></li>
+<li style="text-align: left;"><a href="http://miloq.blogspot.com/" target="_blank">Manuel Ignacio López Quintero</a></li>
+<li><a href="http://www.linux-cd.com.ar/" target="_blank">Linux CD</a></li>
+<li><a href="http://www.linuxiso.com.ar/" target="_blank">Linuxiso</a></li>
+<li><a href="http://www.lopst.com/" target="_blank">Lopst</a></li>
+<li><a href="http://www.nosolounix.com/" target="_blank">No solo Unix</a></li>
+<li><a href="http://obux.wordpress.com/" target="_blank">Obux</a></li>
+<li><a href="http://www.omeyasweb.com/" target="_blank">OmeyasWeb</a></li>
+<li><a href="http://pillateunlinux.wordpress.com/" target="_blank">P&iacute;llateunlinux</a></li>
+<li><a href="http://www.pinguinosycia.com" title="Blog Linux, Mac,
+Windows, Web, Naruto y Noticias tecnologia..." target="_blank">Ping&uuml;inos y C&iacute;a</a></li>
+<li><a href="http://www.rinconinformatico.net/" target="_blanck">Rincón informático</a></li>
+<li><a href="http://www.twago.com/es/blog/" target="_blanck">Twago Blog</a></li>
+<li><a href="http://ubunlog.com.ar/blog/" target="_blanck">Ubunlog</a></li>
+<li><a href="http://www.ubuntips.com.ar/" target="_blank">Ubuntips</a></li>
+<li><a href="http://www.ubuntizandoelplaneta.com/" target="_blank">Ubuntizando el planeta</a></li>
+<li><a href="http://usemoslinux.blogspot.com/" target="_blank">Usemos Linux</a></li>
+</ul>
+</div></div>
+		</div><span></span></div>                    </div>
+					                </div>
+    </div>
+</div>
+<footer class="footer">
+  
+
+
+ 
+ 
+  
+<div class="footer-logo">
+<div class="container">
+
+<div class="row logo-nav">
+<div class="col-md-12">
+    	<!-- BEGIN LOGO -->                     
+<div class="logo">                            
+						<div class="logo_h logo_h__txt"><a href="http://www.linuxhispano.net/" title="Noticias, tira, podcast, juegos, Linux y software libre" class="logo_link">Linux Hispano</a></div>
+				<!-- Site Tagline -->
+								<p class="logo_tagline">Noticias, tira, podcast, juegos, Linux y software libre</p>
+					
+				
+</div>
+<!-- END LOGO -->		</div>
+		</div>
+		</div>
+		</div>
+
+ 
+<div class="lowestfooter"><div class="container"><div class="row">
+<div class="col-sx-12 col-md-6">
+ 
+					
+		</div>
+
+<div class="col-sx-12 col-md-6">
+		<div id="footer-text" class="footer-text">
+		Copyrights &copy; 2016 BUZZBLOG. All Rights Reserved.</div>
+			</div>
+	</div></div></div>
+</footer>
+</div></div>
+				</div>
+			</div></div><!--#main-->	
+<div id="back-top-wrapper" class="visible-desktop">
+<p id="back-top">
+	        <a href="#top"><span><i class="fa fa-angle-up fa-4"></i></span></a>
+</p>
+</div>
+	<div style="display:none">
+	<div class="grofile-hash-map-2d9d88185bfa11d6820dcc79d36e394b">
+	</div>
+	</div>
+<link rel='stylesheet' id='yarppRelatedCss-css'  href='http://www.linuxhispano.net/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20130122'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/www.linuxhispano.net\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"linuxhispano"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.16'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.16"},"disqusIdentifier":"14869 http:\/\/www.linuxhispano.net\/?p=14869","disqusShortname":"linuxhispano","disqusTitle":"Punteros inteligentes en C++11","disqusUrl":"http:\/\/www.linuxhispano.net\/2014\/07\/01\/punteros-inteligentes-cpp11\/","postId":"14869"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.16'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201835'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2018Augaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/jquery.easing.1.3.js?ver=1.3'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/jquery.magnificpopup.js?ver=0.9.9'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/jquery.plugins.js?ver=3.1.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var inf_var = {"load_more":"Load more","you_reached_the_end":"No more items to load.","offset":"0","pagination_type":"pagnum"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/bootstrap/js/bootstrap.min.js?ver=3.2'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/jquery.justifiedGallery.min.js?ver=3.6.3'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/owl.carousel.min.js?ver=2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var buzzblogScript = {"fixedHeader":"fixed-header","ajax_nonce":"78ab45d8fe","ajax_url":"http:\/\/www.linuxhispano.net\/wp-admin\/admin-ajax.php","events":"mouseenter","top_nav_side":"left","main_nav_side":"right"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/includes/main-menu/js/buzzblog.mega-menu.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.linuxhispano.net/wp-content/themes/buzzblog/js/AnimatedHeader.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201835.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.4.2',blog:'63381107',post:'14869',tz:'2',srv:'www.linuxhispano.net'} ]);
+	_stq.push([ 'clickTrackerInit', '63381107', '14869' ]);
+</script>
+<div id="upprev_box"><h6>Leer entrada anterior</h6><div class="upprev_excerpt upprev_thumbnail"><a href="http://www.linuxhispano.net/2014/07/01/aumentar-memoria-en-wordpress-para-evitar-fatal-error-allowed-memory-size-of-n-bytes-exhausted/" title="Aumentar memoria en WordPress para evitar Fatal error: Allowed memory size of N bytes exhausted" class="upprev_thumbnail" rel="Punteros inteligentes en C++11"><img width="48" height="48" src="https://i1.wp.com/www.linuxhispano.net/wp-content/uploads/2014/07/TAG-php_error_warning350X350.png?fit=48%2C48" class="iworks_upprev_thumb wp-post-image" alt="PHP error" title="Aumentar memoria en WordPress para evitar Fatal error: Allowed memory size of N bytes exhausted" srcset="https://i1.wp.com/www.linuxhispano.net/wp-content/uploads/2014/07/TAG-php_error_warning350X350.png?w=350 350w, https://i1.wp.com/www.linuxhispano.net/wp-content/uploads/2014/07/TAG-php_error_warning350X350.png?resize=144%2C144 144w" sizes="(max-width: 48px) 100vw, 48px" /></a><h5><a href="http://www.linuxhispano.net/2014/07/01/aumentar-memoria-en-wordpress-para-evitar-fatal-error-allowed-memory-size-of-n-bytes-exhausted/" rel="Punteros inteligentes en C++11">Aumentar memoria en WordPress para evitar Fatal error: Allowed memory size of N bytes exhausted</a></h5><p>Si manejáis WordPress a diario seguro que alguna vez habréis sufrido un error de falta de memoria RAM, que se...</p></div><a id="upprev_close" href="#" rel="close">Cerrar</a></div></body>
+</html>

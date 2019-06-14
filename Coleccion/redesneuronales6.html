@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJ6ZTM6');</script>
+<!-- End Google Tag Manager -->
+	<link rel="shortcut icon" href="http://blog.dropscore.com/wp-content/uploads/2017/09/favicon-dropscore.png"/>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="pingback" href="http://blog.dropscore.com/xmlrpc.php">
+	<title>Deep Learning: Las redes neuronales artificiales y sus aplicaciones</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Business Intelligence y Deep learning son dos términos de moda dentro del sector de la Inteligencia Artificial y el Big Data. En este post vamos a hablar sobre el Deep Learning, las redes neuronales artificiales y sus aplicaciones en la actualidad."/>
+<link rel="canonical" href="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Deep Learning: Las redes neuronales artificiales y sus aplicaciones" />
+<meta property="og:description" content="El Deep learning es un término de moda dentro en el sector de la Inteligencia Artificial. En este post vamos a hablar sobre el Deep Learning, las redes neuronales artificiales y sus aplicaciones en la actualidad." />
+<meta property="og:url" content="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" />
+<meta property="og:site_name" content="El Blog de Dropscore" />
+<meta property="article:section" content="Deep Learning" />
+<meta property="article:published_time" content="2018-02-22T17:24:21+02:00" />
+<meta property="article:modified_time" content="2018-05-10T13:50:16+02:00" />
+<meta property="og:updated_time" content="2018-05-10T13:50:16+02:00" />
+<meta property="og:image" content="http://blog.dropscore.com/wp-content/uploads/2018/02/facebook-Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones.png" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="300" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="El Deep learning es un término de moda dentro en el sector de la Inteligencia Artificial. En este post vamos a hablar sobre el Deep Learning, las redes neuronales artificiales y sus aplicaciones en la actualidad." />
+<meta name="twitter:title" content="Deep Learning: Las redes neuronales artificiales y sus aplicaciones" />
+<meta name="twitter:image" content="http://blog.dropscore.com/wp-content/uploads/2018/02/twitter-Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones.png" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="El Blog de Dropscore &raquo; Feed" href="http://blog.dropscore.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="El Blog de Dropscore &raquo; RSS de los comentarios" href="http://blog.dropscore.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="El Blog de Dropscore &raquo; Deep Learning: Las redes neuronales artificiales y sus aplicaciones RSS de los comentarios" href="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/blog.dropscore.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='jeweltheme-jquery-ui-style-css'  href='http://blog.dropscore.com/wp-content/plugins/wp-awesome-faq/jquery-ui.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://blog.dropscore.com/wp-includes/css/dashicons.min.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://blog.dropscore.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://blog.dropscore.com/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://blog.dropscore.com/wp-content/themes/edition/css/bootstrap.min.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-styles-css'  href='http://blog.dropscore.com/wp-content/themes/edition/style.css?ver=4.9.10' type='text/css' media='all' />
+<style id='theme-styles-inline-css' type='text/css'>
+/* Custom CSS */ 
+ h2 { color: #458d57; }
+h3 { color: #458d57; margin-left: 15px;}
+h4 { margin-left: 10px; margin-left: 30px;}
+
+.page-id-237 .pagewrapper.default-layout.no-background {
+background: #bdd7c0;
+}
+.page-id-237 a {
+color: #00a498
+}
+
+h5{text-align: justify; 
+    color: #5d5d5d;
+    padding-left:15%;
+    padding-right:15%;
+}
+
+.highlight_category_14.has-thumbnail.related.grid-item {
+    height: 275px;}
+</style>
+<!--[if IE 8]>
+<link rel='stylesheet' id='ie8-css'  href='http://blog.dropscore.com/wp-content/themes/edition/css/ie8.css?ver=1.7.6' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='redux-google-fonts-tw_options-css'  href='http://fonts.googleapis.com/css?family=Lato%3A900%2C300%2C700%2C400%7COpen+Sans%3A400%2C700&#038;ver=1524652290' type='text/css' media='all' />
+<link rel='stylesheet' id='themewich-shortcodes-css'  href='http://blog.dropscore.com/wp-content/plugins/themewich-shortcodes/css/themewich-shortcodes.css?ver=4.9.10' type='text/css' media='all' />
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/plugins/themewich-shortcodes/js/modernizr.min.js?ver=2.8.2'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/fixto.min.js?ver=0.3.0'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/respond.min.js?ver=1.4.2'></script>
+<link rel='https://api.w.org/' href='http://blog.dropscore.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.dropscore.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.dropscore.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.10" />
+<link rel='shortlink' href='http://blog.dropscore.com/?p=293' />
+<link rel="alternate" type="application/json+oembed" href="http://blog.dropscore.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.dropscore.com%2Flas-redes-neuronales-artificiales-y-sus-aplicaciones%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blog.dropscore.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.dropscore.com%2Flas-redes-neuronales-artificiales-y-sus-aplicaciones%2F&#038;format=xml" />
+<!-- WordPress Most Popular --><script type="text/javascript">/* <![CDATA[ */ jQuery.post("http://blog.dropscore.com/wp-admin/admin-ajax.php", { action: "wmp_update", id: 293, token: "ec3b641ed2" }); /* ]]> */</script><!-- /WordPress Most Popular -->
+      <!--Customizer CSS-->
+      <style type="text/css">
+                                                                                                                    </style>
+      <!--Customizer CSS-->
+
+      <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://blog.dropscore.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><link rel="icon" href="http://blog.dropscore.com/wp-content/uploads/2017/04/DROPSCORE_favicon_OK.png" sizes="32x32" />
+<link rel="icon" href="http://blog.dropscore.com/wp-content/uploads/2017/04/DROPSCORE_favicon_OK.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://blog.dropscore.com/wp-content/uploads/2017/04/DROPSCORE_favicon_OK.png" />
+<meta name="msapplication-TileImage" content="http://blog.dropscore.com/wp-content/uploads/2017/04/DROPSCORE_favicon_OK.png" />
+<style type="text/css" title="dynamic-css" class="options-output">#logo, .top-ad, .regular-nav #menu, .regular-nav .searchnav{padding-top:25px;padding-bottom:25px;}.section .slidecaption .slidetitle,
+                              .section .slidecaption h1,
+                              .single-post .pagetitle .title,
+                              #share-box h4{font-family:Lato;text-transform:uppercase;font-weight:900;font-style:normal;font-size:60px;}.grid .thumbovertext .title,
+                       .carousel .carouselpost .thumbovertext .title,
+                       .full-image-section .fullsection .title,
+                       .single .no-full-image h1.title{font-family:Lato;text-transform:uppercase;font-weight:900;font-style:normal;font-size:44px;}.regulargrid .title,
+                        .carousel.half-carousel .carouselpost .thumbovertext .title,
+                        .halfgrid .thumbovertext .title,
+                       .related .thumbovertext .title{font-family:Lato;text-transform:uppercase;font-weight:900;font-style:normal;font-size:28px;}.pagetitle .title,
+                       #logo a,
+                        .woocommerce-page .page-title,
+                        .woocommerce div.product .product_title,
+                       .full-post .full-image-section .fullsection .title{font-family:Lato;text-transform:uppercase;font-weight:900;font-style:normal;font-size:32px;}.pagertitle, .full-taxonomy .fullsection .subtitle, .pagetitle .subheadline{font-family:Lato;font-weight:300;font-style:normal;}.section-title span,
+		        .woocommerce .entry-content h2,
+		        .woocommerce-cart h2,
+		        .woocommerce .related.products h2,
+		        .woocommerce-checkout h2,
+		        .widget h3.widget-title,
+		        .widget h2.widget-title,
+		        .widget h4.widget-title{font-family:Lato;text-transform:uppercase;letter-spacing:1px;font-weight:700;font-style:normal;}.sf-menu li > a{font-family:Lato;text-transform:uppercase;letter-spacing:1px;font-weight:normal;font-style:normal;font-size:12px;}.tiny-details, .badge, .badge a, .thumboverdate,
+		        .badgesliver, .sharing a .sharetitle, a.button.outline,
+                .woocommerce a.button, 
+                .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+                .woocommerce div.product form.cart .button,
+		        .woocommerce button, .woocommerce button.button,
+		        .woocommerce .added_to_cart.wc-forward,
+		        .woocommerce #respond input#submit, .woocommerce input.button,
+		        a.more-link, .tagcloud.badge h5,
+		        a.post-edit-link, .tabswrap ul.tabs li a,
+		        ul.sf-menu li.megamenu .menu-item-type-custom > a,
+		        ul.sf-menu li.megamenu .menu-item-type-custom .menu-item-type-custom > a,
+		        .breaking, .breaking-title, .divider span, cite,
+		        #breadcrumbs li, .woocommerce .woocommerce-breadcrumb{font-family:Lato;text-transform:uppercase;letter-spacing:2px;font-weight:400;font-style:normal;font-size:10px;}h1, .postcontent.no-review > p:first-child:first-letter{font-family:"Open Sans";font-weight:400;font-style:normal;font-size:58px;}h2, blockquote, blockquote p{font-family:"Open Sans";font-weight:700;font-style:normal;font-size:28px;}h3, .woocommerce ul.products li.product h3, .woocommerce h3 label{font-family:"Open Sans";font-weight:400;font-style:normal;font-size:22px;}h4, h5, h6{font-family:"Open Sans";font-weight:400;font-style:normal;}p, ul, ol, body, h4.review-title{font-family:Lato;font-weight:400;font-style:normal;font-size:16px;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><script type="text/javascript">
+
+    jQuery(document).ready(function($) {
+            jQuery(".accordion").accordion({heightStyle: "content", collapsible: true, active: false});
+    });
+
+
+</script>
+</head>
+
+
+<body class="post-template-default single single-post postid-293 single-format-standard edition desktop-device regular-nav chrome windows sticky-nav-enabled wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+	<div class="mm-page">
+
+		<div id="preloaded-images">
+						<img src="http://blog.dropscore.com/wp-content/themes/edition/images/loading-spin.svg" width="1" height="1" alt="Image" />
+		</div>
+		<!-- .preloaded-images -->
+
+		
+<div class="top-bar">
+
+		<div class="container">
+
+			<div class="topbar-left">
+
+			
+				
+					<!-- Breaking News -->
+					<div class="breaking range-monthly tw-vertical">
+
+						<!-- Breaking News Title -->
+						<div class="breaking-title">
+							Noticias						</div>
+						<!-- End Breaking News Title -->
+
+						<div class="breaking-ticker">
+							<ul class="news-ticker tw-vertical" data-delay="4" data-animation="vertical">
+
+							
+										<li><a href="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" title="Deep Learning: Las redes neuronales artificiales y sus aplicaciones">Deep Learning: Las redes neuronales artificial... </a></li>
+
+									
+										<li><a href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/" title="Clustering: Aspectos relevantes y métodos de clustering más utilzados">Clustering: Aspectos relevantes y métodos de c... </a></li>
+
+									
+										<li><a href="http://blog.dropscore.com/configurar-embudo-conversion-google-analytics/" title="Cómo configurar el embudo de conversión de un Ecommerce en Google Analytics">Cómo configurar el embudo de conversión de un ... </a></li>
+
+									
+										<li><a href="http://blog.dropscore.com/5-metricas-para-startup-impresionar-inversores/" title="5 métricas para startup para impresionar a los inversores">5 métricas para startup para impresionar a los... </a></li>
+
+									
+										<li><a href="http://blog.dropscore.com/importancia-medir-el-roi/" title="La importancia de medir el ROI y cómo te ayuda Dropscore">La importancia de medir el ROI y cómo te ayuda... </a></li>
+
+									
+							</ul>
+						</div>
+					</div>
+
+					<script>
+						jQuery(document).ready(function() {
+							(function($){
+								var newsticker = $('.news-ticker'),
+									$delay 		= parseInt(newsticker.attr('data-delay') + '000'),
+									$animation 	= newsticker.attr('data-animation');
+
+								if ($animation == 'scroll') {
+									$ticker = newsticker.bxSlider({
+										useCSS: false,
+										pager: false,
+										ticker: true,
+										tickerHover: true,
+										autoHover: true,
+										speed: $delay * 4
+									});
+								} else {
+									$ticker = newsticker.bxSlider({
+										useCSS: false,
+										autoHover: true,
+										mode: $animation,
+										auto: true,
+										pager: false,
+										pause: $delay
+									});
+								}
+							})(jQuery);
+						});
+					</script>
+
+				
+			</div>
+
+			<div class="topbar-right">
+				<a href="https://www.facebook.com/Dropscore/" class="" target="_blank"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/Dropscore_es" class="" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/company/dropscore/" class="" target="_blank"><i class="fa fa-linkedin"></i></a>			</div>
+		</div>
+	</div>
+<!-- Navigation -->
+	<div class="top-nav regular-nav">
+		<div class="container top-nav-inner">
+				<!-- Logo -->
+		  		<div id="logo">
+					<h2>						<a href="http://blog.dropscore.com">
+															<span class="logosizer" class="non-retina" style="max-width: 338px">
+				  					<img src="http://blog.dropscore.com/wp-content/uploads/2017/09/logo-dropscore.png" alt="El Blog de Dropscore"/>
+								</span>
+													</a> 
+					</h2> 
+				</div>
+				<!-- END Logo -->
+
+				<div class="mobile-link">
+					<a href="#mobilemenu"><i class="fa fa-bars"></i></a>
+				</div>
+	  
+				<!-- Menu -->
+				<div id="menu">
+					<ul id="menu-menu-principal" class="sf-menu"><li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-65 customsection"><a href="http://blog.dropscore.com/">Inicio</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a href="https://www.dropscore.com/Funciones/Index">funciones</a></li>
+<li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="https://www.dropscore.com/Precios/Index">precios</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-66 customsection"><a href="http://blog.dropscore.com/blog/">Blog</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-taxonomy menu-item-object-faq_cat menu-item-261 customsection"><a href="http://blog.dropscore.com/faq_cat/preguntas-frecuentes/">FAQs</a></li>
+</ul>					<div class="clear"></div>
+				</div>
+				<!-- END Menu -->
+
+				<!--Searchbox-->
+				<div class="searchnav">
+					
+<!--Searchbox-->
+<div class="search-form search">
+	<form role="search" method="get" name="SearchForm" class="search-form" action="http://blog.dropscore.com/">
+		<label>
+			<input type="search" class="search-field" placeholder="Buscar..." value="" name="s" title="Buscar..." />
+		</label>
+	</form>
+	<i class="fa fa-search searchbutton"></i>
+</div>
+<!--Searchbox-->				</div>
+					
+			<div class="clear"></div>
+		</div>  
+	</div><!-- End Top Nav -->
+
+
+	<!-- Mobile Navigation -->
+	<nav id="mobilemenu">
+						<ul><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-65"><a href="http://blog.dropscore.com/">Inicio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a href="https://www.dropscore.com/Funciones/Index">funciones</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="https://www.dropscore.com/Precios/Index">precios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-66"><a href="http://blog.dropscore.com/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-faq_cat menu-item-261"><a href="http://blog.dropscore.com/faq_cat/preguntas-frecuentes/">FAQs</a></li>
+</ul>			</nav> 
+  	<!-- END Mobile Navigation -->
+		<div id="sitecontainer">
+	
+	<!-- Post Wrapper -->
+		<div class="has-sidebar has-thumbnail has-full-image no-review sharing-enabled no-author-box related-enabled dropcap-enabled highlight_category_15 post-293 post type-post status-publish format-standard has-post-thumbnail hentry category-deep-learning">
+			
+ 	<!-- Post Title -->
+    <div class="pagetitleloading background-imaged loading-dark">
+    	<div class="pagetitle item imagewrapper full-image">
+
+		<!-- Featured Post Image -->
+		<div class="imagecover">
+			<img src="http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones.png" alt="Cabecera post Deep learning - Las redes neuronales artificiales y sus aplicaciones" class="top-bg-image"/>
+		</div>
+        
+		<!-- Post Image Overlay -->
+		<div class="overlay"></div>
+
+        
+        <!-- Post Title -->
+        <div class="posttitle slidecaptionwrap">
+			<div class="slidecaptioncenter container">
+				<div class="slidecaption">
+					<div class="col-md-8">
+
+						<!-- Categories -->
+						<div class="badge"><a href="http://blog.dropscore.com/category/deep-learning/" class="category-15" title="More Deep Learning Posts">Deep Learning</a><div class="clear"></div></div>
+
+						<!-- Post Title -->
+						<h1 class="title entry-title" >
+							Deep Learning: Las redes neuronales artificiales y sus aplicaciones						</h1>
+
+						<!-- Author Section -->
+						<div class="byline">
+							<!-- Author Image -->
+							<img src="http://2.gravatar.com/avatar/bd5d5f9f89c249483b6c33486a046970?s=38&#038;d=mm&#038;r=g" width="38" height="38" alt="" class="avatar avatar-38 wp-user-avatar wp-user-avatar-38 photo avatar-default" /> 
+
+							<!-- Author Link -->  
+							<span class="author vcard tiny-details">
+								By 
+								<span class="fn" >
+									<a href="http://blog.dropscore.com/author/iscowindupgmail-com/" title="Entradas de Dropscore" rel="author">Dropscore</a>								</span>
+								<span class="mobiledate">
+									<span class="tw-bullet">&nbsp;&bull;&nbsp;</span>
+									1 año ago								</span>
+							</span>
+						</div>
+					</div>
+           		</div>
+        	</div>              
+		</div>
+        <!-- End Title --> 
+        
+		<!-- Date -->
+		<span ></span>
+		<div class="date updated">
+			<span class="day">
+				22			</span>
+			<p>
+				<span class="month">
+					Feb				</span>
+				<br />
+				<span class="year">
+					2018				</span>
+			</p>
+		</div>
+
+	</div>
+</div>
+<!-- End Post Title -->
+
+
+			<div class="container">
+				<div class="rightside">
+					
+
+
+					<div class="postcontentwrap">
+					
+
+<!-- Sharing Section -->
+<div class="sharingwrap desktop-share">
+	<div class="sharing">
+		<div class="sharing-inner">
+			<a href="#share-box" class="open-popup-link post-share share popup-with-move-anim" data-post_id="293"><div class="sharecircle count">0</div><i class="fa fa-share-square-o"></i><span class="sharetitle" data-clicked="Shared">Compartidos</span>
+				  </a>
+			
+				<!-- Comments Link -->
+				<a href="#respond" class="comment">
+					<div class="sharecircle">
+						0					</div>
+					<i class="fa fa-comment-o"></i>
+					<span class="sharetitle">
+						Comentario					</span>
+				</a>
+				<!-- End Comments Link -->
+			
+			<a href="#" class="post-like love" data-post_id="293"><div class="sharecircle count">0</div><i class="fa fa-heart-o"></i><span class="sharetitle" data-clicked="Loved">Love</span></a>
+			<div id="share-box" class="zoom-anim-dialog mfp-hide">
+				<span class="share-subtitle">
+					Compartidos				</span>
+				<h4>Deep Learning: Las redes neuronales artificiales y sus aplicaciones</h4>
+
+				
+				<!-- Share on Facebook -->
+				<script type="text/javascript">
+					function share_window(width, height, network) {
+						var leftPosition, topPosition;
+						//Allow for borders.
+						leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+						//Allow for title and status bars.
+						topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+						var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+						u=location.href;
+						t=document.title;
+
+						switch(network) {
+							case 'facebook':
+								window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer', windowFeatures);
+								return false;
+							break;
+							case 'twitter':
+								window.open('http://twitter.com/home?status=Deep+Learning%3A+Las+redes+neuronales+artificiales+y+sus+aplicaciones%20-%20http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/','sharer', windowFeatures);
+								return false;
+						  	break;
+							case 'linkedin':
+								window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/&title=Deep Learning: Las redes neuronales artificiales y sus aplicaciones&source=El Blog de Dropscore','sharer', windowFeatures);
+								return false;
+							break;
+							case 'pinterest':
+								window.open('http://pinterest.com/pin/create/button/?url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/&media=http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones.png&description=Deep%20Learning%3A%20Las%20redes%20neuronales%20artificiales%20y%20sus%20aplicaciones','sharer', windowFeatures);
+								return false;
+							break;
+							case 'google':
+								window.open('http://plus.google.com/share?url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/','sharer', windowFeatures);
+								return false;
+							break;
+							default:
+								console.error('Error: network was not defined.');
+							break; 
+					  }
+				  }
+				</script>
+
+				<!-- Share on Facebook -->
+				<a href="http://www.facebook.com/sharer.php?u=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" onClick="return share_window(500, 300, 'facebook')" target="_blank" class="hint--bottom facebook-icon" data-hint="Compartir en Facebook">
+				  <i class="fa fa-facebook-square"></i>
+				</a>
+
+				<!-- Share on Twitter -->
+				<a href="http://twitter.com/home?status=Deep%20Learning%3A%20Las%20redes%20neuronales%20artificiales%20y%20sus%20aplicaciones%20-%20http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" onClick="return share_window(500, 300, 'twitter')" target="_blank" class="hint--bottom twitter-icon" data-hint="Compartir en Twitter">
+				  <i class="fa fa-twitter-square"></i>
+				</a>
+
+				<!-- Share on LinkedIn -->
+				<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/&amp;title=Deep%20Learning%3A%20Las%20redes%20neuronales%20artificiales%20y%20sus%20aplicaciones&amp;source=El Blog de Dropscore" onClick="return share_window(500, 300, 'linkedin')" class="hint--bottom linkedin-icon" data-hint="Compartir en LinkedIn">                
+				  <i class="fa fa-linkedin-square"></i>
+				</a>
+
+				<!-- Share on Pinterest -->
+				<a href="http://pinterest.com/pin/create/button/?url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/&amp;media=http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones.png&amp;description=Deep%20Learning%3A%20Las%20redes%20neuronales%20artificiales%20y%20sus%20aplicaciones" onClick="return share_window(750, 300, 'pinterest')" class="hint--bottom pinterest-icon" data-hint="Compartir en Pinterest">                
+				  <i class="fa fa-pinterest"></i>
+				</a>
+
+				<!-- Share on Google Plus -->
+				<a href="http://plus.google.com/share?url=http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" class="hint--bottom googleplus-icon" onClick="return share_window(500, 475, 'google')" data-hint="Compartir en Google+">                
+				  <i class="fa fa-google-plus-square"></i>
+				</a>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Sharing Section -->
+						<div class="rightcontent">
+
+							
+							
+							<div class="postcontent content">
+								
+								
+									<p>La mayoría de vosotros seguramente ya habréis leído acerca de los grandes avances recientes en inteligencia artificial. <a href="http://blog.dropscore.com/business-intelligence/">Business Intelligence</a> y Deep learning son dos términos de moda dentro de este sector. En esta serie de post, trataremos de explicar de qué se trata, sus aplicaciones y metodología. Hoy comenzaremos hablando sobre las redes neuronales artificiales.</p>
+<h4>Para comenzar vamos a definir el concepto de Deep Learning:</h4>
+<h5><em>El Deep learning (o aprendizaje profundo) es un conjunto de algoritmos de aprendizaje automático que permite a través de un entrenamiento basado en datos de estimar la respuesta a nuevas entradas no  analizadas con anterioridad, es decir,  son modelos capaces de predecir la respuesta a nuevos patrones de entrada. Las arquitecturas de los modelos de aprendizaje profundo son redes neuronales profundas y han sido aplicadas exitosamente  a campos como visión por computador, reconocimiento automático del habla, estrategias de negocios, etc., habiendo mostrado resultados equiparables o superiores a los humanos en diversas tareas.</em></h5>
+<h2><strong>¿Qué son exactamente las redes neuronales artificiales y qué cambios está trayendo al sector del marketing?</strong></h2>
+<p>Uno de los grandes nombres detrás de esta revolución es el de Geoffrey Hinton, científico inglés quien allá por el año 1986 fuera uno de los impulsores de las redes neuronales multicapas (ahora llamadas poco-profundas), y que si bien tuvieron un gran impacto en su momento, este estuvo mayoritariamente circunscripto a la investigación y aplicaciones no-masivas.</p>
+<p>Por supuesto, en esa época recién arrancaba internet, lo del Big Data no existía y la inteligencia artificial parecía todavía algo que sólo habíamos visto en el cine.</p>
+<h3>¿Qué ha cambiado desde entonces?</h3>
+<p>Para poder hablar de esto, tenemos que adentrarnos en el mundo de las redes neuronales y en la forma en que procesa la información nuestro cerebro, principalmente en cuanto a la parte visual que es la que mejor conocemos.</p>
+<p><img class="normal alignnone size-full wp-image-303" src="http://blog.dropscore.com/wp-content/uploads/2018/02/evolucion-hombre-inteligencia-artificial.png" alt="Evolucion inteligencia artificial" width="600" height="300" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/evolucion-hombre-inteligencia-artificial.png 600w, http://blog.dropscore.com/wp-content/uploads/2018/02/evolucion-hombre-inteligencia-artificial-300x150.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>Las <strong>redes neuronales artificiales</strong> son modelos matemáticos inspirados en el funcionamiento de la corteza cerebral de los mamíferos. Constaría de un gran número de pequeños procesadores (neuronas) interconectados que a través de un proceso de aprendizaje logran clasificar la información en categorías.</p>
+<p>Una de sus mayores virtudes es que son capaces de predecir resultados para patrones de información nuevos.  Por ejemplo, se puede analizar no sólo el comportamiento observado de los consumidores, si no estimar cómo será su comportamiento en el futuro de una manera bastante acertada.</p>
+<h2><strong>¿Cómo funcionan las redes neuronales artificiales?</strong></h2>
+<p>Estas tendencias han llamado la atención de las grandes empresas tecnológicas y de ahí que esté ocurriendo la revolución actual. Pero antes de ver la infinidad de aplicaciones comerciales, sigamos un poco más con el funcionamiento de las redes neuronales artificiales. Vamos a organizar nuestra red neuronal artificial en capas, lo que va a realizar nuestro sistema en las primeras fases va a ser construir un diccionario analizando la información que le hemos suministrado a partir  de nuestros datos.</p>
+<p>Para poder explicarlo de la manera más clara posible, pondremos como ejemplo el caso de una tarea de reconocimiento de imágenes, siendo en este caso la predicción la estimación  correcta de la categoría a la que pertenece una nueva imagen. La red neuronal recibe en la entrada un conjunto de valores de los píxeles de las imágenes, con la intención de realizar una categorización automática de las mismas (algo en las que las empresas de venta de productos como Amazon están muy interesadas, y de hecho lo utilizan).</p>
+<h3>Capas de una red neuronal artificial</h3>
+<ul>
+<li>En la <strong>primera capa</strong> de neuronas, el sistema realizará una detección de bordes, y para ello construirá neuronas que puedan detectar líneas rectas con diferentes longitudes y orientaciones (será el alfabeto), de manera que cuando presentemos una imagen, se activarán las neuronas que han detectado esos trazos en alguna parte de la imagen original.</li>
+<li>A partir de ahí, en <strong>las sucesivas capas</strong>, iremos construyendo características de las imágenes a partir de nuestro abecedario cada vez con mayor complejidad: a partir de la unión de dos líneas formaremos ángulos, y a partir de ángulos podremos ir formando figuras.</li>
+<li>Finalmente en nuestra <strong>penúltima capa</strong> se obtendrán una serie de prototipos de imágenes las cuales se clasificarán  en las categorías deseadas. Como parece un poco complicado veámoslo con la siguiente figura:</li>
+</ul>
+<p><img class="normal alignnone size-full wp-image-338" src="http://blog.dropscore.com/wp-content/uploads/2018/02/estructura-de-las-capas-de-las-redes-neuronales-artificiales.png" alt="estructura de las capas de las redes neuronales artificiales" width="794" height="510" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/estructura-de-las-capas-de-las-redes-neuronales-artificiales.png 794w, http://blog.dropscore.com/wp-content/uploads/2018/02/estructura-de-las-capas-de-las-redes-neuronales-artificiales-300x193.png 300w, http://blog.dropscore.com/wp-content/uploads/2018/02/estructura-de-las-capas-de-las-redes-neuronales-artificiales-768x493.png 768w, http://blog.dropscore.com/wp-content/uploads/2018/02/estructura-de-las-capas-de-las-redes-neuronales-artificiales-740x475.png 740w" sizes="(max-width: 794px) 100vw, 794px" />La figura muestra un esquema de red neuronal que acepta imágenes en la entrada e intentará clasificarlas en dos categorías: animales o paisajes. Cada capa de la red neuronal va detectando diferentes componentes de la imagen en una forma jerárquica, hasta llegar a la capa en la cual se realiza la clasificación de la imagen en las dos categorías.</p>
+<h4>¿Cómo se logra que la red neuronal realice de forma correcta esta tarea?</h4>
+<p>Ajustando el valor de las conexiones entre las neuronas durante un proceso de entrenamiento en el cual le enseñamos a través de datos lo que la  red debe hacer.</p>
+<p>Dejemos ya de lado la teoría y centrémonos ahora en las aplicaciones prácticas:</p>
+<p>El Deep Learning ha logrado en los últimos años tener una performance del orden de los humanos o superior en tareas de reconocimiento de imágenes y reconocimiento de voz. También ha destacado en otras tareas cómo las de jugar a juegos de mesa (Ajedrez, Go) y juegos por ordenador.</p>
+<p>Las aplicaciones en automatización de procesos en páginas web, robótica, atención a usuarios, etc. son infinitas y por eso los cinco gigantes tecnológicos (Google, Facebook, Amazon, Apple y Microsoft) ya tienen departamentos de desarrollo y aplicación de inteligencia artificial y muchos de sus procesos ya están controlados de forma ”inteligente”. En el mundo de la economía, se está aplicando en los campos del customer centricity, finanzas o mercados y en el mundo de la medicina con los campos de diagnóstico, genética etc. Una cuestión interesante es el hecho de que esta revolución se produce casi al mismo tiempo que la del Big Data.</p>
+<h4>¿Hay alguna relación entre la revolución de la Inteligencia Artificial y el Big Data?</h4>
+<p>Por supuesto que sí: las redes neuronales artificiales profundas necesitan de grandes cantidades de datos para poder funcionar correctamente y el Big Data está aquí para suministrar la ingente cantidad de información que producimos a diario.</p>
+<p style="text-align: center;"><a href="https://dropscore.com/?utm_source=banner&amp;utm_medium=blog&amp;utm_campaign=CTAposts" target="_blank" rel="noopener"><img class="normal size-full wp-image-413 aligncenter" src="http://blog.dropscore.com/wp-content/uploads/2018/04/CTA-Dropscore-gratis.png" alt="" width="600" height="50" srcset="http://blog.dropscore.com/wp-content/uploads/2018/04/CTA-Dropscore-gratis.png 600w, http://blog.dropscore.com/wp-content/uploads/2018/04/CTA-Dropscore-gratis-300x25.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<h2>Aplicaciones de las redes neuronales artificiales</h2>
+<p>Hay inversiones muy grandes y es un campo muy fértil por lo que se esperan muchas novedades interesantes. De momento todas las empresas están aplicando estas tecnologías para hacer más eficientes sus procesos. A continuación, dejaremos algunos ejemplos de aplicaciones del deep learning en la actualidad.</p>
+<h3>Los homepods o altavoces inteligentes</h3>
+<p>Desde el punto de vista de productos novedosos podemos mencionar un nuevo electrodoméstico llamado <strong>“homepods” o altavoces inteligentes</strong> que interactúan con los usuarios ayudando a automatizar las tareas del hogar. La carrera en este campo ya ha comenzado; de hecho Amazon, Apple y Google ya están comercializando sus dispositivos llamados Echo, Homepod y Google Home respectivamente.</p>
+<h3><img class="normal aligncenter wp-image-302 size-medium" src="http://blog.dropscore.com/wp-content/uploads/2018/02/Apple-homepods-deep-learning-300x274.jpg" alt="Altavoces inteligentes que utilizan la" width="300" height="274" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/Apple-homepods-deep-learning-300x274.jpg 300w, http://blog.dropscore.com/wp-content/uploads/2018/02/Apple-homepods-deep-learning-768x703.jpg 768w, http://blog.dropscore.com/wp-content/uploads/2018/02/Apple-homepods-deep-learning-740x677.jpg 740w, http://blog.dropscore.com/wp-content/uploads/2018/02/Apple-homepods-deep-learning.jpg 904w" sizes="(max-width: 300px) 100vw, 300px" />Los vehículos inteligentes</h3>
+<p>Otro de los ejemplos son los coches inteligentes desarrollados por diversas compañías con diferentes grados de autonomía. Un ejemplo de ello es los vehículos de <strong class="markup--strong markup--p-strong">conducción autónoma de Tesla o Uber </strong>que se basa en el reconocimiento de ciertos patrones de conducción que proporciona, incluso, el poder de predecir accidentes o errores en la carretera.</p>
+<h3>Los chatbots</h3>
+<p class="selectionShareable">Un <strong>chatbot</strong> es un software capaz de conversar con el usuario en un chat online. Usan un lenguaje natural, interpretan las demandas del usuario y recomiendan las soluciones más relevantes y mejoran de forma automatica a medida que hablan con las personas (incluso entre ellos).</p>
+<p class="selectionShareable">Los chatbots son utilizados principalmente en servicios de mensajería para llevar a cabo las funciones de atención al ciente, por lo que pueden resolver las necesidades de una persona. Los más conocidos son Siri de Apple, Cortana de Microsoft o Alexa de Amazon. Un gran ejemplo de esta actividad lo aporta la compañía Taco Bell. Esta compañía ha incorporado un chatbot a través del cual se pueden gestionar pedidos de comida mediante una conversación con el bot automatizado.</p>
+<p class="selectionShareable">De esta forma, cuanto más mejore la tecnología, mejor será el servicio que ofrezca un chatbot llegando a automatizar todo tipo de cosas.</p>
+<h3><b>Colorización automática de imágenes en blanco y negro</b></h3>
+<p>La colorización de imágenes siempre ha sido una tarea realizada con un gran esfuerzo humano, ya que requería de un un criterio visual muy alto. Sin embargo, una de las aplicaciones del deep learning consiste en la capacidad de identificar objetos (como hemos visto en el ejemplo de las capas) y su contexto dentro de una fotografía en blanco y negro, para colorearla.</p>
+<p>Esta imagen es un set de fotografías originalmente entregadas en blanco y negro, y que fueron coloreadas con una exactitud impresionante.</p>
+<p><img class="normal aligncenter wp-image-300 " src="http://blog.dropscore.com/wp-content/uploads/2018/02/Colorizacion-automatica-de-imagenes-en-blanco-y-negro.png" alt="Aplicaciones de las redes neuronales artificiales para colorear imágenes en blanco y negro de manera automática" width="495" height="342" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/Colorizacion-automatica-de-imagenes-en-blanco-y-negro.png 733w, http://blog.dropscore.com/wp-content/uploads/2018/02/Colorizacion-automatica-de-imagenes-en-blanco-y-negro-300x208.png 300w" sizes="(max-width: 495px) 100vw, 495px" /></p>
+<h3>Traducción automática</h3>
+<p>Es el proceso por el cual un texto o imagen se traduce de manera automática. El deep learning está avanzando mucho en este área alcanzando grandes resultados.</p>
+<p>En el caso del texto, el algoritmo puede aprender la dependencia entre palabras y asignarlas a un nuevo idioma. En el caso de las imágenes, las redes neuronales se usan para identificar imágenes que contienen caracteres y dónde se encuentran las letras en la escena.</p>
+<p><img class="normal alignnone size-full wp-image-307" src="http://blog.dropscore.com/wp-content/uploads/2018/02/Traduccion-automatica-deep-learning.png" alt="" width="657" height="174" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/Traduccion-automatica-deep-learning.png 657w, http://blog.dropscore.com/wp-content/uploads/2018/02/Traduccion-automatica-deep-learning-300x79.png 300w" sizes="(max-width: 657px) 100vw, 657px" />Una vez identificados estos caracteres, se convierten en texto y acto seguido se traduce el texto. Este proceso se conoce como <strong>traducción visual instantánea</strong>.</p>
+<h4>En definitiva, ¡los dispositivos inteligentes llegan para quedarse!</h4>
+<p>&nbsp;</p>
+<p>Imagen de cabecera de <a href="https://www.freepik.es/vector-gratis/fondo-plano-de-inteligencia-artificial_1601336.htm">Freepik</a> e imágenes de <a href="https://ilifebelt.com/aplicaciones-del-deep-learning/2018/02/">colorización y traducción automática de Ilifebelt</a></p>
+<p>&nbsp;</p>
+
+								
+							</div>
+
+							<div class="afterpost-items">
+								
+
+<div class="commentwrapper">
+    <!-- You can start editing here. -->
+                        
+            <!-- Submit Comment Form -->
+        <div class="commentsform">
+            <div class="section-title">
+                <span>Deja un comentario</span>
+            </div>
+            	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/las-redes-neuronales-artificiales-y-sus-aplicaciones/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://blog.dropscore.com/wp-comments-post.php" method="post" id="commentsubmit" class="comment-form" novalidate>
+				<label for="comment">Mensaje<span>*</span></label><textarea name="comment" id="comment" cols="58" rows="8" tabindex="4" class="required"></textarea><div>
+                                                 <label for="author">Nombre<span class="required">*</span></label>
+                                                 <input type="text" name="author"  id="author" value="" size="22" tabindex="1" class="required"/>
+                                            </div>
+<div>
+                                                 <label for="email">Email<span class="required">*</span></label>
+                                                 <input type="text" name="email"  id="email" value="" size="22" tabindex="2" class="required email"/>
+                                            </div>
+<label for="url">Sitio web</label>
+                                            <input type="text" name="url" id="url" value="" size="44" tabindex="3" />
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Enviar" /> <input type='hidden' name='comment_post_ID' value='293' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	        </div>
+    </div>							</div>
+
+						</div><!-- .rightcontent -->
+						<div class="clear"></div>
+					</div><!-- .postcontentwrap -->
+				</div><!-- .rightside -->
+
+	            					<div class="sidebar">
+						<div class="sidebarcontent">
+									<div id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">Entradas recientes</h4>		<ul>
+											<li>
+					<a href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/">Clustering: Aspectos relevantes y métodos de clustering más utilzados</a>
+											<span class="post-date">30 abril, 2018</span>
+									</li>
+											<li>
+					<a href="http://blog.dropscore.com/que-es-el-bootstrapping/">¿Qué es el Bootstrapping y qué beneficios ofrece?</a>
+											<span class="post-date">24 abril, 2018</span>
+									</li>
+											<li>
+					<a href="http://blog.dropscore.com/como-usar-planificador-palabras-clave-google/">Keyword Research II: Cómo usar el planificador de palabras clave de Google</a>
+											<span class="post-date">20 abril, 2018</span>
+									</li>
+					</ul>
+		</div><div class="clear"></div><div id="categories-3" class="widget widget_categories"><h4 class="widget-title">Categorías</h4>		<ul>
+	<li class="cat-item cat-item-15"><a href="http://blog.dropscore.com/category/deep-learning/" >Deep Learning</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://blog.dropscore.com/category/it-big-data/" >IT y Big Data</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://blog.dropscore.com/category/keyword-research/" title="Un buen Keyword Research será la base de cualquier web. Por lo tanto, también se convierte clave para cualquier estrategia SEO. No debemos dejar de lado el SEM donde también es muy importante este estudio de palabras claves. Pero:
+¿Qué es un Keyword Research?
+El Keyword Research es un estudio de palabras clave que nos ayudará a seleccionar las keywords más adecuadas por las que queremos posicionarnos en los buscadores y lograr así una mayor tráfico hacia nuestra web.
+
+Para conseguir hacer el estudio de palabras clave perfecto iremos dejando post dentro de esta categoría que nos ayudarán a aprender sobre el tema. Veremos desde cómo realizar la búsqueda de esas palabras clave hasta cómo seleccionarlas y segmentarlas de manera correcta en base a algunos criterios que desarrollaremos a través de las distintas temáticas.">Keyword Research</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://blog.dropscore.com/category/mejorar-las-conversiones/" title="Poder mejorar las conversiones de nuestro site dependerá en gran parte de la calidad de los usuarios que lleguen a la web.
+¿Qué encontrarás en la categoría &quot;mejorar las conversiones&quot;?
+En esta categoría encontrarás estrategias y consejos para conseguir aumentar el número de conversiones atrayendo un tráfico de mayor calidad. Con Dropscore se puede medir la calidad de los usuarios que llegan según cada canal, por lo que se podrá optimizar cada una de ellas y te enseñaremos cómo.
+
+Si esta temática te resulta interesante, te animamos a que te suscribas a nuestra newsletter para recibir todos los consejos y noticias. También puedes seguirnos en redes sociales.">Mejorar las conversiones</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://blog.dropscore.com/category/purchase-funnel/" >Purchase funnel</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://blog.dropscore.com/category/retorno-inversion-roi/" title="La medición del ROI marketing es muy importante ya que nos permitirá ser más eficientes de cara al desarrollo de estrategias futuras.
+¿Qué encontrarás en la categoría “retorno de la inversión, ROI”?
+Aquí abordaremos temas estratégicos y consejos para conseguir optimizar el ROI a través del aumento del tráfico de calidad. Con Dropscore se puede medir si estamos rentabilizando bien nuestras estrategias y si éstas son eficientes o no.
+
+Si esta categoría te resulta interesante, te animamos a que te suscribas a nuestra newsletter. Recibirás todos los consejos y noticias sobre retorno de la inversión y otros temas afines. También puedes seguirnos en redes sociales.">Retorno de la Inversión ROI</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://blog.dropscore.com/category/startup-pymes-emprendimiento/" title="El número de startup y emprendedores se ha triplicado en los últimos años pero no todos tiene suerte y siguen adelante. Nosotros intentaremos ayudar en la medida de los posible con nuestros conocimientos a que mejoren resultados.
+¿Qué encontrarás en la categoría “startup, PYMES y emprendimiento”?
+En esta categoría encontrarás estrategias para startup, PYMES y noticias de emprendimiento. Los post irán dirigidos a ofrecer ayuda para crecer a negocios emergentes y enseñarlos a medir correctamente sus resultados.
+
+Si esta temática te resulta interesante, te animamos a que te suscribas a nuestra newsletter. Recibirás todos los consejos y noticias que tenga que ver con startups, PYMES y emprendimiento. También puedes seguirnos en redes sociales.">Startup, PYMES y emprendimiento</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://blog.dropscore.com/category/user-quality-score/" title="El User Quality Score o Índice de Calidad de Usuario Web es el indicador que determina la calidad de los usuarios que visitan una web, en relación a los objetivos de conversión marcados en la estrategia.
+¿Qué encontrarás en la categoría &quot;User quality score&quot; o calidad de usuario web?
+En los post que engloban esta categoría incluiremos estrategias que sirvan para mejorar la calidad de los usuarios que visitan nuestra web, abordando temas tanto de SEO y SEM como de Social Ads, Usabilidad (UX), Analítica Web, Inbound Marketing, etcétera.
+
+Si es una temática que te gusta, te invitamos a que te suscribas a nuestra newsletter para mantenerte al tanto de todas las noticias que tengan que ver con user quality score o calidad de usuario web">User Quality Score</a>
+</li>
+		</ul>
+</div><div class="clear"></div><div id="text-5" class="widget widget_text"><h4 class="widget-title">¡SUSCRÍBETE A NUESTRO BLOG!</h4>			<div class="textwidget"><div role="form" class="wpcf7" id="wpcf7-f212-p293-o1" lang="es-ES" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/las-redes-neuronales-artificiales-y-sus-aplicaciones/#wpcf7-f212-p293-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="212" /><br />
+<input type="hidden" name="_wpcf7_version" value="5.0.1" /><br />
+<input type="hidden" name="_wpcf7_locale" value="es_ES" /><br />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f212-p293-o1" /><br />
+<input type="hidden" name="_wpcf7_container_post" value="293" />
+</div>
+<p><label> Tu email<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
+<p><input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div>
+</form>
+</div>
+</div>
+		</div><div class="clear"></div><div id="media_image-3" class="widget widget_media_image"><a href="https://dropscore.com/?utm_source=banner&#038;utm_medium=blog&#038;utm_campaign=sidebar"><img width="300" height="600" src="http://blog.dropscore.com/wp-content/uploads/2018/05/banner-prueba-dropscore-gratis.png" class="image wp-image-429  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" srcset="http://blog.dropscore.com/wp-content/uploads/2018/05/banner-prueba-dropscore-gratis.png 300w, http://blog.dropscore.com/wp-content/uploads/2018/05/banner-prueba-dropscore-gratis-150x300.png 150w" sizes="(max-width: 300px) 100vw, 300px" /></a></div><div class="clear"></div>						</div><!-- .sidebarcontent -->
+					</div><!-- .sidebar -->
+				
+			</div><!-- .container -->
+		</div><!-- Post Wrapper -->
+
+
+		<div class="clear"></div>
+
+	<!-- Footer -->
+			<div id="footer" class="dark">
+			<div class="container clearfix">
+				<div class="col-md-12">
+					<div class="one-third"><div id="text-2" class="widget widget_text"><h3 class="widget-title">DROPSCORE</h3>			<div class="textwidget"><ul class="footer_menu">
+<li><a href="https://dropscore.com/Funciones/Index">▪️ Funciones</a></li>
+<li><a href="https://dropscore.com/Precios/Index">▪️ Precios</a></li>
+<li><a href="http://blog.dropscore.com/">▪️ Blog</a></li>
+<li><a href="https://dropscore.com/Legal/AvisoLegal">▪️ Aviso Legal</a></li>
+<li><a href="https://dropscore.com/Legal/PoliticaComercial">▪️ Política Comercial</a></li>
+<li><a href="https://dropscore.com/Legal/CondicionesVenta">▪️ Condiciones de venta</a></li>
+</ul>
+</div>
+		</div><div class="clear"></div></div>
+					<div class="one-third"><div id="text-3" class="widget widget_text"><h3 class="widget-title">¡SÍGUENOS!</h3>			<div class="textwidget"><ul class="footer_menu">
+<li><a href="https://www.facebook.com/Dropscore/">▪️ Facebook</a></li>
+<li><a href="https://twitter.com/Dropscore_es">▪️ Twitter</a></li>
+<li><a href="https://www.linkedin.com/company/dropscore/">▪️ LinkedIn</a></li>
+</ul>
+<p><strong>soporte@dropscore.com</strong></p>
+</div>
+		</div><div class="clear"></div></div>
+					<div class="one-third column-last"><div id="ag_popular_widget-3" class="widget ag_popular_widget">
+ <h3 class="widget-title">Últimos post</h3>
+		
+<div class="tabswrap">
+
+<ul class="tabs ajax-tabs">
+	<li><a class="active" href="#tab2" data-query="weekly">Semana</a></li>
+	<li><a href="#tab2" data-query="monthly">Mes</a></li>
+	<li><a href="#tab2" data-query="all_time">Todos</a></li>
+</ul>	
+<div class="clear"></div>
+
+<!-- Preloading Image -->
+<div class="loading"></div>
+
+<ul class="tabs-content" data-posts="3">
+
+	<!-- First Tab 
+	================================================-->
+	<li class="active">
+		
+		<div class="tabpost">
+		
+			        <div class="featuredimagewidget thumbnailarea">
+	            <a class="thumblink" href="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/">
+	                <img src="http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones-75x75.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Cabecera post Deep learning - Las redes neuronales artificiales y sus aplicaciones" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones-75x75.png 75w, http://blog.dropscore.com/wp-content/uploads/2018/02/Deep-learning-Las-redes-neuronales-artificiales-y-sus-aplicaciones-150x150.png 150w" sizes="(max-width: 75px) 100vw, 75px" />	            </a>
+	        </div>
+		
+		<p class="tab-title"><a href="http://blog.dropscore.com/las-redes-neuronales-artificiales-y-sus-aplicaciones/" title="Deep Learning: Las redes neuronales artificiales y sus aplicaciones">Deep Learning: Las redes neuronales artificiales y sus aplicaciones</a></p>
+		<p class="views"><i class="fa fa-eye"></i> 42 Views</p>
+		<div class="clear"></div>
+	</div>
+
+				<div class="tabpost">
+		
+			        <div class="featuredimagewidget thumbnailarea">
+	            <a class="thumblink" href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/">
+	                <img src="http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-75x75.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Segmentación y clustering: aspectos más relevantes y métodos más usados" srcset="http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-75x75.png 75w, http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-150x150.png 150w" sizes="(max-width: 75px) 100vw, 75px" />	            </a>
+	        </div>
+		
+		<p class="tab-title"><a href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/" title="Clustering: Aspectos relevantes y métodos de clustering más utilzados">Clustering: Aspectos relevantes y métodos de clustering más utilzados</a></p>
+		<p class="views"><i class="fa fa-eye"></i> 10 Views</p>
+		<div class="clear"></div>
+	</div>
+
+				<div class="tabpost">
+		
+			        <div class="featuredimagewidget thumbnailarea">
+	            <a class="thumblink" href="http://blog.dropscore.com/5-metricas-para-startup-impresionar-inversores/">
+	                <img src="http://blog.dropscore.com/wp-content/uploads/2018/02/5-metricas-para-startup-que-impresionaran-a-los-inversores-75x75.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="cabecera del post 5 metricas para startup" srcset="http://blog.dropscore.com/wp-content/uploads/2018/02/5-metricas-para-startup-que-impresionaran-a-los-inversores-75x75.png 75w, http://blog.dropscore.com/wp-content/uploads/2018/02/5-metricas-para-startup-que-impresionaran-a-los-inversores-150x150.png 150w" sizes="(max-width: 75px) 100vw, 75px" />	            </a>
+	        </div>
+		
+		<p class="tab-title"><a href="http://blog.dropscore.com/5-metricas-para-startup-impresionar-inversores/" title="5 métricas para startup para impresionar a los inversores">5 métricas para startup para impresionar a los inversores</a></p>
+		<p class="views"><i class="fa fa-eye"></i> 7 Views</p>
+		<div class="clear"></div>
+	</div>
+
+		
+	</li>
+
+	<!-- Second Tab 
+	================================================-->
+	<li>
+
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/">
+                    <img src="http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-75x75.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Segmentación y clustering: aspectos más relevantes y métodos más usados" srcset="http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-75x75.png 75w, http://blog.dropscore.com/wp-content/uploads/2018/04/aspectos-relevantes-y-metodos-de-clustering-mas-usados-150x150.png 150w" sizes="(max-width: 75px) 100vw, 75px" />                </a>
+                    </div>
+
+		<p class="tab-title"><a href="http://blog.dropscore.com/metodos-de-clustering-mas-utilizados/">Clustering: Aspectos relevantes y métodos de clustering más utilzados</a></p>
+		<p class="views">30 abril, 2018</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="http://blog.dropscore.com/que-es-el-bootstrapping/">
+                    <img src="http://blog.dropscore.com/wp-content/uploads/2018/04/que-es-bootstrapping-75x75.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Bootstrapping, como financiarse sin recursos" srcset="http://blog.dropscore.com/wp-content/uploads/2018/04/que-es-bootstrapping-75x75.jpg 75w, http://blog.dropscore.com/wp-content/uploads/2018/04/que-es-bootstrapping-150x150.jpg 150w" sizes="(max-width: 75px) 100vw, 75px" />                </a>
+                    </div>
+
+		<p class="tab-title"><a href="http://blog.dropscore.com/que-es-el-bootstrapping/">¿Qué es el Bootstrapping y qué beneficios ofrece?</a></p>
+		<p class="views">24 abril, 2018</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="http://blog.dropscore.com/como-usar-planificador-palabras-clave-google/">
+                    <img src="http://blog.dropscore.com/wp-content/uploads/2018/04/como-usar-el-planificador-de-palabras-clave-de-google-75x75.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Keywor Research II: Cómo usar el planificador de palabras clave de Google" srcset="http://blog.dropscore.com/wp-content/uploads/2018/04/como-usar-el-planificador-de-palabras-clave-de-google-75x75.jpg 75w, http://blog.dropscore.com/wp-content/uploads/2018/04/como-usar-el-planificador-de-palabras-clave-de-google-150x150.jpg 150w" sizes="(max-width: 75px) 100vw, 75px" />                </a>
+                    </div>
+
+		<p class="tab-title"><a href="http://blog.dropscore.com/como-usar-planificador-palabras-clave-google/">Keyword Research II: Cómo usar el planificador de palabras clave de Google</a></p>
+		<p class="views">20 abril, 2018</p>
+		<div class="clear"></div>
+	</div>
+		
+	</li>
+</ul>
+	<div class="clear"></div>
+</div>
+
+
+</div><div class="clear"></div></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- End Footer -->
+
+		<!-- Scroll to Top Button -->
+		<div class="top">
+			<a href="#">
+				<span class="scrolltop">
+					<span>
+						Top					</span>
+				</span>
+			</a>
+		</div>
+		<!-- End Scroll to Top Button -->
+
+	</div>
+	<!-- End Site Container -->
+
+</div>
+<!-- End .mm-page -->
+
+<!-- Theme Hook -->
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/app/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:'412636dc0058a1e53f921d202607f6c7'})})</script><script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='776bd900890380009bc010002c11aa00d65e200091e2d900a95a0600c3edbf00';j.dataset.sumoPlatform='wordpress';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script><script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/blog.dropscore.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/plugins/themewich-shortcodes/js/jquery.magnific-popup.min.js?ver=0.9.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/plugins/themewich-shortcodes/js/themewich.shortcodes.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/comment-reply.min.js?ver=4.9.10'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/superfish.min.js?ver=1.7.5'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/jquery.mmenu.min.all.js?ver=5.0.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/jquery.fitvids.js?ver=1.1'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/jquery.easing.1.3.js?ver=1.3'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/jquery.bxslider.min.js?ver=4.2.3'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/jquery.backstretch.min.js?ver=2.0.4'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var agAjax = {"ajaxurl":"http:\/\/blog.dropscore.com\/wp-admin\/admin-ajax.php","get_template_directory_uri":"http:\/\/blog.dropscore.com\/wp-content\/themes\/edition","nonce":"903d2a6305"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-content/themes/edition/js/custom.js?ver=1.7.6'></script>
+<script type='text/javascript' src='http://blog.dropscore.com/wp-includes/js/wp-embed.min.js?ver=4.9.10'></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>
+        Redes Neuronales: una visión superficial - Fernando Sancho Caparrini
+            </title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+		<script type="text/javascript" src="/~fsancho/pivotx/includes/minify/?f=pivotx/includes/js/jquery-1.8.2.min.js,pivotx/templates/magazine/js/hoverIntent.js,pivotx/templates/magazine/js/superfish.js,pivotx/extensions/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+</script>
+	<meta name="description" content="Una Red Neuronal Artificial (RNA) es un modelo matem&amp;aacute;tico inspirado en el comportamiento biol&amp;oacute;gico de las neuronas y en c&amp;oacute;mo se organizan formando la estructura del cerebro. El cerebro puede considerarse un sistema altamente complejo, donde se calcula&amp;hellip;" />
+	<meta name="author" content="Fernando Sancho Caparrini" />
+	<meta name="revised" content="2018-12-26" />
+	<meta name="keywords" content="algoritmos aprendizaje_automático inteligencia_artificial netlogo" />
+<meta name="author" content="Windmill Web Work" />
+	<link rel="stylesheet" href="/~fsancho/pivotx/templates/magazine/css/reset.css" />
+	<link href="/~fsancho/pivotx/includes/minify/?url=/~fsancho&amp;f=pivotx/templates/pivotx_essentials.css,pivotx/extensions/fancybox/jquery.fancybox-1.3.4.css,pivotx/extensions/fancybox/jquery.fancybox_IE6_-1.3.4.css,pivotx/extensions/fancybox/jquery.fancybox_IE_-1.3.4.css"  rel="stylesheet" type="text/css" media="screen" />  
+	<link rel="stylesheet" href="/~fsancho/pivotx/templates/magazine/css/style.css" />
+	<link rel="stylesheet" href="/~fsancho/pivotx/templates/magazine/css/superfish.css" /> 
+ 
+	 
+	 
+ 
+	<script type="text/javascript"> 
+	 
+		$(document).ready(function(){ 
+			$("ul.sf-menu").superfish(); 
+		}); 
+	 
+	</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<meta name="google-translate-customization" content="646c89412ead0d13-87868fb8bfff16bc-g482c34bf0d261e82-15"></meta>
+<!-- Start of Google Analytics Code - Google Analytics extension for PivotX -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30302725-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- End of Google Analytics Code - Google Analytics extension version 0.7.2 -->
+
+        <script type="text/javascript">
+        //<![CDATA[
+        
+        jQuery(function($) {
+            // Open external links in a new window (or tab). Ignores 'www.' part
+            // when determining if something is 'internal'..
+            
+            var hostname = document.location.hostname.replace('www.', '');
+            var eimage = ' <img src="/~fsancho/pivotx/extensions/externallinks/elink.gif" alt="" style="border:0;" />';
+            jQuery('a').each(function(){
+                if ((typeof(this.hostname)!="undefined") && (typeof(this.hostname) != "unknown")) {
+                    var thishost = this.hostname.replace('www.', '');
+                    if (this.href && (thishost != hostname) && (this.protocol=='http:' || this.protocol=='https:') && (this.innerHTML.length<50) ) {
+                        this.target='_blank';
+                        this.innerHTML = this.innerHTML+eimage;
+                        this.title = this.title + "This link opens in a new window: " + this.href + "";
+                    }
+                }
+            });
+        });
+        
+        //]]>
+        </script>
+
+	<meta name="generator" content="PivotX" /><!-- version: PivotX - 2.3.11 -->
+	<link rel="shortcut icon" href="/~fsancho/pivotx/pics/favicon.ico" />
+
+	<link rel="canonical" href="http://www.cs.us.es/~fsancho/?e=72" />
+
+	<link rel="alternate" type="application/rss+xml" title="Fernando Sancho Caparrini &raquo; Mi blog (RSS feed)" href="http://www.cs.us.es/~fsancho/index.php?feed=rss" />
+	<link rel="alternate" type="application/atom+xml" title="Fernando Sancho Caparrini &raquo; Mi blog (Atom feed)" href="http://www.cs.us.es/~fsancho/index.php?feed=atom" />
+	<link rel="alternate" type="application/rss+xml" title="Fernando Sancho Caparrini &raquo; Mi blog (RSS feed para comentarios)" href="http://www.cs.us.es/~fsancho/index.php?feed=rss&amp;content=comments" />
+	<link rel="alternate" type="application/atom+xml" title="Fernando Sancho Caparrini &raquo; Mi blog (Atom feed para comentarios)" href="http://www.cs.us.es/~fsancho/index.php?feed=atom&amp;content=comments" />
+
+	
+	<!--[if lt IE 7]><![endif]-->
+	<!--[if IE 7]><![endif]-->
+	<!--[if IE 8]><![endif]-->
+	
+	<script type="text/javascript">
+<!--
+	jQuery(document).ready(function() {
+		jQuery("a.fancybox").fancybox({ padding: 2, 'titlePosition': 'over', 'overlayShow': true, 'overlayOpacity': 0.25, 'opacity': true, 'speedIn': 100, 'speedOut': 100, 'changeSpeed': 100, 'showCloseButton': true });
+		jQuery("a.fancytube").fancybox({ padding: 0, autoScale: false, centerOnScroll: true, 'transitionIn': 'none', 'transitionOut': 'none', 'overlayShow': true, 'overlayOpacity': 0.7, 'hideOnContentClick': true, 'titlePosition': 'outside', 'showCloseButton': false });
+		jQuery("a.fancytext").fancybox({ padding: 5, autoScale: true, centerOnScroll: true, 'transitionIn': 'none', 'transitionOut': 'none', 'overlayShow': true, 'overlayOpacity': 0.7, 'titlePosition': 'outside', 'showCloseButton': true, 'cyclic': false });
+		jQuery("a.fancyframe").fancybox({ padding: 3, autoScale: false, centerOnScroll: true, 'transitionIn': 'none', 'transitionOut': 'none', 'overlayShow': true, 'overlayOpacity': 0.7, 'width': '75%', 'height': '75%', 'type': 'iframe', 'titlePosition': 'outside', 'showCloseButton': true });
+		jQuery("a.fancyflash").fancybox({ padding: 0, autoScale: false, 'transitionIn': 'none', 'transitionOut': 'none', 'showCloseButton': true });
+	});
+	// -->
+</script>
+</head>
+<body>
+		<div id="header">
+			<div id="feeds">
+				<div id="google_translate_element"></div><script type="text/javascript">
+				function googleTranslateElementInit() {
+ 				 new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+				}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+			</div>
+			<div id="title">
+				<a href="/~fsancho/" accesskey="1">Fernando Sancho Caparrini</a>
+			</div>
+			<div id="description" align="right">
+				
+			</div>	
+			<div id="navigation">
+				<ul class="sf-menu">
+					
+					<li><a href="/~fsancho/" accesskey="1">Inicio</a></li>
+					
+						<li><a href="">Docencia</a>
+						<ul><li ><a href="/~fsancho/?p=inteligencia-artificial-2018-19" title="">Inteligencia Artificial 2018-19</a></li>
+<li ><a href="/~fsancho/?p=logica-informatica-2018-19" title="">Lógica Informática 2018-19</a></li>
+<li ><a href="/~fsancho/?p=icsr-mdsbd-2018-19" title="">ICSR - MDSBD 2018-19</a></li>
+<li ><a href="/~fsancho/?p=proyectos-fin-de-carrera-dirigidos" title="">Trabajos Fin de Grado Dirigidos</a></li>
+<li ><a href="/~fsancho/?p=proyectos-fin-de-master-dirigidos" title="">Trabajos Fin de Máster Dirigidos</a></li>
+<li ><a href="/~fsancho/?p=docencia-actual" title="">Docencia Actual</a></li>
+<li ><a href="/~fsancho/?p=docencia-anterior" title="">Docencia Anterior</a></li>
+<li ><a href="/~fsancho/?p=estalmat-instrucciones-netlogo" title="">Estalmat - Instrucciones NetLogo</a></li>
+<li ><a href="/~fsancho/?p=doc-pd-2016-17" title="">Programación Declarativa 2016-17</a></li>
+<li ><a href="/~fsancho/?p=doc-iaic-2017-18" title="">Inteligencia Artificial 2017-18</a></li>
+<li ><a href="/~fsancho/?p=doc-liti-2017-18" title="">Lógica Informática 2017-2018</a></li>
+<li ><a href="/~fsancho/?p=slaem-maes-2017-2018" title="">SLAEM - MAES 2017-2018</a></li>
+<li ><a href="/~fsancho/?p=icsr-mdsbd-2017-2018" title="">ICSR - MDSBD 2017-2018</a></li></ul></li><li><a href="">Cursos</a>
+						<ul><li ><a href="/~fsancho/?p=inteligencia-artificial" title="">Inteligencia Artificial</a></li>
+<li ><a href="/~fsancho/?p=computabilidad" title="">Teoría de la Computabilidad</a></li>
+<li ><a href="/~fsancho/?p=netlogo" title="">Programación con NetLogo</a></li>
+<li ><a href="/~fsancho/?p=modelado-y-analisis-de-la-complejidad" title="">Modelado y Análisis de la Complejidad</a></li>
+<li ><a href="/~fsancho/?p=deep-learning" title="">Deep Learning</a></li></ul></li><li><a href="">Investigación</a>
+						<ul><li ><a href="/~fsancho/?p=sistemas-complejos-2" title="">Sistemas Complejos</a></li>
+<li ><a href="/~fsancho/?p=machine-learning-aprendizaje-automatico" title="">Aprendizaje Automático</a></li>
+<li ><a href="/~fsancho/?p=humanidades-digitales-1" title="">Modelado Cultural</a></li>
+<li ><a href="/~fsancho/?p=teoria-algoritmica-de-la-informacion" title="">Teoría Algorítmica de la Información</a></li>
+<li ><a href="/~fsancho/?p=computacion-natural" title="">Computación Natural</a></li>
+<li ><a href="/~fsancho/?p=seminario-ia3" title="">Seminario  (I+A)A</a></li>
+<li ><a href="/~fsancho/?p=tesis-doctorales-dirigidas" title="">Tesis Doctorales Dirigidas</a></li></ul></li><li><a href="">Proyectos</a>
+						<ul><li ><a href="/~fsancho/?p=proyectos-de-investigacion" title="">Participación en Proyectos de Investigación</a></li>
+<li ><a href="/~fsancho/?p=cultureplex" title="">CulturePlex Lab</a></li>
+<li ><a href="/~fsancho/?p=aplicaciones-de-sistemas-complejos-al-analisis-del-patrimonio-cu" title="">Análisis del Patrimonio Cultural Ecuatoriano</a></li>
+<li ><a href="/~fsancho/?p=hispanic-baroque" title="">Hispanic Baroque Project</a></li>
+<li ><a href="/~fsancho/?p=modelos-de-netlogo" title="">Modelos de NetLogo</a></li></ul></li><li><a href="">Publicaciones</a>
+						<ul><li ><a href="/~fsancho/?p=articulos" title="">Artículos</a></li>
+<li ><a href="/~fsancho/?p=comunicaciones" title="">Comunicaciones</a></li>
+<li ><a href="/~fsancho/?p=libros" title="">Libros</a></li>
+<li ><a href="/~fsancho/?p=trabajos-otros" title="">Otros</a></li></ul></li>
+
+                                         <li><a><span style="display:inline-block; width: 20px;">&nbsp</span></a></li>
+
+		
+					<li><a href="">Últimas Entradas</a>
+						<ul>
+							                                                         <li><a href=/~fsancho/?e=215>Seminario (I+A)A... y llegamos al 4</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=213>No me enseñes más postales ... dame...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=212>De la Resolución Proposicional a la...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=208>Metaheurísticas para Búsqueda y...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=207>Metaheurísticas para Búsqueda y...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=192>Descubrimiento de Conocimiento en...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=193>Modelado de Sistemas Dinámicos con...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=191>Seminario (I+A)A... y ya van tres</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=186>Resolviendo Problemas de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=178>Nuevo Bloque de Cursos</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=97>Introducción a la Lógica Difusa</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=206>Simulated Annealing in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=205>Búesquedas Estocásticas: Templado...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=173>Introducción a Prover9 y Mace4</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=172>Representación del Conocimiento</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=169>Fundamentos Matemáticos del Machine...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=168>Seminario  (I+A)A ... Nueva Temporada</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=166>La Tiranía de las Publicaciones</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=165>Entrenamiento de Redes Neuronales:...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=162>Complex Networks Toolbox (NetLogo)</a></li>
+                                                        						</ul>
+					</li>
+                                         <li><a href=""> Por Temas</a>
+                                               <ul>
+                                                 <li><a href="http://www.cs.us.es/~fsancho/?p=p1">Inteligencia Artificial</a>
+						       <ul>
+							                                                         <li><a href=/~fsancho/?e=208>Metaheurísticas para Búsqueda y...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=207>Metaheurísticas para Búsqueda y...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=192>Descubrimiento de Conocimiento en...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=193>Modelado de Sistemas Dinámicos con...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=189>Algoritmo de Montecarlo aplicado a...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=186>Resolviendo Problemas de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=178>Nuevo Bloque de Cursos</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=97>Introducción a la Lógica Difusa</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=206>Simulated Annealing in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=205>Búesquedas Estocásticas: Templado...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=173>Introducción a Prover9 y Mace4</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=172>Representación del Conocimiento</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=169>Fundamentos Matemáticos del Machine...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=165>Entrenamiento de Redes Neuronales:...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=151>Usando Patches de NetLogo para...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=141>Problemas de Satisfacción de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=136>Self Organizing Maps (SOM) in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=135>Artificial Neural Networks in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=132>Local Search Algorithms in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=131>A General A* Solver in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=129>A general BFS Solver in NetLogo</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=120>Curso acelerado de Lógica Proposicional</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=109>Aprendizaje por refuerzo: algoritmo Q...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=107>Minimax: Juegos con adversario</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=106>Métodos combinados de aprendizaje</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=104>Aprendizaje Inductivo: Árboles de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=103>Sistemas Basados en Reglas</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=116>Ejercicios Lógica Difusa</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=108>Ejercicios Minimax</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=78>Análisis Formal de Conceptos</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=76>Mapas Auto-Organizados</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=77>Clasificación Supervisada y No...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=75>Introducción al Aprendizaje Automático</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=74>Optimización en el espacio de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=72>Redes Neuronales: una visión...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=101>Ejercicios de PSO y ACO</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=71>Algoritmos de hormigas y el problema...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=70>PSO: Optimización por enjambres de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=69>Fractales</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=66>Autómatas Celulares</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=99>Ejercicios Redes Complejas</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=80>Introducción a las redes complejas</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=64>Sistemas Complejos, Sistemas...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=98>Ejercicios Inteligencia Colectiva</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=67>Sistemas Colectivos. Inteligencia...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=63>Ejercicios de búsquedas locales</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=65>Algoritmos Genéticos</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=96>Búsquedas Locales</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=61>Ejercicios de Búsqueda Informada</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=62>Búsquedas Informadas</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=95>Búsquedas No Informadas</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=34>Ejercicios de Búsqueda no Informada</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=33>Espacios de estados</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=31>Ejercicios NetLogo II</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=115>Ejercicios de Algoritmos Genéticos</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=59>Ejercicios de Lógica de Primer Orden</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=58>Ejercicios de Lógica Proposicional</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=30>Ejercicios NetLogo I</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=57>Sistemas Multiagente y Simulación</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=94>El modelado de problemas</a></li>
+                                                        						        </ul>
+					          </li>
+                                                  <li><a href="http://www.cs.us.es/~fsancho/?p=p1">Programación Funcional</a>
+	        					<ul>
+							                                                         <li><a href=/~fsancho/?e=146>¿Se puede liberar la programación...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=126>Elm: Creación rápida de...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=121>Elm: Proyecto Juego</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=113>Cómo se demuestra que un programa es...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=111>Programación Funcional Reactiva</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=110>Haskell: el Lenguaje Funcional</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=105>Programación Funcional: Una mirada...</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=123>Elm: Definiendo Tipos para Modelar</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=122>Elm: Sintaxis Básica</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=88>Elm: Señales</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=87>Elm: Introducción</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=118>Ejercicios de Elm (Introducción)</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=117>Ejercicios de Elm (Elementos Visuales)</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=86>Refactorización Funcional</a></li>
+                                                                                                                 <li><a href=/~fsancho/?e=114>Elm: Elementos Visuales</a></li>
+                                                        						        </ul>
+					            </li>
+                                                     <li><a href="http://www.cs.us.es/~fsancho/?p=modelos-de-netlogo">Modelos NetLogo</a>
+		         				    <ul>
+			 				                                                                   <li><a href=/~fsancho/?e=189>Algoritmo de Montecarlo aplicado a...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=178>Nuevo Bloque de Cursos</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=206>Simulated Annealing in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=162>Complex Networks Toolbox (NetLogo)</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=184>NetLogo: Interfaz Gráfica</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=183>NetLogo: Procedimientos Anónimos,...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=182>NetLogo: Conjuntos de Agentes,...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=151>Usando Patches de NetLogo para...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=179>NetLogo: Conceptos Básicos</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=148>Cuadernos del CIS: Simulación basada...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=140>Programming Mathematical Models ......</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=139>Classical elements in NetLogo: Fire</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=138>Classical elements in NetLogo: Water</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=137>Classical elements in NetLogo: Earth</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=136>Self Organizing Maps (SOM) in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=135>Artificial Neural Networks in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=132>Local Search Algorithms in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=131>A General A* Solver in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=129>A general BFS Solver in NetLogo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=128>NetLogo: Una herramienta de modelado...</a></li>
+                                                             						            </ul>
+					              </li>
+                                                     <li><a href="http://www.cs.us.es/~fsancho/">Opinión</a>
+		         				    <ul>
+			 				                                                                   <li><a href=/~fsancho/?e=213>No me enseñes más postales ... dame...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=190>¿Qué Hay Detrás de los Dobles Grados?</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=166>La Tiranía de las Publicaciones</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=157>Emprendimiento descabezado</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=156>¿Puede existir Matemática sin...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=130>Un secreto de pasillo</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=92>Opinión 141 de Doron Zeilberger</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=91>Sobre el modelado usando ecuaciones...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=55>El auge de un joven paradigma...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=32>The Crisis in Higher Education</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=29>El imparable ascenso de la educación...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=20>Cuando la religión pisa el césped...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=12>Algunos comentarios sobre la...</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=7>¿Por qué falla el capitalismo?</a></li>
+                                                                                                                           <li><a href=/~fsancho/?e=3>Objetivos de i-Math</a></li>
+                                                             						            </ul>
+					              </li>
+
+                                                  </ul>
+                                             </li>
+                                         <li><a><span style="display:inline-block; width: 240px;">&nbsp</span></a></li>
+
+                                         <li><a href="https://twitter.com/sanchocaparrini" target = "_blank"><img border="0" alt="Twitter" src="http://www.cs.us.es/~fsancho/images/twitter.png" width="20" height="14"></a></span></li>
+ 
+
+			</div> <!-- end navigation -->	
+		</div> <!-- end header -->
+		<div id="mainwrapper">
+			<div id="sidebar">
+				<div class="sidebar-block"><form method="post" action="/~fsancho/index.php?q="  class="pivotx-search">
+<fieldset><legend>Buscar palabras usadas en entradas y páginas de este sitio</legend>
+<label for="search">Introduzca aqu&iacute; la[s] palabra[s] a buscar:</label>
+<input id="search" type="text" name="q" class="searchbox" value="Introduca términos de búsqueda" onblur="if(this.value=='') this.value='Introduca términos de búsqueda';" onfocus="if(this.value=='Introduca términos de búsqueda') this.value=''; this.select();return true;" />
+<input type="hidden" name="w" value="weblog" />
+</fieldset></form>
+</div>
+<div class="sidebar-block">
+					<h2> NetLogo Book </h2>
+<a href="http://www.cs.us.es/~fsancho/?e=128"><div class="pivotx-wrapper"><img src="/~fsancho/images/libro.jpg" title=""  alt="" class="pivotx-image"  /></div></a>
+					In english and spanish, the new book to learn NetLogo.<br>
+					16 chapters going from the basics to advanced features.<br>
+					With exercises proposed in every chapter and full examples.
+					</div>
+
+                                <div class="sidebar-block">
+					<h2> Los más leído </h2>
+						<div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/topten.png" title=""  width="130px" alt="" class=" "  /></div>
+<strong>1.</strong> <a href='/~fsancho/?e=77'>Clasificación Supervisada y No Supervisada</a> (23712 vistas)<br /><strong>2.</strong> <a href='/~fsancho/?e=71'>Algoritmos de hormigas y el problema del viajante</a> (19153 vistas)<br /><strong>3.</strong> <a href='/~fsancho/?e=75'>Introducción al Aprendizaje Automático</a> (19069 vistas)<br /><strong>4.</strong> <a href='/~fsancho/?e=72'>Redes Neuronales: una visión superficial</a> (17933 vistas)<br /><strong>5.</strong> <a href='/~fsancho/?e=104'>Aprendizaje Inductivo: Árboles de Decisión</a> (16061 vistas)<br /><strong>6.</strong> <a href='/~fsancho/?e=97'>Introducción a la Lógica Difusa</a> (13929 vistas)<br /><strong>7.</strong> <a href='/~fsancho/?e=80'>Introducción a las redes complejas</a> (12249 vistas)<br /><strong>8.</strong> <a href='/~fsancho/?e=73'>Una introducción a Prolog</a> (11560 vistas)<br /><strong>9.</strong> <a href='/~fsancho/?e=70'>PSO: Optimización por enjambres de partículas</a> (11391 vistas)<br /><strong>10.</strong> <a href='/~fsancho/?e=165'>Entrenamiento de Redes Neuronales: mejorando el Gradiente Descendiente</a> (10574 vistas)			
+				</div>				
+	 	 	        <div class="sidebar-block">
+					<h2> Temas </h2>
+                                                <div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/categ.png" title=""  width="130px" alt="" class=" "  /></div>
+						<div id='tagcloud' style='font-size: 10px;'><a style="font-size:1.25em;" href="/~fsancho/?t=agentes" rel="tag" title="Etiqueta: agentes, 19 Entradas">agentes</a>, <a style="font-size:1.68em;" href="/~fsancho/?t=algoritmos" rel="tag" title="Etiqueta: algoritmos, 51 Entradas">algoritmos</a>, <a style="font-size:1.36em;" href="/~fsancho/?t=aprendizaje_autom%C3%A1tico" rel="tag" title="Etiqueta: aprendizaje automático, 27 Entradas">aprendizaje automático</a>, <a style="font-size:1.21em;" href="/~fsancho/?t=busqueda" rel="tag" title="Etiqueta: busqueda, 16 Entradas">busqueda</a>, <a style="font-size:1.24em;" href="/~fsancho/?t=complejidad" rel="tag" title="Etiqueta: complejidad, 18 Entradas">complejidad</a>, <a style="font-size:2.00em;" href="/~fsancho/?t=inteligencia_artificial" rel="tag" title="Etiqueta: inteligencia artificial, 75 Entradas">inteligencia artificial</a>, <a style="font-size:1.23em;" href="/~fsancho/?t=investigaci%C3%B3n" rel="tag" title="Etiqueta: investigación, 17 Entradas">investigación</a>, <a style="font-size:1.20em;" href="/~fsancho/?t=l%C3%B3gica" rel="tag" title="Etiqueta: lógica, 15 Entradas">lógica</a>, <a style="font-size:1.29em;" href="/~fsancho/?t=machine_learning" rel="tag" title="Etiqueta: machine learning, 22 Entradas">machine learning</a>, <a style="font-size:1.43em;" href="/~fsancho/?t=matem%C3%A1ticas" rel="tag" title="Etiqueta: matemáticas, 32 Entradas">matemáticas</a>, <a style="font-size:1.36em;" href="/~fsancho/?t=modelado" rel="tag" title="Etiqueta: modelado, 27 Entradas">modelado</a>, <a style="font-size:1.56em;" href="/~fsancho/?t=netlogo" rel="tag" title="Etiqueta: netlogo, 42 Entradas">netlogo</a>, <a style="font-size:1.20em;" href="/~fsancho/?t=opini%C3%B3n" rel="tag" title="Etiqueta: opinión, 15 Entradas">opinión</a>, <a style="font-size:1.23em;" href="/~fsancho/?t=simulacion" rel="tag" title="Etiqueta: simulacion, 17 Entradas">simulacion</a>, <a style="font-size:1.32em;" href="/~fsancho/?t=universidad" rel="tag" title="Etiqueta: universidad, 24 Entradas">universidad</a><em>(<a href="/~fsancho/?x=tagpage">todas</a>)</em></div>			
+				</div>
+				<div class="sidebar-block">
+					<h2>Enlaces</h2>
+                                        <div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/neticon.png" title=""  width="130px" alt="" class=" "  /></div>
+					<p>Computación</p>
+<ul>
+	<li><a href="http://www.uce.edu.ec" target="_blank">GMSC-UCE</a></li>
+    <li><a href="http://www.cs.us.es/~fsancho/AIT/" target="_blank">A.I.T.</a></li>
+</ul>
+
+<p>Programación</p>
+<ul>
+    <li><a href="http://ccl.northwestern.edu/netlogo/">NetLogo</a></li>
+    <li><a href="http://elm-lang.org">Elm Language</a></li>
+    <li><a href="https://www.haskell.org">Haskell</a></li>
+</ul>
+
+<p>Humanidades Digitales</p>
+<ul>
+    <li><a href="http://www.cultureplex.ca">CulturePlex Lab</a></li>
+    <li><a href="http://sylvadb.com/">SylvaDB</a></li>
+    <li><a href="http://baroqueart.cultureplex.ca">BaroqueArt</a></li>
+</ul>
+
+<p>Otros</p>
+<ul>
+    <li><a href="http://www.gcn.us.es/">R.G.N.C.</a></li>
+    <li><a href="http://www.glc.us.es/wiki/Computational_Logic_Group">Lóg. Computacional</a></li>
+    <li><a href="http://www.cs.us.es/glm/">Lóg. Matemática</a></li>
+</ul>				</div>
+
+				<div class="sidebar-block">
+					<h2>Contacto</h2>
+					<p>
+<a href="http://www.cs.us.es">Dpto. Ciencias de la Computación e Inteligencia Artificial</a>, <a href="http://www.us.es">Universidad de Sevilla</a>.
+</p>
+
+<p>
+Dirección:<a href="http://www.informatica.us.es">E.T.S.I.I.</a><br>
+Av. Reina Mercedes, s/n. 41012, Sevilla
+</p>
+<p>
+Tfno: (+ 34) 954556979,<br> 
+Fax: (+34) 954556599<br>
+Despacho: H1.48<br>
+e-mail: fsancho en us(.)es<br>
+</p>
+<div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/contact.png" title=""  width="160px" alt="" class=" "  /></div>				</div>
+			</div> <!-- end sidebar-->			<div id="content" style="width:950px">
+ 
+				<div class="post" id="post-72">
+
+<p class="entrynavigation" align="right">  
+<a href="/~fsancho/?e=101">« Ejercicios de PSO y A&hellip; «</a> ||
+<a href=/~fsancho/> Inicio </a>||
+<a href="/~fsancho/?e=74">» Optimización en el es&hellip; »</a>
+</p>
+							<h1>Redes Neuronales: una visión superficial </h1>
+							<div class="meta">
+								<div class="date" align="right">Última modificación: 26 de Diciembre de 2018, y ha tenido  17934 vistas</div>
+							</div>
+	
+                                                        <p class="tags" align="right">Etiquetas utilizadas: <a rel="tag" href="/~fsancho/?t=algoritmos" title="Etiqueta: algoritmos">algoritmos</a> || <a rel="tag" href="/~fsancho/?t=aprendizaje_autom%C3%A1tico" title="Etiqueta: aprendizaje automático">aprendizaje automático</a> || <a rel="tag" href="/~fsancho/?t=inteligencia_artificial" title="Etiqueta: inteligencia artificial">inteligencia artificial</a> || <a rel="tag" href="/~fsancho/?t=netlogo" title="Etiqueta: netlogo">netlogo</a></p>
+                                                        <div  align="right"> 
+<!-- Unrecognized template code: [[ sociable ]]
+It's either a disabled PivotX extension or a deprecated Pivot snippet/snippet syntax. -->
+
+<!-- Unrecognized template code: [[ plusonebutton ]]
+It's either a disabled PivotX extension or a deprecated Pivot snippet/snippet syntax. -->
+</div>
+
+							<div class="entry">	
+								<!--<div class="date"}><p><img src="/~fsancho/images/2015-07/41d2cc80-25f4-11e2-bb76-001e670c2818.jpg" title="" alt="" width="150px" class="pivotx-image align-left" />Una <strong>Red Neuronal Artificial</strong> (<strong>RNA</strong>) es un modelo matem&aacute;tico inspirado en el comportamiento biol&oacute;gico de las neuronas y en c&oacute;mo se organizan formando la estructura del cerebro. El cerebro puede considerarse un sistema altamente complejo, donde se calcula que hay aproximadamente 100 mil millones (\(10^{11}\)) neuronas en la corteza cerebral y que forman un entramado de m&aacute;s de 500 billones de conexiones neuronales (una neurona puede llegar a tener 100 mil conexiones, aunque la media se sit&uacute;a entre 5000 y 10000 conexiones).</p></div>-->
+								<a id="body-anchor"></a><div style="text-align: justify;">Una <strong>Red Neuronal Artificial (RNA</strong>) es un modelo matem&aacute;tico inspirado&nbsp;en el comportamiento biol&oacute;gico de las neuronas y en c&oacute;mo se organizan formando la estructura del cerebro. <span>El cerebro&nbsp;puede considerarse un sistema altamente complejo, donde se calcula que hay&nbsp;aproximadamente 100 mil millones (\(10^{11}\)) neuronas en la corteza cerebral (humana) y que forman un entramado de m&aacute;s de 500 billones&nbsp;de conexiones neuronales (una neurona puede llegar a tener 100 mil conexiones, aunque la media se sit&uacute;a entre 5000 y 10000 conexiones).&nbsp;</span></div>
+<div style="text-align: justify;"><span>&nbsp;</span></div>
+<div style="text-align: justify;"><span></span>Respecto a su funcionamiento, el cerebro puede ser&nbsp;visto como un sistema inteligente que lleva a cabo tareas de manera distinta a como lo hacen las computadoras actuales. Si bien&nbsp;estas &uacute;ltimas son muy r&aacute;pidas en el procesamiento de la informaci&oacute;n, existen&nbsp;tareas muy complejas, como el reconocimiento y clasificaci&oacute;n de patrones, que&nbsp;demandan demasiado tiempo y esfuerzo a&uacute;n en las computadoras m&aacute;s potentes de la actualidad, pero que el cerebro humano es m&aacute;s apto para resolverlas,&nbsp;muchas veces sin aparente esfuerzo (por ejemplo, el reconocimiento de un rostro familiar entre una multitud de rostros).&nbsp;</div>
+<div style="text-align: justify;">&nbsp;</div>
+<div style="text-align: justify;"><img src="/~fsancho/images/2015-07/41d2cc80-25f4-11e2-bb76-001e670c2818.jpg" title="" alt="" class="pivotx-image align-left" /></div>
+<div style="text-align: justify;">Si bien hay distintos tipos de neuronas biol&oacute;gicas, la imagen de la izquierda muestra un&nbsp;esquema simplificado del tipo m&aacute;s com&uacute;n, y donde podemos reconocer diferentes partes:</div>
+<ul style="margin-left: 40px;">
+<li style="text-align: justify;">El cuerpo central, llamado <strong>soma</strong>, que contiene el n&uacute;cleo celular.</li>
+<li style="text-align: justify;">Una prolongaci&oacute;n del soma, el <strong>ax&oacute;n</strong>.&nbsp;</li>
+<li style="text-align: justify;">Un conjunto de ramificaciones terminales, las <strong>dendritas</strong>.</li>
+<li style="text-align: justify;">Zonas de conexi&oacute;n entre una neurona y otra, conocidas como <strong>sinapsis</strong>.</li>
+</ul>
+<div style="text-align: justify;">La funci&oacute;n principal de las neuronas es la transmisi&oacute;n de impulsos nerviosos.&nbsp;Estos viajan por toda la neurona comenzando por las dendritas hasta llegar a&nbsp;las terminaciones del ax&oacute;n, donde pasan a otra neurona por medio de la conexi&oacute;n sin&aacute;ptica.</div>
+<div>&nbsp;</div>
+<div style="text-align: justify;">La manera en que respondemos ante los est&iacute;mulos del mundo exterior, y el aprendizaje que podemos realizar del mismo, est&aacute; directamente relacionado con las conexiones&nbsp;neuronales del cerebro, y las RNAs son un intento de emular este hecho.</div>
+<div>
+<h2>Modelo neuronal de McCulloch-Pitts</h2>
+<div>El primer modelo matem&aacute;tico de una neurona artificial, creado con el fin&nbsp;de llevar a cabo tareas simples, fue presentado en el a&ntilde;o 1943 en un trabajo&nbsp;conjunto entre el psiquiatra y neuroanatomista <strong>Warren McCulloch</strong> y el matem&aacute;tico <strong>Walter Pitts</strong>.</div>
+<div>&nbsp;</div>
+<div>La siguiente figura muestra un ejemplo de modelo neuronal con \(n\) entradas, que consta de:</div>
+<ul>
+<li>Un conjunto de entradas \(x_1,\dots x_n\).</li>
+<li>Los pesos sin&aacute;pticos \(w_1,\dots w_n\), correspondientes a cada entrada.</li>
+<li>Una funci&oacute;n de agregaci&oacute;n, \(\Sigma\).</li>
+<li>Una funci&oacute;n de activaci&oacute;n, \(f\).</li>
+<li>Una salida, \(Y\).</li>
+</ul>
+<p style="text-align: center;"><img src="http://www.um.es/LEQ/Atmosferas/Ch-VI-3/6-3-8.GIF" width="592" height="325" /></p>
+<p>Las entradas son el est&iacute;mulo que la neurona artificial recibe del entorno&nbsp;que la rodea, y la salida es la respuesta a tal est&iacute;mulo. La neurona puede adaptarse al&nbsp;medio circundante y aprender de &eacute;l modificando el valor de sus pesos sin&aacute;pticos, y por ello son conocidos como los <strong>par&aacute;metros libres</strong>&nbsp;del modelo, ya que pueden ser modificados y adaptados para realizar&nbsp;una tarea determinada.</p>
+<div>En este modelo, la salida neuronal \(Y\) est&aacute; dada por:</div>
+<div>\[Y = f(\sum_{i=1}^n w_i x_i)\]</div>
+<div>La funci&oacute;n de activaci&oacute;n se elige de acuerdo a la tarea realizada por&nbsp;la neurona. Entre las m&aacute;s comunes dentro del campo de las RNAs podemos destacar:</div>
+<div>&nbsp;</div>
+<div><img src="http://jarroba.com/wp-content/uploads/2013/09/funciones-de-activaci%C3%B3n.png" width="500" style="display: block; vertical-align: middle; margin-left: auto; margin-right: auto;" /></div>
+<div>
+<h2>&nbsp;</h2>
+<h2>Usando el Perceptron para clasificar clases en el&nbsp;plano</h2>
+<div>Aplicaremos el modelo neuronal de la secci&oacute;n anterior para realizar tareas de&nbsp;clasificaci&oacute;n en el plano (por lo que solo haremos uso de dos entradas, \(x_1\) y \(x_2\)). Para ello, vamos a considerar que existe una entrada de peso constante 1, y valor de entrada \(b\) y consideraremos como funci&oacute;n de activaci&oacute;n&nbsp;a la funci&oacute;n <em>signo</em> definida por:</div>
+<div>$$\Gamma(s) =&nbsp;\left\{&nbsp;\begin{array}{cl}&nbsp;&nbsp; 1,&nbsp; &amp; \mbox{si } s \geq 0 \\&nbsp;&nbsp; -1, &amp; \mbox{si } s &lt; 0&nbsp;\end{array}&nbsp;\right.$$</div>
+<div>Por lo tanto, la salida neuronal \(Y\) estar&aacute; dada en este caso por:</div>
+<div>$$Y =\left\{&nbsp;\begin{array}{cl}&nbsp;&nbsp; 1,&nbsp; &amp; \mbox{si } w_1 x_1 + w_2 x_2 + b \geq 0 \\&nbsp;&nbsp; -1, &amp; \mbox{si }&nbsp;w_1 x_1 + w_2 x_2 + b&nbsp;&lt; 0&nbsp;\end{array}&nbsp;\right.$$</div>
+<div>
+<div>Supongamos que tenemos dos clases en el plano: la clase \(C_1\), formada por los&nbsp;c&iacute;rculos rojos, y la clase \(C_2\), formada por los c&iacute;rculos azules,&nbsp;donde cada elemento de estas clases est&aacute; representado por un punto \((x,y)\) en&nbsp;el plano. Supondremos adem&aacute;s que tales clases son separables linealmente, es&nbsp;decir, es posible trazar una recta que separe estrictamente ambas clases.</div>
+<div style="text-align: center;"><div class="pivotx-wrapper"><img src="/~fsancho/images/2015-07/020ad512-25f8-11e2-bb76-001e670c2818.png" title=""  alt="" class="pivotx-image"  /></div></div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+<div>Diremos que la neurona artificial clasifica correctamente&nbsp;las clases \(C_1\) y \(C_2\) si dados los pesos sin&aacute;pticos \(w_1\) y \(w_2\) y el t&eacute;rmino aditivo \(b\),&nbsp;la recta con ecuaci&oacute;n</div>
+<div>$$y = &minus;\frac{w_1}{w_2}&nbsp;x &minus; \frac{b}{w_2}$$</div>
+<div style="text-align: justify;">es una recta que separa las dos clases. La ecuaci&oacute;n impl&iacute;cita de la recta es \(w_1x + w_2y + b = 0\).&nbsp;Obs&eacute;rvese que si el punto \((x_0,y_0) \in C_1\), entonces \(w_1x_0+ w_2y_0+ b &lt; 0\) y&nbsp;si \((x_0,y_0) \in C_2\), entonces \(w_1x_0+ w_2y_0+ b &gt; 0\). Por lo tanto, dado el par \((x_0,y_0) \in C_1\cup C_2\), la neurona clasifica de la siguiente manera:</div>
+<div style="text-align: justify;">$$(x_0,y_0) \in C_1 \Leftrightarrow Y&nbsp;= &minus;1$$</div>
+<div style="text-align: justify;">$$(x_0,y_0) \in C_2 \Leftrightarrow&nbsp;&nbsp;Y = 1$$</div>
+<div style="text-align: justify;">
+<div>Si ahora tomamos dos clases \(C^*_1\) y \(C^&lowast;_2\) (separables linealmente) distintas a las&nbsp;anteriores, entonces la neurona puede no clasificar correctamente a estas clases,&nbsp;pues la recta anterior&nbsp;puede no ser una recta v&aacute;lida para separarlas. Sin embargo, es posible modificar los par&aacute;metros anteriores y obtener nuevos&nbsp;par&aacute;metros \(w^*_1, w^*_2\) y \(b^*\) de forma que la recta \(y = &minus;\frac{w^*_1}{w^*_2}&nbsp;x &minus; \frac{b^*}{w^*_2}\) s&iacute; sirva como recta de separaci&oacute;n entre ellos. El proceso por el cual la neurona pasa de los par&aacute;metros \(w_1, w_2, b\) a los&nbsp;par&aacute;metros&nbsp;&nbsp;\(w^*_1, w^*_2, b^*\) se&nbsp;conoce como <strong>aprendizaje</strong>. Este proceso es&nbsp;el que permite modificar los par&aacute;metros libres con el fin de que la neurona se&nbsp;adapte y sea capaz de realizar diversas tareas.</div>
+<div>&nbsp;</div>
+<div>El m&eacute;todo de aprendizaje que detallaremos a continuaci&oacute;n y que utilizaremos&nbsp;para adaptar los par&aacute;metros libres con el fin de clasificar correctamente las clases \(C_1\) y \(C_2\) se conoce como m&eacute;todo de <strong>error-correcci&oacute;n</strong>. Para aplicarlo es necesario:</div>
+<ul>
+<li>Un conjunto de entrenamiento, \(D\).</li>
+<li>Un instructor.</li>
+<li>Valores iniciales, \(w'_1, w'_2, b'\), arbitrarios de los par&aacute;metros libres.</li>
+</ul>
+<div>El conjunto de entrenamiento es definido por \(D = C_1\cup C_2\). El entrenamiento&nbsp;consiste en lo siguiente:</div>
+<div>
+<ul>
+<li>El instructor toma un elemento \((x_0,y_0) \in D\) al azar y&nbsp;presenta &eacute;ste a la neurona.</li>
+<li>Si la neurona clasifica mal este punto, es decir, si la&nbsp;salida de la neurona es \(Y = &minus;1\) cuando \((x_0,y_0) \in C_2\) o \(Y = 1\) cuando \((x_0,y_0) \in C_1\),&nbsp;entonces se aplica la siguiente correcci&oacute;n a los par&aacute;metros libres iniciales</li>
+</ul>
+</div>
+<div>
+<div>$$w_1= w'_1+ d x_0$$</div>
+<div>$$w_2= w'_2+ d y_0$$</div>
+<div>$$b = b'+ d$$</div>
+<div style="padding-left: 90px;">donde el valor de \(d\) se obtiene de la siguiente manera:</div>
+<div>$$d =&nbsp;=\left\{&nbsp;\begin{array}{cl}&nbsp;&nbsp; 1 &nbsp;&amp; \mbox{si } Y=-1 \mbox{ y } (x_0,y_0)\in C_2 \\&nbsp;&nbsp; -1 &amp; \mbox{si } Y=1 \mbox{ y } (X_0,y_0)\in C_1&nbsp;\end{array}&nbsp;\right.$$</div>
+<div>
+<div>
+<ul>
+<li>Si la neurona clasifica bien el punto \((x_0,y_0)\), entonces no se realiza ninguna correcci&oacute;n.</li>
+<li>El procedimiento se repite pasando a la neurona otro punto del&nbsp;conjunto \(D\) y usando los &uacute;ltimos par&aacute;metros \(w_1 , w_2, b\) corregidos (no los iniciales).&nbsp;Nuevamente, si la neurona clasifica mal el punto, entonces se aplica una correcci&oacute;n similar a la anterior.</li>
+<li>Esta tarea se repite con todos los puntos del conjunto \(D\). Si en&nbsp;el proceso hubo correcciones, entonces el procedimiento es repetido nuevamente con todos los puntos de \(D\).</li>
+<li>El entrenamiento termina cuando la neurona&nbsp;clasifica correctamente todos los elementos del conjunto de entrenamiento.</li>
+</ul>
+Este&nbsp;procedimiento converge, es decir, en un n&uacute;mero finito de pasos es posible obtener los par&aacute;metros finales que separan entre s&iacute; los conjuntos.</div>
+<div>&nbsp;</div>
+<div>
+<table style="margin-left: auto; margin-right: auto;" border="0" align="center">
+<tbody>
+<tr>
+<td><p class="pivotx-wrapper"><a href="#entry-411067665" class="fancytube" title="Aplicación de las Redes Neuronales a la Identificación de Patrones" rel="entry-72" ><img src="http://i2.ytimg.com/vi/8whBwcIo3iI/default.jpg" class="pivotx-popupimage" alt="Aplicación de las Redes Neuronales a la Identificación de Patrones" /></a><span style="display: none"><span id="entry-411067665" ><object type="application/x-shockwave-flash" data="http://www.youtube.com/v/8whBwcIo3iI&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0" width="560" height="340"><param name="movie" value="http://www.youtube.com/v/8whBwcIo3iI&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param></object></span></span></p></td>
+<td><p class="pivotx-wrapper"><a href="#entry-302706809" class="fancytube" title="Redes Neuronales" rel="entry-72" ><img src="http://i2.ytimg.com/vi/5rq6VBJ0aII/default.jpg" class="pivotx-popupimage" alt="Redes Neuronales" /></a><span style="display: none"><span id="entry-302706809" ><object type="application/x-shockwave-flash" data="http://www.youtube.com/v/5rq6VBJ0aII&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0" width="560" height="340"><param name="movie" value="http://www.youtube.com/v/5rq6VBJ0aII&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param></object></span></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div style="display: inline !important;">&nbsp;</div>
+<div style="display: inline !important;">&nbsp;</div>
+<div style="display: inline !important;">Un modelo neuronal utilizado para clasificaci&oacute;n, cuya salida est&aacute; dada de la forma anterior&nbsp;y que utiliza el <strong>m&eacute;todo de error-correcci&oacute;n</strong> para modificar sus par&aacute;metros&nbsp;libres se conoce como <strong>Perceptron</strong> (el nombre deriva de la palabra en ingl&eacute;s &ldquo;perception&rdquo;). Estas neuronas pueden agruparse formando una RNA conocida como&nbsp;<strong>Perceptron m&uacute;ltiple</strong>.</div>
+</div>
+</div>
+</div>
+</div>
+<h2>El Perceptron multicapa</h2>
+<div style="text-align: justify;">Un caso particular de perceptron m&uacute;ltiple se puede formar organizando sus neuronas en capas. As&iacute;, tenemos la <strong>capa de&nbsp;entrada</strong> formada por las entradas a la red,&nbsp;la <strong>capa de salida</strong> formada por las neuronas que constituyen la salida final de la&nbsp;red, y las <strong>capas ocultas</strong> formadas por las neuronas que se encuentran entre los&nbsp;nodos de entrada y de salida. Una RNA puede&nbsp;tener varias capas ocultas o no tener ninguna de ellas. Las conexiones sin&aacute;pticas (las&nbsp;flechas que llegan y salen de las neuronas) indican el flujo de la se&ntilde;al a trav&eacute;s&nbsp;de la red, y tienen asociadas un peso sin&aacute;ptico correspondiente. Si la salida de&nbsp;una neurona va dirigida hacia dos o m&aacute;s neuronas de la siguiente capa, cada&nbsp;una de estas &uacute;ltimas recibe la salida neta de la neurona anterior. La cantidad&nbsp;de capas de una RNA es la suma de las capas ocultas m&aacute;s la capa de salida.&nbsp;En el caso de existir capas ocultas nos referimos a la RNA como un <strong>Perceptron&nbsp;multicapa</strong>.</div>
+<div style="text-align: center;"><div class="pivotx-wrapper"><img src="/~fsancho/images/2015-07/be9db638-25fb-11e2-bb76-001e670c2818.gif" title=""  alt="" class="pivotx-image"  /></div></div>
+<div>El problema habitual con este tipo de redes multicapa es el de, dados un conjunto de datos ya clasificados, de los que se conoce la salida deseada, proporcionar los pesos adecuados de la red para que se obtenga una aproximaci&oacute;n correcta de las salidas si la red recibe &uacute;nicamente los datos de entrada.</div>
+<div>A mediados de los a&ntilde;os 80 se ofreci&oacute; un algoritmo, llamado de <strong>Propagaci&oacute;n hacia atr&aacute;s</strong>, que aproxima en muchos casos los pesos a partir de los datos objetivo. Este algoritmo de <strong>entrenamiento de la red</strong> se puede resumir muy brevemente en los siguiente puntos:</div>
+<div>
+<ul>
+<li>Empezar con unos pesos sin&aacute;pticos cualesquiera (generalmente elegidos al azar).</li>
+<li>Introducir datos de entrada (en la capa de entrada) elegidos al azar entre el conjunto de datos de entrada que se van a usar para el entrenamiento.</li>
+<li>Dejar que la red genere un vector de datos de salida (propagaci&oacute;n hacia delante).</li>
+<li>Comparar la salida generada por al red con la salida deseada.</li>
+<li>La diferencia obtenida entre la salida generada y la deseada (denominada&nbsp;<em>error</em>) se usa para ajustar los pesos sin&aacute;pticos de las neuronas de la capa de salidas.</li>
+<li>El error se&nbsp;<em>propaga hacia atr&aacute;s</em>&nbsp;(back-propagation), hacia la capa de neuronas anterior, y se usa para ajustar los pesos sin&aacute;pticos en esta capa.</li>
+<li>Se continua propagando el error hacia atr&aacute;s y ajustando los pesos hasta que se alcance la capa de entradas.</li>
+<li>Este proceso se repetir&aacute; con los diferentes datos de entrenamiento.&nbsp;</li>
+</ul>
+<div>Entre las diversas tareas en las que una RNA puede aplicarse podemos mencionar la clasificaci&oacute;n lineal y no lineal de una cantidad arbitraria \(C_1,\dots,C_m\) de&nbsp;clases, regresi&oacute;n lineal y no lineal, an&aacute;lisis de series temporales, control de procesos, rob&oacute;tica, optimizaci&oacute;n de funciones, procesamiento de se&ntilde;ales, etc...</div>
+<div>&nbsp;</div>
+<div>
+<table style="margin-left: auto; margin-right: auto;" border="0" align="center">
+<tbody>
+<tr>
+<td><p class="pivotx-wrapper"><a href="#entry-1861233125" class="fancytube" title="RNP" rel="entry-72" ><img src="http://i2.ytimg.com/vi/0rsNVrA_Kxo/default.jpg" class="pivotx-popupimage" alt="RNP" /></a><span style="display: none"><span id="entry-1861233125" ><object type="application/x-shockwave-flash" data="http://www.youtube.com/v/0rsNVrA_Kxo&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0" width="560" height="340"><param name="movie" value="http://www.youtube.com/v/0rsNVrA_Kxo&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param></object></span></span></p></td>
+<td><p class="pivotx-wrapper"><a href="#entry-995397770" class="fancytube" title="Back Propagation" rel="entry-72" ><img src="http://i2.ytimg.com/vi/GlcnxUlrtek/default.jpg" class="pivotx-popupimage" alt="Back Propagation" /></a><span style="display: none"><span id="entry-995397770" ><object type="application/x-shockwave-flash" data="http://www.youtube.com/v/GlcnxUlrtek&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0" width="560" height="340"><param name="movie" value="http://www.youtube.com/v/GlcnxUlrtek&amp;hl=en&amp;autoplay=1&amp;rel=0&amp;fs=1&amp;start=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param></object></span></span></p>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="margin-bottom: 5px; text-align: center;">&nbsp;</div>
+<h2>Para saber m&aacute;s...</h2>
+<div><p class="pivotx-wrapper"><a href="http://ocw.uc3m.es/ingenieria-informatica/redes-de-neuronas-artificiales" class="fancyframe" title="Universidad Carlos III: Redes Neuronales " rel="entry-721343453531" ><span class="pivotx-popuptext">Universidad Carlos III: Redes Neuronales</span></a></p></div>
+<div><p class="pivotx-wrapper"><a href="https://es.wikipedia.org/wiki/Red_neuronal_artificial" class="fancyframe" title="Wikipedia: Redes Neuronales Artificiales" rel="entry-72622374079" ><span class="pivotx-popuptext">Wikipedia: Redes Neuronales Artificiales</span></a></p></div>
+<div><p class="pivotx-wrapper"><a href="http://www.xataka.com/robotica-e-ia/las-redes-neuronales-que-son-y-por-que-estan-volviendo" class="fancyframe" title="Xataka: Redes Neuronales Artificiales, ¿qué son y porqué están volviendo?" rel="entry-721972453410" ><span class="pivotx-popuptext">Xataka: Redes Neuronales Artificiales, ¿qué son y porqué están volviendo?</span></a></p></div>
+<div><p class="pivotx-wrapper"><a href="http://halweb.uc3m.es/esp/Personal/personas/jmmarin/esp/DM/tema3dm.pdf" class="fancyframe" title="Introducción a las Redes Neuronales Artificiales aplicadas" rel="entry-721760385116" ><span class="pivotx-popuptext">Introducción a las Redes Neuronales Artificiales aplicadas</span></a></p></div>
+<div>&nbsp;</div>
+</div>
+                                                   
+                                                   <div class="sidebar-block" style="margin-left:50%; margin-top:30px; width:50%;font-size:16px;line-height:150%;">
+	 	 	 	 	 	   <h2> También te puede interesar... </h2>
+                                                         <strong>1. </strong><a href='/~fsancho/?e=77'>Clasificación Supervisada y No Supervisada</a> (23712 vistas)<br /><strong>2. </strong><a href='/~fsancho/?e=71'>Algoritmos de hormigas y el problema del viajante</a> (19153 vistas)<br /><strong>3. </strong><a href='/~fsancho/?e=75'>Introducción al Aprendizaje Automático</a> (19069 vistas)<br /><strong>4. </strong><a href='/~fsancho/?e=72'>Redes Neuronales: una visión superficial</a> (17933 vistas)<br /><strong>5. </strong><a href='/~fsancho/?e=104'>Aprendizaje Inductivo: Árboles de Decisión</a> (16061 vistas)<br /><strong>6. </strong><a href='/~fsancho/?e=97'>Introducción a la Lógica Difusa</a> (13929 vistas)<br /><strong>7. </strong><a href='/~fsancho/?e=80'>Introducción a las redes complejas</a> (12249 vistas)<br /><strong>8. </strong><a href='/~fsancho/?e=73'>Una introducción a Prolog</a> (11560 vistas)<br /><strong>9. </strong><a href='/~fsancho/?e=70'>PSO: Optimización por enjambres de partículas</a> (11391 vistas)<br /><strong>10. </strong><a href='/~fsancho/?e=165'>Entrenamiento de Redes Neuronales: mejorando el Gradiente Descendiente</a> (10574 vistas)
+	 	 	 	 	 	  </div>
+							</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fernandosanchocaparriniwebsite'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Por favor, activa JavaScript para ver los comentarios (servicio proporcionado por <a href="https://disqus.com/?ref_noscript">Disqus</a>).</noscript>
+				</div>
+
+
+<p class="entrynavigation" align="right">  
+<a href="/~fsancho/?e=101">« Ejercicios de PSO y A&hellip; «</a> ||
+<a href=/~fsancho/> Inicio </a>||
+<a href="/~fsancho/?e=74">» Optimización en el es&hellip; »</a>
+</p>
+
+			</div> <!--end content-->
+<!--			<div id="secondsidebar">
+				<div class="sidebar-block">
+					<h2>Libro de NetLogo</h2>
+<a href="http://www.cs.us.es/~fsancho/?e=128"><div class="pivotx-wrapper"><img src="/~fsancho/images/libro.jpg" title=""  alt="" class="pivotx-image"  /></div></a>
+					En inglés y español, el libro para aprender a programar y modelar con NetLogo.<br>
+					Un recorrido a lo largo de 16 capítulos que va desde los fundamentos básicos de programación hasta los usos más avanzados.<br>
+					Con ejercicios propuestos en cada capítulo y ejemplos completamente resueltos.
+					</div>
+
+<div class="sidebar-block">
+					<a href="http://www.cs.us.es/~fsancho/NLVC/" target="_blank">
+						<h2>Videocurso de NetLogo</h2>
+					</a>
+<a href="http://www.cs.us.es/~fsancho/NLVC/" target="_blank"><div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/video-content.gif" title=""  width="160px" alt="" class="pivotx-image"  /></div></a>
+					Basado en el libro <a href="https://payhip.com/b/VhKb">"NetLogo: Una herramienta de modelado"</a>, con más de 60 videos que recorren los temas principales.
+					</div>
+				<div class="sidebar-block">
+					<h2>Contacto</h2>
+					<p>
+<a href="http://www.cs.us.es">Dpto. Ciencias de la Computación e Inteligencia Artificial</a>, <a href="http://www.us.es">Universidad de Sevilla</a>.
+</p>
+
+<p>
+Dirección:<a href="http://www.informatica.us.es">E.T.S.I.I.</a><br>
+Av. Reina Mercedes, s/n. 41012, Sevilla
+</p>
+<p>
+Tfno: (+ 34) 954556979,<br> 
+Fax: (+34) 954556599<br>
+Despacho: H1.48<br>
+e-mail: fsancho en us(.)es<br>
+</p>
+<div class="pivotx-wrapper"><img src="/~fsancho/images/2016-11/contact.png" title=""  width="160px" alt="" class=" "  /></div>				</div>
+<!--				<div class="sidebar-block">
+					<h2> Y dicen... </h2>
+						<p>
+"Todo saber tiene de ciencias lo que tiene de Matemáticas"
+<br>
+<strong>H. Poincaré</strong>
+</p>
+<hr>
+<p>
+"El estudio profundo de la naturaleza es la fuente más fértil de descubrimientos matemáticos."
+<br>
+<strong>J. Fourier</strong>
+</p>
+<hr>
+<p>
+"No hay certidumbre allí donde no es posible aplicar ninguna de las ciencias matemáticas ni ninguna de las basadas en las matemáticas."
+<br>
+<strong>Leonardo Da Vinci</strong>				</div>
+-->
+
+
+			</div> <!-- end secondsidebar -->		</div> <!--end mainwrapper-->	
+		<div id="footer">
+			Magazine Theme for <a href="http://www.pivotx.net">PivotX</a> by <a href="http://www.windmillwebwork.com">Windmill Web Work</a> in 2009, released under the <a href="http://www.opensource.org/licenses/simpl-2.0.html">Simple Public License</a>.
+		</div> <!-- end footer --><!-- wzup -->
+<script type="text/javascript">
+var wzupurl = "/~fsancho/pivotx/db/wzup/wzup.php?id=72";
+var wzup = new Image();
+wzup.src = wzupurl;
+</script>
+<!-- wzup version 0.9X - Beta -->	<div class='scheduler-wrapper'><img src='/~fsancho/pivotx/scheduler.php' alt='' width='0' height='0' /></div>
+
+</body>
+</html>

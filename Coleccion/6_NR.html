@@ -1,0 +1,881 @@
+<!DOCTYPE HTML>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+<head>
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- Title -->
+	<title>SQL vs NoSQL ¿Cuál debo usar? - Tech blog for developers | FacilcloudTech blog for developers | Facilcloud</title>    
+
+    <!-- Mobile Device Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- The HTML5 Shim for older browsers (mostly older versions of IE). -->
+	<!--[if IE]> <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    <!--[if lte IE 9]><style type="text/css">ul.example-1 li div.post-likes { display: none !important;}</style><![endif]--> 
+
+	<!-- Favicons and rss / pingback -->
+    <link rel="alternate" type="application/rss+xml" title="Tech blog for developers | Facilcloud RSS Feed" href="https://www.facilcloud.com/noticias/feed/" />
+    <link rel="pingback" href="https://www.facilcloud.com/noticias/xmlrpc.php" />
+    <link rel="shortcut icon" type="image/png" href="https://facilcloud.com/noticias/wp-content/uploads/2015/06/icon.gif"/>  
+    
+    <!-- Custom style -->
+    <style type="text/css">.logo { margin-top: 40px !important; }.entry strong {
+  font-weight: bold;
+  text-decoration: none;
+}a:hover, .jquerycssmenu ul li a:hover, .top-social li a:hover, div.views-nr, .article-meta, ul.comment li span.comment-author, #mcTagMap .tagindex h4, #sc_mcTagMap .tagindex h4  { color: #a21d53 !important;}.red-entry, #searchform2 .buttonicon, .popular-words strong, .jquerycssmenu ul li ul li:hover, .entry-bottom h3.title span, .sidebar .widget h3.title span, .comments h3.comment-reply-title span, #commentform #sendemail, #contactform .sendemail, footer .widget h3.title span { background-color: #a21d53 !important;}#mcTagMap .tagindex h4, #sc_mcTagMap .tagindex h4 { border-bottom: 5px solid #a21d53 !important;}</style>
+
+    <!-- Theme output -->
+    
+	<!-- Meta Tag Manager -->
+	<meta name="description" content="Blog, newsletter, noticias, noticias de tecnología, blog para programadores, blog para desarrolladores, blog de tecnología, news, tech news, blog for developers, tech blog" />
+	<meta name="keywords" content="news, tech news, blog for developers, tech blog, news, tech news, blog for developers, tech blog" />
+	<!-- / Meta Tag Manager -->
+
+<!-- This site is optimized with the Yoast SEO plugin v8.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.facilcloud.com/noticias/sql-vs-nosql-which-one-should-i-use/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="SQL vs NoSQL ¿Cuál debo usar? - Tech blog for developers | Facilcloud" />
+<meta property="og:description" content="SQL es un sistema de gestión de bases de datos relacional, multihilo y multiusuario con más de seis millones de instalaciones; usado por muchos sitios web grandes y populares, como Wikipedia, Google (no para búsquedas), Facebook, Twitter, Flickr, y YouTube. La diferencia conceptual entre SQL y NoSQL, es que resuelven escenarios completamente diferentes y excluyentes &hellip;" />
+<meta property="og:url" content="https://www.facilcloud.com/noticias/sql-vs-nosql-which-one-should-i-use/" />
+<meta property="og:site_name" content="Tech blog for developers | Facilcloud" />
+<meta property="article:tag" content="Cassandra" />
+<meta property="article:tag" content="cloud server" />
+<meta property="article:tag" content="CouchDB" />
+<meta property="article:tag" content="MariaDB" />
+<meta property="article:tag" content="MongoDB" />
+<meta property="article:tag" content="MySQL" />
+<meta property="article:tag" content="nube elástica" />
+<meta property="article:tag" content="programadores" />
+<meta property="article:tag" content="Redis" />
+<meta property="article:section" content="Elastic Cloud" />
+<meta property="article:published_time" content="2015-10-26T19:59:52+05:30" />
+<meta property="article:modified_time" content="2016-07-26T17:37:18+05:30" />
+<meta property="og:updated_time" content="2016-07-26T17:37:18+05:30" />
+<meta property="og:image" content="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01.jpg" />
+<meta property="og:image:secure_url" content="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01.jpg" />
+<meta property="og:image:width" content="1458" />
+<meta property="og:image:height" content="527" />
+<meta property="og:image:alt" content="SQL vs NoSQL: ¿Cuál debo usar?" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="SQL es un sistema de gestión de bases de datos relacional, multihilo y multiusuario con más de seis millones de instalaciones; usado por muchos sitios web grandes y populares, como Wikipedia, Google (no para búsquedas), Facebook, Twitter, Flickr, y YouTube. La diferencia conceptual entre SQL y NoSQL, es que resuelven escenarios completamente diferentes y excluyentes [&hellip;]" />
+<meta name="twitter:title" content="SQL vs NoSQL ¿Cuál debo usar? - Tech blog for developers | Facilcloud" />
+<meta name="twitter:image" content="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//facilcloud.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//netdna.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Tech blog for developers | Facilcloud &raquo; Feed" href="https://www.facilcloud.com/noticias/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Tech blog for developers | Facilcloud &raquo; RSS de los comentarios" href="https://www.facilcloud.com/noticias/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Tech blog for developers | Facilcloud &raquo; SQL vs NoSQL ¿Cuál debo usar? RSS de los comentarios" href="https://www.facilcloud.com/noticias/sql-vs-nosql-which-one-should-i-use/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.facilcloud.com\/noticias\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.7"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='style-css'  href='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/style.css?ver=4.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='default-css'  href='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/css/colors/default.css?ver=4.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/css/responsive.css?ver=4.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-font-css'  href='https://fonts.googleapis.com/css?family=Ruda%3A400%2C700&#038;ver=4.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css?ver=4.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='fancyboxcss-css'  href='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/fancybox/jquery.fancybox-1.3.4.css?ver=4.8.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.facilcloud.com/noticias/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.facilcloud.com/noticias/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.facilcloud.com/noticias/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.facilcloud.com/noticias/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.facilcloud.com/noticias/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.7" />
+<link rel='shortlink' href='https://www.facilcloud.com/noticias/?p=1294' />
+<link rel="alternate" type="application/json+oembed" href="https://www.facilcloud.com/noticias/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.facilcloud.com%2Fnoticias%2Fsql-vs-nosql-which-one-should-i-use%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.facilcloud.com/noticias/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.facilcloud.com%2Fnoticias%2Fsql-vs-nosql-which-one-should-i-use%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		 
+
+<!--Tipografias de google-->
+    <link href='http://fonts.googleapis.com/css?family=Salsa' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:800,800italic,700,300italic,400italic,300,700italic,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+ 
+fbq('init', '548902048641045');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=548902048641045&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</head>
+<body class="post-template-default single single-post postid-1294 single-format-standard">
+
+
+<!-- Begin Header -->
+<header>
+    <div class="main-header">
+          
+        <!-- Logo -->    
+      
+	<a href="https://www.facilcloud.com/noticias/"><img class="logo" src="https://facilcloud.com/noticias/wp-content/uploads/2015/06/logo.png" alt="Tech blog for developers | Facilcloud" /></a> 
+	<!--<a href="../managed-cloud.php"><img class="banner" src="https://facilcloud.com/noticias/wp-content/uploads/2015/06/Captura.jpg" /></a>--> 
+      	
+        
+                
+    </div><!-- end .main -->
+    <div class="clear"></div>
+
+    <div class="main-menu">
+        <div class="wrap">
+            <!-- Navigation Menu -->
+            <nav id="myjquerymenu" class="jquerycssmenu">
+                <ul><li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a href="http://facilcloud.com/noticias/">Home</a></li>
+<li id="menu-item-4085" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4085"><a href="https://www.facilcloud.com/noticias/category/noticias/">Noticias</a></li>
+<li id="menu-item-4080" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4080"><a href="https://www.facilcloud.com/noticias/category/elastic-cloud/">Elastic Cloud</a></li>
+<li id="menu-item-4082" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4082"><a href="https://www.facilcloud.com/noticias/category/programadores/">Programadores</a></li>
+<li id="menu-item-1254" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1254"><a href="https://www.facilcloud.com/noticias/category/email-marketing/">Email Marketing</a></li>
+<li id="menu-item-1255" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1255"><a href="https://www.facilcloud.com/noticias/category/hosting/">Hosting</a></li>
+<li id="menu-item-1332" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1332"><a href="https://www.facilcloud.com/noticias/category/life-hacks/">Life Hacks</a></li>
+</ul>            </nav><!-- end #myjquerymenu -->
+
+            <!-- Top social icons. -->
+                            <ul class="top-social">
+<li><a href="https://www.facebook.com/Facilcloud"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/facilcloud"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://plus.google.com/112658831899344313455/posts"><i class="fa fa-google-plus" rel="Publisher"></i></a></li>
+</ul>
+            	
+        </div><!-- end .wrap -->
+    </div><!-- end .main-menu -->
+    
+    <div class="sub-navigation">
+        <div class="wrap">
+            <!-- popular words -->
+            <div class="popular-words">
+                <strong>Popular tags:</strong> <a href="https://www.facilcloud.com/noticias/tag/cloud-server/" class="tag-cloud-link tag-link-17 tag-link-position-1" style="font-size: 12.375pt;" aria-label="cloud server (79 elementos)">cloud server</a>
+<a href="https://www.facilcloud.com/noticias/tag/elastic-cloud/" class="tag-cloud-link tag-link-6 tag-link-position-2" style="font-size: 15.875pt;" aria-label="Elastic cloud (86 elementos)">Elastic cloud</a>
+<a href="https://www.facilcloud.com/noticias/tag/facilcloud/" class="tag-cloud-link tag-link-173 tag-link-position-3" style="font-size: 22pt;" aria-label="facilcloud (101 elementos)">facilcloud</a>
+<a href="https://www.facilcloud.com/noticias/tag/nube-elastica/" class="tag-cloud-link tag-link-7 tag-link-position-4" style="font-size: 17.625pt;" aria-label="nube elástica (91 elementos)">nube elástica</a>
+<a href="https://www.facilcloud.com/noticias/tag/tecnologia/" class="tag-cloud-link tag-link-35 tag-link-position-5" style="font-size: 8pt;" aria-label="tecnología (70 elementos)">tecnología</a>            </div>
+
+            <!-- search form get_search_form(); -->
+            <form id="searchform2" class="header-search" method="get" action="https://www.facilcloud.com/noticias/">
+    <input placeholder="Live Search ..." type="text" name="s" id="s" />
+    <input type="submit" value="Search" class="buttonicon" />
+</form>
+        </div><!-- end .wrap -->
+    </div>  
+</header><!-- end #header -->
+<!-- Begin Content -->
+<section class="wrap">
+
+    <!-- Begin Main Content -->
+    <div class="single-content">
+
+        <article>
+                                    <div class="post post-1294 type-post status-publish format-standard has-post-thumbnail hentry category-elastic-cloud tag-cassandra tag-cloud-server tag-couchdb tag-mariadb tag-mongodb tag-mysql tag-nube-elastica tag-programadores tag-redis" id="post-1294">
+
+                             
+
+                
+                
+                
+                                                         <img width="755" height="273" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-755x273.jpg" class="attachment-thumbnail-single-image size-thumbnail-single-image wp-post-image" alt="SQL vs NoSQL: ¿Cuál debo usar?" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-755x273.jpg 755w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-300x108.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-768x278.jpg 768w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-1024x370.jpg 1024w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01-235x85.jpg 235w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-01.jpg 1458w" sizes="(max-width: 755px) 100vw, 755px" />                                    
+
+             
+
+                
+                    <div class="entry-top">
+                        <h1 class="article-title entry-title">SQL vs NoSQL ¿Cuál debo usar?</h1> 
+                        <div class="views-nr">20997<div class="clear"></div></div>
+                        <div class="article-meta"></div>
+                        <div class="article-meta vcard author"><span class="fn">by <a href="https://www.facilcloud.com/noticias/author/alida-vergara/" title="Entradas de Alida Vergara" rel="author">Alida Vergara</a></span></div>
+                        <div class="article-meta updated">3 años  ago</div>
+                        <div class="article-meta">In <a href="https://www.facilcloud.com/noticias/category/elastic-cloud/" rel="category tag">Elastic Cloud</a></div>
+                        <div class="clear"></div>
+                    </div><div class="clear"></div>
+
+                    <div class="entry">
+                        
+                        <!-- entry content -->
+                        <p>SQL es un sistema de gestión de bases de datos relacional, multihilo y multiusuario con más de seis millones de instalaciones; usado por muchos sitios web grandes y populares, como Wikipedia, Google (no para búsquedas), Facebook, Twitter, Flickr, y YouTube.</p>
+<p>La diferencia conceptual entre SQL y NoSQL, es que resuelven escenarios completamente diferentes y excluyentes el uno del otro; ya que para lo que resulta ideal SQL, no lo es NoSQL y al revés.</p>
+<p>&nbsp;</p>
+<p><strong>Diferencias:</strong></p>
+<ul>
+<li>SQL permite combinar de forma eficiente diferentes tablas para extraer información relacionada, mientras que NoSQL no lo permite o muy limitadamente.</li>
+<li>NoSQL permite distribuir grandes cantidades de información; mientras que SQL facilita distribuir bases de datos relacionales.</li>
+<li>SQL permite gestionar los datos junto con las relaciones existentes entre ellos; en NoSQL no existe este tipo de utilidades.</li>
+<li>NoSQL permite un escalado horizontal sin problemas &#8211; por su capacidad de distribución-; mientras que escalar SQL resulta más complicado.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>ANALOGÍA DIDÁCT<a href="http://www.facilcloud.com/es/index.php"><img class=" size-thumbnail wp-image-1287 alignleft" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-150x150.jpg" class='wp-img-bg-off' rel='mygallery' alt="SQL vs NoSQL: ¿Cuál debo usar?" width="150" height="150" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-150x150.jpg 150w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-300x300.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-235x235.jpg 235w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-80x80.jpg 80w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04-151x151.jpg 151w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-04.jpg 301w" sizes="(max-width: 150px) 100vw, 150px" /></a>ICA</strong></p>
+<p>Las bases de datos SQL asemejan a la transmisión automática en los vehículos, y las NoSQL, a la manual. Una vez que se cambia a NoSQL, el usuario en el responsable de una gran cantidad de trabajo que en SQL, el sistema se encargaría de forma automática.</p>
+<p>Asimismo, las bases de datos NoSQL permiten ganar más rendimiento del sistema mediante la eliminación de una gran cantidad de comprobaciones de integridad, realizado por bases de datos relacionales, a partir del nivel de base de datos. Aquí esto se compara a que, empleando transmisión manual, el usuario puede sacar más rendimiento fuera del vehículo, frente a la automática.</p>
+<p>Sin embargo, una de las más grandes ventajas de SQL es que, al igual que la mayoría de los usuarios de vehículos de transmisión automática; la mayoría de los sitios web, requieren más rapidez y menos experiencia.</p>
+<p>&nbsp;</p>
+<p><strong>¿CUÁNDO USAR SQL?</strong></p>
+<p><a href="http://www.facilcloud.com/es/index.php"><img class="alignright size-thumbnail wp-image-1285" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-150x150.jpg" class='wp-img-bg-off' rel='mygallery' alt="SQL vs NoSQL: ¿Cuál debo usar?" width="150" height="150" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-150x150.jpg 150w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-300x300.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-235x235.jpg 235w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-80x80.jpg 80w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02-151x151.jpg 151w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-02.jpg 625w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+<p>No existe una respuesta concreta, porque se presume que cualquier cosa que se deba guardar, debe ser en una base de datos relacional. Sin embargo los programadores podrían sugerir que en gaming o desarrollos de animación, no sería necesario.</p>
+<p>En la mayoría de las opiniones, una base de datos relacional puede ser usada los siguientes ámbitos:</p>
+<ul>
+<li>Educación: para estructurar información, y aportar conocimiento lógico al estudiante.</li>
+<li>Desarrollos web: para mantener jerarquía de datos, siempre y cuando la capacidad de concurrencia, almacenamiento y mantenimiento no sean de considerable dificultad y la información sea consistente.</li>
+<li>Negocios: inteligencia y análisis de negocios, son temas que requieren el uso de SQL para facilitar el consumo de la información y la identificación de patrones en los datos.</li>
+<li>Empresarial: porque tanto el software a la medida y el software empresarial, poseen la característica de mantener información con estructura consistente.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>¿CUÁNDO USAR NOSQL?</strong><img class="alignright size-thumbnail wp-image-1286" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-150x150.jpg" alt="SQL vs. NoSQL: Which one should I use?" width="150" height="150" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-150x150.jpg 150w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-300x300.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-235x235.jpg 235w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-80x80.jpg 80w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03-151x151.jpg 151w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Bases-de-datos-03.jpg 625w" sizes="(max-width: 150px) 100vw, 150px" /></p>
+<p>Básicamente se utilizan en:</p>
+<ul>
+<li>Redes sociales: casi obligatorio.</li>
+<li>Desarrollo Web: debido a la poca uniformidad de la información que se encuentra en Internet; aun cuando también puede emplearse SQL.</li>
+<li>Desarrollo Móvil: debido a la tendencia – en crecimiento- de Bring Your Own Device.</li>
+<li>BigData: debido a la administración de grandísimas cantidades de información y su evidente heterogeneida.</li>
+<li>Cloud (XaaS): “Everything as a service”; NoSQL puede adaptarse casi a cualquier necesidad del cliente, y sus particularidades.</li>
+</ul>
+<p><a href="https://www.facilcloud.com/es/9pdc.php"><img class="aligncenter size-full wp-image-1249" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/banners-en-todas-las-medidas_728x901.jpg" class='wp-img-bg-off' rel='mygallery' alt="SQL vs NoSQL: ¿Cuál debo usar?" width="728" height="90" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/banners-en-todas-las-medidas_728x901.jpg 728w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/banners-en-todas-las-medidas_728x901-300x37.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/banners-en-todas-las-medidas_728x901-235x29.jpg 235w" sizes="(max-width: 728px) 100vw, 728px" /></a></p>
+<p>Por defecto, <span style="text-decoration: underline; color: #800080;"><span style="text-decoration: underline;"><a style="color: #800080; text-decoration: underline;" href="http://www.facilcloud.com/es/index.php" target="_blank">Facilcloud</a></span></span> distribuye la edición Express del sistema de gestión de base de datos relacional, desarrollado por Microsoft, Microsoft SQL, la cual tiene algunas pequeñas limitaciones, pero son completamente gratis. Una vez se conecta el nodo remoto requerido, se ejecuta la herramienta del SQL Server Management Studio, utilizando el correspondiente atajo dentro de la carpeta en el escritorio.</p>
+<p>Adicional, en la nube elástica de <span style="text-decoration: underline;"><span style="color: #800080;"><a style="color: #800080; text-decoration: underline;" href="http://www.facilcloud.com/es/index.php" target="_blank">Facilcloud</a></span></span> podrás seleccionar el tipo de base de dato que desees, en las opciones para SQL se encuentran MSSQL 2012, MariaDB, MySql, Perconadb y PostgreSQL; entre las bases de datos NoSQL se encuentran Cassandra, CouchDB, MongoDB, Neo4j, OrientDB y Redis.</p>
+<p>&nbsp;</p>
+<p><a href="http://www.facilcloud.com/es/index.php"><img class="aligncenter wp-image-1195 size-large" src="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-1024x126.jpg" class='wp-img-bg-off' rel='mygallery' alt="SQL vs NoSQL: ¿Cuál debo usar?" width="755" height="93" srcset="https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-1024x126.jpg 1024w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-300x37.jpg 300w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-768x95.jpg 768w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-235x29.jpg 235w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06-755x93.jpg 755w, https://facilcloud.com/noticias/wp-content/uploads/2015/10/Formato-de-biografia-06.jpg 1517w" sizes="(max-width: 755px) 100vw, 755px" /></a></p>
+                                                <div class="clear"></div>
+
+                        <!-- tags -->
+                                                <div class="simplebtn smallbtn red-entry"><a href="https://www.facilcloud.com/noticias/tag/cassandra/" rel="tag">Cassandra</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/cloud-server/" rel="tag">cloud server</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/couchdb/" rel="tag">CouchDB</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/mariadb/" rel="tag">MariaDB</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/mongodb/" rel="tag">MongoDB</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/mysql/" rel="tag">MySQL</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/nube-elastica/" rel="tag">nube elástica</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/programadores/" rel="tag">programadores</a> &middot; <a href="https://www.facilcloud.com/noticias/tag/redis/" rel="tag">Redis</a></div>
+                        <div class="clear"></div>
+                        
+                        <!-- social share icons -->
+                        <div class="clear"></div>
+                        <div class="single-share">
+                            <div class="sleft">    
+                            <div class="g-plusone" data-size="medium"></div>
+                            <script type="text/javascript">(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.type="text/javascript";a.async=true;a.src="https://apis.google.com/js/plusone.js";b.parentNode.insertBefore(a,b)})();</script>
+                            </div>
+                            <div class="sleft">
+                            <a href='https://twitter.com/share' class="twitter-share-button">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.async=true;js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            </div>
+                            <div class="sleft" style="margin: -2px 0 0 10px;">
+                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="arial"></div>
+                            <script>(function(e,a,f){var c,b=e.getElementsByTagName(a)[0];if(e.getElementById(f)){return}c=e.createElement(a);c.id=f;c.async=true;c.src="//connect.facebook.net/es_ES/all.js#xfbml=1";b.parentNode.insertBefore(c,b)}(document,"script","facebook-jssdk"));</script>
+                            </div>
+                            <!--div class="sleft" style="margin: -10px 0 0 30px;">
+                            <su:badge layout="2"></su:badge>
+                            <script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=("https:"==document.location.protocol?"https:":"http:")+"//platform.stumbleupon.com/1/widgets.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+                            </div-->
+                            <!--div class="sleft" style="margin: 1px 0 0 30px;">
+                            <a href="//bufferapp.com/add" class="buffer-add-button" data-count="horizontal">Buffer</a>
+                            <script type="text/javascript" src="https://static.bufferapp.com/js/button.js"></script>
+                            </div-->
+                            <div class="sleft" style="margin: 0 0 0 10px;">
+                            <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+                            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+                            </div>
+                            <div class="sleft" style="margin: 0 0 0 10px;">
+                            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share"></script>
+                            </div>                             
+                        </div><!-- end #single-share -->
+                        <div class="clear"></div>                        
+                    </div><!-- end .entry --><div class="clear"></div> 
+            </div><!-- end #post -->
+                    </article>
+        
+        <!-- author -->
+         <hr /> 
+        <!-- Prev and Next articles -->
+        <div class="prev-articles">
+            <div class="one_half" style="text-align: right;">Previous Article  <br /><h2><a href="https://www.facilcloud.com/noticias/10-ventajas-del-reseller-hosting/" rel="prev">10 ventajas del RESELLER HOSTING</a> </h2></div> 
+            <div class="one_half_last">Next Article <br /> <h2> <a href="https://www.facilcloud.com/noticias/25-aplicaciones-que-te-liberaran-de-la-oficina-y-del-horario-123/" rel="next">25 aplicaciones que te liberarán de la oficina y del horario</a></h2></div><div class="clear"></div> 
+        <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="entry-bottom">
+                        
+            
+            <!-- Comments -->
+            <div class="comments">
+                
+
+ 
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"><div class"clear"></div><span>Leave a Comment</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/noticias/sql-vs-nosql-which-one-should-i-use/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://www.facilcloud.com/noticias/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p>
+            <div class="one_full_c">
+               <label for="comment">Comment:<span>*</span></label>
+               <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>     
+            </div>
+            <div class="one_half_c">
+             <label for="author">Name:<span>*</span></label> 
+             <input id="author" name="author" type="text" value="" size="30"  aria-required='true' />
+            </div>
+
+            <div class="one_half_last_c">
+             <label for="email">Email:<span>*</span></label> 
+             <input id="email" name="email" type="text" value="" size="30"  aria-required='true' />
+            </div>
+<p class="form-submit"><input name="submit" type="submit" id="sendemail" class="submit" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='1294' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="65d6c8093a" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="166"/></p>			</form>
+			</div><!-- #respond -->
+	            </div>
+            <div class="clear"></div>
+        </div><!-- end .entry-bottom -->
+
+    </div><!-- end #main content -->
+
+
+    <!-- Begin Sidebar (right) -->
+    <aside class="sidebar">
+<div class="widget widget_text">			<div class="textwidget"><a href="http://www.facilcloud.com/es/elastic-cloud.php"><img src="https://facilcloud.com/noticias/wp-content/uploads/2015/07/Banners-facilcloudV02_120-x-600.jpg"/></a></div>
+		</div><div class="widget widget_search"><form id="searchform2" class="header-search" method="get" action="https://www.facilcloud.com/noticias/">
+    <input placeholder="Live Search ..." type="text" name="s" id="s" />
+    <input type="submit" value="Search" class="buttonicon" />
+</form>
+</div></aside>
+    <!-- end #sidebar  (right) -->    
+
+
+    <div class="clear"></div>
+</section><!-- end .wrap -->
+
+ 
+<!-- Popular Words -->
+<div class="sub-navigation-footer">
+    <div class="wrap">
+            <!-- popular words -->
+            <div class="popular-words">
+                <strong>Popular tags:</strong> <a href="https://www.facilcloud.com/noticias/tag/america/" class="tag-cloud-link tag-link-335 tag-link-position-1" style="font-size: 8pt;" aria-label="america (56 elementos)">america</a>
+<a href="https://www.facilcloud.com/noticias/tag/cloud/" class="tag-cloud-link tag-link-16 tag-link-position-2" style="font-size: 13.04pt;" aria-label="cloud (69 elementos)">cloud</a>
+<a href="https://www.facilcloud.com/noticias/tag/cloud-server/" class="tag-cloud-link tag-link-17 tag-link-position-3" style="font-size: 15.84pt;" aria-label="cloud server (79 elementos)">cloud server</a>
+<a href="https://www.facilcloud.com/noticias/tag/developers/" class="tag-cloud-link tag-link-733 tag-link-position-4" style="font-size: 8.56pt;" aria-label="developers (58 elementos)">developers</a>
+<a href="https://www.facilcloud.com/noticias/tag/elastic-cloud/" class="tag-cloud-link tag-link-6 tag-link-position-5" style="font-size: 18.08pt;" aria-label="Elastic cloud (86 elementos)">Elastic cloud</a>
+<a href="https://www.facilcloud.com/noticias/tag/facilcloud/" class="tag-cloud-link tag-link-173 tag-link-position-6" style="font-size: 22pt;" aria-label="facilcloud (101 elementos)">facilcloud</a>
+<a href="https://www.facilcloud.com/noticias/tag/nube-elastica/" class="tag-cloud-link tag-link-7 tag-link-position-7" style="font-size: 19.2pt;" aria-label="nube elástica (91 elementos)">nube elástica</a>
+<a href="https://www.facilcloud.com/noticias/tag/programadores/" class="tag-cloud-link tag-link-100 tag-link-position-8" style="font-size: 11.92pt;" aria-label="programadores (67 elementos)">programadores</a>
+<a href="https://www.facilcloud.com/noticias/tag/tecnologia/" class="tag-cloud-link tag-link-35 tag-link-position-9" style="font-size: 13.04pt;" aria-label="tecnología (70 elementos)">tecnología</a>
+<a href="https://www.facilcloud.com/noticias/tag/web/" class="tag-cloud-link tag-link-263 tag-link-position-10" style="font-size: 12.48pt;" aria-label="web (68 elementos)">web</a>            </div>
+    </div><!-- end .wrap -->
+</div> 
+ 
+<!-- Begin Footer -->
+<footer>   
+  <div class="wrap">
+
+        
+        
+        
+        <div class="one_fourth">
+            <!-- #1st footer -->
+        </div>
+        <div class="one_fourth">
+            <!-- #2nd footer -->
+        </div>
+        <div class="one_fourth">
+            <!-- #3rd footer -->
+        </div>
+        <div class="one_fourth_last">
+            <!-- #4th footer -->
+        </div><div class="clear"></div>
+
+        <div class="clear"></div>
+        <div class="copyright">
+            <p>Facilcloud Copyright © 2018</p>
+        </div>
+
+  </div><!-- end .wrap -->
+</footer><!-- end #footer -->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var jquerycssmenu={fadesettings:{overduration:0,outduration:100},buildmenu:function(b,a){jQuery(document).ready(function(e){var c=e("#"+b+">ul");var d=c.find("ul").parent();d.each(function(g){var h=e(this);var f=e(this).find("ul:eq(0)");this._dimensions={w:this.offsetWidth,h:this.offsetHeight,subulw:f.outerWidth(),subulh:f.outerHeight()};this.istopheader=h.parents("ul").length==1?true:false;f.css({top:this.istopheader?this._dimensions.h+"px":0});h.children("a:eq(0)").css(this.istopheader?{paddingRight:a.down[2]}:{}).append('<img src="'+(this.istopheader?a.down[1]:a.right[1])+'" class="'+(this.istopheader?a.down[0]:a.right[0])+'" style="border:0;" />');h.hover(function(j){var i=e(this).children("ul:eq(0)");this._offsets={left:e(this).offset().left,top:e(this).offset().top};var k=this.istopheader?0:this._dimensions.w;k=(this._offsets.left+k+this._dimensions.subulw>e(window).width())?(this.istopheader?-this._dimensions.subulw+this._dimensions.w:-this._dimensions.w):k;i.css({left:k+"px"}).fadeIn(jquerycssmenu.fadesettings.overduration)},function(i){e(this).children("ul:eq(0)").fadeOut(jquerycssmenu.fadesettings.outduration)})});c.find("ul").css({display:"none",visibility:"visible"})})}};
+var arrowimages={down:['downarrowclass', 'https://facilcloud.com/noticias/wp-content/themes/boutique-wp/images/menu/arrow-down.png'], 
+right:['rightarrowclass', 'https://facilcloud.com/noticias/wp-content/themes/boutique-wp/images/menu/arrow-right.png']}
+jquerycssmenu.buildmenu("myjquerymenu", arrowimages);
+</script><!-- menu arrows -->
+
+    <script>
+	jQuery(window).load(function(e) {
+        jQuery(".subscribebox_1").fadeIn();
+    });
+	jQuery(document).ready(function(){
+		 jQuery(".close_1").click(function(e){
+			 e.preventDefault();
+			
+			jQuery(".subscribebox_1").fadeOut();
+						//jQuery(".subscribebox_1").fadeOut();
+						
+		
+		});
+	});
+	</script>
+<style>
+.error
+	{
+		color: #c00909;
+	}
+#main-div {
+  height: 100vh;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999999;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0px 15px;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.subscribe_lightbox_pop .newsLetter {
+    padding-top: 60px;
+    padding-bottom: 60px;
+	width:100%;
+	max-width:760px;
+    background-color: #fff;
+    background-image: url(https://www.facilcloud.com/es/img/background-popup.svg);
+	background-size:cover;
+	margin:0 auto;
+	position: relative;
+	margin-top:50px;
+	border-radius:px;
+	box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.subscribe_lightbox_pop .news-box {
+    overflow-y: auto;
+    max-height: 80vh;
+}
+.subscribe_lightbox_pop .newsLetter h1{
+    margin-bottom: 20px;
+	color:#404040;
+	font-weight: lighter;
+	font-size: 28px;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 35px;
+}
+.subscribe_lightbox_pop .newsLetter p{
+	text-align:center;
+	line-height: 28px;
+	color: #a11c53 !important;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+.subscribe_lightbox_pop .ribbon{
+	background:url() no-repeat;
+	position:absolute;
+	top: -8px;
+	left: -8px;
+}
+.subscribe_lightbox_pop .heading_txt{
+	padding:0 8%;
+}
+.subscribe_lightbox_pop .privacyTxt{
+	padding: 35px;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+.subscribe_lightbox_pop .privacyTxt a{
+	text-decoration:underline;
+	font-size:14px;
+	color:#404040;
+	padding:15px;
+	margin: auto;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+}
+
+.subscribe_lightbox_pop .email-textbox {
+    font-family: 'Open Sans', sans-serif !important;
+    background: #fafafa !important;
+    color: #808080 !important;
+    padding: 20px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    border: 1px solid #ddd !important;
+    font-weight: 100;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+}
+.subscribe_lightbox_pop .subscribeFourbutton {
+    font-family: 'Open Sans', sans-serif !important;
+    margin-left: 25%;
+    background: #faaf3c !important;
+    color: #fff !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase !important;
+    border: none !important;
+    font-weight: bold !important;
+    letter-spacing: 2px !important;
+    font-size: 16px !important;
+    width: 50%;
+    cursor: pointer;
+    transition: all .25s;
+}
+    
+.subscribe_lightbox_pop .subscribeFourbutton:hover {
+    background: #a11c53 !important;
+}
+    
+.subscribe_lightbox_pop #close-button {
+  position: absolute;  
+  width: 35px;
+  height: 35px;
+  opacity: 1;
+  margin-top: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.subscribe_lightbox_pop #close-button:before, .subscribe_lightbox_pop #close-button:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 30px;
+  width: 2px;
+  background-color: #333;
+}
+.subscribe_lightbox_pop #close-button:before {
+  transform: rotate(45deg);
+}
+.subscribe_lightbox_pop #close-button:after {
+  transform: rotate(-45deg);
+}
+.subscribe_lightbox_pop form{padding: 0px 50px;}
+.subscribe_lightbox_pop .error_container { width: 100%; text-align:center;} 
+.subscribe_lightbox_pop .subscribe-box-afteractionmessage {color:#060;}
+.subscribe_lightbox_pop .terms-box {
+    width: 100%;
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+.error_container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+	color:red;
+}
+@media only screen and (max-width:767px){
+.subscribe_lightbox_pop .newsLetter {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+    
+.subscribe_lightbox_pop .newsLetter h1 {
+	font-size: 24px;
+	line-height: 34px;
+}
+.subscribe_lightbox_pop .subscribeFourbutton {
+    margin-left: 0;
+	padding: 20px 5px !important;
+	width: 100%;
+}
+.subscribe_lightbox_pop .email-textbox {
+	width: 100% !important;
+}
+.subscribe_lightbox_pop form {
+	padding: 5px 5px;
+}
+.subscribe_lightbox_pop .heading_txt {
+	padding: 0 5%;
+}
+.subscribe_lightbox_pop .newsLetter p {
+	line-height: 22px;
+	font-size: 15px;
+}
+}
+@media only screen and (max-width:374px){
+	.subscribe_lightbox_pop .newsLetter h1 {
+	font-size: 20px;
+	line-height: 30px;
+}
+}
+
+</style>
+<style>
+.subscribe_lightbox_pop #close-button {
+    right: 2px;
+    top:2px;
+}
+.subscribe_lightbox_pop #close-button:before, .subscribe_lightbox_pop #close-button:after {
+    height: 20px;
+   }
+
+</style>
+    		<div id="main-div" class="subscribe_lightbox_pop subscribebox_1" style="display: none;">
+            	<div class="newsLetter">
+                <div class="news-box">
+								
+								                <div class="heading_txt">
+                	<h1 style="color:dd3333"> ¿Iniciando con WordPress Hosting?</h1>
+				                     <a id="close-button" class="close_1"></a>
+					                     <p style="color:#333">DESCARGA NUESTRO EBOOK GRATIS Y CREA TU E-COMMERCE CON EL MANEJADOR DE CONTENIDOS #1 DE INTERNET</p>
+					                      </div> <!--heading_txt-->
+                     <div class="error_container">                     
+                     <span class="error" id="error_1"></span> 
+                     <span class="subscribe-box-afteractionmessage"></span>
+                     </div> 
+	 <form class="subscribe-box-form" name="nl_1" id="nl_1">
+            
+             <input id="txtEmail" class="email-textbox  subscribe-box-email validate_1 email_validate_1 custom-input" name="EMAIL" placeholder="Email" type="email" required onpaste="return false">
+			
+			 <!-- Name -->
+				<input id="txtNombre" class="email-textbox subscribe-box-email validate_1 custom-input" name="NAME" placeholder="Nombre" type="text" required onpaste="return false" onkeypress="return onlyText(event)">
+			
+		<!-- First Name -->
+			
+		<!-- Last Name -->
+				
+		<!-- Phone -->
+			
+	<!-- company -->
+		
+	<!-- zip -->
+		<!-- msg -->
+	 
+	<div class="terms-box">
+	
+	<!-- terms -->
+		</div>
+	
+              <button class="subscribe-box-action subscribeFourbutton" name="subscribe-box-action" id="subscribe-box-action-1" type="button" onclick="contenidoPremium()">Descargar PDF</button>
+              
+             </form>
+			 
+			 
+			     		    			<style>
+		.subscribe_lightbox_pop .email-textbox {
+			//max-width: 300px;
+			//float: left;
+		}
+		 .subscribe_lightbox_pop .subscribeFourbutton{   
+     		 //max-width: 180px;
+			//display: block;
+			//margin: auto;
+			}
+			.subscribe_lightbox_pop .subscribeFourbutton {//margin: 10px auto;//max-width: 180px;//display: block;
+}
+		</style>
+		              </div>
+				</div>				
+                
+            <div class="clear"></div>
+            </div>
+            <script>
+	jQuery(document).ready(function() {
+
+		jQuery( ".custom-input" ).each(function( i ) {
+		if(parseInt(i)==2 ||parseInt(i)==4 ||parseInt(i)==6){
+			  jQuery('.custom-input:last').addClass("box-center");
+		  } 
+		});
+		
+		
+		var ajax_url = "https://www.facilcloud.com/noticias/wp-admin/admin-ajax.php";
+		jQuery('#subscribe-box-action-1').click(function(e) {
+			e.preventDefault();
+			var go_ahead = true; 
+			var required = false;
+			jQuery(".validate_1").each(function() { 
+			var val = jQuery(this).val();
+			 if(val == '')
+			 {
+				go_ahead = false; 
+				required = true;
+			 }
+			 else
+			 {
+				go_ahead = true; 
+				required = false;
+			 }
+			});
+			if(required)
+			{
+				jQuery('#error_1').text('Todos los campos son requeridos');
+			}
+			else if(!ValidateEmail1(jQuery('.email_validate_1').val()))
+			{
+				jQuery('#error_1').text('La dirección de correo es incorrecta');
+				go_ahead = false; 
+			}
+			else if(jQuery('#term_1').length)
+			{
+				if(!jQuery('#term_1').is(':checked'))
+				{
+					jQuery('#error_terms_1').html('<p>Desea aceptar nuestros términos de servicio.</p>');
+					go_ahead = false; 
+				}
+			}
+			else
+			{
+				jQuery('#error_terms_1').text('');
+				jQuery('#error_1').text('');
+				
+			}
+			if(go_ahead) 
+			{
+				var data = {
+					'action': 'save_newsletter',
+					'nl_id': '1',
+					'nl_name': 'Newsletter Facilcloud',
+					'nl_data': jQuery("#nl_1").serialize()
+				};
+				// We can also pass the url value separately from ajaxurl for front end AJAX implementations
+				jQuery.post(ajax_url, data, function(response) {
+				var obj = jQuery.parseJSON(response);
+				var action = obj.action;
+				if(action == 'close')
+				{
+				   jQuery(".subscribebox_1").hide();
+				}
+				else if(action == 'redirect')
+				{
+					var redirect = obj.redirect;
+					window.location.href = redirect;
+				}
+				else if(action == 'display')
+				{
+					var redirect = obj.redirect;
+					jQuery('.subscribe-box-afteractionmessage').show().text(redirect);
+					jQuery(".validate_1").each(function() { 
+					var val = jQuery(this).val('');
+					});
+				 }
+				}); 
+			}
+			});
+	});
+	function ValidateEmail1(email) {
+			var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+			return expr.test(email);
+	};
+	
+                
+    // Validar formulario y abrir nuevo tab en el navegador para mostrar contenido al suscriptor
+    function contenidoPremium() {
+        $txtEmail = document.getElementById('txtEmail').value;
+        $txtNombre = document.getElementById('txtNombre').value;
+        
+        var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        
+        $url = 'https://www.facilcloud.com/es/manuales/ecommerce-wordpress.pdf'; // URL a mostrar al suscriptor
+        
+        if (($txtEmail.length == 0) || ($txtNombre.length == 0)) {     
+            console.log('Uno o varios campos se encuentran vacíos');            
+        
+        } else if (!expr.test($txtEmail)) {
+            console.log('dirección de correo inválida');            
+            
+        } else {
+            //alert('Gracias por suscribirte, semanalmente enviaremos a tu correo contenido exclusivo');
+            window.open($url, '_blank');
+        }       
+    }
+                
+    // Validar solo numero
+    function onlyNumber(e) {
+        var key = window.Event ? e.which : e.keyCode;
+        return (key >= 48 && key <= 57);
+    }
+                
+    // Validar solo letras
+    function onlyText(e) {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = "8-37-39-46";
+
+        tecla_especial = false;
+
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+            return false;
+        }
+    }
+	</script>
+<script type='text/javascript' src='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/js/custom.js?ver=4.8.7'></script>
+<script type='text/javascript' src='https://www.facilcloud.com/noticias/wp-includes/js/comment-reply.min.js?ver=4.8.7'></script>
+<script type='text/javascript' src='https://facilcloud.com/noticias/wp-content/themes/boutique-wp/fancybox/jquery.fancybox-1.3.4.pack.js?ver=4.8.7'></script>
+<script type='text/javascript' src='https://www.facilcloud.com/noticias/wp-includes/js/wp-embed.min.js?ver=4.8.7'></script>
+<script async="async" type='text/javascript' src='https://facilcloud.com/noticias/wp-content/plugins/akismet/_inc/form.js?ver=4.0.8'></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-360785-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+  
+
+
+  (function() {
+    window._pa = window._pa || {};
+    // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+    // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.marinsm.com/serve/57e99b2e9ea04967e90000ce.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,1965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="es" lang="es">
+<head>
+	<title>Desarrollando una aplicación para el iPhone</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name='robots' content='noodp' />
+	<meta name="description" content="Por todos es sabido que el desarrollo de aplicaciones para el iPhone no está siendo un camino de rosas para todo el mundo por culpa de la cerrada pol..." />
+
+	<link rel="image_src" href="http://img.applesfera.com/resize/75/thumbnails/b/13760.jpg" />
+
+
+	    <meta property="fb:admins" content="100000716994885"/>
+    <link rel="apple-touch-icon" href="http://img.applesfera.com/lp2/mobile/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.ico" type="image/ico" />
+    <link rel="stylesheet"  href="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/main.css?v=12466"  type="text/css" media="screen,projection" />
+    <link rel="publisher" href="https://plus.google.com/110873212357764477425" />
+	<script type="text/javascript">
+		var fbapikey = "357292918076";
+		var ord=Math.random()*10000000000000000;
+		window.google_analytics_uacct = "UA-78515-40";
+		var MAX_zones = { 'CAB': 1731,'CP': 1732,'LAT': 1733,'B1': 1734 };
+		var MAX_source = 'interior';
+		var MAX_mnemonic = "APS";
+		var MAX_cats = "cat=apple;cat=aplicaciones;cat=profesional;cat=iphone;";
+		var MAX_tags = "tag=desarrolladores-de-apple;tag=xcode;tag=sdk;tag=dev-center;";
+		var MAX_index = "";
+		var MAX_dfp = "1";
+		var MAX_sb = 1;
+                var smartClip = "technology";
+		var MAX_Origin = 'googlesearch';
+
+
+		var MAX_country = '';
+
+
+
+	</script>
+<link rel="alternate" type="application/rss+xml" title="Applesfera - todas las noticias" href="/index.xml" />
+</head>
+
+
+<body class="tabbed ">
+  <!-- Apple. Applesfera --> 
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+<script type="text/javascript" src="http://img.weblogssl.com/js/wsl-3568b9d-es_ES.js">
+</script>
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-9977500652563564");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddAttr("origin", MAX_Origin);
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-CLB");
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-VIN-interior");
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-BOT");
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-CAB");
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-CEN");
+GA_googleAddSlot("ca-pub-9977500652563564", "APS-LAT");
+GA_googleFetchAds();
+</script>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+$(function()
+  {
+    window.fbAsyncInit = function() {
+      WSL.fbAsyncInit('357292918076');
+    };
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol +
+      '//connect.facebook.net/es_ES/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+    (function() {
+      var e = document.createElement('script'); e.type="text/javascript"; e.async = true; 
+      e.src = 'http://platform.twitter.com/widgets.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(e);
+      $(e).load(function() {
+         WSL.initTwitter();
+      });
+    }());
+
+    window.___gcfg = {lang: 'es'};
+
+    (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  }
+);
+</script>
+
+
+
+    <div id="body" class="v2">
+  
+            <div id="content">
+                    <div id="nav-tabs">
+    <ul>
+                                    <li id="tab-portada">
+                    <a href="http://www.applesfera.com" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'portada')" class=" off" >
+                        <span>Portada</span>
+                    </a>
+                </li>
+                                                <li id="tab-lomejor">
+                    <a href="/lomejor" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'lomejor')" class=" off" >
+                        <span>Lo Mejor</span>
+                    </a>
+                </li>
+                                                <li id="tab-productos">
+                    <a href="/productos" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'productos')" class=" off" >
+                        <span>Productos</span>
+                    </a>
+                </li>
+                                                <li id="tab-foros">
+                    <a href="/respuestas" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'respuestas')" class=" off" >
+                        <span>Respuestas</span>
+                    </a>
+                </li>
+                                                <li id="tab-comunidad">
+                    <a href="/comunidad" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'comunidad')" class=" off" >
+                        <span>Comunidad</span>
+                    </a>
+                </li>
+                                                <li id="tab-club">
+                    <a href="/club" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-toptabs', 'club')" class=" off" >
+                        <span>Club</span>
+                    </a>
+                </li>
+                                                                </ul>
+</div>
+
+                        <div class="post post-single">
+  <div id="links-ad">
+    <script type='text/javascript'>
+      GA_googleFillSlot("APS-VIN-interior");
+    </script>
+  </div>
+  	   
+    <p class="post-category">
+                	            <a id="2" href="/categoria/apple" title="Todos los articulos de la categoria Apple" rel="category tag" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'mas-noticias')">Apple</a>
+                             	                 	                 	             </p>
+    <!-- .post-category -->
+        <h1>Desarrollando una aplicación para el iPhone<input type="hidden" value="13760" id="hpostid"></input></h1>
+    <!--
+    rdf:RDF xmlns="http://web.resource.org/cc/"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="/consolas-y-videojuegos/vudu-mejora-su-interfaz-antes-del-salto-a-la-sony-ps3">
+    <dc:title>Vudu mejora su interfaz antes del salto a la Sony PS3</dc:title>
+    <dc:creator>Javier Penalva</dc:creator>
+    <trackback:ping>http://www.xataka.com/"</trackback:ping>
+    <license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/1.0/" />
+    </Work>
+    <License rdf:about="http://creativecommons.org/licenses/by-nc-nd/1.0/">
+    </License>
+    </rdf:RDF>
+    -->
+    <p class="post-comments">
+        <a href="#to-comments" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-ver-dejar-comentarios', 'link-cabecera-articulo')"><span id="comment-count">16</span> comentarios</a>
+    </p>
+    <!-- .post-comments -->
+    
+    <p class="post-author">
+                        <a href="/autor/miguel-michan" >
+                <img src="http://www.gravatar.com/avatar/437cddd399f50ed2f7955755ce1facb3?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="avatar" />
+            </a>
+            
+            <a href="/autor/miguel-michan" title="Artículos de Miguel Michán" >Miguel Michán</a>        
+        	&nbsp;
+        	<span class="fecha"> 8 de octubre de 2008 | 00:57</span>
+    </p>
+    <!-- .post-author -->
+    
+    <div id="warn-login-post-vote-facebook" class="facebook" style="display:none">
+        <p class="aviso">Para votar este post conéctate con Facebook 
+            <fb:login-button v="2" size="medium" scope="email" onlogin="WSL.fbRedirect('')">Connect</fb:login-button>
+        </p>
+    </div>
+    
+    <div class="post-body">
+			<p><img src="http://img.applesfera.com/2008/10/devcenter.jpg" class="centro_sinmarco" /></p>
+
+	<p>Por todos es sabido que el desarrollo de aplicaciones para el iPhone <strong>no está siendo un camino de rosas para todo el mundo</strong> por culpa de la cerrada política de admisión de aplicaciones de Apple, los restrictivos acuerdos de confidencialidad que entorpecían hasta hace poco la difusión las comunidades de desarrolladores, o las carencias de un API con un buen número de funcionalidades capadas o no documentadas.</p>
+
+	<p>Sin embargo, rara vez hemos podido acceder a <strong>la historia completa</strong> por la que pasa un desarrollador cualquiera tratando de alcanzar la meta, es decir, ver publicada su aplicación en la <strong>App Store</strong>, y es por eso que me he lanzado a traducir (no de un modo literal, pero sí respetando lo fundamental) la odisea de <a href="http://www.mikeash.com/?page=pyblog/the-iphone-development-story.html">Mikeash</a>.</p>
+
+	<p>Antes de que sigáis leyendo, alertaros de que mi intención no es asustar a posibles desarrolladores del iPhone y el iPod touch, sino recalcar que <strong>Apple tiene</strong> mucho camino aún por delante, con <strong>muchas cosas que mejorar</strong> y muchas críticas que asumir. Allá vamos&#8230;</p>
+
+	<p>		</p>
+
+	<p>1. <strong>Inscribirse en el <a href="http://developer.apple.com/iphone/">iPhone Dev Center</a> y descargar el SDK</strong>. Por algún misterioso motivo, no basta con tener una cuenta del <a href="http://developer.apple.com/">Apple Developer Connection</a>, hay que volver a inscribirse en este otro y leer los clásicos textos legales. Haciendo esto podemos empezar a escribir nuestras aplicaciones, compilarlas y probarlas en el simulador (que no emulador) pero ni por asomo instalarlas en nuestro iPhone.<br />
+2. <strong>Inscribirse en el programa para desarrolladores</strong>. Después de rellenar más formularios y leer más porquería legal, enviamos la solicitud&#8230; que no obtiene respuesta hasta el siguiente día laboral. Como sabréis, tiene un coste de 99 dólares, y con él obtenemos el derecho a ejecutar nuestras aplicaciones en nuestro propio iPhone.<br />
+3. <strong>Certificados.</strong> Por defecto, un iPhone tan solo puede ejecutar aplicaciones firmadas por Apple y como no es plan de estar enviándoselas cada vez que queramos probar algo, es necesario crear un perfil con el identificador de nuestro teléfono (accesible mediante las Xcode) introduciéndolo en otro formulario de la web de Apple. Además, también necesitamos un certificado con el que firmar nuestras aplicaciones y, por supuesto, no vale uno cualquiera, tiene que hacerlo Apple. Arrancamos Acceso a Llaveros y en Asistente para Certificados generaremos uno nuevo que tendremos que introducir manualmente (copiando y pegando la sopa de letras resultante) en OTRO formulario de la página.<br />
+4. <strong>Peleando con Xcode</strong>. Si todo ha ido bien ya deberíais de poder experimentar con vuestras propias aplicaciones en el propio iPhone&#8230; si todo ha ido bien. Si no, os deseo toneladas de suerte para dar rápidamente con alguien con el mismo bizarro problema en el buscador y seguir sus pasos para resolverlo.<br />
+5. <strong>¡Desarrollar!</strong> Hasta no hace mucho, se prohibía a los desarrolladores hablar sobre el SDK, lo que dificultaba enormemente el desarrollo en si. Trabajar con cualquier plataforma nueva conlleva dificultades que habitualmente se resuelven en foros y grupos para desarrolladores. Por suerte, Apple ha aflojado el lazo y ahora no tendrás que andar reuniéndote de madrugada en algún callejón oscuro para intercambiar trozos de código.<br />
+6. <strong>¡Distribuir!</strong> Bueno, no tan rápido. Primero necesitas OTRO certificado especial de distribución que has de solicitar siguiendo el mismo proceso de antes. Acceso a llaveros, solicitar, aprobar, descargar e instalar. Pero no, la cosa no puede ser &#8220;tan fácil&#8221;. Como en el punto 3, también necesitamos hacer funcionar un nuevo perfil de distribución en Xcode; proceso sobre el que Apple facilita páginas y páginas de información con toda clase de capturas en las que se detalla el modo de reconfigurar el proyecto de Xcode para que utilice este certificado mágico de distribución. Síguelo todo al pie de la letra o lo que antes funcionaba ahora dejará de hacerlo.<br />
+7. <strong>Enviamos la aplicación a Apple</strong> rellenando un nuevo formulario web con información sobre esta (nombre, descripción, versión&#8230;), su icono y algunas capturas de pantalla. Por alguna razón, Apple no acepta archivos PNG para el icono o las capturas; no importa que la herramienta de captura de Mac OS X utilice ese formato por defecto&#8230; tenemos que enviarla en TIFF o JPEG. Si te olvidas de este detalle es probable que vayas a dar con alguna críptica pantalla de error y que cuando trates de volver atrás descubras que la sesión ha caducado y toda la información de los formularios se ha ido al cuerno. Vuelta a empezar.<br />
+8. <strong>Esperar y esperar.</strong> Una vez enviada, la aplicación pasa a la cola de revisión, sin que sepamos en ningún momento lo que se está haciendo, si se está haciendo, o cuanto queda para que termine de hacerse. Si tenemos la mala suerte de que nuestra aplicación no sea aceptada por el motivo que sea, por ejemplo, que a ellos no les funciona algo que a ti si, no obtienes demasiada ayuda al respecto&#8230; tan solo puedes hacer los cambios oportunos y volverla a enviar (este proceso si es muy sencillo, ya que se hace a través de un enlace con el que enviamos nuevas versiones de una misma aplicación). Si sigue habiendo problemas, tendrás que esperar una semana para saberlo y otra para ver si la solución que has dado resuelve satisfactoriamente el problema. Está muy bien que Apple se preocupe de que no se distribuyan aplicaciones con errores &#8220;evidentes&#8221; pero estaría mejor si el proceso no fuese tan desesperantemente lento.<br />
+9. <strong>¡¡La aplicación es aceptada!!</strong> Con suerte, desarrollar la aplicación te habrá llevado menos tiempo que lograr que aparezca publicada y ahora&#8230; a esperar hacerte de oro con los 10 millones de clientes potenciales a los que acabas de tener acceso.</p>
+
+	<p>Como veis, comparado con la simplicidad de desarrollar y distribuir aplicaciones para Mac, <strong>el programa de desarrollo del iPhone es increíblemente extraño y dificultoso</strong>... mucho más de lo que cabria esperar. ¿Escuchará la compañía de la manzana las voces de sus desarrolladores? Eso espero.</p>
+
+
+  		<div class="post-ratings rating-widgets">
+			<div id="p13760" class="wsl-likes">
+				<a href="#" class="button button-small" rel="nofollow"><span>me gusta</span></a>
+				<span class="likes" rel="nofollow"><strong>1</strong></span>				
+			</div>
+			<div id="warn-login-post-single-vote" style="display:none">
+	    	<span class="aviso">Para votar  <a href="/signup"><strong>identifícate o regístrate aquí</strong></a>.</span>
+			</div>		
+			<div class="google-plus">
+                              
+                    <g:plusone size="medium" href="http://www.applesfera.com/apple/desarrollando-una-aplicacion-para-el-iphone"></g:plusone>
+                            </div>
+			<div class="retweets">
+								
+					<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.applesfera.com/p/13760" data-text="Desarrollando una aplicación para el iPhone" data-counturl="http://www.applesfera.com/apple/desarrollando-una-aplicacion-para-el-iphone" data-via="applesfera" data-count="horizontal"></a>
+							</div>
+			<!-- .question-retweets -->
+			<div class="fb-likes">
+						
+				<fb:like notify="true" layout="button_count" show_faces="false" width="450" action="like" font="arial" colorscheme="light" height="35" href="http://www.applesfera.com/apple/desarrollando-una-aplicacion-para-el-iphone"></fb:like>
+							</div>
+		</div>
+    </div>
+ 	<div class="post-meta">
+ 		 		 		 		<div class="post-categories">
+        	<strong>Categorías: </strong>
+                	
+            <a rel="category tag" title="Todos los articulos de la categoria Apple" href="/categoria/apple" rel="category tag" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'mas-noticias')">Apple</a>,                         		 		        	
+            <a rel="category tag" title="Todos los articulos de la categoria Aplicaciones" href="/categoria/aplicaciones" rel="category tag" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'mas-noticias')">Aplicaciones</a>,                         		 		        	
+            <a rel="category tag" title="Todos los articulos de la categoria Profesional" href="/categoria/profesional" rel="category tag" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'mas-noticias')">Profesional</a>,                         		 		        	
+            <a rel="category tag" title="Todos los articulos de la categoria iPhone" href="/categoria/iphone" rel="category tag" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'mas-noticias')">iPhone</a>                                
+        </div>
+                         		<div class="post-tags">
+		    <strong>Tags: </strong>
+		    		    <a href="/tag/desarrolladores-de-apple" title="Busca para &laquo;Desarrolladores de Apple&raquo;" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'tags')">Desarrolladores de Apple</a>,		    		    <a href="/tag/xcode" title="Busca para &laquo;Xcode&raquo;" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'tags')">Xcode</a>,		    		    <a href="/tag/sdk" title="Busca para &laquo;SDK&raquo;" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'tags')">SDK</a>,		    		    <a href="/tag/dev-center" title="Busca para &laquo;Dev Center&raquo;" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'tags')">Dev Center</a>		           
+	    </div>
+	     <!-- .post-tags -->
+	    
+	        	            	                	    <div class="post-share">
+            <strong>Compartir</strong>
+    <ul id="share-list">
+    	    	<li id="share-mail"><a id="send-toggle" href="#" title="comparte en por email" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'enviar-por-email')"><span></span></a></li>
+    	          <li id="share-tw"><a href="#" title="comparte en Twitter" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>TW</a></li>
+  <li id="share-fb"><a href="#" title="comparte en Facebook" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>FB</a></li>
+  <li id="share-mn"><a href="#" title="comparte en Menéame" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>MN</a></li>
+  <li id="share-tt"><a href="#" title="comparte en Tuenti" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>TT</a></li>
+  <li id="share-bt"><a href="#" title="comparte en Bitácoras" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>BT</a></li>
+  <li id="share-diu"><a href="#" title="comparte en del.icio.us" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-footer-post', 'compatir')"><span></span>DIU</a></li>
+
+                    </ul>
+</div>
+    <div id="send-form" class="mform" style="display:none">
+        <p><label for="post-title" class="mblock">Título: <input id="post-title" type="text" class="text" disabled="disabled" size="64" value="Desarrollando una aplicación para el iPhone" /></label></p>
+        <p><label for="post-excerpt" class="mblock">Resumen: <textarea id="post-excerpt" class="text" disabled="disabled" rows="3" cols="50">Por todos es sabido que el desarrollo de aplicaciones para el iPhone no está siendo un camino de rosas para todo el mundo por culpa de la cerrada política de admisión de aplicaciones de Apple, los restrictivos acuerdos de confidencialidad que entorpecían hasta hace poco la difusión las comunidades de desarrolladores, o las carencias de un API con un buen número de funcionalidades capadas o no documentadas.</textarea></label></p>
+        <p><label for="sender-email" class="mblock required"><span class="required">*</span> Tu correo: <input type="text" id="useremail" size="64" class="text" value="" /></label>
+        <p class="error" id="useremail_error" style="display:none">Pon una dirección de correo electrónico válida, la necesitarás</p></p>
+        <p><label for="receiver-email" class="mblock required"><span class="required">*</span> Correo/s destino: <input type="text" id="destemail" class="text" size="64" />
+        <p id="destemail_error" class="error" style="display:none">Pon una dirección de correo electrónico válida, la necesitarás</p> 
+        <span class="mhelp">Puedes escribir más de una dirección de correo destino, separándolas por comas (,)</span></label></p>
+        <p><label for="send-copy"><input type="checkbox" id="send-copy" class="required" />Enviar una copia a tu correo </label></p>
+        <p><label for="message" class="mblock">Tu mensaje: <textarea id="message" class="text" rows="3" cols="50"></textarea></label></p>
+                <div id="recaptcha" style="display:none">
+            <script>var RecaptchaOptions = {theme :
+            'blackglass', lang:'es'};</script><script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6Lf-ogEAAAAAACmr7hNnO7QlorBdUGGEdnulOM_n"></script>
+
+	<noscript>
+  		<iframe src="http://api.recaptcha.net/noscript?k=6Lf-ogEAAAAAACmr7hNnO7QlorBdUGGEdnulOM_n" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript>
+            <p class="error" id="captcha_error" style="display:none">El texto de la imagen no es correcto. Por favor, inténtalo de nuevo</p>
+            <p id="send-message" class="aviso">Por favor, inserte el código que aparece en la imagen. Si la próxima vez quieres evitar este control, <strong><a href="/signup">logueate</a></strong> antes o, si todavia no esta registrado, <strong><a href="/signup">regístrate</a></strong></p>
+        </div>
+                <div class="submit-area">
+            <button id="sharemail" type="submit" class="button"><span><strong>Enviar</strong></span></button>
+        </div>
+    </div>
+    <div id="send-form-success" class="exito" style="display:none">Correo enviado con éxito</div>
+<div class="itemname" id="post"></div>
+<div class="itemid" id="13760"></div>
+<div class="urlname" id="desarrollando-una-aplicacion-para-el-iphone"></div>
+<div class="blogtwitter" id="via &#64;applesfera"></div>
+<div class="categoryname" id="apple"></div>
+<div class="productlabel" id="Productos"></div>
+<div class="blogurl" id="http://www.applesfera.com"></div>
+<div class="recaptchaflag" id="1"></div>
+
+	                
+	        	</div>
+</div>
+
+<div class="blog-nav">
+               <ul>
+      		
+      <li class="next-post">
+         <a href="/ipod/cambiar-la-contrasena-de-los-iphone-jailbreakeados" title="Cambiar la contraseña de los iPhone jailbreakeados" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-navegacion-post', 'post-previo')"><span>&raquo;</span>Cambiar la contraseña de los iPhone jailbreakeados</a>
+      </li>
+                  <li class="prev-post">
+         <a href="/ipod/analisis-ipod-nano-4g-el-mejor-ipod-creado-hasta-la-fecha" title="Análisis iPod nano 4G, el mejor iPod creado hasta la fecha" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-navegacion-post', 'post-posterior')"><span>&laquo;</span>Análisis iPod nano 4G, el mejor iPod creado hasta la fecha</a>
+      </li>
+            <li class="home"><a href="/" title="Portada" title="" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-navegacion-post', 'home')"></a></li>
+   </ul>
+
+
+        <!-- google_ad_section_end -->
+</div>
+
+
+<div id="header">
+    <p id="logo">
+    	    		    			<a href="http://www.applesfera.com" title="Blog sobre el universo Apple. MAC OS, iPod, iPhone, macbooks e iMacs. Todas las noticias, los mejores análisis y trucos, artículos de opinión.">
+    				<span></span>Applesfera    			</a>
+    		    	    </p>
+    
+    <div id="tagline"><span></span>Las mejores dietas son a base de manzanas.
+
+</div>
+    
+
+    <div id="user" class="login">
+   <p>
+        <a href="/signup" title="Entra con tu cuenta de usuario o regístrate en Applesfera" rel="nofollow" class="menu">¡Hola!</a> 
+        <a href="/signup" rel="nofollow" class="avatar">
+            <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.png" alt="Avatar" />
+        </a>
+        <a title="Entra con tu cuenta de usuario o regístrate" rel="nofollow" class="button" href="/signup"><span>Entra</span></a>
+                <a href="#" class="fbc">
+            <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/fbc-login.png" alt="FB" />
+        </a>
+           </p>
+</div>
+<div id='fbnotlogged'></div>
+
+
+
+    <input type="hidden" value="http://img.applesfera.com/lp2/steve-jobs-06-10-2011" id="noimg_url"></input>
+    <input type="hidden" value="http://img.weblogssl.com/avatar/mini/" id="img_avatar_mini_url"></input>
+    <input type="hidden" value="1" id="fbook_connect"></input>
+    <input type="hidden" value="Applesfera" id="blogtitle"></input>
+    <input type="hidden" value="http://www.applesfera.com" id="blogurl"></input>
+    <input type="hidden" value="1" id="showforum"></input>
+    <ul id="subscribe-icons">
+            <li id="movil"><a href="http://m.applesfera.com" rel="nofollow" title="Versión móvil de Applesfera" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'movil')"><span></span>Móvil</a></li> 
+                <li id="rss"><a href="/index.xml" rel="nofollow" title="Suscríbete por RSS a las novedades en Applesfera" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'rss')"><span></span>RSS</a></li>
+                <li id="email"><a href="/suscribete" title="Suscríbete por correo electrónico a las novedades en Applesfera" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'mail')"><span></span>Correo</a></li>
+                <li id="fb"><a href="http://www.facebook.com/pages/Applesfera/130064735384" title="Conéctate a la página de Facebook de Applesfera" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'facebook')"><span></span>Facebook</a></li>
+                <li id="twitter"><a href="http://twitter.com/applesfera" title="Sigue las novedades de Applesfera en Twitter" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'twitter')"><span></span>Twitter</a></li>
+          
+        <li id="widget"><a title="Consigue el widget de Applesfera para tu escritorio" rel="nofollow" href="http://widget.weblogssl.com" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-compartir', 'widget')"><span></span>Widget</a></li>
+        </ul>
+    <form method="get" action="/busqueda" id="search" class="clearfix">
+<p>
+  <input type="hidden" name="cx" value="partner-pub-9977500652563564:4837515496" />
+  <input type="text" id="gsearch" name="q" accesskey="4" title="Buscar" class="default-value" value="Busca en Applesfera con Google"/>
+  <input type="hidden" name="ie" value="UTF-8"></input>
+  <input type="hidden" name="oe" value="UTF-8"></input>
+  <input type="hidden" name="cof" value="FORID:10"></input>
+  <input type="image" src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/button-search.png" alt="Go" value="Busca con Google" />
+</p>
+</form>
+
+  <script type="text/javascript" src="http://www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
+
+<script type="text/javascript">
+    $(function(){
+        WSL.initSearchBox();
+    });
+</script>
+
+
+    <div id="related">
+                <p>Lee también:</p>
+        <ul>
+            <li><a href="http://www.xataka.com" title="Xataka" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-leetambien', 'www.xataka.com')">Xataka</a></li>
+<li><a href="http://www.tecnologiapyme.com" title="tecnologia pyme" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-leetambien', 'www.tecnologiapyme.com')">tecnologia pyme</a></li>
+<li><a href="http://www.genbetadev.com" title="GenbetaDev" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-cabecera-leetambien', 'www.genbetadev.com')">GenbetaDev</a></li>
+
+
+        </ul>
+        
+                    <p><a href="#module-wsl" title="Ver más publicaciones de Weblogs SL">Ver más</a></p>
+                    </div>
+</div>
+
+    <!-- header ad -->
+<div id="roba-header" class="ads">
+  <div class="ad">
+    <script type='text/javascript'>
+      MMM.MAX_show('CAB');
+    </script>
+  </div>
+    <a href="http://www.socialmediasl.com/applesfera.php" class="ad-contact">Anunciate aquí</a>
+</div>
+
+
+
+
+<!-- first side ad -->
+<div id="sky-side" class="ads">
+  <div class="ad">
+  <script type='text/javascript'>
+    MMM.MAX_show('LAT');
+  </script>
+  </div>
+    <a href="http://www.socialmediasl.com/applesfera.php" class="ad-contact">Anunciate aquí</a>
+</div>
+
+
+<div id="roba-central" class="ads">
+    <a href="http://www.socialmediasl.com/applesfera.php" class="ad-contact">Anunciate aquí</a>
+  <div class="ad">
+    <script type='text/javascript'>
+      MMM.MAX_show('CP');
+    </script>
+  </div>
+</div>
+
+
+
+<div id="post-related" class="post-related">
+    <h2>¿Quieres saber más?</h2>
+    <!--post related products  -->
+                    <!--post related products  -->
+    	<div class="post-related-posts">
+		<h3>Artículos</h3>
+    	<p class="post-related-desc">Artículos relacionados que probablemente también te interesen</p>
+    	<div class="post-related-content">
+    											<ul>
+				      			<li class="" id="2">
+         			<a class="photo" href="/apple/la-creacion-de-empleo-vinculada-al-negocio-de-las-aplicaciones-para-dispositivos-moviles" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')"><img src="http://img.applesfera.com/thumbnails/34189.jpg" alt="La creación de empleo vinculada al negocio de las aplicaciones para dispositivos móviles " /></a>
+         			<a href="/apple/la-creacion-de-empleo-vinculada-al-negocio-de-las-aplicaciones-para-dispositivos-moviles" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')">La creación de empleo vinculada al negocio de las aplicaciones para dispositivos móviles </a>
+	 				<span class="date"><abbr class="timeago" title="2012-03-12 22:42:26+00:00"></abbr></span>
+      			</li>
+    			    				    																			      			<li class="post-related-by-category" id="3">
+         			<a class="photo" href="/aplicaciones/re-vision-effects-lanza-twixtor-para-final-cut-pro-x" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')"><img src="http://img.applesfera.com/thumbnails/34026.jpg" alt="RE:Vision Effects lanza Twixtor para Final Cut Pro X " /></a>
+         			<a href="/aplicaciones/re-vision-effects-lanza-twixtor-para-final-cut-pro-x" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')">RE:Vision Effects lanza Twixtor para Final Cut Pro X </a>
+	 				<span class="date"><abbr class="timeago" title="2012-03-22 19:12:10+00:00"></abbr></span>
+      			</li>
+    			    				    																			      			<li class="post-related-by-category" id="3">
+         			<a class="photo" href="/aplicaciones/angry-birds-space-a-fondo" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')"><img src="http://img.applesfera.com/thumbnails/34396.jpg" alt="Angry Birds Space. A fondo " /></a>
+         			<a href="/aplicaciones/angry-birds-space-a-fondo" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')">Angry Birds Space. A fondo </a>
+	 				<span class="date"><abbr class="timeago" title="2012-03-22 13:52:19+00:00"></abbr></span>
+      			</li>
+    			    				    																			      			<li class="post-related-by-category" id="2">
+         			<a class="photo" href="/apple/apple-compite-contra-motorola-rim-y-nokia-para-estandarizar-la-tarjeta-nanosim" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')"><img src="http://img.applesfera.com/thumbnails/34379.jpg" alt="Apple compite contra Motorola, RIM y Nokia para estandarizar la tarjeta &#039;NanoSIM&#039; " /></a>
+         			<a href="/apple/apple-compite-contra-motorola-rim-y-nokia-para-estandarizar-la-tarjeta-nanosim" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')">Apple compite contra Motorola, RIM y Nokia para estandarizar la tarjeta &#039;NanoSIM&#039; </a>
+	 				<span class="date"><abbr class="timeago" title="2012-03-21 19:57:01+00:00"></abbr></span>
+      			</li>
+    			    				    																			      			<li class="post-related-by-category" id="2">
+         			<a class="photo" href="/apple/apple-se-queda-sin-poder-acceder-a-los-datos-de-motorola-y-google" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')"><img src="http://img.applesfera.com/thumbnails/34373.jpg" alt="Apple se queda sin poder acceder a los datos de Motorola y Google tras la negación de un juez" /></a>
+         			<a href="/apple/apple-se-queda-sin-poder-acceder-a-los-datos-de-motorola-y-google" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-post-articulos-relacionados', 'click-enlace')">Apple se queda sin poder acceder a los datos de Motorola y Google tras la negación de un juez</a>
+	 				<span class="date"><abbr class="timeago" title="2012-03-21 17:50:35+00:00"></abbr></span>
+      			</li>
+    			    
+    				</ul>
+    								</div>
+    	<!-- .post-related-content -->
+    	<p class="post-related-more"><a href="#" title="Ver más artículos relacionados">Ver más</a></p>
+    </div>
+    <!-- .post-related-posts -->
+
+
+    
+	<input type="hidden" id="preguntaurl" value="/respuestas/preguntar"></input>
+    <div class="post-related-qa">
+        <h3>Respuestas</h3>
+        <p class="post-related-desc">
+        	Preguntas sobre este tema que ha contestado la comunidad
+        </p>
+    </div>
+    <!-- .post-related-qa -->
+</div>
+<!-- .post-related -->
+<div id="" class="clubTagName"></div>
+<div id="post-comments">
+                            <a class="add-comment" href="#comment-write" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-ver-dejar-comentarios', 'link-footer-articulo')"><span>+</span> Deja tu comentario</a>
+<div id="to-comments"></div>
+<span id='lp2currenttime' style="display:none">1332454332</span>
+
+
+<div class="commentsv2">
+     <h2>Comentarios</h2>     <div id="sub-tabs">
+        <ul> 
+            <li id="sub-tab-usertop"><a href="#valorado" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'mas-valorados')" title="Ver comentarios más valorados primero" class="current"><span>M&aacute;s valorados</span></a></li>
+            <li id="sub-tab-recent"><a href="#ultimos" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'recientes')" title="Ver comentarios más recientes primero"><span>Recientes</span></a></li>
+            <li id="sub-tab-conversaciones"><a href="#cronologico" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'cronologico')" title="Ver comentarios más antiguos primero"><span>Cronol&oacute;gico</span></a></li> 
+        </ul>
+    </div>
+    <div class="panes"></div>
+    <div id="comment-nav" class="comment-nav" style="display:none">
+Página <strong>4</strong> de
+<span class="commentpagecount">1</span> páginas
+<ul>
+<!-- BEGIN plugin_pagedcomments_prev -->
+<li><a rel="nofollow" class="first" href="#">Primera</a></li>
+<li><a rel="prev" class="prev" href="#">Anterior</a></li>
+<!-- END plugin_pagedcomments_prev -->
+<li class="nav1"><a rel="nofollow" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'salto-de-pagina')">1</a></li>
+<li class="nav2"><a rel="nofollow" href="#">2</a></li>
+<li class="nav3"><strong>3</strong></li> 
+<li class="nav4"><a rel="nofollow" href="#">4</a></li>
+<li class="nav5"><a rel="nofollow" href="#">5</a></li>
+<!-- BEGIN plugin_pagedcomments_next -->
+<li ><a rel="nofollow" class="next" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'pagina-siguiente')">Siguiente</a></li>
+
+<!-- END plugin_pagedcomments_next -->
+<!-- BEGIN plugin_pagedcomments_last -->
+<li><a rel="nofollow" class="last" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'ultima-pagina')">Última</a></li>
+<!-- END plugin_pagedcomments_last -->
+</ul>
+</div>
+
+    <ul class="comments">
+                    
+<li id="c99356" class="comment  author-comment normal">
+      <span class="commentTime" style="display:none">1223421228</span>
+      <div class="comment-meta"> 
+      <span class="number">1</span>
+            <p style="display:none"><span id = "status99356" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">6077</span>
+     
+      <a href="/usuario/cuxtom" class="avatar" title="Ir a la página de usuario de Pedro Santamaría">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/8382_2.png"  alt="Avatar de Pedro Santamaría"   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/cuxtom" title="Ir a la página de usuario de Pedro Santamaría">Pedro Santamaría</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-5.png" alt="5 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+        <a title="Página personal del usuario" href="http://www.applesfera.com/usuario/cuxtom" class="user-url">www.applesfera.com/usuario/cuxtom</a>      </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Pero también hay q ver el lado positivo: ¿de cuantas aplicaciones pésimas nos hemos librado?</p>
+
+<p>Lastima de las que sí merecen a pena y ven tantas trabas. De momento, menos mal que no me dio por hacer ninguna app para el iPhone.</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99356#c99356" title="permalink" rel="nofollow"> 8 oct 2008 01:13</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99356"> Karma <span class="comment_karma">15</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99357" class="comment   normal">
+      <span class="commentTime" style="display:none">1223421412</span>
+      <div class="comment-meta"> 
+      <span class="number">2</span>
+            <p style="display:none"><span id = "status99357" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">601</span>
+     
+      <a href="/usuario/601" class="avatar" title="Ir a la página de usuario de alex_dlc">     
+
+                    <img src="http://www.gravatar.com/avatar/426af9f8693a7b851031bfa2d614bb5b?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de alex_dlc"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/601" title="Ir a la página de usuario de alex_dlc">alex_dlc</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>perdon por preguntar esto aqui, pero quien hace la animacion del intro de videos de applesfera?</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99357#c99357" title="permalink" rel="nofollow"> 8 oct 2008 01:16</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99357"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99358" class="comment   normal">
+      <span class="commentTime" style="display:none">1223421524</span>
+      <div class="comment-meta"> 
+      <span class="number">3</span>
+            <p style="display:none"><span id = "status99358" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">1514</span>
+     
+      <a href="/usuario/alejandro_mica" class="avatar" title="Ir a la página de usuario de Alejandro:m i c a">     
+
+                    <img src="http://www.gravatar.com/avatar/733428a07f1d174e4c128cb24e50baec?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de Alejandro:m i c a"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/alejandro_mica" title="Ir a la página de usuario de Alejandro:m i c a">Alejandro:m i c a</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>creo que como bien es sabido, desarrollar para plataformas "reales" (y no la m……ierda de symbian) pues tiene su hecho y trecho,  vamos, solo esperad a los htd hd, y a los nuevos "touch" cuando empiecen sus propios "appstore" y que limites ponen, pero bueno! y a la larga ese proceso tedioso de rellenar y rellenar, y demás se hara menos y eso como siempre ayudara a que las apps estén mas pronto aceptadas como rechazadas, pero tampoco vayamos al ocaso del ridículo como hasta ahora, que cuando rechazaban una aplicación (fea cutre asquerosa) que hubiera seguido tooooodo ese proceso, el "desarrollador" tendría que plantearse 1º, sentido de la estética (debería ser obligatorio en las normas legales), 2º, sentido del tacto hacia lo que un cliente quiere, desea, y quiere tocar/palpar con sus dedos en una aplicación, 3º si has pagado 99€/$ para que tu aplicación salga en el appstore, sigue los pasos 1º y 2º y vendelo a un precio de 1,75€, que sea bilingüe, y ya tienes una aplicación para venderse incluso por 0,75€… y lo sabes bien que con que vendas 200 copias de tu app/juego remuneras lo invertido, incluso lo duplicas … xD</p>
+
+<p>pero vamos! todo va con sentido, que apple escuche a los usuarios? lo hace, pero claro hay cerca de 10000000 desarrolladores que hacen todo ese trabajo tedioso y solo 400 se quejan, por que tiene apple que escuchar nada de nadie? :P</p>
+
+<p>no pensáis lo mismo? vamos.. que tanta buleria y palabrería que hubo con el acuerdo NDA y claro… 3 mil aplicaciones vs 2 o 4 que eran rechazadas, yo diría que apple sabe y conoce criterios, acaso los que hacen las apps no deberían hacer igual antes de quejarse por ser rechazados tras haber rellenado tantos formularios? :S</p>
+
+<p>ahora mismo estoy metiendome con el sdk, llevo ya 5 días probando, testeando, y recordando un poco de programación xDDDD pero vamos como bien decís, siempre que tengas dudas de algo hay miles de foros de ello que te lo pueden resolver, solo qu</</span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99358#c99358" title="permalink" rel="nofollow"> 8 oct 2008 01:18</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99358"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99359" class="comment   normal">
+      <span class="commentTime" style="display:none">1223421587</span>
+      <div class="comment-meta"> 
+      <span class="number">4</span>
+            <p style="display:none"><span id = "status99359" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">4174</span>
+     
+      <a href="/usuario/names1x" class="avatar" title="Ir a la página de usuario de namesix ">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/765_1.png"  alt="Avatar de namesix "   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/names1x" title="Ir a la página de usuario de namesix ">namesix </a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Dios mio, si que es complicado!</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99359#c99359" title="permalink" rel="nofollow"> 8 oct 2008 01:19</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99359"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99361" class="comment   normal">
+      <span class="commentTime" style="display:none">1223423807</span>
+      <div class="comment-meta"> 
+      <span class="number">5</span>
+            <p style="display:none"><span id = "status99361" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">5750</span>
+     
+      <a href="/usuario/wilebaldo" class="avatar" title="Ir a la página de usuario de Wilebaldo Alvarez">     
+
+                    <img src="http://www.gravatar.com/avatar/7a2d88fd8504fcf6ae4fe93741180fd5?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de Wilebaldo Alvarez"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/wilebaldo" title="Ir a la página de usuario de Wilebaldo Alvarez">Wilebaldo Alvarez</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-3.png" alt="3 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Pues muy interesante y muchas gracias por la informacion.</p>
+
+<p>porque creo que ya voy a desinstalar el SDK de mi mac porque ya no lo voy a necesitar, que caso tiene que lo haga si no voy a poder hacer mis propias aplicaciones para mi uso personal. Ya llevaba un buen avance en una de ellas, pero que mas da.</p>
+
+<p>Y ahora ya entiendo porque nunca pude provar mis avances en ninguno de mis iPhones no el original ni el 3G. Yo que pensaba que era cuestion del mismo iPhone y la version del firmwire</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99361#c99361" title="permalink" rel="nofollow"> 8 oct 2008 01:56</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99361"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99376" class="comment   normal">
+      <span class="commentTime" style="display:none">1223453407</span>
+      <div class="comment-meta"> 
+      <span class="number">6</span>
+            <p style="display:none"><span id = "status99376" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">6215</span>
+     
+      <a href="/usuario/6215" class="avatar" title="Ir a la página de usuario de www.yosoyrallye.com">     
+
+                    <img src="http://www.gravatar.com/avatar/3616dd9f37fb45a71a3e8bfbaac37c4b?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de www.yosoyrallye.com"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/6215" title="Ir a la página de usuario de www.yosoyrallye.com">www.yosoyrallye.com</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Demasiada palabrería… Obviais comentar que nada más registrarte aparte de poder descargarte la SDK tienes acceso una infinidad de documentación muy bien explicada, ejemplos de código para ver online de todas y cada una de las funcionalidades específicas del iphone, o bien puedes descargarte estos ejemplos para ejecutar en tu xcode. Por no decir, que a cambio de 99€ y de este proceso, pasas a entrar en una tienda oficial de una marca reputada; que gestiona automáticamente la descarga y el cobro de las aplicaciones. </p>
+
+<p>Personalmente, he empezado a leerme la documentación para que cuando me llegue el iphone poder empezar a trastear con él. Creo que el problema es que este sistema que se ha sacado de la manga Apple (y que está proliferando rápidamente para windows mobile, blackberry…) es que no permite a los aprendices de programador y demás gente con tiempo libre hacer los típicos programitas chorras con los que presumir delante de los amiguetes… </p>
+
+<p>Desde mi punto de vista, un sistema así dignifica a aquellos que quieren vivir de la programación a la vez que evitará el intrusismo laboral en este sector (quién va a soltar 99€ y comerse ese marrón para hacer una aplicación chorras?)</p>
+
+<p>Siento el sermón, pero es que ya cansan tantas críticas a la AppStore cuando desde el punto de vista de los programadores de toda la vida, es un soplo de aire fresco ya que iniciativas como ésta permiten que un solo programador viva de su trabajo de nuevo como antaño, sin tener que ser uno más del montón como pasa desde hace algunos años.</p>
+
+<p>Ah, y a pesar de lo tedioso del proceso; el que se haya trabajado una aplicación buena, ya vereis qué poco se queja del proceso este cuando cobre la pasta que le genere la aplicación… Seguro que hasta recuerda el proceso con cariño! ;)</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99376#c99376" title="permalink" rel="nofollow"> 8 oct 2008 10:10</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99376"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99380" class="comment   normal">
+      <span class="commentTime" style="display:none">1223455986</span>
+      <div class="comment-meta"> 
+      <span class="number">7</span>
+            <p style="display:none"><span id = "status99380" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">5384</span>
+     
+      <a href="/usuario/5384" class="avatar" title="Ir a la página de usuario de Richard">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/7713_1.png"  alt="Avatar de Richard"   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/5384" title="Ir a la página de usuario de Richard">Richard</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-3.png" alt="3 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Sin duda es burocrático el proceso, pero yo no veo del todo mal el filtraje.
+Aún con ese filtro, ya hay miles de aplicaciones disponibles en la Store. Si el tema fuese mucho más abierto, se haría inviable encontrar nada en la tienda, porque estaría inundada de aplicaciones de mala calidad y sin sentido.</p>
+
+<p>Está claro que aún queda camino por recorrer y hay que encontrar mejores fórmulas para incentivar a los mejores programadores y descartar los chicharros.</p>
+
+<p>También queda mucho por hacer en la Store, que ahora que empieza a tener un buen volumen de aplicaciones, empieza a hacerse complicado encontrar lo que buscas, sobre todo porque el sistema de búsqueda es un truño y sólo encuentra el nombre de la aplicación, y no busca tags ni palabras clave.</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99380#c99380" title="permalink" rel="nofollow"> 8 oct 2008 10:53</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99380"> Karma <span class="comment_karma">8</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99387" class="comment   normal">
+      <span class="commentTime" style="display:none">1223459970</span>
+      <div class="comment-meta"> 
+      <span class="number">8</span>
+            <p style="display:none"><span id = "status99387" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">4610</span>
+     
+      <a href="/usuario/4610" class="avatar" title="Ir a la página de usuario de pequenionoa">     
+
+                    <img src="http://www.gravatar.com/avatar/9d0fced08ef43ae260c93d37fcdcafd0?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de pequenionoa"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/4610" title="Ir a la página de usuario de pequenionoa">pequenionoa</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>La verdad es que es una camino largo.</p>
+
+<p>Contestando a Alejandro le diré que si que existe información en castellano. Yo mismo participo en un foro sobre el tema. http:\\www.iphonesoftware.es</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99387#c99387" title="permalink" rel="nofollow"> 8 oct 2008 11:59</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99387"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99391" class="comment   normal">
+      <span class="commentTime" style="display:none">1223462037</span>
+      <div class="comment-meta"> 
+      <span class="number">9</span>
+            <p style="display:none"><span id = "status99391" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">4249</span>
+     
+      <a href="/usuario/4249" class="avatar" title="Ir a la página de usuario de NEXT">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/6620_1.png"  alt="Avatar de NEXT"   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/4249" title="Ir a la página de usuario de NEXT">NEXT</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+        <a title="Página personal del usuario" href="http://www.esitemgz.com" class="user-url">www.esitemgz.com</a>      </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Y a todo esto, saber que podemos hablar de aplicaciones para gestión, utilidades o juegos, ya que cada una de ellas tiene su propio proceso de desarrollo.</p>
+
+<p>Si hablamos de Juegos, ni os cuento las pestes que hechan muchas productoras del SDK de PSP o de PlayStation. Claro está de las que se quejaban los juegos eran verdaderos bodrios, en cambio de las que no se quejaban (he incluso alababan muchos de los recursos del SDK), los juegos eran increibles. Por ejemplo ¿Os suena Metal Gear?.</p>
+
+<p>El problema de las herramientas de Apple para el desarrollo de aplicaciones, es que su uso está muy dirigido a los analistas, con elementos muy visuales, y no para los programadores de código, pero todo eso tiene solución.</p>
+
+<p>NEXT</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99391#c99391" title="permalink" rel="nofollow"> 8 oct 2008 12:33</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99391"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99423" class="comment   normal">
+      <span class="commentTime" style="display:none">1223482667</span>
+      <div class="comment-meta"> 
+      <span class="number">10</span>
+            <p style="display:none"><span id = "status99423" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">4752</span>
+     
+      <a href="/usuario/4752" class="avatar" title="Ir a la página de usuario de punk84">     
+
+                    <img src="http://www.gravatar.com/avatar/eadd179eb812826f2bec21fc4c744045?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de punk84"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/4752" title="Ir a la página de usuario de punk84">punk84</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Gracias Miguel por el artículo, hace tiempo que tengo ganas de ponerme a programar enserio para el iphone, (desde las betas del SDK), pero necesitaría aprender algo de Xcode y Objetive-C ya que nunca programé antes en mac. ¿podría alguien indicarme algun sitio donde aprender algo?</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99423#c99423" title="permalink" rel="nofollow"> 8 oct 2008 18:17</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99423"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99424" class="comment   normal">
+      <span class="commentTime" style="display:none">1223483905</span>
+      <div class="comment-meta"> 
+      <span class="number">11</span>
+            <p style="display:none"><span id = "status99424" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">4610</span>
+     
+      <a href="/usuario/4610" class="avatar" title="Ir a la página de usuario de pequenionoa">     
+
+                    <img src="http://www.gravatar.com/avatar/9d0fced08ef43ae260c93d37fcdcafd0?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de pequenionoa"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/4610" title="Ir a la página de usuario de pequenionoa">pequenionoa</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Como he dicho antes, puedes aprender en <a href="http://www.iphonesoftware.es" rel="nofollow">www.iphonesoftware.es</a></p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99424#c99424" title="permalink" rel="nofollow"> 8 oct 2008 18:38</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99424"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99511" class="comment   normal">
+      <span class="commentTime" style="display:none">1223546918</span>
+      <div class="comment-meta"> 
+      <span class="number">12</span>
+            <p style="display:none"><span id = "status99511" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">44</span>
+     
+      <a href="/usuario/applesblog" class="avatar" title="Ir a la página de usuario de Fan By">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/2579_6.png"  alt="Avatar de Fan By"   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/applesblog" title="Ir a la página de usuario de Fan By">Fan By</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+        <a title="Página personal del usuario" href="http://applesblog.wordpress.com" class="user-url">applesblog.wordpress.com</a>      </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH!!!</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99511#c99511" title="permalink" rel="nofollow"> 9 oct 2008 12:08</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99511"> Karma <span class="comment_karma">13</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c99937" class="comment   normal">
+      <span class="commentTime" style="display:none">1223846570</span>
+      <div class="comment-meta"> 
+      <span class="number">13</span>
+            <p style="display:none"><span id = "status99937" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">6061</span>
+     
+      <a href="/usuario/cssblog.es" class="avatar" title="Ir a la página de usuario de Pedro CM">     
+
+        <img src="http://img.weblogssl.com/avatar/mini/8367_1.png"  alt="Avatar de Pedro CM"   class="avatar" />
+
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/cssblog.es" title="Ir a la página de usuario de Pedro CM">Pedro CM</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>que liO!</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99937#c99937" title="permalink" rel="nofollow">12 oct 2008 23:22</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes99937"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c106072" class="comment   normal">
+      <span class="commentTime" style="display:none">1229016613</span>
+      <div class="comment-meta"> 
+      <span class="number">14</span>
+            <p style="display:none"><span id = "status106072" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">3881</span>
+     
+      <a href="/usuario/3881" class="avatar" title="Ir a la página de usuario de matt78">     
+
+                    <img src="http://www.gravatar.com/avatar/a4de53a2190f7f70502f53fb1d4f6d87?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/avatar.jpg&amp;size=32"  alt="Avatar de matt78"    class="avatar" />
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/3881" title="Ir a la página de usuario de matt78">matt78</a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-2.png" alt="2 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>Yo llevo atascado en el punto 2 desde hace algunos días.</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/106072#c106072" title="permalink" rel="nofollow">11 dic 2008 18:30</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes106072"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+                    
+<li id="c282852" class="comment   normal">
+      <span class="commentTime" style="display:none">1298892575</span>
+      <div class="comment-meta"> 
+      <span class="number">15</span>
+            <p style="display:none"><span id = "status282852" ></span></p>
+            </div>
+      <span class="comment-level" style="display:none">0</span>
+      <span class="comment-user-id" style="display:none">43494</span>
+     
+      <a href="/usuario/43494" class="avatar" title="Ir a la página de usuario de 43494">     
+
+                    <fb:profile-pic uid="660097995" facebook-logo="true"  width="32" height="32" size="square"  linked="false"></fb:profile-pic>
+        
+      </a>       <a title="Reportar comentario (spam, insultos...)" class="abuse" href="#"><span></span>!</a>
+       <a title="Editar este comentario (disponible 15 min.)" class="edit-comment" style="display:none">Editar</a>
+      <div class="comment-info">
+                       <a class="usuario" href="/usuario/43494" title="Ir a la página de usuario de 43494"><fb:name uid='660097995' linked='false' useyou='false'></fb:name></a>
+              | <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-1.png" alt="1 estrellas" />                 <input type="button" value="Delete Comment" name="deletecomment" class="deletecomment edit-link" id="" style="display:none"/>
+              </div>
+
+              <div class="comment-body">
+            <span class="comment-content"><p>ACERCA DE LOS QUE INTENTAN DISTRIBUÍR APLICACIONES PARA iPHONE --SIN-- EL appStore!</p>
+
+<p>A mi me parece una gran trampa ...¡tan grande, como que es la primera vez yo veo se hayan logrado superar las férreas barreras (y ..."BURLARLAS"..., perdonen mi palabrita, pero es que aquí a un menda no le agrada mucho la noticia, que digamos, ya que yo actualmente me encuentro desarrollando una aplicación para iPhone que pienso distribuir, por lo LEGAL y tratando religiosamente de no sobrepasar ninguna de las normas fundamentales para que mi aplicación sea aceptada en la iOS AppStore, y ya veo al fluído, limpio, férreo y ultra-seguro Mac-OS, por el que empecé a apostar, ya está empezando a ser ATACADO!!!, como ya desde hace décadas, lo está irremediablemente Micsft y sus manchados, sobrecargados, sobre-sobre-sobre-so.....-sobre-parcheados e insulsos (así se me antojan, conociendo los fluidísimos gráficos y funcionamiendo de los Mac-OS...) sistemas Windows 7, y Windows Phone (o como se llame, ese enguarrado sistema, que nunca los he probado yo mas lentos, y que se atasquen mas...).</p>
+
+<p>Aunque, bueno: Como diria el refran: Quien hizo la ley, ya hizo LA GRAN trampa!!
+(Y por lo visto, demasiado férreas y restrictivas veo yo las normas que ha puesto Mac-OS, no pudiendo acceder, utilizar ni distribuir, algunos contenidos y propósitos de desarrollo de aplicaciones, que tanto a un menda, como seguramente a muchos otros, desarrolladores, usuarios y/o "enamorados" de los sistemas Mac-OS, podrían resultar de gran agrado y satisfacción...</p>
+
+<p>Eso, aparte de lo que nos cuesta, y los tediosos tiempos de espera por los que, por lo visto, un menda tendrá que pasar para llegar a distribuir mi aplicación...</p>
+
+<p>Bueno... Quien hizo la ley, hizo la primera trampa!</p></span>
+                    </div>
+        <div class="comment-reply"><a href="#">Responder</a></div>
+        <div class="comment_replyform" style="display:none"></div>
+        <div class="comment-footer">
+                        	<a class="permlink" href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/282852#c282852" title="permalink" rel="nofollow">28 feb 2011 12:29</a>
+                        <div class="comment-vote">
+                <a title="Vota positivo" class="comment-vote-up" href="#"><span></span>&uarr;</a>
+                <a title="Vota negativo" class="comment-vote-down" href="#"><span></span>&darr;</a>
+                <span class="comment-status comment-karma" id="karmavotes282852"> Karma <span class="comment_karma">5</span> (<span class="votes">0</span> votos) | normal</span>
+            </div>
+        </div>
+        <div class="commentvote_error"></div>
+    </li>
+
+
+            </ul>
+    <div id="replyform" style="display:none">
+        <form class="mform reply" method="post">
+            <h3>Vista previa de la respuesta</h3>
+            <div id="comment_preview"></div>
+            <p>
+                <label for="comment_text" class="mblock">Responder a <span id="comment_reply_author"></span>:
+                    <textarea id="comment_text" class="text" rows="5" cols="40"></textarea>
+                </label>
+            </p>
+            <div class="notice" id="duplicatecommentreplynotice" style="display:none">
+                <p>Ya hemos agregado esta respuesta comentario</p>
+            </div>
+            <div class="notice" id="userreplyantitrollnotice" style="display:none">
+                <p></p>
+            </div>
+            <div class="submit-area">                
+                <p>
+	                <input type="radio" value="1" name="subscribe">
+	                Notificarme por correo los comentarios a este post
+	            </p>
+	            <p>
+	                <input type="radio" value="2" name="subscribe">
+	                Notificarme por correo las respuestas a mi comentario
+	            </p>
+	            <p>
+	                <input type="radio" value="0" name="subscribe">
+	                No enviarme notificaciones por correo
+	            </p>
+                <button class="button" type="submit" id="responder">
+                    <span><strong>Responder</strong></span>
+                </button>
+                <a href="#" class="button disabled" id="cancel"><span>Cancelar</span></a>
+            </div>
+        </form>
+    </div>
+    <div id="comment-nav" class="comment-nav" style="display:none">
+Página <strong>4</strong> de
+<span class="commentpagecount">1</span> páginas
+<ul>
+<!-- BEGIN plugin_pagedcomments_prev -->
+<li><a rel="nofollow" class="first" href="#">Primera</a></li>
+<li><a rel="prev" class="prev" href="#">Anterior</a></li>
+<!-- END plugin_pagedcomments_prev -->
+<li class="nav1"><a rel="nofollow" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'salto-de-pagina')">1</a></li>
+<li class="nav2"><a rel="nofollow" href="#">2</a></li>
+<li class="nav3"><strong>3</strong></li> 
+<li class="nav4"><a rel="nofollow" href="#">4</a></li>
+<li class="nav5"><a rel="nofollow" href="#">5</a></li>
+<!-- BEGIN plugin_pagedcomments_next -->
+<li ><a rel="nofollow" class="next" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'pagina-siguiente')">Siguiente</a></li>
+
+<!-- END plugin_pagedcomments_next -->
+<!-- BEGIN plugin_pagedcomments_last -->
+<li><a rel="nofollow" class="last" href="#" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-leer-comentarios', 'ultima-pagina')">Última</a></li>
+<!-- END plugin_pagedcomments_last -->
+</ul>
+</div>
+
+            <div id="trackback-links">
+  <h3>Trackbacks</h3>
+  <ul class="trackbacks">
+        <li>
+      <span class="number">1</span>
+      <div class="trackback-body"> justo ayer estaba viendo esto de Applesfera:   1. Inscribirse en el iPhone Dev Center y descargar el SDK. Por alg misterioso motivo, no basta con tener una cuenta del Apple Developer Connection, hay que volver a inscribirse en este otro y leer lo</div>
+      <div class="trackback-link"><a href="http://www.macadicto.com/development/974-desarrollo-para-iphone-que-tener-en-cuenta.html#post11128" rel="nofollow">Desarrollo para iPhone, que tener en cuenta. - MacAdicto Foro</a></div>
+      <div class="trackback-date"> 8 oct 2008 20:17</div>
+    </li>
+      </ul>
+</div>
+
+
+                <a name="add_comment"></a>
+        <div id="comment-write">
+            <h2>Escribir un comentario</h2>
+            <div id="about-openid">
+  <p>
+    Para hacer un comentario es necesario que te identifiques:
+    <a href="/signup" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-escribir-comentarios', 'entra')"><strong>ENTRA</strong></a>
+        <span class="fbc"> o conéctate con Facebook
+        <fb:login-button v="2" size="small" scope="email" onlogin="WSL.fbRedirect(null);">Connect</fb:login-button>
+    </span>
+      </p>
+</div>
+<!-- end about openid -->
+
+        </div>
+        <!-- end comment-write -->
+    </div>
+<div id="pageCount" style="display:none">1</div>
+
+<script language="javascript" type="text/javascript">
+$(function()
+  {
+     wsl_comments = new WSL_Comments();
+     wsl_comments.init();
+  }
+  
+);
+</script>
+<style>
+.commentsv2 #comments-tabs {
+margin-bottom:30px;
+}
+.commentsv2 #comment-nav {
+font-size:0.9em;
+}
+.commentsv2 #comment-nav ul {
+display:inline;
+}
+.commentsv2 #comment-nav span {
+margin:0px 10px;
+}
+
+#comment_preview {
+    background:#F6F6F6 none repeat scroll 0 0;
+    border:1px solid #DDDDDD;
+    margin:0 0 1em;
+    padding:9px;
+}
+
+</style>
+
+                <div id="warn-post-vote" style="display:none;">
+    <form id="fc-fav-warn" class="aviso">
+        <p>¿Publicar tu voto en Facebook?
+            <button class="button" type="submit" id="onlynow"><span><strong>Esta vez</strong></span></button>
+            <button class="button" type="submit" id="notnow"><span><strong>Esta vez no</strong></span></button>
+            <button class="button" type="submit" id="always"><span><strong>Siempre</strong></span></button>
+            <button class="button" type="submit" id="never"><span><strong>Nunca</strong></span></button>
+        </p>
+    </form>
+</div>
+
+</div>
+
+<script type="text/javascript">
+$(function()
+  {
+      WSL.initPostPage();
+      WSL_Controller_SocialShare.initSocialShare();
+      WSL_Controller_Product.initIwishIhaveButtons();
+      WSL_Controller_Product.initVoteBar();
+      WSL_Controller_Product.initProductVote();
+      WSL_Controller_Product.initProductVoteSelect();
+      WSL_Controller_Product.initProductVoteClass();
+      WSL_Controller_Post.PostCommentLogin();
+      WSL_Controller_Post.postRelatedQA();
+      WSL.getTimeAgo();
+  }
+);
+</script>
+
+
+    </div>
+
+    
+            <!-- sidebar -->
+<div id="side">
+  <div class="side single">
+    <div class="sidewrap">
+              
+      	<div id="mas-valorado" class="module">
+        <h2><span>Mejor comentario</span></h2>
+        <div class="module-content">
+            <div class="mas-valorado">
+                <blockquote><a href="/apple/desarrollando-una-aplicacion-para-el-iphone/c/99356#c99356"> Pero también hay q ver el lado positivo: ¿de cuantas aplicaciones...</a></blockquote>
+                <cite>
+                <a class="avatar" href="/usuario/cuxtom">
+               
+
+        <img src="http://img.weblogssl.com/avatar/mini/8382_2.png"  />
+
+                </a>
+                    
+                    <a class="usuario" href="/usuario/cuxtom" title="Ir a la página de usuario de Pedro Santamaría">Pedro Santamaría</a>
+                    
+                    <img src="http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/stars-5.png" alt="*" />
+                </cite>
+            </div>
+		</div>
+    </div>
+
+
+  	
+                  <!-- end column ad -->
+      <div id="destacado" class="module" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-destacados', 'destacado')">
+	<h2><span>Destacados</span></h2>
+	<div class="module-content">
+	  <a href="http://www.applesfera.com/tag/curso-de-fotografia-con-iphone"><img id="image33627" src="http://img.applesfera.com/2012/02/banner_curso_fotografia_iphone.jpg" class="centro" alt="banner_curso_fotografia_iphone.jpg" /></a><a href="http://www.applesfera.com/tag/nuevo-os-x-mountain-lion"><img id="image33628" src="http://img.applesfera.com/2012/02/banner_ml.jpg" class="centro" alt="banner_ml.jpg" /><a href="http://www.applesfera.com/tag/nuevo-iphone-4s"><img id="image31361" src="http://img.applesfera.com/2011/10/banner_iphone4s.jpg" class="centro" alt="banner_iphone4s.jpg" /></a>
+	</div>
+      </div>
+      <!-- end destacado -->
+    <div id="editores" class="module">
+	<h2><span>Editores</span></h2>
+	<div class="module-content">
+          <ul>
+	<li>
+	    <a class="avatar" href="/autor/pedro-aznar" title="Posts de Pedro Aznar en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/1cac63b80918d124daa0ddb4148b48f6?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Pedro Aznar" /></a>
+        <a class="usuario" href="/autor/pedro-aznar" title="Ir a la página de Pedro Aznar" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Pedro Aznar</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/fernando-doutel" title="Posts de Fernando Doutel en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/3143b58fcff8028cb1082eb54648c4bb?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Fernando Doutel" /></a>
+        <a class="usuario" href="/autor/fernando-doutel" title="Ir a la página de Fernando Doutel" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Fernando Doutel</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/salva-castro" title="Posts de Salva Castro en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/04e79d5f288fa1a0044bcc1589cfd871?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Salva Castro" /></a>
+        <a class="usuario" href="/autor/salva-castro" title="Ir a la página de Salva Castro" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Salva Castro</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/miguel-michan" title="Posts de Miguel Michán en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/437cddd399f50ed2f7955755ce1facb3?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Miguel Michán" /></a>
+        <a class="usuario" href="/autor/miguel-michan" title="Ir a la página de Miguel Michán" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Miguel Michán</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/pedro-santamaria" title="Posts de Pedro Santamaría en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/6a2fa0170f50c302a991f2437039c875?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Pedro Santamaría" /></a>
+        <a class="usuario" href="/autor/pedro-santamaria" title="Ir a la página de Pedro Santamaría" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Pedro Santamaría</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/samuel-campos" title="Posts de Samuel Campos en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/1bdf89ad8a71a91f075d436d5b0a9796?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Samuel Campos" /></a>
+        <a class="usuario" href="/autor/samuel-campos" title="Ir a la página de Samuel Campos" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Samuel Campos</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/miguel-lopez" title="Posts de Miguel López en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/52f439a84030b38b6c1fce7c5bb32358?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Miguel López" /></a>
+        <a class="usuario" href="/autor/miguel-lopez" title="Ir a la página de Miguel López" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Miguel López</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/aitor-carbajo" title="Posts de Aitor Carbajo en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/971821e6ea17a70c139d1b89d8a2fc0b?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Aitor Carbajo" /></a>
+        <a class="usuario" href="/autor/aitor-carbajo" title="Ir a la página de Aitor Carbajo" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Aitor Carbajo</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/roberto" title="Posts de P. Roberto Jiménez en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/894c02155af906cef0eb191e0856fbe2?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="P. Roberto Jiménez" /></a>
+        <a class="usuario" href="/autor/roberto" title="Ir a la página de P. Roberto Jiménez" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">P. Roberto Jiménez</a>
+   	</li>
+	<li>
+	    <a class="avatar" href="/autor/ruben-marquez" title="Posts de Ruben Marquez en Applesfera" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')"><img src="http://www.gravatar.com/avatar/e02775a1de0e9379e64f57551254519c?default=http://img.applesfera.com/lp2/steve-jobs-06-10-2011/images/favicon.png&amp;size=32" alt="Ruben Marquez" /></a>
+        <a class="usuario" href="/autor/ruben-marquez" title="Ir a la página de Ruben Marquez" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'clickauthor')">Ruben Marquez</a>
+   	</li>
+</ul>
+
+
+          <p class="nav"><a class="button" href="/contacto" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-editores', 'envianospistas')"><span>Envíanos pistas</span></a></p>
+	</div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <div class="ads" id="lateral-side">
+<div class="ad">
+ <script type='text/javascript'>
+    MMM.MAX_show('BOT');
+  </script>
+</div>
+<a href="http://www.socialmediasl.com/applesfera.php" class="ad-contact">Anunciate aquí</a>
+</div>
+
+
+
+  <div class="side">
+
+    <div class="sidewrap">
+  
+                        <div id="comentarios" class="module">
+	<h2><span>Comentarios</span></h2>
+	<ul class="tabs"> 
+          <li><a class="" href="#ultimos-comentarios"><span>Últimos</span></a></li> 
+          <li><a class="current" href="#top-10-comentado"><span>Lo+comentado</span></a></li> 
+	</ul>
+	<div class="panes">
+          <div id="ultimos-comentarios" class="module-content">
+	    <h3 class="tab-label">Últimos</h3>
+            <ol>
+              <li><a href="/aplicaciones/re-vision-effects-lanza-twixtor-para-final-cut-pro-x" title="RE:Vision Effects lanza Twixtor para Final Cut Pro X " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">RE:Vision Effects lanza Twixtor para Final Cut Pro X </a></li>
+<li><a href="/ipad/los-distribuidores-oficiales-anuncian-sus-horas-de-apertura" title="Los distribuidores oficiales anuncian sus horas de apertura para vender el nuevo iPad" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Los distribuidores oficiales anuncian sus horas de apertura para vender el nuevo iPad</a></li>
+<li><a href="/aplicaciones/angry-birds-space-a-fondo" title="Angry Birds Space. A fondo " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Angry Birds Space. A fondo </a></li>
+<li><a href="/applesfera/curso-de-fotografia-con-iphone-viii-como-conseguir-mejores-fotos-con-poca-luz" title="Curso de fotografía con iPhone (VIII): cómo conseguir mejores fotos con poca luz" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Curso de fotografía con iPhone (VIII): cómo conseguir mejores fotos con poca luz</a></li>
+<li><a href="/accesorios/intuos-5-la-nueva-gama-profesional-de-tabletas-graficas-de-wacom" title="Intuos 5, la nueva gama profesional de tabletas gráficas de Wacom " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Intuos 5, la nueva gama profesional de tabletas gráficas de Wacom </a></li>
+<li><a href="/aplicaciones-moviles/hipstamatic-e-instagram-permiten-a-sus-usuarios-compartir-las-mismas-fotos-en-ambas-aplicaciones" title="Hipstamatic e Instagram permiten a sus usuarios compartir las mismas fotos en ambas aplicaciones " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Hipstamatic e Instagram permiten a sus usuarios compartir las mismas fotos en ambas aplicaciones </a></li>
+<li><a href="/apple/apple-compite-contra-motorola-rim-y-nokia-para-estandarizar-la-tarjeta-nanosim" title="Apple compite contra Motorola, RIM y Nokia para estandarizar la tarjeta &#039;NanoSIM&#039; " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Apple compite contra Motorola, RIM y Nokia para estandarizar la tarjeta &#039;NanoSIM&#039; </a></li>
+<li><a href="/aplicaciones-moviles/blizzard-admite-que-esta-considerando-una-version-de-world-of-warcraft-para-ios" title="Blizzard admite que está considerando una versión de World of Warcraft para iOS" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Blizzard admite que está considerando una versión de World of Warcraft para iOS</a></li>
+<li><a href="/apple/apple-se-queda-sin-poder-acceder-a-los-datos-de-motorola-y-google" title="Apple se queda sin poder acceder a los datos de Motorola y Google tras la negación de un juez" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">Apple se queda sin poder acceder a los datos de Motorola y Google tras la negación de un juez</a></li>
+<li><a href="/curiosidades/la-pantalla-del-ipad-se-posiciona-como-una-de-las-mejores-del-mercado" title="La pantalla del iPad se posiciona como una de las mejores del mercado" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'ultimos-enlace')">La pantalla del iPad se posiciona como una de las mejores del mercado</a></li>
+
+
+            </ol>
+          </div>
+          <!-- end ultimos -->
+	  
+          <div id="top-10-comentado" class="module-content">
+            <h3 class="tab-label">Lo+comentado</h3>
+            <ol>
+              	<li><a href="/apple/nuevo-ipad-primeras-impresiones" title="Nuevo iPad, primeras impresiones" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">Nuevo iPad, primeras impresiones</a></li>
+	<li><a href="/apple/comparativa-del-ipad-2-y-el-nuevo-ipad-con-pantalla-retina" title="Comparativa del iPad 2 y el nuevo iPad con pantalla Retina" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">Comparativa del iPad 2 y el nuevo iPad con pantalla Retina</a></li>
+	<li><a href="/apple/apple-celebrara-una-rueda-de-prensa-para-inversores-para-anunciar-lo-que-quiere-hacer-con-sus-cien-mil-millones-de-dolares" title="Apple celebrará hoy una rueda de prensa para inversores para anunciar lo que quiere hacer con sus cien mil millones de dólares" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">Apple celebrará hoy una rueda de prensa para inversores para anunciar lo que quiere hacer con sus cien mil millones de dólares</a></li>
+	<li><a href="/curiosidades/no-depende-solo-de-la-resolucion-comparan-el-video-a-1080p-de-apple-con-el-de-los-discos-blu-ray" title="No depende sólo de la resolución: comparan el vídeo a 1080p de Apple con el de los discos Blu-Ray" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">No depende sólo de la resolución: comparan el vídeo a 1080p de Apple con el de los discos Blu-Ray</a></li>
+	<li><a href="/ipad/el-nuevo-ipad-no-carga-su-bateria-al-ejecutar-algunas-aplicaciones-o-juegos" title="El nuevo iPad no carga su batería al ejecutar algunas aplicaciones o juegos " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">El nuevo iPad no carga su batería al ejecutar algunas aplicaciones o juegos </a></li>
+	<li><a href="/ipad/nvidia-pide-pruebas-a-apple-de-que-el-a5x-sea-cuatro-veces-mas-potente-que-tegra-3" title="nVidia pide pruebas a Apple de que el A5X sea cuatro veces más potente que Tegra 3 " onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">nVidia pide pruebas a Apple de que el A5X sea cuatro veces más potente que Tegra 3 </a></li>
+	<li><a href="/apple/si-no-podemos-hacer-algo-que-sea-mejor-no-lo-hacemos-jonathan-ive-habla-con-el-london-evening-standard" title="&quot;Si no podemos hacer algo que sea mejor, no lo hacemos&quot;, Jonathan Ive habla con el London Evening Standard" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">&quot;Si no podemos hacer algo que sea mejor, no lo hacemos&quot;, Jonathan Ive habla con el London Evening Standard</a></li>
+	<li><a href="/ipad/el-nuevo-ipad-vende-tres-millones-de-unidades-solo-en-su-primer-fin-de-semana" title="El nuevo iPad vende tres millones de unidades sólo en su primer fin de semana" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">El nuevo iPad vende tres millones de unidades sólo en su primer fin de semana</a></li>
+	<li><a href="/ipad/la-industria-de-los-videojuegos-se-vuelca-en-el-nuevo-ipad" title="La industria de los videojuegos se vuelca en el nuevo iPad" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">La industria de los videojuegos se vuelca en el nuevo iPad</a></li>
+	<li><a href="/ipad/primeras-fotos-y-capturas-de-pantalla-del-nuevo-ipad" title="Primeras fotos y capturas de pantalla del nuevo iPad" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-comentarios-lateral', 'lo-mas-comentado-enlace')">Primeras fotos y capturas de pantalla del nuevo iPad</a></li>
+
+            </ol>
+	  </div>
+          <!-- end top-10-comentado -->
+	</div>
+      </div>
+
+      
+      <div id="secciones" class="module">
+	<h2><span>Secciones</span></h2>
+	<div class="module-content">
+	     <div class="category">
+    <h3>Ecosistema Apple</h3>
+    <ul>
+            <li><a href="/categoria/accesorios" title="Todos los articulos de la categoria Accesorios" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ecosistema Apple')">Accesorios</a></li>
+                                <li><a href="/categoria/apple" title="Todos los articulos de la categoria Apple" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ecosistema Apple')">Apple</a></li>
+                                                <li><a href="/categoria/curiosidades" title="Todos los articulos de la categoria Curiosidades" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ecosistema Apple')">Curiosidades</a></li>
+                                                                                                                                        <li><a href="/categoria/rumores" title="Todos los articulos de la categoria Rumores" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ecosistema Apple')">Rumores</a></li>
+                                  </ul>
+  </div>
+     <div class="category">
+    <h3>Gadgets</h3>
+    <ul>
+                            <li><a href="/categoria/aplicaciones-moviles" title="Todos los articulos de la categoria Aplicaciones Móviles" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Gadgets')">Aplicaciones Móviles</a></li>
+                        <li><a href="/categoria/apple-tv" title="Todos los articulos de la categoria Apple TV" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Gadgets')">Apple TV</a></li>
+                                                                                        <li><a href="/categoria/ipad" title="Todos los articulos de la categoria iPad" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Gadgets')">iPad</a></li>
+                <li><a href="/categoria/iphone" title="Todos los articulos de la categoria iPhone" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Gadgets')">iPhone</a></li>
+                <li><a href="/categoria/ipod" title="Todos los articulos de la categoria iPod" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Gadgets')">iPod</a></li>
+                                                                                                  </ul>
+  </div>
+     <div class="category">
+    <h3>Miscelanea</h3>
+    <ul>
+                                                    <li><a href="/categoria/applesfera" title="Todos los articulos de la categoria Applesfera" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Miscelanea')">Applesfera</a></li>
+                <li><a href="/categoria/applesfera-podcast" title="Todos los articulos de la categoria Applesfera Podcast" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Miscelanea')">Applesfera Podcast</a></li>
+                <li><a href="/categoria/applesfera-responde" title="Todos los articulos de la categoria Applesfera responde" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Miscelanea')">Applesfera responde</a></li>
+                                                        <li><a href="/categoria/general" title="Todos los articulos de la categoria General" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Miscelanea')">General</a></li>
+                                                                                        <li><a href="/categoria/profesional" title="Todos los articulos de la categoria Profesional" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Miscelanea')">Profesional</a></li>
+                                          </ul>
+  </div>
+     <div class="category">
+    <h3>Ordenadores</h3>
+    <ul>
+                                                                                                                                                                                            <li><a href="/categoria/portatil" title="Todos los articulos de la categoria Portátil" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ordenadores')">Portátil</a></li>
+                                <li><a href="/categoria/sobremesa" title="Todos los articulos de la categoria Sobremesa" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Ordenadores')">Sobremesa</a></li>
+                          </ul>
+  </div>
+     <div class="category">
+    <h3>Software</h3>
+    <ul>
+                    <li><a href="/categoria/aplicaciones" title="Todos los articulos de la categoria Aplicaciones" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">Aplicaciones</a></li>
+                                                                                <li><a href="/categoria/deskmod" title="Todos los articulos de la categoria Deskmod" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">Deskmod</a></li>
+                                                                <li><a href="/categoria/itunes" title="Todos los articulos de la categoria iTunes" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">iTunes</a></li>
+                <li><a href="/categoria/mac-app-store" title="Todos los articulos de la categoria Mac App Store" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">Mac App Store</a></li>
+                                <li><a href="/categoria/os-x" title="Todos los articulos de la categoria OS X" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">OS X</a></li>
+                                                        <li><a href="/categoria/widgets" title="Todos los articulos de la categoria Widgets" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-lateral-secciones', 'clic-Software')">Widgets</a></li>
+          </ul>
+  </div>
+  
+  
+
+	  <p class="nav"><a href="/archivos" class="button" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo­lateral-secciones', 'clic-archivos')"><span>Archivo</span></a></p>
+	</div>  
+      </div>
+    
+          </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(function()
+  {
+    WSL.initSidebar();
+  });
+
+  var size = $("#sky-side .ad").height();
+  var nocollapse = $("#nocollapse").length;
+  if ( size < 100 && nocollapse == 0 ){
+	      $("#side").css('margin','370px 0 50px 10px');
+	      $("#sky-side").css('height','30px');
+  }
+
+  var size2 = $("#roba-post .ad").height();
+  if ( size2 < 50){
+                $("#roba-post").css('margin','0 0 0 0');
+                $("#roba-post").hide();
+  }
+</script>
+
+
+                
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', "UA-78515-40"]);
+  _gaq.push(['_setCookieTimeout', "259200"]);
+  _gaq.push(['_setDomainName', '.applesfera.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+  
+  _gaq.push(['t2._setAccount', "UA-78515-62"]);
+  _gaq.push(['t2._setCookieTimeout', "259200"]);
+  _gaq.push(['t2._setDomainName', '.applesfera.com']);
+  _gaq.push(['t2._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); 
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+
+  try {
+    var fakeTracker = _gat._getTracker("UA-0000000-1");
+    fakeTracker._trackPageview();
+  } catch(err){}
+
+  /* cw-algorythm*/
+  var __utmp=getcookie('__utmz',true);var __ignore="www.applesfera.com";var __searray=new Array();__searray["google"]="q";__searray["bing"]="q";__searray["yahoo"]="p";__searray["msn"]="q";__searray["aol"]="query";__searray["aol"]="encquery";__searray["lycos"]="query";__searray["ask"]="q";__searray["altavista"]="q";__searray["netscape"]="query";__searray["cnn"]="query";__searray["looksmart"]="qt";__searray["about"]="terms";__searray["mamma"]="query";__searray["alltheweb"]="q";__searray["gigablast"]="q";__searray["voila"]="rdata";__searray["virgilio"]="qs";__searray["live"]="q";__searray["baidu"]="wd";__searray["alice"]="qs";__searray["yandex"]="text";__searray["najdi"]="q";__searray["aol"]="q";__searray["club-internet"]="query";__searray["mama"]="query";__searray["seznam"]="q";__searray["search"]="q";__searray["wp"]="szukaj";__searray["onet"]="qt";__searray["netsprint"]="q";__searray["google.interia"]="q";__searray["szukacz"]="q";__searray["yam"]="k";__searray["pchome"]="q";__searray["kvasir"]="searchExpr";__searray["sesam"]="q";__searray["ozu"]="q";__searray["terra"]="query";__searray["nostrum"]="query";__searray["mynet"]="q";__searray["ekolay"]="q";__searray["search.ilse"]="search_for";if(__utmp.length>"0"){var __utmc1=getcookie("__utmc1",false);var __utmc2=getcookie("__utmc2",false);var __gclid=matchregex("utmgclid");var __medium=matchregex("utmcmd");if(__medium=="(none)"){var __source=matchregex("utmcsr");if(__source=="(direct)"){configurecwcookie("direct")}}else if(__medium!="(none)"&&document.referrer==""){configurecwcookie("direct")}else if(__medium=="referral"){var __source=matchregex("utmcsr");configurecwcookie("referral ("+__source+")")}else if(__medium=="organic"){var __source=matchregex("utmcsr");var __keyword=matchregex("utmctr");var __referrer=document.referrer;var refpatt=new RegExp("https?://([^/]*)/?");var __referrerDomain=refpatt.exec(__referrer);var __queryparam=__searray[__source];var patt=new RegExp("https?://.*"+__source+".*[?&]"+__queryparam+"=.*");if(result=patt.exec(__referrer)){configurecwcookie(__source+" ("+__medium+") ("+__keyword+")")}else{if(__referrerDomain[1]!=__ignore){configurecwcookie("referral ("+__referrerDomain[1]+")")}}}else if(__medium=="cpc"||__medium=="ppc"||typeof __gclid!=null){var __source=matchregex("utmcsr");var __keyword=matchregex("utmctr");var __medium="cpc";if(typeof __gclid!=null){__source="google"}var __referrer=document.referrer;var refpatt=new RegExp("https?://([^/]*)/?");var __referrerDomain=refpatt.exec(__referrer);var __queryparam=__searray[__source];var patt=new RegExp("https?://.*"+__source+".*[?&]"+__queryparam+"=.*");if(result=patt.exec(__referrer)){configurecwcookie(__source+" ("+__medium+") ("+__keyword+")")}else{if(__referrerDomain[1]!=__ignore){configurecwcookie("referral ("+__referrerDomain[1]+")")}}}}var firstTail=getcookie("__utmc1",false);var longTail=getcookie("__utmc2",false);
+  
+  try {
+    firstTail = firstTail.replace(/ \| /g,"--").replace(/ /g, "_")
+    longTail = longTail.replace(/ \| /g,"--").replace(/ /g, "_")
+    fakeTracker._setCustomVar(1,"First_Tail",firstTail,1);
+    fakeTracker._setCustomVar(2,"Long_Tail",longTail,1);
+  } catch(err) {}
+  
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "11306788" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=11306788&cv=2.0&cj=1" />
+</noscript>
+
+
+
+<div id="recommended">
+    <h2><span></span>Contenidos recomendados en Applesfera</h2>
+    <div class="module-content">
+        <div class="module-content">
+                            <div class="content-type">
+                    <h3>Tutoriales Snow Leopard</h3>
+                    <ul>
+                                                                                    <li><a href="http://www.applesfera.com/apple/como-actualizar-a-snow-leopard-analisis-de-todas-las-opciones" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales Snow Leopard')">Cómo actualizar</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li><a href="http://www.applesfera.com/applesfera-responde/applesfera-responde-como-hacer-una-copia-de-seguridad-y-restaurar-los-archivos-importantes-de-tu-mac" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales Snow Leopard')">Cómo restaurar desde backup</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/apple/applesfera-responde-como-restaurar-todo-tu-mac-con-una-copia-de-time-machine" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales Snow Leopard')">Cómo restaurar desde Time Machine</a></li>
+                                                                                                                                                                                                                                    </ul>
+                </div>
+                            <div class="content-type">
+                    <h3>Especiales a fondo</h3>
+                    <ul>
+                                                                                                                                        <li><a href="http://www.applesfera.com/apple/ibooks-author-a-fondo-crea-tus-propios-libros-interactivos" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Especiales a fondo')">iBooks Author a fondo</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li><a href="http://www.applesfera.com/applesfera-responde/icloud-preguntas-y-respuestas-sobre-el-nuevo-servicio-de-apple-en-la-nube" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Especiales a fondo')">iCloud, preguntas y respuestas</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/tag/nuevo-iphone-4s" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Especiales a fondo')">nuevo iPhone 4S</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/apple/comparativa-del-ipad-2-con-los-tablets-de-motorola-samsung-hp-y-blackberry-cual-es-el-mejor" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Especiales a fondo')">Comparativa de tablets</a></li>
+                                                                        </ul>
+                </div>
+                            <div class="content-type">
+                    <h3>Screencasts</h3>
+                    <ul>
+                                                                                                                                                                                            <li><a href="http://www.applesfera.com/mac-os/screencast-automator-redimensiona-y-renombra-tus-fotos-en-un-momento" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Screencasts')">Redimensionar y renombrar con Automator</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/software/anadir-marcadores-de-tiempo-en-imovie-09-screencast" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Screencasts')">Añadir marcadores de tiempo en iMovie 09</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/busqueda?q=screencast+switchers&domains=http%3A%2F%2Fwww.applesfera.com&sitesearch=http%3A%2F%2Fwww.applesfera.com&client=pub-9977500652563564&forid=1&channel=8471036828&ie=UTF-8&oe=UTF-8&cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Screencasts')">Screencasts para Switchers</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                </div>
+                            <div class="content-type">
+                    <h3>Tutoriales</h3>
+                    <ul>
+                                                                                                                                                                                                                                                                                                                                                        <li><a href="http://www.applesfera.com/mac-os/carpetas-inteligentes-como-trabajar-con-ellas-en-mac-os-x" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales')">Carpetas inteligentes</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/iphone/como-activar-o-desactivar-compartir-internet-del-iphone-desde-mac-os-x" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales')">Activar y desactivar 'Compartir Internet' </a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/mac-os/instalar-mac-os-x-desde-cualquier-dispositivo-de-almacenamiento" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Tutoriales')">Instalar Mac OS X desde cualquier dispositivo</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                </div>
+                            <div class="content-type">
+                    <h3>Secciones Applesfera</h3>
+                    <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li><a href="http://www.applesfera.com/busqueda?q=imagen+de+la+semana&domains=http%3A%2F%2Fwww.applesfera.com&sitesearch=http%3A%2F%2Fwww.applesfera.com&client=pub-9977500652563564&forid=1&channel=8471036828&ie=UTF-8&oe=UTF-8&cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%233" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Secciones Applesfera')">Imagen de la semana</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/categoria/applesfera-responde" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Secciones Applesfera')">Applesfera responde</a></li>
+                                                                                                                <li><a href="http://www.applesfera.com/tag/recopilacion+one+more+thing" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-contenidosrecomendados', 'clic-Secciones Applesfera')">One More Thing</a></li>
+                                                                                                                                                                                                                                                                                                                                            </ul>
+                </div>
+                    </div>
+    </div>
+</div>
+
+  
+
+<div id="module-wsl">
+	<h2><a href="http://www.weblogssl.com"><span></span>WSL Weblogs SL</a></h2>
+	<div class="module-content">
+				<div class="category">
+			<h3>Tecnología</h3>
+			<ul>
+								<li>
+					<a href="http://www.xataka.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka')">
+						Xataka					</a>
+				</li>
+								<li>
+					<a href="http://www.xatakamovil.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka M&oacute;vil')">
+						Xataka M&oacute;vil					</a>
+				</li>
+								<li>
+					<a href="http://www.xatakafoto.com/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka Foto')">
+						Xataka Foto					</a>
+				</li>
+								<li>
+					<a href="http://www.xatakaon.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka On')">
+						Xataka On					</a>
+				</li>
+								<li>
+					<a href="http://www.xatakaciencia.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka Ciencia')">
+						Xataka Ciencia					</a>
+				</li>
+								<li>
+					<a href="http://www.genbeta.com/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Genbeta')">
+						Genbeta					</a>
+				</li>
+								<li>
+					<a href="http://www.applesfera.com/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Applesfera')">
+						Applesfera					</a>
+				</li>
+								<li>
+					<a href="http://www.vidaextra.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'VidaExtra')">
+						VidaExtra					</a>
+				</li>
+								<li>
+					<a href="http://www.nacionred.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Naci&oacute;n Red')">
+						Naci&oacute;n Red					</a>
+				</li>
+								<li>
+					<a href="http://www.xatakandroid.com/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka Android')">
+						Xataka Android					</a>
+				</li>
+								<li>
+					<a href="http://www.genbetadev.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Genbeta Dev')">
+						Genbeta Dev					</a>
+				</li>
+								<li>
+					<a href="http://www.genbetasocialmedia.com/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Genbeta Social Media')">
+						Genbeta Social Media					</a>
+				</li>
+							</ul>
+		</div>
+						<div class="category">
+			<h3>Entretenimiento</h3>
+			<ul>
+                				<li>
+					<a href="http://www.blogdecine.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Blog de cine')">
+						Blog de cine					</a>
+				</li>
+								<li>
+					<a href="http://www.vayatele.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', '¡Vaya tele!')">
+						¡Vaya tele!					</a>
+				</li>
+								<li>
+					<a href="http://www.hipersonica.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Hipersónica')">
+						Hipersónica					</a>
+				</li>
+								<li>
+					<a href="http://www.diariodelviajero.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Diario del viajero')">
+						Diario del viajero					</a>
+				</li>
+								<li>
+					<a href="http://www.papelenblanco.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Papel en blanco')">
+						Papel en blanco					</a>
+				</li>
+								<li>
+					<a href="http://www.poprosa.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Poprosa')">
+						Poprosa					</a>
+				</li>
+								<li>
+					<a href="http://www.zonafandom.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Zona Fandom')">
+						Zona Fandom					</a>
+				</li>
+								<li>
+					<a href="http://www.fandemia.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Fandemia')">
+						Fandemia					</a>
+				</li>
+							</ul>
+		</div>
+						<div class="category">
+			<h3>Estilos de vida</h3>
+			<ul>
+                				<li>
+					<a href="http://www.trendencias.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Trendencias')">
+						Trendencias					</a>
+				</li>
+								<li>
+					<a href="http://www.bebesymas.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Beb&eacute;s y m&aacute;s')">
+						Beb&eacute;s y m&aacute;s					</a>
+				</li>
+								<li>
+					<a href="http://www.directoalpaladar.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Directo al paladar')">
+						Directo al paladar					</a>
+				</li>
+								<li>
+					<a href="http://www.compradiccion.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Compradicci&oacute;n')">
+						Compradicci&oacute;n					</a>
+				</li>
+								<li>
+					<a href="http://www.decoesfera.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Decoesfera')">
+						Decoesfera					</a>
+				</li>
+								<li>
+					<a href="http://www.embelezzia.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Embelezzia')">
+						Embelezzia					</a>
+				</li>
+								<li>
+					<a href="http://www.vitonica.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Vit&oacute;nica')">
+						Vit&oacute;nica					</a>
+				</li>
+								<li>
+					<a href="http://www.ambienteg.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Ambiente G')">
+						Ambiente G					</a>
+				</li>
+								<li>
+					<a href="http://www.trendenciasbelleza.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Trendencias Belleza')">
+						Trendencias Belleza					</a>
+				</li>
+								<li>
+					<a href="http://www.trendenciashombre.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Trendencias Hombre')">
+						Trendencias Hombre					</a>
+				</li>
+								<li>
+					<a href="http://www.pequesymas.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Peques y más')">
+						Peques y más					</a>
+				</li>
+							</ul>
+		</div>
+						<div class="category">
+			<h3>Motor y deportes</h3>
+			<ul>
+                				<li>
+					<a href="http://www.motorpasion.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Motorpasi&oacute;n')">
+						Motorpasi&oacute;n					</a>
+				</li>
+								<li>
+					<a href="http://www.motorpasionf1.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Motorpasión F1')">
+						Motorpasión F1					</a>
+				</li>
+								<li>
+					<a href="http://www.motorpasionmoto.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Motorpasión Moto')">
+						Motorpasión Moto					</a>
+				</li>
+								<li>
+					<a href="http://www.notasdefutbol.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Notas de f&uacute;tbol')">
+						Notas de f&uacute;tbol					</a>
+				</li>
+								<li>
+					<a href="http://www.fueradelimites.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Fuera de l&iacute;mites')">
+						Fuera de l&iacute;mites					</a>
+				</li>
+								<li>
+					<a href="http://www.motorpasionfuturo.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Motorpasión Futuro')">
+						Motorpasión Futuro					</a>
+				</li>
+							</ul>
+		</div>
+						<div class="category">
+			<h3>Econom&iacute;a</h3>
+			<ul>
+                				<li>
+					<a href="http://www.elblogsalmon.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'El Blog Salm&oacute;n')">
+						El Blog Salm&oacute;n					</a>
+				</li>
+								<li>
+					<a href="http://www.pymesyautonomos.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Pymes y Aut&oacute;nomos')">
+						Pymes y Aut&oacute;nomos					</a>
+				</li>
+								<li>
+					<a href="http://www.tecnologiapyme.com/"  onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Tecnolog&iacute;a Pyme')">
+						Tecnolog&iacute;a Pyme					</a>
+				</li>
+								<li>
+					<a href="http://www.ahorrodiario.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Ahorro diario')">
+						Ahorro diario					</a>
+				</li>
+							</ul>
+		</div>
+						<div class="category">
+			<h3>Participamos en</h3>
+			<ul>
+                				<li>
+					<a href="http://www.ebayers.es/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'eBayers')">
+						eBayers					</a>
+				</li>
+								<li>
+					<a href="http://www.circulaseguro.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Circula seguro')">
+						Circula seguro					</a>
+				</li>
+								<li>
+					<a href="http://www.actibva.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Actibva')">
+						Actibva					</a>
+				</li>
+								<li>
+					<a href="http://www.anexom.es/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Anexo-m')">
+						Anexo-m					</a>
+				</li>
+								<li>
+					<a href="http://blog.cocacola.es/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Happing Magazine')">
+						Happing Magazine					</a>
+				</li>
+								<li>
+					<a href="http://blog.sage.es/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Blog Sage')">
+						Blog Sage					</a>
+				</li>
+								<li>
+					<a href="http://www.optimismodigital.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Optimismo Digital')">
+						Optimismo Digital					</a>
+				</li>
+								<li>
+					<a href="http://www.1001experiencias.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', '1001 experiencias')">
+						1001 experiencias					</a>
+				</li>
+								<li>
+					<a href="http://www.ennaranja.com/" rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'En Naranja')">
+						En Naranja					</a>
+				</li>
+							</ul>
+		</div>
+				<div class="annex-blogs">
+            <h3>Publicaciones en Latinoamérica</h3>
+            <ul>
+            	                <li class="annex-category">
+                    <h4>Tecnologia</h4>
+					<ul>
+										<li>
+					<a href="http://www.xataka.com.br/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka Brasil')">
+                        Xataka Brasil                    </a>
+					</li>
+										<li>
+					<a href="http://www.xataka.com.mx/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Xataka México')">
+                        Xataka México                    </a>
+					</li>
+										</ul>
+			    </li>
+						    </ul>
+	        <ul>
+                            </ul>
+	        <ul>
+                                <li class="annex-category">
+                    <h4>Estilos de vida</h4>
+                    <ul>
+                                        <li>
+                    <a href="http://www.trendencias.com.br/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'tRendências Brasil')">
+                        tRendências Brasil                    </a>
+                    </li>
+                                        </ul>
+                </li>
+                            </ul>
+            <ul>
+                                <li class="annex-category">
+                    <h4>Motor y deportes</h4>
+                    <ul>
+                                        <li>
+                    <a href="http://www.motorpasion.com.br/"  rel="nofollow" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'Motorpasi&oacute;n Brasil')">
+                        Motorpasi&oacute;n Brasil                    </a>
+                    </li>
+                                        </ul>
+                </li>
+                            </ul>
+            <ul>
+                            </ul>
+            <ul>
+                            </ul>
+        </div>
+		<p class="nav"><a href="#header" onclick="return WSL_Controller_GoogleAnalytics.registerClick('modulo-piepagina-weblogscorporate', 'clic-volver-arriba')"><span>&uarr;</span> volver arriba</a></p>
+	</div>
+</div>
+
+
+<div id="footer" class="clearfix">
+        <a rel="nofollow" href="/acercade">Acerca de Applesfera</a> | 
+        
+        <a rel="nofollow" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a> |
+        
+         <a rel="nofollow" href="http://www.weblogssl.com/aviso">Aviso legal</a> | 
+    
+        <a href="http://www.socialmediasl.com/applesfera.php" title="Publicidad en Applesfera">Publicidad</a> |
+            <a rel="nofollow" href="/ayuda">Ayuda</a> |
+                <a rel="nofollow" href="/contacto">Contacto</a>
+    </div>
+<script type="text/javascript">
+$(function()
+  {
+      WSL_Analytics_Event_Manager.init();
+      
+  }
+);
+</script>
+
+
+
+<div id="wsl_dialog"></div>
+
+<script type="text/javascript">
+(function(w, d) { var a = function() { var a =
+d.createElement('script'); a.type = 'text/javascript';
+   a.async = 'async'; a.src = '//' + ((w.location.protocol ===
+'https:') ? 's3.amazonaws.com/cdx-radar/' :
+   'radar.cedexis.com/') + '01-10604-radar10.min.js'; d.body.appendChild(a); };
+   if (w.addEventListener) { w.addEventListener('load', a, false); }
+   else if (w.attachEvent) { w.attachEvent('onload', a); }
+}(window, document));
+</script>
+
+
+    
+</div>
+<script type="text/javascript">
+$(function()
+  {
+      WSL.initFavicons();
+  }
+);
+</script>
+<iframe id="favicons-list" src="" width="100%" height="25" frameborder="0" align="top"></iframe>
+
+
+
+</body>
+</html>
+
+

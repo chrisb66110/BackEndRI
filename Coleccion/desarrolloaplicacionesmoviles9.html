@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+  <head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Meta Images -->
+	<link rel="shortcut icon" href="http://www.cocoaosx.com/wp-content/themes/iblogpro/core/images/favicon-pagelines.ico" type="image/x-icon" />	
+<!-- Title and External Script Integration -->
+			<title>Cómo crear apps para el iPhone partiendo de cero | Cocoa Mental</title>
+		
+<!-- Stylesheets -->
+
+	<link rel="stylesheet" href="http://www.cocoaosx.com/wp-content/themes/iblogpro/style.css" type="text/css" media="screen" />	
+	<style type="text/css">
+
+
+
+
+
+
+
+
+
+	
+
+
+	body{}
+.single #wrapper      { width: 960px; }
+.single #maincontent { width: 960px; }
+.single-post #sidebar { display: none; }
+</style>
+	
+
+<!-- Wordpress Stuff -->
+	<meta name="generator" content="WordPress 3.3.1" /> <!-- leave this for stats -->
+	<link rel="pingback" href="http://www.cocoaosx.com/xmlrpc.php" />
+	 <!-- This makes the comment box appear where the ‘reply to this comment’ link is -->
+	
+<!-- Modules w/ Javascript -->	
+					<!-- IE -->
+
+<!--[if IE 6]>
+	<script src="http://www.cocoaosx.com/wp-content/themes/iblogpro/core/js/belatedpng.js"></script>
+	<script>
+	  DD_belatedPNG.fix('.pngbg, a.home, #nav,.searchform .left, .searchform .right, .searchform .s, .fcol_pad img, .fbox img, #respond h3, #cred.pagelines a, .post .date, .headerimage, #sidebar div ul li a');
+	 </script>	
+	<style>
+		#header #blogtitle .sheen {display: none;height: 1px;}
+		#featurenav a span.nav_thumb span.nav_overlay {background: transparent;display:none}
+		 #nav ul li {background: transparent}
+		.fbox {overflow:hidden}
+	</style>
+<![endif]-->	
+
+<!-- Font Replacement -->
+  	<!-- Font Replacement -->
+	<script type="text/javascript" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/core/js/cufon-yui.js" ></script>	
+			<script type="text/javascript" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/js/Carto.font.js" ></script>
+		<script type="text/javascript">
+	/* <![CDATA[ */
+					Cufon.replace('.site-description, .fcontent .fsub, .fcontent .ftitle, .pagetitle, .footer-site-title', {hover: true});
+			/* ]]> */
+	</script>	
+		
+	<link rel="alternate" type="application/rss+xml" title="Cocoa Mental &raquo; Feed" href="http://www.cocoaosx.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cocoa Mental &raquo; Comments Feed" href="http://www.cocoaosx.com/comments/feed/" />
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-4066080-11']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="Cocoa Mental &raquo; Cómo crear apps para el iPhone partiendo de cero Comments Feed" href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/feed/" />
+<link rel='stylesheet' id='flick-css'  href='http://www.cocoaosx.com/wp-content/plugins/mailchimp//css/flick/flick.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-style-css'  href='http://www.cocoaosx.com/wp-content/plugins/crayon-syntax-highlighter/css/style.css?ver=1.8.1' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://www.cocoaosx.com/wp-content/themes/iblogpro/css/ie7.css?ver=3.3.1' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='pro-css'  href='http://www.cocoaosx.com/wp-content/themes/iblogpro/pro/css/pro.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='scheme-black-css'  href='http://www.cocoaosx.com/wp-content/themes/iblogpro/pro/css/color_black.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dropdown-css'  href='http://www.cocoaosx.com/wp-content/themes/iblogpro/pro/css/dropdown.css?ver=3.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.2.6'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-includes/js/jquery/jquery.form.js?ver=2.73'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/www.cocoaosx.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.2.6'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.8.16'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/mailchimp//js/datepicker.js?ver=3.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var QCAjax = {"ajaxurl":"http:\/\/www.cocoaosx.com\/wp-admin\/admin-ajax.php","nonce":"93ac8b52c7","nextquote":"Next quote\u00a0\u00bb","loading":"Loading...","error":"Error getting quote","auto_refresh_max":"30","auto_refresh_count":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/quotes-collection/quotes-collection.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/crayon-syntax-highlighter/js/crayon.js?ver=1.8.1'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/plugins/crayon-syntax-highlighter/js/jquery.popup.js?ver=1.8.1'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cocoaosx.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.cocoaosx.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Lo que las mujeres deben al iPhone' href='http://www.cocoaosx.com/2012/01/09/lo-que-las-mujeres-deben-al-iphone/' />
+<link rel='next' title='Como eliminar el nombre de usuario de la barra de menus de OSX Lion' href='http://www.cocoaosx.com/2012/01/09/como-eliminar-el-nombre-de-usuario-de-la-barra-de-menus-de-osx-lion/' />
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='shortlink' href='http://www.cocoaosx.com/?p=1026' />
+
+<!-- Facebook Open Graph metatags added by WordPress plugin. Get it at: http://www.linksalpha.com/widgets/clickngo -->
+<meta property="og:site_name" content="Cocoa Mental" />
+<meta property="og:title" content="Cómo crear apps para el iPhone partiendo de cero" />
+<meta property="og:url" content="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/" />
+<meta property="og:image" content="http://www.cocoaosx.com/wp-content/uploads/apple-ipad-top-10-free-ipad-only-apps.jpg" />
+<meta property="og:description" content="Actualización 10 de Enero 2012: Rellena esta encuesta y podrías ganar una matrícula gratis para el curso de desarrollo de apps para iPhone &amp;amp; iPad para usuarios sin experiencia previa de programación. La fiebre del momento: hacer &quot;Apps&quot; para el iPhone y el iPad A menudo me pregu..." />
+<meta property="og:type" content="article" />
+<!-- End Facebook Open Graph metatags-->
+
+<!-- All in One SEO Pack 1.6.13.8 by Michael Torbert of Semper Fi Web Design[517,575] -->
+<meta name="description" content="Actualización 10 de Enero 2012: Rellena esta encuesta y podrías ganar una matrícula gratis para el curso de desarrollo de apps para iPhone &amp; iPad para" />
+<meta name="keywords" content="apple,cocoa,cocoa-touch,ios,ios (apple),ipad,iphone,objective c,programming,xcode,cocoa osx,cocoa touch,curso programación iphone,desarrollo xcode,tutorial programación iphone" />
+<link rel="canonical" href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/" />
+<!-- /all in one seo pack -->
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').datepicker({
+				autoFocusNextInput: true,
+				constrainInput: false,
+				changeMonth: true,
+				changeYear: true,
+				beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+				dateFormat: 'yy/mm/dd',
+			});			
+			
+			d = new Date();
+			$('.birthdate-pick').datepicker({
+				autoFocusNextInput: true,
+				constrainInput: false,
+				changeMonth: true,
+				changeYear: false,
+				minDate: new Date(d.getFullYear(), 1-1, 1),
+				maxDate: new Date(d.getFullYear(), 12-1, 31),
+				beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+				dateFormat: 'mm/dd',
+			});
+			
+				
+		});
+	</script>
+		<link rel="stylesheet" type="text/css" href="http://www.cocoaosx.com/wp-content/plugins/quotes-collection/quotes-collection.css" />
+	<script type="text/javascript">
+/* <![CDATA[ */
+	var $j = jQuery.noConflict();
+	
+	$j(document).ready(function () {
+				$j("#accordion").accordion({ 
+						autoHeight: false		});
+				
+		$j("#drag_drop_sidebar").sortable();
+		$j("#drag_drop_sidebar").disableSelection();
+		
+	});	
+/* ]]> */
+</script>
+</head>
+<body class="single single-post postid-1026 single-format-standard">
+
+<div id="page" class="fix">
+  <div id="wrapper" class="fix" >
+    <div id="header" class="fix">
+					<a href="http://www.cocoaosx.com">
+			<img class="headerimage" src="http://www.cocoaosx.com/wp-content/uploads/new-cocoa1b.jpg" alt="Cocoa Mental"/>
+			</a>
+				<!-- iphone icons -->
+	<div class="icons">
+
+								<div class="nav-icon">
+				<a href='http://www.cocoaosx.com/feed/'><img class="pngbg" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/iphone/rss.png" alt="icon"/></a>
+			</div>
+									
+			
+													<div class="nav-icon">
+							<a href='http://es.linkedin.com/in/fernandorodriguezromero'><img class="pngbg" rel="me" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/iphone/linkedin.png" alt="icon"/></a>
+						</div>	 
+						
+								<div class="nav-icon">
+						<a href='@frr149'><img class="pngbg" rel="me" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/iphone/twitter.png" alt="icon"/></a>
+					</div> 
+					
+								<div class="nav-icon">
+						<a href='http://www.cocoaosx.com/contacto/'><img class="pngbg" src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/iphone/mail.png" alt="icon"/></a>
+					</div> 
+							</div>
+<!-- /end iphone icons -->	
+	</div><!-- /header -->
+	<div id="nav" class="fix">
+	<ul class="fix homebutton">
+		<li class="page_item navfirst">
+		
+			<a class="home" href="http://www.cocoaosx.com/" title="Home" style="background-image: url('http://www.cocoaosx.com/wp-content/themes/iblogpro/images/home-icon-trans.png');">
+				Home	
+			</a>
+		</li>
+	</ul>
+	
+			<ul id="menu-header" class="mnav dropdown fix"><li id="menu-item-770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-770"><a href="http://www.cocoaosx.com/autor/">Autor</a></li>
+<li id="menu-item-769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-769"><a href="http://www.cocoaosx.com/cursos/">Cursos</a>
+<ul class="sub-menu">
+	<li id="menu-item-1143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1143"><a href="http://www.cocoaosx.com/cursos/curso-de-introduccion-a-la-programacion-de-dispositivos-moviles-iphone-ipad-y-android-de-la-nada-a-la-appstore/">Curso de INTRODUCCIÓN a la Programacion de Dispositivos Moviles (iPhone, iPad y Android): NIVEL 0</a></li>
+	<li id="menu-item-772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772"><a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/">Curso iOS BÁSICO para iPhone y iPad: de Xcode a la AppStore. NIVEL I</a></li>
+	<li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771"><a href="http://www.cocoaosx.com/cursos/programacion-iphone-avanzado/">Curso iOS INTERMEDIO para iPhone &#038; iPad: Destacándose en la AppStore. NIVEL II</a></li>
+	<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a href="http://www.cocoaosx.com/cursos/core-data/">Curso Monográfico AVANZADO de &#8220;Core Data&#8221;. NIVEL III</a></li>
+	<li id="menu-item-843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-843"><a href="http://www.cocoaosx.com/cursos/core-graphics-core-animation/">Curso Monográfico AVANZADO &#8220;Core Graphics&#8221; &#038; &#8220;Core Animation&#8221;. NIVEL III</a></li>
+	<li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="http://www.cocoaosx.com/cursos/curso-monografico-core-motion-core-location/">Curso Monográfico AVANZADO &#8220;Core Motion&#8221; &#038; &#8220;Core Location&#8221;. NIVEL III</a></li>
+	<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://www.cocoaosx.com/cursos/formacion-a-medida/">Formación a Medida en Desarrollo iPhone &#038; iPad</a></li>
+	<li id="menu-item-994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-994"><a href="http://www.cocoaosx.com/cursos/curso-de-ipad-nivel-usuario/">Curso de iPad Nivel Usuario para Empresas</a></li>
+	<li id="menu-item-910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-910"><a href="http://www.cocoaosx.com/category/tutorial-programacion-iphone/">Tutoriales de Programación iPhone &#038; iPad</a></li>
+</ul>
+</li>
+<li id="menu-item-768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-768"><a href="http://www.cocoaosx.com/fridays-at-fridays-bits-y-colesterol-a-tutiplen-en-madrid/">Fridays at Friday&#8217;s</a></li>
+<li id="menu-item-1908" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1908"><a href="http://www.cocoaosx.com">¡Grandes Éxitos!</a>
+<ul class="sub-menu">
+	<li id="menu-item-1909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1909"><a href="http://www.cocoaosx.com/category/big-nerd-ranch/">Big Nerd Ranch</a></li>
+	<li id="menu-item-1910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1910"><a href="http://www.cocoaosx.com/2012/03/19/fernando-rodriguez-codemotion-2012/">CodeMotion 2012</a></li>
+</ul>
+</li>
+<li id="menu-item-777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a href="http://www.cocoaosx.com/category/english/">English</a></li>
+</ul>				<form method="get" class="searchform" action="http://www.cocoaosx.com/">
+	<span class="left"></span>
+		<input type="text" value="Search" name="s" class="s" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+	<span class="right"></span>
+	<input type="submit" class="searchsubmit" value="Go" />
+</form>
+	<div class="clear"></div>
+</div><!-- /nav -->
+
+	<div id="container" class="fix ">
+		<!-- Code for subnav if pages have parents.. -->
+
+<div id="maincontent">
+<div id="content">
+
+	 			<div class="post-nav"> <span class="previous"><a href="http://www.cocoaosx.com/2012/01/09/lo-que-las-mujeres-deben-al-iphone/" rel="prev">Lo que las mujeres deben al iPhone</a></span> <span class="next"><a href="http://www.cocoaosx.com/2012/01/09/como-eliminar-el-nombre-de-usuario-de-la-barra-de-menus-de-osx-lion/" rel="next">Como eliminar el nombre de usuario de la barra de menus de OSX Lion</a></span></div>
+		
+			
+	<div class="postwrap fix">
+		
+		<div class="post-1026 post type-post status-publish format-standard hentry category-cocoa-osx category-cocoa-touch category-curso-programacion-iphone category-desarrollo-xcode category-objective-c-2 category-tutorial-programacion-iphone tag-apple tag-cocoa tag-cocoa-touch-2 tag-ios tag-ios-apple tag-ipad tag-iphone tag-objective-c tag-programming tag-xcode" id="post-1026">
+				
+			<div class="copy fix">		
+				
+										
+					<div class="post-header fix post-nothumb">
+						<div class="post-title-section fix">
+							<div class="post-title fix">
+								<h2><a href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/" rel="bookmark" title="Permanent Link to Cómo crear apps para el iPhone partiendo de cero">Cómo crear apps para el iPhone partiendo de cero</a></h2>
+
+								<div class="metabar">
+									<em>
+									On 09/01/2012, 
+									in <a href="http://www.cocoaosx.com/category/cocoa-osx/" title="View all posts in Cocoa OSX" rel="category tag">Cocoa OSX</a>, <a href="http://www.cocoaosx.com/category/cocoa-touch/" title="View all posts in Cocoa Touch" rel="category tag">Cocoa Touch</a>, <a href="http://www.cocoaosx.com/category/curso-programacion-iphone/" title="View all posts in Curso programación iPhone" rel="category tag">Curso programación iPhone</a>, <a href="http://www.cocoaosx.com/category/desarrollo-xcode/" title="View all posts in Desarrollo XCode" rel="category tag">Desarrollo XCode</a>, <a href="http://www.cocoaosx.com/category/objective-c-2/" title="View all posts in Objective C" rel="category tag">Objective C</a>, <a href="http://www.cocoaosx.com/category/tutorial-programacion-iphone/" title="View all posts in Tutorial Programación iPhone" rel="category tag">Tutorial Programación iPhone</a>, 
+									by frr149																		</em>
+								</div>
+							</div>
+						</div>
+						<!--/post-title -->
+
+											</div>				
+			
+			</div>
+						  	
+				<div class="copy fix">
+										<div class="textcontent">
+						<!-- Easy AdSense V4.06 -->
+<!-- Post[count: 1] -->
+<div class="ezAdsense adsense adsense-leadin" style="text-align:center;margin:12px;"><a href="http://www.cocoaosx.com/cursos/"><img src="http://www.cocoaosx.com/wp-content/uploads/curso-new.jpg" alt="curso programacion iphone" title="Cursos de programación para iPhone ofrecidos por Cocoa Mental." width="538" height="305" class="aligncenter size-full wp-image-336" /></a></div>
+<!-- Easy AdSense V4.06 -->
+
+<div style="padding-top:5px;padding-right:0px;padding-bottom:5px;padding-left:0px;;">
+											<iframe
+												style="height:25px !important; border:0px solid gray !important; overflow:hidden !important; width:550px !important;" frameborder="0" scrolling="no" allowTransparency="true"
+												src="http://www.linksalpha.com/social?blog=Cocoa+Mental&link=http%3A%2F%2Fwww.cocoaosx.com%2F2012%2F01%2F09%2Fprogramacion-aplicaciones-iphone-partiendo-de-cero%2F&title=C%C3%B3mo+crear+apps+para+el+iPhone+partiendo+de+cero&desc=Actualizaci%C3%B3n+10+de+Enero+2012%3A%0D%0ARellena+esta+encuesta+y+podr%C3%ADas+ganar+una+matr%C3%ADcula+gratis+para+el+curso+de+desarrollo+de+apps+para+iPhone+%26amp%3B+iPad+para+usuarios+sin+experiencia+previa+de+progra&fc=333333&fs=arial&fblname=like&fblref=facebook&fbllang=en_US&fblshow=1&fbsbutton=1&fbsctr=1&fbslang=en&fbsendbutton=1&twbutton=1&twlang=en&twmention=&twrelated1=&twrelated2=&twctr=1&lnkdshow=noshow&lnkdctr=1&buzzbutton=1&buzzlang=en&buzzctr=1&diggbutton=1&diggctr=1&stblbutton=1&stblctr=1&g1button=1&g1ctr=1&g1lang=en-US&referer=http%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3Dempezar%2520a%2520desarrollar%2520para%2520iphone%26source%3Dweb%26cd%3D4%26ved%3D0CEEQFjAD%26url%3Dhttp%253A%252F%252Fwww.cocoaosx.com%252F2012%252F01%252F09%252Fprogramacion-aplicaciones-iphone-partiendo-de-cero%252F%26ei%3DFKZrT96jHKqHsgKT-dSQBg%26usg%3DAFQjCNHF12wbyhayP6BCSjYbvY8GrEzhUQ">
+											</iframe>
+										</div><h2>Actualización 10 de Enero 2012:</h2>
+<blockquote><p><strong><a href="http://www.surveymonkey.com/s/FZWVXCQ">Rellena esta encuesta</a></strong> y podrías ganar una matrícula gratis para el <a href="http://www.cocoaosx.com/2012/01/10/nuevo-curso-de-desarrollo-para-iphone-y-ipad-para-usuarios-sin-experiencia-previa-de-programacion/" target="_blank">curso de desarrollo de apps para iPhone &amp; iPad para usuarios sin experiencia previa de programación</a>.</p></blockquote>
+<h2>La fiebre del momento: hacer &#8220;Apps&#8221; para el iPhone y el iPad</h2>
+<p><a href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/apple-ipad-top-10-free-ipad-only-apps/" rel="attachment wp-att-1030"><img class="aligncenter size-full wp-image-1030" title="Apps, apps, apps" src="http://www.cocoaosx.com/wp-content/uploads/apple-ipad-top-10-free-ipad-only-apps.jpg" alt="" width="480" height="322" /></a></p>
+<p>A menudo me preguntan por twitter, LinkedIn y en el blog, cómo empezar a desarrollar apps para iOS partiendo de cero. Es decir, empezar sin tener ningún tipo de experiencia previa de programación. Para no estar repitiéndome, he decidido escribir un post sobre el asunto con mis recomendaciones.</p>
+<p>Tanto mi <a href="http://www.cocoaosx.com/cursos/" target="_blank">curso de introducción</a>, como los de la <a href="http://www.cocoaosx.com/2011/11/17/stanford-hace-publicos-nuevos-curso-gratuitos-introduccion-a-la-informatica-y-procesado-de-lenguaje-natural/" target="_blank">Universidad de Stanford</a>, presuponen cierta experiencia previa y cierto conocimiento de programación orientada a objetos. En el caso de Stanford, supongo que será porque está destinado a alumnos que ya hayan superado los cursos de introducción a la programación de dicha universidad. En mi caso, la razón es que sería imposible poner al día alguien en encima enseñar las peculiaridades Cocoa y Cocoa Touch todo en 3 días.</p>
+<p>No obstante, el problema sigue para aquellos que no tienen una base previa: <strong>¿cómo llegar al punto en que pueda seguir el curso de <a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/" target="_blank">introducción a Cocoa Touch</a>?</strong></p>
+<h2>Las herramientas necesarias para desarrollar para el iPhone</h2>
+<p>Para crear aplicaciones para el iPhone (o para el Mac o iPad) necesitarás lo siguiente:</p>
+<h3>Objective C</h3>
+<p>Es el lenguaje de programación usado por Apple. Se trata de un lenguaje parecido e Java o C# (por mencionar sus parientes más conocidos) con algunas peculiaridades. Aunque se trata de un lenguaje excelente para desarrollar aplicaciones complejas, no es el más adecuado para aprender a programar.</p>
+<h3>Cocoa Touch</h3>
+<p>Es la &#8220;librería de clases&#8221; que proporciona Apple. Si lo de &#8220;librería de clases&#8221; te ha sonado a Chino, usaremos un símil de carpintería. Si en vez de crear apps quisieras aprender a hacer muebles, &#8220;Cocoa Touch&#8221; sería las herramientas específicas, como el serrucho, los cinzeles, las lijas y demás. Objective C sería la forma de usarlas cada una de manera adecuada.</p>
+<h3>XCode</h3>
+<p>Es el entorno de programación de Apple. Se trata de un programa donde creas tus apps. Siguiendo el simil carpintero, se trata de tu taller.</p>
+<p>Los frikis como yo nos pasamos la mayor parte del día frente a Xcode.</p>
+<h2>Aprender a programar y aprender a usar un lenguaje de programación</h2>
+<p>Estos son dos conceptos que casi siempre se confunden y con resultados desastrosos. Una cosa es saber programar (en cualquier lenguaje) y otra muy distinta es saber la sintaxis de un lenguaje en particular.</p>
+<p>Un símil adecuado sería la cocina: una cosa es saber cocinar (preparar los ingredientes, reconocer los distintos cortes de la carne, limpiar los pescados, preparar salsas básicas, combinar sabores, acertar los puntos de cocción de cada plato, decorar el emplatado, etc) y otra muy distinta, y más sencilla, es saber usar un horno o una olla exprés de una marca en concreto.</p>
+<p><a href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/fugu-sashimi-5000-2/" rel="attachment wp-att-1029"><img class="aligncenter size-full wp-image-1029" title="Sashimi de Fugu" src="http://www.cocoaosx.com/wp-content/uploads/fugu-sashimi-50001.jpg" alt="Sashimi de fugu emplatado" width="500" height="417" /></a></p>
+<!-- Easy AdSense V4.06 -->
+<!-- Post[count: 2] -->
+<div class="ezAdsense adsense adsense-midtext" style="float:right;margin:12px;"><blockquote>
+<h2 style="text-align: center;">Cursos iOS de CocoaMental</h2>
+Aprovecha el mundo de oportunidades que la <strong>programación y desarrollo para iPhone &amp; iPad</strong> brinda en estos momento. Fórmate o a tu equipo  con nuestros <strong><a title="Más información sobre los cursos de programación para iPhone &amp; iPad." href="http://www.cocoaosx.com/cursos/">cursos “gourmet” de iOS para programadores y NO programadores.</a></strong><br>
+&nbsp;
+<h2 style="text-align: center;">Somos <a title="Nos dedicamos en exclusiva a formar en programación para Mac." href="http://www.cocoaosx.com/cursos/">especialistas en Apple</a>, nos <a title="Nos preparamos con Aaron Hillegass y Big Nerd Ranch." href="http://www.cocoaosx.com/category/big-nerd-ranch/">preparamos con los mejores del mundo</a> y eso, hace la diferencia.</h2>
+<ul>
+	<li>Máximo nivel técnico,</li>
+	<li>Grupos súper reducidos,</li>
+	<li>Metodología de enseñanza única, 100% pragmática y enfocada a resultados,</li>
+	<li>Acceso directo a los formadores,</li>
+	<li>Atención continuada antes, durante y después del curso.</li>
+</ul>
+Todo esto probado y aprobado repetidamente por todos nuestros alumnos y <a title="Formación a medida para empresas." href="http://www.cocoaosx.com/cursos/formacion-a-medida/" target="_blank">clientes corporativos</a>:
+<blockquote class="quotescollection" id="quote-4"><p><q>@frr149 pues yo todavía no estoy en un proyecto IOS pero estoy aprovechando el poco tiempo libre haciendo una aplicación.</q> <cite>&mdash;&nbsp;@SergioBEscudero de la Formación para Unisys., Twitter</cite></p></blockquote>
+<blockquote class="quotescollection" id="quote-11"><p><q>Great ios lessons with @frr149 . Thanks!</q> <cite>&mdash;&nbsp;@harrakiss, Twitter</cite></p></blockquote>
+<blockquote class="quotescollection" id="quote-13"><p><q>¿Quieres aprender a desarrollar para iOS? Tenemos un gurú en España y ofrece cursos asequibles:  <a href="http://bit.ly/A1MXPz" rel="nofollow">http://bit.ly/A1MXPz</a> &#8211; #FF para @frr149</q> <cite>&mdash;&nbsp;Santiago Crespo @screp0, Twitter</cite></p></blockquote>
+
+
+
+
+<a href="http://www.cocoaosx.com/contacto/"><img class="aligncenter size-full wp-image-1404" title="Quiero solicitar más información sobre los cursos de programación para iPad & iPhone." src="http://www.cocoaosx.com/wp-content/uploads/Button200x60-más-info.png" alt="curso programación ipad iphone" width="200" height="60" /></a></blockquote></div>
+<!-- Easy AdSense V4.06 -->
+
+<p><strong>Por lo tanto el que quiere abordar desde cero la creación de apps tiene dos cosas que aprender:</strong></p>
+<ol>
+<li>Conceptos básicos de programación como variables, funciones, control de flujo, diseño de programas, clases, objetos y métodos.</li>
+<li>Las herramientas necesarias para aplicar esos conocimientos creando apps: Objective C y Cocoa Touch.</li>
+</ol>
+<h2>Para aprender a programar necesitas un lenguaje de programación</h2>
+<p>Lógicamente para aprender a programar (primer apartado que acabamos de ver), necesitaremos un lenguaje de programación, y aquí es donde la cosa a menudo se tuerce.</p>
+<p>De la misma manera que para aprender a esquiar hay esquís específicos para principiantes (que les facilitan la tarea) y luego éstos no son los más adecuados para la práctica diaria de este deporte, también hay lenguajes que son especialmente adecuados para los principiantes, aunque luego no sean los más usados por los veteranos.</p>
+<p><a href="http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/for-beginners-the-tips-of-your-skis-should-point-inward-making-an-inverted-v/" rel="attachment wp-att-1031"><img class="aligncenter size-full wp-image-1031" title="For-beginners-the-tips-of-your-skis-should-point-inward-making-an-inverted-V." src="http://www.cocoaosx.com/wp-content/uploads/For-beginners-the-tips-of-your-skis-should-point-inward-making-an-inverted-V..jpg" alt="" width="500" height="333" /></a></p>
+<p>Desgraciadamente, Objective C (el lenguaje usado para crear aplicaciones para Mac, iPhone y iPad), aunque un excelente lenguaje para crear aplicaciones, NO es un buen lenguaje para el principiante.</p>
+<blockquote><p>Intentar aprender a programar usando Objective C puede hacerse muy cuesta arriba, ya que te obliga a dedicar mucho tiempo a cosas que no son fundamentales. Objective C impone mucha &#8220;burrocracia&#8221; al principiante y puede hacer que el árbol le haga perder de vista el bosque.</p></blockquote>
+<p>Por otro lado, sí que hay lenguajes que han sido diseñados para la enseñanza y son particularmente adecuados para aquellos que empiezan a programar. El mejor, con mucha diferencia es <a href="http://es.wikipedia.org/wiki/Scheme" target="_blank">Scheme</a>.</p>
+<p>Se trata de un lenguaje muy pequeño, cuya sintáxis se aprende en 10 minutos, sin ningún tipo de &#8220;burrocracia&#8221; que dificulte el progreso del alumno. Además, los mejores libros creados por el hombre para enseñar a programar lo usan.</p>
+<h2>Los libros más adecuados para el principiante absoluto</h2>
+<p>Entre los mejores libros para aprender a programar, el top 4 usa <a href="http://es.wikipedia.org/wiki/Scheme" target="_blank">Scheme</a>:</p>
+<ol>
+<li><em><a href="http://mitpress.mit.edu/sicp/full-text/book/book.html" target="_blank">&#8220;Structure and interpretation of computer programs&#8221;</a></em>. Adecuado para las mentes más matemáticas. No hace falta léerselo entero, bastan los primeros capítulos. Requiere una base matemática mayor que los demás.</li>
+<li><em><a href="http://www.htdp.org/" target="_blank">&#8220;How to design programs&#8221;</a></em>. Más sencillo y corto que el anterior, aunque también requiere una cierta base matemática.</li>
+<li><em><a href="https://gustavus.edu/+max/concrete-abstractions.html" target="_blank">&#8220;Concrete abstractions&#8221;</a></em>. Similar al anterior en cuanto a dificultad. Lamentablemente está agotado aunque se puede leer online de forma gratuita.</li>
+<li><em><a href="http://www.schemers.com/tsg.html" target="_blank">&#8220;The Schemer&#8217;s Guide&#8221;</a></em>. En mi opinión, el más didáctico de todos (y el más corto). No requiere ningún tipo de conocimiento previo, ni matemático ni nada. En escasamente 300 páginas, <em>te llevará de no saber nada a crear un juego que aprende de sus errores (inteligencia artificial) y la programación orientada a objetos</em>.</li>
+</ol>
+<p>Tal vez el mejor de todos para una primera aproximación sea &#8220;The Schemer&#8217;s Guide&#8221; (también hay una traducción al Español). <em>Es el libro que a mi gustaría haber usado cuando empecé a programar.</em></p>
+<p>Una vez leido dicho libro estarás listo para abordar el <em><a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/" target="_blank">curso de Introducción al desarrollo de Apps para iPhone y iPad</a></em> con una base mejor que la de muchos otros alumnos con más experiencia.</p>
+<h2>El atajo hacía el desarrollo de apps para iPhone</h2>
+<p>Desgraciadamente, sé que NADIE seguirá mi consejo de empezar por el &#8220;The Schemer&#8217;s Guide&#8221;. Las prisas por empezar son tantas, que se opta por ir de cabeza a por Objective C pensando que se trata de un atajo, sin embargo lo más probable es que tardes más en alcanzar un nivel de conocimiento adecuado por esta vía.</p>
+<p>Sin embargo, si quieres empezar ya con Objetive C, la mejor ruta es la siguiente:</p>
+<ol>
+<li>Empieza con <em><a href="http://rcm-es.amazon.es/e/cm?t=cocoamental-21&amp;o=30&amp;p=8&amp;l=as1&amp;asins=8441529647&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr">&#8220;Programación Objective C&#8221;</a></em> y una vez tengas medianamente dominado el material puedes pasar al punto siguiente (Cocoa Touch)</li>
+<li>Sigue con alguno de los libros que cito en mi <a href="http://www.cocoaosx.com/2011/11/18/libros-programacion-iphone-ipad/" target="_blank">lista de material para desarrolladores de Apps para iPhone</a> ,</li>
+<li>o si prefieres un enfoque más personalizado, apúntate a mi <a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/" target="_blank">curso de introducción al desarrollo de apps para iPhone y iPad</a>.</li>
+</ol>
+<h2>Resumiendo</h2>
+<div>Para empezar a desarrollar aplicaciones para el iPhone y el iPad, necesitas lo siguiente:</div>
+<div>
+<ol>
+<li>Aprender conceptos básicos de programación. Puedes hacerlo con,</li>
+<ol>
+<li>&#8220;The Schemer&#8217;s Guide&#8221;, o saltando directamente a</li>
+<li><em><a href="http://rcm-es.amazon.es/e/cm?t=cocoamental-21&amp;o=30&amp;p=8&amp;l=as1&amp;asins=8441529647&amp;ref=qf_sp_asin_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr">&#8220;Programación Objective C&#8221;</a></em></li>
+</ol>
+<li>Cocoa Touch. Para ello puedes usar</li>
+<ol>
+<li>mi <a href="http://www.cocoaosx.com/2011/11/18/libros-programacion-iphone-ipad/" target="_blank">lista de material para desarrolladores de Apps para iPhone</a>, o</li>
+<li>apuntarte a mi <a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/" target="_blank">curso de introducción al desarrollo de apps para iPhone y iPad</a></li>
+</ol>
+</ol>
+</div>
+<div style="padding-top:5px;padding-right:0px;padding-bottom:5px;padding-left:0px;;">
+											<iframe
+												style="height:25px !important; border:0px solid gray !important; overflow:hidden !important; width:550px !important;" frameborder="0" scrolling="no" allowTransparency="true"
+												src="http://www.linksalpha.com/social?blog=Cocoa+Mental&link=http%3A%2F%2Fwww.cocoaosx.com%2F2012%2F01%2F09%2Fprogramacion-aplicaciones-iphone-partiendo-de-cero%2F&title=C%C3%B3mo+crear+apps+para+el+iPhone+partiendo+de+cero&desc=Actualizaci%C3%B3n+10+de+Enero+2012%3A%0D%0ARellena+esta+encuesta+y+podr%C3%ADas+ganar+una+matr%C3%ADcula+gratis+para+el+curso+de+desarrollo+de+apps+para+iPhone+%26amp%3B+iPad+para+usuarios+sin+experiencia+previa+de+progra&fc=333333&fs=arial&fblname=like&fblref=facebook&fbllang=en_US&fblshow=1&fbsbutton=1&fbsctr=1&fbslang=en&fbsendbutton=1&twbutton=1&twlang=en&twmention=&twrelated1=&twrelated2=&twctr=1&lnkdshow=noshow&lnkdctr=1&buzzbutton=1&buzzlang=en&buzzctr=1&diggbutton=1&diggctr=1&stblbutton=1&stblctr=1&g1button=1&g1ctr=1&g1lang=en-US&referer=http%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3Dempezar%2520a%2520desarrollar%2520para%2520iphone%26source%3Dweb%26cd%3D4%26ved%3D0CEEQFjAD%26url%3Dhttp%253A%252F%252Fwww.cocoaosx.com%252F2012%252F01%252F09%252Fprogramacion-aplicaciones-iphone-partiendo-de-cero%252F%26ei%3DFKZrT96jHKqHsgKT-dSQBg%26usg%3DAFQjCNHF12wbyhayP6BCSjYbvY8GrEzhUQ">
+											</iframe>
+										</div>						<div class="clear"></div>	
+													
+						<div class="clear"></div>
+					</div>	
+				</div>
+												
+								
+			
+<div class="hl"></div>
+	<div class="post-footer">
+					<div class="left">
+								If you enjoyed this article, please consider sharing it!	
+			</div>
+			<div class="right">
+					<a href="http://www.facebook.com/sharer.php?u=http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/&amp;t=Cómo crear apps para el iPhone partiendo de cero" title="Share on Facebook" rel="nofollow" target="_blank"><img src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/icons/ico-facebook.png" alt="Facebook" /></a> 
+					<a href="http://twitter.com/home/?status=Cómo crear apps para el iPhone partiendo de cero%20http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/" title="Share on Twitter" rel="nofollow" target="_blank"><img src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/icons/ico-twitter.png" alt="Twitter" /></a> 
+					<a href="http://del.icio.us/post?url=http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/&amp;title=Cómo crear apps para el iPhone partiendo de cero" title="Share on Delicious" rel="nofollow" target="_blank"><img src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/icons/ico-del.png" alt="Delicious" /></a>															<a href="http://digg.com/submit?phase=2&amp;url=http://www.cocoaosx.com/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/&amp;title=Cómo crear apps para el iPhone partiendo de cero" title="Share on Digg" rel="nofollow" target="_blank"><img src="http://www.cocoaosx.com/wp-content/themes/iblogpro/images/icons/ico-digg.png" alt="Digg" /></a>				
+			</div>
+				<br class="fix" />
+		
+	</div>		</div><!--post -->
+
+	</div>
+	
+			<div class="tags">
+			Tagged with: <a href="http://www.cocoaosx.com/tag/apple/" rel="tag">Apple</a> &bull; <a href="http://www.cocoaosx.com/tag/cocoa/" rel="tag">cocoa</a> &bull; <a href="http://www.cocoaosx.com/tag/cocoa-touch-2/" rel="tag">cocoa-touch</a> &bull; <a href="http://www.cocoaosx.com/tag/ios/" rel="tag">ios</a> &bull; <a href="http://www.cocoaosx.com/tag/ios-apple/" rel="tag">IOS (Apple)</a> &bull; <a href="http://www.cocoaosx.com/tag/ipad/" rel="tag">IPad</a> &bull; <a href="http://www.cocoaosx.com/tag/iphone/" rel="tag">iphone</a> &bull; <a href="http://www.cocoaosx.com/tag/objective-c/" rel="tag">objective c</a> &bull; <a href="http://www.cocoaosx.com/tag/programming/" rel="tag">Programming</a> &bull; <a href="http://www.cocoaosx.com/tag/xcode/" rel="tag">xcode</a>&nbsp;
+		</div>
+		
+	<div class="clear"></div>
+	
+				
+						
+			<div class="postwrap commentswrap ">	
+			<div class="hentry">		
+				<div class="copy"> 
+<div id="comments">
+	
+	
+	
+									<div id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/01/09/programacion-aplicaciones-iphone-partiendo-de-cero/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.cocoaosx.com/wp-comments-post.php" method="post" id="commentform">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='1026' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c22b7e2d82" /></p>					</form>
+							</div><!-- #respond -->
+			<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#commentform').submit(function() {
+            _gaq.push(
+                ['_setAccount','UA-4066080-11'],
+                ['_trackEvent','comment','submit']
+            );
+        });
+    });    
+</script>
+			</div>
+</div>
+			</div>
+			</div>
+			
+			
+	
+		
+	
+</div> <!-- end content -->
+</div>
+<div id="sidebar" class="fix">
+				
+			<div id="welcome" class="fix">
+			<div class="welcometext">
+				<h3 class="greeting">¡Curso iOS  en Barcelona! 13, 14 y 15 Abril.</h3>				<div class="welcomemessage">Estamos organizando un<a title="Curso Prograamción iPhone & iPad en Barcelona." href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/" target="_blank"> Curso iOS Básico</a> en Barcelona. Será en el fin de semana del 13, 14 y 15 de Abril. Si quieres apuntarte, <a title="Contactar." href="http://www.cocoaosx.com/contacto/" target="_blank">dame un toque</a>.</div>				
+<div class="twitter">
+	 " RT @EuskalDiarrea: Hacían un convite en UGT y he ido, había muchas tapas para picar.He preguntado si tenían callos y me han dicho que no ... " &mdash;&nbsp;<a href="http://www.twitter.com/@frr149">@frr149</a>
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+				
+
+	
+				
+					<div id="text-5" class="widget_text widget"><div class="winner"><h3 class="wtitle">¿Novedades sobre los cursos? &nbsp;</h3>			<div class="textwidget"><!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#ggg; clear:left; font:14px Helvetica,Arial,sans-serif;  width:300px;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://cocoaosx.us4.list-manage.com/subscribe/post?u=cae3caaa026bc5a3b88cbb7c3&id=da3fd3a36b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<label for="mce-EMAIL"></label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email" required>
+	<div class="clear"><input type="submit" value="¡Suscríbete!" name="<Suscríbete" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup--></div>
+		&nbsp;</div></div><div id="text-3" class="widget_text widget"><div class="winner"><h3 class="wtitle">¿Quieres más Cocoa? ¡Únete!&nbsp;</h3>			<div class="textwidget"><!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-6346595313778756566" style="width:276px;border:1px solid #cccccc;"></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = 'transparent';
+skin['ENDCAP_TEXT_COLOR'] = '#333333';
+skin['ENDCAP_LINK_COLOR'] = '#333333';
+skin['ALTERNATE_BG_COLOR'] = 'transparent';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#333333';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['NUMBER_ROWS'] = '4';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderMembersGadget(
+ { id: 'div-6346595313778756566',
+   site: '05235169432301964035' },
+  skin);
+</script>
+</div>
+		&nbsp;</div></div>		<div id="recent-posts-3" class="widget_recent_entries widget"><div class="winner">		<h3 class="wtitle">Artículos Recientes&nbsp;</h3>		<ul>
+				<li><a href="http://www.cocoaosx.com/2012/03/22/el-ipad-y-por-que-a-las-mujeres-se-les-llama-el-sexo-opuesto/" title="El iPad y porqué a las mujeres se les llama el sexo opuesto">El iPad y porqué a las mujeres se les llama el sexo opuesto</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/21/steve-jobs-next-nextstep-video-vmware/" title="Steve Jobs demostrando NeXT">Steve Jobs demostrando NeXT</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/21/las-apps-como-uno-de-los-motores-de-la-recuperacion-economica/" title="Las apps como uno de los motores de la recuperación económica">Las apps como uno de los motores de la recuperación económica</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/19/curso-de-programacion-orientada-a-objetos-con-objective-c/" title="Curso de programación orientada a objetos con Objective C">Curso de programación orientada a objetos con Objective C</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/19/fernando-rodriguez-codemotion-2012/" title="Codemotion 2012">Codemotion 2012</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/16/gestion-de-errores-en-cocoa-nserror-excepciones/" title="Gestión de errores en Cocoa: excepciones y NSError">Gestión de errores en Cocoa: excepciones y NSError</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/16/opengl-avanzado-seguridad-y-keychain-coretext-y-mas-ultimo-dia-en-el-big-nerd-ranch/" title="OpenGL avanzado, Seguridad y Keychain, CoreText y más: último dia en el Big Nerd Ranch">OpenGL avanzado, Seguridad y Keychain, CoreText y más: último dia en el Big Nerd Ranch</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/12/impresiones-de-los-eeuu/" title="Impresiones de los EEUU">Impresiones de los EEUU</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/11/intro-a-opengl-y-otras-hierbas/" title="Intro a OpenGL y otras hierbas">Intro a OpenGL y otras hierbas</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/11/cuarto-dia-de-big-nerd-ranch-opengl-glkit-uipageviewcontroller-core-graphics-y-accelerate/" title="OpenGL, GLKit, UIPageViewController, Core Graphics y Accelerate: Cuarto día de Big Nerd Ranch">OpenGL, GLKit, UIPageViewController, Core Graphics y Accelerate: Cuarto día de Big Nerd Ranch</a></li>
+				</ul>
+		&nbsp;</div></div><div id="twitter-widget-3" class="twitter-widget widget"><div class="winner"><h3 class="wtitle">Mis Tweets&nbsp;</h3>
+						<ul>
+							<li>
+								<span class="twitter-date"><a href="http://twitter.com/frr149/statuses/182939429869072385">37 mins ago</a></span><br />
+								<span class="twitter-text"><a href="https://twitter.com/aalbagarcia">aalbagarcia</a> Estupendo, ¡pues allí nos vemos! :-)</span>
+							</li>
+							<li>
+								<span class="twitter-date"><a href="http://twitter.com/frr149/statuses/182901324696924160">3 hours ago</a></span><br />
+								<span class="twitter-text">T @<a href="https://twitter.com/startupchile">startupchile</a>: Start-Up Chile: "Silicon Valley on Steroids" says @<a href="https://twitter.com/wadhwa">wadhwa</a> <a href="http://t.co/BuWNowvr">http://t.co/BuWNowvr</a></span>
+							</li>
+							<li>
+								<span class="twitter-date"><a href="http://twitter.com/frr149/statuses/182898651713114112">3 hours ago</a></span><br />
+								<span class="twitter-text">T @<a href="https://twitter.com/colombiadigital">colombiadigital</a>: #<a href="https://twitter.com/search/?q=PersonajeDestacado">PersonajeDestacado</a>: Los pinceles de Moebius: genio caricaturista <a href="http://t.co/EeDR1EJt">http://t.co/EeDR1EJt</a></span>
+							</li>
+							<li>
+								<span class="twitter-date"><a href="http://twitter.com/frr149/statuses/182898613750468608">3 hours ago</a></span><br />
+								<span class="twitter-text">T @<a href="https://twitter.com/_TIRURIRU_">_TIRURIRU_</a>: #<a href="https://twitter.com/search/?q=Twitter">Twitter</a> gana un 40% de usuarios en sólo seis meses <a href="http://t.co/mjYJzXy5">http://t.co/mjYJzXy5</a> vía @<a href="https://twitter.com/trecebits">trecebits</a> #<a href="https://twitter.com/search/?q=socialmedia">socialmedia</a></span>
+							</li>
+							<li>
+								<span class="twitter-date"><a href="http://twitter.com/frr149/statuses/182898565180436481">3 hours ago</a></span><br />
+								<span class="twitter-text">T @<a href="https://twitter.com/shawng">shawng</a>: New blog post: iOS 5 Recipes: A Problem-Solution Approach <a href="http://t.co/DCe91JuK">http://t.co/DCe91JuK</a></span>
+							</li>
+						</ul>
+						&nbsp;</div></div><div id="search-3" class="widget_search widget"><div class="winner"><h3 class="wtitle">Buscar&nbsp;</h3><form role="search" method="get" id="searchform" action="http://www.cocoaosx.com/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form>&nbsp;</div></div>				
+										</div><!--/sidebar -->
+</div>
+<div class="clear"></div>
+
+
+	<div id="morefoot" class="fboxes fix">
+		<div class="fboxdividers fix">
+			<div class="fbox">
+				<div class="fboxcopy">
+				<div id="text-6" class="widget_text widget fix"><h3>Nuestros Cursos </h3>			<div class="textwidget"><h2 class="fsub">Para Programadores:</h2>
+<ol>
+	<li><a href="http://www.cocoaosx.com/curso-de-introduccion-a-la-programacion-de-dispositivos-moviles-iphone-ipad-y-android-de-la-nada-a-la-appstore/">Curso de Introducción a la Programación de Dispositivos Móviles (iPhone, iPad y Android): "De la Nada a la AppStore".</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/desarrollo-iphone-curso-presencial/">Curso de Iniciación en la Programación iOS para iPhone y iPad: "De Xcode a la AppStore".</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/programacion-iphone-avanzado/">Curso Intermedio de Programación iOS para iPhone y iPad: "Destacándose en la AppStore".</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/core-data/">Curso Monográfico de Programación Avanzada iPhone &amp; iPad con "Core Data".</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/core-graphics-core-animation/">Curso Monográfico de Programación Avanzada iPhone &amp; iPad con “Core Graphics” &amp; “Core Animation”.</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/curso-monografico-core-motion-core-location/">Curso Monográfico de Programación Avanzada iPhone &amp; iPad con “Core Motion” &amp; “Core Location”.</a></li>
+	<li><a href="http://www.cocoaosx.com/cursos/formacion-a-medida/">Formación a Medida para Empresas.</a></li>
+</ol>
+<h2 class="fsub">Para Usuarios:</h2>
+<ol>
+	<li><a href="http://www.cocoaosx.com/cursos/curso-de-ipad-nivel-usuario/">Curso de iPad para Directivos y Usuarios: “Exprime el Potencial de Tu iPad al Máximo”.</a></li>
+</ol></div>
+		</div>				</div>
+			</div>
+
+			<div class="fbox">
+				<div class="fboxcopy">
+						<div id="recent-posts-4" class="widget_recent_entries widget fix">		<h3>Artículos Recientes</h3>		<ul>
+				<li><a href="http://www.cocoaosx.com/2012/03/22/el-ipad-y-por-que-a-las-mujeres-se-les-llama-el-sexo-opuesto/" title="El iPad y porqué a las mujeres se les llama el sexo opuesto">El iPad y porqué a las mujeres se les llama el sexo opuesto</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/21/steve-jobs-next-nextstep-video-vmware/" title="Steve Jobs demostrando NeXT">Steve Jobs demostrando NeXT</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/21/las-apps-como-uno-de-los-motores-de-la-recuperacion-economica/" title="Las apps como uno de los motores de la recuperación económica">Las apps como uno de los motores de la recuperación económica</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/19/curso-de-programacion-orientada-a-objetos-con-objective-c/" title="Curso de programación orientada a objetos con Objective C">Curso de programación orientada a objetos con Objective C</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/19/fernando-rodriguez-codemotion-2012/" title="Codemotion 2012">Codemotion 2012</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/16/gestion-de-errores-en-cocoa-nserror-excepciones/" title="Gestión de errores en Cocoa: excepciones y NSError">Gestión de errores en Cocoa: excepciones y NSError</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/16/opengl-avanzado-seguridad-y-keychain-coretext-y-mas-ultimo-dia-en-el-big-nerd-ranch/" title="OpenGL avanzado, Seguridad y Keychain, CoreText y más: último dia en el Big Nerd Ranch">OpenGL avanzado, Seguridad y Keychain, CoreText y más: último dia en el Big Nerd Ranch</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/12/impresiones-de-los-eeuu/" title="Impresiones de los EEUU">Impresiones de los EEUU</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/11/intro-a-opengl-y-otras-hierbas/" title="Intro a OpenGL y otras hierbas">Intro a OpenGL y otras hierbas</a></li>
+				<li><a href="http://www.cocoaosx.com/2012/03/11/cuarto-dia-de-big-nerd-ranch-opengl-glkit-uipageviewcontroller-core-graphics-y-accelerate/" title="OpenGL, GLKit, UIPageViewController, Core Graphics y Accelerate: Cuarto día de Big Nerd Ranch">OpenGL, GLKit, UIPageViewController, Core Graphics y Accelerate: Cuarto día de Big Nerd Ranch</a></li>
+				</ul>
+		</div>				</div>
+			</div>
+
+			<div class="fbox">
+				<div class="fboxcopy">
+				<div id="tag_cloud-3" class="widget_tag_cloud widget fix"><h3>Tags</h3><div class="tagcloud"><a href='http://www.cocoaosx.com/tag/aaron-hillegass/' class='tag-link-153' title='4 topics' style='font-size: 10.5454545455pt;'>Aaron Hillegass</a>
+<a href='http://www.cocoaosx.com/tag/accelerate/' class='tag-link-160' title='2 topics' style='font-size: 8pt;'>Accelerate</a>
+<a href='http://www.cocoaosx.com/tag/android/' class='tag-link-13' title='7 topics' style='font-size: 12.8595041322pt;'>Android</a>
+<a href='http://www.cocoaosx.com/tag/apple/' class='tag-link-14' title='25 topics' style='font-size: 18.7603305785pt;'>Apple</a>
+<a href='http://www.cocoaosx.com/tag/big-nerd-ranch/' class='tag-link-129' title='9 topics' style='font-size: 14.0165289256pt;'>Big Nerd Ranch</a>
+<a href='http://www.cocoaosx.com/tag/blocks/' class='tag-link-21' title='3 topics' style='font-size: 9.38842975207pt;'>blocks</a>
+<a href='http://www.cocoaosx.com/tag/category/' class='tag-link-22' title='2 topics' style='font-size: 8pt;'>Category</a>
+<a href='http://www.cocoaosx.com/tag/chdatastructures/' class='tag-link-24' title='2 topics' style='font-size: 8pt;'>CHDataStructures</a>
+<a href='http://www.cocoaosx.com/tag/cocoa/' class='tag-link-25' title='41 topics' style='font-size: 21.1900826446pt;'>cocoa</a>
+<a href='http://www.cocoaosx.com/tag/cocoa-touch-2/' class='tag-link-26' title='36 topics' style='font-size: 20.6115702479pt;'>cocoa-touch</a>
+<a href='http://www.cocoaosx.com/tag/coreaudio/' class='tag-link-155' title='2 topics' style='font-size: 8pt;'>CoreAudio</a>
+<a href='http://www.cocoaosx.com/tag/coregraphics/' class='tag-link-143' title='3 topics' style='font-size: 9.38842975207pt;'>CoreGraphics</a>
+<a href='http://www.cocoaosx.com/tag/coretext/' class='tag-link-162' title='2 topics' style='font-size: 8pt;'>CoreText</a>
+<a href='http://www.cocoaosx.com/tag/cursos/' class='tag-link-104' title='11 topics' style='font-size: 14.9421487603pt;'>cursos</a>
+<a href='http://www.cocoaosx.com/tag/entrepreneurship/' class='tag-link-114' title='2 topics' style='font-size: 8pt;'>Entrepreneurship</a>
+<a href='http://www.cocoaosx.com/tag/gcd/' class='tag-link-32' title='4 topics' style='font-size: 10.5454545455pt;'>gcd</a>
+<a href='http://www.cocoaosx.com/tag/glkit/' class='tag-link-159' title='2 topics' style='font-size: 8pt;'>GLKit</a>
+<a href='http://www.cocoaosx.com/tag/grand-central-dispatch/' class='tag-link-36' title='4 topics' style='font-size: 10.5454545455pt;'>grand central dispatch</a>
+<a href='http://www.cocoaosx.com/tag/inheritance-object-oriented-programming/' class='tag-link-39' title='3 topics' style='font-size: 9.38842975207pt;'>Inheritance (object-oriented programming)</a>
+<a href='http://www.cocoaosx.com/tag/ios/' class='tag-link-41' title='32 topics' style='font-size: 20.0330578512pt;'>ios</a>
+<a href='http://www.cocoaosx.com/tag/ios-apple/' class='tag-link-42' title='9 topics' style='font-size: 14.0165289256pt;'>IOS (Apple)</a>
+<a href='http://www.cocoaosx.com/tag/ipad/' class='tag-link-43' title='24 topics' style='font-size: 18.6446280992pt;'>IPad</a>
+<a href='http://www.cocoaosx.com/tag/iphone/' class='tag-link-44' title='27 topics' style='font-size: 19.2231404959pt;'>iphone</a>
+<a href='http://www.cocoaosx.com/tag/ipod/' class='tag-link-45' title='2 topics' style='font-size: 8pt;'>IPod</a>
+<a href='http://www.cocoaosx.com/tag/ipod-touch/' class='tag-link-46' title='2 topics' style='font-size: 8pt;'>IPod Touch</a>
+<a href='http://www.cocoaosx.com/tag/mac/' class='tag-link-130' title='2 topics' style='font-size: 8pt;'>mac</a>
+<a href='http://www.cocoaosx.com/tag/nextstep/' class='tag-link-57' title='2 topics' style='font-size: 8pt;'>NextStep</a>
+<a href='http://www.cocoaosx.com/tag/objective-c/' class='tag-link-64' title='48 topics' style='font-size: 22pt;'>objective c</a>
+<a href='http://www.cocoaosx.com/tag/opengl/' class='tag-link-158' title='4 topics' style='font-size: 10.5454545455pt;'>OpenGL</a>
+<a href='http://www.cocoaosx.com/tag/osx/' class='tag-link-117' title='5 topics' style='font-size: 11.4710743802pt;'>OSX</a>
+<a href='http://www.cocoaosx.com/tag/osx-lion/' class='tag-link-120' title='4 topics' style='font-size: 10.5454545455pt;'>OSX Lion</a>
+<a href='http://www.cocoaosx.com/tag/paul-hegarty/' class='tag-link-107' title='2 topics' style='font-size: 8pt;'>Paul Hegarty</a>
+<a href='http://www.cocoaosx.com/tag/peter-norvig/' class='tag-link-108' title='2 topics' style='font-size: 8pt;'>Peter Norvig</a>
+<a href='http://www.cocoaosx.com/tag/programming/' class='tag-link-65' title='43 topics' style='font-size: 21.4214876033pt;'>Programming</a>
+<a href='http://www.cocoaosx.com/tag/protocols/' class='tag-link-66' title='2 topics' style='font-size: 8pt;'>protocols</a>
+<a href='http://www.cocoaosx.com/tag/quartz/' class='tag-link-68' title='3 topics' style='font-size: 9.38842975207pt;'>Quartz</a>
+<a href='http://www.cocoaosx.com/tag/smalltalk/' class='tag-link-71' title='2 topics' style='font-size: 8pt;'>Smalltalk</a>
+<a href='http://www.cocoaosx.com/tag/stanford/' class='tag-link-105' title='3 topics' style='font-size: 9.38842975207pt;'>Stanford</a>
+<a href='http://www.cocoaosx.com/tag/static-library/' class='tag-link-75' title='2 topics' style='font-size: 8pt;'>Static library</a>
+<a href='http://www.cocoaosx.com/tag/table-view/' class='tag-link-77' title='2 topics' style='font-size: 8pt;'>Table View</a>
+<a href='http://www.cocoaosx.com/tag/uiview/' class='tag-link-82' title='2 topics' style='font-size: 8pt;'>UIView</a>
+<a href='http://www.cocoaosx.com/tag/uiviewcontroller/' class='tag-link-83' title='2 topics' style='font-size: 8pt;'>UIViewController</a>
+<a href='http://www.cocoaosx.com/tag/user-interface/' class='tag-link-84' title='3 topics' style='font-size: 9.38842975207pt;'>User interface</a>
+<a href='http://www.cocoaosx.com/tag/xcode/' class='tag-link-85' title='18 topics' style='font-size: 17.2561983471pt;'>xcode</a>
+<a href='http://www.cocoaosx.com/tag/xcode4/' class='tag-link-86' title='2 topics' style='font-size: 8pt;'>xcode4</a></div>
+</div>				</div>
+			</div>
+		</div>
+	</div><!-- Closes morefoot -->
+
+<div  id="footer">
+	<div class="effect">
+		<div class="content">
+							<div id="footer_topline">
+<div class="twitter">
+	 " RT @EuskalDiarrea: Hacían un convite en UGT y he ido, había muchas tapas para picar.He preguntado si tenían callos y me han dicho que no ... " &mdash;&nbsp;<a href="http://www.twitter.com/@frr149">@frr149</a>
+</div>
+</div>
+						<div id="fcolumns_container" class="fix">
+				<div id="text-2" class="widget_text fcol"><div class="fcol_pad">			<div class="textwidget"><a href="http://www.agbo.biz"><img src="http://www.cocoaosx.com/wp-content/uploads/agboLogo-80.png" alt="AGBO Business Architecture SL" title="AGBO Business Architecture SL" width="80" height="42" class="aligncenter size-full wp-image-347" /></a></div>
+		</div></div><div id="nav_menu-3" class="widget_nav_menu fcol"><div class="fcol_pad"><h3>Formación iPhone &amp; iPad</h3><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="http://www.cocoaosx.com/cursos/">Cursos iPhone &#038; iPad</a></li>
+<li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="http://www.cocoaosx.com/cursos/formacion-a-medida/">Formación a Medida iPhone &#038; iPad</a></li>
+<li id="menu-item-196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196"><a href="http://www.cocoaosx.com/contacto/">Contacto</a></li>
+</ul></div></div></div><div id="categories-2" class="widget_categories fcol"><div class="fcol_pad"><h3>Categorias</h3>		<ul>
+	<li class="cat-item cat-item-13"><a href="http://www.cocoaosx.com/category/android/" title="View all posts filed under Android">Android</a> (2)
+</li>
+	<li class="cat-item cat-item-129"><a href="http://www.cocoaosx.com/category/big-nerd-ranch/" title="View all posts filed under Big Nerd Ranch">Big Nerd Ranch</a> (16)
+</li>
+	<li class="cat-item cat-item-89"><a href="http://www.cocoaosx.com/category/bloques/" title="View all posts filed under Bloques">Bloques</a> (4)
+</li>
+	<li class="cat-item cat-item-95"><a href="http://www.cocoaosx.com/category/c/" title="View all posts filed under C">C</a> (4)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.cocoaosx.com/category/cocoa-osx/" title="View all posts filed under Cocoa OSX">Cocoa OSX</a> (51)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.cocoaosx.com/category/cocoa-touch/" title="View all posts filed under Cocoa Touch">Cocoa Touch</a> (55)
+</li>
+	<li class="cat-item cat-item-90"><a href="http://www.cocoaosx.com/category/curso-programacion-iphone/" title="View all posts filed under Curso programación iPhone">Curso programación iPhone</a> (27)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.cocoaosx.com/category/desarrollo-xcode/" title="View all posts filed under Desarrollo XCode">Desarrollo XCode</a> (35)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.cocoaosx.com/category/english/" title="View all posts filed under English">English</a> (23)
+</li>
+	<li class="cat-item cat-item-114"><a href="http://www.cocoaosx.com/category/entrepreneurship/" title="View all posts filed under Entrepreneurship">Entrepreneurship</a> (1)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.cocoaosx.com/category/grand-central-dispatch-2/" title="View all posts filed under Grand Central Dispatch">Grand Central Dispatch</a> (1)
+</li>
+	<li class="cat-item cat-item-113"><a href="http://www.cocoaosx.com/category/ios5-tech-talk/" title="View all posts filed under iOS5 Tech Talk">iOS5 Tech Talk</a> (1)
+</li>
+	<li class="cat-item cat-item-187"><a href="http://www.cocoaosx.com/category/misc/" title="View all posts filed under Misc">Misc</a> (1)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.cocoaosx.com/category/nscoder/" title="View all posts filed under NSCoder">NSCoder</a> (1)
+</li>
+	<li class="cat-item cat-item-63"><a href="http://www.cocoaosx.com/category/object-oriented-design/" title="View all posts filed under Object Oriented Design">Object Oriented Design</a> (3)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.cocoaosx.com/category/objective-c-2/" title="View all posts filed under Objective C">Objective C</a> (54)
+</li>
+	<li class="cat-item cat-item-109"><a href="http://www.cocoaosx.com/category/training/" title="View all posts filed under Training">Training</a> (13)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.cocoaosx.com/category/trucos-iphone/" title="View all posts filed under Trucos iPhone">Trucos iPhone</a> (1)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://www.cocoaosx.com/category/trucos-mac-osx/" title="View all posts filed under Trucos Mac OSX">Trucos Mac OSX</a> (6)
+</li>
+	<li class="cat-item cat-item-116"><a href="http://www.cocoaosx.com/category/tutorial-programacion-iphone/" title="La mejor selección de libros y tutoriales de programación iPhone &amp; iPhone GRATIS actualmente disponible. Cursos Universidad Stanford, Harvard, y mucho más.">Tutorial Programación iPhone</a> (13)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.cocoaosx.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a> (3)
+</li>
+	<li class="cat-item cat-item-179"><a href="http://www.cocoaosx.com/category/videos/" title="View all posts filed under Videos">Videos</a> (1)
+</li>
+		</ul>
+</div></div><div id="text-4" class="widget_text fcol"><div class="fcol_pad">			<div class="textwidget">2011 Todos los derechos reservados.</div>
+		</div></div>			</div>
+	
+		
+			<div class="clear"></div>
+		</div>		
+	</div>
+
+
+</div>
+	<div class="clear"></div>
+	 	<hr class="hidden" />
+
+  </div><!--/wrapper -->
+
+</div><!--/page -->
+
+<!-- Footer Scripts Go Here -->
+<!-- End Footer scripts -->
+
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/themes/iblogpro/core/js/dropdown.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.cocoaosx.com/wp-content/themes/iblogpro/core/js/jquery-ui.custom.js?ver=1.0'></script>
+</body>
+</html>

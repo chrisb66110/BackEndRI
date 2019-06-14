@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta name="keywords" content="Algoritmo evolutivo,Wikipedia:Esbozo matemática,Cromosoma,Evolución biológica,Gen,Matemática,Wikipedia,Coordinación plurilingüe,El esbozo perfecto" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://es.wikipedia.org/apple-touch-icon.png" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (es)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS feed" href="http://es.wikipedia.org/w/index.php?title=Especial:RecentChanges&amp;feed=rss" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://es.wikipedia.org/w/index.php?title=Especial:RecentChanges&amp;feed=atom" />
+		<title>Algoritmo evolutivo - Wikipedia, la enciclopedia libre</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?123";
+			@import "/skins-1.5/monobook/main.css?123";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/skins-1.5/common/commonPrint.css?123" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?123";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?123";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?123";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?123";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?123"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://es.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Algoritmo_evolutivo";
+var wgTitle = "Algoritmo evolutivo";
+var wgAction = "view";
+var wgArticleId = "996272";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "es";
+var wgContentLanguage = "es";
+var wgBreakFrames = false;
+var wgCurRevisionId = "12149522";
+var wgVersion = "1.13alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="/skins-1.5/common/wikibits.js?123"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins-1.5/common/ajax.js?123"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400";
+/*]]>*/</style>
+	</head>
+<body class="mediawiki ns-0 ltr page-Algoritmo_evolutivo">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript" language="JavaScript">
+<!--
+document.writeln("\x3ccenter\x3eLa \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation/es\" class=\"extiw\" title=\"wm2008:Call_for_Participation/es\"\x3eInvitación para participar\x3c/a\x3e en \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/Main_Page\" class=\"extiw\" title=\"wm2008:Main_Page\"\x3eWikimania 2008\x3c/a\x3e estará abierta hasta el 16 de marzo. \x3cbr/\x3e¡Envía tu propuesta ahora!\x3c/center\x3e\n");
+-->
+</script></div>		<h1 class="firstHeading">Algoritmo evolutivo</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">De Wikipedia, la enciclopedia libre</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Saltar a <a href="#column-one">navegación</a>, <a href="#searchInput">búsqueda</a></div>			<!-- start content -->
+			<p>La computación evolutiva, con los <i>algoritmos evolutivos'</i>, consiste en técnicas de optimización y búsqueda de soluciones para problemas no lineales en espacios de búsqueda que pueden ser extremadamente grandes.</p>
+<p>Dada una población de potenciales soluciones a un problema, la computación evolutiva expande esta población con nuevas y mejores soluciones. El nombre se debe a que siguen los patrones de la <a href="/wiki/Evoluci%C3%B3n_biol%C3%B3gica" title="Evolución biológica">evolución biológica</a>. Los <a href="/wiki/Cromosoma" title="Cromosoma">cromosomas</a> proporcionan la representación o codificación de un individuo. Parte de los cromosomas, los <a href="/wiki/Gen" title="Gen">genes</a>, se usan para definir diferentes rasgos del individuo. Durante la reproducción (cruce) los genes de los padres se combinan para producir los genes de los hijos. La población va mejorando de generación en generación, porque los individuos que representan las soluciones más adecuadas al problema tienen más posibilidades de sobrevivir.</p>
+<p>Suele hablarse de tres paradigmas principales de algoritmos evolutivos:</p>
+<ul>
+<li>- Programación evolutiva.</li>
+<li>- Estrategias evolutivas.</li>
+<li>- Algoritmos genéticos.</li>
+</ul>
+<p>Cada uno de estos paradigmas se originó independientemente y con distintas motivaciones; los algoritmos modernos tienden a combinar características de los tres paradigmas. Además hay otros paradigmas más recientes que pueden considerarse emergentes, tres de los cuales son los siguientes:</p>
+<ul>
+<li>- Evolución diferencial.</li>
+<li>- Modelos probabilísticos.</li>
+<li>- Evolución simulada.</li>
+</ul>
+<div class="messagebox" style="clear:both; margin-top:1.5em">
+<div class="IconoPlantillaMantenimiento">
+<div class="floatleft"><span><a href="/wiki/Imagen:Noia_64_apps_wp.png" class="image" title="Icono de esbozo"><img alt="Icono de esbozo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Noia_64_apps_wp.png/39px-Noia_64_apps_wp.png" width="39" height="39" border="0" /></a></span></div>
+</div>
+<div class="plainlinks" style="text-align:center;">
+<p>El contenido de esta página es un <a href="/wiki/Wikipedia:El_esbozo_perfecto" title="Wikipedia:El esbozo perfecto">esbozo</a> sobre <a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a>. <b><a href="http://es.wikipedia.org/w/index.php?title=Algoritmo_evolutivo&amp;action=edit" class="external text" title="http://es.wikipedia.org/w/index.php?title=Algoritmo_evolutivo&amp;action=edit" rel="nofollow">Ampliándolo</a></b> ayudarás a mejorar <a href="/wiki/Wikipedia" title="Wikipedia">Wikipedia</a>.<br />
+Puedes ayudarte con <a href="/wiki/Wikipedia:Coordinaci%C3%B3n_pluriling%C3%BCe#Proyectos_de_la_Enciclopedia" title="Wikipedia:Coordinación plurilingüe">las wikipedias en otras lenguas</a>.</p>
+</div>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 35/1000000
+Post-expand include size: 789/2048000 bytes
+Template argument size: 66/2048000 bytes
+#ifexist count: 1/500
+-->
+
+<!-- Saved in parser cache with key eswiki:pcache:idhash:996272-0!1!0!!es!2 and timestamp 20080320014315 -->
+<div class="printfooter">
+Obtenido de "<a href="http://es.wikipedia.org/wiki/Algoritmo_evolutivo">http://es.wikipedia.org/wiki/Algoritmo_evolutivo</a>"</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Especial:Categories" title="Especial:Categories">Categorías</a>:&#32;<span dir='ltr'><a href="/wiki/Categor%C3%ADa:Wikipedia:Esbozo_matem%C3%A1tica" title="Categoría:Wikipedia:Esbozo matemática">Wikipedia:Esbozo matemática</a></span> | <span dir='ltr'><a href="/wiki/Categor%C3%ADa:Algoritmos" title="Categoría:Algoritmos">Algoritmos</a></span></div></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Vistas</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="/wiki/Algoritmo_evolutivo" title="Ver el artículo [c]" accesskey="c">Artículo</a></li>
+					 <li id="ca-talk" class="new"><a href="/w/index.php?title=Discusi%C3%B3n:Algoritmo_evolutivo&amp;action=edit" title="Discusión acerca del artículo [t]" accesskey="t">Discusión</a></li>
+					 <li id="ca-edit"><a href="/w/index.php?title=Algoritmo_evolutivo&amp;action=edit" title="Puede editar esta página. Por favor, use el botón de previsualización antes de grabar. [e]" accesskey="e">Editar</a></li>
+					 <li id="ca-history"><a href="/w/index.php?title=Algoritmo_evolutivo&amp;action=history" title="Versiones anteriores de esta página y sus autores [h]" accesskey="h">Historial</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Herramientas personales</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/w/index.php?title=Especial:UserLogin&amp;returnto=Algoritmo_evolutivo" title="Le animamos a registrarse, aunque no es obligatorio [o]" accesskey="o">Registrarse/Entrar</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/7/74/Wikipedia-logo-es.png);" href="/wiki/Portada" title="Visitar la Portada [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navegación</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Portada" title="Visitar la Portada [z]" accesskey="z">Portada</a></li>
+				<li id="n-portal"><a href="/wiki/Portal:Comunidad" title="Acerca del proyecto, qué puede hacer, dónde encontrar información">Portal de la comunidad</a></li>
+				<li id="n-currentevents"><a href="/wiki/Portal:Actualidad" title="Información de contexto sobre acontecimientos actuales">Actualidad</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Especial:RecentChanges" title="La lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li>
+				<li id="n-randompage"><a href="/wiki/Especial:Random" title="Cargar una página aleatoriamente [x]" accesskey="x">Página aleatoria</a></li>
+				<li id="n-help"><a href="/wiki/Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donaciones" title="Respáldenos">Donativos</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Buscar</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Especial:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Buscar en este wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Ir" title="Ir al artículo con este nombre exacto si existe" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Buscar" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Herramientas</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Especial:WhatLinksHere/Algoritmo_evolutivo" title="Lista de todas las páginas del wiki que enlazan con ésta [j]" accesskey="j">Lo que enlaza aquí</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Especial:RecentChangesLinked/Algoritmo_evolutivo" title="Cambios recientes en las páginas que enlazan con ésta [k]" accesskey="k">Cambios en enlazadas</a></li>
+<li id="t-upload"><a href="http://commons.wikimedia.org/wiki/Commons:Upload/es" title="Subir imágenes o archivos multimedia [u]" accesskey="u">Subir archivo</a></li>
+<li id="t-specialpages"><a href="/wiki/Especial:SpecialPages" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Algoritmo_evolutivo&amp;printable=yes" title="Versión imprimible de la página [p]" accesskey="p">Versión para imprimir</a></li>				<li id="t-permalink"><a href="/w/index.php?title=Algoritmo_evolutivo&amp;oldid=12149522" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Cite&amp;page=Algoritmo_evolutivo&amp;id=12149522">Citar este artículo</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Otros idiomas</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Evolution%C3%A4rer_Algorithmus">Deutsch</a></li>
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Evolutionary_algorithm">English</a></li>
+				<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Algoritmo_evolutivo">Galego</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E9%80%B2%E5%8C%96%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">日本語</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Algorytm_ewolucyjny">Polski</a></li>
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Algoritmo_evolutivo">Português</a></li>
+				<li class="interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Evolucijski_algoritem">Slovenščina</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins-1.5/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> Esta página fue modificada por última vez el 13:42, 18 oct 2007.</li>
+				<li id="copyright">Contenido disponible bajo los términos de la <a class="internal" href="/wiki/Wikipedia:Texto_de_la_Licencia_de_documentación_libre_de_GNU">Licencia de documentación libre de GNU</a> (véase <b><a class="internal" href="/wiki/Wikipedia:Derechos_de_autor">Derechos de autor</a></b>).<br />
+Wikipedia® es una marca registrada de la organización sin ánimo de lucro <a class="internal" href="http://wikimediafoundation.org/wiki/Portada">Wikimedia Foundation, Inc.</a><br /></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Pol%C3%ADtica_de_privacidad" title="wikimedia:Política de privacidad">Política de privacidad</a></li>
+				<li id="about"><a href="/wiki/Wikipedia:Acerca_de" title="Wikipedia:Acerca de">Acerca de Wikipedia</a></li>
+				<li id="disclaimer"><a href="/wiki/Wikipedia:Limitaci%C3%B3n_general_de_responsabilidad" title="Wikipedia:Limitación general de responsabilidad">Limitación de responsabilidad</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv189 in 0.115 secs. --></body></html>

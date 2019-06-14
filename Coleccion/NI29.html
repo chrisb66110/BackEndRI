@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns:dc="http://purl.org/dc/terms/" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<style>.async-hide { opacity: 0 !important}</style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c; })(window,document.documentElement,'async-hide','dataLayer',4000, {'GTM-K4358KR':true});</script>
+<script>
+    var getOneTrustGroupConsent = function(groupId){
+      var pair = document.cookie.match(new RegExp("OptanonAlertBoxClosed=([^;]+)"));
+      if (!pair) {
+        return "";
+      }
+      var pair = document.cookie.match(new RegExp("OptanonConsent=([^;]+)"));
+      if (!!pair) {
+        var consentString = decodeURIComponent(pair[1]);
+        var reg = new RegExp( "groups=([^&amp;#]*)", "i" );
+        var string = reg.exec(consentString);
+        if (string) {
+          var consentsArray = [];
+          var stringConsentsArray = string[1].split(",");
+          for (var i in stringConsentsArray) {
+            var aux = stringConsentsArray[i].split(":");
+            consentsArray[aux[0]] = aux[1];
+          }
+          return consentsArray[groupId] ? consentsArray[groupId] : "";
+        }
+      }
+      return "";
+    };</script>
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>var dfp_segmentation = 'contenido_final/reportaje';
+    var hasAgreedGDPRCookie = function(){
+      var pair = document.cookie.match(new RegExp("gdpr-cookie-agreed=([^;]+)"));
+      if (!!pair) {
+        return pair[1] == 1 || pair[1] == 2 ? 1 : 0;
+      }
+      return 0;
+    };var googletag = googletag || {};googletag.cmd = googletag.cmd || [];var gptAdSlots = [];var outOfPageSlot = [];googletag.cmd.push(function() {var mapping_mega_1 = googletag.sizeMapping().addSize([1280, 0], [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]).addSize([740, 0], [728, 90]).addSize([0, 0], [[300, 50], [320, 100], [320, 50], [300, 100]]).build();gptAdSlots['dfp_mega_1_0'] = googletag.defineSlot('/313092790/computerhoy/contenido_final/reportaje/mega_1', [[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]],'dfp_mega_1_0').defineSizeMapping(mapping_mega_1).addService(googletag.pubads());var mapping_mega_inferior = googletag.sizeMapping().addSize([1280, 0], [[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]).addSize([740, 0], [728, 90]).addSize([0, 0], [[300, 50], [320, 100], [320, 50], [300, 100]]).build();gptAdSlots['dfp_mega_inferior_0'] = googletag.defineSlot('/313092790/computerhoy/contenido_final/reportaje/mega_inferior', [[980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]],'dfp_mega_inferior_0').defineSizeMapping(mapping_mega_inferior).addService(googletag.pubads());var mapping_roba_1 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_1_0'] = googletag.defineSlot('/313092790/computerhoy/contenido_final/reportaje/roba_1', [[300, 300], [300, 600], [300, 250]],'dfp_roba_1_0').defineSizeMapping(mapping_roba_1).addService(googletag.pubads());var mapping_roba_2 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_2_0'] = googletag.defineSlot('/313092790/computerhoy/contenido_final/reportaje/roba_2', [[300, 300], [300, 600], [300, 250]],'dfp_roba_2_0').defineSizeMapping(mapping_roba_2).addService(googletag.pubads());var mapping_roba_3 = googletag.sizeMapping().addSize([0, 0], [[300, 300], [300, 600], [300, 250]]).build();gptAdSlots['dfp_roba_3_0'] = googletag.defineSlot('/313092790/computerhoy/contenido_final/reportaje/roba_3', [[300, 300], [300, 600], [300, 250]],'dfp_roba_3_0').defineSizeMapping(mapping_roba_3).addService(googletag.pubads());outOfPageSlot['dfp_ofp_1x1_0'] = googletag.defineOutOfPageSlot('/313092790/computerhoy/contenido_final/reportaje/1x1', 'dfp_ofp_1x1_0').addService(googletag.pubads());googletag.pubads().setTargeting("categoria","tecnologia");googletag.pubads().setTargeting("tag",["ordenador", "supercomputacion"]);googletag.pubads().setTargeting("tipo_contenido","reportaje");googletag.pubads().setTargeting("nid","14102");googletag.pubads().setTargeting("entorno","prod");
+    if (getOneTrustGroupConsent(4) != 1) {
+      googletag.pubads().setRequestNonPersonalizedAds(1);
+    }
+  googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs(true);googletag.enableServices();});</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-35111809-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga('require', 'linkid', 'linkid.js');ga('require', 'GTM-K4358KR');ga('set', 'dimension1', 'Rubén Andrés');ga('set', 'dimension2', 'image');ga('set', 'dimension4', '30/03/2016');ga('set', 'dimension5', '30/03/2016');ga('set', 'dimension6', 'Ordenador, Supercomputación');ga('set', 'dimension9', 'No');ga('set', 'dimension10', 'reportaje');ga('set', 'contentGroup1', 'Tecnología');ga("send", "pageview");</script>
+<meta name="title" content="¿Qué es la computación cuántica?  | Tecnología - ComputerHoy.com" />
+<meta property="twitter:creator" content="@computerhoy" />
+<meta property="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079" />
+<meta property="og:site_name" content="ComputerHoy" />
+<meta property="twitter:site" content="@computerhoy" />
+<meta name="description" content="La computación cuántica es un paradigma de computación distinto al de la computación clásica. Se basa en el uso de qubits en lugar de bits." />
+<meta property="og:type" content="article" />
+<meta property="twitter:title" content="¿Qué es la computación cuántica?" />
+<meta property="twitter:description" content="La computación cuántica es un paradigma de computación distinto al de la computación clásica. Se basa en el uso de qubits en lugar de bits." />
+<meta property="og:url" content="https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079" />
+<meta property="og:title" content="¿Qué es la computación cuántica?" />
+<meta property="twitter:image" content="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg" />
+<meta property="twitter:url" content="https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079" />
+<meta property="og:description" content="La computación cuántica es un paradigma de computación distinto al de la computación clásica. Se basa en el uso de qubits en lugar de bits." />
+<meta property="article:published_time" content="2016-03-30T13:30:22+02:00" />
+<meta property="article:section" content="Tecnología" />
+<meta property="og:image" content="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg" />
+<meta property="article:publisher" content="https://www.facebook.com/ComputerHoy" />
+<meta property="article:modified_time" content="2016-03-30T13:30:22+02:00" />
+<meta property="article:tag" content="Ordenador,Supercomputación" />
+<meta property="og:image:url" content="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg" />
+<meta property="article:author" content="Rubén Andrés" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/tech_base/computerhoy/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="amphtml" href="https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079?amp" />
+
+    <title>¿Qué es la computación cuántica?  | Tecnología - ComputerHoy.com</title>
+    <link rel="stylesheet" href="/sites/computerhoy.com/public/css/css_CwjXhqo5qT2gS8Q6IFpoMNYeda4uFBquLmfsFtrMjEw.css?pduox1" media="all" />
+<link rel="stylesheet" href="/sites/computerhoy.com/public/css/css_1kX-pOeoZtxaZJErdOJe_6WzWLHkS9Mtf6QMiQaSB14.css?pduox1" media="all" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/14102","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es","aliasCurrentPath":"\/noticias\/hardware\/que-es-computacion-cuantica-20079"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"as_brandlab\/analytics,as_ch_offers\/asgaoffers,as_dfp\/as_dfp,as_galleries\/gallery,as_galleries\/gallery_dfp,as_google_analytics\/as_ga_adblock,as_google_analytics\/as_ga_ads,as_google_analytics\/as_ga_blockquotes,as_google_analytics\/as_ga_paged_content,as_google_analytics\/as_ga_scroll,as_google_analytics\/as_google_analytics,as_hotjar\/hotjar,as_load_banner_info\/as_load_banner_info,as_one_trust\/computerhoy,as_one_trust\/generic,as_paged_content\/paged_content,as_social_links\/as_social_links,as_sunmedia\/dfp_computerhoy,as_taboola_adblock\/as_taboola_adblock,components_final_content\/authorship_information,components_ligatus\/computerhoy,components_newsletter\/global,computerhoy\/global-styling,computerhoy\/js-footer,core\/drupal.autocomplete,core\/html5shiv,core\/picturefill,navi_search_ch\/navi_search_ch.header_search,system\/base,taboola\/taboola,tech_base\/global-styling,tech_base\/js-footer,views\/views.module","theme":"computerhoy","theme_token":null},"ajaxTrustedUrl":{"\/search\/news":true},"asDFP":{"amp1":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/amp1","sizes":"[300, 250]","mapping":[]},"amp2":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/amp2","sizes":"[300, 250]","mapping":[]},"amp3":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/amp3","sizes":"[300, 250]","mapping":[]},"mega_1":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/mega_1","sizes":"[[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"mega_medio":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/mega_medio","sizes":"[[728, 90], [980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"mega_inferior":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/mega_inferior","sizes":"[[980, 250], [300, 50], [320, 100], [320, 50], [970, 250], [970, 90], [980, 180], [300, 100], [980, 90]]","mapping":{"[1280, 0]":"[[980, 250], [970, 250], [970, 90], [980, 180], [980, 90], [728, 90]]","[740, 0]":"[728, 90]","[0, 0]":"[[300, 50], [320, 100], [320, 50], [300, 100]]"}},"roba_1":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/roba_1","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_2":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/roba_2","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_3":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/roba_3","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}},"roba_galeria":{"adunit":"\/313092790\/computerhoy\/contenido_final\/reportaje\/roba_galeria","sizes":"[[300, 300], [300, 600], [300, 250]]","mapping":{"[0, 0]":"[[300, 300], [300, 600], [300, 250]]"}}},"as_hotjar":{"hjSettings":{"hjid":76842,"hjsv":6}},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"as_google_analytics":{"d":{"1":"Rub\u00e9n Andr\u00e9s","2":"image","4":"30\/03\/2016","5":"30\/03\/2016","6":"Ordenador, Supercomputaci\u00f3n","9":"No","10":"reportaje"},"cg":{"1":"Tecnolog\u00eda"}},"taboola":{"service_url":"\/\/cdn.taboola.com\/libtrc\/axelspringerspain-computerhoy\/loader.js","mode":"alternating-thumbnails-d","placement":"Below Article Thumbnails","target_type":"mix","container":"taboola-below-article-thumbnails"},"as_social_links":{"counter":false,"base_path":"\/","uuid":"45f36f3b-33fd-4243-8af6-1478c90f73ac","domain":"computerhoy.com","width":575,"height":400},"uuid":"45f36f3b-33fd-4243-8af6-1478c90f73ac","rudomain":"navi.axelspringer.es","type":"node","paged_content":{"content":["\u003Cdiv data-url=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/que-es-computacion-cuantica-20079?page=0\u0022 class=\u0022row page-content\u0022\u003E\n  \u003Cdiv class=\u0022col-xs-12 col-md\u0022\u003E\n    \u003Cdiv class=\u0022article-body\u0022\u003E\n                        \n  \n\u003Cp\u003ELa\u00a0\u003Cstrong\u003Ecomputaci\u00f3n cu\u00e1ntica\u003C\/strong\u003E\u00a0est\u00e1 siendo\nnoticia estos d\u00edas por conseguir grandes avances en su desarrollo\npero, muy probablemente, te est\u00e9s preguntando qu\u00e9 es exactamente la\ncomputaci\u00f3n cu\u00e1ntica y qu\u00e9 representa para el futuro de la\ninform\u00e1tica y los sistemas computacionales.\u003C\/p\u003E\n\u003Cp\u003EUna de las primeras cosas que debes olvidar para comprender la\ncomputaci\u00f3n cu\u00e1ntica es el funcionamiento de los \u003Ca href=\u0022http:\/\/www.amazon.es\/gp\/product\/B017NPDN30\/ref=as_li_ss_tl?ie=UTF8\u0026amp;camp=3626\u0026amp;creative=24822\u0026amp;creativeASIN=B017NPDN30\u0026amp;linkCode=as2\u0026amp;tag=comphoy-21\u0022 rel=\u0022nofollow\u0022 target=\u0022_blank\u0022\u003Eordenadores actuales\u003C\/a\u003E. La\ncomputaci\u00f3n cu\u00e1ntica deja a un lado los sistemas l\u00f3gicos empleados\npor los sistemas inform\u00e1ticos actuales y utilizan el modelo de los\nestados del \u00e1tomo para realizar sus procesos.\u003C\/p\u003E\n\u003Cp\u003ELos dispositivos y ordenadores convencionales, como el que\nprobablemente est\u00e9s utilizando para leer este art\u00edculo, resumen\ntoda la informaci\u00f3n que procesan a lenguaje binario, es decir, que\nsolo utilizan dos estados para los datos: 0 \u00f3 1.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media image\u0022\u003E    \u003Cdiv class=\u0022container-img\u0022\u003E\n      \n      \u003Cpicture\u003E\u003C!--[if IE 9]\u003E\u003Cvideo style=\u0022display: none;\u0022\u003E\u003C![endif]--\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/855\/public\/media\/image\/2016\/03\/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=1MQANP-2 1x\u0022 media=\u0022all and (min-width: 980px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/950\/public\/media\/image\/2016\/03\/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=ybVmtq1S 1x\u0022 media=\u0022(min-width: 480px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=kHPTGs5l 1x\u0022 media=\u0022(min-width: 0px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003C!--[if IE 9]\u003E\u003C\/video\u003E\u003C![endif]--\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=kHPTGs5l\u0022 alt=\u0022Los dispositivos y ordenadores convencionales resumen toda la informaci\u00f3n que procesan a un estado binario, es decir, que solo utilizan dos estados para los datos: 0 \u00f3 1.\u0022 title=\u0022Los dispositivos y ordenadores convencionales resumen toda la informaci\u00f3n que procesan a un estado binario, es decir, que solo utilizan dos estados para los datos: 0 \u00f3 1.\u0022 \/\u003E\u003C\/picture\u003E\u003C\/div\u003E\n\u003C\/div\u003E\n\u003Cp\u003EComo si de un interruptor se tratara, los bits solo pueden estar\nencendidos o apagados. Toda la informaci\u00f3n en la computaci\u00f3n actual\nse resume en una secuencia de ceros y unos, o encendido o\napagado.\u003C\/p\u003E\n\u003Ch3\u003ELos \u00e1tomos tienen sus propias leyes\u003C\/h3\u003E\n\u003Cp\u003EEn cambio, los \u00e1tomos tienen una curiosa cualidad, que es\nprecisamente una de las propiedades que hacen incre\u00edble la\ncomputaci\u00f3n cu\u00e1ntica. Esta cualidad es\u00a0\u003Cspan class=\u0022bold\u0022\u003Ela\nsuperposici\u00f3n\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cp\u003ELa\u00a0\u003Cstrong\u003Esuperposici\u00f3n del \u00e1tomo\u003C\/strong\u003E\u00a0consiste\nen que un \u00e1tomo puede adoptar un estado de 0 y de 1, pero adem\u00e1s\npuede adoptar\u00a0\u003Cspan class=\u0022bold\u0022\u003Eambos estados al mismo\ntiempo\u003C\/span\u003E. Estos ordenadores cu\u00e1nticos son capaces de probar,\nal mismo tiempo, todas las posibilidades que existen para la\nsoluci\u00f3n concreta de un problema, en lugar de probar todas las\nposibilidades una tras otra como se realizan actualmente.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media image\u0022\u003E    \u003Cdiv class=\u0022container-img\u0022\u003E\n      \n      \u003Cpicture\u003E\u003C!--[if IE 9]\u003E\u003Cvideo style=\u0022display: none;\u0022\u003E\u003C![endif]--\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/855\/public\/media\/image\/2016\/03\/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=lz0h9A9D 1x\u0022 media=\u0022all and (min-width: 980px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/950\/public\/media\/image\/2016\/03\/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=eILzCq1w 1x\u0022 media=\u0022(min-width: 480px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=Y83aUfYY 1x\u0022 media=\u0022(min-width: 0px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003C!--[if IE 9]\u003E\u003C\/video\u003E\u003C![endif]--\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=Y83aUfYY\u0022 alt=\u0022Una de las primeras cosas que debes olvidar para comprender la computaci\u00f3n cu\u00e1ntica el funcionamiento de los ordenadores actuales\u0022 title=\u0022Una de las primeras cosas que debes olvidar para comprender la computaci\u00f3n cu\u00e1ntica el funcionamiento de los ordenadores actuales\u0022 \/\u003E\u003C\/picture\u003E\u003C\/div\u003E\n\u003C\/div\u003E\n\u003Cp\u003EEste cambio en el paradigma de la computaci\u00f3n supone un enorme\nsalto adelante en la potencia de computaci\u00f3n, que permitir\u00edan\nrealizar c\u00e1lculos complejos que actualmente son inalcanzables\nincluso para los\u00a0\u003Cstrong\u003Esuperordenadores\u003C\/strong\u003E.\u003C\/p\u003E\n\u003Ch3\u003E\u00bfC\u00f3mo son de r\u00e1pidos los ordenadores cu\u00e1nticos?\u003C\/h3\u003E\n\u003Cp\u003ELa\u00a0\u003Cstrong\u003Epotencia de los ordenadores cu\u00e1nticos\u003C\/strong\u003E,\nal igual que la de los ordenadores convencionales, se mide en\nunidades de procesamiento, que no son m\u00e1s que \u00e1tomos individuales.\nEn el caso de los ordenadores cu\u00e1nticos, se mide en bits cu\u00e1nticos\no\u00a0\u003Cstrong\u003Equbits\u003C\/strong\u003E. A mayor cantidad de qubits, m\u00e1s\nr\u00e1pido funcionan.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/listas\/especial-navidad\/cinco-superordenadores-mas-potentes-del-mundo-30761\u0022 title=\u0022Los cinco superordenadores m\u00e1s potentes del mundo\u0022\u003ELos cinco\nsuperordenadores m\u00e1s potentes del mundo\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Cp\u003ELos d\u00edscolos y caprichosos \u00e1tomos, adem\u00e1s de poder adoptar\nvarios estados simult\u00e1neamente, tambi\u00e9n cuentan con otra\nparticularidad llamada\u00a0\u003Cspan class=\u0022bold\u0022\u003Eentrelazamiento\nat\u00f3mico\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cp\u003EGracias a esta particularidad, un \u00e1tomo puede transmitir\ndeterminadas propiedades a otro sin que haya nada de por medio.\nAlgo as\u00ed como una telepat\u00eda entre \u00e1tomos que hace que cualquier\ncambio en el estado de uno de los \u00e1tomos entrelazados, provoque un\ncambio instant\u00e1neo en el otro.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media image\u0022\u003E    \u003Cdiv class=\u0022container-img\u0022\u003E\n      \n      \u003Cpicture\u003E\u003C!--[if IE 9]\u003E\u003Cvideo style=\u0022display: none;\u0022\u003E\u003C![endif]--\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/855\/public\/media\/image\/2016\/03\/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=oElPvQWA 1x\u0022 media=\u0022all and (min-width: 980px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/950\/public\/media\/image\/2016\/03\/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=M8G2LGwl 1x\u0022 media=\u0022(min-width: 480px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=BPcKB8rq 1x\u0022 media=\u0022(min-width: 0px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003C!--[if IE 9]\u003E\u003C\/video\u003E\u003C![endif]--\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=BPcKB8rq\u0022 alt=\u0022Los \u00e1tomos, adem\u00e1s de poder adoptar varios estados simult\u00e1neamente, tambi\u00e9n cuentan con otra particularidad llamada entrelazamiento.\u0022 title=\u0022Los \u00e1tomos, adem\u00e1s de poder adoptar varios estados simult\u00e1neamente, tambi\u00e9n cuentan con otra particularidad llamada entrelazamiento.\u0022 \/\u003E\u003C\/picture\u003E\u003C\/div\u003E\n\u003C\/div\u003E\n\u003Cp\u003EEsto, permite\u00a0\u003Cspan class=\u0022bold\u0022\u003Ecrear entrelazamientos\ncu\u00e1nticos entre varios \u00e1tomos\u00a0\u003C\/span\u003Ede forma que permiten\ncrear una red de \u00e1tomos que funcionan de forma arm\u00f3nica. Podr\u00edamos\ndecir que son como los n\u00facleos que funcionan de forma conjunta\ndentro de un procesador convencional, pero a un nivel much\u00edsimo m\u00e1s\ncomplejo.\u003C\/p\u003E\n\u003Cp\u003EDado que\u00a0\u003Cspan class=\u0022bold\u0022\u003Eun bit cu\u00e1ntico o qubit es\ncapaz de procesar mucha m\u00e1s informaci\u00f3n que un bit,\u003C\/span\u003E\u00a0la\npotencia de procesado con respecto a los sistemas actuales se\nincrementa exponencialmente. A medida que los nuevos\ndescubrimientos permitan crear entrelazados cu\u00e1nticos con un mayor\nn\u00famero de \u00e1tomos, esta potencia aumentar\u00e1 sustancialmente, hasta el\npunto de poder resolver en segundos tareas para las que un\nsuperordenador normal tardar\u00eda a\u00f1os. Aunque esto s\u00f3lo se aplica a\nciertos c\u00e1lculos.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/que-son-superordenadores-como-funcionan-10643\u0022 title=\u0022\u00bfQu\u00e9 son los superordenadores y c\u00f3mo funcionan?\u0022\u003E\u00bfQu\u00e9 son\nlos superordenadores y c\u00f3mo funcionan?\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003ESin discos duros ni monitores\u003C\/h3\u003E\n\u003Cp\u003EEn un procesador cu\u00e1ntico no se utilizan ni monitores, ni discos\nduros, ni ning\u00fan tipo de hardware tal y como lo conocemos en el\n\u00e1mbito de la inform\u00e1tica actual.\u003C\/p\u003E\n\u003Cp\u003ETodo sucede en la unidad de procesamiento que debe permanecer en\nunas condiciones de absoluto aislamiento ya que los estados\ncu\u00e1nticos del \u00e1tomo son extremadamente fr\u00e1giles y la superposici\u00f3n\nde los estados que se produce durante el proceso de c\u00e1lculo, puede\nperturbarse.\u003C\/p\u003E\n\u003Cp\u003ELa superposici\u00f3n de los \u00e1tomos puede verse alterada ante el\ncontacto con un campo electromagn\u00e9tico o la m\u00e1s m\u00ednima vibraci\u00f3n o\nfluctuaci\u00f3n de la temperatura.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media image\u0022\u003E    \u003Cdiv class=\u0022container-img\u0022\u003E\n      \n      \u003Cpicture\u003E\u003C!--[if IE 9]\u003E\u003Cvideo style=\u0022display: none;\u0022\u003E\u003C![endif]--\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/855\/public\/media\/image\/2016\/03\/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=XXauB0Pw 1x\u0022 media=\u0022all and (min-width: 980px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/950\/public\/media\/image\/2016\/03\/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=l57NLzNG 1x\u0022 media=\u0022(min-width: 480px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=zQqL8jyK 1x\u0022 media=\u0022(min-width: 0px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003C!--[if IE 9]\u003E\u003C\/video\u003E\u003C![endif]--\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=zQqL8jyK\u0022 alt=\u0022La superposici\u00f3n de los \u00e1tomos puede verse alterada ante el contacto con un campo electromagn\u00e9tico o la m\u00e1s m\u00ednima vibraci\u00f3n o fluctuaci\u00f3n de la temperatura.\u0022 title=\u0022La superposici\u00f3n de los \u00e1tomos puede verse alterada ante el contacto con un campo electromagn\u00e9tico o la m\u00e1s m\u00ednima vibraci\u00f3n o fluctuaci\u00f3n de la temperatura.\u0022 \/\u003E\u003C\/picture\u003E\u003C\/div\u003E\n\u003C\/div\u003E\n\u003Cp\u003EEsta alteraci\u00f3n del estado del \u00e1tomo provocar\u00eda errores de\nc\u00e1lculo. Por ese motivo, los procesadores en los que se encuentran\nlos qubits deben enfriarse y mantenerse a cero absoluto (-273\ngrados Celsius).\u003C\/p\u003E\n\u003Cp\u003ELos estados de cada \u00e1tomo se observan mediante mediciones con\nl\u00e1ser, de las que se extraen los resultados de los c\u00e1lculos y se\nprocesan con ordenadores normales.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/milky-way-2-superordenador-mas-potente-del-mundo-4362\u0022 title=\u0022Milky Way 2 el superordenador m\u00e1s potente del mundo\u0022\u003EMilky\nWay 2 el superordenador m\u00e1s potente del mundo\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003E\u00bfExiste ya un ordenador cu\u00e1ntico?\u003C\/h3\u003E\n\u003Cp\u003EPor el momento,\u003Cspan class=\u0022bold\u0022\u003E\u00a0s\u00f3lo existen ordenadores\ncu\u00e1nticos en laboratorios e instituciones de investigaci\u00f3n\u003C\/span\u003E.\nSin embargo, han demostrado que la tecnolog\u00eda funciona, aunque\ntodav\u00eda queda un largo camino por delante ya que, para su correcto\nfuncionamiento, los ordenadores cu\u00e1nticos necesitan unas\ncondiciones muy concretas.\u003C\/p\u003E\n\u003Cp\u003EPor el momento, empresas\ncomo\u003Cstrong\u003E\u00a0Google\u003C\/strong\u003E,\u003Cstrong\u003E\u00a0IBM\u003C\/strong\u003E,\nla\u00a0\u003Cstrong\u003ENASA\u003C\/strong\u003E\u00a0o diversos organismos\ncient\u00edficos est\u00e1n desarrollando prototipos con la tecnolog\u00eda\nnecesaria para conseguir que, en unos 10 a\u00f1os o 15 a\u00f1os, los\nordenadores cu\u00e1nticos sean una realidad cotidiana.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media video\u0022\u003E      \u003Ciframe src=\u0022https:\/\/www.dailymotion.com\/embed\/video\/k4UYbkKAi1JlDWeg4wQ?info-action=none\u0022 width=\u0022650\u0022 height=\u0022360\u0022 frameborder=\u00220\u0022 allowfullscreen=\u0022\u0022\u003E\u003C\/iframe\u003E\n\n\n\u003C\/div\u003E\n\u003Cp\u003EPrototipos como el\u00a0\u003Cstrong\u003ED-Wave 2x\u003C\/strong\u003E\u00a0son\nejemplos tangibles de la evoluci\u00f3n de estos sistemas\ncomputacionales pero, a su vez, sirven para tomar conciencia del\nlargo camino que todav\u00eda queda por recorrer.\u003C\/p\u003E\n\u003Cp\u003ELa primera versi\u00f3n de este prototipo funcionaba\ncon\u00a0\u003Cspan class=\u0022bold\u0022\u003E512 qubits\u003C\/span\u003E\u00a0y costaba\nalrededor de\u00a0\u003Cspan class=\u0022bold\u0022\u003E11 millones de euros\u003C\/span\u003E.\nLa nueva versi\u00f3n de este prototipo que se dio a conocer en 2013,\nseg\u00fan aseguran sus desarrolladores, es hasta\u003Cspan class=\u0022bold\u0022\u003E\u00a0108 millones de veces m\u00e1s r\u00e1pido que un ordenador\ntradicional\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/life\/cerebro-humano-es-30-veces-mas-rapido-que-superordenadores-33517\u0022 title=\u0022El cerebro humano es 30 veces m\u00e1s r\u00e1pido que los superordenadores\u0022\u003E\nEl cerebro humano es 30 veces m\u00e1s r\u00e1pido que los\nsuperordenadores\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003EUn salto cu\u00e1ntico en la velocidad\u003C\/h3\u003E\n\u003Cp\u003ELa computaci\u00f3n cu\u00e1ntica lidera la ejecuci\u00f3n de ciertas\noperaciones aritm\u00e9ticas y en aquellas en las que se producen muchas\noperaciones similares al mismo tiempo. Tres ejemplos:\u003C\/p\u003E\n\u003Cp\u003ELos\u003Cstrong\u003E\u00a0ordenadores cu\u00e1nticos son las herramientas\nideales para trabajar con informaci\u00f3n cifrada\u003C\/strong\u003E. El sistema\ncriptogr\u00e1fico RSA, que se integra en los navegadores y protege la\nbanca online, se puede quebrar r\u00e1pidamente con un ordenador\ncu\u00e1ntico potente. Un superordenador convencional tardar\u00eda incluso\na\u00f1os.\u003C\/p\u003E\n\u003Cdiv class=\u0022embedded-entity media image\u0022\u003E    \u003Cdiv class=\u0022container-img\u0022\u003E\n      \n      \u003Cpicture\u003E\u003C!--[if IE 9]\u003E\u003Cvideo style=\u0022display: none;\u0022\u003E\u003C![endif]--\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/855\/public\/media\/image\/2016\/03\/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=-bAXt5nl 1x\u0022 media=\u0022all and (min-width: 980px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/950\/public\/media\/image\/2016\/03\/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=kYz85Plu 1x\u0022 media=\u0022(min-width: 480px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003Csource srcset=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=6JmLeRq6 1x\u0022 media=\u0022(min-width: 0px)\u0022 type=\u0022image\/jpeg\u0022\u003E\u003C\/source\u003E\u003C!--[if IE 9]\u003E\u003C\/video\u003E\u003C![endif]--\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/480\/public\/media\/image\/2016\/03\/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=6JmLeRq6\u0022 alt=\u0022Con ordenadores cu\u00e1nticos se pueden procesar enormes cantidades de datos.\u0022 title=\u0022Con ordenadores cu\u00e1nticos se pueden procesar enormes cantidades de datos.\u0022 \/\u003E\u003C\/picture\u003E\u003C\/div\u003E\n\u003C\/div\u003E\n\u003Cp\u003ECon ordenadores cu\u00e1nticos se pueden procesar enormes cantidades\nde datos. Una raz\u00f3n m\u00e1s de por qu\u00e9 las agencias de inteligencia y\nempresas como Google est\u00e1n tan interesadas en esta tecnolog\u00eda.\u003C\/p\u003E\n\u003Cp\u003ELos cient\u00edficos podr\u00edan realizar simulaciones mucho m\u00e1s\ncomplejas con ordenadores cu\u00e1nticos que con los actuales\nsuperordenadores. De este modo, calcular patrones clim\u00e1ticos o\nsimulaciones moleculares se realizar\u00edan en muy poco tiempo y\npermitir\u00edan dar un paso de gigante en el avance de otras ramas de\nla ciencia.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/superordenador-predecira-tiempo-calle-calle-20291\u0022 title=\u0022Un superordenador predecir\u00e1 el tiempo calle a calle\u0022\u003EUn\nsuperordenador predecir\u00e1 el tiempo calle a calle\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Cdiv\u003E\u003Cdiv class=\u0022embedded-entity media gallery\u0022\u003E      \u003Cdiv class=\u0022gallery-container\u0022 data-gallery-remodal-id=\u0022modal_951\u0022 data-bxslider-id=\u0022bxslider_6\u0022\u003E\n    \u003Ch2 class=\u0022gallery-title\u0022\u003E\n      El origen de los ordenadores: los 9 pasos de ayer a hoy (10)\n    \u003C\/h2\u003E\n    \u003Csection class=\u0022gallery-main-thumb\u0022\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/1160x650\/public\/media\/image\/2015\/08\/117935-historia-ordenadores.jpg?itok=6_n-5FVi\u0022 width=\u00221160\u0022 height=\u0022650\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 \/\u003E\u003C\/section\u003E\u003Csection class=\u0022gallery-little-thumb\u0022\u003E\u003Cfigure class=\u0022media-wrapper\u0022\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/376x218\/public\/media\/image\/2015\/08\/117861-historia-ordenadores.jpg?itok=8_v5NQQy\u0022 width=\u0022376\u0022 height=\u0022218\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 \/\u003E\u003C\/figure\u003E\u003Cfigure class=\u0022media-wrapper\u0022\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/376x218\/public\/media\/image\/2015\/08\/117863-historia-ordenadores.jpg?itok=Klu0RYHa\u0022 width=\u0022376\u0022 height=\u0022218\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 \/\u003E\u003C\/figure\u003E\u003Cfigure class=\u0022media-wrapper\u0022\u003E\u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/376x218\/public\/media\/image\/2015\/08\/117865-historia-ordenadores.jpg?itok=UHpX8EC2\u0022 width=\u0022376\u0022 height=\u0022218\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 \/\u003E\u003C\/figure\u003E\u003Cdiv class=\u0022container-link\u0022\u003E\n        \u003Ca class=\u0022gallery-link icon icon-arrow\u0022 href=\u0022#modal_951\u0022 title=\u0022Ver galer\u00eda de El origen de los ordenadores: los 9 pasos de ayer a hoy\u0022\u003EVer galer\u00eda\u003C\/a\u003E\n      \u003C\/div\u003E\n    \u003C\/section\u003E\u003C\/div\u003E\n  \u003Cdiv class=\u0022remodal\u0022 data-remodal-id=\u0022modal_951\u0022\u003E\n    \u003Cbutton data-remodal-action=\u0022close\u0022 class=\u0022remodal-close\u0022\u003E\u003C\/button\u003E\n    \u003Cdiv class=\u0022gallery-content container\u0022\u003E\n      \u003Ch2 class=\u0022gallery-content-title\u0022\u003EEl origen de los ordenadores: los 9 pasos de ayer a hoy \u003Cspan class=\u0022gallery-content-title-number\u0022\u003E(\u003Cstrong class=\u0022gallery-content-title-number-index\u0022\u003E1\u003C\/strong\u003E\/\u003C\/span\u003E\u003Cspan class=\u0022gallery-content-title-number-color\u0022\u003E)\u003C\/span\u003E\u003C\/h2\u003E\n      \u003Cdiv class=\u0022grid col-2 right row\u0022\u003E\n        \u003Cul class=\u0022gallery-content-list bxslider\u0022 data-bxslider-id=\u0022bxslider_6\u0022\u003E\u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117935-historia-ordenadores.jpg?itok=6rxkHciJ\u0022 width=\u0022624\u0022 height=\u0022352\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EEl 21 de agosto de 1953 se produce un hito hist\u00f3rico: se llega a 100 ordenadores en todo mundo. Por eso, hoy repasamos la evoluci\u00f3n de este tipo de equipos.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117861-historia-ordenadores.jpg?itok=s5XLfva0\u0022 width=\u0022980\u0022 height=\u0022735\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EQuiz\u00e1s el a\u00f1o m\u00e1s significativo en la historia de los ordenadores fue 1936, ya que se cre\u00f3 el primer \u201ccomputador\u201d del mundo, el Z1, que ten\u00eda un sistema totalmente programable. Es cierto que hubo otros dispositivos antes que \u00e9ste, pero ninguno con la capacidad de este equipo.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117863-historia-ordenadores.jpg?itok=AJMTgoj2\u0022 width=\u0022980\u0022 height=\u0022658\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003ESin embargo, tuvieron que pasar 6 a\u00f1os hasta que una empresa se dio cuenta del potencial de estos dispositivos. La primera compa\u00f1\u00eda que se dedic\u00f3 al desarrollo de ordenadores fue ABC Computers, cuyos fundadores fueron John Atanasoff y Clifford Berry. Dos a\u00f1os despu\u00e9s se present\u00f3 el Harvard Mark I, que llev\u00f3 un paso m\u00e1s all\u00e1 lo que se haba desarrollado hasta la fecha.  Durante los 10 a\u00f1os siguientes se sucedieron m\u00faltiples avances, pero ninguno fue tan importante como el transistor, que se convertir\u00eda en parte vital de la electr\u00f3nica que compone un ordenador. \u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117865-historia-ordenadores.jpg?itok=WGeArlcn\u0022 width=\u0022529\u0022 height=\u0022419\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003ELa historia de los ordenadores qued\u00f3 alterada con la llegada de IBM, en 1953. Esta introducci\u00f3n trajo los primeros signos reales de competencia en el mundo inform\u00e1tico, que aument\u00f3 el n\u00famero de ordenadores en el mercado. Su primera contribuci\u00f3n fue el IBM 701 EDPM. En este mismo a\u00f1o se llega a un total de 100 ordenadores en todo el mundo, un hito hist\u00f3rico en el mundo de la inform\u00e1tica. \u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117867-historia-ordenadores.jpg?itok=Muzuf7Qq\u0022 width=\u0022800\u0022 height=\u0022384\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EUn a\u00f1o mas tarde llega FORTAN, el primer lenguaje de programaci\u00f3n de alto nivel, que se escribi\u00f3 para que las personas pudieran empezar a programar de forma mas f\u00e1cil.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117869-historia-ordenadores.jpg?itok=GT6iwfoc\u0022 width=\u0022480\u0022 height=\u0022329\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EEn 1958 se crea el primer circuito integrado. El dispositivo, tambi\u00e9n conocido como chip, es uno de los requerimientos b\u00e1sicos para los sistemas de ordenadores modernos. En cualquier placa base o tarjeta, encontraremos chips que contiene informaci\u00f3n de lo que estos dispositivos deben hacer. Sin ellos, los sistemas tal como los conocemos no podr\u00edan funcionar.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117871-historia-ordenadores.jpg?itok=c5rnBMPF\u0022 width=\u0022980\u0022 height=\u0022659\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003E Para muchos gamers, los juegos han sido una parte vital dentro del mundo de los PCs. En 1962 vio la luz el primer juego de ordenador, creado por Steve Russel y MIT, el cual se llam\u00f3 \u201cSpacewar\u201d.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117873-historia-ordenadores.jpg?itok=Nr5ajQQk\u0022 width=\u0022727\u0022 height=\u0022481\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EUno de los aspectos mas importantes dentro del mundo inform\u00e1tico en la actualidad fue inventado en 1969. Hablamos de la red ARPA, que se puede considerar el Internet original y que sirvi\u00f3 de base para la creaci\u00f3n de los fundamentos de la Red de hoy en d\u00eda.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117875-historia-ordenadores.jpg?itok=YL76S0Db\u0022 width=\u0022726\u0022 height=\u0022482\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EEn 1970 Intel entr\u00f3 en escena con el primer chip RAM din\u00e1mico, que supuso una autentica explosi\u00f3n de innovaci\u00f3n en el mundo inform\u00e1tico. Casi al mismo tiempo sali\u00f3 el primer microprocesador, que tambi\u00e9n fue creado por Intel. Estos dos componentes, junto con el chip creado en 1958, se pueden considerar el n\u00facleo de los ordenadores modernos.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                      \u003Cli class=\u0022gallery-content-element\u0022\u003E  \n    \u003Cimg src=\u0022https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/styles\/gallery_big\/public\/media\/image\/2015\/08\/117877-historia-ordenadores.jpg?itok=syGbRuwi\u0022 width=\u0022980\u0022 height=\u0022736\u0022 alt=\u0022historia ordenadores\u0022 title=\u0022historia ordenadores\u0022 class=\u0022gallery-content-picture\u0022 \/\u003E\u003Cp class=\u0022gallery-content-element-name\u0022\u003Ehistoria ordenadores\u003C\/p\u003E\n  \u003Cp class=\u0022gallery-content-element-description\u0022\u003E\n            \u003C\/p\u003E\u003Cdiv\u003E\u003Cp\u003EFinalmente, el IBM PC ayud\u00f3 a revolucionar el mercado de consumo en 1981 ya que, con sus precios competitivos, permiti\u00f3 al usuario medio tener un ordenador en casa. Ese mismo a\u00f1o tambi\u00e9n vio a Microsoft entrar en escena con su sistema operativo MS-DOS. Este sofware cambi\u00f3 el mundo de los ordenadores para siempre, ya que era muy f\u00e1cil de utilizar.\u003C\/p\u003E\n\u003C\/div\u003E\n      \n\u003C\/li\u003E\n                  \u003C\/ul\u003E\u003Caside class=\u0022gallery-content-ad column col-xs-12 col-sm-auto\u0022\u003E\u003Cdiv data-dfp-position=\u0022roba_galeria\u0022 class=\u0022dfp-position roba_galeria\u0022\u003E\n\u003C\/div\u003E\u003C\/aside\u003E\u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\u003C\/div\u003E\n\n\n\n\n                  \u003C\/div\u003E\n  \u003C\/div\u003E\n  \u003Cdiv class=\u0022col-xs-12 col-md-auto first-xs last-md\u0022\u003E\n    \u003Caside class=\u0022column-right\u0022 data-sticky-container\u003E\n      \u003Cdiv class=\u0022sticky\u0022 data-sticky-ad-paged data-margin-top=\u002270\u0022\u003E\n        \u003Cdiv data-dfp-position=\u0022roba_1\u0022 class=\u0022dfp-position roba_1\u0022\u003E\n  \u003Cscript\u003E\n        asDFP.display(\u0027roba_1\u0027);\n      \u003C\/script\u003E\n\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/aside\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n"],"page":0},"user":{"uid":0,"permissionsHash":"2531f5b176a19e8217eb2e20f1f611da2e1d07acd34fc2a5179e29fb67910806"}}</script>
+
+<!--[if lte IE 8]>
+<script src="/sites/computerhoy.com/public/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/computerhoy.com/public/js/js_8NloITtuT5AUKoTEI0riZplHSjdj61b9p_Q5bVqUXOI.js"></script>
+<script src="https://cdn.cookielaw.org/consent/a0968622-e9d9-4923-8f1c-5798a5f537ac.js" charset="UTF-8"></script>
+<script src="/sites/computerhoy.com/public/js/js_E5B5OjWoMGOvqYmV9anE9k7SOpmrR_objXda_pYGNxo.js"></script>
+<script src="/modules/custom/as_google_analytics/js/as_ga_ads.js?v=1"></script>
+
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+    <div class="layout-container">
+
+  <header class="header" role="banner">
+    <div class="top-header">
+                <a class="logo-ch" href="/" title="Ir a Portada de CH" rel="home">
+            <img src="/themes/tech_base/computerhoy/img/logo-computerhoy.png" alt="ComputerHoy.com"/>
+        </a>
+                <div id="block-header-magazine">
+  
+    
+      <div class="magazine">
+    <p>Ya en tu kiosko</p>
+    <div class="magazine-image">
+        <a href="http://store.axelspringer.es/tecnologia/revistas-tecnologia/computer-hoy" target="_blank"><img src="https://ozio.axelspringer.es/sites/default/files/styles/suscripciones_json/public/suscripciones/01CH518.jpg?itok=N10P8Mjj" alt="Computer Hoy"></a>
+        <div class="magazine-links">
+            <a class="button-primary" href="http://store.axelspringer.es/tecnologia/revistas-tecnologia/computer-hoy/n-518computer-hoy.html" title="Comprar" target="_blank">Comprar</a>
+            <a class="button-primary" href="http://store.axelspringer.es/suscripcionesprevia.php?id_del_producto=6036&amp;categoria=COMPUTER_HOY" title="Suscríbete" target="_blank">Suscríbete</a>
+        </div>
+    </div>
+</div>
+  </div>
+
+    </div>
+    <nav class="main-menu">
+      <div class="main-menu-trigger-button">
+        <div class="button-menu">
+        </div>
+      </div>
+      <div class="logo-ch-fixed">
+        <a href="/">
+          <img src="/themes/tech_base/computerhoy/img/logo-computerhoy-min.png" alt="ComputerHoy.com"/>
+        </a>
+      </div>
+      <ul class="list-links menu_list">
+        <li><a href="/ultimo">Lo último</a></li>
+        <li><a href="/tecnologia">Tecnología</a></li>
+        <li><a href="/entretenimiento">Entretenimiento</a></li>
+        <li><a href="/gaming">Gaming</a></li>
+        <li><a href="/life">Life</a></li>
+        <li class="desktop-visible"><a href="/motor">Motor</a></li>
+        <li class="desktop-visible"><a href="/industria">Industria</a></li>
+        <li><a href="/fichas">Productos</a></li>
+      </ul>
+      <div class="main-buttons">
+        <a class="ch-button-search icon icon-search"></a>
+        <a href="/ultimo" class="ch-latest icon icon-reload">
+          Lo último
+        </a>
+      </div>
+    </nav>
+            <div class="search-bar desktop">
+            <div class="container">
+                <section class="search">
+  <div class="container-submenu">
+          <form action="/search/news" method="get" id="navi-search-ch-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Buscar</label>
+        <input title="Escriba lo que quiere buscar." data-drupal-selector="edit-keys" class="form-autocomplete form-text" data-autocomplete-path="/navi-search/product-autocomplete" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" placeholder="Escribe aquí lo que quieres buscar..." />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar" class="button js-form-submit form-submit button-primary" />
+</div>
+
+</form>
+
+      </div>
+</section>
+
+                <a class="ch-button-close close-css"></a>
+            </div>
+        </div>
+        <div class="secondary">
+                    <section class="search">
+  <div class="container-submenu">
+          <form action="/search/news" method="get" id="navi-search-ch-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Buscar</label>
+        <input title="Escriba lo que quiere buscar." data-drupal-selector="edit-keys" class="form-autocomplete form-text" data-autocomplete-path="/navi-search/product-autocomplete" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" placeholder="Escribe aquí lo que quieres buscar..." />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar" class="button js-form-submit form-submit button-primary" />
+</div>
+
+</form>
+
+      </div>
+</section>
+
+                <section class="tops">
+            <div class="container-submenu">
+                <nav class="main-nav">
+                <ul>
+                    <li><a href="/tecnologia">Tecnología</a></li>
+                    <li><a href="/entretenimiento">Entretenimiento</a></li>
+                    <li><a href="/gaming">Gaming</a></li>
+                    <li><a href="/life">Life</a></li>
+                    <li><a href="/motor">Motor</a></li>
+                    <li><a href="/industria">Industria</a></li>
+                    <li><a href="/fichas">Productos</a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="sections">
+            <div class="container-submenu">
+                <h2 class="title-menu">Secciones</h2>
+                <nav>
+                <ul>
+                    <li><a href="/noticias">Noticias</a></li>
+                    <li><a href="/analisis">Análisis</a></li>
+                    <li><a href="/tutoriales">Tutoriales</a></li>
+                    <li><a href="/listas">Listas</a></li>
+                    <li><a href="/reportajes">Reportajes</a></li>
+                    <li><a href="/especiales">Especiales</a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="product-cards">
+            <div class="container-submenu">
+                <h2 class="title-menu">Fichas de productos</h2>
+                <nav>
+                <ul>
+                    <li><a href="/fichas/moviles">Móviles</a></li>
+                    <li><a href="/fichas/tablets">Tablets</a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container-submenu">
+                <h2>Servicios</h2>
+                <nav>
+                <ul>
+                    <li><a href="/cupones">Cupones</a></li>
+                    <li><a href="http://buscar-coche.autobild.es/recomendador">Recomendador de coches</a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+                        <section class="secondary-magazine">
+            <div id="block-menu-magazine">
+  
+    
+      <div class="magazine-inner">
+    <div class="magazine-info">
+        <h2 class="title-menu">La revista</h2>
+        <p class="magazine-name">Computer Hoy Nº 518</p>
+        <a class="button-primary" href="http://store.axelspringer.es/tecnologia/revistas-tecnologia/computer-hoy/n-518computer-hoy.html" title="Comprar" target="_blank">Comprar</a>
+        <a class="button-primary" href="http://store.axelspringer.es/suscripcionesprevia.php?id_del_producto=6036&amp;categoria=COMPUTER_HOY" title="Suscríbete" target="_blank">Suscríbete</a>
+    </div>
+    <figure class="magazine-image">
+        <a href="http://store.axelspringer.es/tecnologia/revistas-tecnologia/computer-hoy" target="_blank"><img src="https://ozio.axelspringer.es/sites/default/files/styles/suscripciones_json/public/suscripciones/01CH518.jpg?itok=N10P8Mjj" alt="Computer Hoy"></a>
+    </figure>
+</div>
+  </div>
+
+        </section>
+                <section class="rrss">
+            <div class="container-submenu">
+                <nav>
+                <ul>
+                    <li><a rel="nofollow" target="_blank" href="https://www.facebook.com/ComputerHoy" class="icon icon-facebook"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://twitter.com/computerhoy" class="icon icon-twitter"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/user/ComputerhoyTV" class="icon icon-head-youtube"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://www.instagram.com/computerhoy/" class="icon icon-instagram"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://plus.google.com/+Computerhoycom" class="icon icon-gplus"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="/rss_all/all/rss.xml" class="icon icon-rss"></a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+            
+            <div id="banner-info"></div>
+    
+
+    </header>
+    
+
+
+  <aside class="ad-container ad-top">
+    <div data-dfp-position="1x1" class="dfp-position 1x1">
+  <script>
+        asDFP.display('1x1', 1);
+      </script>
+</div>
+    <div data-dfp-position="mega_1" class="dfp-position mega_1">
+  <script>
+        asDFP.display('mega_1');
+      </script>
+</div>
+  </aside>
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+                <div class="container container-main m-b-30">
+          <div id="block-breadcrumbs" class="block-breadcrumb">
+        <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol class="breadcrumb m-b-20">
+          <li class="home">
+                  <a href="/" title="Home">Home</a>
+              </li>
+          <li class="element">
+                  <a href="/noticias" title="Noticias">Noticias</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+  <script type="application/ld+json">{"@context":"https:\/\/schema.org","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/computerhoy.com\/noticias\/hardware\/que-es-computacion-cuantica-20079"},"headline":"\u00bfQu\u00e9 es la computaci\u00f3n cu\u00e1ntica?","name":"\u00bfQu\u00e9 es la computaci\u00f3n cu\u00e1ntica?","url":"https:\/\/computerhoy.com\/noticias\/hardware\/que-es-computacion-cuantica-20079","datePublished":"2016-03-30T13:30:22+0200","dateCreated":"2016-03-30T13:30:22+0200","dateModified":"2016-03-30T13:30:22+0200","publisher":{"@type":"Organization","name":"ComputerHoy","logo":{"@type":"ImageObject","url":"https:\/\/computerhoy.com\/themes\/tech_base\/computerhoy\/img\/logo-computerhoy.png","height":"146px","width":"350px"}},"copyrightYear":"2016","inLanguage":"es-es","creator":{"@context":"https:\/\/schema.org","@type":"Person","email":"rubenabarbero@gmail.com","url":"https:\/\/computerhoy.com\/usuarios\/ruben-andres","name":"Rub\u00e9n Andr\u00e9s"},"editor":{"@context":"https:\/\/schema.org","@type":"Person","email":"rubenabarbero@gmail.com","url":"https:\/\/computerhoy.com\/usuarios\/ruben-andres","name":"Rub\u00e9n Andr\u00e9s"},"author":{"@context":"https:\/\/schema.org","@type":"Person","email":"rubenabarbero@gmail.com","url":"https:\/\/computerhoy.com\/usuarios\/ruben-andres","name":"Rub\u00e9n Andr\u00e9s"},"image":{"@type":"ImageObject","url":"https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2016\/03\/159335-que-es-computacion-cuantica.jpg","height":null,"width":null},"associatedMedia":{"@type":"ImageObject","url":"https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2016\/03\/159335-que-es-computacion-cuantica.jpg","height":null,"width":null},"thumbnailurl":"https:\/\/cdn.computerhoy.com\/sites\/navi.axelspringer.es\/public\/media\/image\/2016\/03\/159335-que-es-computacion-cuantica.jpg","description":"La computaci\u00f3n cu\u00e1ntica es un paradigma de computaci\u00f3n distinto al de la computaci\u00f3n cl\u00e1sica. Se basa en el uso de qubits en lugar de bits.","keywords":"ordenador cu\u00e1ntico, superordenador, computaci\u00f3n cu\u00e1ntica, superordenadores, D-Wave ","copyrightHolder":"ComputerHoy","@type":"NewsArticle","articlebody":"\u003Cbody\u003E\n\u003Cp\u003ELa\u0026nbsp;\u003Cstrong\u003Ecomputaci\u0026oacute;n cu\u0026aacute;ntica\u003C\/strong\u003E\u0026nbsp;est\u0026aacute; siendo\nnoticia estos d\u0026iacute;as por conseguir grandes avances en su desarrollo\npero, muy probablemente, te est\u0026eacute;s preguntando qu\u0026eacute; es exactamente la\ncomputaci\u0026oacute;n cu\u0026aacute;ntica y qu\u0026eacute; representa para el futuro de la\ninform\u0026aacute;tica y los sistemas computacionales.\u003C\/p\u003E\n\u003Cp\u003EUna de las primeras cosas que debes olvidar para comprender la\ncomputaci\u0026oacute;n cu\u0026aacute;ntica es el funcionamiento de los \u003Ca href=\u0022http:\/\/www.amazon.es\/gp\/product\/B017NPDN30\/ref=as_li_ss_tl?ie=UTF8\u0026amp;camp=3626\u0026amp;creative=24822\u0026amp;creativeASIN=B017NPDN30\u0026amp;linkCode=as2\u0026amp;tag=comphoy-21\u0022 rel=\u0022nofollow\u0022 target=\u0022_blank\u0022\u003Eordenadores actuales\u003C\/a\u003E. La\ncomputaci\u0026oacute;n cu\u0026aacute;ntica deja a un lado los sistemas l\u0026oacute;gicos empleados\npor los sistemas inform\u0026aacute;ticos actuales y utilizan el modelo de los\nestados del \u0026aacute;tomo para realizar sus procesos.\u003C\/p\u003E\n\u003Cp\u003ELos dispositivos y ordenadores convencionales, como el que\nprobablemente est\u0026eacute;s utilizando para leer este art\u0026iacute;culo, resumen\ntoda la informaci\u0026oacute;n que procesan a lenguaje binario, es decir, que\nsolo utilizan dos estados para los datos: 0 \u0026oacute; 1.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022882008\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022d68635c0-4680-4335-a871-33543279de64\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003EComo si de un interruptor se tratara, los bits solo pueden estar\nencendidos o apagados. Toda la informaci\u0026oacute;n en la computaci\u0026oacute;n actual\nse resume en una secuencia de ceros y unos, o encendido o\napagado.\u003C\/p\u003E\n\u003Ch3\u003ELos \u0026aacute;tomos tienen sus propias leyes\u003C\/h3\u003E\n\u003Cp\u003EEn cambio, los \u0026aacute;tomos tienen una curiosa cualidad, que es\nprecisamente una de las propiedades que hacen incre\u0026iacute;ble la\ncomputaci\u0026oacute;n cu\u0026aacute;ntica. Esta cualidad es\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003Ela\nsuperposici\u0026oacute;n\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cp\u003ELa\u0026nbsp;\u003Cstrong\u003Esuperposici\u0026oacute;n del \u0026aacute;tomo\u003C\/strong\u003E\u0026nbsp;consiste\nen que un \u0026aacute;tomo puede adoptar un estado de 0 y de 1, pero adem\u0026aacute;s\npuede adoptar\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003Eambos estados al mismo\ntiempo\u003C\/span\u003E. Estos ordenadores cu\u0026aacute;nticos son capaces de probar,\nal mismo tiempo, todas las posibilidades que existen para la\nsoluci\u0026oacute;n concreta de un problema, en lugar de probar todas las\nposibilidades una tras otra como se realizan actualmente.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022882009\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022505f7524-f63b-4ccd-8b7d-0b67e348ed36\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003EEste cambio en el paradigma de la computaci\u0026oacute;n supone un enorme\nsalto adelante en la potencia de computaci\u0026oacute;n, que permitir\u0026iacute;an\nrealizar c\u0026aacute;lculos complejos que actualmente son inalcanzables\nincluso para los\u0026nbsp;\u003Cstrong\u003Esuperordenadores\u003C\/strong\u003E.\u003C\/p\u003E\n\u003Ch3\u003E\u0026iquest;C\u0026oacute;mo son de r\u0026aacute;pidos los ordenadores cu\u0026aacute;nticos?\u003C\/h3\u003E\n\u003Cp\u003ELa\u0026nbsp;\u003Cstrong\u003Epotencia de los ordenadores cu\u0026aacute;nticos\u003C\/strong\u003E,\nal igual que la de los ordenadores convencionales, se mide en\nunidades de procesamiento, que no son m\u0026aacute;s que \u0026aacute;tomos individuales.\nEn el caso de los ordenadores cu\u0026aacute;nticos, se mide en bits cu\u0026aacute;nticos\no\u0026nbsp;\u003Cstrong\u003Equbits\u003C\/strong\u003E. A mayor cantidad de qubits, m\u0026aacute;s\nr\u0026aacute;pido funcionan.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/listas\/especial-navidad\/cinco-superordenadores-mas-potentes-del-mundo-30761\u0022 title=\u0022Los cinco superordenadores m\u0026aacute;s potentes del mundo\u0022\u003ELos cinco\nsuperordenadores m\u0026aacute;s potentes del mundo\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Cp\u003ELos d\u0026iacute;scolos y caprichosos \u0026aacute;tomos, adem\u0026aacute;s de poder adoptar\nvarios estados simult\u0026aacute;neamente, tambi\u0026eacute;n cuentan con otra\nparticularidad llamada\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003Eentrelazamiento\nat\u0026oacute;mico\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cp\u003EGracias a esta particularidad, un \u0026aacute;tomo puede transmitir\ndeterminadas propiedades a otro sin que haya nada de por medio.\nAlgo as\u0026iacute; como una telepat\u0026iacute;a entre \u0026aacute;tomos que hace que cualquier\ncambio en el estado de uno de los \u0026aacute;tomos entrelazados, provoque un\ncambio instant\u0026aacute;neo en el otro.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022882010\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u002287048453-7803-4351-9800-629485fa4f71\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003EEsto, permite\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003Ecrear entrelazamientos\ncu\u0026aacute;nticos entre varios \u0026aacute;tomos\u0026nbsp;\u003C\/span\u003Ede forma que permiten\ncrear una red de \u0026aacute;tomos que funcionan de forma arm\u0026oacute;nica. Podr\u0026iacute;amos\ndecir que son como los n\u0026uacute;cleos que funcionan de forma conjunta\ndentro de un procesador convencional, pero a un nivel much\u0026iacute;simo m\u0026aacute;s\ncomplejo.\u003C\/p\u003E\n\u003Cp\u003EDado que\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003Eun bit cu\u0026aacute;ntico o qubit es\ncapaz de procesar mucha m\u0026aacute;s informaci\u0026oacute;n que un bit,\u003C\/span\u003E\u0026nbsp;la\npotencia de procesado con respecto a los sistemas actuales se\nincrementa exponencialmente. A medida que los nuevos\ndescubrimientos permitan crear entrelazados cu\u0026aacute;nticos con un mayor\nn\u0026uacute;mero de \u0026aacute;tomos, esta potencia aumentar\u0026aacute; sustancialmente, hasta el\npunto de poder resolver en segundos tareas para las que un\nsuperordenador normal tardar\u0026iacute;a a\u0026ntilde;os. Aunque esto s\u0026oacute;lo se aplica a\nciertos c\u0026aacute;lculos.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/que-son-superordenadores-como-funcionan-10643\u0022 title=\u0022\u0026iquest;Qu\u0026eacute; son los superordenadores y c\u0026oacute;mo funcionan?\u0022\u003E\u0026iquest;Qu\u0026eacute; son\nlos superordenadores y c\u0026oacute;mo funcionan?\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003ESin discos duros ni monitores\u003C\/h3\u003E\n\u003Cp\u003EEn un procesador cu\u0026aacute;ntico no se utilizan ni monitores, ni discos\nduros, ni ning\u0026uacute;n tipo de hardware tal y como lo conocemos en el\n\u0026aacute;mbito de la inform\u0026aacute;tica actual.\u003C\/p\u003E\n\u003Cp\u003ETodo sucede en la unidad de procesamiento que debe permanecer en\nunas condiciones de absoluto aislamiento ya que los estados\ncu\u0026aacute;nticos del \u0026aacute;tomo son extremadamente fr\u0026aacute;giles y la superposici\u0026oacute;n\nde los estados que se produce durante el proceso de c\u0026aacute;lculo, puede\nperturbarse.\u003C\/p\u003E\n\u003Cp\u003ELa superposici\u0026oacute;n de los \u0026aacute;tomos puede verse alterada ante el\ncontacto con un campo electromagn\u0026eacute;tico o la m\u0026aacute;s m\u0026iacute;nima vibraci\u0026oacute;n o\nfluctuaci\u0026oacute;n de la temperatura.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022882011\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u002298995197-0b51-48d4-ac76-fac9e29de681\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003EEsta alteraci\u0026oacute;n del estado del \u0026aacute;tomo provocar\u0026iacute;a errores de\nc\u0026aacute;lculo. Por ese motivo, los procesadores en los que se encuentran\nlos qubits deben enfriarse y mantenerse a cero absoluto (-273\ngrados Celsius).\u003C\/p\u003E\n\u003Cp\u003ELos estados de cada \u0026aacute;tomo se observan mediante mediciones con\nl\u0026aacute;ser, de las que se extraen los resultados de los c\u0026aacute;lculos y se\nprocesan con ordenadores normales.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/milky-way-2-superordenador-mas-potente-del-mundo-4362\u0022 title=\u0022Milky Way 2 el superordenador m\u0026aacute;s potente del mundo\u0022\u003EMilky\nWay 2 el superordenador m\u0026aacute;s potente del mundo\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003E\u0026iquest;Existe ya un ordenador cu\u0026aacute;ntico?\u003C\/h3\u003E\n\u003Cp\u003EPor el momento,\u003Cspan class=\u0022bold\u0022\u003E\u0026nbsp;s\u0026oacute;lo existen ordenadores\ncu\u0026aacute;nticos en laboratorios e instituciones de investigaci\u0026oacute;n\u003C\/span\u003E.\nSin embargo, han demostrado que la tecnolog\u0026iacute;a funciona, aunque\ntodav\u0026iacute;a queda un largo camino por delante ya que, para su correcto\nfuncionamiento, los ordenadores cu\u0026aacute;nticos necesitan unas\ncondiciones muy concretas.\u003C\/p\u003E\n\u003Cp\u003EPor el momento, empresas\ncomo\u003Cstrong\u003E\u0026nbsp;Google\u003C\/strong\u003E,\u003Cstrong\u003E\u0026nbsp;IBM\u003C\/strong\u003E,\nla\u0026nbsp;\u003Cstrong\u003ENASA\u003C\/strong\u003E\u0026nbsp;o diversos organismos\ncient\u0026iacute;ficos est\u0026aacute;n desarrollando prototipos con la tecnolog\u0026iacute;a\nnecesaria para conseguir que, en unos 10 a\u0026ntilde;os o 15 a\u0026ntilde;os, los\nordenadores cu\u0026aacute;nticos sean una realidad cotidiana.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022810097\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022025d3d12-bf18-45e9-82a3-092c14f79029\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003EPrototipos como el\u0026nbsp;\u003Cstrong\u003ED-Wave 2x\u003C\/strong\u003E\u0026nbsp;son\nejemplos tangibles de la evoluci\u0026oacute;n de estos sistemas\ncomputacionales pero, a su vez, sirven para tomar conciencia del\nlargo camino que todav\u0026iacute;a queda por recorrer.\u003C\/p\u003E\n\u003Cp\u003ELa primera versi\u0026oacute;n de este prototipo funcionaba\ncon\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003E512 qubits\u003C\/span\u003E\u0026nbsp;y costaba\nalrededor de\u0026nbsp;\u003Cspan class=\u0022bold\u0022\u003E11 millones de euros\u003C\/span\u003E.\nLa nueva versi\u0026oacute;n de este prototipo que se dio a conocer en 2013,\nseg\u0026uacute;n aseguran sus desarrolladores, es hasta\u003Cspan class=\u0022bold\u0022\u003E\u0026nbsp;108 millones de veces m\u0026aacute;s r\u0026aacute;pido que un ordenador\ntradicional\u003C\/span\u003E.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/life\/cerebro-humano-es-30-veces-mas-rapido-que-superordenadores-33517\u0022 title=\u0022El cerebro humano es 30 veces m\u0026aacute;s r\u0026aacute;pido que los superordenadores\u0022\u003E\nEl cerebro humano es 30 veces m\u0026aacute;s r\u0026aacute;pido que los\nsuperordenadores\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Ch3\u003EUn salto cu\u0026aacute;ntico en la velocidad\u003C\/h3\u003E\n\u003Cp\u003ELa computaci\u0026oacute;n cu\u0026aacute;ntica lidera la ejecuci\u0026oacute;n de ciertas\noperaciones aritm\u0026eacute;ticas y en aquellas en las que se producen muchas\noperaciones similares al mismo tiempo. Tres ejemplos:\u003C\/p\u003E\n\u003Cp\u003ELos\u003Cstrong\u003E\u0026nbsp;ordenadores cu\u0026aacute;nticos son las herramientas\nideales para trabajar con informaci\u0026oacute;n cifrada\u003C\/strong\u003E. El sistema\ncriptogr\u0026aacute;fico RSA, que se integra en los navegadores y protege la\nbanca online, se puede quebrar r\u0026aacute;pidamente con un ordenador\ncu\u0026aacute;ntico potente. Un superordenador convencional tardar\u0026iacute;a incluso\na\u0026ntilde;os.\u003C\/p\u003E\n\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022882012\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022d6607818-3bd2-4816-a5c4-72df523de099\u0022\u003E\u003C\/drupal-entity\u003E\n\u003Cp\u003ECon ordenadores cu\u0026aacute;nticos se pueden procesar enormes cantidades\nde datos. Una raz\u0026oacute;n m\u0026aacute;s de por qu\u0026eacute; las agencias de inteligencia y\nempresas como Google est\u0026aacute;n tan interesadas en esta tecnolog\u0026iacute;a.\u003C\/p\u003E\n\u003Cp\u003ELos cient\u0026iacute;ficos podr\u0026iacute;an realizar simulaciones mucho m\u0026aacute;s\ncomplejas con ordenadores cu\u0026aacute;nticos que con los actuales\nsuperordenadores. De este modo, calcular patrones clim\u0026aacute;ticos o\nsimulaciones moleculares se realizar\u0026iacute;an en muy poco tiempo y\npermitir\u0026iacute;an dar un paso de gigante en el avance de otras ramas de\nla ciencia.\u003C\/p\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E\u003Ca href=\u0022https:\/\/computerhoy.com\/noticias\/hardware\/superordenador-predecira-tiempo-calle-calle-20291\u0022 title=\u0022Un superordenador predecir\u0026aacute; el tiempo calle a calle\u0022\u003EUn\nsuperordenador predecir\u0026aacute; el tiempo calle a calle\u003C\/a\u003E\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\u003Cdiv\u003E\u003Cdrupal-entity data-align=\u0022none\u0022 data-embed-button=\u0022media_embed\u0022 data-entity-embed-display=\u0022entity_reference:as_entity_reference_entity_view\u0022 data-entity-embed-settings=\u0027{\u0022view_mode\u0022:\u0022default\u0022}\u0027 data-entity-id=\u0022935360\u0022 data-entity-label=\u0022Media Embed\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022464b4f57-ae82-4153-83f0-a006d020a693\u0022\u003E\u003C\/drupal-entity\u003E\u003C\/div\u003E\n\n\u003C\/body\u003E\n","articleSection":"Tecnolog\u00eda"}</script>
+
+
+<article class="type-report">
+  <div class="m-b-40">
+      <div class="row">
+                <div class="col-xs-12">
+          <header>
+              <h1 class="title m-b-10">
+      ¿Qué es la computación cuántica?
+
+      </h1>
+
+            
+  <div class="label-section label-section-content m-b-20">
+    <a href="/reportajes">Reportaje</a>
+  </div>
+
+          </header>
+        </div>
+      </div>
+        <div id="pagination-container">
+        <div class="row page-content">
+          <div class="col-xs-12 col-md">
+              <div class="image main-element m-b-20">
+              
+      <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg?itok=lTINMD8j 1x" media="all and (min-width: 980px)" type="image/jpeg"/>
+              <source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg?itok=21hAvWBy 1x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg?itok=HFpm5-Ck 1x" media="(min-width: 0px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/159335-que-es-computacion-cuantica.jpg?itok=HFpm5-Ck" alt="¿Qué es la computación cuántica?" title="¿Qué es la computación cuántica?" />
+
+  </picture>
+
+
+
+
+      </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm m-b-20">
+                  <div class="block block-author-time">
+  
+    
+        <a href="/usuarios/ruben-andres" title="Rubén Andrés" rel="nofollow" target="_blank"><div class="avatar">
+        <img src="/sites/computerhoy.com/public/styles/author/public/pictures/Perfil_2018.jpg?itok=xOq01173" width="90" height="90" alt="" />
+
+
+
+  </div>
+</a>
+  <p class="name"><a href="/usuarios/ruben-andres" rel="author" title="Rubén Andrés">Rubén Andrés</a></p>
+  <p class="time">30/03/2016 - 13:30<p/>
+
+  </div>
+
+
+              </div>
+              <div class="col-xs-12 col-sm-auto m-b-20">
+                <div class="block-social-share-links">
+  <ul>
+          <li class="facebook">
+        <a href="http://www.facebook.com/share.php?u=https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079" target="_blank" class="popup icon icon-facebook" title="Compartir en facebook"></a>
+      </li>
+          <li class="twitter">
+        <a href="http://twitter.com/share?text=%C2%BFQu%C3%A9+es+la+computaci%C3%B3n+cu%C3%A1ntica%3F&amp;url=https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079&amp;via=computerhoy" target="_blank" class="popup icon icon-twitter" title="Compartir en twitter"></a>
+      </li>
+          <li class="flipboard">
+        <a href="https://share.flipboard.com/bookmarklet/popout?v=2&amp;title=%C2%BFQu%C3%A9+es+la+computaci%C3%B3n+cu%C3%A1ntica%3F&amp;url=https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079&amp;t=1518430558759&amp;utm_campaign=tools&amp;utm_medium=article-share&amp;utm_source=flipit2" target="_blank" class="popup icon icon-flipboard" title="Compartir en flipboard"></a>
+      </li>
+          <li class="whatsapp">
+        <a href="whatsapp://send?text=%C2%BFQu%C3%A9+es+la+computaci%C3%B3n+cu%C3%A1ntica%3F:https://computerhoy.com/noticias/hardware/que-es-computacion-cuantica-20079" target="_blank" class="popup icon icon-whatsapp" title="Compartir en whatsapp"></a>
+      </li>
+      </ul>
+</div>
+
+              </div>
+              
+<div class="article-lead col-xs-12">
+      <p>Hace tiempo, la computación cuántica era todavía una utopía. ¿Real o no? La fábrica de sueños ya no crea sueños, sino realidades con imágenes generadas por ordenador. Pero, ¿qué es lo que pueden hacer los superordenadores? ¿Cuántos existen? ¿Cómo son de rápidos?</p>
+  </div>
+
+              <div  class="article-body col-xs-12" >
+            
+  
+<p>La <strong>computación cuántica</strong> está siendo
+noticia estos días por conseguir grandes avances en su desarrollo
+pero, muy probablemente, te estés preguntando qué es exactamente la
+computación cuántica y qué representa para el futuro de la
+informática y los sistemas computacionales.</p>
+<p>Una de las primeras cosas que debes olvidar para comprender la
+computación cuántica es el funcionamiento de los <a href="http://www.amazon.es/gp/product/B017NPDN30/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=B017NPDN30&amp;linkCode=as2&amp;tag=comphoy-21" rel="nofollow" target="_blank">ordenadores actuales</a>. La
+computación cuántica deja a un lado los sistemas lógicos empleados
+por los sistemas informáticos actuales y utilizan el modelo de los
+estados del átomo para realizar sus procesos.</p>
+<p>Los dispositivos y ordenadores convencionales, como el que
+probablemente estés utilizando para leer este artículo, resumen
+toda la información que procesan a lenguaje binario, es decir, que
+solo utilizan dos estados para los datos: 0 ó 1.</p>
+<div class="embedded-entity media image">    <div class="container-img">
+      
+      <picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=1MQANP-2 1x" media="all and (min-width: 980px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=ybVmtq1S 1x" media="(min-width: 480px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=kHPTGs5l 1x" media="(min-width: 0px)" type="image/jpeg"></source><!--[if IE 9]></video><![endif]--><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156791-dispositivos-ordenadores-convencionales-resumen-toda-informacion-que-procesan-estado-binario-es-decir-que-solo-utilizan-dos-estados-datos-0-1.jpg?itok=kHPTGs5l" alt="Los dispositivos y ordenadores convencionales resumen toda la información que procesan a un estado binario, es decir, que solo utilizan dos estados para los datos: 0 ó 1." title="Los dispositivos y ordenadores convencionales resumen toda la información que procesan a un estado binario, es decir, que solo utilizan dos estados para los datos: 0 ó 1." /></picture></div>
+</div>
+<p>Como si de un interruptor se tratara, los bits solo pueden estar
+encendidos o apagados. Toda la información en la computación actual
+se resume en una secuencia de ceros y unos, o encendido o
+apagado.</p>
+<h3>Los átomos tienen sus propias leyes</h3>
+<p>En cambio, los átomos tienen una curiosa cualidad, que es
+precisamente una de las propiedades que hacen increíble la
+computación cuántica. Esta cualidad es <span class="bold">la
+superposición</span>.</p>
+<p>La <strong>superposición del átomo</strong> consiste
+en que un átomo puede adoptar un estado de 0 y de 1, pero además
+puede adoptar <span class="bold">ambos estados al mismo
+tiempo</span>. Estos ordenadores cuánticos son capaces de probar,
+al mismo tiempo, todas las posibilidades que existen para la
+solución concreta de un problema, en lugar de probar todas las
+posibilidades una tras otra como se realizan actualmente.</p>
+<div class="embedded-entity media image">    <div class="container-img">
+      
+      <picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=lz0h9A9D 1x" media="all and (min-width: 980px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=eILzCq1w 1x" media="(min-width: 480px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=Y83aUfYY 1x" media="(min-width: 0px)" type="image/jpeg"></source><!--[if IE 9]></video><![endif]--><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156795-primeras-cosas-que-debes-olvidar-comprender-computacion-cuantica-funcionamiento-ordenadores-actuales.jpg?itok=Y83aUfYY" alt="Una de las primeras cosas que debes olvidar para comprender la computación cuántica el funcionamiento de los ordenadores actuales" title="Una de las primeras cosas que debes olvidar para comprender la computación cuántica el funcionamiento de los ordenadores actuales" /></picture></div>
+</div>
+<p>Este cambio en el paradigma de la computación supone un enorme
+salto adelante en la potencia de computación, que permitirían
+realizar cálculos complejos que actualmente son inalcanzables
+incluso para los <strong>superordenadores</strong>.</p>
+<h3>¿Cómo son de rápidos los ordenadores cuánticos?</h3>
+<p>La <strong>potencia de los ordenadores cuánticos</strong>,
+al igual que la de los ordenadores convencionales, se mide en
+unidades de procesamiento, que no son más que átomos individuales.
+En el caso de los ordenadores cuánticos, se mide en bits cuánticos
+o <strong>qubits</strong>. A mayor cantidad de qubits, más
+rápido funcionan.</p>
+<blockquote>
+<p><a href="https://computerhoy.com/listas/especial-navidad/cinco-superordenadores-mas-potentes-del-mundo-30761" title="Los cinco superordenadores más potentes del mundo">Los cinco
+superordenadores más potentes del mundo</a></p>
+</blockquote>
+<p>Los díscolos y caprichosos átomos, además de poder adoptar
+varios estados simultáneamente, también cuentan con otra
+particularidad llamada <span class="bold">entrelazamiento
+atómico</span>.</p>
+<p>Gracias a esta particularidad, un átomo puede transmitir
+determinadas propiedades a otro sin que haya nada de por medio.
+Algo así como una telepatía entre átomos que hace que cualquier
+cambio en el estado de uno de los átomos entrelazados, provoque un
+cambio instantáneo en el otro.</p>
+<div class="embedded-entity media image">    <div class="container-img">
+      
+      <picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=oElPvQWA 1x" media="all and (min-width: 980px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=M8G2LGwl 1x" media="(min-width: 480px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=BPcKB8rq 1x" media="(min-width: 0px)" type="image/jpeg"></source><!--[if IE 9]></video><![endif]--><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156799-atomos-ademas-poder-adoptar-varios-estados-simultaneamente-tambien-cuentan-otra-particularidad-llamada-entrelazamiento.jpg?itok=BPcKB8rq" alt="Los átomos, además de poder adoptar varios estados simultáneamente, también cuentan con otra particularidad llamada entrelazamiento." title="Los átomos, además de poder adoptar varios estados simultáneamente, también cuentan con otra particularidad llamada entrelazamiento." /></picture></div>
+</div>
+<p>Esto, permite <span class="bold">crear entrelazamientos
+cuánticos entre varios átomos </span>de forma que permiten
+crear una red de átomos que funcionan de forma armónica. Podríamos
+decir que son como los núcleos que funcionan de forma conjunta
+dentro de un procesador convencional, pero a un nivel muchísimo más
+complejo.</p>
+<p>Dado que <span class="bold">un bit cuántico o qubit es
+capaz de procesar mucha más información que un bit,</span> la
+potencia de procesado con respecto a los sistemas actuales se
+incrementa exponencialmente. A medida que los nuevos
+descubrimientos permitan crear entrelazados cuánticos con un mayor
+número de átomos, esta potencia aumentará sustancialmente, hasta el
+punto de poder resolver en segundos tareas para las que un
+superordenador normal tardaría años. Aunque esto sólo se aplica a
+ciertos cálculos.</p>
+<blockquote>
+<p><a href="https://computerhoy.com/noticias/hardware/que-son-superordenadores-como-funcionan-10643" title="¿Qué son los superordenadores y cómo funcionan?">¿Qué son
+los superordenadores y cómo funcionan?</a></p>
+</blockquote>
+<h3>Sin discos duros ni monitores</h3>
+<p>En un procesador cuántico no se utilizan ni monitores, ni discos
+duros, ni ningún tipo de hardware tal y como lo conocemos en el
+ámbito de la informática actual.</p>
+<p>Todo sucede en la unidad de procesamiento que debe permanecer en
+unas condiciones de absoluto aislamiento ya que los estados
+cuánticos del átomo son extremadamente frágiles y la superposición
+de los estados que se produce durante el proceso de cálculo, puede
+perturbarse.</p>
+<p>La superposición de los átomos puede verse alterada ante el
+contacto con un campo electromagnético o la más mínima vibración o
+fluctuación de la temperatura.</p>
+<div class="embedded-entity media image">    <div class="container-img">
+      
+      <picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=XXauB0Pw 1x" media="all and (min-width: 980px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=l57NLzNG 1x" media="(min-width: 480px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=zQqL8jyK 1x" media="(min-width: 0px)" type="image/jpeg"></source><!--[if IE 9]></video><![endif]--><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156803-superposicion-atomos-puede-verse-alterada-contacto-campo-electromagnetico-mas-minima-vibracion-fluctuacion-temperatura.jpg?itok=zQqL8jyK" alt="La superposición de los átomos puede verse alterada ante el contacto con un campo electromagnético o la más mínima vibración o fluctuación de la temperatura." title="La superposición de los átomos puede verse alterada ante el contacto con un campo electromagnético o la más mínima vibración o fluctuación de la temperatura." /></picture></div>
+</div>
+<p>Esta alteración del estado del átomo provocaría errores de
+cálculo. Por ese motivo, los procesadores en los que se encuentran
+los qubits deben enfriarse y mantenerse a cero absoluto (-273
+grados Celsius).</p>
+<p>Los estados de cada átomo se observan mediante mediciones con
+láser, de las que se extraen los resultados de los cálculos y se
+procesan con ordenadores normales.</p>
+<blockquote>
+<p><a href="https://computerhoy.com/noticias/hardware/milky-way-2-superordenador-mas-potente-del-mundo-4362" title="Milky Way 2 el superordenador más potente del mundo">Milky
+Way 2 el superordenador más potente del mundo</a></p>
+</blockquote>
+<h3>¿Existe ya un ordenador cuántico?</h3>
+<p>Por el momento,<span class="bold"> sólo existen ordenadores
+cuánticos en laboratorios e instituciones de investigación</span>.
+Sin embargo, han demostrado que la tecnología funciona, aunque
+todavía queda un largo camino por delante ya que, para su correcto
+funcionamiento, los ordenadores cuánticos necesitan unas
+condiciones muy concretas.</p>
+<p>Por el momento, empresas
+como<strong> Google</strong>,<strong> IBM</strong>,
+la <strong>NASA</strong> o diversos organismos
+científicos están desarrollando prototipos con la tecnología
+necesaria para conseguir que, en unos 10 años o 15 años, los
+ordenadores cuánticos sean una realidad cotidiana.</p>
+<div class="embedded-entity media video">      <iframe src="https://www.dailymotion.com/embed/video/k4UYbkKAi1JlDWeg4wQ?info-action=none" width="650" height="360" frameborder="0" allowfullscreen=""></iframe>
+
+
+</div>
+<p>Prototipos como el <strong>D-Wave 2x</strong> son
+ejemplos tangibles de la evolución de estos sistemas
+computacionales pero, a su vez, sirven para tomar conciencia del
+largo camino que todavía queda por recorrer.</p>
+<p>La primera versión de este prototipo funcionaba
+con <span class="bold">512 qubits</span> y costaba
+alrededor de <span class="bold">11 millones de euros</span>.
+La nueva versión de este prototipo que se dio a conocer en 2013,
+según aseguran sus desarrolladores, es hasta<span class="bold"> 108 millones de veces más rápido que un ordenador
+tradicional</span>.</p>
+<blockquote>
+<p><a href="https://computerhoy.com/noticias/life/cerebro-humano-es-30-veces-mas-rapido-que-superordenadores-33517" title="El cerebro humano es 30 veces más rápido que los superordenadores">
+El cerebro humano es 30 veces más rápido que los
+superordenadores</a></p>
+</blockquote>
+<h3>Un salto cuántico en la velocidad</h3>
+<p>La computación cuántica lidera la ejecución de ciertas
+operaciones aritméticas y en aquellas en las que se producen muchas
+operaciones similares al mismo tiempo. Tres ejemplos:</p>
+<p>Los<strong> ordenadores cuánticos son las herramientas
+ideales para trabajar con información cifrada</strong>. El sistema
+criptográfico RSA, que se integra en los navegadores y protege la
+banca online, se puede quebrar rápidamente con un ordenador
+cuántico potente. Un superordenador convencional tardaría incluso
+años.</p>
+<div class="embedded-entity media image">    <div class="container-img">
+      
+      <picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2016/03/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=-bAXt5nl 1x" media="all and (min-width: 980px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2016/03/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=kYz85Plu 1x" media="(min-width: 480px)" type="image/jpeg"></source><source srcset="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=6JmLeRq6 1x" media="(min-width: 0px)" type="image/jpeg"></source><!--[if IE 9]></video><![endif]--><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/03/156811-ordenadores-cuanticos-pueden-procesar-enormes-cantidades-datos.jpg?itok=6JmLeRq6" alt="Con ordenadores cuánticos se pueden procesar enormes cantidades de datos." title="Con ordenadores cuánticos se pueden procesar enormes cantidades de datos." /></picture></div>
+</div>
+<p>Con ordenadores cuánticos se pueden procesar enormes cantidades
+de datos. Una razón más de por qué las agencias de inteligencia y
+empresas como Google están tan interesadas en esta tecnología.</p>
+<p>Los científicos podrían realizar simulaciones mucho más
+complejas con ordenadores cuánticos que con los actuales
+superordenadores. De este modo, calcular patrones climáticos o
+simulaciones moleculares se realizarían en muy poco tiempo y
+permitirían dar un paso de gigante en el avance de otras ramas de
+la ciencia.</p>
+<blockquote>
+<p><a href="https://computerhoy.com/noticias/hardware/superordenador-predecira-tiempo-calle-calle-20291" title="Un superordenador predecirá el tiempo calle a calle">Un
+superordenador predecirá el tiempo calle a calle</a></p>
+</blockquote>
+<div><div class="embedded-entity media gallery">      <div class="gallery-container" data-gallery-remodal-id="modal_951" data-bxslider-id="bxslider_6">
+    <h2 class="gallery-title">
+      El origen de los ordenadores: los 9 pasos de ayer a hoy (10)
+    </h2>
+    <section class="gallery-main-thumb"><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1160x650/public/media/image/2015/08/117935-historia-ordenadores.jpg?itok=6_n-5FVi" width="1160" height="650" alt="historia ordenadores" title="historia ordenadores" /></section><section class="gallery-little-thumb"><figure class="media-wrapper"><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/376x218/public/media/image/2015/08/117861-historia-ordenadores.jpg?itok=8_v5NQQy" width="376" height="218" alt="historia ordenadores" title="historia ordenadores" /></figure><figure class="media-wrapper"><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/376x218/public/media/image/2015/08/117863-historia-ordenadores.jpg?itok=Klu0RYHa" width="376" height="218" alt="historia ordenadores" title="historia ordenadores" /></figure><figure class="media-wrapper"><img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/376x218/public/media/image/2015/08/117865-historia-ordenadores.jpg?itok=UHpX8EC2" width="376" height="218" alt="historia ordenadores" title="historia ordenadores" /></figure><div class="container-link">
+        <a class="gallery-link icon icon-arrow" href="#modal_951" title="Ver galería de El origen de los ordenadores: los 9 pasos de ayer a hoy">Ver galería</a>
+      </div>
+    </section></div>
+  <div class="remodal" data-remodal-id="modal_951">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="gallery-content container">
+      <h2 class="gallery-content-title">El origen de los ordenadores: los 9 pasos de ayer a hoy <span class="gallery-content-title-number">(<strong class="gallery-content-title-number-index">1</strong>/</span><span class="gallery-content-title-number-color">)</span></h2>
+      <div class="grid col-2 right row">
+        <ul class="gallery-content-list bxslider" data-bxslider-id="bxslider_6"><li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117935-historia-ordenadores.jpg?itok=6rxkHciJ" width="624" height="352" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>El 21 de agosto de 1953 se produce un hito histórico: se llega a 100 ordenadores en todo mundo. Por eso, hoy repasamos la evolución de este tipo de equipos.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117861-historia-ordenadores.jpg?itok=s5XLfva0" width="980" height="735" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>Quizás el año más significativo en la historia de los ordenadores fue 1936, ya que se creó el primer “computador” del mundo, el Z1, que tenía un sistema totalmente programable. Es cierto que hubo otros dispositivos antes que éste, pero ninguno con la capacidad de este equipo.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117863-historia-ordenadores.jpg?itok=AJMTgoj2" width="980" height="658" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>Sin embargo, tuvieron que pasar 6 años hasta que una empresa se dio cuenta del potencial de estos dispositivos. La primera compañía que se dedicó al desarrollo de ordenadores fue ABC Computers, cuyos fundadores fueron John Atanasoff y Clifford Berry. Dos años después se presentó el Harvard Mark I, que llevó un paso más allá lo que se haba desarrollado hasta la fecha.  Durante los 10 años siguientes se sucedieron múltiples avances, pero ninguno fue tan importante como el transistor, que se convertiría en parte vital de la electrónica que compone un ordenador. </p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117865-historia-ordenadores.jpg?itok=WGeArlcn" width="529" height="419" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>La historia de los ordenadores quedó alterada con la llegada de IBM, en 1953. Esta introducción trajo los primeros signos reales de competencia en el mundo informático, que aumentó el número de ordenadores en el mercado. Su primera contribución fue el IBM 701 EDPM. En este mismo año se llega a un total de 100 ordenadores en todo el mundo, un hito histórico en el mundo de la informática. </p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117867-historia-ordenadores.jpg?itok=Muzuf7Qq" width="800" height="384" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>Un año mas tarde llega FORTAN, el primer lenguaje de programación de alto nivel, que se escribió para que las personas pudieran empezar a programar de forma mas fácil.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117869-historia-ordenadores.jpg?itok=GT6iwfoc" width="480" height="329" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>En 1958 se crea el primer circuito integrado. El dispositivo, también conocido como chip, es uno de los requerimientos básicos para los sistemas de ordenadores modernos. En cualquier placa base o tarjeta, encontraremos chips que contiene información de lo que estos dispositivos deben hacer. Sin ellos, los sistemas tal como los conocemos no podrían funcionar.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117871-historia-ordenadores.jpg?itok=c5rnBMPF" width="980" height="659" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p> Para muchos gamers, los juegos han sido una parte vital dentro del mundo de los PCs. En 1962 vio la luz el primer juego de ordenador, creado por Steve Russel y MIT, el cual se llamó “Spacewar”.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117873-historia-ordenadores.jpg?itok=Nr5ajQQk" width="727" height="481" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>Uno de los aspectos mas importantes dentro del mundo informático en la actualidad fue inventado en 1969. Hablamos de la red ARPA, que se puede considerar el Internet original y que sirvió de base para la creación de los fundamentos de la Red de hoy en día.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117875-historia-ordenadores.jpg?itok=YL76S0Db" width="726" height="482" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>En 1970 Intel entró en escena con el primer chip RAM dinámico, que supuso una autentica explosión de innovación en el mundo informático. Casi al mismo tiempo salió el primer microprocesador, que también fue creado por Intel. Estos dos componentes, junto con el chip creado en 1958, se pueden considerar el núcleo de los ordenadores modernos.</p>
+</div>
+      
+</li>
+                      <li class="gallery-content-element">  
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/gallery_big/public/media/image/2015/08/117877-historia-ordenadores.jpg?itok=syGbRuwi" width="980" height="736" alt="historia ordenadores" title="historia ordenadores" class="gallery-content-picture" /><p class="gallery-content-element-name">historia ordenadores</p>
+  <p class="gallery-content-element-description">
+            </p><div><p>Finalmente, el IBM PC ayudó a revolucionar el mercado de consumo en 1981 ya que, con sus precios competitivos, permitió al usuario medio tener un ordenador en casa. Ese mismo año también vio a Microsoft entrar en escena con su sistema operativo MS-DOS. Este sofware cambió el mundo de los ordenadores para siempre, ya que era muy fácil de utilizar.</p>
+</div>
+      
+</li>
+                  </ul><aside class="gallery-content-ad column col-xs-12 col-sm-auto"><div data-dfp-position="roba_galeria" class="dfp-position roba_galeria">
+</div></aside></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+  
+  </div>
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-auto">
+            <aside class="column-right" data-sticky-container>
+              <div class="sticky" data-sticky data-margin-top="70">
+                <div data-dfp-position="roba_1" class="dfp-position roba_1">
+  <script>
+        asDFP.display('roba_1');
+      </script>
+</div>
+              </div>
+            </aside>
+          </div>
+        </div>
+            </div>
+    <div class="block-tags">
+  <p>Tags:</p>
+      <a href="/tags/ordenador">#Ordenador</a>,       <a href="/tags/supercomputacion">#Supercomputación</a>  </div>
+
+    <div class="row final-content-bottom-grid">
+      <div class="col-xs-12 col-md m-b-20 grid-more-news">
+        
+        <div class="block-more-news m-b-20">
+          
+          <div class="see-more">
+  <h2>Ver ahora:</h2>
+            <iframe src="https://www.dailymotion.com/embed/video/k1vXmgiBRs6aVeeQwYO?info-action=none" width="650" height="360" frameborder="0" allowfullscreen></iframe>
+
+
+
+  </div>
+
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-auto grid-roba-2">
+        <aside class="column-right">
+          <div data-dfp-position="roba_2" class="dfp-position roba_2">
+  <script>
+        asDFP.display('roba_2');
+      </script>
+</div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+      </div>
+    
+    </div>
+  </main>
+
+    <div class="container container-main m-b-40">
+    <div class="row">
+      <div class="col-xs-12">
+  <h2 class="title-two">Te recomendamos</h2>
+</div>
+  <div id="taboola-below-article-thumbnails" class="col-xs-12 col-sm m-b-40"></div>
+
+<div class="col-xs-12 col-sm-auto m-b-40">
+  <aside class="column-right"><div data-dfp-position="roba_3" class="dfp-position roba_3">
+  <script>
+        asDFP.display('roba_3');
+      </script>
+</div></aside>
+</div>
+
+    </div>
+    <div class="row">
+      <div class="col-xs-12 m-b-40">
+        <div class="block-services">
+          <h2 class="title-two">Y además</h2>
+          <div id="block-ligatuscomputerhoy" class="container-services m-b-40">
+  
+    
+      <div id="lig_computerhoy_smartbox"></div>
+
+  </div>
+
+          <div class="container-services">
+  <div class="container-coupons">
+    <p class="title-red">Cupones descuento</p>
+          <ul><li><a title="Enlace a la tienda Aliexpress"
+   href="//computerhoy.com/cupones/aliexpress"
+   class="sprite-coupons sprite-aliexpress">
+  <p class="name-shop">Aliexpress</p>
+  <p>Cupón descuento</p>
+</a></li><li><a title="Enlace a la tienda Gearbest"
+   href="//computerhoy.com/cupones/gearbest"
+   class="sprite-coupons sprite-gearbest">
+  <p class="name-shop">Gearbest</p>
+  <p>Cupón descuento</p>
+</a></li><li><a title="Enlace a la tienda PcComponentes"
+   href="//computerhoy.com/cupones/pccomponentes"
+   class="sprite-coupons sprite-pccomponentes">
+  <p class="name-shop">PcComponentes</p>
+  <p>Cupón descuento</p>
+</a></li><li><a title="Enlace a la tienda Banggood"
+   href="//computerhoy.com/cupones/banggood"
+   class="sprite-coupons sprite-banggood">
+  <p class="name-shop">Banggood</p>
+  <p>Cupón descuento</p>
+</a></li><li><a title="Enlace a la tienda Amazon"
+   href="//computerhoy.com/cupones/amazon"
+   class="sprite-coupons sprite-amazon">
+  <p class="name-shop">Amazon</p>
+  <p>Código descuento</p>
+</a></li><li><a title="Enlace a la tienda igogo"
+   href="//computerhoy.com/cupones/igogo"
+   class="sprite-coupons sprite-igogo">
+  <p class="name-shop">igogo</p>
+  <p>Cupón descuento</p>
+</a></li></ul>
+      </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container-brandlab">
+      <h2 class="title-two">Brandlab</h2>
+      <div class="views-element-container" id="block-views-block-brandlab-block-content">
+  
+    
+      
+<div class="row block-brandlab js-view-dom-id-796565396fdc5a01ee5b847fb611c6382fba0be2936c9b8ef712409343278906">
+  
+  
+  
+
+  
+  
+  
+
+    <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/lg-mucho-mas-que-imaginas-247856" rel="nofollow" title="LG, mucho más de lo que imaginas">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/05/lg-innovacion.jpg?itok=A0sI8QaA" width="200" height="113" alt="LG innovación" title="LG innovación" />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Innovación LG</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/lg-mucho-mas-que-imaginas-247856" title="LG, mucho más de lo que imaginas">LG, mucho más de lo que imaginas</a>
+    </h3>
+</article>
+
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/reto-multirooom-wifi-kit-550-llevar-internet-buhardilla-282281" rel="nofollow" title="Reto Multiroom WiFi kit 550+: llevar internet hasta la buhardilla">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/07/devolo-multiroom-wifi-kit-550_1.jpg?itok=79z5NGN_" width="200" height="113" alt="devolo Multiroom WiFi kit 550+" title="devolo Multiroom WiFi kit 550+" />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Ofrecido por devolo</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/reto-multirooom-wifi-kit-550-llevar-internet-buhardilla-282281" title="Reto Multiroom WiFi kit 550+: llevar internet hasta la buhardilla">Reto Multiroom WiFi kit 550+: llevar internet hasta la buhardilla</a>
+    </h3>
+</article>
+
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/pasamos-dia-bq-aquaris-x2-pro-asi-es-su-rendimiento-multimedia-277781" rel="nofollow" title="Pasamos un día con el BQ Aquaris X2 Pro y así es su rendimiento multimedia">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/07/aquaris-x2-pro.jpg?itok=gPcYmzXp" width="200" height="113" alt="Aquaris X2 Pro " title="Aquaris X2 Pro " />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Ofrecido por BQ</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/pasamos-dia-bq-aquaris-x2-pro-asi-es-su-rendimiento-multimedia-277781" title="Pasamos un día con el BQ Aquaris X2 Pro y así es su rendimiento multimedia">Pasamos un día con el BQ Aquaris X2 Pro y así es su rendimiento multimedia</a>
+    </h3>
+</article>
+
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/haz-fotos-movil-como-profesional-alcatel-3x-271719" rel="nofollow" title="Haz fotos con el móvil como un profesional con el Alcatel 3X">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/06/alcatel-3x_10.jpg?itok=S6YfzNlJ" width="200" height="113" alt="Alcatel 3X" title="Alcatel 3X" />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Ofrecido por: Alcatel</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/haz-fotos-movil-como-profesional-alcatel-3x-271719" title="Haz fotos con el móvil como un profesional con el Alcatel 3X">Haz fotos con el móvil como un profesional con el Alcatel 3X</a>
+    </h3>
+</article>
+
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/5-consejos-conseguir-retrato-profesional-tu-movil-266913" rel="nofollow" title="5 consejos para conseguir un retrato profesional con tu móvil">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/06/trucos-bq-aquaris-x2-pro_1.jpg?itok=Ft4tNnld" width="200" height="113" alt="Trucos BQ Aquaris X2 Pro" title="Trucos BQ Aquaris X2 Pro" />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Ofrecido por BQ</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/5-consejos-conseguir-retrato-profesional-tu-movil-266913" title="5 consejos para conseguir un retrato profesional con tu móvil">5 consejos para conseguir un retrato profesional con tu móvil</a>
+    </h3>
+</article>
+
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 m-b-10">
+    <article role="article" class="teaser-1col-tagged type-sponsored-content main-element-image">
+    <div class="block-image">
+      
+      <a href="/patrocinado/tecnologia/asi-es-v-pet-dispositivo-que-te-dice-donde-como-esta-tu-mascota-estes-donde-estes-268271" rel="nofollow" title="Así es V-Pet, el dispositivo que te dice dónde y cómo está tu mascota estés donde estés">
+          
+    <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/200x113/public/media/image/2018/06/v-pet-vodafone.jpg?itok=fgJZRK2t" width="200" height="113" alt="V-Pet Vodafone" title="V-Pet Vodafone" />
+
+
+
+
+
+  </a>
+
+    </div>
+    
+  <div class="brand">
+    <p>Ofrecido por V by Vodafone</p>
+  </div>
+
+    <h3>
+      <a href="/patrocinado/tecnologia/asi-es-v-pet-dispositivo-que-te-dice-donde-como-esta-tu-mascota-estes-donde-estes-268271" title="Así es V-Pet, el dispositivo que te dice dónde y cómo está tu mascota estés donde estés">Así es V-Pet, el dispositivo que te dice dónde y cómo está tu mascota estés donde estés</a>
+    </h3>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+
+  </div>
+
+    </div>
+  </div>
+
+
+    <div>
+    <div class="block-newsletter m-b-30">
+      <a href="/newsletter" title="Página de newsletter" rel="nofollow">
+  <img src="/modules/components/newsletter/images/icon-newsletter.png" alt="Envelope symbol">
+  <p>Suscríbete a nuestra newsletter</p>
+</a>
+<div class="button-primary">
+  <a href="/newsletter" title="Página de newsletter">Suscribirse</a>
+</div>
+
+  </div>
+
+  </div>
+
+
+  <aside class="ad-container ad-bottom">
+    <div data-dfp-position="mega_inferior" class="dfp-position mega_inferior">
+  <script>
+        asDFP.display('mega_inferior');
+      </script>
+</div>
+  </aside>
+
+  
+  
+      <footer role="contentinfo">
+        <div id="block-htmlfooter">
+  
+    
+      <footer>
+    <section class="footer-accordion">
+        <div class="footer-wrapper">
+            <nav class="expandable">
+                <a class="nav-title expander">Nuestra web</a>
+                <ul>
+                    <li><a href="/tecnologia">Tecnología</a></li>
+                    <li><a href="/entretenimiento">Entretenimiento</a></li>
+                    <li><a href="/gaming">Gaming</a></li>
+                    <li><a href="/life">Life</a></li>
+                    <li><a href="/motor">Motor</a></li>
+                    <li><a href="/industria">Industria</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/noticias">Noticias</a></li>
+                    <li><a href="/analisis">Análisis</a></li>
+                    <li><a href="/tutoriales">Tutoriales</a></li>
+                    <li><a href="/listas">Listas</a></li>
+                    <li><a href="/reportajes">Reportajes</a></li>
+                    <li><a href="/especiales">Especiales</a></li>
+                </ul>
+            </nav>
+            <nav class="expandable">
+                <a class="nav-title expander">Fichas de Productos</a>
+                <ul>
+                    <li><a href="/fichas/moviles">Móviles</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/fichas/tablets">Tablets</a></li>
+                </ul>
+            </nav>
+            <nav class="expandable">
+                <a class="nav-title expander">Servicios</a>
+                <ul>
+                    <li><a href="/cupones">Cupones</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://buscar-coche.autobild.es/recomendador">Recomendador de coches</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="footer-partners">
+        <div class="footer-wrapper">
+            <div class="row">
+                <nav class="col-xs-12 col-md-4">
+                <p class="footer-main-title">Partners</p>
+                <ul>
+                    <li><a href="http://sp.depositphotos.com/" rel="nofollow" target="_blank"><img src="/themes/tech_base/computerhoy/../img/deposit_logo.png" alt="Deposit Photos Partner"></a></li>
+                </ul>
+            </nav>
+
+            <nav class="col-xs-12 col-md-8">
+                <p class="footer-main-title">Síguenos</p>
+                <ul>
+                    <li><a rel="nofollow" target="_blank" href="https://www.facebook.com/ComputerHoy" class="icon icon-facebook"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://twitter.com/computerhoy" class="icon icon-twitter"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/user/ComputerhoyTV" class="icon icon-head-youtube"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://www.instagram.com/computerhoy/" class="icon icon-instagram"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="https://plus.google.com/+Computerhoycom" class="icon icon-gplus"></a></li>
+                    <li><a rel="nofollow" target="_blank" href="/rss_all/all/rss.xml" class="icon icon-rss"></a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>    
+    </section>
+
+    <section class="footer-axel">
+        <div class="footer-wrapper">
+            <p class="footer-main-title">Axel Springer España</p>
+            <nav>
+                <p class="nav-title">Tecnología</p>
+                <ul>
+                    <li><a href="https://computerhoy.com/">Computer Hoy</a></li>
+                    <li><a href="http://www.macuarium.com/" target="_blank">Macuarium</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p class="nav-title">Motor</p>
+                <ul>
+                    <li><a href="https://www.autobild.es/" target="_blank">Autobild</a></li>
+                    <li><a href="https://www.topgear.es/" target="_blank">Top Gear</a></li>
+                </ul>
+            </nav>
+            
+            <nav>
+                <p class="nav-title">Entretenimiento</p>
+                <ul>
+                    <li><a href="https://www.hobbyconsolas.com/" target="_blank">HobbyConsolas</a></li>
+                    <li><a href="http://www.somosxbox.com/" target="_blank">Somos xbox</a></li>
+                    <li><a href="http://www.nintenderos.com/" target="_blank">Nintenderos</a></li>
+                    <li><a href="http://www.eliteguias.com/" target="_blank">Eliteguías</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p class="nav-title">Industria</p>
+                <ul>
+                    <li><a href="http://www.ticbeat.com/" target="_blank">TICBeat</a></li>
+                    <li><a href="https://www.hobbyconsolas.com/industria" target="_blank">Hobby Industria</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p class="nav-title">Más</p>
+                <ul>
+                    <li><a href="https://www.businessinsider.es/" target="_blank">Business Insider España</a></li>
+                    <li><a href="http://store.axelspringer.es/" target="_blank">Store Axel Springer</a></li>
+                    <li><a href="https://ozio.axelspringer.es/" target="_blank">Ozio: El club del suscriptor</a></li>
+                    <li><a href="https://mediakit.axelspringer.es/" target="_blank">BrandLab Axel Springer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="footer-ch">
+        <nav>
+            <a class="logo-ch" href="/" title="Ir a Portada de CH" rel="home">
+                <img src="/themes/tech_base/computerhoy/img/logo-computerhoy.png" alt="computerhoy.com">
+            </a>
+            <ul>
+                <li><a target="_blank" href="/quienes-somos-chn">Quiénes somos</a></li>
+                <li><a target="_blank" href="/condiciones-generales">Condiciones de uso</a></li>
+                <li><a target="_blank" href="/politica-privacidad-chn">Política de privacidad</a></li>
+                <li><a target="_blank" href="/politica-cookies-chn">Política de cookies</a></li>
+                <li><a target="_blank" href="http://store.axelspringer.es/">Números anteriores</a></li>
+                <li><a target="_blank" href="https://ozio.axelspringer.es/">Suscripciones</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div class="logo-axel-footer">
+        <a href="http://www.axelspringer.es" target="_blank">
+            <img src="/themes/tech_base/computerhoy/../img/logo-axelspringer-vector.svg" alt="Axel Springer">
+        </a>
+    </div>
+</footer>
+
+  </div>
+
+
+    </footer>
+  
+</div>
+    
+    <script src="/sites/computerhoy.com/public/js/js_s5hQSyn8_A3ZoopI7nY9_XfnXUazPAbvmXFGYrfI4D4.js"></script>
+<script src="https://platform.sunmedia.tv/integrations/a0ef0517-0023-4cad-8051-a8e4249c4492.js" async></script>
+<script src="/sites/computerhoy.com/public/js/js_vCINmV4lFIcTroMSUs9zN65tAx5ZAvLlvFe8ETkChy4.js"></script>
+<script src="https://a-ssl.ligatus.com/?ids=98170&amp;t=js&amp;s=1"></script>
+<script src="/sites/computerhoy.com/public/js/js_izu3prMwux-7ss1PRjY3AYc9GuOkKw1CaPc9sWIsKbQ.js"></script>
+
+    <!-- Begin comScore Tag -->
+    <script>
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: "2", c2: "6034990", cs_ucfr: getOneTrustGroupConsent(3)});
+      (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+      })();
+    </script>
+    <noscript>
+      <img src="http://b.scorecardresearch.com/p?c1=2&c2=6034990&cs_ucfr=0&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"acae670044","applicationID":"106495049","transactionName":"YgBbbEZYX0VZU0JeDltKbEpdFlhYXFVOGRFdFQ==","queueTime":0,"applicationTime":80,"atts":"TkdYGg5CTEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

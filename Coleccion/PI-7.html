@@ -1,0 +1,1526 @@
+
+<!Doctype html>
+<html lang="es-ES">
+<head>
+
+
+<!-- GDPR Compliance Evidon Set up --> 
+<script type="text/javascript">
+	(function(d){
+		console.info("Evidon consent script running");
+
+		// Cookie helper functions.
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var decodedCookie = decodeURIComponent(d.cookie);
+		    var ca = decodedCookie.split(';');
+		    for(var i = 0; i <ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0) == ' ') {
+		            c = c.substring(1);
+		        }
+		        if (c.indexOf(name) == 0) {
+		            return c.substring(name.length, c.length);
+		        }
+		    }
+		    return "";
+		}
+
+		function setCookie(cname, cvalue, exhours) {
+		    var date = new Date();
+		    date.setTime(date.getTime() + (exhours*60*60*1000));
+		    var expires = "expires="+ date.toUTCString();
+		    d.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function expireCookie(cname) {
+			document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+		}
+
+
+		// Evidon consent helpers.
+		function append(scriptid, url, async) { 
+			var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0]; 
+			if (!f) f = d.head; 
+			var s = d.createElement(sn); 
+			s.async = true; 
+			s.id = scriptid; 
+			s.src = url; 
+			f.parentNode.insertBefore(s, f); 
+		}
+
+		function getRootDomain() {
+			var parts = window.location.hostname.split('.');
+			if (parts.length === 2) rootDomain = parts[0];
+			else if (parts.length > 2) {
+				// see if the next to last value is a common tld
+				var part = parts[parts.length - 2];
+				if (part === 'com' || part === 'co') { 
+					rootDomain = parts[parts.length - 3]; // go back one more 
+				} 
+				else { 
+					rootDomain = part; 
+				} 
+			}
+			return rootDomain;
+		}
+
+
+		var evidonWithdraw = d.cookie.match("[;]*\s*_evidon_consent_withdrawn\s*=\s*([^;]+)");
+		var id = 5278;
+
+		var hoursToCheckEpoch = 43200000;
+
+		if ( evidonWithdraw && (evidonWithdraw[1] - (Date.now() - hoursToCheckEpoch) ) < 0 ) {
+			expireCookie("_evidon_consent_withdrawn");
+			evidonWithdraw = false;
+		}
+
+		// If no withdraw cookie, load evidon barrier.
+		if (!evidonWithdraw) {
+			window.evidon = {};
+			window.evidon.id = id;
+			var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+			append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+			append('evidon-location', cdn + 'geo/country.js', true);
+			append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+			if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+
+			// Consent callback.
+			window.evidon.priorConsentCallback = function() {
+				window.evidon.barrier && location.reload();
+			},
+
+			// Non-consent/Close callback.
+			window.evidon.closeCallback=window.evidon.consentWithdrawnCallback=window.evidon.consentDeclinedCallback = function() {
+				setCookie("_evidon_consent_withdrawn", Date.now(), 8760);
+			}
+		}
+
+
+	var d = document;
+	var e = d.createElement("script"); 
+	e.async = true;
+
+	e.src = d.location.protocol + '//nexus.ensighten.com/hearst/mag-es-dnt/Bootstrap.js';
+	if ( document.cookie.indexOf("_evidon_consent_cookie") >= 0 ) {
+			e.src = d.location.protocol + '//nexus.ensighten.com/hearst/mag-es/Bootstrap.js';
+	}
+	if ( document.cookie.indexOf("nsghtn=dev") >= 0 ) {
+	   e.src = d.location.protocol + '//nexus.ensighten.com/hearst/mag-es-dev/Bootstrap.js';
+	}
+ 
+	d.getElementsByTagName( "head" )[ 0 ].appendChild( e );
+
+	})(document);
+</script>
+
+
+    								
+<title>45 películas para ver con tus hijos - Crecer Feliz</title>
+<meta name="description" content="Divertidas, tiernas y para todos los públicos. Ver una peli en casa es un modo genial de pasar la tarde en familia y estrechar vuestro vínculo." />
+<meta name="keywords" content="" />
+<meta name="author" content="Crecer Feliz" />
+
+
+<meta property="fb:app_id" content="193295337453772"/>
+<meta property="og:site_name" content="Crecer Feliz"/>
+<meta property="og:url" content="http://www.crecerfeliz.es/Ninos/Ocio/Peliculas-para-ver-en-familia"/>
+<meta property="og:title" content="45 películas para ver con tus hijos"/>
+<meta property="og:description" content="Divertidas, tiernas y para todos los públicos. Ver una peli en casa es un modo genial de pasar la tarde en familia y estrechar vuestro vínculo."/>
+
+<meta property="og:type" content="article"/>
+
+
+<meta property="og:image" content="http://www.crecerfeliz.es/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/2903693-20-esl-ES/45-peliculas-para-ver-con-tus-hijos_reference.jpg" />
+
+
+                
+            
+<meta property="og:pageName" content="Ninos.Ocio.Peliculas-para-ver-en-familia" />
+
+                    <meta property="og:channel" content="Ninos" />
+<meta property="og:article:published_time" content="2015-06-29 13:09:29" />
+
+<meta property="og:contentId" content="83153" />
+<meta property="og:author" content="CrecerFeliz.es" />
+<meta property="og:siteHeir" content="Ninos, Ocio" />
+<meta name="cXenseParse:pageclass" content="article" />
+<meta name="cXenseParse:recs:articleid" content="83153" />
+<meta name="cXenseParse:recs:publishtime" content="2017-07-21T13:07:27+00:00" />
+<br>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@crecer_feliz_es" />
+<meta name="twitter:title" content="45 películas para ver con tus hijos - Crecer Feliz" />
+<meta name="twitter:description" content="Divertidas, tiernas y para todos los públicos. Ver una peli en casa es un modo genial de pasar la tarde en familia y estrechar vuestro vínculo." />
+<meta name="twitter:image:src" content="http://www.crecerfeliz.es/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/2903693-20-esl-ES/45-peliculas-para-ver-con-tus-hijos_ampliacion.jpg" />    
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Language" content="es"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="all"/>
+<meta name="ICBM" content="40.292879, -3.411636"/>
+<meta name="revisit" content="1 day"/>
+<meta name="google-site-verification" content="CedrENL5RkmuS_b9DeOPyNy2VjZ4LiDw6_ygO_Svk6o" />
+                    
+            
+
+
+<script type="text/javascript">
+var metaData = metaData || {};
+metaData.site = {
+    ICX: {id: "1956"},
+    ComsCore: {
+        c2: "11398592",
+        ns_site: "crecer-feliz",
+        name_for_comscore: "Ninos.Ocio.Peliculas-para-ver-en-familia",
+        ns_search_term: false,
+        ns_search_result: false
+    },
+    gaq: {
+        accountId: "UA-4326564-1",
+        domainName: ".crecerfeliz.es"
+    },
+    cX: {
+        AccountId: "9222270286501376128",
+        SiteId: "9222274428011572886"
+    },
+};
+</script>
+    
+                                                    
+                
+    
+                                        
+    
+            
+            
+
+            
+<script type="text/javascript">
+var dataLayer = [{
+      'siteHier': "Ninos:Ocio"
+    , 'pageName': "/gallery/Ninos/Ocio/Peliculas-para-ver-en-familia"
+    , 'pageType': "gallery"
+    , 'propertyName': "crecer:spain:website:desktop"
+    , 'gaAccount': "UA-4326564-1"
+    , 'gaDomain': ".crecerfeliz.es"
+    , 'channel': "Ninos"
+    , 'subChannel': "Ocio"
+    , 'contentId': 83153
+    , 'articleTitle': "45 películas para ver con tus hijos"
+    , 'articleAuthor': "CrecerFeliz.es"
+    , 'publishDate': "2015-06-29 13:09:29"
+    , 'gallerySize': 45
+    }];
+</script>
+
+                        
+
+<script type="text/javascript">
+	var HRST = HRST || {};
+	HRST.targeting = {
+			  'pageName': "Peliculas-para-ver-en-familia"
+			, 'tool': "gallery"
+			, 'category': "Ninos"
+			, 'subcategory': "Ocio"
+			, 'categoryId': "101"
+			, 'subcategoryId': "195"
+			, 'artid': "83153"
+			, 'contentID': "83153"
+			, 'contentTitle': "45 películas para ver con tus hijos"
+			, 'publishDate': "2015-06-29 13:09:29"
+			, 'collection': ""
+			, 'collectionId': ""
+			, 'sponsor': ""
+			, 'sponsorId': ""
+	};
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4326564-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4326564-1');
+</script>
+
+
+
+
+<script type="text/javascript" language="Javascript">
+var adUnit = 'hmies-crecerfeliz/ninos/ocio';
+if ( document.cookie.indexOf("_evidon_consent_cookie") < 0 ) {
+ adUnit = adUnit.replace("hmies-crecerfeliz","hmies-crecerfeliz.dnt");
+}
+</script>
+
+
+
+    
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster+Two:400,700|Raleway:400,700|Wire+One" />
+<link rel="stylesheet" type="text/css" href="/design/crecer/stylesheets/style.css?v=06062018-51" />
+<link rel="stylesheet" type="text/css" href="/design/crecer/stylesheets/media-queries.css?v=19012018-66" />
+<link rel="stylesheet" type="text/css" href="/design/crecer/stylesheets/fullscreen.css?v=03082017-7" />    
+<script type="text/javascript" src="/design/crecer/javascript/jquery-1.10.2.min.js?v=0808201400" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/noframework.waypoints.min.js?v=12062017-1" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/jquery.easing-1.3.min.js?v=0808201401" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/jquery.cookie.js?v=0808201402" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/jquery.nativefullscreenapi.js?v=0808201403" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/main.js?v=15122017-2" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/galerias.js?v=31052018-1" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/fullscreen.js?v=17012018-5" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/navAbecedario.js?v=0808201408" charset="utf-8"></script>
+<script type="text/javascript" src="/design/crecer/javascript/calculadoras.js?v=0808201410" charset="utf-8"></script>	<script type="text/javascript" src="http://www.hearst.es/extension/hearst/design/hearst/javascript/cookie.js?v=25072018" charset="utf-8"></script>
+</head>
+<body><div id="fb-root"></div><div id="publiLayer"></div><div id="mainWrapper">
+    <div id="content">
+        <header>
+            <div id="logo-DM">
+    <a href="http://www.diezminutos.es" target="_blank"><img width="50" height="35" alt="Diezminutos" src="/design/crecer/images/logo_DM2.png" /></a>
+</div>            
+<a class="cabecera" href="/"><img width="430" height="100" alt="Crecer feliz.es" src="/design/crecer/images/cabecera.png" /></a>
+<div class="colapsed" id="menuMobile"><img width="37" height="24" alt="Colapsar/descolapsar" src="/design/crecer/images/icoMenu.png" /></div>
+<div id="BuscSearch">
+    <img class="lupa" width="68" height="67" alt="Buscador" src="/design/crecer/images/lupa.png" data-cierre="/design/crecer/images/cierre.png" data-lupa="/design/crecer/images/lupa.png" />
+    <form id="searchForm" method="get" action="/content/search" >
+        <img width="30" height="30" alt="cerrar" class="search-form--close" src="/design/crecer/images/cierre2.png" />
+        <input type="search" id="searchtext" name="SearchText" placeholder="Buscar en CrecerFeliz" size="12" required="required"/>
+        <input type="submit" id="searchbutton" class="btnSearch" value="Buscar" />
+    </form>
+</div>                <nav id="n_mainFg">
+	<img width="30" height="30" alt="cerrar" class="menuMobile--close" src="/design/crecer/images/cierre2.png" />
+	<div class="menu" style="display: block;">					<a href="/Embarazo">Embarazo</a>
+																		<a href="http://www.crecerfeliz.es/Parto-y-Maternidad">Parto</a>
+								<a href="/El-bebe">El bebé</a>
+								<a href="/Ninos" class="select">Niños</a>
+								<a href="/recetas-ninos-embarazo">Recetas</a>
+								<a href="/compras-bebes-ninos-embarazo">Compras</a>
+								<a href="/Muy-Util">Muy Útil</a>
+			</div></nav>        </header>
+	
+	
+		
+                <nav id="Breadcrumb"><div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+Estás en: <a href="/" class="pathway" itemprop="url"><span itemprop="title">Inicio</span></a>><div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" >
+    <a href="/Ninos" class="pathway" itemprop="url">        <span itemprop="title">Niños</span>
+    </a>    ><div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" >
+    <a href="/Ninos/Ocio" class="pathway" itemprop="url">        <span itemprop="title">Ocio</span>
+    </a>    ><div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="last">
+            <span itemprop="title">45 películas para ver con tus hijos</span>
+        </div></div></div>
+</div>
+
+</nav>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<div class="articulo">
+	<header class="articleHeader">
+        <h1>45 películas para ver con tus hijos</h1>
+            <div class="entradilla">
+        
+<p>Divertidas, tiernas y para todos los públicos. Ver una peli en casa es un modo genial de pasar la tarde en familia y estrechar vuestro vínculo.</p>                </div>
+        <span class="firma">Crecer Feliz</span> <!--time datetime="2015-06-29">29-06-2015</time-->
+</header>    
+<section class="util">
+
+
+<script>	
+if ( document.cookie.indexOf("_evidon_consent_cookie") > -1 ) {
+    $(".util").append('<div class="accion_social"><a title="Comparte en Twitter" data-social="twitter" href="https://twitter.com/intent/tweet?url=http://www.crecerfeliz.es/Ninos/Ocio/Peliculas-para-ver-en-familia&text=45+pel%C3%ADculas+para+ver+con+tus+hijos&via=crecer_feliz_es"><img alt="Twitter" src="/design/crecer/images/ico_twitter.png" width="40" height="40" /></a></div>');
+    //$(".util").append('<div class="accion_social"><a title="Comparte en Facebook" data-social="facebook" href="http://www.facebook.com/share.php?u=http://www.crecerfeliz.es/Ninos/Ocio/Peliculas-para-ver-en-familia"><img alt="Facebook" src="/design/crecer/images/ico_facebook.png" width="40" height="40" /><span></span></a></div>');
+    //$(".util").append('<div class="accion_social nobocata"><a title="Comparte en Google plus" data-social="googleplus" data-callback="trackGooglePlus" href="https://plus.google.com/share?url=http://www.crecerfeliz.es/Ninos/Ocio/Peliculas-para-ver-en-familia"><img alt="GooglePlus" src="/design/crecer/images/ico_googleplus.png" width="40" height="40" /></a></div>');
+}
+</script>
+
+
+    
+    <div class="imprimir"><a title="Imprimir" href="javascript:window.print()"><img alt="Imprimir" src="/design/crecer/images/ico_print.png" width="40" height="40" /></a></div>
+        <div class="hide" id="fullscreen"><a title="Full Screen" href=""><img alt="Pantalla completa" src="/design/crecer/images/ico_full.png" width="40" height="40" /></a></div>
+    </section>
+</div><aside id="publiTop" class="publiTop"></aside><div id="leftCol">
+<section class="articulo">
+    	
+	
+    <article>
+        
+        <div class="contentAc">
+            
+            		
+				<nav class="utilidadesFotos">
+			               	<a href="javascript:antFoto();" class="trackpageview"><img alt="" src="/design/crecer/images/arrowLeft.png"><span class="text">Anterior</span></a>
+			                <b><span class="numeroImagen" id="current_imagen">1</span>/45</b>
+			        	<a href="javascript:sigFoto();" class="trackpageview"><span class="text">Siguiente</span><img alt="" src="/design/crecer/images/arrowRight.png"></a>
+			        </nav>
+
+				<div class="gallery"><div class="galimg gallery-slideshow-container" data-objectid="260571"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/kubo-y-las-dos-cuerdas-magicas/3633403-1-esl-ES/Kubo-y-las-dos-cuerdas-magicas_reference.jpg"src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/kubo-y-las-dos-cuerdas-magicas/3633403-1-esl-ES/Kubo-y-las-dos-cuerdas-magicas_reference.jpg" width="424" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/kubo-y-las-dos-cuerdas-magicas/3633403-1-esl-ES/Kubo-y-las-dos-cuerdas-magicas_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/kubo-y-las-dos-cuerdas-magicas/3633403-1-esl-ES/Kubo-y-las-dos-cuerdas-magicas_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Kubo y las dos cuerdas mágicas</h2>
+<p>Kubo enmendará una apasionante aventura para hacer frente a los espíritus del pasado que atormentan a su familia. Tendrá que buscar todas las piezas de la armadura de su padre, un antiguo y gran guerrero, para poder llevar a cabo esta importante misión.</p><p>Cabe destacar que, aparte de un gran argumento, esta película se ha llevado a cabo a través de una de las técnicas más antiguas de la animación, denominada Stop Motion. Los personajes son reales, creados de forma artesanal y sus movimientos son modificados imagen tras imagen manualmente. La sucesión de cada una de las fotografías, a la velocidad precisa, crea la sensación de movimiento y hace que el espectador no se dé cuenta de que no se trata de un vídeo, sino de una sucesión de imágenes.</p><p>(Director: Travis Knight)</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260563"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/102-dalmatas/3633355-1-esl-ES/102-Dalmatas_reference.jpg" width="415" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/102-dalmatas/3633355-1-esl-ES/102-Dalmatas_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/102-dalmatas/3633355-1-esl-ES/102-Dalmatas_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>102 Dálmatas</h2>
+<p>Cruella de Vil, tras varias sesiones en un psiquiátrico, logra reformar su malvada personalidad para convertirse en una amante incondicional de los animales. O al menos, eso parece.</p><p>(Director: Kevin Lima; Estados Unidos; 2000; Glenn Close, Alice Evans, Ioan Gruffudd).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260580"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/toy-story-3/3633461-1-esl-ES/Toy-Story-3_reference.jpg" width="416" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/toy-story-3/3633461-1-esl-ES/Toy-Story-3_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/toy-story-3/3633461-1-esl-ES/Toy-Story-3_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Toy Story 3</h2>
+<p>Andy ya tiene 17 años y está a punto de ir a la universidad. Ahora se enfrenta a una de las decisiones más nostálgicas de su vida: qué hacer con sus juguetes. Estos, no sin razón, temen por su futuro y finalmente son enviados a una guardería, donde dará comienzo su gran y última aventura.</p><p>(Director: Lee Unkrich)</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260564"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-goonies/3633361-1-esl-ES/Los-Goonies_reference.jpg" width="430" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-goonies/3633361-1-esl-ES/Los-Goonies_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-goonies/3633361-1-esl-ES/Los-Goonies_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Los Goonies</h2>
+<p>Tras encontrar el mapa del tesoro de un antiguo pirata, un grupo de niños se adentra en una inesperada aventura llena de trampas para encontrar el botín y así acabar con los problemas económicos de sus padres.</p><p>(Director: Kevin Lima; Estados Unidos; 2000; Glenn Close, Alice Evans, Ioan Gruffudd).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260584"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/fantasia/3633485-1-esl-ES/Fantasia_reference.jpg" width="401" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/fantasia/3633485-1-esl-ES/Fantasia_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/fantasia/3633485-1-esl-ES/Fantasia_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Fantasía</h2>
+<p>Uno de los mayores clásicos de Disney. Es una forma de acercar grandes obras de la música clásica a los más pequeños, mediante interpretaciones animadas. Incluye obras de P. Dukas, Ponchielli, Stravinsky y mucho más.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260566"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/wall-e/3633373-1-esl-ES/Wall-e_reference.jpg" width="428" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/wall-e/3633373-1-esl-ES/Wall-e_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/wall-e/3633373-1-esl-ES/Wall-e_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Wall-e</h2>
+<p>Tras la destrucción del planeta Tierra, el pequeño robot WALL-E cumple la función para la que ha sido construido: limpiar la basura que ha quedado en él. Tras conocer a EVA, una robot que ha sido enviada al planeta en busca de indicios de vida, ambos se adentran en una inesperada y emocionante aventura que cambiará el destino de la humanidad.</p><p>(Director: Andrew Stanton).</p><p><strong>ADEMÁS...</strong></p><p><a href="http://www.crecerfeliz.es/Ninos/Desarrollo-y-aprendizaje/18-lecciones-que-aprendimos-con-las-peliculas-de-Disney" target="_blank"><strong>--&gt; 18 lecciones que aprendimos con las películas de Disney</strong></a></p><p><a href="http://www.crecerfeliz.es/Ninos/Desarrollo-y-aprendizaje/estudio-miedo-muerte-peliculas-disney" target="_blank"><strong>--&gt; Películas con las que superar miedos infantiles</strong></a></p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260567"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/papa-por-sorpresa/3633379-1-esl-ES/Papa-por-sorpresa_reference.jpg" width="426" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/papa-por-sorpresa/3633379-1-esl-ES/Papa-por-sorpresa_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/papa-por-sorpresa/3633379-1-esl-ES/Papa-por-sorpresa_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Papá por sorpresa</h2>
+<p>La vida de un famoso jugador de fútbol americano cambia repentinamente cuando descubre que tiene una hija de 7 años.</p><p>(Director: Andy Fickman; Estados Unidos; 2007; Dwayne &quot;The Rock&quot; Johnson, Madison Pettis,&nbsp;Kyra Sedgwick, Roselyn Sanchez).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260568"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/enredados/3633385-1-esl-ES/Enredados_reference.jpg" width="424" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/enredados/3633385-1-esl-ES/Enredados_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/enredados/3633385-1-esl-ES/Enredados_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Enredados</h2>
+<p>Cuando tan solo era un bebé, la princesa Rapunzel fue secuestrada por una malvada bruja que se hizo pasar por su madre para aprovecharse del poder curativo de su pelo. Aunque tiene prohibido salir de la torre en la que vive, su único deseo es escapar de allí y descubrir los farolillos que casualmente tan solo aparecen una vez al año, el día de su cumpleaños.</p><p>(Director: Nathan Greno,&nbsp;Byron Howard).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260572"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/hook-el-capitan-garfio/3633409-1-esl-ES/Hook-El-capitan-Garfio_reference.jpg" width="600" height="572"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/hook-el-capitan-garfio/3633409-1-esl-ES/Hook-El-capitan-Garfio_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/hook-el-capitan-garfio/3633409-1-esl-ES/Hook-El-capitan-Garfio_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Hook (El capitán Garfio)</h2>
+<p>Peter Pan ha olvidado el niño que fue en &quot;el País de Nunca Jamás&quot; para convertirse en un ocupado abogado. Sin embargo, su pasado le persigue y sus hijos son secuestrados a modo de venganza por el Capitán Garfio.</p><p>(Director: Steven Spielberg; Estados Unidos; 1991; Robin Williams,&nbsp;Dustin Hoffman,&nbsp;Julia Roberts).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260570"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mulan/3633397-1-esl-ES/Mulan_reference.jpg" width="361" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mulan/3633397-1-esl-ES/Mulan_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mulan/3633397-1-esl-ES/Mulan_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Mulan</h2>
+<p>La valentía de Mulan le lleva a disfrazarse de guerrero para suplantar a su anciano padre en el ejército. Su decisión le llevará por caminos inesperados y múltiples peligros que tendrá que afrontar.</p><p>(Director: Barry Cook,&nbsp;Tony Bancroft)</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260574"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-principe-de-persia-las-arenas-del-tiempo/3633421-1-esl-ES/El-principe-de-Persia-las-arenas-del-tiempo_reference.jpg" width="424" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-principe-de-persia-las-arenas-del-tiempo/3633421-1-esl-ES/El-principe-de-Persia-las-arenas-del-tiempo_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-principe-de-persia-las-arenas-del-tiempo/3633421-1-esl-ES/El-principe-de-Persia-las-arenas-del-tiempo_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>El príncipe de Persia: las arenas del tiempo</h2>
+<p>El príncipe Dastan y la princesa Tamina se unen en una peligrosa e importante misión: proteger la daga capaz de liberar las arenas del tiempo. Es indispensable que este mágico instrumento no caiga en malas manos ya que tiene un inmenso poder: dota a su poseedor de la capacidad de volver al pasado y cambiarlo, permitiéndole así tener el control sobre el futuro.</p><p>(Director: Mike Newell; Estados Unidos; 2010; Jake Gyllenhaal, Gemma Arterton, Ben Kingsley).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260569"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/brave-indomable/3633391-1-esl-ES/Brave-Indomable_reference.jpg" width="423" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/brave-indomable/3633391-1-esl-ES/Brave-Indomable_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/brave-indomable/3633391-1-esl-ES/Brave-Indomable_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Brave (Indomable)</h2>
+<p>Mérida era una princesa bastante peculiar que casi nunca estaba de acuerdo con las peticiones de su madre. Frustrada, fue a pedir ayuda a una anciana bruja para que le concediera un deseo. Un desafortunado capricho que desembocará en terribles consecuencias y le enseñará una gran lección.</p><p>(Director: Mark Andrews, Steve Purcell, Brenda Chapman, Irene Mecchi)</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260565"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/peter-y-el-dragon/3633367-1-esl-ES/Peter-y-el-dragon_reference.jpg" width="420" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/peter-y-el-dragon/3633367-1-esl-ES/Peter-y-el-dragon_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/peter-y-el-dragon/3633367-1-esl-ES/Peter-y-el-dragon_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Peter y el dragón</h2>
+<p>Peter es un niño salvaje que vive en el bosque junto a su único y mejor amigo, Elliot, un dragón que le salvó la vida cuando este tan solo era un bebé. Un encuentro con la civilización pone en peligro la posibilidad de seguir juntos.</p><p>(Director: David Lowery; Estados Unidos; 2016; Bryce Dallas Howard, Oakes Fegley, Wes Bentley, Karl Urban, Robert Redford).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260581"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/no-se-aceptan-devoluciones/3633467-1-esl-ES/No-se-aceptan-devoluciones_reference.jpg" width="411" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/no-se-aceptan-devoluciones/3633467-1-esl-ES/No-se-aceptan-devoluciones_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/no-se-aceptan-devoluciones/3633467-1-esl-ES/No-se-aceptan-devoluciones_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>No se aceptan devoluciones</h2>
+<p>Valentín es un soltero mujeriego al que no le gusta complicarse demasiado. Sin embargo, un “toc toc” llama a su puerta y le cambia la vida: resulta que tiene una hija. Es entonces cuando emprende un viaje a Los Ángeles para encontrar a su madre y devolvérsela, pero la convivencia hace que sus intenciones cambien.</p><p>(Director: Eugenio Derbez; México; 2013; Eugenio Derbez, Loreto Peralta).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260573"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-espada-magica-en-busca-de-camelot/3633415-1-esl-ES/La-espada-magica-en-busca-de-Camelot_reference.jpg" width="423" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-espada-magica-en-busca-de-camelot/3633415-1-esl-ES/La-espada-magica-en-busca-de-Camelot_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-espada-magica-en-busca-de-camelot/3633415-1-esl-ES/La-espada-magica-en-busca-de-Camelot_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>La espada mágica: en busca de Camelot</h2>
+<p>Un malvado villano ha robado a Excalibur, la espada mágica del Rey Arturo. Kaley, una joven muy valiente cuyo objetivo es ser caballero de la Mesa Redonda, emprende una peligrosa aventura para recuperar la espada y así salvar al reino y demostrar su valía.</p><p>(Director: Frederik Du Chau)</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260575"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/50-primeras-citas/3633427-1-esl-ES/50-primeras-citas_reference.jpg" width="424" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/50-primeras-citas/3633427-1-esl-ES/50-primeras-citas_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/50-primeras-citas/3633427-1-esl-ES/50-primeras-citas_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>50 primeras citas</h2>
+<p>Henry Roth, un biólogo marino con miedo al compromiso conoce a la mujer de su vida, Lucy, una encantadora chica que, debido a un accidente, despierta cada mañana en el mismo día, sin recordar nada del anterior. ¿Cómo podrá enamorarla si al día siguiente no se acuerda de él?</p><p>
+(Director: Peter Segal; Estados Unidos; 2004; Adam Sandler, Drew Barrymore).<br />PG: +13</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="236026"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mascotas/3453360-3-esl-ES/Mascotas_reference.png" width="491" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mascotas/3453360-3-esl-ES/Mascotas_ampliacion.png" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/mascotas/3453360-3-esl-ES/Mascotas_columna.png"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Mascotas</h2>
+<p>¿Qué hacen las mascotas cuándo nos vamos de casa? La dueña de Max adopta a otro perro, Duke, con quien tendrá sus diferencias. Pero pronto tendrán que dejar su rivalidad para evitar que un conejito blanco se vengue de todos los animales domésticos, ¿lo conseguirán? DVD disponible a partir de noviembre.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="260582"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-planeta-del-tesoro/3633473-1-esl-ES/El-planeta-del-tesoro_reference.jpg" width="428" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-planeta-del-tesoro/3633473-1-esl-ES/El-planeta-del-tesoro_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-planeta-del-tesoro/3633473-1-esl-ES/El-planeta-del-tesoro_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>El planeta del tesoro</h2>
+<p>Mientras que toda la galaxia está en busca del legendario tesoro conocido como “botín de los mil mundos”, el mapa que lleva hacia la mayor cueva de piratas que existe cae en manos de Jim, un adolescente que emprende una aventura intergaláctica para encontrarlo.</p><p>(Director: John Musker, Ron Clements).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="202211"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/inside-out-del-reves/3204022-1-esl-ES/Inside-Out-Del-Reves_reference.jpg" width="410" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/inside-out-del-reves/3204022-1-esl-ES/Inside-Out-Del-Reves_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/inside-out-del-reves/3204022-1-esl-ES/Inside-Out-Del-Reves_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Inside Out (Del Revés) </h2>
+<p>Los sentimientos son los protagonistas en esta estupenda aventura que ha sido un gran éxito. La alegría, la tristeza, la ira... buscan su sentido y su lugar en una niña, la pequeña Riley.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="202210"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-minions/3204016-1-esl-ES/Los-Minions_reference.jpg" width="600" height="410"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-minions/3204016-1-esl-ES/Los-Minions_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/los-minions/3204016-1-esl-ES/Los-Minions_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Los Minions</h2>
+<p>Una de las películas más divertidas, protagonizada por los pequeños seres amarillos con los que niños y mayores harán el recorrido más original por la Historia. Su objetivo, ni más ni menos que salvarse a sí mismos de la desaparición total.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="236023"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/zootropolis/3453342-1-esl-ES/zootropolis_reference.png" width="473" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/zootropolis/3453342-1-esl-ES/zootropolis_ampliacion.png" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/zootropolis/3453342-1-esl-ES/zootropolis_columna.png"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Zootrópolis</h2>
+<p>Esta divertida película narra la historia de la moderna metrópoli mamífera de Zootrópolis, una ciudad única formada por barrios con diferentes hábitats. La agente Judy Hopps, la primera conejita de un cuerpo policial, tendrá que resolver un caso junto a un zorro parlanchín y estafador.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="236025"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/buscando-a-dory/3453354-1-esl-ES/Buscando-a-Dory_reference.png" width="473" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/buscando-a-dory/3453354-1-esl-ES/Buscando-a-Dory_ampliacion.png" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/buscando-a-dory/3453354-1-esl-ES/Buscando-a-Dory_columna.png"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Buscando a Dory</h2>
+<p>Después de la magnífica película “Buscando a Nemo”, llega “Buscando a Dory”. De repente Dory deja sus problemas de memoria a un lado y recuerda que tiene familia. Decide emprender un viaje para reencontrarse con sus padres, ¡no te pierdas sus aventuras! DVD disponible a partir de noviembre.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="236024"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/frozen/3453348-1-esl-ES/frozen_reference.png" width="473" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/frozen/3453348-1-esl-ES/frozen_ampliacion.png" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/frozen/3453348-1-esl-ES/frozen_columna.png"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Frozen</h2>
+<p>Una profecía condena a un lejano reino a vivir un eterno invierno. Pero la joven y valiente Anna decide emprender una aventura junto con el reno Sven y el montañero Kristoff para buscar a Elsa, su hermana y la Reina de las Nieves, para poner fin al gélido hechizo. Durante el camino vivirán divertidas aventuras y conocerán a personajes entrañables como Olaf, un gracioso muñeco de nieve.</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="202209"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-aprendiz-de-papa-noel-y-el-copo-de-nieve-magico/3204010-1-esl-ES/El-aprendiz-de-Papa-Noel-y-el-copo-de-nieve-magico_reference.jpg" width="410" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-aprendiz-de-papa-noel-y-el-copo-de-nieve-magico/3204010-1-esl-ES/El-aprendiz-de-Papa-Noel-y-el-copo-de-nieve-magico_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/el-aprendiz-de-papa-noel-y-el-copo-de-nieve-magico/3204010-1-esl-ES/El-aprendiz-de-Papa-Noel-y-el-copo-de-nieve-magico_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>El aprendiz de Papá Noel y el copo de nieve mágico</h2>
+<p>Papá Noel quiere retirarse y nombra como sucesor a Nicolás, un niño de 7 años. Pero se dan cuenta de que la magia de la Navidad empieza a desvanecerse y tendrán que actuar para evitar que desaparezca...</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177941"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/juntos-y-revueltos/2903793-1-esl-ES/Juntos-y-revueltos_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/juntos-y-revueltos/2903793-1-esl-ES/Juntos-y-revueltos_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/juntos-y-revueltos/2903793-1-esl-ES/Juntos-y-revueltos_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Juntos y revueltos</h2>
+<p>Después de una fallida cita a ciegas, Lauren y Jim vuelven a coincidir en un hotel de África para compartir un safari muy divertido en compañía de sus respectivos retoños.</p><p>(Director: Frank Coraci; Estados Unidos; 2014; Adam Sandler).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177948"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/el-rey-leon/2903835-1-esl-ES/El-Rey-Leon_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/el-rey-leon/2903835-1-esl-ES/El-Rey-Leon_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/el-rey-leon/2903835-1-esl-ES/El-Rey-Leon_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>El Rey León</h2>
+<p>En la sabana africana se desarrollan las aventuras de Simba, un simpático cachorro. Tras escapar de su malvado tío Scar, intenta recuperar el trono que le corresponde con la ayuda de unos entrañables amigos.</p><p>(Director: Rob Minkoff, Roger Allers; Estados Unidos; 1994).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177937"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mama-en-apuros/2903769-1-esl-ES/Mama-en-apuros_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mama-en-apuros/2903769-1-esl-ES/Mama-en-apuros_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mama-en-apuros/2903769-1-esl-ES/Mama-en-apuros_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Mamá en apuros</h2>
+<p>Eliza Welch tiene dos hijos pequeños, un marido tan cariñoso como despistado y un gran deseo de retomar su carrera como escritora.</p><p>(Director: Katherine Dieckmann; Estados Unidos; 2009; Uma Thurman).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177935"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/stuart-little-2/2903757-1-esl-ES/Stuart-Little-2_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/stuart-little-2/2903757-1-esl-ES/Stuart-Little-2_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/stuart-little-2/2903757-1-esl-ES/Stuart-Little-2_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Stuart Little 2</h2>
+<p>Las mil y una aventuras del valiente ratón Stuart para recuperar el anillo de boda de su madre.</p><p>(Director: Rob Minkoff; Estados Unidos; 2002; Geena Davis, Hugh Laurie).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177940"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-fuera-de-casa/2903787-1-esl-ES/Doce-fuera-de-casa_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-fuera-de-casa/2903787-1-esl-ES/Doce-fuera-de-casa_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-fuera-de-casa/2903787-1-esl-ES/Doce-fuera-de-casa_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Doce fuera de casa</h2>
+<p>El clan Baker y sus doce hijos se trasladan a un lago para pasar sus vacaciones de verano. Allí coinciden con un antiguo rival del padre y sus ocho impetuosos vástagos.</p><p>(Director: Adam Shankman; Estados Unidos; 2005; Steve Martin, Bonnie Hunt).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177931"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-increibles/2903733-1-esl-ES/Los-increibles_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-increibles/2903733-1-esl-ES/Los-increibles_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-increibles/2903733-1-esl-ES/Los-increibles_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Los increíbles</h2>
+<p>Una familia de superhéroes, aburridos de su retiro en la sociedad civil, vuelven a la acción para salvar al mundo de una terrible amenaza.</p><p>(Director: Brad Bird; Estados Unidos; 2004).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177956"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-ninera-magica/2903889-1-esl-ES/La-ninera-magica_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-ninera-magica/2903889-1-esl-ES/La-ninera-magica_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/la-ninera-magica/2903889-1-esl-ES/La-ninera-magica_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>La niñera mágica</h2>
+<p>Un viudo con siete traviesos hijos recurre a los servicios de la institutriz Nanny McPhee, una mujer muy especial.&nbsp;</p><p>(Director: Kirk Jones; Gran Bretaña; 2006; Colin Firth).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177946"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/matilda/2903823-1-esl-ES/Matilda_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/matilda/2903823-1-esl-ES/Matilda_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/matilda/2903823-1-esl-ES/Matilda_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Matilda</h2>
+<p>Matilda es una niña curiosa y muy inteligente. Cuando descubre que posee poderes telequinésicos, su vida cambia completamente.</p><p>(Director: Danny DeVito; Estados Unidos; 1996; Mara Wilson, Danny DeVito, Rhea Perlman).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177934"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/vacaciones-en-familia/2903751-1-esl-ES/Vacaciones-en-familia_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/vacaciones-en-familia/2903751-1-esl-ES/Vacaciones-en-familia_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/vacaciones-en-familia/2903751-1-esl-ES/Vacaciones-en-familia_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Vacaciones en familia</h2>
+<p>Para acudir a una reunión familiar, una pareja y sus tres hijos se disponen a atravesar Estados Unidos por carretera.</p><p>(Director: Christopher Erskin; Estados Unidos; 2004; Cedric the Entertainer, Vanessa Williams).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177951"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mios-tuyos-y-nuestros/2903853-1-esl-ES/Mios-tuyos-y-nuestros_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mios-tuyos-y-nuestros/2903853-1-esl-ES/Mios-tuyos-y-nuestros_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mios-tuyos-y-nuestros/2903853-1-esl-ES/Mios-tuyos-y-nuestros_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Míos, tuyos y nuestros</h2>
+<p>Treinta años después, Frank se encuentra con su novia del instituto. Ambos están divorciados y son padres de ocho y diez hijos, respectivamente.</p><p>(Director: Raja Gosnell; Estados Unidos; 2005; Rene Russo, Dennis Quaid).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177932"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/spy-kids/2903739-1-esl-ES/Spy-Kids_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/spy-kids/2903739-1-esl-ES/Spy-Kids_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/spy-kids/2903739-1-esl-ES/Spy-Kids_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Spy Kids</h2>
+<p>Dos valientes hermanos intentar salvar a sus padres, que son en realidad una pareja de superespías, de las garras de un malvado criminal.</p><p>(Director: Robert Rodríguez; Estados Unidos; 2001; Antonio Banderas, Carla Gugin).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177936"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-en-casa/2903763-1-esl-ES/Doce-en-casa_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-en-casa/2903763-1-esl-ES/Doce-en-casa_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/doce-en-casa/2903763-1-esl-ES/Doce-en-casa_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Doce en casa</h2>
+<p>Narra las peripecias de los Baker, un matrimonio con doce hijos. Cuando el padre hace realidad el sueño de su vida, entrenar a un equipo universitario de fútbol americano, la familia debe mudarse a una gran ciudad.</p><p>(Director: Shawn Levy; Estados Unidos; 2003; Steve Martin, Bonnie Hunt).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177938"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/beethoven-2-la-familia-crece/2903775-1-esl-ES/Beethoven-2-La-familia-crece_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/beethoven-2-la-familia-crece/2903775-1-esl-ES/Beethoven-2-La-familia-crece_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/beethoven-2-la-familia-crece/2903775-1-esl-ES/Beethoven-2-La-familia-crece_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Beethoven 2: La familia crece</h2>
+<p>Durante un paseo por el parque surge el flechazo entre Beethoven y Missy, una perrita muy coqueta. Poco tiempo después llegan los cachorros, que traerán más de un quebradero de cabeza a sus dueños.</p><p>(Director: Rod Daniel; Estados Unidos; 1993; Charles Grodin, Bonnie Hunt).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177939"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/flirteando-con-el-desastre/2903781-1-esl-ES/Flirteando-con-el-desastre_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/flirteando-con-el-desastre/2903781-1-esl-ES/Flirteando-con-el-desastre_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/flirteando-con-el-desastre/2903781-1-esl-ES/Flirteando-con-el-desastre_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Flirteando con el desastre</h2>
+<p>Un joven neoyorquino siente la necesidad de conocer a sus padres biológicos. Una psicóloga de la agencia de adopción le ayudará en su búsqueda.</p><p>(Director: David O. Russell; Estados Unidos; 1996; Ben Stiller, Patricia Arquette).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177942"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/solo-en-casa/2903799-1-esl-ES/Solo-en-casa_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/solo-en-casa/2903799-1-esl-ES/Solo-en-casa_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/solo-en-casa/2903799-1-esl-ES/Solo-en-casa_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Solo en casa</h2>
+<p>Un niño de ocho años, que se queda “olvidado” en su domicilio mientras el resto de la familia se va de vacaciones, vive un sinfín de peripecias hasta que sus padres regresan a por él.</p><p>(Director: Chris Columbus; Estados Unidos; 1990; Macaulay Culkin, Catherine O’Hara).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177944"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-pingueinos-del-senor-popper/2903811-1-esl-ES/Los-pingueinos-del-senor-Popper_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-pingueinos-del-senor-popper/2903811-1-esl-ES/Los-pingueinos-del-senor-Popper_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/los-pingueinos-del-senor-popper/2903811-1-esl-ES/Los-pingueinos-del-senor-Popper_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Los pingüinos del señor Popper</h2>
+<p>Un poderoso empresario recibe como herencia paterna media docena de pingüinos. El cuidado de los animales le acarreará más de un problema, pero también le ayudará a valorar la amistad y la familia.</p><p>(Director: Mark Walters; Estados Unidos; 2011; Carla Gugino).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177947"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tu-a-londres-y-yo-a-california/2903829-1-esl-ES/Tu-a-Londres-y-yo-a-California_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tu-a-londres-y-yo-a-california/2903829-1-esl-ES/Tu-a-Londres-y-yo-a-California_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tu-a-londres-y-yo-a-california/2903829-1-esl-ES/Tu-a-Londres-y-yo-a-California_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Tú a Londres y yo a California</h2>
+<p>Al divorciarse sus padres, dos gemelas son separadas al poco de nacer. Con los años, las hermanas urden un plan para reunir de nuevo a sus progenitores.</p><p>(Director: Nancy Meyers; Estados Unidos; 1998; Natasha Richardson, Lindsay Lohan, Dennis Quaid).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177933"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/la-tribu-de-los-brady/2903745-1-esl-ES/La-tribu-de-los-Brady_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/la-tribu-de-los-brady/2903745-1-esl-ES/La-tribu-de-los-Brady_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/la-tribu-de-los-brady/2903745-1-esl-ES/La-tribu-de-los-Brady_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>La tribu de los Brady</h2>
+<p>Cuando Carol y Mike Brady se casan, cada uno de ellos aporta hijos al matrimonio: él, tres niños y ella, tres niñas. La convivencia no es fácil, pero forman una sólida familia.</p><p>(Director: Betty Thomas; Estados Unidos; 1995; Shelley Long, Gary Cole).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177949"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mira-quien-habla/2903841-1-esl-ES/Mira-quien-habla_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mira-quien-habla/2903841-1-esl-ES/Mira-quien-habla_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/mira-quien-habla/2903841-1-esl-ES/Mira-quien-habla_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Mira quien habla</h2>
+<p>Mollie, embarazada de un hombre casado, decide criar sola a un hijo muy particular y buscar para él un padre ideal. El bebé no se priva de realizar comentarios sobre los candidatos.</p><p>(Director: Amy Heckerling; Estados Unidos; 1989; Kirstie Alley, John Travolta).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177950"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tarzan-y-su-hijo/2903847-1-esl-ES/Tarzan-y-su-hijo_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tarzan-y-su-hijo/2903847-1-esl-ES/Tarzan-y-su-hijo_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/20-peliculas-para-ver-en-familia/tarzan-y-su-hijo/2903847-1-esl-ES/Tarzan-y-su-hijo_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Tarzán y su hijo</h2>
+<p>Un avión se estrella en la jungla y el único superviviente es un bebé. Tarzán y Jane lo encuentran entre los restos del siniestro y acogen al niño como si fuera suyo.</p><p>(Director: Richard Thorpe; Estados Unidos; 1939; Johnny Weissmuller, Maureen O’Sullivan).</p>            </figcaption>
+    </figure></div><div class="galimg gallery-slideshow-container" style="display: none;" data-objectid="177930"><figure>
+    <div class="contenedorImagen">
+        
+		
+		<img data-src="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/un-padre-en-apuros/2903727-1-esl-ES/Un-padre-en-apuros_reference.jpg" width="600" height="600"/>
+		
+        <a target="_self" class="hrefAmpliacion" href="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/un-padre-en-apuros/2903727-1-esl-ES/Un-padre-en-apuros_ampliacion.jpg" alt="" data-imgmini="/var/ezflow_site/storage/images/ninos/ocio/peliculas-para-ver-en-familia/un-padre-en-apuros/2903727-1-esl-ES/Un-padre-en-apuros_columna.jpg"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>        <a href="javascript:antFoto();" class="hrefLeft trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+        <a href="javascript:sigFoto();" class="hrefRight trackpageview"><img width="1" height="1" role="presentation" aria-hidden="true" alt="" src="/design/crecer/images/transpa.gif" /></a>
+    </div>
+        <figcaption class="gal_text pie">
+        <h2>Un padre en apuros</h2>
+<p>Un atareado empresario inicia una cómica odisea por la ciudad en busca del juguete deseado por su hijo para Navidad.</p><p>(Director: Brian Levant; Estados Unidos; 1996; Arnold Schwarzenegger, Jake Lloyd).</p><p><strong>ADEMÁS...</strong></p><p><a href="http://www.crecerfeliz.es/Ninos/Desarrollo-y-aprendizaje/18-lecciones-que-aprendimos-con-las-peliculas-de-Disney" target="_blank"><strong>--&gt; 18 lecciones que aprendimos con las películas de Disney</strong></a></p><p><a href="http://www.crecerfeliz.es/Ninos/Desarrollo-y-aprendizaje/estudio-miedo-muerte-peliculas-disney" target="_blank"><strong>--&gt; Películas con las que superar miedos infantiles</strong></a></p>            </figcaption>
+    </figure></div></div>
+			
+																			
+        </div>
+        <div class="etiquetas_contenido_externa"><span>Categoría:</span>
+                        <a href="/compras-bebes-ninos-embarazo">
+Compras</a>             y                     <a href="/actividades-infantiles">
+Ocio</a>            </div>    </article>
+    
+	<script type="text/javascript">
+	(function RemoveIframes(d){
+		//Removing content embeds if user doesnt consent GDPR third party cookies
+		if ( document.cookie.indexOf("_evidon_consent_cookie") < 0 ) {
+			$(".contentAc").find("iframe[src*=youtube]").remove();
+			$(".contentAc").find("blockquote[class*=twitter]").remove();
+			$(".contentAc").find("blockquote[class*=instagram]").remove();	
+			$(".contentAc").find("iframe[src*=facebook]").remove();
+			$(".contentAc").find("a[href*=pinterest]").remove();
+			//script
+			$(".contentAc").find("script[src*=twitter]").remove();
+			$(".contentAc").find("script[src*=instagram]").remove();
+			$(".contentAc").find("script[src*=pinterest]").remove();
+			$(".contentAc").find("span[data-reactid]").remove();
+			//genericos
+			$(".contentAc").find("iframe").remove();
+			$(".contentAc").find("script").remove();
+		}else{
+			$(".contentAc").find("iframe:not([src*=facebook],[src*=youtube])").remove();
+			$(".contentAc").find("script:not([src*=twitter],[src*=instagram],[src*=pinterest])").remove();
+
+		}
+	})(document);
+	</script>
+</section>
+<script type="text/javascript">
+dataLayer.push({    'event': 'gtm.click',
+    'interaction': 'view photo',
+    'photoId': 260571,
+    'photoLocation': 1,
+    'photoNonInteraction': 'true'});
+</script>
+
+
+
+
+
+
+
+</div>
+					
+		      		
+        		<aside id="rightCol">
+			        <div id="publiRight" class="publiRight"></div>            
+                                                    
+    
+        
+            <div class="buttons editorial">
+    
+                                                                                    <a href="http://www.crecerfeliz.es/Novedades/Nueva-app-de-Crecer-Feliz-La-guia-del-bebe" target="_blank">        <img src="/var/ezflow_site/storage/images/auxiliar/right/app-crecer-feliz/2682289-2-esl-ES/App-Crecer-Feliz.png" width="300" height="568" alt="app crecer feliz" title="app crecer feliz" />
+        </a>    
+            </div>
+    
+    
+            <section class="three-col">
+    <header class="encabezado"><h1>Utilidades</h1></header>            <article class="left-col">
+                                                        
+    
+        
+    
+                                                                                    <a href="/Muy-Util/Calendario-de-vacunas/Espana" target="_self">        <img src="/var/ezflow_site/storage/images/auxiliar/right/muy-util/calendario-de-vacunas/2498916-2-esl-ES/Calendario-de-Vacunas_columna.png" width="90" height="90" alt="calendario vacunas niños" title="calendario vacunas niños" />
+        </a>    
+    
+    
+    <div class="teaser_text"><a href="/Muy-Util/Calendario-de-vacunas/Espana"><h1>Calendario de Vacunas</h1></a></div></article>
+            <article class="middle-col">
+                                                        
+    
+        
+    
+                                                                                    <a href="/Muy-Util/Calculadoras/Calculadora-de-percentiles" target="_self">        <img src="/var/ezflow_site/storage/images/auxiliar/right/muy-util/calculadora-de-percentiles-bebes/2498906-2-esl-ES/Calculadora-de-percentiles-bebes_columna.png" width="90" height="90" alt="Calculadora de percentiles bebé" title="Calculadora de percentiles bebé" />
+        </a>    
+    
+    
+    <div class="teaser_text"><a href="/Muy-Util/Calculadoras/Calculadora-de-percentiles"><h1>Calculadora de percentiles bebés</h1></a></div></article>
+            <article class="right-col">
+                                                        
+    
+        
+    
+                                                                                    <a href="/Muy-Util/Horoscopo" target="_self">        <img src="/var/ezflow_site/storage/images/auxiliar/right/muy-util/horoscopo-de-bebe/2498946-2-esl-ES/Horoscopo-de-bebe_columna.png" width="90" height="90" alt="Horoscopo niños" title="Horoscopo niños" />
+        </a>    
+    
+    
+    <div class="teaser_text"><a href="/Muy-Util/Horoscopo"><h1>Horóscopo de bebé</h1></a></div></article>
+            <article class="left-col">
+                                                        
+    
+        
+    
+                                                                                    <a href="/Muy-Util/Enfermedades-Infantiles" target="_self">        <img src="/var/ezflow_site/storage/images/auxiliar/right/muy-util/diccionario-de-la-salud/2498936-2-esl-ES/Diccionario-de-la-salud_columna.png" width="90" height="90" alt="Enfermedades infantiles" title="Enfermedades infantiles" />
+        </a>    
+    
+    
+    <div class="teaser_text"><a href="/Muy-Util/Enfermedades-Infantiles"><h1>Diccionario de la salud</h1></a></div></article>
+            <article class="middle-col">
+                                                        
+    
+        
+    
+                                                                                    <a href="http://www.crecerfeliz.es/Muy-Util/Salud-Infantil" target="_self">        <img src="/var/ezflow_site/storage/images/auxiliar/right/muy-util/10-preguntas-sobre/2498876-2-esl-ES/10-preguntas-sobre_columna.png" width="90" height="90" alt="10 preguntas sobre salud infantil" title="10 preguntas sobre salud infantil" />
+        </a>    
+    
+    
+    <div class="teaser_text"><a href="http://www.crecerfeliz.es/Muy-Util/Salud-Infantil"><h1>10 preguntas sobre...</h1></a></div></article>
+    </section>			
+		</aside>
+        
+    </div>			
+		
+
+<div id="transporter">
+
+	<div class="transporter-header">
+		<div class="transporter-header--byline">M&aacute;s de</div>
+		<div class="transporter-header--name">
+			<a href="/Ninos/Ocio" class="link-txt">Ocio</a>
+		</div>
+	</div>
+	
+		
+			
+				
+	
+		
+		<div class="module-tr transporter-story-1">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/futbolisimos-trailer" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/futbolisimos-trailer/3733767-2-esl-ES/Futbolisimos-ya-tiene-trailer-y-fecha-de-estreno_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Los Futbolísimos ya tiene fecha de estreno" title="Los Futbolísimos ya tiene fecha de estreno" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/futbolisimos-trailer">Este fin de semana se estrena 'Futbolísimos'</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-2">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/vacaciones-ninos-organizar" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/vacaciones-ninos-organizar/3978976-1-esl-ES/Planificar-las-vacaciones-con-los-ninos-fundamental-para-que-sean-un-exito_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Planificarse con los niños, fundamental para que las vacaciones sean un éxito" title="Planificarse con los niños, fundamental para que las vacaciones sean un éxito" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/vacaciones-ninos-organizar">5 claves para que las vacaciones con los niños sean un éxito total</a>
+			</div>
+		</div>
+	
+					
+			
+					
+			<aside id="publiRightBottom" class="publiRightBottom"></aside>			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-3">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/juegos-cartas-ninos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/noticias-novedades/juegos-cartas-ninos/3977502-2-esl-ES/7-juegos-de-cartas-a-los-que-puedes-jugar-con-tus-hijos_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="7 juegos de cartas a los que puedes jugar con tus hijos" title="7 juegos de cartas a los que puedes jugar con tus hijos" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/juegos-cartas-ninos">7 juegos de cartas a los que puedes jugar con tus hijos</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-4">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/deportes-con-ninos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/deportes-con-ninos/3977034-1-esl-ES/Deportes-que-puedes-hacer-con-tus-hijos_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Deportes que puedes hacer con tus hijos" title="Deportes que puedes hacer con tus hijos" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/deportes-con-ninos">6 deportes que puedes hacer con tus hijos</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-5">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/camino-santiago-ninos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/camino-santiago-ninos/3976227-1-esl-ES/Camino-de-Santiago-en-familia_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Por qué es una buena idea hacer el Camino de Santiago en familia " title="Por qué es una buena idea hacer el Camino de Santiago en familia " />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/camino-santiago-ninos">Por qué es una buena idea hacer el Camino de Santiago en familia </a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-6">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/parques-naturales-ninos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/parques-naturales-ninos/3975551-1-esl-ES/7-parques-naturales-para-ir-con-ninos_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="7 parques naturales para ir con niños" title="7 parques naturales para ir con niños" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/parques-naturales-ninos">7 parques naturales espectaculares para ir con niños</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-7">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/hacer-fotos-ninos-bonitas-consejos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/noticias-novedades/hacer-fotos-ninos-bonitas-consejos/3974909-1-esl-ES/Como-hacer-fotos-bonitas-a-los-ninos_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="¿Cómo hacer fotos bonitas (y bien hechas) de nuestros hijos?" title="¿Cómo hacer fotos bonitas (y bien hechas) de nuestros hijos?" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/hacer-fotos-ninos-bonitas-consejos">Cómo hacer fotos bonitas (y bien hechas) a los niños</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-8">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/libros-ninos-vacaciones" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/libros-ninos-vacaciones/3975016-1-esl-ES/Libros-para-que-los-ninos-lean-en-vacaciones_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="libros para niños" title="libros para niños" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/libros-ninos-vacaciones">6 libros para que los niños lean (y disfruten) en vacaciones</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-9">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/dormir-carros-cabanas-arboles-pais-vasco" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/dormir-carros-cabanas-arboles-pais-vasco/3975296-1-esl-ES/Dormir-con-los-ninos-en-un-carromato-al-estilo-zingaro_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Dormir con los niños en un carromato al estilo zíngaro" title="Dormir con los niños en un carromato al estilo zíngaro" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/dormir-carros-cabanas-arboles-pais-vasco">Dormir en un carromato, el mejor plan del verano</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+			
+				
+	
+		
+		<div class="module-tr transporter-story-10">
+			<div class="module-tr-image">
+				<a href="/Ninos/Ocio/festivales-musica-ninos" class="story-image--link">
+					
+                                                            
+    
+        
+    
+                                                                                            <img src="/var/ezflow_site/storage/images/ninos/ocio/festivales-musica-ninos/3971944-1-esl-ES/Festivales-de-musica-para-ir-con-tus-hijos_inferior-seccion-mos_portrait.jpg" width="342" height="207" class="lazy" alt="Vete de festival con tus hijos" title="Vete de festival con tus hijos" />
+            
+    
+    
+    					
+				</a>
+			</div>
+			<div class="module-tr-content">
+				<a class="module-tr-title" href="/Ninos/Ocio/festivales-musica-ninos">10 festivales de música para ir con tus hijos</a>
+			</div>
+		</div>
+	
+					
+			
+				
+		
+		
+			
+					
+		
+	
+
+</div>
+
+<a id="load-section-final" href="/Ninos/Ocio"><img alt="Ver más articulos" src="/design/crecer/images/arrowRight.png" /></a>
+
+		
+    <aside id="publiBottom" class="publiBottom"></aside>    <footer>    <section class="footer-suscription"><div class="f_suscripcion"><ul>			<li>
+                                                        
+    
+        
+    
+                                                                                    <a href="http://x.newsletter.crecerfeliz.es/ats/show.aspx?cr=100319&fm=51" target="_blank">        <img src="/var/ezflow_site/storage/images/auxiliar/footer/newsletter/2498818-1-esl-ES/Newsletter.png" width="326" height="290" alt="Newsletter" title="Newsletter" />
+        </a>    
+    
+    
+    		<h4>Newsletter</h4></li>
+	</ul></div></section>    <div class="listado one-col" style="height: auto;"><h4>Información</h4><ul><li><a href="/Informacion/Staff" >Staff</a></li><li><a href="http://www.hearst.es/publicidad/crecer-feliz/crecerfeliz-es" target="_blank">Publicidad</a></li></ul></div>    <div class="listado one-col" style="height: auto;"><h4>Muy Útil</h4><ul><li><a href="/Muy-Util/Enfermedades-Infantiles" >Diccionario de la salud</a></li><li><a href="/Muy-Util/Horoscopo" >Horóscopo</a></li><li><a href="/Muy-Util/Diccionario-del-embarazo" >Diccionario del embarazo</a></li><li><a href="/Muy-Util/Calculadoras" >Calculadoras</a></li><li><a href="/Muy-Util/Nombres-de-ninos" >Nombres de niños</a></li><li><a href="/Muy-Util/Calendario-de-vacunas" >Calendario de vacunas</a></li></ul></div>    <div class="listado one-col" style="height: auto;"><h4>Te interesa</h4><ul class="listTwoColumn"><li><a href="/noticias-novedades" >Noticias y novedades</a></li><li><a href="/recetas-ninos-embarazo" >Recetas</a></li><li><a href="/psicologia-infantil" >Psicología</a></li><li><a href="/belleza-embarazo" >Belleza</a></li><li><a href="/moda-ninos-bebes" >Moda</a></li><li><a href="/ninos-famosos" >Famosos</a></li><li><a href="/salud-ninos-embarazo" >Salud</a></li><li><a href="/decoracion-infantil" >Decoración</a></li><li><a href="/aprendizaje-ninos" >Aprendizaje</a></li><li><a href="/dormir-bebe" >Dormir bien</a></li><li><a href="/actividades-infantiles" >Ocio</a></li><li><a href="/alimentacion-embarazo-bebes" >Alimentación</a></li></ul></div>    <div class="redes-sociales"><div class="container">
+    <a class="rss" href="/rss/feed/crecerfeliz" target="_blank" title="Suscríbete a nuestro RSS"><img src="/design/crecer/images/ico_RSS.png" width="40" height="40" alt="RSS" /><span>RSS</span></a>
+    <a class="googleplus" href="https://plus.google.com/113879305907130598442" target="_blank" title="Crecer Feliz en Google Plus"><img src="/design/crecer/images/ico_googleplus.png" width="40" height="40" alt="Google Plus" /><span>Google plus</span></a>
+    <a class="facebook" href="https://www.facebook.com/crecerfeliz.es" target="_blank" title="Crecer Feliz en Facebook"><img src="/design/crecer/images/ico_facebook.png" width="40" height="40" alt="Facebook" /><span>Facebook</span></a>
+    <a class="twitter" href="https://twitter.com/crecer_feliz_es" target="_blank" title="Crecer Feliz en Twitter"><img src="/design/crecer/images/ico_twitter.png" width="40" height="40" alt="Twitter" /><span>Twitter</span></a>
+    <a class="youtube" href="https://www.youtube.com/user/crecertv" target="_blank" title="Decoración TV"><img src="/design/crecer/images/ico_youtube.png" width="40" height="40" alt="Youtube" /><span>Youtube</span></a><br class="clearboth"/>
+</div></div>    <div class="f_pie"><div class="container">
+	<img src="/design/crecer/images/logoHearst_w.png" alt="Hearst España">
+	<p>Crecer feliz, marca perteneciente al grupo Hearst Magazines International</p>
+	<p>Crecer feliz participa en varios programas de afiliación de marketing, lo que significa que Crecer feliz recibe comisiones de las compras hechas a través de los links a sitios de los vendedores.</p>
+	<p>©2018 Hearst España S.L. Todos los derechos sobre las marcas, imágenes y contenidos están protegidos.</p>
+	<p><a href="http://www.hearst.es/aviso-de-privacidad" target="_blank">Aviso de Privacidad</a> - <a href="http://www.hearst.es/politica-de-cookies" target="_blank">Política de cookies</a> - <a href="/informacion/aviso-legal" target="_self">Aviso Legal</a></p>
+</div>
+</div>
+</footer>
+</div>
+
+<script type="text/javascript">var fb_id = "193295337453772";</script>
+<script type="text/javascript" charset="utf-8" src="/design/crecer/javascript/acciones_tfp.js?v=25052018"></script><script type="text/javascript">
+//Callback function for G+ button
+var trackGooglePlus = function(){
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'share content',
+        'shareName': 'google+'
+    });
+}
+//Track Facebook Like
+var trackLike = function(response){
+    //Code for push into data layer must be here
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'share content',
+        'shareName': 'facebook'
+    });
+
+};
+//Track Facebook Comment
+var trackComment = function(response){
+    //Code for push into data layer must be here
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'comment content'
+    });
+};
+
+$('.fb-sharer a').click(function(){
+    trackLike();
+});
+
+var trackTweet = function(){
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'share content', 
+        'shareName': 'twitter'
+    });
+};
+
+//Window load event
+$(window).bind("load",function(){
+    //Check its a page with FB buttons
+    if(typeof(FB)!="undefined"){
+        //Like action
+        FB.Event.subscribe('edge.create', trackLike);
+        //Commment action
+        FB.Event.subscribe('comment.create', trackComment);
+    }
+
+});
+
+//Track Send to a Friend action
+$(".enviar a").click(function(event){
+    event.preventDefault();
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'share content',
+        'shareName': 'email'
+    });
+    var url = $(this).attr('href');
+    setTimeout(function(){
+        document.location = url;
+    }, 2000);
+});
+
+//Track Print action
+$(".imprimir a").click(function(){
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'print content'
+    });
+});
+
+$('.facebook, .twitter, .youtube, .instagram, .pinterest, .googleplus', '.redes-sociales').click(function(){
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'social media follow',
+        'socialMediaNetwork': $(this).attr('class')
+    });
+});
+
+$('.rss', '.redes-sociales').click(function(){
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'rss subscription',
+        'rssName': 'Site'
+    });
+});
+
+
+$('a[data-social="googleplus"]', '.accion_social').click(function(){
+    trackGooglePlus();
+});
+
+$('a[data-social="twitter"]', '.accion_social').click(function(){
+    trackTweet();
+});
+
+//Tracking Newsletter Suscription
+var trackingNewsletterSus = function(response){
+    //Code for push into data layer must be here
+    dataLayer.push({
+        'event': 'gtm.click',
+        'interaction': 'newsletter subscription',
+        'newsletterName': 'Site'
+    });
+};
+</script>
+
+<script type="text/javascript">
+
+$(window).load(function(){
+
+    var publi_top = $(".publiTop, .publiTop iframe");
+    var publi_right = $(".publiRight, .publiRight iframe");
+    var publi_enlaces = $("#enlaceTop, #enlaceIzq, #enlaceDer");
+
+    try{
+        publi_top.contents().find("div").first().click(function(){
+            dataLayer.push({
+                'event': 'gtm.click',
+                'interaction': 'ad click',
+                'adType': 'banner',
+                'adLocation': 'top',
+                'adName': dataLayer[0].googleTop
+            });
+        });
+    }catch(err){};
+    try{
+        publi_right.contents().find("div").first().click(function(){
+            dataLayer.push({
+                'event': 'gtm.click',
+                'interaction': 'ad click',
+                'adType': 'banner',
+                'adLocation': 'right',
+                'adName': dataLayer[0].googleRight
+            });
+        });
+    }catch(err){};
+    try{
+        publi_enlaces.click(function(){
+            dataLayer.push({
+                'event': 'gtm.click',
+                'interaction': 'ad click',
+                'adType': 'takeover',
+                'adLocation': dataLayer[0].pageName,
+                'adName': dataLayer[0].googleLayer
+            });
+        });
+    }catch(err){};
+
+});
+
+</script>
+
+<!--FRONT5-->
+</body></html>

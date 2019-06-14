@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/templates/redconoce_edsex/js/jquery.js"></script>
+		<base href="http://educacionsexual.uchile.cl/index.php/hablando-de-sexo/educacion-sexual-integral/sexualidad-prematura-en-adolescentes" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Programa de Educación Sexual" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Sexualidad prematura en adolescentes - Programa de Educación Sexual</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://educacionsexual.uchile.cl/plugins/content/evaluacion/evaluacion.css" rel="stylesheet" type="text/css" />
+	<link href="http://educacionsexual.uchile.cl/modules/mod_bsmenu/style.css" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/chosen.css?3300006d8a3d1112cd0637efb72ac6f8" rel="stylesheet" type="text/css" />
+	<link href="/media/com_finder/css/finder.css" rel="stylesheet" type="text/css" />
+	<script src="http://educacionsexual.uchile.cl/plugins/content/evaluacion/evaluacion.js" type="text/javascript"></script>
+	<script src="http://educacionsexual.uchile.cl/plugins/content/evaluacion/rating-input.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="http://educacionsexual.uchile.cl/modules/mod_bsmenu/bsmenu.js" type="text/javascript"></script>
+	<script src="/media/jui/js/chosen.jquery.min.js?3300006d8a3d1112cd0637efb72ac6f8" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.autocomplete.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find(".advancedSelect").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Escriba o seleccione algunas opciones","placeholder_text_single":"Selecione una opci\u00f3n","no_results_text":"Sin resultados que coincidan"});
+		}
+	});
+	
+
+jQuery(document).ready(function() {
+	var value, searchword = jQuery('#mod-finder-searchword166');
+
+		// Get the current value.
+		value = searchword.val();
+
+		// If the current value equals the default value, clear it.
+		searchword.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Buscar...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform166').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced166');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+	var suggest = jQuery('#mod-finder-searchword166').autocomplete({
+		serviceUrl: '/index.php/component/finder/?task=suggestions.suggest&amp;format=json&amp;tmpl=component',
+		paramName: 'q',
+		minChars: 1,
+		maxHeight: 400,
+		width: 300,
+		zIndex: 9999,
+		deferRequestBy: 500
+	});});
+	</script>
+
+		<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+		<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+		<link rel="stylesheet" href="/templates/redconoce_edsex/css/bootstrap.min.css" type="text/css" />
+		<!--link rel="stylesheet" href="/templates/redconoce_edsex/css/bootstrap-theme.min.css" type="text/css" /-->
+		<link rel="stylesheet" href="/templates/redconoce_edsex/css/custom.css" type="text/css" />
+		<!--link rel="icon" href="/favicon.ico"-->
+		
+		<!--[if lt IE 9]>
+		<script src="/templates/redconoce_edsex/js/html5shiv.min.js"></script>
+		<script src="/templates/redconoce_edsex/js/respond.min.js"></script>
+		<![endif]-->
+		
+	</head>
+	
+		<body role="document">
+		
+		<header class="header" id="header">
+			<div class="container">
+				<img src="/images/header_es_logo.png" class="img-responsive">
+			</div>
+		</header>
+		
+		<nav class="nav navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand visible-sm visible-xs" href="javascript:;">Programa Educación Sexual</a>
+				</div>
+								<div class="collapse navbar-collapse" id="menu-collapse">
+					<ul class="nav navbar-nav ">
+<li class="item-101 default"><a href="/index.php" class="">Inicio</a></li><li class="item-102 deeper dropdown parent"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Antecedentes</a><ul class="dropdown-menu"><li class="item-103"><a href="/index.php/antecedentes/preambulo" class="">Preámbulo</a></li><li class="item-104"><a href="/index.php/antecedentes/generalidades" class="">Generalidades</a></li><li class="item-107"><a href="/index.php/antecedentes/propositos-y-objetivos" class="">Propósitos y objetivos</a></li><li class="item-108"><a href="/index.php/antecedentes/descripcion-de-las-herramientas" class="">Descripción de las herramientas</a></li><li class="item-298"><a href="/index.php/antecedentes/material-didactico" class="">Material Didáctico</a></li><li class="item-109"><a href="/index.php/antecedentes/requisitos-para-la-participacion" class="">Requisitos para la participación</a></li><li class="item-110"><a href="/index.php/antecedentes/estudiantes-de-la-universidad-de-chile" class="">Estudiantes de la Universidad de Chile</a></li><li class="item-299"><a href="/index.php/antecedentes/resultados-de-la-exploracion-de-intereses" class="">Exploración Intereses de estudiantes</a></li><li class="item-302"><a href="/index.php/antecedentes/autorias" class="">Autorías</a></li><li class="item-307"><a href="/index.php/antecedentes/inscripcion" class="">Inscripción</a></li><li class="item-308"><a href="/index.php/antecedentes/consultas-sobre-sexualidad" class="">Consultas sobre sexualidad</a></li></ul></li><li class="item-111 active deeper dropdown parent"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Hablando de Sexo</a><ul class="dropdown-menu"><li class="item-112 parent"><a href="/index.php/hablando-de-sexo/la-educacion-sexual/educacion-sexual-con-referencia-a-chile" class="">La educación sexual</a></li><li class="item-119 active parent"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/conceptos-y-metodologias" class="">Educación sexual integral</a></li><li class="item-125 parent"><a href="/index.php/hablando-de-sexo/desarrollo-psicosexual/desarrollo-psicosexual-en-la-infancia-y-la-adolescencia" class="">Desarrollo psicosexual</a></li><li class="item-129 parent"><a href="/index.php/hablando-de-sexo/pubertad/la-pubertad" class="">Pubertad</a></li><li class="item-136 parent"><a href="/index.php/hablando-de-sexo/adolescencia/la-adolescencia" class="">Adolescencia</a></li><li class="item-143 parent"><a href="/index.php/hablando-de-sexo/homosexualidad-en-la-adolescencia-y-la-juventud/homosexualidad" class="">Homosexualidad en la adolescencia y la juventud</a></li><li class="item-151 parent"><a href="/index.php/hablando-de-sexo/afectividad-y-sexualidad/introduccion-afectividad-y-sexualidad" class="">Afectividad y sexualidad</a></li><li class="item-157 parent"><a href="/index.php/hablando-de-sexo/sexualidad-humana/sexualidad-humana" class="">Sexualidad humana</a></li><li class="item-165 parent"><a href="/index.php/hablando-de-sexo/embarazo-en-adolescentes-desde-la-perspectiva-chilena" class="">Embarazo en adolescentes desde la perspectiva chilena</a></li><li class="item-175 parent"><a href="/index.php/hablando-de-sexo/aborto-mitos-y-realidades" class="">Aborto mitos y realidades</a></li><li class="item-184 parent"><a href="/index.php/hablando-de-sexo/infecciones-de-transmision-sexual-its" class="">Infecciones de transmisión sexual (ITS)</a></li><li class="item-191 parent"><a href="/index.php/hablando-de-sexo/vih-y-sida" class="">VIH y SIDA</a></li><li class="item-199 parent"><a href="/index.php/hablando-de-sexo/anticoncepcion-en-la-adolescencia-y-juventud" class="">Anticoncepción en la adolescencia y juventud</a></li><li class="item-209 parent"><a href="/index.php/hablando-de-sexo/conceptos-de-genero-sexualidad-y-roles-de-genero" class="">Conceptos de género, sexualidad y roles de género</a></li><li class="item-216 parent"><a href="/index.php/hablando-de-sexo/acoso-y-abuso-sexual" class="">Acoso y abuso sexual</a></li><li class="item-228 parent"><a href="/index.php/hablando-de-sexo/familias-tipos-y-organizacion" class="">Familias, tipos y organización</a></li></ul></li><li class="item-238 deeper dropdown parent"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Recursos</a><ul class="dropdown-menu"><li class="item-240 parent"><a href="/index.php/recursos/talleres-para-adolescentes-y-jovenes" class="">Talleres para adolescentes y jóvenes</a></li><li class="item-264 parent"><a href="/index.php/recursos/talleres-para-padres-y-apoderados" class="">Talleres para padres y apoderados</a></li><li class="item-276 parent"><a href="/index.php/recursos/videos" class="">Videos</a></li><li class="item-291 parent"><a href="/index.php/recursos/peliculas" class="">Películas</a></li><li class="item-295"><a href="/index.php/recursos/radio" class="">Radio</a></li><li class="item-296"><a href="/index.php/recursos/presentaciones" class="">Presentaciones</a></li><li class="item-304"><a href="/index.php/recursos/audio-libro" class="">Audio libro</a></li></ul></li><li class="item-297"><a href="/index.php/noticias" class="">Noticias</a></li></ul>
+
+<form id="mod-finder-searchform166" action="/index.php/busqueda" method="get" class="form-search navbar-form navbar-right">
+	<div class="finder">
+		<input type="text" name="q" id="mod-finder-searchword166" class="search-query input-medium form-control" size="25" value="" placeholder="¿Dudas sobre sexualidad?"/><button class="btn btn-info  finder" type="submit" title="Ir"><span class="icon-search icon-white"></span>Buscar</button>
+							</div>
+</form>
+
+				</div>
+							</div>
+		</nav>
+		
+		<div class="container" id="main">
+			<div class="row">
+								<div>
+										<div class="container" id="breadcrumbs">
+						
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb" style="margin-bottom: 0px;">
+			
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+									<a itemprop="item" href="/index.php" class="pathway"><span itemprop="name">Inicio</span></a>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+									<a itemprop="item" href="/index.php/hablando-de-sexo" class="pathway"><span itemprop="name">Hablando de Sexo</span></a>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+									<a itemprop="item" href="/index.php/hablando-de-sexo/educacion-sexual-integral/conceptos-y-metodologias" class="pathway"><span itemprop="name">Educación sexual integral</span></a>
+								<meta itemprop="position" content="3">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"  class="breadcrumb-item active">
+				<span itemprop="name">
+					Sexualidad prematura en adolescentes				</span>
+				<meta itemprop="position" content="4">
+			</li>
+		</ul>
+
+					</div>
+									</div>
+				<div class="col-sm-9 col-sm-push-3">
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="es-ES" />
+	
+		
+		
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+									<a href="/index.php/hablando-de-sexo/educacion-sexual-integral/sexualidad-prematura-en-adolescentes?tmpl=component&amp;print=1&amp;page=" class="btn btn-default btn-xs" role="button" title="Imprimir el artículo < Sexualidad Prematura en adolescentes: causas y consecuencias >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print"></span>
+		Imprimir	</a>															</div>
+		
+	</div>
+				
+		<div class="page-header">
+					<h2 itemprop="name">
+				Sexualidad Prematura en adolescentes: causas y consecuencias			</h2>
+									</div>
+	
+	
+	
+				
+								<div itemprop="articleBody">
+		<p style="text-align: justify;">Hoy en día es ampliamente aceptado que niños(as) y adolescentes están inmersos en un mundo que les ofrece diariamente diversas motivaciones que estimulan el <em>inicio prematuro de la actividad sexual</em>, generalmente en un contexto de pareja inmadura e inestable, en ignorancia y en consecuencia sin responsabilidad.  Así por ejemplo, entre estos factores motivadores, tenemos:</p>
+<h1 style="text-align: justify;">Causas de la Sexualidad Prematura en Adolescentes</h1>
+<h2 style="text-align: justify;">Factores relacionados con el o la adolescente</h2>
+<ul style="text-align: justify;">
+<li>Biológicos
+<ul>
+<li><em>Adelantamiento de la madurez sexual.</em> Esto deja a los jóvenes a edad muy temprana en condiciones de engendrar, cuando aún no han logrado, una plena madurez biológica y psicosocial.</li>
+</ul>
+</li>
+<li>Sociales
+<ul>
+<li><em>Presión competitiva y de aceptación de sus pares</em>.  Hoy día, resulta a lo menos extraño, que un muchacho o muchacha no haya tenido experiencias sexuales y por tanto pareciera ser un imperativo tenerlas.  No obstante en un proceso formativo honesto, real y profundo es necesario reforzar y valorar aquellas opciones en las cuales los jóvenes voluntaria, libre y responsablemente deciden posponer su inicio sexual, como una forma de realización personal y en proyección a facilitar la concreción de sus proyectos de vida.</li>
+</ul>
+</li>
+<li>Psicológicos
+<ul>
+<li><em>Carencia afectiva y de modelos positivos</em>.  Siendo importante el lenguaje verbal en los procesos comunicacionales intrafamiliares, quizás tan importante como éste, es el lenguaje <em>no verbal</em> particularmente, de los gestos que manifiestan afectividad.<br />Los adultos, como modelos positivos para los hijos, no deben temer a manifestar sus afectos y sentimientos, tanto en el contexto de pareja, como en la relación directa con ellos, independiente de la edad que tengan.<br />Es interesante observar cómo, cuando los hijos son mayores (casados por ejemplo), la forma de saludarse con sus progenitores, particularmente con el padre, ya no es con un beso paternal o filial, por el contrario se hace más distante y formal, sin razones que justifiquen tal actitud.  Los padres son y deben ser padres incondicionales, por toda la vida, al igual que lo deben ser los hijos, en su condición de tales.<br /><br /></li>
+<li><em>Falla en la autoestima</em>.  La autoestima está referida a la autovaloración que cada persona hace de sí.  Es el juicio de valor, positivo o negativo, que se tiene con respecto a sí mismo. Es importante que el individuo se perciba positivamente.  Que sea capaz de reconocer sus limitaciones, pero también sus potencialidades.  De este modo podrá aceptarse y quererse, tal como es.<br />Cuando esta percepción de sí, es negativa, el individuo no se valora, se siente insatisfecho, sin expectativas y aún puede llegar a despreciarse. La autoestima, se da y se refuerza significativamente en el núcleo familiar.<br />De allí, la importancia de la comunicación dialógica y asertiva entre padres e hijos; como así mismo, las relaciones y manifestaciones de cariño y de afecto.<br />Una persona querida y que se quiera, podrá tener una mayor capacidad para dar, como así mismo para integrarse con armonía y sin conflictos a su entorno social.</li>
+</ul>
+</li>
+</ul>
+<h2 style="text-align: justify;">Factores relacionados con el medio sociocultural.</h2>
+<ul style="text-align: justify;">
+<li>Sociales
+<ul>
+<li><em>Alteraciones del núcleo familiar</em>.  <em>De estructura o funcionalidad</em>, por:
+<ul>
+<li>Separaciones o fallecimiento de uno o ambos padres</li>
+<li>Necesidad de incorporación de las madres al mundo laboral rentado</li>
+<li>Alcoholismo o drogadicción de uno o ambos progenitores</li>
+<li>Enfermedades catastróficas de algún miembro de la familia</li>
+<li>Pobreza económica, afectiva o en la comunicación padres/hijos</li>
+</ul>
+</li>
+<li><em>Retraso del matrimonio</em>.  La sociedad de consumo altamente competitiva, cambiante y tecnificada, en que está inmerso hoy en día el hombre, le demanda la necesidad de alcanzar las más altas competencias, que le respalden para alcanzar las metas de vida propuestas<br />Esta demanda implica prolongar estudios (estimulados por los propios padres) hasta edades más avanzadas (educación continua) con la consiguiente postergación de compromisos, como el matrimonio, por no contar con los recursos económicos que tal responsabilidad exige.<br /><br /></li>
+<li><em>Hacinamiento familiar</em> (promiscuidad).  La falta de oportunidades laborales, por una parte, a que se ve enfrentada la juventud, más aún si no tiene las competencias requeridas, y por otra, la migración desde las zonas rurales a las grandes ciudades, son causas que influyen en los hacinamientos familiares (condición de allegados).<br />Esta situación se ve acentuada, cuando el grupo familiar, es del <em>tipo extendido</em>, es decir, con presencia de abuelos, tíos, primos, etc.<br />Esta situación de hacinamiento plantea entonces el hecho, que las manifestaciones sexuales de sus integrantes se den en un contexto de absoluta falta de privacidad.<br />Buen ejemplo se observa en la película “El Chacotero Sentimental” de Cristián Galaz, episodio “Todo es cancha”.  Esto obviamente, influirá en un aprendizaje empírico por parte de niños y jóvenes, de cuya calidad formativa es legítimamente razonable, dudar.<br /><br /></li>
+</ul>
+</li>
+<li>Psicológicos
+<ul>
+<li><em>Falta de manifestaciones afectivas y de comunicación con los padres</em>.  Es reconocido por los propios afectados,  que una de las razones por las cuales embarazan o se embarazan, es la <em>carencia de afecto y comunicación con sus padres </em>((7)).  Sienten que ese niño o niña, por una parte les pertenece y por otra, representa la persona con la cual podrán, comunicarse e intercambiar afectos.<br />De aquí entonces, la necesidad de hacer énfasis en la calidad de las relaciones padres/ hijos.  En la época actual, ambos padres se ven forzados a trabajar y por tanto dejan desprovistos de tutela, por más tiempo, a sus hijos.<br />Considerando esto, hay que resaltar y rescatar la <em>calidad</em> que debe caracterizar las relaciones familiares en el escaso tiempo de que se dispone.  Lo ideal sería disponer también de <em>cantidad de tiempo</em>.  <em>De no ser posible, hay que reforzar la calidad</em>.<br /><br /></li>
+</ul>
+</li>
+<li>Culturales
+<ul>
+<li><em>Estímulos sexo eróticos de los medios de comunicación. </em>Probablemente la <em>globalización </em>y la <em>revolución comunicacional</em>, sean lo que va a caracterizar este siglo XXI. Y es precisamente, en este ámbito, en que siendo la comunicación multidimensional prácticamente instantánea y de gran accesibilidad, en que el hombre y muy especialmente niños y jóvenes, sin herramientas formativas adecuadas, quedan expuestos a la multiplicidad de estímulos sexo-eróticos que entregan los medios de comunicación: películas, teleseries, videos, CDs, DVDs, TV cable, revistas, diarios e Internet.  Los medios de comunicación, hoy como nunca, transmiten mensajes sexo eróticos directos o subliminales, en los cuales se señala que usando tal o cual perfume o vestimenta, fumando o bebiendo determinada marca, las conquistas para él o ella serán más fáciles.  La relación sexual, tiene una connotación de inmediatez y sin mayores preámbulos y compromiso (touch and go).<br /><br /></li>
+<li><em>Deficiencia en la entrega de una adecuada información y formación, en el ámbito de la reproducción y sexualidad humana</em>. Se ha señalado que tanto la familia (básicamente responsable) como el sistema escolar (con carácter subsidiario o complementario), en general, no han asumido el rol formador en el ámbito de la educación en sexualidad y reproducción humana, que haga posible entregar eficaz, adecuada y oportunamente las herramientas cognitivas y por sobre todo formativas, que permita a niños y jóvenes enfrentar adecuadamente el bombardeo sexo-erótico, al que diariamente están expuestos.<br />Las razones expuestas en mayor o menor grado, estimulan o determinan el inicio sexual prematuro, de un porcentaje de la juventud.  Este inicio les puede significar costos, perjuicios y situaciones conflictivas, difíciles para ellos de enfrentar.</li>
+</ul>
+</li>
+</ul>
+<h1 style="text-align: justify;">Consecuencias de la Sexualidad Prematura en Adolescentes</h1>
+<ul>
+<li style="text-align: justify;">En el aspecto biológico
+<ul>
+<li><em>Embarazos inoportunos</em>. Generalmente no esperados, ni deseados.  Si bien hay casos de muchachas y muchachos que reconocen haber deseado el embarazo, la mayoría manifiesta que no lo esperaban.  Muchas adolescentes aún creen que no pueden embarazarse en las primeras relaciones.  Habitualmente no usan métodos preventivos, creyendo ingenuamente que a ellas no les va a pasar, pues son otras las que se embarazan.<br /><br /></li>
+<li><em>Abortos</em>. Considerando que actualmente en Chile el aborto en cualquiera de sus formas, está prohibido legalmente desde el año 1989, (actualmente está en discusión pública y próxima a aprobarse en el Parlamento Ley que despenaliza el aborto en tres situaciones: riesgo de vida materna, inviabilidad fetal y violación) los que se dan son ilegales, clandestinos y por tanto de alto riesgo.  Sin embargo, muchas adolescentes, con un buen apoyo profesional interdisciplinario y también afectivo, especialmente a nivel familiar, hacen opción de vida, asumiendo la responsabilidad que en parte les corresponde. De este modo el <em>hijo no esperado y habitualmente no deseado, se transforma en hijo aceptado y que podrá llegar a ser hijo amado </em>((8,9))<em>.</em><br /><br /></li>
+<li><em>Riesgo de ITS, SIDA</em>. La ignorancia no es factor protector de ningún riesgo; es por ello que la Educación Sexual Integral, entregada oportuna y permanentemente, podría constituir la mejor herramienta de prevención primaria, especialmente en este contexto de las Infecciones de Transmisión Sexual<br /><br /></li>
+</ul>
+</li>
+<li style="text-align: justify;">En el aspecto social
+<ul>
+<li><em>Matrimonios forzados</em>, <em>con bajas probabilidades de consolidación.</em> En muchas ocasiones es preferible no presionar este tipo de decisiones, que en lugar de beneficiosas, pueden resultar inconvenientes, por la inmadurez y falta de claridad de futuro que tienen los adolescentes.  Es necesario recordar que no obstante, ser madre o padre, estos adolescentes deben continuar con el desarrollo de su adolescencia.<br /><br /></li>
+<li><em>Condición de madres solteras</em>. Habitualmente discriminadas y estigmatizadas. Con rechazo familiar, abandonada por la pareja y forzada directa o indirectamente a la deserción escolar.<br /><br /></li>
+<li><em>Conflictos familiares</em>. Especialmente en la familia de la adolescente.  Las primeras reacciones de los padres son de rechazo y descalificación, especialmente por parte del padre.  Posteriormente llega la comprensión y apoyo materno y más tarde paterno. Sin embargo, hay casos en que la muchacha es obligada a hacer abandono del hogar, por “haberlo deshonrado”, por ser “mal ejemplo para los hermanos”, por ser “una perdida”.<br /><br /></li>
+<li><em>Deserción escolar</em>. A pesar de las recomendaciones Ministeriales, en la práctica se produce la deserción sea por auto marginación o porque el establecimiento mismo, aplicando el concepto de la <em>manzana podrida,</em> impide que la adolescente embarazada continúe sus estudios.  Absurdamente, algunos aún piensan que el embarazo es contagioso.  Por el contrario, lo que sí es contagioso y además peligroso, es la falta de sensibilidad social y humana y la ignorancia que esclaviza a mitos, errores y prejuicios ancestrales.<br /><br /></li>
+<li><em>Dificultad para formar familia a futuro</em>. Naturalmente que producto de la estigmatización social con que se suele marcar a la madre adolescente (mujer fácil, que si lo hizo con uno podrá hacerlo con otros) sus posibilidades de matrimonio y de estructuración de una familia organizada, sana y estable se ven comprometidas, por decir lo menos.<br /><br /></li>
+<li><em>Renuncia a las interacciones sociales</em>. La necesidad de dedicarse a la atención de su hijo, influye en que la adolescente, normalmente deba renunciar a fiestas, paseos y otras actividades propias de esta etapa de desarrollo.<br /><br /></li>
+<li><em>Necesidad de asumir responsabilidades obligadamente</em>. La madre adolescente debe habitualmente cambiar los cuadernos por los pañales y la colación por la mamadera y con mayor rigor, cuando no cuenta con el respaldo de la familia.  Se ha visto, que las adolescentes que cuentan con este respaldo, muy particularmente padres y abuelos, enfrentan más exitosamente sus obligaciones, lo cual redunda en una atención de mayor calidad para el niño, favoreciendo así un mejor desarrollo para éste y también que la joven madre, culmine sus estudios e incluso alcance un título profesional ((9,10)).<br /><br /></li>
+<li><em>Acceso a trabajos menores, mal remunerados y sin previsión social</em>. El hecho de tener que abandonar los estudios y no obtener capacitación laboral, determina significativamente esta situación.  Considerando que el sistema escolar tradicional no ha sido estructurado para atender las situaciones de las adolescentes madres o embarazadas, justifica la necesidad de implementar alternativas que les dé la oportunidad de terminar sus estudios básicos y medios, como así mismo aquellas que lo deseen, capacitarse en un área técnica o profesional, que las habilite para generar recursos, que faciliten sus responsabilidades de madre ((10)).<br /><br /></li>
+</ul>
+</li>
+<li>En el aspecto psicológico
+<ul>
+<li style="text-align: justify;"><em>Modificación de sentimientos</em>. Remordimientos o sentimiento de culpa en caso de, abortar o abandonar, internar o ceder en adopción a su hijo.  Incluso en esta última situación, se han conocido en el curso de los últimos años, casos en que la madre biológica se ha arrepentido de haber dado en adopción a su hijo y ha recurrido a tribunales de justicia para obtener la restitución por parte de los padres adoptivos, lo cual ha suscitado gran e interesante polémica.<br /><br /></li>
+<li style="text-align: justify;"><em>Frustración de proyectos de vida, que los limitará en su realización como personas humanas</em>. Estos costos y frustraciones que una sexualidad ejercida en ausencia de una adecuada formación e información, acarrean a nuestra juventud, justifican la necesidad de implementar <em>Programas de Educación Sexual Integral</em> que debiera estar primariamente en manos de la familia, puesto que es ella el núcleo socializador básico, en cuyo seno debiera llevarse a cabo el proceso formativo integral y permanente, de niños y jóvenes, especialmente a través de la acción <em>modeladora de los padres con educación sexual</em>.<br />Es mediante, un <em>estilo de vida definido y consecuente</em> y particularmente de la manifestación de los afectos a través del lenguaje no verbal, como la familia puede educar a los hijos.  No obstante, existe conciencia que en la práctica la familia no asume su rol protagónico y es por ello que se hace recomendable y necesario el desarrollo de Programas de Educación Sexual Integral, insertos en el currículo normal, en los cuales se puedan también considerar la implementación de <em>Escuelas para Padres y Apoderados</em>, que incluyan reuniones de trabajo, seminarios y jornadas, que aborden temas relacionados con el desarrollo integral de niños y jóvenes ((11,12)).<br />De este modo, en forma absolutamente natural, se reforzará la relación <em>Familia Escuela</em>, fundamental para un trabajo armónico y coherente al servicio del proceso formativo de los educandos.  Así también padres y apoderados, se sentirán más fuertemente comprometidos con sus hijos y con la Escuela ((13,14)).</li>
+</ul>
+</li>
+</ul>
+<p><div class='evaluacion pull-right'>Tu valoración:<input type="number" name="ev_evaluacion_articulo_48" id="ev_evaluacion_articulo_48" class="rating" value="0" autocomplete="off" data-last="0" data-clicked="0"/><div>Promedio de votaciones: <span class='promedio'>4.0</span></div>
+<script type='text/javascript'>var _ev_dir='http://educacionsexual.uchile.cl//plugins/content/evaluacion/';</script></div></p>
+<div class="referencias">
+<p>((7)). Centro de Análisis de Políticas Públicas. Universidad de Chile. “Diagnóstico y lineamientos de política pública para la prevención del embarazo no deseado en adolescentes”. Estudio realizado para la Comisión Interministerial de Prevención del Embarazo Adolescente, bajo coordinación del SERNAM. Santiago., Chile. Octubre 2000</p>
+<p>((8)). SERNAM/UNICEF/CEMERA. “Adolescente embarazada en Chile. Diagnóstico de la situación 1991”. Editor R. Molina. Santiago. Chile. 1992</p>
+<p>((9)). Cecilia Valenzuela. “Entrevista a Magdalena Suazo, abogada. Egresada Liceo UNOPEC”. En: Noticias. Fac. Medicina. U. de Chile. Santiago. Chile. Mayo, 2010</p>
+<p>((10)). E. González, C. Molina, R. Meneses, T. Molina. "Impacto social de un modelo educativo alternativo para madres adolescentes que abandonan el sistema escolar regular". "Rev. Soc. Chilena de Obstet.y Ginecol. Infanto Juvenil. Vol. 7 (2); 41 - 49. 2000</p>
+<p>((11)). Ministerio de Educación. “Política de Educación en Sexualidad. Para el Mejoramiento de la Calidad de la Educación”. Santiago, Chile. 1993</p>
+<p>((12)). Ministerio de Educación. Programa de Educación Sexual: “Vida Familiar y Educación Sexual, VIFES. Rev. de Educación Chilena Nº 35 (Nueva Época). Santiago. Chile. 1968</p>
+<p>((13)). LEY 20.418 que rige a contar del 02 de Febrero de 2010</p>
+<p>((14)). Jara, Germán; Molina, Ramiro. “Educación Sexual. Manual para Educadores. CEMERA. Fac. Medicina.U.de Chile. Fondo de Poblaciones de Naciones Unidas, Proyecto Chi 90/PO3. Inscripción N° 85502. Impr. Arancibia Hnos. y Cía Ltda. Stgo, Chile. 1993</p>
+</div> 	</div>
+
+						
+							</div>
+
+					
+					<div style="clear:both"></div>
+				</div>
+				<div class="col-sm-3 col-sm-pull-9" id="left">
+					<ul class="nav nav-pills nav-stacked">
+<li class="item-120"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/conceptos-y-metodologias" class="">Conceptos y metodologías</a></li><li class="item-121 current"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/sexualidad-prematura-en-adolescentes" class="">Sexualidad prematura en adolescentes</a></li><li class="item-122"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/objetivos-de-la-educacion-sexual-integral" class="">Objetivos educación sexual integral</a></li><li class="item-123"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/como-enfrentar-la-educacion-sexual" class="">Cómo enfrentar la educación sexual</a></li><li class="item-124"><a href="/index.php/hablando-de-sexo/educacion-sexual-integral/capacitacion-en-educacion-sexual" class="">Capacitación en educación sexual</a></li></ul>
+
+				</div>
+							</div>
+		</div>
+		
+		<div style="margin-top:100px;clear:both"></div>
+          
+          <footer class="footer">
+			<div class="container">
+               <div class="row">
+                 <div class="col-xs-5 text-center">
+                   <div style="display:flex;align-items:center;height:100px;float:right">
+                     <a href="http://www.uchile.cl" target=blank><img src="http://www.educa.saludpublica.uchile.cl/espsystem/images/v4/logoUchile.png" style="margin:auto;"/></a>
+                   </div>
+                     
+                 </div>
+                 <div class="col-xs-2 text-center">
+                   <div style="align-items:center;height:100px;margin-top:22px">
+                     <a href="http://saludpublica.uchile.cl" target=blank><img src="http://www.educa.saludpublica.uchile.cl/espsystem/images/v4/log_esp.png" style="margin:auto;"/></a>
+                   </div>
+               
+                 </div>
+                 <div class="col-xs-5 text-center">
+                   <div style="display:flex;align-items:center;height:100px; float:left">
+                     <a href="http://utie.saludpublica.uchile.cl" target=blank><img src="http://www.educa.saludpublica.uchile.cl/espsystem/images/v4/log_utie.png" style="margin:auto;"/></a> 
+                   </div>
+                   
+                 </div>
+                   
+                
+                
+             
+									<!--<div class="col-xs-3 col-lg-2">-->
+                                     <!-- <div class="text-info text-bold"><spam style="color:#ffb017">Consultas:</spam></div>
+											<p><a style="color:white" href="mailto:contacto-esp@med.uchile.cl">contacto-esp@med.uchile.cl</a></p>
+									</div>-->
+									<!--<div class="col-xs-3 col-lg-2">
+                                      <div class="text-info text-bold"><spam style="color:#ffb017">Fono ayuda:</spam></div>
+											<p><span style="color:white">+56 2 2978 6154 / 6093 / 6694</span></p>
+									</div>-->
+				</div>
+				<p style="text-align: center" class="text-muted">
+				Vicerrectoría de Asuntos Estudiantiles y Comunitarios<br/>
+							Centro de Medicina Reproductiva y Desarrollo Integral del adolescente<br/>
+							Escuela de Salud Pública<br/>
+					Copyright @ 2017 - Todos los derechos reservados. Diseño y Desarrollo UTIE - Unidad de TIC para la Innovación Educativa
+				</p>
+			</div>
+		</footer>
+          
+<!---<footer class="footer">
+			<div class="container ">
+				<div class="row">
+					<div class="col-xs-4">
+						<img src="/images/logo_uchile_color_blanco.png" style="height: 70px;margin-top:-5px;">
+					</div>
+					<div class="col-xs-8">
+						<p class="text-right pull-right">
+							Vicerrectoría de Asuntos Estudiantiles y Comunitarios<br/>
+							Centro de Medicina Reproductiva y Desarrollo Integral del adolescente<br/>
+							Escuela de Salud Pública<br/>
+							Todos los derechos reservados &copy; Unidad de TIC para la Innovación Educativa
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer> --->
+
+          
+		
+		<div class="modal fade" id="modal" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+		<button class="close" data-dismiss="modal" class="button"><span>x</span></button>
+		<h3 class="text-primary"></h3>
+		</div>
+		<div class="modal-body text-justify">
+		</div>
+		<div class="modal-footer">
+		<button class="btn btn-primary btn-md inicial" data-dismiss="modal"></button>
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		<script src="/templates/redconoce_edsex/js/bootstrap.js"></script>
+		<script src="/templates/redconoce_edsex/js/template.js"></script>
+		<script src="/templates/redconoce_edsex/js/referencias.js"></script>
+		<script src="/templates/redconoce_edsex/js/audios.js"></script>
+		
+		<script>
+			//analytics
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-84662859-1', 'auto');
+			ga('send', 'pageview');
+		
+		</script>
+		  </body>
+</html>

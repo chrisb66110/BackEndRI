@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.analyticslane.com/xmlrpc.php">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119272036-1"></script>
+<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push( arguments );
+			}
+
+			gtag( 'js', new Date() );
+
+			gtag( 'config', 'UA-119272036-1' );
+		</script>
+
+<title>Implementación de una red neuronal desde cero - Analytics Lane</title>
+
+<meta name="description" content="En la entrada ser realizara la implementación de una red neuronal desde cero sin utilizar librerías externas que complican la compresión del algoritmo." />
+<link rel="canonical" href="https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Implementación de una red neuronal desde cero - Analytics Lane" />
+<meta property="og:description" content="En la entrada ser realizara la implementación de una red neuronal desde cero sin utilizar librerías externas que complican la compresión del algoritmo." />
+<meta property="og:url" content="https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/" />
+<meta property="og:site_name" content="Analytics Lane" />
+<meta property="article:tag" content="Deep learning" />
+<meta property="article:tag" content="Machine learning" />
+<meta property="article:section" content="Ciencia de datos" />
+<meta property="article:published_time" content="2018-05-23T06:00:53+00:00" />
+<meta property="article:modified_time" content="2018-10-26T15:43:02+00:00" />
+<meta property="og:updated_time" content="2018-10-26T15:43:02+00:00" />
+<meta property="og:image" content="https://www.analyticslane.com/wp-content/uploads/2018/05/nerve-cell-2213009_1920.jpg" />
+<meta property="og:image:secure_url" content="https://www.analyticslane.com/wp-content/uploads/2018/05/nerve-cell-2213009_1920.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="En la entrada ser realizara la implementación de una red neuronal desde cero sin utilizar librerías externas que complican la compresión del algoritmo." />
+<meta name="twitter:title" content="Implementación de una red neuronal desde cero - Analytics Lane" />
+<meta name="twitter:site" content="@analyticslane" />
+<meta name="twitter:image" content="https://www.analyticslane.com/wp-content/uploads/2018/05/nerve-cell-2213009_1920.jpg" />
+<meta name="twitter:creator" content="@analyticslane" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Person","url":"https://www.analyticslane.com/","sameAs":["https://www.youtube.com/channel/UCmlFwpcO1kMOhm54ow4c0Dg?reload=9","https://www.pinterest.es/analyticslane/","https://twitter.com/analyticslane"],"@id":"#person","name":"Daniel Rodr\u00edguez"}</script>
+
+<link rel="amphtml" href="https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/amp/" /><link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Analytics Lane &raquo; Feed" href="https://www.analyticslane.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Analytics Lane &raquo; RSS de los comentarios" href="https://www.analyticslane.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Analytics Lane &raquo; Implementación de una red neuronal desde cero RSS de los comentarios" href="https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/feed/" />
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.analyticslane.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="https://www.analyticslane.com/wp-content/cache/minify/f3a2c.css" media="all" />
+<script src="https://www.analyticslane.com/wp-content/cache/minify/df983.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ai_front = {"insertion_before":"BEFORE","insertion_after":"AFTER","insertion_prepend":"PREPEND CONTENT","insertion_append":"APPEND CONTENT","insertion_replace_content":"REPLACE CONTENT","insertion_replace_element":"REPLACE ELEMENT","cancel":"Cancel","use":"Use","add":"Add","parent":"Parent","cancel_element_selection":"Cancel element selection","select_parent_element":"Select parent element","css_selector":"CSS selector","use_current_selector":"Use current selector","element":"ELEMENT","path":"PATH","selector":"SELECTOR","visible":"VISIBLE","hidden":"HIDDEN"};
+/* ]]> */
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/a6889.js"></script>
+<script type='text/javascript'>
+function ai_insert(insertion,selector,insertion_code){if(selector.indexOf(":eq")!=-1)var elements=jQuery(selector);else var elements=document.querySelectorAll(selector);Array.prototype.forEach.call(elements,function(element,index){var ai_debug=typeof ai_debugging!=="undefined";if(element.hasAttribute("id"))selector_string="#"+element.getAttribute("id");else if(element.hasAttribute("class"))selector_string="."+element.getAttribute("class").replace(new RegExp(" ","g"),".");else selector_string="";var template=
+document.createElement("div");template.innerHTML=insertion_code;var ai_selector_counter=template.getElementsByClassName("ai-selector-counter")[0];if(ai_selector_counter!=null)ai_selector_counter.innerText=index+1;var ai_debug_name_ai_main=template.getElementsByClassName("ai-debug-name ai-main")[0];if(ai_debug_name_ai_main!=null){var insertion_name="";if(insertion=="before")insertion_name=ai_front.insertion_before;else if(insertion=="after")insertion_name=ai_front.insertion_after;else if(insertion==
+"prepend")insertion_name=ai_front.insertion_prepend;else if(insertion=="append")insertion_name=ai_front.insertion_append;else if(insertion=="replace-content")insertion_name=ai_front.insertion_replace_content;else if(insertion=="replace-element")insertion_name=ai_front.insertion_replace_element;ai_debug_name_ai_main.innerText=insertion_name+" "+selector+" ("+element.tagName.toLowerCase()+selector_string+")"}var range=document.createRange();var fragment=range.createContextualFragment(template.innerHTML);
+if(insertion=="before")element.parentNode.insertBefore(fragment,element);else if(insertion=="after")element.parentNode.insertBefore(fragment,element.nextSibling);else if(insertion=="prepend")element.insertBefore(fragment,element.firstChild);else if(insertion=="append")element.insertBefore(fragment,null);else if(insertion=="replace-content")element.innerHTML=template.innerHTML;else if(insertion=="replace-element"){element.parentNode.insertBefore(fragment,element);element.parentNode.removeChild(element)}if(ai_debug)console.log("AI INSERT",
+insertion,selector,"("+element.tagName.toLowerCase()+selector_string+")")})}
+function ai_insert_viewport(element){function hasClass(element,cls){if(element==null)return false;if(element.classList)return element.classList.contains(cls);else return(" "+element.className+" ").indexOf(" "+cls+" ")>-1}function addClass(element,cls){if(element==null)return;if(element.classList)element.classList.add(cls);else element.className+=" "+cls}function removeClass(element,cls){if(element==null)return;if(element.classList)element.classList.remove(cls);else element.className=element.className.replace(new RegExp("(^|\\b)"+
+cls.split(" ").join("|")+"(\\b|$)","gi")," ")}var ai_debug=typeof ai_debugging!=="undefined";if(ai_debug)console.log("AI VIEWPORT INSERTION class:",element.getAttribute("class"));var visible=!!(element.offsetWidth||element.offsetHeight||element.getClientRects().length);var block=element.getAttribute("data-block");if(visible){var insertion_code=element.getAttribute("data-code");var insertion_type=element.getAttribute("data-insertion");var selector=element.getAttribute("data-selector");if(insertion_code!=
+null)if(insertion_type!=null&&selector!=null){var selector_exists=document.querySelectorAll(selector).length;if(ai_debug)console.log("AI VIEWPORT VISIBLE: block",block,insertion_type,selector,selector_exists?"":"NOT FOUND");if(selector_exists){ai_insert(insertion_type,selector,b64d(insertion_code));removeClass(element,"ai-viewports")}}else{if(ai_debug)console.log("AI VIEWPORT VISIBLE: block",block);var range=document.createRange();var fragment=range.createContextualFragment(b64d(insertion_code));
+element.parentNode.insertBefore(fragment,element.nextSibling);removeClass(element,"ai-viewports")}}else{if(ai_debug)console.log("AI VIEWPORT NOT VISIBLE: block",block);var debug_bar=element.previousElementSibling;if(hasClass(debug_bar,"ai-debug-bar")&&hasClass(debug_bar,"ai-debug-script")){removeClass(debug_bar,"ai-debug-script");addClass(debug_bar,"ai-debug-viewport-invisible")}removeClass(element,"ai-viewports")}}
+function b64e(str){return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,function toSolidBytes(match,p1){return String.fromCharCode("0x"+p1)}))}function b64d(str){return decodeURIComponent(atob(str).split("").map(function(c){return"%"+("00"+c.charCodeAt(0).toString(16)).slice(-2)}).join(""))};
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/fba60.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.analyticslane.com\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"142","token":"70622980f2","debug":""};
+/* ]]> */
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/9288c.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var NeveProperties = {"ajaxurl":"https:\/\/www.analyticslane.com\/wp-admin\/admin-ajax.php","nonce":"d0e2020a93"};
+/* ]]> */
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/de0e7.js"></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js'></script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/d91f3.js"></script>
+<link rel='https://api.w.org/' href='https://www.analyticslane.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.analyticslane.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.analyticslane.com/wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='https://www.analyticslane.com/?p=142' />
+<link rel="alternate" type="application/json+oembed" href="https://www.analyticslane.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.analyticslane.com%2F2018%2F05%2F23%2Fimplementacion-de-una-red-neuronal-desde-cero%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.analyticslane.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.analyticslane.com%2F2018%2F05%2F23%2Fimplementacion-de-una-red-neuronal-desde-cero%2F&#038;format=xml" />
+
+<script type="application/ld+json">
+[{"@context":"http:\/\/schema.org","@type":"WebSite","id":"#website","url":"https:\/\/www.analyticslane.com","name":"Analytics Lane","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.analyticslane.com\/?s={search_term_string}","query-input":"required name=search_term_string"}},
+
+{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.analyticslane.com\/2018\/05\/23\/implementacion-de-una-red-neuronal-desde-cero\/","headline":"Implementaci\u00f3n de una red neuronal desde cero","description":"En esta entrada se va a implementar una red neuronal desde cero, sin utilizar librer\u00edas como Theano (http:\/\/deeplearning.net\/software\/theano\/) o TensorFlow (https:\/\/www.tensorflow.org).&nbsp;La finalidad de este ejercicio poder comprender mejor c\u00f3mo funcionan las redes neuronales&nbsp;antes de implementar soluciones m\u00e1s complejas mediante alguna librer\u00edas. Fundamentos de la red neuronal Las redes neuronales son modelos computacionales mediante los que&hellip;&nbsp;Leer m\u00e1s &raquo;Implementaci\u00f3n de una red neuronal desde cero","name":"Implementaci\u00f3n de una red neuronal desde cero","url":"https:\/\/www.analyticslane.com\/2018\/05\/23\/implementacion-de-una-red-neuronal-desde-cero\/","datePublished":"2018-05-23T08:00:53Z","dateModified":"2018-10-26T17:43:02Z","author":{"@type":"Person","name":"Daniel Rodr\u00edguez"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https:\/\/www.analyticslane.com\/wp-content\/uploads\/2018\/10\/analytics_lane_logo.jpg","width":"150","height":"150"},"name":"Analytics Lane"},"image":{"@type":"ImageObject","url":"https:\/\/www.analyticslane.com\/wp-content\/uploads\/2018\/05\/nerve-cell-2213009_1920.jpg","width":"1920","height":"1080"}},
+
+{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.analyticslane.com\/2018\/05\/23\/implementacion-de-una-red-neuronal-desde-cero\/","headline":"Implementaci\u00f3n de una red neuronal desde cero","description":"En esta entrada se va a implementar una red neuronal desde cero, sin utilizar librer\u00edas como Theano (http:\/\/deeplearning.net\/software\/theano\/) o TensorFlow (https:\/\/www.tensorflow.org).&nbsp;La finalidad de este ejercicio poder comprender mejor c\u00f3mo funcionan las redes neuronales&nbsp;antes de implementar soluciones m\u00e1s complejas mediante alguna librer\u00edas. Fundamentos de la red neuronal Las redes neuronales son modelos computacionales mediante los que&hellip;&nbsp;Leer m\u00e1s &raquo;Implementaci\u00f3n de una red neuronal desde cero","name":"Implementaci\u00f3n de una red neuronal desde cero","url":"https:\/\/www.analyticslane.com\/2018\/05\/23\/implementacion-de-una-red-neuronal-desde-cero\/","datePublished":"2018-05-23T08:00:53Z","dateModified":"2018-10-26T17:43:02Z","author":{"@type":"Person","name":"Daniel Rodr\u00edguez"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https:\/\/www.analyticslane.com\/wp-content\/uploads\/2018\/10\/analytics_lane_logo.jpg","width":"150","height":"150"},"name":"Analytics Lane"},"image":{"@type":"ImageObject","url":"https:\/\/www.analyticslane.com\/wp-content\/uploads\/2018\/05\/nerve-cell-2213009_1920.jpg","width":"1920","height":"1080"}},
+
+{"@context":"http:\/\/schema.org","@type":"Organization","name":"Analytics Lane","url":"https:\/\/www.analyticslane.com\/","sameAs":[["https:\/\/twitter.com\/analyticslane"],["https:\/\/www.instagram.com\/analyticslane\/"],["https:\/\/www.youtube.com\/channel\/UCmk5Ut4vaFGO_bNwgxcIXTg"],["https:\/\/www.pinterest.es\/analyticslane\/"]],"logo":{"@type":"ImageObject","url":"https:\/\/www.analyticslane.com\/wp-content\/uploads\/2018\/10\/analytics_lane_logo.jpg","width":"150","height":"150"},"contactPoint":{"@type":"ContactPoint","contactType":"","telephone":""}}]
+</script>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><script type="text/javascript">/* <![CDATA[ */EnlighterJS_Config = {"selector":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"language":"generic","theme":"classic","indent":2,"hover":"hoverEnabled","showLinenumbers":true,"rawButton":true,"infoButton":false,"windowButton":true,"rawcodeDoubleclick":false,"grouping":true,"cryptex":{"enabled":false,"email":"mail@example.tld"}};!function(){var a=function(a){var b="Enlighter Error: ";console.error?console.error(b+a):console.log&&console.log(b+a)};return window.addEvent?"undefined"==typeof EnlighterJS?void a("Javascript Resources not loaded yet!"):"undefined"==typeof EnlighterJS_Config?void a("Configuration not loaded yet!"):void window.addEvent("domready",function(){EnlighterJS.Util.Init(EnlighterJS_Config.selector.block,EnlighterJS_Config.selector.inline,EnlighterJS_Config)}):void a("MooTools Framework not loaded yet!")}();;/* ]]> */</script><link rel="icon" href="https://www.analyticslane.com/wp-content/uploads/2018/10/cropped-analytics_lane-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.analyticslane.com/wp-content/uploads/2018/10/cropped-analytics_lane-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.analyticslane.com/wp-content/uploads/2018/10/cropped-analytics_lane-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.analyticslane.com/wp-content/uploads/2018/10/cropped-analytics_lane-270x270.jpg" />
+<style type="text/css" id="wp-custom-css">
+			.obfx-follow-inline li {
+	display: inline;
+}		</style>
+<script type="text/javascript" async=true>
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+    var gdprAppliesGlobally = false;
+    function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+        if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+        } else {
+            setTimeout(addFrame, 5);
+        }
+        }
+    }
+    addFrame();
+    function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+        json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+        json = event.data;
+        }
+        if (json.__cmpCall) {
+        var i = json.__cmpCall;
+        window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+            "returnValue": retValue,
+            "success": success,
+            "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+        });
+        }
+    }
+    window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+        return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+        b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+        return false;
+        else {
+        if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+        }
+        __cmp.a.push([].slice.apply(b));
+        }
+    }
+    window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+    window.__cmp.msgHandler = cmpMsgHandler;
+    if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+    }
+    else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+    }
+    })();
+    window.__cmp('init', {
+    		'Language': 'es',
+		'Initial Screen Body Text Option': 1,
+		'Publisher Name': 'Moneytizer',
+		'Default Value for Toggles': 'on',
+		'UI Layout': 'banner',
+		'No Option': false,
+    });
+</script>
+<style>
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            background-color: transparent !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-alt-action,
+        .qc-cmp-link {
+            color: #000000 !important;
+        }
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            color: #ffffff !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            color: #000000 !important;
+        }
+        .qc-cmp-small-toggle,
+        .qc-cmp-toggle {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-main-messaging,
+		.qc-cmp-messaging,
+		.qc-cmp-sub-title,
+		.qc-cmp-privacy-settings-title,
+		.qc-cmp-purpose-list,
+		.qc-cmp-tab,
+		.qc-cmp-title,
+		.qc-cmp-vendor-list,
+		.qc-cmp-vendor-list-title,
+		.qc-cmp-enabled-cell,
+		.qc-cmp-toggle-status,
+		.qc-cmp-table,
+		.qc-cmp-table-header {
+    		color: #000000 !important;
+		}
+       	
+        .qc-cmp-ui {
+  			background-color: #ffffff !important;
+		}
+
+		.qc-cmp-table,
+		.qc-cmp-table-row {
+			  border: 1px solid !important;
+			  border-color: #000000 !important;
+		} 
+    #qcCmpButtons a {
+            text-decoration: none !important;
+
+    }
+    
+    #qcCmpButtons button {
+        margin-top: 65px;
+    }
+    
+    
+  @media screen and (min-width: 851px) {
+    #qcCmpButtons a {
+            position: absolute;
+            bottom: 10%;
+            left: 60px;
+    }
+  }
+  .qc-cmp-qc-link-container{
+    display:none;
+  }
+</style>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7042870133877956",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"></head>
+<body class="post-template-default single single-post postid-142 single-format-standard nv-sidebar-right elementor-default">
+<div class="wrapper">
+<header class="header" role="banner">
+<a class="neve-skip-link show-on-focus" href="#content" tabindex="0">Saltar al contenido</a>
+<nav class="nv-navbar" role="navigation">
+<div class="container">
+<div class="row">
+<div class="col-md-12 nv-nav-wrap nav-left">
+<div class="nv-nav-header">
+<div class="site-logo">
+<a class="brand" href="https://www.analyticslane.com/" title="Analytics Lane">
+<p>Analytics Lane</p><small>Ciencia e ingeniería de datos aplicada</small> </a>
+</div> 
+<div class="navbar-toggle-wrapper">
+<button class="navbar-toggle" aria-label="Menú de navegación" aria-expanded="false">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="screen-reader-text">Cambiar modo de navegación</span>
+</button>
+<span class="menu-item-nav-search responsive-nav-search " tabindex="0" aria-label="search"><a><span class="nv-icon nv-search"></span></a><div class="nv-nav-search"><div class="container close-container"><a class="button button-secondary close-responsive-search">Cerrar</a></div><form role="search" method="get" class="search-form" action="https://www.analyticslane.com/">
+<label>
+<span class="screen-reader-text">Buscar:</span>
+<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+</label>
+<input type="submit" class="search-submit" value="Buscar" />
+</form></div></span> </div> 
+</div>
+<div role="navigation" aria-label="Menú principal"><ul id="nv-primary-navigation" class="menu"><li id="menu-item-378" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-378"><a href="https://www.analyticslane.com/category/ciencia-datos/">Ciencia de datos</a></li>
+<li id="menu-item-375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-375"><a href="https://www.analyticslane.com/category/criptografia/">Criptografía</a></li>
+<li id="menu-item-2177" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2177"><a href="https://www.analyticslane.com/category/divulgacion/">Divulgación</a></li>
+<li id="menu-item-455" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-455"><a href="https://www.analyticslane.com/category/python/">Python</a></li>
+<li id="menu-item-4140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4140"><a href="https://www.analyticslane.com/category/matlab/">Matlab</a></li>
+<li id="menu-item-456" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-456"><a href="https://www.analyticslane.com/category/r/">R</a></li>
+<li id="menu-item-4141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4141"><a href="https://www.analyticslane.com/category/herramientas/">Herramientas</a></li>
+<li id="menu-item-3784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3784"><a href="https://www.analyticslane.com/tienda/">Tienda</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://www.analyticslane.com/contacto/">Contacto</a></li>
+<li class="menu-item-nav-search" tabindex="0" aria-label="search"><a><span class="nv-icon nv-search"></span></a><div class="nv-nav-search"><form role="search" method="get" class="search-form" action="https://www.analyticslane.com/">
+<label>
+<span class="screen-reader-text">Buscar:</span>
+<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+</label>
+<input type="submit" class="search-submit" value="Buscar" />
+</form></div></li></ul></div> </div> 
+</div> 
+</div> 
+</nav>
+</header>
+<main id="content" class="neve-main" role="main">
+<div class="container single-post-container">
+<div class="row">
+<article id="post-142" class="nv-single-post-wrap col post-142 post type-post status-publish format-standard has-post-thumbnail hentry category-ciencia-datos tag-deep-learning tag-machine-learning">
+<div class='code-block code-block-7' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="9651543440" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div class="entry-header"><div class="nv-title-meta-wrap"><h1 class="title entry-title">Implementación de una red neuronal desde cero</h1><ul class="nv-meta-list"><li class="meta author vcard"><img class="photo" alt="Daniel Rodríguez" src="https://secure.gravatar.com/avatar/eb21c41e683e556213130fb900c9f96e?s=96&#038;d=mm&#038;r=g" />&nbsp;<span class="author-name fn"><a href="https://www.analyticslane.com/author/danielrodriguez/" title="Entradas de Daniel Rodríguez" rel="author">Daniel Rodríguez</a></span></li><li class="meta category"><a href="https://www.analyticslane.com/category/ciencia-datos/" rel="category tag">Ciencia de datos</a></li><li class="meta date posted-on"><time class="entry-date published" datetime="2018-05-23T08:00:53+02:00" content="2018-05-23">mayo 23, 2018</time><time class="updated" datetime="2018-10-26T17:43:02+02:00">octubre 26, 2018</time></li></ul></div></div><div class="nv-thumb-wrap"><img width="930" height="620" src="https://www.analyticslane.com/wp-content/uploads/2018/05/nerve-cell-2213009_1920-930x620.jpg" class="attachment-neve-blog size-neve-blog wp-post-image" alt="Neuronas" /></div><div class="nv-content-wrap entry-content"><div class='code-block code-block-2' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="9651543440" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p>En esta entrada se va a implementar una red neuronal desde cero, sin utilizar librerías como Theano (<a href="http://deeplearning.net/software/theano/">http://deeplearning.net/software/theano/</a>) o TensorFlow (<a href="https://www.tensorflow.org">https://www.tensorflow.org</a>).&nbsp;La finalidad de este ejercicio poder comprender mejor cómo funcionan las redes neuronales&nbsp;antes de implementar soluciones más complejas mediante alguna librerías.</p>
+<h2>Fundamentos de la red neuronal</h2>
+<p>Las redes neuronales son modelos computacionales mediante los que se pretender reproducir la forma en la que trabajan los cerebros biológicos. En su implementación se utilizan conjuntos de unidades básicas de procesamiento, a las que se les denomina neuronas, organizadas en capas y conectadas entre sí. Cada una de las neuronas agrega sus entradas y realiza una operación sobre ella mediante una función de activación. Los enlaces entre las neuronas trasmiten estos resultados ponderado por un peso que puede incrementar o inhibir la respuesta que llega a la neurona de la siguiente capa. Un esquema se puede ver en la siguiente figura.</p>
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://www.analyticslane.com/wp-content/uploads/2018/05/redneuronal.png" alt="Esquema de una red neuronal básica" class="wp-image-143" srcset="https://www.analyticslane.com/wp-content/uploads/2018/05/redneuronal.png 695w, https://www.analyticslane.com/wp-content/uploads/2018/05/redneuronal-300x164.png 300w" sizes="(max-width: 695px) 100vw, 695px" /></figure></div>
+<p>En este esquema se pueden ver que una red neuronal se compone de</p>
+<ul><li>Una capa de entrada</li><li>Una cantidad variables de capas ocultas, en el ejemplo de la figura solamente existe una</li><li>Una capa de salida</li><li>El conjunto de pesos entre las diferentes capas</li></ul>
+<p>Además, es necesario definir una función de activación para las neuronas. Esta función de activación no tiene porque ser necesariamente la misma en todas las capas, pudiéndose usar diferentes. Una de las más utilizadas es la <a href="https://es.wikipedia.org/wiki/Función_sigmoide" target="_blank" rel="noreferrer noopener">función sigmoide</a> que viene definida por la siguiente fórmula:</p>
+<span class="wp-katex-eq katex-display" data-display="true">f(x) = \frac{1}{1-e^{-x}}</span>
+<h2>Creación de una red neuronal</h2>
+<p>A partir de lo explicado hasta ahora se puede construir una red neuronal como la que se ha dibujado en la figura. Para ello es necesario obtener los valores de entrada y dos conjuntos de pesos. La respuesta de una red neuronal así definida se puede calcular empleado la siguiente función:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def predict(X, weights_1, weights_2):
+    layer = sigmoid(np.dot(X, weights_1))
+    output = sigmoid(np.dot(layer, weights_2))
+    
+    return output, layer</pre>
+<p>&nbsp;donde la función <code>sigmoid</code> es</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def sigmoid(x):
+    return 1.0/(1+ np.exp(-x))</pre>
+<h2>Aplicación de la red neuronal</h2>
+<p>A modo de ejemplo se puede entrenar un modelo sencillo, por ejemplo, la función lógica XOR que se define como:</p>
+<table class="wp-block-table"><tbody><tr><td>A</td><td>B</td><td>A XOR B</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>1</td><td>0</td></tr></tbody></table>
+<p>En Python, los parámetros de entrada y la respuesta se pueden escribir como</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+y = np.array([[0], [1], [1], [0]])</pre>
+<p>Inicialmente los pesos se pueden iniciar de forma aleatoria</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">weights_1 = np.random.rand(X.shape[1], 2) 
+weights_2 = np.random.rand(2, 1)</pre>
+<p>donde los presos de la primera capa son un matiz de 2&#215;2, por los dos valores de entrada y por las dos neuronas de la capa intermedia. La segunda capa tiene una matriz de 2&#215;1, por las dos neuronas de la capa intermedia y la única neurona que se ha utiliza en la capa de salida.</p>
+<p>En este punto la configuración de la red neuronal ya está definida. Los resultados que se obtendría con la función <code>predict</code> dependerán de los pesos. En la configuración aleatoria actual los valores obtenidos serán completamente erróneos. El proceso de ajuste de estos pesos es el proceso de entrenamiento de la red neuronal.</p>
+<h2>Entrenamiento mediante propagación&nbsp;hacia atrás</h2>
+<p>Generalmente, el entrenamiento de las redes neuronales se realiza con un proceso que se llama propagación de hacia atrás (<strong>backpropagation</strong>). Este es un proceso iterativo en el que inicialmente se obtienen las predicciones de la red con los valores actuales y, posteriormente se corrigen con los pesos propagando el error que se comete hacia atrás. Para esto se ha de definir una función de error, una de las más sencillas es el error cuadrático medio que se define mediante la expresión:</p>
+<span class="wp-katex-eq katex-display" data-display="true">SSE = \frac{1}{N} \sum_{i=1}^N (y_i - \hat(y_i))^2</span>
+<p>donde <span class="wp-katex-eq" data-display="false">y</span> son los valores y <span class="wp-katex-eq" data-display="false">\hat{y}</span> son las predicciones</p>
+<p>Ahora que ya se cuenta con una función de error se han de propagar los resultados por la red asignando el error correspondiente a cada uno de los pesos para actualizar estos y minimizar el error de la predicción. Para ello es necesario obtener la derivada la de función de error respecto a los pesos. Al observar la expresión de la función de esfuerzo no se observan los pesos directamente en la misma, por lo que es necesario aplicar la regla de la cadena de cara a obtener los resultados. Esto se puede hacer mediante:</p>
+<span class="wp-katex-eq katex-display" data-display="true">\frac{\partial SSE}{\partial W} = \frac{\partial SSE}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial Wx} \frac{\partial Wx}{\partial W}</span>
+<p>donde&nbsp;<span class="wp-katex-eq" data-display="false">W</span>son los pesos y&nbsp;<span class="wp-katex-eq" data-display="false">x</span> los valores de entrada. Esto hace que se tenga</p>
+<span class="wp-katex-eq katex-display" data-display="true">\frac{\partial SSE}{\partial W} = 2(y - \hat{y}) Wx(1 - Wx)</span>
+<p>Esto se puede implementar en las siguientes líneas:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def backprop(X, y, weights_1, weights_2, learning_rate = 0.1):
+    output, layer = response(X, weights_1, weights_2)
+        
+    d_weights_2 = np.dot(layer.T, (2*(y - output) * sigmoid_derivative(output)))
+    d_weights_1 = np.dot(X.T, (np.dot(2*(y - output) * sigmoid_derivative(output), weights_2.T) * sigmoid_derivative(layer)))
+
+    weights_1 += d_weights_1 * learning_rate
+    weights_2 += d_weights_2 * learning_rate
+
+    return ((y - output) **2).sum(), weights_1, weights_2</pre>
+<p>Ahora simplemente se ha de ejecutar este código iterativamente hasta que se obtiene el un resultado:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for i in range(10000):
+    e, weights_1, weights_2 = backprop(X, y, weights_1, weights_2)
+    error.append(e)</pre>
+<p>En este punto los resultados son
+</p>
+<pre class="wp-block-preformatted">[[0.07477346],
+&nbsp;[0.94025856],
+ [0.93999809],
+ [0.0499691 ]</pre>
+<p>Lo que son unos resultados muy próximos a los esperados. Por otro lado, se puede crear una figura en la que se muestra el error en función del número de iteraciones para comprobar la forma en la que aprende la red.</p>
+<div class="wp-block-image wp-image-145 size-full"><figure class="aligncenter"><img src="https://www.analyticslane.com/wp-content/uploads/2018/05/resultadosred.png" alt="Resultados del entrenamiento de la red neuronal" class="wp-image-145" srcset="https://www.analyticslane.com/wp-content/uploads/2018/05/resultadosred.png 375w, https://www.analyticslane.com/wp-content/uploads/2018/05/resultadosred-300x202.png 300w" sizes="(max-width: 375px) 100vw, 375px" /><figcaption> Resultados del entrenamiento de la red neuronal</figcaption></figure></div>
+<h2>Conclusiones</h2>
+<p>En esta entrada se ha implementado una red neuronal básica sin la necesidad de utilizar una librería como Theano o TensorFlow. Al realizar todos los pasos para necesarios para la implementación se comprende mejor el funcionamiento básico de estos algoritmos.</p>
+<div class="gdrts-rating-block gdrts-align-none gdrts-method-stars-rating gdrts-block-stars-rating-item-27 gdrts-rating-allowed gdrts-rating-open  gdrts-item-entity-posts gdrts-item-name-post gdrts-item-id-142 gdrts-item-itemid-27">
+<div class="gdrts-inner-wrapper">
+<div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-active gdrts-font-star gdrts-stars-length-5 gdrts-with-fonticon gdrts-fonticon-font" style="height: 30px;"><div class="gdrts-sr-only"><label class="gdrts-sr-label">Rate this item:<select class="gdrts-sr-rating"><option value="1.00">1.00</option><option value="2.00">2.00</option><option value="3.00">3.00</option><option value="4.00">4.00</option><option value="5.00">5.00</option></select></label><button class="gdrts-sr-button">Submit Rating</button></div><input type="hidden" value="0" name="" /><span aria-hidden="true" class="gdrts-stars-empty" style="color: #dddddd; font-size: 30px; line-height: 30px;"><span class="gdrts-stars-active" style="color: #dd0000; width: 0%"></span><span class="gdrts-stars-current" style="color: #ffff00; width: 0%"></span></span></div>
+<div class="gdrts-rating-text">
+Sin votos </div>
+<div class="gdrts-rating-please-wait"><i aria-hidden="true" class="rtsicon-spinner rtsicon-spin rtsicon-va rtsicon-fw"></i>Por favor espera...</div><script class="gdrts-rating-data" type="application/json">{"item":{"entity":"posts","name":"post","id":142,"item_id":27,"nonce":"1331b4d71f"},"render":{"args":{"echo":false,"entity":"posts","name":"post","item_id":null,"id":142,"method":"stars-rating","series":null,"disable_dynamic_load":false},"method":{"disable_rating":false,"allow_super_admin":true,"allow_user_roles":["administrator","editor","author","contributor","subscriber","anonymous","wpseo_manager","wpseo_editor","translator","manage_schema_options"],"allow_visitor":true,"allow_author":true,"template":"default","alignment":"none","responsive":true,"distribution":"normalized","rating":"average","style_type":"font","style_name":"star","style_size":30,"font_color_empty":"#dddddd","font_color_current":"#ffff00","font_color_active":"#dd0000","style_class":"","labels":["Muy malo","Malo","Bueno","Muy bueno","Excelente"]}},"stars":{"max":5,"resolution":100,"responsive":true,"current":0,"char":"s","name":"star","size":30,"type":"font"},"labels":["Muy malo","Malo","Bueno","Muy bueno","Excelente"]}</script>
+</div>
+</div><div class='code-block code-block-3' style='margin: 8px auto 8px 0; text-align: left; display: block; clear: both;'>
+<H3>Suscríbete a nuestro boletín</H3>
+Si te ha gustado el contenido puedes suscribirte al boletín semanal para recibir en su correo electrónico todas las novedades publicadas en Analytics Lane.
+
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<style type="text/css">
+	#mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+	#mergeRow-gdpr {margin-top: 20px;}
+	#mergeRow-gdpr fieldset label {font-weight: normal;}
+	#mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+</style>
+<div id="mc_embed_signup">
+<form action="https://analyticslane.us19.list-manage.com/subscribe/post?u=04a8dd805a5600129bebcdd1f&amp;id=6623b1d4ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Correo electrónico" size="35" required>
+
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_04a8dd805a5600129bebcdd1f_6623b1d4ab" tabindex="-1" value=""></div>
+<div class="clear"><input type="submit" value="Suscríbete" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</div>
+</form>
+</div>
+
+<small>La dirección de correo suministradas se utilizará únicamente para enviar un correo semanal con las últimas publicaciones aparecidas en el blog. Los datos nunca serán utilizados para otros fines diferentes. Para más información puede consular nuestra <a href="https://www.analyticslane.com/politica-de-privacidad/">Política de Privacidad</a>.</small>
+<H3>Contenido relacionado</H3>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-7042870133877956" data-ad-slot="8613590994"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="9651543440" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div><div class="nv-tags-list"><span>Etiquetas:</span><a href=https://www.analyticslane.com/tag/deep-learning/ title="Deep learning" class=deep-learning rel="tag">Deep learning</a><a href=https://www.analyticslane.com/tag/machine-learning/ title="Machine learning" class=machine-learning rel="tag">Machine learning</a> </div>
+<div id="comments" class="comments-area">
+<div id="respond" class="comment-respond">
+<h2 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/#respond" style="display:none;">Cancelar respuesta</a></small></h2> <form action="https://www.analyticslane.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+<p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentario</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nombre <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Correo electrónico <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Web</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="gdpr-terms-container">
+<label>
+<input type="checkbox" required name="gdpr_terms" id="gdpr_terms" value="1" />
+Acepto los <a href='https://www.analyticslane.com/terminos-condiciones/' target='_blank'>Términos y condiciones</a> y la <a href='https://www.analyticslane.com/politica-de-privacidad/' target='_blank'>Política de privacidad</a> *
+</label>
+</p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='142' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5824a57212" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="121" /></p> </form>
+</div>
+</div>
+</article>
+<div class="nv-sidebar-wrap col-sm-12 nv-right blog-sidebar">
+<aside id="secondary" role="complementary">
+<div id="search-6" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.analyticslane.com/">
+<label>
+<span class="screen-reader-text">Buscar:</span>
+<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+</label>
+<input type="submit" class="search-submit" value="Buscar" />
+</form></div><div id="custom_html-71" class="widget_text widget widget_custom_html"><p class="widget-title">Compra con nuestros enlaces de afiliados</p><div class="textwidget custom-html-widget"><center><a href="https://www.amazon.es/ref=as_li_ss_tl?ie=UTF8&linkCode=ll2&tag=analyticslane-21&linkId=d321d7a77aebf1f0f142a17fbb6978da&language=es_ES" target="_blank" rel="nofollow"><img width="220" src="https://www.analyticslane.com/wp-content/uploads/2019/02/amazon.es-300x90.jpg" alt="amazon.es"></a></center></div></div><div id="custom_html-32" class="widget_text widget widget_custom_html"><p class="widget-title">Seguir a Analytics Lane</p><div class="textwidget custom-html-widget"><ul class="entry-social obfx-follow-inline">
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en Twitter" class="btn btn-just-icon" style="color:#ffffff;background-color:#1da1f2" target="_blank" href="https://twitter.com/analyticslane"><i class="socicon-twitter"></i></a>
+</li>
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en Pinterest" class="btn btn-just-icon" style="color:#ffffff;background-color:#bd081c" target="_blank" href="https://www.pinterest.es/analyticslane/"><i class="socicon-pinterest"></i></a>
+</li>
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en YouTube" class="btn btn-just-icon" style="color:#ffffff;background-color:#ff0000" target="_blank" href="https://www.youtube.com/channel/UCmk5Ut4vaFGO_bNwgxcIXTg"><i class="socicon-youtube"></i></a>
+</li>
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en Telegram" class="btn btn-just-icon" style="color:#ffffff;background-color:#0088cc" target="_blank" href="https://t.me/analyticslane"><i class="socicon-telegram"></i></a>
+</li>
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en GitHub" class="btn btn-just-icon" style="color:#ffffff;background-color:#221e1b" target="_blank" href="https://github.com/analyticslane"><i class="socicon-github"></i></a>
+</li>
+<li class="">
+<a rel="tooltip noopener noreferrer" data-original-title="Seguir en RSS" class="btn btn-just-icon" style="color:#ffffff;background-color:#f26522" target="_blank" href="https://feeds.feedburner.com/AnalyticsLane"><i class="socicon-rss"></i></a>
+</li>
+</ul></div></div><div id="custom_html-30" class="widget_text widget widget_custom_html"><p class="widget-title">Seguir en Feedly</p><div class="textwidget custom-html-widget"><a href='https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2FAnalyticsLane' target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div></div><div id="custom_html-67" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7042870133877956" data-ad-slot="2729021808"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div id="gdrts_stars_rating_list-3" class="widget cls_gdrts_stars_rating_list"><p class="widget-title">Lo mejor valorado</p><div class="gdrts-widget-wrapper gdrts-stars-rating-list">
+<div class="gdrts-rating-list gdrts-method-stars-rating">
+<div class="gdrts-inner-wrapper">
+<ol>
+<li class="gdrts-rating-item">
+<a href="https://www.analyticslane.com/2018/06/20/eliminar-registros-duplicados-en-pandas/">Eliminar registros duplicados en pandas</a>
+<div class="gdrts-widget-rating">Puntuación: <strong>5.0</strong>/5. 3 votos.</div>
+<div class="gdrts-widget-rating-stars"><div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-inactive gdrts-image-star gdrts-stars-length-5 gdrts-with-image" style="width: 100px; height: 20px;"><span aria-hidden="true" class="gdrts-stars-empty" style="background-size: 20px;"><span class="gdrts-stars-current" style="width: 100%; background-size: 20px;"></span></span></div></div>
+</li>
+<li class="gdrts-rating-item">
+<a href="https://www.analyticslane.com/2018/09/10/unir-y-combinar-dataframes-con-pandas-en-python/">Unir y combinar dataframes con pandas en Python</a>
+<div class="gdrts-widget-rating">Puntuación: <strong>5.0</strong>/5. 2 votos.</div>
+<div class="gdrts-widget-rating-stars"><div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-inactive gdrts-image-star gdrts-stars-length-5 gdrts-with-image" style="width: 100px; height: 20px;"><span aria-hidden="true" class="gdrts-stars-empty" style="background-size: 20px;"><span class="gdrts-stars-current" style="width: 100%; background-size: 20px;"></span></span></div></div>
+</li>
+<li class="gdrts-rating-item">
+<a href="https://www.analyticslane.com/2018/07/30/guardar-y-leer-archivos-excel-en-python/">Guardar y leer archivos Excel en Python</a>
+<div class="gdrts-widget-rating">Puntuación: <strong>5.0</strong>/5. 2 votos.</div>
+<div class="gdrts-widget-rating-stars"><div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-inactive gdrts-image-star gdrts-stars-length-5 gdrts-with-image" style="width: 100px; height: 20px;"><span aria-hidden="true" class="gdrts-stars-empty" style="background-size: 20px;"><span class="gdrts-stars-current" style="width: 100%; background-size: 20px;"></span></span></div></div>
+</li>
+<li class="gdrts-rating-item">
+<a href="https://www.analyticslane.com/2019/02/04/automatizacion-del-procesado-de-datos-en-scikit-learn-con-pipeline/">Automatización del procesado de datos en Scikit-learn con Pipeline</a>
+<div class="gdrts-widget-rating">Puntuación: <strong>5.0</strong>/5. 1 voto.</div>
+<div class="gdrts-widget-rating-stars"><div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-inactive gdrts-image-star gdrts-stars-length-5 gdrts-with-image" style="width: 100px; height: 20px;"><span aria-hidden="true" class="gdrts-stars-empty" style="background-size: 20px;"><span class="gdrts-stars-current" style="width: 100%; background-size: 20px;"></span></span></div></div>
+</li>
+<li class="gdrts-rating-item">
+<a href="https://www.analyticslane.com/2019/01/21/como-gestionar-de-forma-segura-nuestras-contrasenas/">¿Cómo gestionar de forma segura nuestras contraseñas?</a>
+<div class="gdrts-widget-rating">Puntuación: <strong>5.0</strong>/5. 1 voto.</div>
+<div class="gdrts-widget-rating-stars"><div class="gdrts-rating-element gdrts-stars-rating gdrts-block-stars gdrts-state-inactive gdrts-image-star gdrts-stars-length-5 gdrts-with-image" style="width: 100px; height: 20px;"><span aria-hidden="true" class="gdrts-stars-empty" style="background-size: 20px;"><span class="gdrts-stars-current" style="width: 100%; background-size: 20px;"></span></span></div></div>
+</li>
+</ol>
+<script class="gdrts-rating-data" type="application/json">{"stars":{"max":5,"char":"","name":"star","size":20,"type":"image","responsive":true},"labels":["Muy malo","Malo","Bueno","Muy bueno","Excelente"]}</script>
+</div>
+</div>
+</div></div><div id="custom_html-34" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7042870133877956" data-ad-slot="2729021808"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<div id="wpp-4" class="widget popular-posts">
+<p class="widget-title">Lo más leído en la semana</p>
+
+<ul class="wpp-list">
+<li>
+<a href="https://www.analyticslane.com/2018/09/10/unir-y-combinar-dataframes-con-pandas-en-python/" title="Unir y combinar dataframes con pandas en Python" class="wpp-post-title" target="_self">Unir y combinar dataframes con pandas en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">275 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/07/16/archivos-json-con-python/" title="Archivos JSON con Python: lectura y escritura" class="wpp-post-title" target="_self">Archivos JSON con Python: lectura y escritura</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">224 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/06/15/guardar-y-leer-archivos-csv-con-python/" title="Guardar y leer archivos CSV con Python" class="wpp-post-title" target="_self">Guardar y leer archivos CSV con Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">173 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/06/29/eliminar-filas-o-columnas-con-valores-nulos-en-python/" title="Eliminar filas o columnas con valores nulos en Python" class="wpp-post-title" target="_self">Eliminar filas o columnas con valores nulos en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">155 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/07/30/guardar-y-leer-archivos-excel-en-python/" title="Guardar y leer archivos Excel en Python" class="wpp-post-title" target="_self">Guardar y leer archivos Excel en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">118 vistas</span></span>
+</li>
+</ul>
+</div>
+<div id="custom_html-79" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7042870133877956" data-ad-slot="2729021808"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<div id="wpp-6" class="widget popular-posts">
+<p class="widget-title">Lo más leído en la hoy</p>
+
+<ul class="wpp-list">
+<li>
+<a href="https://www.analyticslane.com/2018/09/10/unir-y-combinar-dataframes-con-pandas-en-python/" title="Unir y combinar dataframes con pandas en Python" class="wpp-post-title" target="_self">Unir y combinar dataframes con pandas en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">58 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/06/15/guardar-y-leer-archivos-csv-con-python/" title="Guardar y leer archivos CSV con Python" class="wpp-post-title" target="_self">Guardar y leer archivos CSV con Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">50 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/07/16/archivos-json-con-python/" title="Archivos JSON con Python: lectura y escritura" class="wpp-post-title" target="_self">Archivos JSON con Python: lectura y escritura</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">46 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/07/30/guardar-y-leer-archivos-excel-en-python/" title="Guardar y leer archivos Excel en Python" class="wpp-post-title" target="_self">Guardar y leer archivos Excel en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">31 vistas</span></span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2018/06/29/eliminar-filas-o-columnas-con-valores-nulos-en-python/" title="Eliminar filas o columnas con valores nulos en Python" class="wpp-post-title" target="_self">Eliminar filas o columnas con valores nulos en Python</a>
+<span class="wpp-meta post-stats"><span class="wpp-views">23 vistas</span></span>
+</li>
+</ul>
+</div>
+<div id="custom_html-35" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7042870133877956" data-ad-slot="2729021808"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div> <div id="recent-posts-2" class="widget widget_recent_entries"> <p class="widget-title">Entradas recientes</p> <ul>
+<li>
+<a href="https://www.analyticslane.com/2019/04/03/5-caracteristicas-avanzadas-de-virtualbox/">5 características avanzadas de VirtualBox</a>
+<span class="post-date">abril 3, 2019</span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2019/04/01/mejora-del-rendimiento-de-pandas-con-modin/">Mejora del rendimiento de pandas con Modin</a>
+<span class="post-date">abril 1, 2019</span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2019/03/29/ejecutar-multiples-scripts-npm-creacion-de-una-libreria-javascript-8a-parte/">Ejecutar múltiples scripts npm (Creación de una librería JavaScript 8ª parte)</a>
+<span class="post-date">marzo 29, 2019</span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2019/03/27/instantaneas-de-virtualbox-snapshots/">Instantáneas de VirtualBox (Snapshots)</a>
+<span class="post-date">marzo 27, 2019</span>
+</li>
+<li>
+<a href="https://www.analyticslane.com/2019/03/25/como-eliminar-columnas-y-filas-en-un-dataframe-pandas/">¿Cómo eliminar columnas y filas en un dataframe pandas?</a>
+<span class="post-date">marzo 25, 2019</span>
+</li>
+</ul>
+</div><div id="custom_html-47" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="1563211611" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div id="recent-comments-2" class="widget widget_recent_comments"><p class="widget-title">Comentarios recientes</p><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Daniel Rodríguez</span> en <a href="https://www.analyticslane.com/2019/01/11/utilizar-r-desde-python-con-rpy2/#comment-42">Utilizar R desde Python con rpy2</a></li><li class="recentcomments"><span class="comment-author-link">Dnaiz</span> en <a href="https://www.analyticslane.com/2019/01/11/utilizar-r-desde-python-con-rpy2/#comment-39">Utilizar R desde Python con rpy2</a></li><li class="recentcomments"><span class="comment-author-link">Brian</span> en <a href="https://www.analyticslane.com/2018/06/20/eliminar-registros-duplicados-en-pandas/#comment-34">Eliminar registros duplicados en pandas</a></li><li class="recentcomments"><span class="comment-author-link">Daniel Rodríguez</span> en <a href="https://www.analyticslane.com/2018/09/14/uso-jdbc-en-r-para-conexion-a-base-de-datos/#comment-31">Uso de JDBC en R para conexión a base de datos</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.centraldecomunicacion.es/' rel='external nofollow' class='url'>Pablo Cirre</a></span> en <a href="https://www.analyticslane.com/2018/09/14/uso-jdbc-en-r-para-conexion-a-base-de-datos/#comment-30">Uso de JDBC en R para conexión a base de datos</a></li></ul></div><div id="custom_html-70" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="1563211611" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div id="custom_html-73" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><center>
+<div id="20628-2"><script src="//ads.themoneytizer.com/s/gen.js?type=2"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=20628&formatId=2"></script></div>
+<div id="20628-19"><script src="//ads.themoneytizer.com/s/gen.js?type=19"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=20628&formatId=19"></script></div>
+</center></div></div> </aside>
+</div>
+</div>
+</div>
+</main>
+<footer role="contentinfo">
+<div class="footer-content-wrap">
+<div class="container">
+<div class="row nv-footer-widgets">
+<div class="col-md-3">
+<div id="nav_menu-9" class="widget widget_nav_menu"><p class="widget-title">Secciones</p><div class="menu-secciones-container"><ul id="menu-secciones" class="menu"><li id="menu-item-762" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-762"><a href="https://www.analyticslane.com/category/ciencia-datos/">Ciencia de datos</a></li>
+<li id="menu-item-763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-763"><a href="https://www.analyticslane.com/category/criptografia/">Criptografía</a></li>
+<li id="menu-item-2188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2188"><a href="https://www.analyticslane.com/category/divulgacion/">Divulgación</a></li>
+<li id="menu-item-945" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-945"><a href="https://www.analyticslane.com/category/herramientas/">Herramientas</a></li>
+<li id="menu-item-944" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-944"><a href="https://www.analyticslane.com/category/noticias/">Noticias</a></li>
+</ul></div></div><div id="nav_menu-10" class="widget widget_nav_menu"><p class="widget-title">Programación</p><div class="menu-programacion-container"><ul id="menu-programacion" class="menu"><li id="menu-item-1374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1374"><a href="https://www.analyticslane.com/category/javascript/">JavaScript</a></li>
+<li id="menu-item-767" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-767"><a href="https://www.analyticslane.com/category/julia/">Julia</a></li>
+<li id="menu-item-1373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1373"><a href="https://www.analyticslane.com/category/matlab/">Matlab</a></li>
+<li id="menu-item-765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-765"><a href="https://www.analyticslane.com/category/python/">Python</a></li>
+<li id="menu-item-766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-766"><a href="https://www.analyticslane.com/category/r/">R</a></li>
+</ul></div></div> </div>
+<div class="col-md-3">
+<div id="nav_menu-12" class="widget widget_nav_menu"><p class="widget-title">Analytics Lane</p><div class="menu-analytics-lane-container"><ul id="menu-analytics-lane" class="menu"><li id="menu-item-3173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3173"><a href="https://www.analyticslane.com/acerca-de-analytics-lane/">Acerca de Analytics Lane</a></li>
+<li id="menu-item-3175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3175"><a href="https://www.analyticslane.com/alta-en-el-boletin-de-noticias/">Boletín de noticias</a></li>
+<li id="menu-item-3178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3178"><a href="https://www.analyticslane.com/contacto/">Contacto</a></li>
+<li id="menu-item-4025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4025"><a href="https://www.analyticslane.com/publicaciones-mas-leidas/">Publicaciones más leídas</a></li>
+<li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="https://www.analyticslane.com/tienda/">Tienda</a></li>
+</ul></div></div><div id="nav_menu-11" class="widget widget_nav_menu"><p class="widget-title">Afiliados</p><div class="menu-afiliados-container"><ul id="menu-afiliados" class="menu"><li id="menu-item-3171" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3171"><a target="_blank" rel="nofollow" href="http://s.click.aliexpress.com/e/gpqsKt6">AliExpress</a></li>
+<li id="menu-item-3170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3170"><a target="_blank" rel="nofollow" href="https://www.amazon.com/ref=as_li_ss_tl?ie=UTF8&#038;linkCode=ll2&#038;tag=analyticslane-20&#038;linkId=c47a24cbf6415d29c42a6143194852db">Amazon.com</a></li>
+<li id="menu-item-3169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3169"><a target="_blank" rel="nofollow" href="https://www.amazon.es/ref=as_li_ss_tl?ie=UTF8&#038;linkCode=ll2&#038;tag=analyticslane-21&#038;linkId=d321d7a77aebf1f0f142a17fbb6978da&#038;language=es_ES">Amazon España</a></li>
+<li id="menu-item-3706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3706"><a target="_blank" rel="nofollow" href="https://www.banggood.com?p=YR301528323264201812&#038;custlinkid=138725">BangGood</a></li>
+<li id="menu-item-3611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3611"><a target="_blank" rel="nofollow" href="https://www.gearbest.com?lkid=19465906">GearBest</a></li>
+<li id="menu-item-3172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3172"><a target="_blank" rel="nofollow" href="http://cps.joybuy.com/union/click?p=eyJzaXRlIjoiZW4iLCJ1aWQiOiJBZmY4OTMiLCJsaW5rIjoiaHR0cHM6Ly93d3cuam95YnV5LmNvbS9jYXRlZ29yeS84NzUwNjE1MzgtcGhvbmVzLWFjY2Vzc29yaWVzLmh0bWwiLCJ0eXBlIjoiNiJ9">JoyBuy</a></li>
+</ul></div></div> </div>
+<div class="col-md-3">
+<div id="text-3" class="widget widget_text"><p class="widget-title">Sobre de Analytics Lane</p> <div class="textwidget"><p><span style="font-weight: 400;">En <strong>Analytics Lane</strong> tratamos de explicar los principales conceptos de la ciencia e ingeniería de datos con un enfoque práctico. Los principales temas tratados son ciencia de datos, ingeniería de datos, inteligencia artificial, machine learning, deep learning y criptografía. Además, también se habla de los principales lenguajes de programación y herramientas utilizadas por los científicos e ingenieros de datos.</span></p>
+</div>
+</div> </div>
+<div class="col-md-3">
+<div id="custom_html-65" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7042870133877956" data-ad-slot="1563211611" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div> </div>
+</div>
+</div>
+</div>
+<div class="footer-content-wrap footer-second-section">
+<div class="container">
+<div class="row nv-footer-content">
+<div class="col-12">
+<ul id="menu-pie-de-pagina" class="footer-menu"><li id="menu-item-3180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3180"><a href="https://www.analyticslane.com/acerca-de-analytics-lane/">Acerca de Analytics Lane</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="https://www.analyticslane.com/terminos-condiciones/">Términos y condiciones</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://www.analyticslane.com/politica-de-cookies/">Política de Cookies</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://www.analyticslane.com/politica-de-privacidad/">Política de Privacidad</a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://www.analyticslane.com/herramientas-de-privacidad/">Herramientas de privacidad</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://www.analyticslane.com/contacto/">Contacto</a></li>
+</ul> </div> 
+</div> 
+</div> 
+</div>
+</footer>
+</div>
+<script>
+  var ai_insert_1 = function(){
+    ai_insert ('after', '.comments-area', b64d ('PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTEnIHN0eWxlPSdtYXJnaW46IDhweCAwOyBjbGVhcjogYm90aDsnPgo8ZGl2IGlkPSIyMDYyOC0xIj48c2NyaXB0IHNyYz0iLy9hZHMudGhlbW9uZXl0aXplci5jb20vcy9nZW4uanM/dHlwZT0xIj48L3NjcmlwdD48c2NyaXB0IHNyYz0iLy9hZHMudGhlbW9uZXl0aXplci5jb20vcy9yZXF1ZXN0Zm9ybS5qcz9zaXRlSWQ9MjA2MjgmZm9ybWF0SWQ9MSIgPjwvc2NyaXB0PjwvZGl2PgoKPGRpdiBjbGFzcz0ib3V0YnJhaW4tdG0iIGlkPSIyMDYyOC0xNiI+PHNjcmlwdCBzcmM9Ii8vYWRzLnRoZW1vbmV5dGl6ZXIuY29tL3MvZ2VuLmpzP3R5cGU9MTYiPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvL2Fkcy50aGVtb25leXRpemVyLmNvbS9zL3JlcXVlc3Rmb3JtLmpzP3NpdGVJZD0yMDYyOCZmb3JtYXRJZD0xNiIgPjwvc2NyaXB0PjwvZGl2PgoKPGRpdiBpZD0iMjA2MjgtMjgiPjxzY3JpcHQgc3JjPSIvL2Fkcy50aGVtb25leXRpemVyLmNvbS9zL2dlbi5qcz90eXBlPTI4Ij48L3NjcmlwdD48c2NyaXB0IHNyYz0iLy9hZHMudGhlbW9uZXl0aXplci5jb20vcy9yZXF1ZXN0Zm9ybS5qcz9zaXRlSWQ9MjA2MjgmZm9ybWF0SWQ9MjgiID48L3NjcmlwdD48L2Rpdj48L2Rpdj4K'));
+  };
+  if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) ai_insert_1 (); else document.addEventListener ('DOMContentLoaded', ai_insert_1);
+</script>
+<div class='code-block code-block-6' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<div style="text-align:center;" id="20628-31"><script src="//ads.themoneytizer.com/s/gen.js?type=31"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=20628&formatId=31"></script></div></div>
+<script>
+  ai_insert ('before', '.gdrts-rating-block', b64d ('PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTE2JyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPEgzPk5vIHRlIG9sdmlkZXMgdmFsb3JhciBlc3RhIGVudHJhZGE8L0gzPjwvZGl2Pgo='));
+</script>
+<div id="amzn-assoc-ad-ca0e9a61-143d-4f3c-be3f-0d77c74ae1af"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=ca0e9a61-143d-4f3c-be3f-0d77c74ae1af"></script><script>
+setTimeout (function() {Array.prototype.forEach.call (document.querySelectorAll (".ai-viewports"), function (element, index) {ai_insert_viewport (element);});}, 10);
+
+</script>
+<ul class="obfx-sharing
+	obfx-sharing-left obfx-sharing-bottom	">
+<li class="">
+<a class="facebook" href="https://www.facebook.com/sharer.php?u=https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/">
+<i class="socicon-facebook"></i>
+</a>
+</li>
+<li class="">
+<a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/&#038;text=Implementación%20de%20una%20red%20neuronal%20desde%20cero&#038;hashtags=Ciencia%20de%20datos">
+<i class="socicon-twitter"></i>
+</a>
+</li>
+<li class="">
+<a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media=https://www.analyticslane.com/wp-content/uploads/2018/05/nerve-cell-2213009_1920.jpg&#038;url=https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/&#038;description=Implementación%20de%20una%20red%20neuronal%20desde%20cero">
+<i class="socicon-pinterest"></i>
+</a>
+</li>
+<li class="">
+<a class="linkedin" href="https://www.linkedin.com/shareArticle?url=https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/&#038;title=Implementación%20de%20una%20red%20neuronal%20desde%20cero">
+<i class="socicon-linkedin"></i>
+</a>
+</li>
+<li class="obfx-hide-desktop-socials ">
+<a class="whatsapp" href="whatsapp://send?text=https://www.analyticslane.com/2018/05/23/implementacion-de-una-red-neuronal-desde-cero/">
+<i class="socicon-whatsapp"></i>
+</a>
+</li>
+<li class="">
+<a class="mail" href="/cdn-cgi/l/email-protection#a699808596959e9dd5d3c4ccc3c5d29befcbd6cac3cbc3c8d2c7c5cf6515c8839496c2c3839496d3c8c7839496d4c3c2839496c8c3d3d4c9c8c7ca839496c2c3d5c2c3839496c5c3d4c9808596959e9dc4c9c2df9bced2d2d6d59c8989d1d1d188c7c8c7cadfd2cfc5d5cac7c8c388c5c9cb899496979e89969389949589cfcbd6cac3cbc3c8d2c7c5cfc9c88bc2c38bd3c8c78bd4c3c28bc8c3d3d4c9c8c7ca8bc2c3d5c2c38bc5c3d4c989">
+<i class="socicon-mail"></i>
+</a>
+</li>
+</ul>
+<div id="wpfront-scroll-top-container">
+<img src="https://www.analyticslane.com/wp-content/plugins/wpfront-scroll-top/images/icons/35.png" alt="" /> </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">function wpfront_scroll_top_init() {if(typeof wpfront_scroll_top == "function" && typeof jQuery !== "undefined") {wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8000000000000000444089209850062616169452667236328125,"button_fade_duration":200,"scroll_duration":400,"location":1,"marginX":20,"marginY":20,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2,"button_action":"top","button_action_element_selector":"","button_action_container_selector":"html, body","button_action_element_offset":0});} else {setTimeout(wpfront_scroll_top_init, 100);}}wpfront_scroll_top_init();</script><link rel="stylesheet" href="https://www.analyticslane.com/wp-content/cache/minify/c1a0f.css" media="all" />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.analyticslane.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/6bf33.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gdrts_rating_data = {"url":"https:\/\/www.analyticslane.com\/wp-admin\/admin-ajax.php","nonce":"8580832d65","user":"0","handler":"gdrts_live_handler","ajax_error":"console","wp_version":"51"};
+/* ]]> */
+</script>
+<script src="https://www.analyticslane.com/wp-content/cache/minify/b7372.js"></script>
+<script>!function(){"use strict";for(var e=document.querySelectorAll(".wp-katex-eq"),t=0;t<e.length;t++){var r=e[t],a=document.createElement("span");try{katex.render(r.textContent,a,{displayMode:"true"===r.getAttribute("data-display"),throwOnError:!1})}catch(n){a.style.color="red",a.textContent=n.message}r.parentNode.replaceChild(a,r)}}();</script>
+</body>
+</html>

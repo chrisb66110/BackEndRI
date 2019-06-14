@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+<head>
+<title>MongoDB, ¿son las bases de datos no relacionales el futuro? - Tek&#039;n&#039;life</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Las bases de datos no relacionales están siendo claves en el desarrollo de multitud de aplicaciones, entre ellas las de Big Data. Te explicamos las diferencias entre las bases relacionales y MongoDB, la base NoSQL más utilizada. - Tek'n'Life" />
+<meta property="fb:app_id" content="266871946771516" />
+<link rel="shortcut icon" href="http://www.teknlife.com/wp-content/themes/teknlife/images/favicon.ico" />
+<link rel="pingback" href="http://www.teknlife.com/xmlrpc.php" />
+
+<!--  Mobile viewport scale -->
+<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport"/>
+
+<!-- This site is optimized with the Yoast SEO plugin v4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="MongoDB, ¿son las bases de datos no relacionales el futuro? - Tek&#039;n&#039;life" />
+<meta property="og:description" content="Las bases de datos no relacionales están siendo claves en el desarrollo de multitud de aplicaciones, entre ellas las de Big Data. Te explicamos las diferencias entre las bases relacionales y MongoDB, la base NoSQL más utilizada." />
+<meta property="og:url" content="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/" />
+<meta property="og:site_name" content="Tek&#039;n&#039;life" />
+<meta property="article:tag" content="Intelygenz" />
+<meta property="article:tag" content="MongoDB" />
+<meta property="article:section" content="Profesional" />
+<meta property="og:image" content="http://www.teknlife.com/wp-content/uploads/2014/05/databases.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="670" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Tek&#039;n&#039;life &raquo; MongoDB, ¿son las bases de datos no relacionales el futuro? RSS de los comentarios" href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.teknlife.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='autolastyoutubevideo-style-css'  href='http://www.teknlife.com/wp-content/plugins/auto-last-youtube-video/style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.teknlife.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6' type='text/css' media='all' />
+<link rel='stylesheet' id='cookielawinfo-style-css'  href='http://www.teknlife.com/wp-content/plugins/cookie-law-info/css/cli-style.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='digg-digg-css'  href='http://www.teknlife.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='dcsnt-css'  href='http://www.teknlife.com/wp-content/plugins/social-network-tabs/css/dcsnt.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='http://www.teknlife.com/wp-content/plugins/easy-table/themes/minimal/style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-stylesheet-css'  href='http://www.teknlife.com/wp-content/themes/teknlife/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.lightbox.min.css-css'  href='http://www.teknlife.com/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.6' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link href="http://www.teknlife.com/wp-content/themes/canvas/css/non-responsive.css" rel="stylesheet" type="text/css" />
+<style type="text/css">.col-full, #wrapper { width: 1200px; max-width: 1200px; } #inner-wrapper { padding: 0; } body.full-width #header, #nav-container, body.full-width #content, body.full-width #footer-widgets, body.full-width #footer { padding-left: 0; padding-right: 0; } body.fixed-mobile #top, body.fixed-mobile #header-container, body.fixed-mobile #footer-container, body.fixed-mobile #nav-container, body.fixed-mobile #footer-widgets-container { min-width: 1200px; padding: 0 1em; } body.full-width #content { width: auto; padding: 0 1em;}</style>
+<![endif]-->
+<script type='text/javascript' src='http://www.teknlife.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/cookie-law-info/js/cookielawinfo.js?ver=1.5.3'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/social-network-tabs/js/jquery.social.media.tabs.1.7.1.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/easy-table/js/easy-table-script.js?ver=1.6'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/canvas/includes/js/third-party.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/canvas/includes/js/modernizr.min.js?ver=2.6.2'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/canvas/includes/js/general.min.js?ver=4.7.2'></script>
+
+<!-- Adjust the website width -->
+<style type="text/css">
+	.col-full, #wrapper { max-width: 1200px !important; }
+</style>
+
+<link rel='https://api.w.org/' href='http://www.teknlife.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.teknlife.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.teknlife.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='http://www.teknlife.com/?p=9251' />
+<link rel="alternate" type="application/json+oembed" href="http://www.teknlife.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.teknlife.com%2Freportaje%2Fmongodb-son-las-bases-de-datos-relacionales-el-futuro%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.teknlife.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.teknlife.com%2Freportaje%2Fmongodb-son-las-bases-de-datos-relacionales-el-futuro%2F&#038;format=xml" />
+<link rel="canonical" href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/"/><!-- Custom Styling Social Network Tabs -->
+<style type="text/css">
+.tab-twitter,.tab-twitter .dcsmt-btn, li.active.dcsmt-twitter, li.dcsmt-twitter:hover{background-color:#4ec2dc;}.tab-facebook,.tab-facebook .dcsmt-btn, li.active.dcsmt-facebook, li.dcsmt-facebook:hover{background-color:#3b5998;}.tab-fblike,.tab-fblike .dcsmt-btn, li.active.dcsmt-fblike, li.dcsmt-fblike:hover{background-color:#3b5998;}.tab-fbrec,.tab-fbrec .dcsmt-btn, li.active.dcsmt-fbrec, li.dcsmt-fbrec:hover{background-color:#3b5998;}.tab-google,.tab-google .dcsmt-btn, li.active.dcsmt-google, li.dcsmt-google:hover{background-color:#2d2d2d;}.tab-rss,.tab-rss .dcsmt-btn, li.active.dcsmt-rss, li.dcsmt-rss:hover{background-color:#FF9800;}.tab-flickr,.tab-flickr .dcsmt-btn, li.active.dcsmt-flickr, li.dcsmt-flickr:hover{background-color:#f90784;}.tab-delicious,.tab-delicious .dcsmt-btn, li.active.dcsmt-delicious, li.dcsmt-delicious:hover{background-color:#3271CB;}.tab-youtube,.tab-youtube .dcsmt-btn, li.active.dcsmt-youtube, li.dcsmt-youtube:hover{background-color:#DF1F1C;}.tab-digg,.tab-digg .dcsmt-btn, li.active.dcsmt-digg, li.dcsmt-digg:hover{background-color:#195695;}.tab-pinterest,.tab-pinterest .dcsmt-btn, li.active.dcsmt-pinterest, li.dcsmt-pinterest:hover{background-color:#CB2528;}.tab-lastfm,.tab-lastfm .dcsmt-btn, li.active.dcsmt-lastfm, li.dcsmt-lastfm:hover{background-color:#C90E12;}.tab-dribbble,.tab-dribbble .dcsmt-btn, li.active.dcsmt-dribbble, li.dcsmt-dribbble:hover{background-color:#F175A8;}.tab-vimeo,.tab-vimeo .dcsmt-btn, li.active.dcsmt-vimeo, li.dcsmt-vimeo:hover{background-color:#4EBAFF;}.tab-stumbleupon,.tab-stumbleupon .dcsmt-btn, li.active.dcsmt-stumbleupon, li.dcsmt-stumbleupon:hover{background-color:#EB4924;}.tab-deviantart,.tab-deviantart .dcsmt-btn, li.active.dcsmt-deviantart, li.dcsmt-deviantart:hover{background-color:#B8C529;}.tab-tumblr,.tab-tumblr .dcsmt-btn, li.active.dcsmt-tumblr, li.dcsmt-tumblr:hover{background-color:#365472;}.tab-linkedin,.tab-linkedin .dcsmt-btn, li.active.dcsmt-linkedin, li.dcsmt-linkedin:hover{background-color:#006DA7;}.tab-instagram,.tab-instagram .dcsmt-btn, li.active.dcsmt-instagram, li.dcsmt-instagram:hover{background-color:#413A33;}.social-tabs li {background:#777;}</style>
+
+<!-- Custom CSS Styling -->
+<style type="text/css">
+#logo .site-title, #logo .site-description { display:none; }
+body {background-repeat:no-repeat;background-position:top left;background-attachment:scroll;border-top:0px solid #000000;}
+#header {background-repeat:no-repeat;background-position:left top;margin-top:0px;margin-bottom:0px;padding-top:40px;padding-bottom:40px;border:0px solid ;}
+#logo .site-title a {font:bold 40px/1em "Helvetica Neue", Helvetica, sans-serif;color:#222222;}
+#logo .site-description {font:300 13px/1em "Helvetica Neue", Helvetica, sans-serif;color:#999999;}
+body, p { font:300 14px/1.5em Arial, sans-serif;color:#000000; }
+h1 { font:bold 28px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }h2 { font:bold 24px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }h3 { font:bold 20px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }h4 { font:bold 16px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }h5 { font:bold 14px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }h6 { font:bold 12px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }
+.page-title, .post .title, .page .title {font:normal 24px/1.1em Arial, sans-serif;color:#000000;}
+.post .title a:link, .post .title a:visited, .page .title a:link, .page .title a:visited {color:#000000}
+.post-meta { font:300 12px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#999999; }
+.entry, .entry p{ font:300 15px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#555555; }
+.post-more {font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:;border-top:0px solid #e6e6e6;border-bottom:0px solid #e6e6e6;}
+#post-author, #connect {border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;border-left:1px solid #e6e6e6;border-right:1px solid #e6e6e6;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fafafa}
+.nav-entries a, .woo-pagination { font:300 13px/1em "Helvetica Neue", Helvetica, sans-serif;color:#888; }
+.woo-pagination a, .woo-pagination a:hover {color:#888!important}
+.widget h3 {font:bold 14px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#555555;border-bottom:1px solid #e6e6e6;}
+.widget_recent_comments li, #twitter li { border-color: #e6e6e6;}
+.widget p, .widget .textwidget { font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#555555; }
+.widget {font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#555555;border-radius:1px;-moz-border-radius:1px;-webkit-border-radius:1px;}
+#tabs .inside li a, .widget_woodojo_tabs .tabbable .tab-pane li a { font:bold 12px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#555555; }
+#tabs .inside li span.meta, .widget_woodojo_tabs .tabbable .tab-pane li span.meta { font:300 11px/1.5em "Helvetica Neue", Helvetica, sans-serif;color:#999999; }
+#tabs ul.wooTabs li a, .widget_woodojo_tabs .tabbable .nav-tabs li a { font:300 11px/2em "Helvetica Neue", Helvetica, sans-serif;color:#999999; }
+@media only screen and (min-width:768px) {
+ul.nav li a, #navigation ul.rss a, #navigation ul.cart a.cart-contents, #navigation .cart-contents #navigation ul.rss, #navigation ul.nav-search, #navigation ul.nav-search a { font:300 14px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#666666; } #navigation ul.rss li a:before, #navigation ul.nav-search a.search-contents:before { color:#666666;}
+#navigation ul.nav li ul, #navigation ul.cart > li > ul > div  { border: 1px solid #dbdbdb; }
+#navigation ul.nav > li  { border-right: 1px solid #dbdbdb; }#navigation ul li:first-child, #navigation ul li:first-child a { border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; -webkit-border-radius:5px 0 0 5px; }
+#navigation {border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;border-left:1px solid #dbdbdb;border-right:1px solid #dbdbdb;border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+#top ul.nav li a { font:300 12px/1.6em "Helvetica Neue", Helvetica, sans-serif;color:#ddd; }
+}
+#footer, #footer p { font:300 13px/1.4em "Helvetica Neue", Helvetica, sans-serif;color:#999999; }
+#footer {border-top:1px solid #dbdbdb;border-bottom:0px solid ;border-left:0px solid ;border-right:0px solid ;border-radius:1px; -moz-border-radius:1px; -webkit-border-radius:1px;}
+.magazine #loopedSlider .content h2.title a { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+.wooslider-theme-magazine .slide-title a { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+.magazine #loopedSlider .content .excerpt p { font:300 13px/1.5em Arial, sans-serif;color:#cccccc; }
+.wooslider-theme-magazine .slide-content p, .wooslider-theme-magazine .slide-excerpt p { font:300 13px/1.5em Arial, sans-serif;color:#cccccc; }
+.magazine .block .post .title a {font:bold 18px/1.2em "Helvetica Neue", Helvetica, sans-serif;color:#222222; }
+#loopedSlider.business-slider .content h2 { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+#loopedSlider.business-slider .content h2.title a { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+.wooslider-theme-business .has-featured-image .slide-title { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+.wooslider-theme-business .has-featured-image .slide-title a { font:bold 24px/1em Arial, sans-serif;color:#ffffff; }
+#wrapper #loopedSlider.business-slider .content p { font:300 13px/1.5em Arial, sans-serif;color:#cccccc; }
+.wooslider-theme-business .has-featured-image .slide-content p { font:300 13px/1.5em Arial, sans-serif;color:#cccccc; }
+.wooslider-theme-business .has-featured-image .slide-excerpt p { font:300 13px/1.5em Arial, sans-serif;color:#cccccc; }
+.archive_header { font:bold 18px/1em Arial, sans-serif;color:#222222; }
+.archive_header {border-bottom:1px solid #e6e6e6;}
+</style>
+
+<!-- Woo Shortcodes CSS -->
+<link href="http://www.teknlife.com/wp-content/themes/canvas/functions/css/shortcodes.css" rel="stylesheet" type="text/css" />
+
+<!-- TNL Custom Stylesheet -->
+<link href="http://www.teknlife.com/wp-content/themes/teknlife/custom.css?ver=1.2.9" rel="stylesheet" type="text/css" />
+
+<!-- Theme version -->
+<meta name="generator" content="Tek&#039;n&#039;life Theme 1.0" />
+<meta name="generator" content="Canvas 5.11.3" />
+<meta name="generator" content="WooFramework 6.2.8" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<!-- Google -->
+<meta name="google-site-verification" content="JnmtOxyu3p-ZBnz0p-01-48AiF-shYDds78Fns6r53M" />
+<!-- /Google -->
+<meta name='botify-site-verification' content='oCsNOUT3vYbXcZQ0ire9CQ5GR2eDSFbH'>
+<!-- Pinterest -->
+<meta name="p:domain_verify" content="27f54930aa74403c215f2c9b6fcb56c8"/>
+<!-- /Pinterest -->
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="www.teknlife.com">
+<meta name="twitter:site" content="@teknlife">
+<meta name="twitter:creator" content="@andrespurrinos">
+<meta name="twitter:url" content="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/">
+<meta name="twitter:title" content="MongoDB, ¿son las bases de datos no relacionales el futuro?">
+<meta name="twitter:description" content="Te explicamos c&oacute;mo funcionan las bases de datos utilizadas en Big Data y otras aplicaciones">
+<meta name="twitter:image" content=" http://www.teknlife.com/wp-content/uploads/2014/05/databases-370x280.jpg">
+<!-- /Twitter cards -->
+<!-- DEBUG:  -->
+<!-- GOOGLE ADSENSE -->
+<!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
+<!-- GOOGLE DFP -->
+<script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type='text/javascript'>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/69841497/lb1', [[970, 90], [720, 90], [728, 90]], 'div-gpt-ad-1457300368581-0').addService(googletag.pubads());
+    googletag.defineSlot('/69841497/mpu1', [[360, 280], [300, 250], [336, 280]], 'div-gpt-ad-1457300368581-1').addService(googletag.pubads());
+    googletag.defineSlot('/69841497/mpu2', [[360, 280], [300, 250], [336, 280]], 'div-gpt-ad-1457300368581-2').addService(googletag.pubads());
+    googletag.defineSlot('/69841497/sky', [[360, 600], [300, 600]], 'div-gpt-ad-1457300368581-3').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /GOOGLE DFP -->
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
+</head>
+<body class="reportaje-template-default single single-reportaje postid-9251 single-format-standard chrome alt-style-default one-col width-1200 one-col-1200">
+<? if (TNL_DEBUG) { ?>
+<!--div id="bookmarks_wrapper">
+	<div id="bookmarks_open"></div>
+	<div id="tnl_bookmarks">
+		<h4>Mis lecturas</h4>
+		<ul id="tnl_bookmarks_list"></ul>
+	</div>
+</div-->
+<? } ?>
+<div id="header-wrapper"></div>
+<!--div id="fb-root"></div-->  
+<!--script>(function(d, s, id) {  
+  var js, fjs = d.getElementsByTagName(s)[0];  
+  if (d.getElementById(id)) return;  
+  js = d.createElement(s); js.id = id;  
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=266871946771516";  
+  fjs.parentNode.insertBefore(js, fjs);  
+}(document, 'script', 'facebook-jssdk'));</script-->
+<div id="wrapper">
+    <div class="pure-g">
+        <!-- /69841497/lb1 -->
+        <div class="pure-u-9">
+	        <div id='div-gpt-ad-1457300368581-0'>
+    	    <script type='text/javascript'>
+        	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1457300368581-0'); });
+        	</script>
+        </div>
+        </div>
+        <!--div class="pure-u-3">
+        <a href="http://fintech.teknlife.com"><img style="margin-left:10px;" src="http://www.teknlife.com/wp-content/themes/teknlife/images/zonafintech.jpg" alt="Zona Fintech" /></a>
+        </div-->
+        <div class="pure-u-3">
+        	<ul id="social-icons">
+				<li class="social-icon"><a href="http://www.facebook.com/teknlife"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/facebook.png" /></a></li>
+				<li class="social-icon"><a href="http://twitter.com/teknlife"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/twitter.png" /></a></li>
+				<li class="social-icon"><a href="http://www.linkedin.com/groups/Seguidores-TeknLife-7447550"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/linkedin.png" /></a></li>
+				<li class="social-icon"><a href="https://plus.google.com/105174222186785809018/"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/google_plus.png" /></a></li>
+		    	<li class="social-icon"><a href="/rss"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/rss.png" /></a></li>
+			</ul>
+        </div>
+    </div>
+	<div id="inner-wrapper">
+		<!--ul id="social-icons">
+			<li class="social-icon"><a href="http://www.facebook.com/teknlife"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/facebook.png" /></a></li>
+			<li class="social-icon"><a href="http://twitter.com/teknlife"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/twitter.png" /></a></li>
+			<li class="social-icon"><a href="http://www.linkedin.com/groups/Seguidores-TeknLife-7447550"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/linkedin.png" /></a></li>
+			<li class="social-icon"><a href="https://plus.google.com/105174222186785809018/"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/google_plus.png" /></a></li>
+		    <li class="social-icon"><a href="/rss"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/social/rss.png" /></a></li>
+		</ul-->
+			<ul class="top-links" style="margin-bottom:20px;">
+	    <li><a href="/quienes-somos">Quiénes somos</a></li>
+	    <li><a href="/servicios-tarifas">Servicios y tarifas</a></li>
+	    <li><a href="/contacto">Contacto</a></li>
+	    <li><a href="/suscribete-a-teknlife">Registro</a></li>
+	</ul>
+	<h3 class="nav-toggle icon"><a href="#navigation">Navigation</a></h3>
+	<header id="header" class="col-full">
+				<div id="logo">
+			<a href="/" title="Tek n Life - Tecnologia y estilo de vida digital"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/logo_negro.png" alt="Tek&#039;n&#039;life" /></a>
+            <span class="site-title"><!--h1 class="site-title"--><a href="/">Tek&#039;n&#039;life</a><!--/h1--></span>
+            <span class="site-description">Tecnologia y estilo de vida digital</span>
+		</div>
+		<ul id="navigation-small">
+			<li class="nav-toggle icon"></li>
+			<li class="search-toggle"><img width="28" height="28" alt="buscar" src="http://www.teknlife.com/wp-content/themes/teknlife/images/ay_lupita_small.png" alt="Buscar" /></li>
+		</ul>
+		<div id="nav-search" class="nav-search fr">
+		<div class="search_main">
+    <form method="get" class="searchform" action="http://www.teknlife.com/" >
+        <input type="text" class="field s" name="s" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" />
+                <button type="submit" class="submit" name="submit" value=""></button>
+    </form>    
+    <div class="fix"></div>
+</div>
+		</div><!--/#nav-search .nav-search fr-->
+				<div id="main-nav"><nav id="navigation" class="menu-secciones-container"><ul id="menu-secciones" class="menu"><li id="menu-item-2368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2368"><a href="http://www.teknlife.com/seccion/personal/">Personal</a></li>
+<li id="menu-item-2367" class="menu-item menu-item-type-taxonomy menu-item-object-category current-reportaje-ancestor current-menu-parent current-reportaje-parent menu-item-2367"><a href="http://www.teknlife.com/seccion/profesional/">Profesional</a></li>
+<li id="menu-item-2366" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2366"><a href="http://www.teknlife.com/seccion/social/">Social</a></li>
+</ul></nav></div>
+	</header>
+	<div id="space-invader"></div>
+	    
+			       
+    <!-- #content Starts -->
+	    <div id="content" class="col-full">
+    
+    	<div id="main-sidebar-container">    
+
+            <!-- #main Starts -->
+                        <section id="main">                       
+<article class="post-9251 reportaje type-reportaje status-publish format-standard has-post-thumbnail hentry category-profesional category-tecnologia tag-intelygenz tag-mongodb especiales-big-data">
+
+<header class="post_header" itemprop="image">
+	    <img width="1200" height="670" src="http://www.teknlife.com/wp-content/uploads/2014/05/databases.jpg" class="attachment- size- wp-post-image" alt="" srcset="http://www.teknlife.com/wp-content/uploads/2014/05/databases.jpg 1200w, http://www.teknlife.com/wp-content/uploads/2014/05/databases-300x168.jpg 300w" sizes="(max-width: 1200px) 100vw, 1200px" />	    <div id='related_to'><ul><li>Relacionado:</li><li style="background:#FF003C;" itemprop="articleSection"><a href="http://www.teknlife.com/seccion/profesional/">Profesional</a></li><li style="background:#CCCCCC;" itemprop="articleSection"><a href="http://www.teknlife.com/seccion/tecnologia/">Tecnología</a></li><li class="related_tema"><a href="http://www.teknlife.com/especiales/big-data/" rel="tag">Big Data</a></li></ul></div><!-- ./related_to-->    <a href="http://www.teknlife.com/wp-content/uploads/2014/05/databases.jpg" rel="lightbox">
+        <div class="circle-black"><span>ZOOM</span></div>
+    </a>
+    <a href="http://www.teknlife.com/wp-content/uploads/2014/05/databases.jpg" rel="lightbox[gallery]">
+        <div class="circle-orange"><span>GALERÍA</span></div>
+    </a>
+    <div style="display:none">
+     	      		<a href="http://www.teknlife.com/wp-content/uploads/2014/05/luis_mesas_intellygenz.jpg" rel="lightbox[gallery]">&npsp;</a>
+      	      		<a href="http://www.teknlife.com/wp-content/uploads/2014/05/mongodb_datos.jpg" rel="lightbox[gallery]">&npsp;</a>
+      	      		<a href="http://www.teknlife.com/wp-content/uploads/2014/05/tablas_relacionales.jpg" rel="lightbox[gallery]">&npsp;</a>
+      	      		<a href="http://www.teknlife.com/wp-content/uploads/2014/05/tabla_sql.jpg" rel="lightbox[gallery]">&npsp;</a>
+      	    </div>
+    <div id="circle-comments" class="circle-white">
+    	<span class="post_n_comentarios">
+    		 1     		<!--fb:comments-count href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/"></fb:comments-count-->
+    	</span>
+    	<span class="post_circle_text">
+    		COMENTARIO    	</span>
+    </div>
+	<div id="title_box">
+	    <div id="title_bg"></div>
+	    <div id="title_wrapper">
+	    	<div class="title_box_subtitle" itemprop="alternativeHeadline"><h2 class="subtitle_orange">Te explicamos cómo funcionan las bases de datos utilizadas en Big Data y otras aplicaciones</h2></div>
+	    	<div class="title_box_title" itemprop="headline"><h1 class="title slabtextdone">MongoDB, ¿son las bases de datos no relacionales el futuro?</h1></div>
+	    </div>
+	</div>
+</header>
+<div class="fix"></div>
+<div class="post-meta">
+    <span class="post_author">Por <a href="http://www.teknlife.com/autor/andres/" title="Entradas por Andrés Purriños" class="author url fn" rel="author">Andrés Purriños</a>&nbsp;&nbsp;|&nbsp;&nbsp;28 Mayo, 2014</span>
+    <!--span><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/sobre.png" alt="correo" /></span-->
+    <span id="author_twitter"><a href="http://www.twitter.com/andrespurrinos" target="_blank"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/twitter.png" alt="twitter" />@andrespurrinos</a></span>
+	<span id="author_googleplus"><a href="https://plus.google.com/+AndresPurrinos?rel=author"></a></span>
+	</div><!-- ./post-meta-->
+<div class="fix"></div>
+	<div class="post_wrapper">
+	<div class="post_main">
+	<div class="entry">
+	
+	
+		<div id="post_social">
+		<ul>
+		   <li><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/" data-count="vertical" data-text="MongoDB, ¿son las bases de datos no relacionales el futuro?" data-via="teknlife" ></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
+		   <li><iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.teknlife.com%2Freportaje%2Fmongodb-son-las-bases-de-datos-relacionales-el-futuro%2F&amp;locale=&amp;layout=box_count&amp;action=like&amp;width=50&amp;height=60&amp;colorscheme=light' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:50px; height:62px;' allowTransparency='true'></iframe></li>
+		   <li><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='tall' href='http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/'></g:plusone></li>
+		   <li><script src='//platform.linkedin.com/in.js' type='text/javascript'></script><script type='IN/Share' data-url='http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/' data-counter='top'></script></li>
+		   <li><a href="whatsapp://send?text=MongoDB, ¿son las bases de datos no relacionales el futuro? http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/ vía @teknlife" data-action="share/whatsapp/share"><img src="http://www.teknlife.com/wp-content/themes/teknlife/images/whatsapp.png"</a></li>
+		   <li><a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script></li>
+		</ul>
+		</div><!-- /.post_social -->
+	    <div class="post_text">
+        <p>Si hay algo que ha permanecido prácticamente inmutable en tecnología, eso son las bases de datos. <strong>El modelo relacional, con más de 40 años a sus espaldas, sigue vigente en nuestros días</strong> y es la base de la mayoría de aplicaciones que acceden a una base de datos.</p>
+<p>Sin embargo, no es el único modelo existente, ni el único en uso. En los últimos tiempos han cobrado importancia las <strong>bases de datos que no cumplen con los principios expresados por Codd en 1970.</strong></p>
+<p>Se trata de las<strong> bases de datos no relacionales, también conocidas como NoSQL</strong>, por no utilizar el lenguaje SQL casi universal en las bases de datos convencionales. ¿Se trata de una moda? ¿Están muertas las bases de datos relacionales? En este reportaje te explicamos en qué consisten esas bases de datos y qué ventajas te pueden aportar.</p>
+<h2>¿Recuerdas cómo funciona una base de datos?</h2>
+<p><strong>Las bases de datos relacionales organizan la información en tablas.</strong> Cada tabla tiene un número de columnas o campos, determinados por el administrador, y filas que contienen los datos.</p>
+<p><span class="tnl_img_left"><img src="http://www.teknlife.com/wp-content/uploads/2014/05/tabla_sql.jpg" alt="Una tabla de una base de datos relacional tiene una estructura semejante a la de una hoja de cálculo" />Una tabla de una base de datos relacional tiene una estructura semejante a la de una hoja de cálculo</span></p>
+<p>Además, estas tablas pueden relacionarse entre sí, de manera que mediante<strong> consultas que combinan varias tablas (denominadas JOIN)</strong>, se puede obtener información de varias de ellas. Estas relaciones pueden ser de un elemento de una tabla a un elemento de otra, de uno a varios o de varios a varios.</p>
+<div class="tnl_infobox"></p>
+<h3>El modelo relacional</h3>
+<p><img src="http://www.teknlife.com/wp-content/uploads/2014/05/tablas_relacionales.jpg" alt="El modelo relacional" />Para mantener la integridad entre las distintas tablas que componen la base de datos se utilizan las relaciones.</p>
+<p>En este ejemplo, la tabla Empleados mantiene una relación con las tablas Nóminas y Vacaciones. La integridad referencial impide que se den de alta nóminas o periodos vacacionales de empleados inexistentes.</p>
+</div>
+<p>Esto, unido a un lenguaje que permite obtener la información de forma sencilla, así como interactuar con ella dando de alta nuevos registros, modificando los ya existentes, etc., hace del modelo relacional perfecto para la mayoría de aplicaciones por varios motivos.</p>
+<p>El primero es que organiza la información de forma muy clara: cada fila (tupla) de la tabla Empleados contendrá la información de un empleado, mientras que la tabla Nóminas contendrá una nómina.</p>
+<p>Además, estas bases de datos están diseñadas para mantener la integridad de las relaciones: no puede haber una nómina para un empleado inexistente, así como parece lógico pensar que en la tabla Nóminas no se permitirá que haya varias filas con el mismo código de empleado para el mismo mes.</p>
+<h2>Pero no todo son ventajas</h2>
+<p>Este modelo parece perfecto, o casi. Permite crear desde bases de datos muy sencillas hasta las más complejas, garantiza la integridad de los datos y dispone de un lenguaje sencillo y que casi cualquier programador conoce bien.</p>
+<p><strong>El principal problema de este modelo es que todo esto es costoso en términos de rendimiento</strong>. No es que las bases de datos relacionales sean terriblemente lentas pero cada operación tiene un coste de tiempo elevado, precisamente, por todas esas garantías sobre los datos y las transacciones.</p>
+<p>Además, las estructuras que se crean están diseñadas para modificarse poco. Si necesitamos añadir un nuevo dato a algunos de nuestros empleados, la tabla Empleado necesitará una nueva columna. Todos los empleados existentes tendrán ese nuevo campo, lo necesiten o no. Esto puede hacer que una base de datos cuya estructura necesite ser modificada periódicamente crezca a lo ancho, aumentando la necesidad de almacenamiento y los tiempos de proceso.</p>
+<h2>La aproximación no relacional</h2>
+<p>Supongamos que prescindimos de una estructura tan bien pensada. <strong>Renunciamos a unas tablas perfectamente definidas, que garantizan la integridad y en las que todo parece ser perfectamente predecible</strong>. A cambio, <strong>obtenemos rapidez y flexibilidad.</strong></p>
+<p>Desde el punto de vista de nuestra base de datos de empleados y nóminas parece que lo que ganamos en velocidad no compensa. Una aplicación para gestionar este tipo de información, incluso en una compañía con muchos empleados, no suele tener tanta interacción con la base de datos como para que la velocidad llegue a suponer un problema si tanto la aplicación como la base de datos están bien diseñadas.</p>
+<p>Además, en el caso de los empleados es muy útil que la integridad de los datos esté garantizada. De este modo evitamos que se emitan nóminas a un empleado que ha dejado la compañía, o que alguien cobre varias veces.</p>
+<p><strong>Donde empieza a resultar interesante utilizar bases de datos NoSQL es en casos en los que la cantidad de información es muy grande.</strong> Aplicaciones científicas, las transacciones de un gran banco o incluso sistemas de analítica web en tiempo real. En estos casos, <strong>la cantidad de información es tanta que las aproximaciones mediante bases de datos relacionales obligan a dedicar muchos esfuerzos a la optimización</strong> para obtener un resultado aceptable.</p>
+<h2>¿Cómo se diseña un modelo no relacional?</h2>
+<p>Las bases de datos basadas en SQL son parte de las habilidades básicas de la mayoría de programadores. Incluso los especializados en áreas bien alejadas de las aplicaciones de gestión conocen los principios básicos y son capaces de utilizar el lenguaje SQL en caso de necesidad.</p>
+<p>Esto hace que la forma de diseñar estas bases de datos pueda resultar un impedimento: las bases no relacionales exigen pensar de otra forma desde el principio.</p>
+<p>Por ejemplo en MongoDB (la base de datos más utilizada), nuestras tablas Empleados y Vacaciones, podrían quedar así:</p>
+<p><span class="tnl_img_left"><img src="http://www.teknlife.com/wp-content/uploads/2014/05/mongodb_datos.jpg" alt="Shell de MongoDB mostrando la entrada de un empleado, la lista de periodos de vacaciones está embebida en esta." />Shell de MongoDB mostrando la entrada de un empleado, la lista de periodos de vacaciones está embebida en esta.</span></p>
+<p>Esto tiene algunas consecuencias. La primera es que <strong>toda la información relacionada está almacenada en el mismo sitio.</strong> A la hora de acceder a los datos de un empleado podremos leer toda la información, vacaciones incluidas, en una sola operación de forma muy rápida. Fíjate también que <strong>aquellos campos que no tenían información en el modelo relacional aquí, simplemente, no existen. No ocupan espacio en disco y no consumen memoria</strong> al hacer una consulta, algo que facilita que el tiempo necesario para las consultas se reduzca.</p>
+<p>La consecuencia indeseada puede llegar cuando hacemos lo mismo con las nóminas. Si el administrador de la empresa quiera obtener un listado con todas las nóminas del mes de junio. En ese caso, habrá que recorrer uno por uno los empleados en busca de las nóminas adecuadas. Dado que, en este caso, puede ser incómodo utilizar un único documento, <strong>MongoDB proporciona también referencias a otros documentos.</strong> El de las nóminas podría ser una buena aplicación de esta característica pero&#8230; <strong>¡los más puristas te dirán que aquí también puedes evitar usarla!</strong></p>
+<h2>El lenguaje de MongoDB</h2>
+<p>Recuperar información de la base de datos es muy diferente en este modelo respecto a las bases de datos relacionales y el lenguaje SQL.</p>
+<h4></h4>
+<p></p>
+<h4>Consulta en SQL</h4>
+<p></p>
+<pre>SELECT * FROM EMPLEADOS,NOMINAS,VACACIONES</pre>
+<p></p>
+<pre>WHERE EMPLEADOS.ID_EMPLEADO = NOMINAS.ID_EMPLEADO</pre>
+<p></p>
+<pre>AND EMPLEADOS.ID_EMPLEADO = VACACIONES.ID_EMPLEADO</pre>
+<p></p>
+<pre>AND EMPLEADOS.APELLIDOS = "FERNÁNDEZ GARCÍA"</pre>
+<p></p>
+<h4>Consulta en MongoDB</h4>
+<p></p>
+<pre>db.empleados.find( { apellidos: 'FERNÁNDEZ GARCÍA' } )</pre>
+<p><span style="line-height: 1.5em;">En el primer ejemplo, <strong>hemos seleccionado toda la información de las tres tablas, para lo que hemos tenido que indicar las relaciones (JOIN)</strong> entre ellas, así como especificar una condición sobre la columna por el que queremos filtrar la consulta.</span></p>
+<p><strong>En el segundo caso, sólo tenemos que especificar la condición por la que queremos buscar. La información relativa a las vacaciones está en el mismo documento</strong> y la que hemos llevado a otro, las nóminas, son accesibles desde los resultados de forma automática.</p>
+<p>Supongamos ahora que necesitamos añadir las vacaciones de un empleado. En la base relacional deberemos de dar de alta una entrada en la tabla Vacaciones, mientras que en MongoDB bastará con actualizar la entrada del empleado en cuestión:</p>
+<h4>Inserción en SQL</h4>
+<p></p>
+<pre>INSERT INTO VACACIONES (ID_EMPLEADO, FECHA_INICIO, FECHA_FIN)<br>SELECT ID_EMPLEADOS, '20/07/2014' AS FECHA_INICIO, '31/07/2014' AS FECHA_FIN<br>FROM EMPLEADOS WHERE APELLIDOS = "FERNÁNDEZ GARCÍA",</pre>
+<p></p>
+<h4></h4>
+<p></p>
+<h4>Actualización en MongoDB</h4>
+<p></p>
+<pre>db.empleados.update(<br> { apellidos: "FERNÁNDEZ GARCÍA" },<br> { $push: { vacaciones: { "fecha_inicio": "20/07/2014", "fecha_fin": "31/07/2014" } } }<br> )</pre>
+<p>&nbsp;</p>
+<p>En el primer caso, <strong>es necesario hacer una consulta para localizar el identificador del empleado por sus apellidos, para insertar una nueva fila en la tabla Vacaciones.</strong> Para hacer todo en una sola operación utilizamos un pequeño truco, introducir como cadenas los valores que no salen de la tabla de empleados.</p>
+<p>E<strong>n MongoDB se utilizan dos parámetros, el primero para especificar la condición de búsqueda y el segundo para indicar los cambios a realizar</strong> en el empleado. La orden $push indica que se debe incorporar la información a un array.</p>
+<p>Como ves, <strong>la forma de interactuar con la base de datos es más sencilla que en SQL,</strong> un lenguaje cuyas primeras versiones son de 1974 y que está basado en comandos de texto. <strong>El modelo de MongoDB utiliza sintaxis propia de la programación orientada a objetos (el lenguaje usado es JavaScript) y dispone de librerías para trabajar con la base de datos en los lenguajes más utilizados.</strong></p>
+<p>Por supuesto, hay capas de abstracción que permiten trabajar con bases de datos relacionales de forma más intuitiva que las viejas, pero potentes, instrucciones SQL. Aún así no se mejora el rendimiento (es posible que incluso salga penalizado) y hay que desarrollar más código para poder utilizarlas.</p>
+<h2>Tipos de bases no relacionales</h2>
+<p><strong>Aunque MongoDB es la más conocida, no es la única base de datos no relacional que existe.</strong> De hecho, hay muchos tipos de base de datos no relacionales. Existen bases de datos documentales, en grafo, clave/valor, multivalor&#8230; cada una de ellas tiene su punto fuerte y algunas encajan en varias de estas definiciones.</p>
+<p>MongoDB, la más popular, se considera tanto una base de datos documental como clave/valor, ya que está basada en documentos y los datos se almacenan como pares de claves con un valor asignado. Una ventaja de la diversidad de opciones existente es que se pueden combinar varios sistemas de bases de datos, incluyendo las relacionales, aprovechando los puntos fuertes de cada uno en los puntos en los que es necesario.</p>
+<p>Además, <strong>en muchas ocasiones se combinan estas arquitecturas complicadas con los sistemas de bases de datos en memoria.</strong> Se trata de bases de datos que no almacenan información en disco, de modo que son muy rápidas aunque, por supuesto, es muy costoso y tiene grandes limitaciones.</p>
+<p>Un ejemplo de este tipo de arquitecturas es Twitter, que incluso ha aportado sus propios desarrollos sobre el modelo y combina varios de estos modelos para optimizar el acceso de millones de usuarios a los millones de tweets que se publican cada día, búsquedas, calculo de los trending topics en tiempo real, etc.</p>
+<h2>Entrevista con Luis Mesas, ingeniero de Intelygenz</h2>
+<p></p>
+<div class="tnl_infobox"></p>
+<h3>Luis Mesas, Intelygenz</h3>
+<p><img src="http://www.teknlife.com/wp-content/uploads/2014/05/luis_mesas_intellygenz.jpg" alt="Luis Mesas, Innovation Architect en Intellygenz" />Luis Mesas es ingeniero en <a href="http://www.intelygenz.com/">Intelygenz</a> y trabaja como Innovation Architect.</p>
+<p>Está involucrado en diversos proyectos en los que el uso de las bases de datos no relacionales es clave para ofrecer una ventaja competitiva a sus clientes.</p>
+</div>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿Cuáles son las diferencias entre una base de datos relacional y otra no relacional como MongoDB?</span><br />La diferencia principal es cómo almacena la información cada una de ellas. <strong>Una base de datos relacional es como una hoja de Excel.</strong> Tienes unas columnas definidas y todos los objetos que crean tienen todos los datos de esas columnas.</p>
+<p><strong>En una no relacional el objeto es polimórfico,</strong> puede tener los atributos que quieras para cada objeto. La ventaja principal la encuentras cuando trabajas con sistemas masivos.</p>
+<p>En una base de datos relacional, si tuvieses miles de millones de registros y añades un campo nuevo ese campo se añade a todos los registros ya existentes. En una polimórfica no, sólo se añaden los datos al objeto concreto.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Eso implica que el programador tiene que llevarse parte de la lógica a una capa superior.</span><br />Bastante de ella sí. Cuando haces una búsqueda en una base de datos, relacional o no, la haces contra un índice. Tienes un índice en memoria que relaciona, por ejemplo, los nombres de usuario con la posición en disco duro de cada objeto. A nivel de búsqueda es muy parecido en ambos casos.</p>
+<p>Pero en una no relacional tú puedes tener arrays de datos. Por ejemplo, si tienes más de una dirección postal, en una base de datos relacional tendrías una tabla de usuarios y otra de direcciones postales. Cuando haces una búsqueda tienes que hacer un montón de consultas en paralelo. Primero buscas los usuarios y luego las direcciones que les corresponden en otra tabla.</p>
+<p><strong>En una base como MongoDB tú le pides el usuario y te devuelve directamente al usuario con todas sus direcciones. Como el dato está próximo en el disco, lo puedes leer entero en mucho menos tiempo</strong>. Los discos están optimizados para hacer lecturas secuenciales y pierden tiempo para hacer saltos.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Al almacenarse toda la información junta, ¿desaparecen los JOINs propios de SQL?</span><br />Efectivamente. Las versiones nuevas empiezan a tener algunas referencias entre objetos para convencer a las personas que han usado muchos años bases de datos relacionales. Pero no es la función principal de estas bases de datos.</p>
+<p><strong>Tienes que hacer menos consultas y los datos están más próximos, así que tienes una mejora de eficiencia</strong> porque sacas la información del disco mucho más rápido. Para una aplicación pequeña como un blog da igual qué tipo de base de datos utilizas. Cuando la base de datos es muy grande empieza a tener más sentido irse a bases de datos no relacionales.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Es decir, ¿son bases ideales para hacer desarrollos sobre big data, científicas o estadísticas?</span><br />Hay bases de datos tipo HDFS que optimizan todo en disco duro y te permiten leer y escribir en paralelo sobre la misma colección. Normalmente de una colección de datos cuando estás escribiendo no puedes hacer otras escrituras, aunque sí puedes leer en paralelo.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Otro de los sistemas que las bases relacionales utilizan son las transacciones. ¿Cómo se gestionan en MongoDB?</span><br />No hay transaccionalidad, aunque en versiones futuras quieren meterlo. Lo delegan en el desarrollador, que tiene que implementarla mediante una máquina de estados u otros sistemas.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿Esto no supone una limitación para algunas aplicaciones?</span><br /><strong>Hay aplicaciones en las que la transaccionalidad es importante </strong>porque la información está distribuida en varias tablas, de modo que hasta que no se termina de escribir en todas ellas no finaliza la transacción. En una no relacional el modelo de cada objeto puede variar y si tienes toda la información en el mismo objeto, por ejemplo, una cuenta bancaria que contenga todas las operaciones y el saldo. Es un caso crítico, estás jugando con el dinero de la gente.</p>
+<p><strong>En una relacional tienes una tabla con un contrato, otra de movimientos, y el saldo lo puedes tener en la primera.</strong> Escribes el movimiento en su tabla y luego modificas el saldo en el contrato. Todo eso lo haces en una transacción.</p>
+<p><strong>En una no relacional no necesitas la transacción: tienes el objeto completo con los movimientos y el saldo, los actualizas en memoria y lo escribes en el disco en una sola operación</strong>. Puedes diseñar un modelo de datos que no te exija transaccionalidad.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿En qué tipo de proyectos son una ventaja estas bases de datos?</span><br />La principal ventaja es agilidad de desarrollo. En tu aplicación tienes objetos que son estructuras de datos y métodos que operan sobre ellos. En una relacional, tienes un método que busca en la base de datos y rellena la información desde muchas tablas. Tienes que hacerlo tú, tienes que programar la clase para incluir esas relaciones.</p>
+<p>En una no relacional el modelo de datos está emparejado al modelo de objetos. Cuando cargas un objeto viene todo entero. Lo almacenas en las propiedades internas del objeto y ya lo tienes. Es más fácil a la hora de programar y es más robusto porque es más difícil cometer errores.</p>
+<p>Te quitas la parte de datos, que es la parte más aburrida de la programación, y te puedes dedicar sólo a la funcionalidad de tu aplicación. El programador tiene la sensación de que su trabajo está más aprovechado.</p>
+<p><span class="tnl_highlight">el modelo de datos está emparejado al modelo de objetos, Cuando cargas un objeto viene todo entero</span></p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Se trata de un lenguaje muy simple, con principios de la programación orientada a objetos, ¿recomendarías a un empezar a aprender bases de datos con MongoDB?</span><br />Hay varios perfiles de personas que empiezan a programar. Uno muy típico es la persona que quiere aprender a hacer páginas web y luego se engancha y se quiere dedicar a eso. Normalmente quien aprende a hacer páginas web aprende HTML, CSS y Javascript. MongoDB y algunas otras utilizan JavaScript. No tienen que aprender un lenguaje nuevo, sólo objetos y métodos nuevos para acceder a la información. Es más natural para ese perfil.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿Y para los que hemos aprendido por el otro camino?</span><br />Lo bueno es que se simplifica tu modelo de datos. En una aplicación pequeña acabas teniendo 7 u 8 tablas. En una no relacional la reducción es máxima. Tiendes a acumular toda la información que sueles tener dispersa.</p>
+<p>La primera dirección de acumulación son los arrays de información. Cuando tienes más de un objeto y quieres permitir que sean infinitos normalmente te creas una tabla nueva y una relación. Por ejemplo, una lista de emails o direcciones relacionadas con un usuario. En una base de datos no relacional tienes ya el objeto usuario con el listado de direcciones y de emails. Si quieres añadir o eliminar lo haces sobre el mismo objeto.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Venías de desarrollar bases de datos convencionales, ¿cuesta mucho cambiar la forma de pensar?</span><br /><strong>Cuesta bastantes iteraciones de pensamiento y leer mucho. Llevamos muchos años utilizando las bases de datos relacionales</strong>, en las universidades estamos muy acostumbrados a utilizar Excel, una representación directa de una base de datos relacional. Es muy natural pensar de esta manera, nuestra vida está muy adaptada a ella: una carta con los movimientos bancarios son una tabla. Estamos entrenados para pensar de modo relacional.</p>
+<p>Como las no relacionales son polimórficas no hay elementos que en el mundo real te lo evoque. Es difícil explicar a la gente ese cambio. <strong>Los que llevan muchos años en el mundo relacional tienen que enfrentarse al miedo al cambio</strong>, un programador tiene unos plazos y al no conocerlo no se arriesgan. Siempre estás buscando el proyecto en el que puedas empezar.</p>
+<p>Tienes una estimación y tienes que cumplirla y si tienes mucha experiencia con la relacional ya sabes qué esperar. Hasta que no empiezas a arriesgar usando la no relacional no conoces el ahorro de tiempo. En diseño se ahorra mucho tiempo porque el modelo de datos es más simple. En el desarrollo también se ahorra tiempo, porque la capa de datos es más sencilla.</p>
+<p><span class="tnl_highlight">Los que llevan muchos años en el mundo relacional tienen que enfrentarse al miedo al cambio</span></p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">Un caso de éxito, quizá el más conocido, es el de Twitter.</span><br />A lo que más ha contribuido es al proceso de big data en tiempo real con Twitter Storm. También utilizan Hadoop para ofrecer la información de millones de tweets en tiempo real.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿Y cuál es la reacción de las grandes compañías de bases de datos a este fenómeno?</span></p>
+<p><span style="line-height: 1.5em;">Están adquiriendo compañías [más pequeñas] de bases de datos no relacionales para aguantar el tirón. También hacen pequeñas modificaciones en sus bases relacionales y están desarrollando productos no relacionales para poder ofrecer ambos catálogos a sus clientes. </span>Personalmente <strong>creo que los grandes actores de las relacionales juegan con ventaja. Los que han reconocido que hay que adaptarse van a mejorar su catálogo.</strong> Y pueden recomendar la más base de datos más apropiada para cada caso.</p>
+<p>El problema de compañías como Mongo es que están convencidas de que el modelo relacional está muerto y no van a desarrollarlo. El catálogo [de las grandes compañías] es más completo.</p>
+<p><span class="tnl_question_first_word">TNL: </span><span class="tnl_question">¿Utilizáis otras bases de datos, además de las relacionales y de MongoDB?</span><br />Utilizamos bases clave-valor como Redis o Memcache. Tienes toda la información en memoria, con lo cual es muy rápida. Se utiliza sobre todo como caché de información, pides el dato y lo guardas en esta base de datos para acelerar el acceso a determinados datos. Delegas la base de datos, relacional o no, a una mera persistencia en el tiempo.</p>
+<p>Si tengo que regenerar mi sistema porque se ha caído, obtienes la información de otra base de datos y reconstruyes la memoria. Pero si tienes una consulta que se repite de forma desproporcionada al resto, la añades a esa base de datos clave/valor y el acceso resulta muchísimo más rápido.</p>
+<h2>Probar MongoDB</h2>
+<p>¿Te interesan las bases de datos no relacionales? Puedes probar MongoDB en su propia web, mediante una <a href="http://try.mongodb.org">demo/tutorial</a>. Además, pronto publicaremos un tutorial en el que te enseñamos a crear una base de datos MongoDB y acceder a ella desde tu web.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        <div class="tag_list"><a href="http://www.teknlife.com/tag/intelygenz/" rel="tag">Intelygenz</a><a href="http://www.teknlife.com/tag/mongodb/" rel="tag">MongoDB</a></div> 
+	    </div><!-- /.post-text -->
+	    </div><!-- /.entry -->
+    <div class="fix"></div>
+    <!--googleoff: all--><div class="fix"></div><div id="related"><div class="arrow_left"></div><div class="arrow_right"></div><div class="crp_related "><h3>Te puede interesar</h3><ul><li><a href="http://www.teknlife.com/noticia/oracle-incorpora-las-bases-de-datos-en-memoria/"     class="crp_title">Oracle incorpora las bases de datos en memoria</a><a href="http://www.teknlife.com/noticia/oracle-incorpora-las-bases-de-datos-en-memoria/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/06/larry_ellison_oracle-186x140.jpg" alt="Oracle incorpora las bases de datos en memoria" title="Oracle incorpora las bases de datos en memoria" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/andres/">Andrés Purriños</a></span> </li><li><a href="http://www.teknlife.com/noticia/mongodb-y-teradata-se-integraran-mediante-json/"     class="crp_title">MongoDB y Teradata se integrarán mediante JSON</a><a href="http://www.teknlife.com/noticia/mongodb-y-teradata-se-integraran-mediante-json/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/05/databases-186x140.jpg" alt="MongoDB y Teradata se integrarán mediante JSON" title="MongoDB y Teradata se integrarán mediante JSON" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/andres/">Andrés Purriños</a></span> </li><li><a href="http://www.teknlife.com/noticia/apple-compra-foundationdb-desarrolladora-de-bases-de-datos/"     class="crp_title">Apple compra FoundationDB, desarrolladora de bases de datos</a><a href="http://www.teknlife.com/noticia/apple-compra-foundationdb-desarrolladora-de-bases-de-datos/"    ><img src="http://www.teknlife.com/wp-content/uploads/2015/03/apple-compra-foundationdb-186x140.jpg" alt="Apple compra FoundationDB, desarrolladora de bases de datos" title="Apple compra FoundationDB, desarrolladora de bases de datos" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/celia/">Celia Valdeolmillos</a></span> </li><li><a href="http://www.teknlife.com/noticia/teradata-compra-think-big-analytics/"     class="crp_title">Teradata compra la consultora Think Big</a><a href="http://www.teknlife.com/noticia/teradata-compra-think-big-analytics/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/05/databases-186x140.jpg" alt="Teradata compra la consultora Think Big" title="Teradata compra la consultora Think Big" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/andres/">Andrés Purriños</a></span> </li><li><a href="http://www.teknlife.com/entrevista/stephen-brobst/"     class="crp_title">Las personas que gobiernan casi nunca entienden la tecnología</a><a href="http://www.teknlife.com/entrevista/stephen-brobst/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/06/stephen_brobst-186x140.jpg" alt="Las personas que gobiernan casi nunca entienden la tecnología" title="Las personas que gobiernan casi nunca entienden la tecnología" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/andres/">Andrés Purriños</a></span> </li><li><a href="http://www.teknlife.com/noticia/larry-ellison-deja-de-ser-ceo-de-oracle/"     class="crp_title">Larry Ellison deja de ser CEO de Oracle</a><a href="http://www.teknlife.com/noticia/larry-ellison-deja-de-ser-ceo-de-oracle/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/09/Larry_Ellison_2013-186x140.jpg" alt="Larry Ellison deja de ser CEO de Oracle" title="Larry Ellison deja de ser CEO de Oracle" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/marcos/">Marcos Sagrado</a></span> </li><li><a href="http://www.teknlife.com/noticia/foursquare-cobrara-algunas-empresas-por-acceder-sus-datos/"     class="crp_title">Foursquare cobrará a algunas empresas por acceder a sus datos</a><a href="http://www.teknlife.com/noticia/foursquare-cobrara-algunas-empresas-por-acceder-sus-datos/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/02/dennis_crowley_foursquare-186x140.jpg" alt="Foursquare cobrará a algunas empresas por acceder a sus datos" title="Foursquare cobrará a algunas empresas por acceder a sus datos" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/celia/">Celia Valdeolmillos</a></span> </li><li><a href="http://www.teknlife.com/noticia/twitter-compra-gnip-empresa-de-analisis-de-datos-de-redes-sociales/"     class="crp_title">Twitter compra Gnip, empresa de análisis de datos de redes sociales</a><a href="http://www.teknlife.com/noticia/twitter-compra-gnip-empresa-de-analisis-de-datos-de-redes-sociales/"    ><img src="http://www.teknlife.com/wp-content/uploads/2014/02/twitter-compra-patentes-ibm-186x140.jpg" alt="Twitter compra Gnip, empresa de análisis de datos de redes sociales" title="Twitter compra Gnip, empresa de análisis de datos de redes sociales" width="186" height="140" class="crp_thumb crp_featured" /></a><span class="crp_author">  by <a href="http://www.teknlife.com/autor/celia/">Celia Valdeolmillos</a></span> </li></ul><div class="crp_clear"></div></div></div><!-- ./related --><div class="fix"></div><!--googleon: all-->    <div id="comments">		 	<h3 id="comments-title">One Response to <em>MongoDB, ¿son las bases de datos no relacionales el futuro?</em></h3>
+		 	<ol class="commentlist">
+				
+		<li id="comment-2713" class="comment even thread-even depth-1">
+
+	      	<div id="li-comment-2713" class="comment-container">
+
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/baa5872db640089e1a9467679134ca86?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></div>
+	            
+		      	<div class="comment-head">
+
+	                <span class="name">alejandro</span>
+	                <span class="date">26 Agosto, 2017 at 0:47</span>
+	                <span class="perma"><a href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/#comment-2713" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+
+				</div><!-- /.comment-head -->
+
+		   		<div class="comment-entry">
+
+				<p>soy demografo de Argentina.  me interesaría conversar sobre el uso de este tipo de bases para el manejo de datos censales. los censos, como casi todas las operaciones estadísticas vienen usando bases relacionales. por lo que estuve leyendo de Mongo, por ejemplo, que es poco hasta ahora, me parece interesante la opción que presentan. lo que me interesaría conocer es, cuáles son los procesos que se realizan para obtener resultados del censo en formatos que se usan habitualmente, distribuciones de frecuencias, tabulados, indicadores, etc.<br />
+me pueden orientar?<br />
+gracias!</p>
+
+				
+	                <div class="reply">
+	                    <a rel='nofollow' class='comment-reply-link' href='http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/?replytocom=2713#respond' onclick='return addComment.moveForm( "comment-2713", "2713", "respond", "9251" )' aria-label='Responder a alejandro'>Responder</a>	                </div><!-- /.reply -->
+
+				</div><!-- /comment-entry -->
+
+			</div><!-- /.comment-container -->
+
+	</li><!-- #comment-## -->
+			</ol>
+		 	</div>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/#respond" style="display:none;">Click here to cancel reply.</a></small></h3>			<form action="http://www.teknlife.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-form-comment"><label class="hide" for="comment">Comentario</label> <textarea tabindex="4" id="comment" name="comment" cols="50" rows="10" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><input id="author" name="author" type="text" class="txt" tabindex="1" value="" size="30" aria-required='true' /><label for="author">Name <span class="required">(required)</span></label> </p>
+<p class="comment-form-email"><input id="email" name="email" type="text" class="txt" tabindex="2" value="" size="30" aria-required='true' /><label for="email">Email (will not be published) <span class="required">(required)</span></label> </p>
+<p class="comment-form-url"><input id="url" name="url" type="text" class="txt" tabindex="3" value="" size="30" /><label for="url">Website</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='9251' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>		<p class="antispam-group antispam-group-q" style="clear: both;">
+			<label>Current ye@r <span class="required">*</span></label>
+			<input type="hidden" name="antspm-a" class="antispam-control antispam-control-a" value="2018" />
+			<input type="text" name="antspm-q" class="antispam-control antispam-control-q" value="4.3" autocomplete="off" />
+		</p>
+		<p class="antispam-group antispam-group-e" style="display: none;">
+			<label>Leave this field empty</label>
+			<input type="text" name="antspm-e-email-url-website" class="antispam-control antispam-control-e" value="" autocomplete="off" />
+		</p>
+			</form>
+			</div><!-- #respond -->
+		
+   </div><!-- /.post_wrapper -->
+
+</article><!-- /.post -->
+     
+    		<!--div class="fb-comments" data-href="http://www.teknlife.com/reportaje/mongodb-son-las-bases-de-datos-relacionales-el-futuro/" data-num-posts="6" data-width="580" data-colorscheme="light" data-mobile="false"></div-->  
+
+            </section><!-- /#main -->
+            
+            
+		</div><!-- /#main-sidebar-container -->         
+
+		
+    </div><!-- /#content -->
+		<footer id="footer" class="col-full">
+				<div class="gotop" id="gotop_upper">
+			<div class="gotop_wrapper">
+				<div class="gotop_shape">&nbsp;</div>
+				<div class="gotop_shape_small">&nbsp;</div>
+			</div>
+		</div><!--/#gotop_upper-->
+		<div id="copyright" class="col-left">
+			<img src="http://www.teknlife.com/wp-content/themes/teknlife/images/logo_blanco.png" alt="TNL Logo" />
+			<p>&copy; TeknLife Servicios y Consultoría SL 2017</p>
+		</div> 
+		<div id="credit" class="col-right">
+			<p><a href="/condiciones-de-uso">Condiciones de uso</a></p>
+			<p><a href="/politica-de-privacidad">Política de privacidad</a></p>
+			<p><a href="/contacto">Contacto</a></p>
+		</div>
+		<div class="gotop" id="gotop_bottom">
+			<div class="gotop_wrapper">
+				<div class="gotop_shape">&nbsp;</div>
+				<div class="gotop_shape_small">&nbsp;</div>
+			</div><!--/#gotop_bottom-->
+		</div>
+
+	</footer>
+
+	
+	</div><!-- /#inner-wrapper -->
+
+</div><!-- /#wrapper -->
+
+<div class="fix"></div><!--/.fix-->
+
+<div id="cookie-law-info-bar"><span>Tek'n'Life usa cookies para mejorar la experiencia de usuario, si continúa navegando acepta las condiciones de uso.<a href="#" id="cookie_action_close_header"  class="medium cli-plugin-button cli-plugin-main-button" >Aceptar</a></span></div>		
+		<script type="text/javascript">
+			//<![CDATA[
+			jQuery(document).ready(function() {
+				cli_show_cookiebar({
+					settings: '{"animate_speed_hide":"500","animate_speed_show":"500","background":"#fff","border":"#444","border_on":true,"button_1_button_colour":"#000","button_1_button_hover":"#000000","button_1_link_colour":"#fff","button_1_as_button":true,"button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":false,"font_family":"inherit","header_fix":false,"notify_animate_hide":true,"notify_animate_show":false,"notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":false,"scroll_close_reload":false,"showagain_tab":false,"showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#000","show_once_yn":true,"show_once":"3000"}'
+				});
+			});
+			//]]>
+		</script>
+		
+		<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46209572-1', 'teknlife.com');
+  ga('send', 'pageview');
+
+</script>
+<!--script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46209572-1']);  _gaq.push(['_setDomainName', 'teknlife.com']);
+  _gaq.push(['_setCampaignCookieTimeout', 2592000000]); //number of milliseconds in 30 days
+ _gaq.push(['_trackPageview']);
+  setTimeout('_gaq.push(['_trackEvent', 'NoBounce', 'Over 20 seconds'])',20000);
+ 
+  (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script-->
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/jquery_func.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/jquery.cookie.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/jquery.easing.1.3.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/jquery.textfill.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/respond.src.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/js/imagesloaded.pkgd.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/themes/teknlife/includes/tinymce/tools.js?ver=1.0.2'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-includes/js/comment-reply.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/anti-spam/js/anti-spam-4.3.js'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"Imagen anterior","nextLinkTitle":"Siguiente imagen","closeTitle":"cerrar galer\u00eda","image":"Imagen","of":" de ","download":"Descargar","pause":"(pause slideshow)","play":"(play slideshow)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.6'></script>
+<script type='text/javascript' src='http://www.teknlife.com/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+        <script type="text/javascript">
+            function AI_responsive_widget() {
+                jQuery('object.StefanoAI-youtube-responsive').each(function () {
+                    jQuery(this).parent('.fluid-width-video-wrapper').removeClass('fluid-width-video-wrapper').removeAttr('style').css('width', '100%').css('display', 'block');
+                    jQuery(this).children('.fluid-width-video-wrapper').removeClass('fluid-width-video-wrapper').removeAttr('style').css('width', '100%').css('display', 'block');
+                    var width = jQuery(this).parent().innerWidth();
+                    var maxwidth = jQuery(this).css('max-width').replace(/px/, '');
+                    var pl = parseInt(jQuery(this).parent().css('padding-left').replace(/px/, ''));
+                    var pr = parseInt(jQuery(this).parent().css('padding-right').replace(/px/, ''));
+                    width = width - pl - pr;
+                    if (maxwidth < width) {
+                        width = maxwidth;
+                    }
+                    jQuery(this).css('width', width + "px");
+                    jQuery(this).css('height', width / (16 / 9) + "px");
+                    jQuery(this).find('iframe').css('width', width + "px");
+                    jQuery(this).find('iframe').css('height', width / (16 / 9) + "px");
+                });
+            }
+            if (typeof jQuery !== 'undefined') {
+                jQuery(document).ready(function () {
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/iframe_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    AI_responsive_widget();
+                });
+                jQuery(window).resize(function () {
+                    AI_responsive_widget();
+                });
+            }
+                </script>
+        <div id="footer_pad">&nbsp;</div>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+ Served from: www.teknlife.com @ 2018-08-28 18:38:57 by W3 Total Cache -->

@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+
+
+    <html itemscope itemtype="http://schema.org/QAPage" class="">
+
+    <head>
+
+        <title>c++ - Sobre el uso de punteros inteligentes - Stack Overflow en espa&#241;ol</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/es/img/favicon.ico?v=a8def514be8a">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon.png?v=7739871010e6">
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow en espa&#241;ol" href="/opensearch.xml">
+
+
+        <meta property="og:type" content= "website" />
+        <meta property="og:url" content="https://es.stackoverflow.com/questions/164014/sobre-el-uso-de-punteros-inteligentes"/>
+        <meta property="og:site_name" content="Stack Overflow en espa&#241;ol" />
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon@2.png?v=62634cce9d6c" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:domain" content="es.stackoverflow.com"/>
+        <meta name="twitter:site" content="@esStackOverflow" />
+        <meta name="twitter:creator" content="@esStackOverflow" />
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="Sobre el uso de punteros inteligentes" />
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Supongamos que se tiene el hipot&#233;tico caso donde se utilizan punteros para todo tipo de variable. M&#225;s exactamente, tenemos el siguiente procedimiento para leer los elementos de un arreglo unidimens..." />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.sstatic.net/Js/stub.es.js?v=d97a665bc92d"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=4fe27c331a7b">
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/es/primary.css?v=80726669c925">
+
+    
+            <link rel="alternate" type="application/atom+xml" title="Fuente de la pregunta&quot;Sobre el uso de punteros inteligentes&quot;" href="/feeds/question/164014">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://es.stackoverflow.com/questions/164014/sobre-el-uso-de-punteros-inteligentes" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://es.stackoverflow.com/questions/164014/sobre-el-uso-de-punteros-inteligentes" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://es.stackoverflow.com/questions/164014/sobre-el-uso-de-punteros-inteligentes">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:164014});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('637', '164014');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+        
+                <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('637');
+                StackExchange.realtime.subscribeToTopBarNotifications('637');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"es","serverTime":1535469227,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow en español","description":"Preguntas y respuestas para programadores y profesionales de la informática","isNoticesTabEnabled":true,"enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":637,"childUrl":"https://es.meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"55e52611d79bb2823debb4084696f469fa23d3431345db264257f6ea1275edac","tid":"303ba377-6b9b-c9ed-a74a-170cb565d275","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true,"staleDisconnectIntervalInHours":0,"workerIframeDomain":"https://cdn.sstatic.net"},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"userMessaging":{},"comments":{},"userProfile":{},"tags":{"allowNonAsciiTags":true},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.es.js":"ab7b184a75e5","js/moderator.es.js":"c47e1e754c3e","js/full-anon.es.js":"87830ad4eeb7","js/full.es.js":"59b51a478b5b","js/wmd.es.js":"f10e591ec5d1","js/mobile.es.js":"daaa2d18cfec","js/help.es.js":"dc500bbd80ed","js/tageditor.es.js":"fd194a61d355","js/tageditornew.es.js":"e649bac5b377","js/inline-tag-editing.es.js":"5d5bd190e3a0","js/revisions.es.js":"5a0cf1c5f115","js/review.es.js":"38520855d74c","js/tagsuggestions.es.js":"da29a8970d09","js/post-validation.es.js":"2b43a3b5761e","js/explore-qlist.es.js":"e2a8178eb759","js/events.es.js":"fd08646f04ec","js/keyboard-shortcuts.es.js":"1d075d1f95db","js/external-editor.es.js":"3aef3e462343","js/adops.es.js":"9a6a7812a212","js/external-editor.es.js":"3aef3e462343","js/snippet-javascript.es.js":"f13fe4b25f91","js/snippet-javascript-codemirror.es.js":"571dc3219524"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
+        <body class="question-page new-topbar">
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar _fixed">
+    <div class="-container">
+        <div class="-main">
+                                <a href="https://es.stackoverflow.com" class="-logo js-gps-track"
+                        data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                        <span class="-img">Stack Overflow en espa&#241;ol</span>
+                    </a>
+
+
+                <nav class="navigation" role="navigation" aria-label="navegaci&#243;n del sitio">
+                    <ol class="-list">
+        <li class="-item _current">
+            <a id="nav-questions" href="/questions" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Preguntas</a>
+        </li>
+        <li class="-item">
+            <a id="nav-tags" href="/tags" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Etiquetas</a>
+        </li>
+        <li class="-item">
+            <a id="nav-users" href="/users" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Usuarios</a>
+        </li>
+                    </ol>
+                </nav>
+
+        </div>
+
+            <form id="search" action=/search method="get" class="searchbar js-searchbar " autocomplete="off" role="search">
+                    <div class="ps-relative">
+                        <input name="q" type="text" placeholder="Buscar…" value="" autocomplete="off" maxlength="240" class="f-input js-search-field " />
+                        <button type="submit" aria-label="Buscar..." class="s-btn s-btn__primary btn-topbar-primary js-search-submit"><svg aria-hidden="true" class="svg-icon mx0 iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg></button>
+                    </div>
+            </form>
+
+        
+
+
+
+
+
+<ol class="-secondary js-secondary-topbar-links">
+        <li class="-item searchbar-trigger js-searchbar-trigger"><a href="#" class="-link"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg></a></li>
+            <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=inbox" class="-link js-inbox-button" title="Mensajes recientes de la bandeja de entrada">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63c-.85 0-1.6.54-1.85 1.35L0 10.79V15c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"/></svg>
+            <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+        </a>
+    </li>
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=reputation" class="-link js-achievements-button" title="Logros recientes: reputaci&#243;n, medallas y privilegios obtenidos" data-unread-class="_highlighted-positive">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"/></svg>
+            <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+        </a>
+    </li>
+
+    <li class="-item help-button-item" data-remove-order="1"><a href="#" class="-link js-help-button" title="Centro de ayuda y otros recursos">
+        <svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8a5.8 5.8 0 0 1-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66a5.29 5.29 0 0 1 1.43-1.22c.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"/></svg>
+    </a></li>
+
+    <li class="-item">
+        <a href="https://stackexchange.com" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="Lista de los 174 sitios de Stack Exchange">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"/></svg>
+        </a>
+    </li>
+
+            <li class="-ctas">
+                        <a href="https://es.stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes" class="login-link s-btn btn-topbar-clear py8" rel="nofollow">Iniciar sesi&#243;n</a>
+                        <a href="https://es.stackoverflow.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes" class="login-link s-btn s-btn__primary py8 btn-topbar-primary" rel="nofollow" data-ga="[&quot;sign up&quot;,&quot;Sign Up Navigation&quot;,&quot;Header&quot;,null,null]">Registrarse</a>
+
+            </li>
+
+    <li class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://es.stackoverflow.com">comunidad actual</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li class="grid">
+                            <div class="fl1">
+            <a href="https://es.stackoverflow.com"
+       class="current-site-link site-link js-gps-track grid gs8 gsx"
+       data-id="637"
+       data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-es site-icon grid--cell" title="Stack Overflow en español"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow en espa&#241;ol
+        </span>
+    </a>
+
+    </div>
+    <div class="related-links">
+            <a href="https://es.stackoverflow.com/help" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:14 })"
+>ayuda</a>
+                    <a href="https://chat.stackexchange.com?tab=site&amp;host=es.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+
+                    </li>
+                    <li class="related-site grid">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://es.meta.stackoverflow.com"
+       class="site-link js-gps-track grid gs8 gsx"
+       data-id="638"
+       data-gps-track="site.switch({ target_site:638, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-esmeta site-icon grid--cell" title="Stack Overflow Meta en español"></div>
+        <span class="grid--cell fl1">
+            Stack Overflow Meta en espa&#241;ol
+        </span>
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+tus comunidades            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://es.stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Reg&#237;strate</a> o <a href="https://es.stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>inicia sesi&#243;n</a> para personalizar tu lista.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">m&#225;s comunidades Stack Exchange</a>
+            </h3>
+            <a href="https://stackoverflow.blog" class="fr">blog de la empresa</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+            <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Recorrido
+                            <span class="item-summary">
+                                Comienza aqu&#237; para acceder a una breve descripci&#243;n general del sitio
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Centro de Ayuda
+                        <span class="item-summary">
+                            Respuestas detalladas para cualquier pregunta que puedas tener
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://es.meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Analizar el funcionamiento y las pol&#237;ticas de este sitio
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                Sobre nosotros
+                                <span class="item-summary">
+                                    Aprende m&#225;s sobre Stack Overflow, la empresa
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Negocios
+                                <span class="item-summary">
+                                    Aprende m&#225;s sobre c&#243;mo contratar desarrolladores o publicitarte con nosotros
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+            </li>
+</ol>
+
+    </div>
+</header>
+    <div id="js-gdpr-consent-banner" class="p16 bg-black-700 ff-sans fc-white ps-fixed b0 l0 r0 z-banner" role="banner" aria-hidden="false">
+        <div class="wmx12 mx-auto grid jc-space-between" role="alertdialog" aria-describedby="notice-message">
+            <div class="grid--cell mr12" aria-label="notice-message">
+                <p class="mb0 lh-lg">
+                    Este sitio usa cookies para ofrecer nuestros servicios y para mostrarte anuncios relevantes y ofertas laborales.
+Al usar este sitio, reconoces haber leido y entendido nuestra <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/cookie-policy">Pol&#237;tica de Cookies</a>, <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/privacy-policy">Pol&#237;tica de Privacidad</a>, y nuestros <a class="s-link s-link__inherit td-underline fc-white" target="_blank" href="https://stackoverflow.com/legal/terms-of-service/public">T&#233;rminos de Servicio</a>.
+El uso de los Productos y Servicios de Stack Overflow, incluyendo la Red de Stack Overflow, est&#225; sujeta a estas pol&#237;ticas y t&#233;rminos.
+                </p>
+            </div>
+            <a class="grid--cell fc-white js-notice-close" aria-label="notice-dismiss">
+                <svg aria-hidden="true" class="svg-icon m0 iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init({ observeSize: false }); });
+        StackExchange.scrollPadding.setPaddingTop(50, 10);     </script>
+
+
+<div id="announcement-banner" class="bg-black-700 fc-white ff-sans fs-body2 py2" data-campaign="2018-08-07.q&amp;a traffic" data-cookie="notice-CoC" data-expire-date="1539561600000">
+    <div class="grid jc-space-between wmx12 mx-auto px16 py8">
+        <div class="grid--cell mr12">
+            Ay&#250;danos a construir una comunidad amable y colaborativa. Conoce nuestro nuevo 
+            <a class="s-link js-link js-gps-track fw-bold fc-blue-400" href="/conduct" data-ga="[&quot;q&amp;a traffic&quot;,&quot;Announcement Banner&quot;,&quot;/conduct&quot;,null,{&quot;dimension4&quot;:&quot;q&amp;a traffic&quot;}]"
+               data-gps-track="announcement_banner.click({campaign: '2018-08-07.q&amp;a traffic', location: 2, action: 2})">C&#243;digo de conducta</a>.
+        </div>
+        <a class="grid-cell fc-white js-dismiss js-gps-track" href="#" title="descartar"
+           data-gps-track="announcement_banner.click({campaign: '2018-08-07.q&amp;a traffic', location: 2, action: 1})"><svg aria-hidden="true" class="svg-icon m0 iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"/></svg></a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+        var $banner = $('#announcement-banner');
+
+        function setCookie(value) {
+            $.cookie($banner.data('cookie'), value, {
+                expires: (new Date($banner.data('expire-date'))),
+                path: '/'
+            });
+        }
+
+        $banner.find('.js-link').click(function () {
+            setCookie('2;' + Date.now());
+        });
+
+        $banner.find('.js-dismiss').click(function () {
+            setCookie('4;' + Date.now());
+            $banner.animate({ height: '0', opacity: 0 }, 'fast', 'linear', function () { $banner.remove(); });
+            return false;
+        });
+    });
+</script>
+    
+
+
+    <div class="container  ">
+                
+        <div id="content" class="snippet-hidden">
+
+
+            
+
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon.png?v=7739871010e6">
+
+    <div class="inner-content clearfix">
+    
+    
+
+            <div id="question-header">
+                    <h1 itemprop="name"><a href="/questions/164014/sobre-el-uso-de-punteros-inteligentes" class="question-hyperlink">Sobre el uso de punteros inteligentes</a></h1>
+
+            
+
+
+
+<div class="pl8 aside-cta" role="navigation" aria-label="formula una nueva pregunta">
+            <a href="/questions/ask" class="ws-nowrap btn" >Formular una pregunta</a>
+</div>
+
+        </div>
+            <div id="mainbar" role="main" aria-label="preguntas y respuestas">
+
+            
+
+<div class="question" data-questionid="164014"  id="question">
+
+    <style>.everyoneloves__top-leaderboard:empty,.everyoneloves__mid-leaderboard:empty{                margin-bottom:0;
+}</style>
+        <div id="dfp-tlb" class="everyonelovesstackoverflow everyoneloves__top-leaderboard"></div>
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="164014">
+        <a class="vote-up-off" title="Esta pregunta demuestra trabajo de investigaci&#243;n; es &#250;til y clara">voto a favor</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="Esta pregunta no parece tener un trabajo de investigaci&#243;n; es confusa o poco &#250;til">votar en contra</a>
+
+        <a class="star-off" href="#">favorito</a>
+        <div class="favoritecount"><b></b></div>
+
+
+
+</div>
+
+            </div>
+
+            
+<div class="postcell post-layout--right">
+    <div class="post-text" itemprop="text">
+
+<p>Supongamos que se tiene el hipotético caso donde se utilizan punteros para todo tipo de variable. Más exactamente, tenemos el siguiente procedimiento para leer los elementos de un arreglo unidimensional:</p>
+
+<pre><code>void leer_arreglo(int *&amp;v)
+{
+    int *i = new int;
+    for (*i = 0; *i &lt; dim_v; (*i)++)
+    {
+        cout &lt;&lt; "Elemento " &lt;&lt; *i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; v[*i];
+    }
+    delete i;       
+}
+</code></pre>
+
+<p>Como se puede apreciar, incluso la variable <code>i</code>, que solo se utiliza para recorrer los elementos del arreglo, es declarada como un puntero a <code>int</code>, y como tal, al final del procedimiento se debe liberar la memoria manualmente.</p>
+
+<p>¿Cuál sería la solución más razonable para que la variable <code>i</code> permanezca dentro del ámbito del bucle <code>for</code> y al mismo tiempo se evite liberar manualmente la memoria asignada para dicho puntero?</p>
+
+<p>Mi primer intento fue el que se tiene a continuación:</p>
+
+<pre><code>void leer_vector(int *&amp;v)
+{
+    for (int *i = new int(0); *i &lt; dim_v; (*i)++)
+    {
+        cout &lt;&lt; "Elemento " &lt;&lt; *i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; v[*i];
+    }
+    delete i;       
+}
+</code></pre>
+
+<p>El problema es que se genera un error al momento de llegar a la instrucción <code>delete i;</code> pues dicha variable ya no existe fuera del ámbito del <code>for</code>.</p>
+
+<p>Después se me ocurrió lo siguiente:</p>
+
+<pre><code>void leer_vector(int *&amp;v)
+{
+    for (int *i = new int(0); *i &lt; dim_v; (*i)++)
+    {
+        cout &lt;&lt; "Elemento " &lt;&lt; *i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; v[*i];
+        delete i;
+    }       
+}
+</code></pre>
+
+<p>No obstante, tengo serias dudas de que lo anterior sea una buena idea porque en cada iteración estoy liberando la memoria asignada. </p>
+
+<p>No sabía muy bien que hacer hasta que descubrí a los llamados <strong>punteros inteligentes</strong> (<em>smart pointers</em>, gracias Paula_plus_plus) y entonces llegué al siguiente código:</p>
+
+<pre><code>void leer_vector(int *&amp;v)
+{
+    for (auto i = make_unique&lt;int&gt;(); *i &lt; dim_v; (*i)++)
+    {
+        cout &lt;&lt; "Elemento " &lt;&lt; *i + 1 &lt;&lt; ": ";
+        cin &gt;&gt; v[*i];
+    }       
+}
+</code></pre>
+
+<p>Qué bonito, ¿verdad?, la variable <code>i</code> está en dentro del ámbito del <code>for</code> y no tenemos que preocuparnos de liberar manualmente la memoria asignada. Entonces, surge mi pregunta: <strong>¿es este un uso válido de los punteros inteligentes?</strong></p>
+
+<p>Hago esta pregunta porque a pesar de revisar algunos enlaces de SO donde se analizan en que casos se deben usar este tipo de punteros, todavía no tengo del todo claro si en mi caso en particular el último fragmento de código que puse sea una solución correcta y aceptable.</p>
+
+<p>Gracias de antemano por sus comentarios y/o respuestas.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/c%2b%2b" class="post-tag" title="mostrar preguntas con la etiqueta &quot;c++&quot;" rel="tag">c++</a> <a href="/questions/tagged/punteros" class="post-tag" title="mostrar preguntas con la etiqueta &quot;punteros&quot;" rel="tag">punteros</a> <a href="/questions/tagged/c%2b%2b11" class="post-tag" title="mostrar preguntas con la etiqueta &quot;c++11&quot;" rel="tag">c++11</a> 
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/q/164014" title="enlace permanente corto a esta pregunta" class="short-link" id="link-post-164014">compartir</a><span class="lsep">|</span><a href="/posts/164014/edit" class="suggest-edit-post" title="">mejorar esta pregunta</a></div>        
+    </div>
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/164014/revisions" title="mostrar todas las ediciones realizadas a esta publicación">editada <span title="2018-05-15 12:32:59Z" class="relativetime">el 15 may. a las 12:32</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+    <div class="post-signature owner grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        formulada <span title="2018-05-13 15:34:33Z" class="relativetime">el 13 may. a las 15:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/63114/xam"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/Dcdi8.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/63114/xam">Xam</a>
+        <div class="-flair">
+            <span class="reputation-score" title="puntuación de reputación de " dir="ltr">459</span><span title="2 medallas de oro"><span class="badge1"></span><span class="badgecount">2</span></span><span title="4 medallas de plata"><span class="badge2"></span><span class="badgecount">4</span></span><span title="14 medallas de bronce"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+</div>
+
+                
+    <div class="post-layout--right">
+	    <div id="comments-164014" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list"
+                    data-remaining-comments-count="0"
+                    data-canpost="false"
+                    data-cansee="true"
+                    data-comments-unavailable="false"
+                    data-addlink-disabled="true">
+
+
+    <li id="comment-308356" class="comment js-comment " data-comment-id="308356">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="cantidad de votos de &#39;comentario &#250;til&#39; recibidos"
+                            class="cool">1</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;" >
+                <span class="comment-copy">Est&#225; <i>raspando</i> el cierre por <code>Basada en opiniones</code>. No lo voto porque puede ser interesante para otros, pero deber&#237;as reformularla.</span>
+                    &ndash;&nbsp;<a href="/users/19610/trauma"
+                       title="10,417 reputaci&#243;n"
+                       class="comment-user">Trauma</a>
+                <span class="comment-date" dir="ltr"><span title="2018-05-13 17:17:13Z" class="relativetime-clean">el 13 may. a las 17:17</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-308358" class="comment js-comment " data-comment-id="308358">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="cantidad de votos de &#39;comentario &#250;til&#39; recibidos"
+                            class="cool">1</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;" >
+                <span class="comment-copy">@Trauma si, ahora que lo vuelvo a leer, entiendo que mi pregunta pueda ser cerrada por ese motivo. Tratar&#233; de reformularla.</span>
+                    &ndash;&nbsp;<a href="/users/63114/xam"
+                       title="459 reputaci&#243;n"
+                       class="comment-user owner">Xam</a>
+                <span class="comment-date" dir="ltr"><span title="2018-05-13 17:26:25Z" class="relativetime-clean">el 13 may. a las 17:26</span></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-164014" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Utiliza los comentarios para pedir m&#225;s informaci&#243;n o para sugerir mejoras. Evita responder a preguntas en los comentarios."
+                   >a&#241;ade un comentario</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expandir para mostrar todos los comentarios de esta publicaci&#243;n" href=# onclick=""></a>
+        </div>         
+    </div>        </div>
+</div>
+
+
+
+        <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="1">
+                                1 respuesta
+                                <span style="display:none;" itemprop="answerCount">1</span>
+                        </h2>
+                        <div>
+                            
+<div id="tabs">
+        <a href="/questions/164014/sobre-el-uso-de-punteros-inteligentes?answertab=active#tab-top" data-nav-xhref="" title="Respuestas con la actividad m&#225;s reciente primero" data-value="active" data-shortcut="A">
+            activas</a>
+        <a href="/questions/164014/sobre-el-uso-de-punteros-inteligentes?answertab=oldest#tab-top" data-nav-xhref="" title="Respuestas en el orden en que fueron proporcionadas" data-value="oldest" data-shortcut="O">
+            m&#225;s antiguas</a>
+        <a class="youarehere is-selected " href="/questions/164014/sobre-el-uso-de-punteros-inteligentes?answertab=votes#tab-top" data-nav-xhref="" title="Respuestas con la puntuaci&#243;n m&#225;s alta primero" data-value="votes" data-shortcut="V">
+            votos</a>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="164508"></a>
+<div id="answer-164508" class="answer accepted-answer" data-answerid="164508"  itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="164508">
+        <a class="vote-up-off" title="Esta respuesta es &#250;til">voto a favor</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="Esta respuesta no es &#250;til">votar en contra</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="cargando cu&#225;ndo se acept&#243; esta respuesta...">aceptada</span>
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<blockquote>
+  <p><strong>¿Es este un uso válido de los punteros inteligentes?</strong></p>
+</blockquote>
+
+<p>Claro: el código compila, se ejecuta y no produce errores en tiempo de ejecución ni fugas de memoria; así pues es un uso válido.</p>
+
+<p>Otra cosa es que el código que has mostrado como ejemplo sea un uso <em>inteligente</em> de los punteros inteligentes, que a mi entender: no lo es; por ejemplo:</p>
+
+<blockquote>
+  <p>¿Cuál sería la solución más razonable para que la variable <code>i</code> permanezca dentro del ámbito del bucle <code>for</code> y al mismo tiempo se evite liberar la memoria asignada para dicho puntero?</p>
+</blockquote>
+
+<p>La razón de ser de los punteros inteligentes es precisamente liberar la memoria asignada a ellos, así que si querías que la memoria asignada no se liberase: un puntero inteligente no debería ser tu elección.</p>
+
+<hr>
+
+<p>Los punteros inteligentes fueron introducidos en el estándar C++11, aunque en C++ ya existía un intento de estandarizar el modismo RAII<sup>1</sup> sobre punteros<sup>2</sup> antes del estándar de 2011 ese intento era muy limitado y poco flexible así que se decidió deprecarlo y desarrollar tres tipos de punteros inteligentes:</p>
+
+<h3>Puntero único (<a href="https://en.cppreference.com/w/cpp/memory/unique_ptr" rel="nofollow noreferrer"><code>std::unique_ptr</code></a>).</h3>
+
+<p>Envuelve a un puntero que conceptualmente tendrá un único propietario, cuando se deja de usar el puntero o se reasigna, se liberan los recursos que estuviera manejando; es posible mover el puntero entre diferentes ámbitos:</p>
+
+<pre><code>std::unique_ptr&lt;int&gt; dame_dato() {
+    std::unique_ptr&lt;int&gt; result;
+    // Obtenemos dato, de una fuente externa, el dato necesita ser borrado
+    // cuando se deje de usar.
+    int *puntero_crudo = factoria_de_datos();
+    // Asignamos el puntero
+    result.reset(puntero_crudo);
+    // Devolvemos el puntero inteligente
+    return result;
+}
+</code></pre>
+
+<p>El <code>std::unique_ptr</code> creado dentro de <code>dame_dato</code> no libera el puntero asignado al salir de ámbito si no que hace que cambie de propietario, siendo el anterior propietario la función <code>dame_dato</code> y el nuevo propietario el llamador de la misma.</p>
+
+<h3>Puntero compartido (<a href="https://en.cppreference.com/w/cpp/memory/shared_ptr" rel="nofollow noreferrer"><code>std::shared_ptr</code></a>).</h3>
+
+<p>Envuelve a un puntero que conceptualmente tendrá múltiples propietarios, la cantidad de propietarios del puntero es recordada como un contador atómico manejado por el propio puntero inteligente; creciendo al ganar un propietario y decreciendo al perderlo. Cuando el contador de propietarios llega a cero, se liberaran los recursos que el puntero estuviera manejando, también es posible mover el puntero entre diferentes ámbitos y si en lugar de moverlo se copia se actualizará el contador de propietarios, esto puede ser costoso a nivel de proceso porque manejar dicho contador implica varias comprobaciones de seguridad. El siguiente código:</p>
+
+<pre><code>struct S {};
+
+void propietarios(const std::shared_ptr&lt;S&gt; &amp;sp)
+{
+    std::cout &lt;&lt; "Propietarios de " &lt;&lt; sp.get() &lt;&lt; ": " &lt;&lt; sp.use_count() &lt;&lt; '\n';
+}
+
+void f(std::shared_ptr&lt;S&gt; sp) { propietarios(sp); }
+
+int main()
+{
+    auto sp = std::make_shared&lt;S&gt;();
+    propietarios(sp); // Referencia: no aumenta propietarios
+    f(sp);            // Copia: aumenta propietarios
+    propietarios(sp); // Referencia: no aumenta propietarios
+    return 0;
+}
+</code></pre>
+
+<p>Produciría la siguiente salida:</p>
+
+<blockquote>
+<pre><code>Propietarios de 0x22ea170: 1
+Propietarios de 0x22ea170: 2
+Propietarios de 0x22ea170: 1
+</code></pre>
+</blockquote>
+
+<h3>Puntero débil (<a href="https://en.cppreference.com/w/cpp/memory/weak_ptr" rel="nofollow noreferrer"><code>std::weak_ptr</code></a>).</h3>
+
+<p>Envuelve a un puntero del que conceptualmente no será propietario, cualquier uso del puntero requiere <em>bloquearlo</em> lo que devolverá un puntero compartido, permite saber si existe el objeto al que apunta mediante la función <a href="https://en.cppreference.com/w/cpp/memory/weak_ptr/expired" rel="nofollow noreferrer"><code>std::weak_ptr::expired</code></a>.</p>
+
+<h3>¿Cuándo usar los punteros inteligentes?</h3>
+
+<p>Se usará el puntero único cuando sepamos que el recurso apuntado tendrá un único propietario, el puntero compartido será usado cuando el recurso apuntado tenga varios propietarios y el puntero débil se usará para reclamar el uso de punteros compartidos sin apropiarse de ellos (más que temporalmente).</p>
+
+<hr>
+
+<ol>
+<li>Gracias por mencionarlo Trauma.</li>
+<li>El <a href="https://en.cppreference.com/w/cpp/memory/auto_ptr" rel="nofollow noreferrer"><code>std::auto_ptr</code></a>, deprecado en C++11 y eliminado del estándar en C++17.</li>
+</ol>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/164508" title="enlace permanente corto a esta respuesta" class="short-link" id="link-post-164508">compartir</a><span class="lsep">|</span><a href="/posts/164508/edit" class="suggest-edit-post" title="">mejorar esta respuesta</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/164508/revisions" title="mostrar todas las ediciones realizadas a esta publicación">editada <span title="2018-05-15 12:23:19Z" class="relativetime">el 15 may. a las 12:23</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        respondida <span title="2018-05-15 10:34:57Z" class="relativetime">el 15 may. a las 10:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2742/paula-plus-plus"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/Ocgik.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2742/paula-plus-plus">Paula_plus_plus</a>
+        <div class="-flair">
+            <span class="reputation-score" title="puntuación de reputación de 17,846" dir="ltr">17.8k</span><span title="3 medallas de oro"><span class="badge1"></span><span class="badgecount">3</span></span><span title="22 medallas de plata"><span class="badge2"></span><span class="badgecount">22</span></span><span title="50 medallas de bronce"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-164508" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list"
+                    data-remaining-comments-count="0"
+                    data-canpost="false"
+                    data-cansee="true"
+                    data-comments-unavailable="false"
+                    data-addlink-disabled="true">
+
+
+    <li id="comment-309329" class="comment js-comment " data-comment-id="309329">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;" >
+                <span class="comment-copy">Cuando me refer&#237;a a que se evite liberar la memoria asignada, hablaba de evitar usar el operador <code>delete</code>. Se me pas&#243; usar la palabra &quot;manualmente&quot;. Acabo de editar la pregunta.</span>
+                    &ndash;&nbsp;<a href="/users/63114/xam"
+                       title="459 reputaci&#243;n"
+                       class="comment-user owner">Xam</a>
+                <span class="comment-date" dir="ltr"><span title="2018-05-15 12:34:22Z" class="relativetime-clean">el 15 may. a las 12:34</span></span>
+                        <span title="este comentario se edit&#243; 1 vez">
+                            <svg aria-hidden="true" class="svg-icon va-text-bottom o50 iconPencilSm" width="14" height="15" viewBox="0 0 14 15"><path d="M8.37 4.7L2 11.11V13h1.88l6.37-6.43zM12.23 3.83L11.1 2.71a.5.5 0 0 0-.7 0L9.2 3.86l1.88 1.84 1.14-1.16a.5.5 0 0 0 0-.71z"/></svg>
+                        </span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-309330" class="comment js-comment " data-comment-id="309330">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;" >
+                <span class="comment-copy">Pues yo no lo entend&#237; ;P</span>
+                    &ndash;&nbsp;<a href="/users/2742/paula-plus-plus"
+                       title="17,846 reputaci&#243;n"
+                       class="comment-user">Paula_plus_plus</a>
+                <span class="comment-date" dir="ltr"><span title="2018-05-15 12:35:15Z" class="relativetime-clean">el 15 may. a las 12:35</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-309333" class="comment js-comment " data-comment-id="309333">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;" >
+                <span class="comment-copy">M&#225;s all&#225; de eso, su respuesta est&#225; genial. Gracias por la explicaci&#243;n sobre los distintos tipos de punteros inteligentes.</span>
+                    &ndash;&nbsp;<a href="/users/63114/xam"
+                       title="459 reputaci&#243;n"
+                       class="comment-user owner">Xam</a>
+                <span class="comment-date" dir="ltr"><span title="2018-05-15 12:36:34Z" class="relativetime-clean">el 15 may. a las 12:36</span></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-164508" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Utiliza los comentarios para pedir m&#225;s informaci&#243;n o para sugerir mejoras. Evita los comentarios como “+1” o “gracias”."
+                   >a&#241;ade un comentario</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expandir para mostrar todos los comentarios de esta publicaci&#243;n" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+                                    <a name='new-answer'></a>
+                        <form id="post-form" action="/questions/164014/answer/submit" method="post"  class="post-form">
+                            <input type="hidden" id="post-id" value="164014" />
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                            <input type="hidden" name="referrer" value="https://www.google.com/"/>
+                            <h2 class="space">Tu Respuesta</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        var channelOptions = {
+            tags: "".split(" "),
+            id: "637"
+        };
+        initTagRenderer("".split(" "), "".split(" "), channelOptions);
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                StackExchange.prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                noModals: false,
+                showLowRepImageUploadWarning: true,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor wz-element" data-wz-state="3,4,5,6,7,8">
+
+    <div style="position: relative;"> 
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar btr-sm"></div>
+                        <textarea id="wmd-input" class="wmd-input wz-element s-input bar0" name="post-text" cols="92" rows="15" tabindex="101" data-wz-state="8" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">borrador guardado</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">borrador descartado</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="55e52611d79bb2823debb4084696f469fa23d3431345db264257f6ea1275edac">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+
+                            <div style="position: relative;">
+                                
+                                            <div class="form-item dno new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Registrarse o <a id="login-link" href="/users/login?ssrc=question_page&returnurl=https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes%23new-answer">iniciar sesi&#243;n</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Google&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><g><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"/><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"/><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"/><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"/></g></svg> Registrarse mediante Google
+                        </div>
+                        <div class="preferred-login facebook-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Facebook&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M1.88 1C1.4 1 1 1.4 1 1.88v14.24c0 .48.4.88.88.88h7.67v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h4.08c.48 0 .88-.4.88-.88V1.88c0-.48-.4-.88-.88-.88H1.88z" fill="#3C5A96"/></svg> Registrarse mediante Facebook
+                        </div>
+                        <div class="preferred-login stackexchange-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Navigation&quot;,&quot;New Post&quot;,null,null]">
+                            <svg aria-hidden="true" class="svg-icon native iconLogoGlyphXSm" width="18" height="18" viewBox="0 0 18 18"><g><path fill="#BCBBBB" d="M14 16v-5h2v7H2v-7h2v5z"/><path d="M5 15v-2h8v2H5zM12.09.72l4.5 6.06-1.2.9-4.51-6.06 1.21-.9zM8.34 4.3l.97-1.16 5.8 4.83-.96 1.16-5.8-4.83zm-1.9 3.36l.64-1.37 6.85 3.19-.63 1.37-6.85-3.2zM5.4 11.39l.38-1.67 7.42 1.48-.22 1.46-7.58-1.27z" fill="#F48024"/></g></svg> Reg&#237;strate con email y contrase&#241;a
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid" />
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false" />
+                    <input type="hidden" name="use-google" class="use-google" value="false" />
+                    <input type="button" class="submit-openid" value="Submit" style="display:none" />
+                    <div class="new-login-right">
+                                <h3>Publicar como invitado</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Nombre</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Correo electr&#243;nico</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="requerido, pero nunca mostrado" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2fes.stackoverflow.com%2fquestions%2f164014%2fsobre-el-uso-de-punteros-inteligentes%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Publicar como invitado</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Nombre</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Correo electr&#243;nico</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="requerido, pero nunca mostrado" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+                            </div>
+
+                                                            <div class="form-submit cbt">
+                                            <input id="submit-button" type="submit" value="Publica Tu Respuesta" tabindex="110">
+                                        <a href="#" class="btn-clear discard-answer dno">descartar</a>
+                                                                            <p class="privacy-policy-agreement">
+                                            
+
+Al dar click en &quot;Publica Tu Respuesta&quot;, reconoces que has leido nuestros <a href='https://stackoverflow.com/legal/terms-of-service/public' name='tos' target='_blank' class='-link'>t&#233;rminos de servicio</a> actualizados, la <a href='https://stackoverflow.com/legal/privacy-policy' name='privacy' target='_blank' class='-link'>pol&#237;tica de privacidad</a> y la <a href='https://stackoverflow.com/legal/cookie-policy' name='cookie' target='_blank' class='-link'>pol&#237;tica de cookies</a>, y que el uso continuo de este sitio est&#225; sujeto a estas pol&#237;ticas.
+
+<input type="hidden" name="legalLinksShown" value="1" />
+                                        </p>
+                                </div>
+                        </form>
+
+
+
+                        <h2 class="bottom-notice" data-loc="1">
+&#191;No es la respuesta que buscas?                            Examina otras preguntas con la etiqueta <a href="/questions/tagged/c%2b%2b" class="post-tag" title="mostrar preguntas con la etiqueta &quot;c++&quot;" rel="tag">c++</a> <a href="/questions/tagged/punteros" class="post-tag" title="mostrar preguntas con la etiqueta &quot;punteros&quot;" rel="tag">punteros</a> <a href="/questions/tagged/c%2b%2b11" class="post-tag" title="mostrar preguntas con la etiqueta &quot;c++11&quot;" rel="tag">c++11</a>  o <a href="/questions/ask">formula tu propia pregunta</a>.                        </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes" role="complementary" aria-label="barra lateral">
+                            <div class="module question-stats">
+                    <table id="qinfo">
+                        <tr>
+                            <td>
+                                <p class="label-key">formulada</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2018-05-13 15:34:33Z"><b>hace 3 meses</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">vista</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>71 veces</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">activo</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2018-05-15 12:32:59Z">hace 3 meses</a></b></p>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            
+            
+<div id="dfp-tsb" class="everyonelovesstackoverflow everyoneloves__top-sidebar"></div>
+<script>;try{(function(a){function b(a){return'string'==typeof a?document.getElementById(a):a}function c(a){return a=b(a),!!a&&'none'===getComputedStyle(a).display}function d(a){return!c(a)}function e(a){return!!a}function f(a){return /^\s*$/.test(b(a).innerHTML)}function g(a){var b=a.style;b.height=b.maxHeight=b.minHeight='auto',b.display='none',[].forEach.call(a.children,g)}function h(a,b){var c;return function(){return a&&(c=a.call(b||this,arguments),a=null),c}}function i(a){var b=document.createElement('script');b.src=a,document.body.appendChild(b)}function j(a){return k([],a)}function k(a,b){return a.push=function(a){return b(),delete this.push,this.push(a)},a}function l(){try{return!new Function('return async()=>{};')}catch(a){return!0}}function m(){return'undefined'!=typeof googletag&&!!googletag.apiReady}function n(){m()||(googletag={cmd:j(A)})}function o(){var a=document.createElement('div');a.className='adsbox',a.id='clc-abd',a.style.position='absolute',a.style.pointerEvents='none',a.innerHTML='&nbsp;',document.body.appendChild(a)}function p(a){var b=a.serviceName,c=a.slot,d=a.lineItemId;try{var e=c.getSlotElementId(),f=[];e||f.push('id=0');var h=document.getElementById(e);if(!e||h?h.hasAttribute('data-clc-stalled')&&f.push('st=1'):f.push('el=0'),0!==f.length)return void B(f.join('&'));-1===x.dh.indexOf(d)?h.setAttribute('data-clc-prefilled','true'):g(h),h.setAttribute('data-clc-ready','true')}catch(a){var i=document.querySelector('#dfp-tsb, #dfp-isb, #clc-tsb');i&&i.setAttribute('data-clc-ready','true'),B('e=1')}}function q(){return Object.keys(F.ids)}function r(a){var b=F.ids[a],c=F.slots[b];'function'==typeof c&&(c=c(a));return{path:'/'+C+'/'+E+'/'+b+'/'+D,sizes:c,zone:b}}function s(a){return!(clc.collapse&&void 0!==clc.collapse[a])||!!clc.collapse[a]}function t(a,b){'dfp-isb'===a&&b.setTargeting('Sidebar',['Inline']),'dfp-tsb'===a&&b.setTargeting('Sidebar',['Right']);var c=r(a),d=c.path,e=c.sizes,f=c.zone,g=googletag.defineSlot(d,e,a);s(f)&&g.setCollapseEmptyDiv(!0,!0),g.addService(b),!1}function u(b){var c=a.dfp&&a.dfp.targeting||{};Object.keys(c).forEach(function(a){b.setTargeting(a,c[a])})}function v(a){var g=a.map(b).filter(e);return{eligible:g.filter(f).filter(d).map(function(a){return a.id}),ineligible:g.filter(c)}}function w(b){if(void 0===b&&(b=q()),!m())return n(),void googletag.cmd.push(function(){return w(b)});var c=v(b),d=c.eligible,e=c.ineligible;if(e.forEach(g),0!==d.length){o(),googletag.destroySlots();var f=googletag.pubads();f.enableSingleRequest(),a.sreEvent||(f.addEventListener('slotRenderEnded',p),a.sreEvent=!0),u(f),d.forEach(function(a){return t(a,f)}),googletag.enableServices(),d.forEach(function(a){googletag.display(a)})}}var x=function(a){for(var b=[],c=1;c<arguments.length;c++)b[c-1]=arguments[c];for(var d,e=0,f=b;e<f.length;e++)for(var g in d=f[e],d)a[g]=d[g];return a}({"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=04d772c81312","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=f28c677e209b","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false,"dh":[4385506061,4386578282,4386579572]},a.options||{}),y=h(function(){var a=x.lib;l()&&(a=a.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2')),i(a)}),z=a.cmd||[];Array.isArray(z)&&(0<z.length?y():k(z,y));var A=h(function(){i('https://www.googletagservices.com/tag/js/gpt.js')}),B=function(a){new Image().src='https://'+x.h+'/stalled.gif?'+a},C='248424177',D=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':'question-pages',E=location.hostname;var F={slots:{lb:[[728,90]],mlb:[[728,90]],sb:function(a){return'dfp-tsb'===a?[[300,250],[300,600]]:[[300,250]]},"tag-sponsorship":[[730,135]],"mobile-below-question":[[320,50],[300,250]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-tsb":'sb',"dfp-isb":'sb',"dfp-tag":'tag-sponsorship',"dfp-m-aq":'mobile-below-question',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}};(function(){var b=x.al;b&&z.push(function(){return a.load()})})(),n(),a.dfp={load:w},a.options=x,a.cmd=z})(this.clc=this.clc||{})}catch(a){window.console.error(a)}</script>            <script>
+                var clc = clc || {};
+                clc.collapse = { sb: !0,'tag-sponsorship':!0,lb:!0,mlb:!0,'mobile-below-question':!0};
+                                clc.dfp = clc.dfp || {};
+                clc.dfp.targeting = {Registered:['false'],'es.so-tag':['c_plus_plus','punteros','c_plus_plus11']};
+                
+                var googletag = googletag || {};
+                googletag.cmd = googletag.cmd || [];
+                googletag.cmd.push(function () { clc.dfp.load(); });
+            </script>
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Enlazados</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="/q/136504" title="Puntuaci&#243;n de votos (votos a favor, votos en contra)">
+		<div class="answer-votes answered-accepted default">4</div>
+	</a>
+	<a href="/questions/136504/gesti%c3%b3n-correcta-raii-en-c?noredirect=1" class="question-hyperlink">Gesti&#243;n correcta RAII en C++</a>
+</div>			</div>
+</div>
+
+                <div class="module sidebar-related">
+                    <h4 id="h-related">Relacionados</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/56709" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">0</div></a><a href="/questions/56709/duda-con-listas-ligadas-punteros-c" class="question-hyperlink">Duda con listas ligadas (punteros) C++</a></div><div class="spacer"><a href="/q/56749" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes default">5</div></a><a href="/questions/56749/duda-con-enteros-punteros-y-nullptr" class="question-hyperlink">Duda con enteros, punteros, y nullptr</a></div><div class="spacer"><a href="/q/67099" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">6</div></a><a href="/questions/67099/conversi%c3%b3n-entre-punteros-inteligentes" class="question-hyperlink">Conversi&#243;n entre punteros inteligentes</a></div><div class="spacer"><a href="/q/79897" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">0</div></a><a href="/questions/79897/error-al-implementar-un-puntero-a-array-en-c" class="question-hyperlink">Error al implementar un puntero a array en C++</a></div><div class="spacer"><a href="/q/79919" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">2</div></a><a href="/questions/79919/duda-al-asignar-memoria-din%c3%a1mica-a-una-estructura-tipo-matriz-en-c" class="question-hyperlink">Duda al asignar memoria din&#225;mica a una estructura tipo Matriz en C++</a></div><div class="spacer"><a href="/q/88186" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">1</div></a><a href="/questions/88186/copiado-de-punteros-matriz" class="question-hyperlink">Copiado de punteros Matriz</a></div><div class="spacer"><a href="/q/88540" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">4</div></a><a href="/questions/88540/reservar-memoria-con-malloc-y-avanzar-el-puntero-es-v%c3%a1lido" class="question-hyperlink">Reservar memoria con malloc y avanzar el puntero &#191;es v&#225;lido?</a></div><div class="spacer"><a href="/q/119713" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">2</div></a><a href="/questions/119713/liberar-memoria-c-delete" class="question-hyperlink">Liberar memoria c++ (delete)</a></div><div class="spacer"><a href="/q/160414" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes answered-accepted default">2</div></a><a href="/questions/160414/dudas-sobre-arrays-de-punteros" class="question-hyperlink">Dudas sobre arrays de punteros</a></div><div class="spacer"><a href="/q/163671" title="Puntuación de votos (votos a favor, votos en contra)"><div class="answer-votes default">0</div></a><a href="/questions/163671/duda-sobre-una-funci%c3%b3n" class="question-hyperlink">Duda sobre una funci&#243;n</a></div>
+                    </div>
+                </div>
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot"
+           class="js-gps-track s-link s-link__inherit" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Preguntas populares en la red
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="https://bicycles.stackexchange.com/questions/56788/remove-old-non-indexed-levers-for-gear-changing-to-make-fixed-speed-bike" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Remove old non-indexed levers for gear changing to make &quot;fixed&quot; speed bike?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-ethereum" title="Ethereum Stack Exchange"></div><a href="https://ethereum.stackexchange.com/questions/57602/is-there-a-decentralized-zk-snark-zero-knowledge-succinct-non-interactive-argum" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:642 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a decentralized zk-SNARK (zero-knowledge Succinct Non-Interactive ARgument of Knowledge)?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="https://music.stackexchange.com/questions/74161/what-do-the-smaller-notes-in-the-treble-clef-indicate" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What do the smaller notes in the Treble Clef indicate?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="https://tex.stackexchange.com/questions/448133/bend-text-between-ellipsoids" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    bend text between ellipsoids
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2897199/how-to-take-second-derivative-implicitly" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to take second derivative implicitly
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/130552/do-i-intuitively-know-if-someone-already-used-their-reaction" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Do I intuitively know if someone already used their reaction?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="https://movies.stackexchange.com/questions/92091/how-far-did-forrest-gump-run" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How far did Forrest Gump run?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/171168/without-using-numbers-get-the-highest-salary-you-can-but-dont-exaggerate" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Without using numbers, get the highest salary you can. But don&#39;t exaggerate!
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/193720/which-star-trek-movie-has-a-scene-where-there-is-a-bomb-that-creates-life" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which Star Trek movie has a scene where there is a &quot;bomb&quot; that creates life?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/52049468/why-can-stdset-with-a-single-colon-compile" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why can std:set (with a single colon) compile?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="https://travel.stackexchange.com/questions/121366/do-i-have-to-declare-painkillers-when-going-to-the-usa" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Do I have to declare painkillers when going to the USA?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="https://photo.stackexchange.com/questions/101017/what-focal-length-of-glasses-is-best-for-photography" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What focal length of glasses is best for photography?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/122526/if-everyone-in-the-world-disappeared-except-35-random-people-how-long-would-it" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If everyone in the world disappeared except 35 random people, how long would it take for one of them to realize they&#39;re not alone?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="https://tex.stackexchange.com/questions/448121/how-to-insert-curly-bracket-in-multirow-table" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to insert curly bracket in multirow table
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/17993/how-to-encourage-a-child-with-autism-to-practice-reading" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to encourage a child with autism to practice reading?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="https://security.stackexchange.com/questions/192472/how-is-no-password-more-secure-than-usernamepassword" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How is no password more secure than username+password?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="https://workplace.stackexchange.com/questions/118268/should-i-clock-in-if-computer-started-updating" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I clock in if computer started updating?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="https://aviation.stackexchange.com/questions/54652/please-help-to-identify-vintage-aircraft" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Please help to identify vintage aircraft
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="https://superuser.com/questions/1352850/what-is-wrong-with-echo-stuff-or-echo-stuff" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is wrong with “echo $(stuff)” or “echo `stuff`”?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-latin" title="Latin Language Stack Exchange"></div><a href="https://latin.stackexchange.com/questions/7099/if-arm-is-arma-why-is-unarmed-inermis-and-not-inarmis" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:644 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If arm is &#39;arma&#39;, why is unarmed &#39;inermis&#39; and not &#39;inarmis&#39;?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="https://graphicdesign.stackexchange.com/questions/114222/gimp-vs-photoshop" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:174 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Gimp vs Photoshop
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="https://politics.stackexchange.com/questions/33197/why-did-political-parties-form-in-the-united-states" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did political parties form in the United States?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="https://crypto.stackexchange.com/questions/61795/calculate-all-possible-keys-for-aes-128-encryption-to-exploit-hardware-encryptio" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Calculate all possible keys for AES 128 encryption to exploit hardware encryption
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="https://skeptics.stackexchange.com/questions/42132/is-neil-tysons-claim-that-the-gregorian-calendar-is-the-most-accurate-calendar" class="js-gps-track question-hyperlink mb0" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Neil Tyson&#39;s claim that the Gregorian calendar is the &quot;most accurate calendar ever devised&quot; true?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            m&#225;s preguntas populares
+        </a>
+</div>
+
+<div id="feed-link">
+    <a href="/feeds/question/164014" title="fuente de esta pregunta y sus respuestas">
+        <svg aria-hidden="true" class="svg-icon fc-orange-400 iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"/></svg>
+        fuente de preguntas
+    </a>
+</div>
+        </div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/164014/ivc/23a0');});</script>
+<noscript><div><img src="/posts/164014/ivc/23a0" class="dno" alt="" width="0" height="0"></div></noscript><div style="display:none" id="prettify-lang">lang-cpp</div></div>
+
+
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+            
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="/">Stack Overflow en espa&#241;ol</a></h5>
+                        <ul class="-list js-primary-footer-links">
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 2 })" href="/tour">Recorrido</a></li>
+                                <li class="-item"><a href="/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Ayuda</a></li>
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 5 })" href="https://chat.stackexchange.com?tab=site&host=es.stackoverflow.com">Chat</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="/contact">Contacto</a></li>
+                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 14 })" href="https://es.meta.stackoverflow.com">Feedback</a></li>
+                                                            <li class="-item"><a onclick='StackExchange.switchMobile("on")' class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Mobile</a></li>
+                        </ul>
+                    </div>
+                <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Empresa</a></h5>
+                    <ul class="-list">
+                                                    <li class="-item"><a href="https://stackoverflow.com" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 19 })">Stack Overflow Business</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Developer Jobs</a></li>
+                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Acerca de</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Prensa</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackoverflow.com/legal">Legal</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackoverflow.com/legal/privacy-policy">Pol&#237;tica de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav site-footer--col__visible">
+                    <a href="#" class="site-footer--back js-footer-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7z"/></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer--categories">
+                    <div class="site-footer--col site-footer--category js-footer-col" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Portugu&#234;s</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores y profesionales de la inform&#225;tica">Stack Overflow en espa&#241;ol</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (30)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://cooking.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://diy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (15)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://gaming.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                <li class="-item"><a href="https://mechanics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (33)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientists, academics, teachers, and students in the field of chemistry">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (10)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                <li class="-item"><a href="https://area51.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                    </ul>
+    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog?blb=1">Blog</a></li>
+                    <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link">Facebook</a></li>
+                    <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link">Twitter</a></li>
+                    <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link">LinkedIn</a></li>
+                </ul>
+
+                <p class="mt-auto mb24">
+dise&#241;o del sitio / logo &#169; 2018 Stack Exchange Inc; contribuciones de usuarios licenciadas bajo <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a>
+                            con <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">atribuci&#243;n requerida</a>.
+                    <span id="svnrev">rev&nbsp;2018.8.27.31416</span>
+                </p>
+            </div>
+        </div>
+
+            </footer>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow en espa&#241;ol funciona mejor con JavaScript habilitado.
+            <img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+        </div>
+    </noscript>
+
+<script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: [
+                        'UA-108242619-5'
+                    ]
+                });
+
+
+
+                    StackExchange.ga.setDimension('dimension2', '|c++|punteros|c++11|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+</script>
+            
+    </body>
+    </html>

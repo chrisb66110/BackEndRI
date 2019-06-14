@@ -1,0 +1,651 @@
+<html><head>
+
+<title>
+Lógica Difusa (Logica Fuzzy) y Conjuntos Nebulosos o Borrosos (Fuzzy sets)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="DESCRIPTION" content="Lógica Difusa (Logica Fuzzy)
+y Conjuntos Nebulosos o Borrosos (Fuzzy sets)">
+<meta name="KEYWORDS" content="tutorial logica fuzzy,difusa,
+conjuntos,nebulosos,borrosos,lógica">
+<meta name="author" content="Wilmer Gonzalez-Valerio">
+<meta http-equiv="reply-to" content="wgonz@answermath.com">
+<meta http-equiv="copyright" content="Copyright © 2001 - 2002  by answermath.com. All rights reserved.">
+
+
+<script type="text/javascript" language="javascript" src="esp-fuz_files/fuz1.js">
+
+</script>
+
+
+
+<style>
+
+<!-- A:hover { color: ffff0f }TD.a {background-image: url('../images/wood.jpg')}
+ -->
+
+</style>
+
+
+
+
+
+<script src="esp-fuz_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-97480-1";
+urchinTracker();
+</script>
+</head><body alink="#80ffff" bgcolor="#008000" link="#ff8080" text="#ffffff" vlink="#ff8000">
+
+<div align="center">
+  <center>
+
+<table style="border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="760">
+  <tbody><tr>
+    <td class="a" background="esp-fuz_files/franban.jpg" height="76" width="136">
+
+<p align="center">
+<b><a href="http://www.answermath.com/tips/z-general.htm"><font color="#ffffff">C<font face="Times New Roman">ÁLCULO 
+MENTAL<br>
+</font></font><u><font color="#ffffff" face="Verdana">TrUcOs y TiPs</font></u></a></b></p></td>
+    
+    <td background="esp-fuz_files/framban2.JPG" height="76" width="488">
+
+
+<p align="center">
+    <img src="esp-fuz_files/neural1.jpg" border="0" height="60" width="393"></p></td>
+
+    <td class="a" background="esp-fuz_files/franban.jpg" height="76" width="136">
+<p align="center">
+  
+    <face="times new="" roman=""><font color="#ff8000" size="2">
+    <a href="http://www.answermath.com/mineria_de_datos.htm"><font color="#ffffff">Minería de Datos</font></a></font><br>
+
+    <face="times new="" roman="">
+    <font color="#ff8000" size="2">
+    <a href="http://www.answermath.com/redes_neuronales_o_neurales.htm"><font color="#ffffff">Redes Neuronales</font></a></font><font size="2"><br>
+      </font><face="times new="" roman="">
+    <font color="#ff8000" size="2">
+    <a href="http://www.answermath.com/logica_difusa_conjuntos_nebulosos.htm"><font color="#ffffff">L<span lang="es-ve">ó</span>gica 
+    difusa(fuzzy)</font></a></font><br>
+      <font size="2"><a href="http://www.answermath.com/electromagnetism/z-campos.htm">
+      <font color="#ffffff">Campos Electromagnet.</font></a></font></face="times></face="times></face="times></p></td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor="#501e00" height="96" width="760">
+
+<p align="center">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-0777856817034313";
+google_alternate_ad_url = "http://www.answermath.com/g/bas.htm";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="4404708663";
+google_color_border = "000050";
+google_color_bg = "005050";
+google_color_link = "FFFFFF";
+google_color_url = "FF8000";
+google_color_text = "FF8000";
+//--></script>
+<script type="text/javascript" src="esp-fuz_files/show_ads.js">
+</script><script src="esp-fuz_files/expansion_embed.js"></script><script src="esp-fuz_files/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 90px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 90px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="esp-fuz_files/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+
+</p></td>
+    
+  </tr>
+</tbody></table>
+  </center>
+</div>
+<div align="center"><center>
+
+<table style="border-collapse: collapse;" bgcolor="#501e00" border="0" cellpadding="0" cellspacing="0" height="492" width="760">
+  <tbody><tr>
+    <td rowspan="33" background="esp-fuz_files/shield-0-50-50-teal.JPG" height="396" valign="top" width="120">
+    
+    
+
+      <p align="center"><face="times new="" roman=""><i><font color="#ffffff" size="2">MENU</font></i><br>
+
+
+    <font color="#ff8000" size="2">
+
+    <img src="esp-fuz_files/icosum.jpg" alt="icosum.jpg (759 bytes)" height="12" width="12">
+    <a href="http://www.answermath.com/Spanish/esp-adi.htm">Suma</a><br>
+    <img src="esp-fuz_files/icosub.jpg" alt="icosub.jpg (729 bytes)" height="12" width="12"> 
+    <a href="http://www.answermath.com/Spanish/esp-sub.htm">Resta</a><br>
+    <img src="esp-fuz_files/icomul.jpg" alt="icomul.jpg (782 bytel.jpg" height="12" width="12">
+    <a href="http://www.answermath.com/Spanish/esp-mul.htm">Multiplicación</a><br>
+    <img src="esp-fuz_files/icodiv.jpg" alt="icodiv.jpg (741 bytes)" height="12" width="12">
+    <a href="http://www.answermath.com/Spanish/esp-div.htm">División</a><br>
+    <img src="esp-fuz_files/icoroo.jpg" alt="icoroo.jpg (775 bytes)" height="12" width="12">
+    <a href="http://www.answermath.com/Spanish/esp-rai.htm">Raíz</a><br>
+    <img src="esp-fuz_files/icoexp.jpg" alt="icoexp.jpg (791 bytes)" height="12" width="12"> 
+      <a href="http://www.answermath.com/Spanish/esp-exp.htm">Potencia</a><br>
+      <img src="esp-fuz_files/icosin.jpg" alt="icosin.jpg (707 bytes)" height="12" width="12">
+      <a href="http://www.answermath.com/Spanish/esp-sen.htm">Seno</a><br>
+      <img src="esp-fuz_files/icocos.jpg" alt="icocos.jpg (737 bytes)" height="12" width="12">
+      <a href="http://www.answermath.com/Spanish/esp-cos.htm">Coseno</a><br>
+      <img src="esp-fuz_files/icotan.jpg" alt="icotan.jpg (730 bytes)" height="12" width="12">
+      <a href="http://www.answermath.com/Spanish/esp-tan.htm">Tangente</a><br>
+
+      <img src="esp-fuz_files/icofuz.jpg" alt="icofuz.jpg (723 bytes)" height="12" width="12"> 
+      <a href="http://www.answermath.com/Spanish/esp-fuz.htm">Fuzzy</a><br>
+      <a href="http://www.answermath.com/Italian/risposte-matematiche.html">Italiano </a>
+      <br>
+
+    
+      <a href="http://www.answermath.com/index.html">English&nbsp;</a></font></face="times></p><p align="center">
+    <i><font color="#ffffff" size="2">TUTORIALES</font></i><br>
+
+    <font color="#ff8000" size="2">
+    <a href="http://www.answermath.com/mineria_de_datos.htm">Minería de Datos</a></font><br>
+
+    <font color="#ff8000" size="2">
+    <a href="http://www.answermath.com/redes_neuronales_o_neurales.htm">Redes Neuronales</a><br>
+    <a href="http://www.answermath.com/logica_difusa_conjuntos_nebulosos.htm">L<span lang="es-ve">ó</span>gica 
+    difusa(fuzzy)</a></font><br>
+    <font color="#ff8000" size="2">
+
+    <a href="http://www.answermath.com/inteligencia-artificial.htm">
+    Inteligencia Artificial</a></font><br>
+	<a href="http://www.answermath.com/algoritmos-geneticos.htm"><font size="2">Algoritmos Genéticos</font></a><br>
+    <font size="2">
+    <a href="http://www.answermath.com/electromagnetism/z-intro.htm">Electromagnetismo</a></font><br>
+    <br>
+    <font size="2"><i>LABORATORIOS<br>
+    </i></font>
+    <font color="#ff8000" size="2">
+
+    <a href="http://www.answermath.com/fuzzy-laboratory.htm">L<span lang="es-ve">ó</span>gica difusa</a></font><br>
+    <font color="#ff8000" size="2"><span lang="es-ve"><a href="http://www.answermath.com/artificial-life.htm">Vida 
+    Artificial</a></span></font></p></td>
+      
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td rowspan="16" style="" background="esp-fuz_files/mon250x192.JPG" height="192" width="250"><font size="2"></font><p style="" align="center"><font size="2"></font><strong>
+    <font color="#8000ff" size="2">Lógica
+      Difusa (Logica Fuzzy):</font><font color="#8000ff" size="2"> </font>
+    <font color="#ffffff" size="2">Un
+      tipo de lógica para procesar datos inciertos. En ella, un elemento puede
+      tener infinitas gradaciones entre VERDADERO y FALSO.&nbsp; </font>
+    <font color="#8000ff" size="2">Conjuntos
+      Nebulosos ó Borrosos (Fuzzy Sets):</font><font color="#8000ff" size="2">
+    </font><font color="#ffffff" size="2">Un
+      tipo de conjuntos, en los cuales los elementos pertenecen a un
+      subconjunto, en cierto grado. (Una velocidad podría ser 0.75 LENTA
+      y&nbsp; 0.25 MEDIA).</font></strong><font size="2"> </font> 
+    <font color="#00ff00" size="2"><strong><em>
+    <a target="_blank" style="color: rgb(0, 255, 0);" href="http://www.answermath.com/logica_difusa_conjuntos_nebulosos.htm">Más
+      Fuzzy...</a></em></strong></font></p>
+
+    </td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td rowspan="16" align="center" background="esp-fuz_files/shield-50-0-50-purp.JPG" height="192" valign="middle" width="250"><form name="formselect">
+
+      <strong><em><font color="#ffffff" size="2"></font></em></strong><p><strong><em><font color="#ffffff" size="2">TEST </font></em></strong></p>
+
+      <p><font color="#ffff00" size="2"><em>A:</em></font> <font color="#ffffff" size="2"><em>Nueva
+      velocidad </em></font><input value="Now" onclick="tictac(this.form)" name="start" style="font-family: serif; font-size: 8pt; color: rgb(0, 0, 255);" type="button"></p>
+
+      <p><em><font color="#ffff00" size="2">B:</font><font color="#ffffff" size="2">
+      Velocidad =</font></em><input name="expr1" size="3" style="text-align: right; font-family: serif; font-size: 10pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text"></p>
+
+      <p><font color="#ffff00" size="2"><em>C:</em></font>  <em><font color="#ffffff" size="2">¿
+      Cual es el valor Fuzzy de MEDIUM ?</font></em></p>
+
+      <p><font color="#ffff00" size="2"><em>D:</em></font>  <font color="#ffffff" size="2"><em>Responde
+      con el "Keyboard" </em>»»</font></p>
+
+    </form>
+
+    </td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td rowspan="33" align="center" background="esp-fuz_files/shield-teal-2.JPG" height="396" width="120"><form style="font-family: serif; font-size: 8pt;" name="formkey">
+      <font color="#ffffff" face="Times New Roman" size="8"></font><div align="center"><center><p><font color="#ffffff" face="Times New Roman" size="8"></font><font color="#ffffff" size="2"><strong><em>KEYBOARD</em></strong></font></p>
+      </center></div><div align="center"><center><p><font size="2"><em><strong>
+      
+      &nbsp;<input name="screen" size="6" style="text-align: right; font-family: Arial Black; font-size: 14pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text"></strong></em></font></p>
+      </center></div><font color="#00ff00"></font><div align="center"><center><p><font color="#00ff00"><font color="#ffffff" face="Times New Roman" size="1"><strong><input value=" 1 " onclick="k1()" name="key1" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 2 " onclick="k2()" name="key2" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 3 " onclick="k3()" name="key3" style="font-family: serif; font-size: 8pt;" type="button"></strong></font></font></p>
+<font color="#00ff00">      </font></center></div><div align="center"><center><p><font color="#00ff00"><font color="#ffffff" face="Times New Roman" size="1"><strong><input value=" 4 " onclick="k4()" name="key4" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 5 " onclick="k5()" name="key5" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 6 " onclick="k6()" name="key6" style="font-family: serif; font-size: 8pt;" type="button"></strong></font></font></p>
+<font color="#00ff00">      </font></center></div><div align="center"><center><p><font color="#00ff00"><font color="#ffffff" face="Times New Roman" size="1"><strong><input value=" 7 " onclick="k7()" name="key7" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 8 " onclick="k8()" name="key8" style="font-family: serif; font-size: 8pt;" type="button"> <input value=" 9 " onclick="k9()" name="key9" style="font-family: serif; font-size: 8pt;" type="button"></strong></font></font></p>
+<font color="#00ff00">      </font></center></div><div align="center"><center><p><font color="#00ff00"></font><strong><font color="#00ff00" face="Times New Roman" size="1"><input value=" _ " onclick="kM()" name="keyM" style="font-family: serif; font-size: 8pt;" type="button">&nbsp; &nbsp;<input value=" 0 " onclick="k0()" name="key0" style="font-family: serif; font-size: 8pt;" type="button"> </font><font color="#ffffff" face="Times New Roman" size="1">&nbsp; </font><font color="#00ff00" face="Times New Roman" size="1"><input value=" . " onclick="kP()" name="keyP" style="font-family: serif; font-size: 8pt;" type="button"></font></strong><font color="#00ff00"></font></p>
+<font color="#00ff00">      </font></center></div><div align="center"><center><p><font color="#00ff00"><font color="#ffffff" face="Times New Roman" size="1"><strong><input value="Clear" onclick="kC()" name="keyC" style="font-family: serif; font-size: 8pt; color: rgb(255, 0, 0); background-color: rgb(160, 160, 160);" type="button">
+      <input value="Enter" onclick="kE()" name="keyE" style="font-family: serif; font-size: 8pt; background-color: rgb(160, 160, 160); color: rgb(128, 255, 0);" type="button"></strong></font></font></p>
+<font color="#00ff00">      </font></center></div><div align="center"><center><p><font color="#00ff00"><em><font color="#ffff00" size="2">D: </font></em></font><em>
+        <font size="2">Presiona&nbsp; Enter y <br>
+        </font></em><font color="#00ff00"><font color="#ffffff" size="2">«« <em>
+        Mira el
+      reporte </em></font></font></p>
+<font color="#00ff00">      </font></center></div><font color="#00ff00"></font>
+    </form>
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="250"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="4"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="250"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td rowspan="16" height="192" width="250"><p align="center">
+    <img src="esp-fuz_files/bb-250-fuzzy.JPG" alt="bb-250-fuzzy.JPG (9812 bytes)" height="192" width="250"></p></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td rowspan="16" align="center" background="esp-fuz_files/shield-0-50-0-green.JPG" height="192" valign="center" width="250"><form name="formreport">
+
+      <p><em><strong><font color="#ffffff" size="2">REPORT</font></strong></em></p>
+
+      <p><font color="#ffffff" size="2">Tu&nbsp; respuesta:</font><input name="expr3" size="7" style="text-align: right; font-family: serif; font-size: 10pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text"><br>
+      <font color="#ffffff" size="2">&nbsp; Nuestra: </font><input name="expr4" size="7" style="text-align: right; font-family: serif; font-size: 10pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text">
+
+      <br><font color="#ffffff" size="2">Evaluación: </font><input name="expr5" size="7" style="text-align: right; font-family: serif; font-size: 10pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text"><font color="#ffffff" size="2"><br>&nbsp;
+      Tiempo:</font><input name="expr6" size="7" style="text-align: right; font-family: serif; font-size: 10pt; color: rgb(0, 0, 255); background-color: rgb(192, 192, 192);" type="text">
+
+      </p>
+
+      <div align="right"><p><font color="#ffffff" size="2">&nbsp;</font></p>
+
+      </div>
+
+    </form>
+
+    </td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="12" width="120"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="250"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="4"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="250"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="8"><font color="#461400" size="1">.</font></td>
+
+    <td height="12" width="120">&nbsp;</td>
+
+  </tr>
+
+  <tr>
+    <td align="center" background="esp-fuz_files/shield-85-68-0-gold.JPG" height="96" valign="bottom">
+
+    
+    &nbsp;</td>
+    <td align="center" valign="top">
+
+    
+    &nbsp;</td>
+    <td colspan="3" align="center" bgcolor="#005050" valign="bottom">
+
+    
+&nbsp;</td>
+    <td align="center" valign="top">
+
+    
+    &nbsp;</td>
+    <td align="center" background="esp-fuz_files/shield-85-68-0-gold.JPG" valign="bottom">
+
+    
+    &nbsp;</td>
+    </tr>
+  <tr>
+    <td height="12" width="120">&nbsp;</td>
+    <td height="12" width="8">&nbsp;</td>
+    <td height="12" width="250">&nbsp;</td>
+    <td height="12" width="4">&nbsp;</td>
+    <td height="12" width="250">&nbsp;</td>
+    <td height="12" width="8">&nbsp;</td>
+    <td height="12" width="120">&nbsp;</td>
+  </tr>
+
+</tbody></table>
+
+</center></div>
+
+<p align="center">
+    <font color="#ff8080" size="2">|
+      <a href="http://www.answermath.com/index.html">Home</a> | <a href="http://www.answermath.com/sitemap.htm">Site Map</a> |
+    <a href="http://www.answermath.com/Panels/suggest.htm" target="_blank">
+    Suggest a link</a>&nbsp; |
+    <a href="http://www.answermath.com/Panels/send.htm" target="_blank">
+    Send Comments</a> |
+    <a href="http://www.answermath.com/Panels/disclaimer.htm" target="_blank">Disclaimer</a> | 
+    <a target="_blank" href="http://www.answermath.com/Panels/privacy.htm">
+    PrivacyPolicy</a> | <a href="http://www.answermath.com/Panels/links.htm" target="_blank">Links</a>
+      | <a href="http://www.answermath.com/Panels/help.htm" target="_blank">
+Help</a>    |<br><br>
+
+
+Copyright
+      2000 - <script type="text/javascript" language="javascript" src="esp-fuz_files/year.js"></script>2008  wgonz @ email.com&nbsp;&nbsp;- All&nbsp; Rights &nbsp;
+    Reserved
+    &nbsp;</font><font color="#461400" size="1">.</font></p>
+
+</body></html>
