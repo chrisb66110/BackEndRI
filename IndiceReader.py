@@ -10,13 +10,13 @@ class IndiceReader:
         self.fileLines = string.split("\n")
 
     # Metodo que devuelve el archivo
-    def getLinesPostings(self):
+    def getLinesIndice(self):
         return self.fileLines
 
     # Metodo que devuelve un diccionario de Postings
     # Llave: termino
     # Valor: posinicial, cantEntradas
-    def getDicPostings(self):
+    def getDicIndice(self):
         indice = dict()
         for line in self.fileLines:
             lineWithoutSpace = re.sub(r'\s+', ' ', line)
@@ -28,6 +28,6 @@ class IndiceReader:
 
 if __name__ == '__main__':
     tokReader = IndiceReader('indice')
-    wtd = tokReader.getDicPostings()
+    wtd = tokReader.getDicIndice()
     for word in wtd:
         print(str(word) + " " + str(wtd[word]))

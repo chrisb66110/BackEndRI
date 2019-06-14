@@ -30,8 +30,6 @@ class Weights:
         for term in dicTok.keys():
             # Posicion 1 del valor del dictTok es la frecuencia normalizada
             # Posicion 1 del valor del dicVoc es la frecuencia inversa
-            print("Frecuencia normalizada= " + str(dicTok[term][1]))
-            print("Frecuencia inversa= " + str(self.dicVoc[term][1]))
             weights[term] = (0.5 + 0.5 * dicTok[term][1]) * self.dicVoc[term][1]
         return weights
 
