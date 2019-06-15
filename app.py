@@ -1,3 +1,5 @@
+import operator
+
 from flask import Flask
 
 from Rules import *
@@ -126,9 +128,121 @@ class ProcConsultas:
         for word in sorted(dictDoc.keys()):
             pesoDoc = dictDoc[word]
             pesoCon = dictConsulta[word]
+            if pesoCon != 0 and pesoCon != 0:
+                print("pesoCon " + str(pesoCon) + ", pesoDoc " + str(pesoDoc))
             productoPunto[word] = pesoDoc * pesoCon
         return productoPunto
 
+    # dictDoc Diccionario del vector
+    #   Llave: termino
+    #   Valor: peso
+    #
+    # Retorna valor de la suma
+    def sumaVector(self, dictVec):
+        suma = 0.0
+        for word in sorted(dictVec.keys()):
+            suma = suma + dictVec[word]
+        return suma
+
+    # dictDoc Diccionario del vector
+    #   Llave: termino
+    #   Valor: peso
+    #
+    # Retorna dict del vector con la norma aplicada
+    def normaVector(self, dictVec):
+        norma = dict()
+        for word in sorted(dictVec.keys()):
+            valVector = dictVec[word]
+            norma[word] = valVector * valVector
+        return norma
+
+    # Metodo para hacer el producto punto de todos vectores de los documentos con el vector de la consulta
+    # docs Diccionario de documentos
+    #       Key: doc
+    #       Value: dict vector de pesos:
+    #                               Llave: termino
+    #                               Valor: peso
+    #
+    # vectorConsulta vector de consulta
+    #       Llave: termino
+    #       Valor: peso
+    #
+    # Retorna dict del vector con la norma aplicada
+    def productoPuntoTodosVectores(self, docs, vectorConsulta):
+        docsProductoPunto = dict()
+        for doc in sorted(docs.keys()):
+            dictPesosDoc = docs[doc]
+            dictPesosNuevo = self.productoPunto(dictPesosDoc, vectorConsulta)
+            docsProductoPunto[doc] = dictPesosNuevo
+        return docsProductoPunto
+
+    # Metodo para hacer la suma de todas las entradas de todos los vectores
+    # docs Diccionario de documentos
+    #       Key: doc
+    #       Value: dict vector de pesos:
+    #                               Llave: termino
+    #                               Valor: peso
+    #
+    # retorna dict con todos los documentos con su vector sumado
+    def sumaTodosVectores(self, docs):
+        docsSumados = dict()
+        for doc in sorted(docs.keys()):
+            dictPesosDoc = docs[doc]
+            suma = self.sumaVector(dictPesosDoc)
+            docsSumados[doc] = suma
+        return docsSumados
+
+    # Metodo para le aplica la norma a todos los vectores
+    # docs Diccionario de documentos
+    #       Key: doc
+    #       Value: dict vector de pesos:
+    #                               Llave: termino
+    #                               Valor: peso
+    #
+    # retorna dict con todos los documentos con su vector sumado
+    def normaTodosVectores(self, docs):
+        docsNorma = dict()
+        for doc in sorted(docs.keys()):
+            dictPesosDoc = docs[doc]
+            normaVector = self.normaVector(dictPesosDoc)
+            docsNorma[doc] = normaVector
+        return docsNorma
+
+    # Metodo para aplica la raiz a la suma de todos los vectores
+    # docs Diccionario de documentos
+    #       Key: doc
+    #       Value: suma del vector
+    # retorna dict con todos los documentos con su vector sumado con raiz
+    def raizTodosVectores(self, docs):
+        docsRaiz = dict()
+        for doc in sorted(docs.keys()):
+            suma = docs[doc]
+            docsRaiz[doc] = math.sqrt(suma)
+        return docsRaiz
+
+    # Metodo para aplicar la similaridad
+    # docsProductoPunto Suma del vector del producto punto de documentos
+    #   Key: docs
+    #   Value: Suma del vector del producto punto de documentos
+    #
+    # docsNormaSumadosRaiz Diccionario de consulta
+    #   Key: docs
+    #   Value: suma de vector con raiz
+    #
+    # consultaNormaSumadaRaiz Diccionario de consulta
+    #       Key: termino
+    #       Value: suma de vector con raiz
+    #
+    # retorna dict con todos los documentos con su vector sumado con raiz
+    def similaridad(self, docsProductoPunto, docsNormaSumadosRaiz, consultaNormaSumadaRaiz):
+        docsSimilaridad = dict()
+        for doc in sorted(docsProductoPunto.keys()):
+            sumaVecDocProductoPunto = docsProductoPunto[doc]
+            sumaVecDocNorma = docsNormaSumadosRaiz[doc]
+
+            similaridad = sumaVecDocProductoPunto / ( sumaVecDocNorma * consultaNormaSumadaRaiz )
+            docsSimilaridad[doc] = similaridad
+        return docsSimilaridad
 
 procConsultas = ProcConsultas()
 indiceReader = IndiceReader('indice')
@@ -137,11 +251,50 @@ postingReader = PostingsReader('postings')
 linesPonsting = postingReader.getLinesPostings()
 @app.route('/<consulta>')
 def hello_world(consulta):
-    procConsultas.generar_vector_consulta(consulta)
-    docs = procConsultas.buscaDocumentosRealacionados(dictIndice, linesPonsting)
+    vectConsulta = procConsultas.generar_vector_consulta(consulta)
+    docsPesos = procConsultas.buscaDocumentosRealacionados(dictIndice, linesPonsting)
 
-    for term in docs.keys():
-       print(term + ': ' + str(docs[term].__len__()))
+    #for doc in docsPesos.keys():
+    #   print(doc + ': ' + str(docsPesos[doc]))
+
+    docsProductoPunto = procConsultas.productoPuntoTodosVectores(docsPesos,vectConsulta)
+    #for doc in docsProductoPunto.keys():
+    #   print(doc + ': ' + str(docsProductoPunto[doc]))
+
+    docsProductoPuntoSumado = procConsultas.sumaTodosVectores(docsProductoPunto)
+    # for doc in docsProductoPuntoSumado.keys():
+    #   print(doc + ': ' + str(docsProductoPuntoSumado[doc]))
+
+    docsPesosNorma = procConsultas.normaTodosVectores(docsPesos)
+    # for doc in docsPesosNorma.keys():
+    #     print(doc + ': ' + str(docsPesosNorma[doc]))
+
+    consultaPesosNorma = procConsultas.normaVector(vectConsulta)
+    # for term in consultaPesosNorma.keys():
+    #     print(term + ': ' + str(consultaPesosNorma[term]))
+
+    docsNormaSumados = procConsultas.sumaTodosVectores(docsPesosNorma)
+    # for doc in docsNormaSumados.keys():
+    #     print(doc + ': ' + str(docsNormaSumados[doc]))
+
+    consultaNormaSumada = procConsultas.sumaVector(consultaPesosNorma)
+    # print(consultaNormaSumada)
+
+    docsNormaSumadosRaiz = procConsultas.raizTodosVectores(docsNormaSumados)
+    #for doc in docsNormaSumadosRaiz.keys():
+    #    print(doc + ': ' + str(docsNormaSumadosRaiz[doc]))
+
+    consultaNormaSumadaRaiz = math.sqrt(consultaNormaSumada)
+    #print(consultaNormaSumadaRaiz)
+
+    #similaridad = procConsultas.similaridad(docsProductoPuntoSumado, docsNormaSumadosRaiz, consultaNormaSumadaRaiz)
+    #for doc in sorted(similaridad.keys()):
+    #    print(doc + ': ' + str(similaridad[doc]))
+
+    similaridad = { '5_AP': 0.5416401512051543, '1_AP': 0.4024963445340767 }
+    sorted_d = sorted(similaridad.items(), key=operator.itemgetter(1))
+    print(sorted_d[::-1])
+
 
     return consulta
 
