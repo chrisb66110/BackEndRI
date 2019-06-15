@@ -1,3 +1,5 @@
+import re
+
 class URLsReader:
     def __init__(self):
         # Se tiene que cambiar el tipo de encoding del archivo y
@@ -15,6 +17,21 @@ class URLsReader:
         else:
             retValue = None       # Manera contraria devuelve un null para que la otra clase lo maneje.
         return retValue
+
+    # Metodo retornar diccionario de key: nombre documento value:link.
+    def getDictUrls(self):
+        stringB = self.file.read()
+        string = re.sub('', '', str(stringB, 'utf-8-sig'))
+        fileLines = string.split("\n")
+
+        urlsDict = dict()
+        for line in fileLines:
+            lineWithoutSpace = re.sub(r'\s+', ' ', line)
+            lineDiv = lineWithoutSpace.split(" ")
+            if len(lineDiv) >= 2:
+                nombreDocumento = lineDiv[0].split(".")[0]
+                urlsDict[nombreDocumento] = lineDiv[1]
+        return urlsDict
 
     def closeFile(self):
         self.file.close()

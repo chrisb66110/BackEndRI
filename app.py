@@ -1,4 +1,5 @@
 import operator
+import json
 
 from flask import Flask
 
@@ -10,8 +11,15 @@ from Weights import *
 from IndiceReader import *
 from PostingsReader import *
 from VocabularioReader import *
+from  HTMLReader import *
 
 app = Flask(__name__)
+
+class Documento:
+    def __init__(self, nombre, link, resumen):
+        self.nombre = nombre
+        self.link = link
+        self.resumen = resumen
 
 class ProcConsultas:
 
@@ -128,8 +136,8 @@ class ProcConsultas:
         for word in sorted(dictDoc.keys()):
             pesoDoc = dictDoc[word]
             pesoCon = dictConsulta[word]
-            if pesoCon != 0 and pesoCon != 0:
-                print("pesoCon " + str(pesoCon) + ", pesoDoc " + str(pesoDoc))
+            #if pesoCon != 0 and pesoCon != 0:
+            #    print("pesoCon " + str(pesoCon) + ", pesoDoc " + str(pesoDoc))
             productoPunto[word] = pesoDoc * pesoCon
         return productoPunto
 
@@ -249,6 +257,8 @@ indiceReader = IndiceReader('indice')
 dictIndice = indiceReader.getDicIndice()
 postingReader = PostingsReader('postings')
 linesPonsting = postingReader.getLinesPostings()
+urlsReader = URLsReader()
+urlsDict = urlsReader.getDictUrls()
 @app.route('/<consulta>')
 def hello_world(consulta):
     vectConsulta = procConsultas.generar_vector_consulta(consulta)
@@ -287,16 +297,47 @@ def hello_world(consulta):
     consultaNormaSumadaRaiz = math.sqrt(consultaNormaSumada)
     #print(consultaNormaSumadaRaiz)
 
-    #similaridad = procConsultas.similaridad(docsProductoPuntoSumado, docsNormaSumadosRaiz, consultaNormaSumadaRaiz)
+    similaridad = procConsultas.similaridad(docsProductoPuntoSumado, docsNormaSumadosRaiz, consultaNormaSumadaRaiz)
     #for doc in sorted(similaridad.keys()):
     #    print(doc + ': ' + str(similaridad[doc]))
 
-    similaridad = { '5_AP': 0.5416401512051543, '1_AP': 0.4024963445340767 }
-    sorted_d = sorted(similaridad.items(), key=operator.itemgetter(1))
-    print(sorted_d[::-1])
-
-
-    return consulta
+    #similaridad = { '5_AP': 0.5416401512051543, '1_AP': 0.4024963445340767 }
+    ranking = sorted(similaridad.items(), key=operator.itemgetter(1))
+    #print(ranking[::-1])
+    lista = list()
+    largo = ranking.__len__()
+    for x in range(0, largo):
+        posActual = largo - x - 1
+        nombreDocumento = str(ranking[posActual][0])
+        linkDocumento = urlsDict[ranking[posActual][0]]
+        leerdoc = nombreDocumento + '.html'
+        htmlReader = HTMLReader(bytes(leerdoc, 'utf-8'))
+        htmlString = htmlReader.getHtml()
+        rules = Rules()
+        string = rules.applyRules(htmlString)
+        #print(string)
+        #print(stringB)
+        #string = re.sub('', '', str(stringB, 'utf-8'))
+        resu = '...'
+        for word in procConsultas.words:
+            index = string.lower().find(' '+ word +' ')
+            #print(str(index))
+            if index != None:
+                resu = resu + string[index:index+60]
+                break
+        resumen = resu + '...'
+        #print(str(posActual) + ': ' + str(ranking[posActual]))
+        #print('Nombre del documento: ' + nombreDocumento)
+        #print('Link del documento: ' + linkDocumento)
+        #print('Resumen del result: ' + resumen)
+        lista.append(Documento(nombreDocumento, linkDocumento, resumen))
+    #for x in lista:
+    #    print(x.nombre)
+    #    print(x.link)
+    #    print(x.resumen)
+    #list_example = [Documento('Hola1','http1','resumen1'), Documento('Hola2','http2','resumen2')]
+    #print(json.dumps(list_example))
+    return json.dumps(lista, default=lambda o: o.__dict__, indent=4)
 
 if __name__ == '__main__':
     app.run()
