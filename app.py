@@ -1,7 +1,7 @@
 import operator
 import json
 from time import time
-
+from flask_cors import CORS, cross_origin
 from flask import Flask
 
 from Rules import *
@@ -16,6 +16,7 @@ from  HTMLReader import *
 from WtdReader import *
 
 app = Flask(__name__)
+cors = CORS(app)
 
 class Documento:
     def __init__(self, nombre, link, resumen):
@@ -347,6 +348,14 @@ urlsReader = URLsReader()
 urlsDict = urlsReader.getDictUrls()
 docsProcesados = leerDocs(urlsDict)
 wtdTodos = leerWtdTodos(procConsultas.dicVoc, urlsDict)
+
+
+
+
+
+
+
+@cross_origin()
 @app.route('/<consulta>')
 def hello_world(consulta):
     inicio = time()
@@ -483,3 +492,5 @@ def hello_world(consulta):
 
 if __name__ == '__main__':
     app.run()
+
+
