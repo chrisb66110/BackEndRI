@@ -23,8 +23,6 @@ aire                           1            0.05
 alberga                        1            0.05                
 alg                            1            0.05                
 algas                          1            0.05                
-algunas                        3            0.15                
-algunos                        2            0.1                 
 alimentaci                     2            0.1                 
 alimentan                      3            0.15                
 alimenticias                   1            0.05                
@@ -40,7 +38,6 @@ animal                         10           0.5
 animales                       20           1.0                 
 animalia                       3            0.15                
 aparecen                       1            0.05                
-aquellos                       3            0.15                
 ar                             1            0.05                
 artr                           3            0.15                
 as                             2            0.1                 
@@ -52,7 +49,6 @@ aves                           2            0.1
 b                              2            0.1                 
 bacterias                      1            0.05                
 ballenas                       1            0.05                
-bien                           1            0.05                
 bilateral                      1            0.05                
 biodiversidad                  2            0.1                 
 biolog                         1            0.05                
@@ -61,7 +57,6 @@ bl                             1            0.05
 bosques                        1            0.05                
 buscar                         1            0.05                
 c                              10           0.5                 
-cada                           1            0.05                
 capaz                          1            0.05                
 car                            1            0.05                
 caracter                       8            0.4                 
@@ -70,7 +65,6 @@ caracterizan                   1            0.05
 carbono                        1            0.05                
 carece                         1            0.05                
 carn                           2            0.1                 
-casi                           1            0.05                
 caso                           1            0.05                
 categor                        1            0.05                
 celular                        5            0.25                
@@ -98,7 +92,6 @@ colonias                       2            0.1
 columna                        1            0.05                
 com                            1            0.05                
 comen                          1            0.05                
-como                           7            0.35                
 compartida                     1            0.05                
 compartir                      1            0.05                
 complejidad                    1            0.05                
@@ -128,8 +121,6 @@ crust                          1            0.05
 cten                           1            0.05                
 cter                           1            0.05                
 cu                             1            0.05                
-cual                           1            0.05                
-cualquier                      1            0.05                
 cuenta                         1            0.05                
 cuerpo                         1            0.05                
 cuya                           1            0.05                
@@ -158,9 +149,7 @@ distinto                       1            0.05
 diversidad                     1            0.05                
 dividido                       1            0.05                
 dividirse                      1            0.05                
-donde                          1            0.05                
 dorsal                         1            0.05                
-dos                            8            0.4                 
 durante                        2            0.1                 
 ecolog                         1            0.05                
 ecosistemas                    1            0.05                
@@ -179,7 +168,6 @@ especializaci                  2            0.1
 especies                       5            0.25                
 espina                         1            0.05                
 esponjas                       2            0.1                 
-este                           3            0.15                
 estructura                     1            0.05                
 estructural                    1            0.05                
 eucariota                      2            0.1                 
@@ -265,7 +253,6 @@ morfol                         2            0.1
 movilidad                      4            0.2                 
 movimientos                    1            0.05                
 mucho                          1            0.05                
-muy                            2            0.1                 
 n                              5            0.25                
 nacieron                       3            0.15                
 necesarios                     1            0.05                
@@ -282,8 +269,6 @@ omn                            1            0.05
 org                            1            0.05                
 organismos                     3            0.15                
 origen                         5            0.25                
-otra                           1            0.05                
-otros                          4            0.2                 
 ox                             1            0.05                
 p                              1            0.05                
 par                            1            0.05                
@@ -361,15 +346,12 @@ sitos                          1            0.05
 solamente                      1            0.05                
 son                            3            0.15                
 stula                          1            0.05                
-su                             10           0.5                 
 subsistir                      1            0.05                
 suelo                          1            0.05                
-sus                            5            0.25                
 t                              2            0.1                 
 tama                           1            0.05                
 tambi                          1            0.05                
 taxones                        1            0.05                
-te                             1            0.05                
 tejidos                        1            0.05                
 teor                           1            0.05                
 tierra                         1            0.05                
@@ -385,7 +367,6 @@ tres                           1            0.05
 tundra                         1            0.05                
 tuvo                           1            0.05                
 twittear                       1            0.05                
-uno                            1            0.05                
 v                              1            0.05                
 variado                        1            0.05                
 varios                         1            0.05                

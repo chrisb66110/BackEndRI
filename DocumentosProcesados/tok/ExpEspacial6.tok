@@ -265,8 +265,6 @@ aleks                          1            0.0025
 alemania                       15           0.0375              
 alexandr                       1            0.0025              
 alg                            1            0.0025              
-algunas                        1            0.0025              
-algunos                        4            0.01                
 alimentaci                     2            0.005               
 all                            7            0.0175              
 allen                          1            0.0025              
@@ -296,7 +294,6 @@ annefrank                      2            0.005
 anomal                         1            0.0025              
 antena                         1            0.0025              
 anteriormente                  10           0.025               
-antes                          20           0.05                
 antiguo                        1            0.0025              
 apaga                          1            0.0025              
 apagado                        2            0.005               
@@ -411,7 +408,6 @@ carenado                       1            0.0025
 carga                          3            0.0075              
 carrera                        1            0.0025              
 cartograf                      2            0.005               
-casi                           3            0.0075              
 caso                           2            0.005               
 cassini                        6            0.015               
 catal                          1            0.0025              
@@ -470,7 +466,6 @@ cometa                         25           0.0625
 cometary                       1            0.0025              
 cometas                        10           0.025               
 commons                        1            0.0025              
-como                           15           0.0375              
 compartir                      1            0.0025              
 compass                        1            0.0025              
 completar                      2            0.005               
@@ -528,9 +523,6 @@ cron                           1            0.0025
 cronolog                       1            0.0025              
 cruzar                         1            0.0025              
 ctea                           1            0.0025              
-cual                           1            0.0025              
-cuales                         1            0.0025              
-cuando                         1            0.0025              
 cuarta                         6            0.015               
 cuatro                         2            0.005               
 cuenta                         2            0.005               
@@ -616,7 +608,6 @@ dm                             4            0.01
 donaciones                     1            0.0025              
 dong                           1            0.0025              
 dormir                         1            0.0025              
-dos                            7            0.0175              
 dragon                         1            0.0025              
 dscovr                         1            0.0025              
 durante                        23           0.0575              
@@ -683,7 +674,6 @@ eros                           4            0.01
 errante                        1            0.0025              
 error                          5            0.0125              
 es                             11           0.0275              
-esa                            1            0.0025              
 esc                            1            0.0025              
 escala                         1            0.0025              
 escapar                        2            0.005               
@@ -704,7 +694,6 @@ espera                         4            0.01
 esperado                       1            0.0025              
 esperanto                      1            0.0025              
 est                            5            0.0125              
-esta                           7            0.0175              
 estaba                         2            0.005               
 estableci                      1            0.0025              
 establecieron                  1            0.0025              
@@ -715,9 +704,7 @@ estados                        398          0.995
 estadounidense                 1            0.0025              
 estancia                       1            0.0025              
 estar                          1            0.0025              
-este                           2            0.005               
 estereosc                      2            0.005               
-esto                           1            0.0025              
 estrell                        6            0.015               
 estrella                       4            0.01                
 estrellada                     4            0.01                
@@ -729,7 +716,6 @@ estudiar                       7            0.0175
 estudio                        3            0.0075              
 estudios                       4            0.01                
 etapa                          42           0.105               
-etc                            1            0.0025              
 europa                         36           0.09                
 europea                        1            0.0025              
 evitando                       1            0.0025              
@@ -867,7 +853,6 @@ guerasimenko                   1            0.0025
 guerra                         1            0.0025              
 guiado                         3            0.0075              
 h                              4            0.01                
-ha                             2            0.005               
 hab                            1            0.0025              
 haber                          2            0.005               
 habitabilidad                  1            0.0025              
@@ -1196,7 +1181,6 @@ multinacional                  2            0.005
 mundial                        2            0.005               
 mundo                          1            0.0025              
 musa                           1            0.0025              
-muy                            5            0.0125              
 n                              24           0.06                
 nasa                           6            0.015               
 nav                            1            0.0025              
@@ -1233,8 +1217,6 @@ notificar                      1            0.0025
 noviembre                      49           0.1225              
 nozomi                         5            0.0125              
 nubes                          2            0.005               
-nuestra                        1            0.0025              
-nuestros                       1            0.0025              
 nuevas                         1            0.0025              
 nueve                          1            0.0025              
 nuevo                          4            0.01                
@@ -1289,10 +1271,6 @@ orientaci                      2            0.005
 originalmente                  1            0.0025              
 orlan                          2            0.005               
 osiris                         1            0.0025              
-otra                           2            0.005               
-otras                          2            0.005               
-otro                           11           0.0275              
-otros                          4            0.01                
 ouna                           1            0.0025              
 ovalada                        1            0.0025              
 oxidante                       1            0.0025              
@@ -1588,8 +1566,6 @@ shenzhou                       6            0.015
 shepard                        1            0.0025              
 shtml                          1            0.0025              
 sido                           1            0.0025              
-siempre                        1            0.0025              
-siendo                         1            0.0025              
 siete                          1            0.0025              
 sigui                          4            0.01                
 siguiente                      2            0.005               
@@ -1642,7 +1618,6 @@ steins                         2            0.005
 stereo                         2            0.005               
 stories                        1            0.0025              
 sts                            9            0.0225              
-su                             24           0.06                
 suave                          4            0.01                
 suavemente                     1            0.0025              
 subir                          1            0.0025              
@@ -1660,7 +1635,6 @@ superficie                     40           0.1
 superior                       10           0.025               
 sur                            4            0.01                
 surveyor                       11           0.0275              
-sus                            3            0.0075              
 svenska                        1            0.0025              
 svetlana                       1            0.0025              
 t                              4            0.01                
@@ -1761,12 +1735,10 @@ unido                          10           0.025
 unidos                         400          1.0                 
 uniforme                       1            0.0025              
 unitec                         2            0.005               
-uno                            1            0.0025              
 urano                          7            0.0175              
 usaf                           1            0.0025              
 usar                           1            0.0025              
 uso                            1            0.0025              
-usted                          1            0.0025              
 usulas                         1            0.0025              
 utc                            11           0.0275              
 utica                          1            0.0025              

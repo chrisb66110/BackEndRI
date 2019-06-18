@@ -20,7 +20,6 @@ afgana                         1            0.1
 agosto                         1            0.1                 
 agreda                         2            0.2                 
 agua                           5            0.5                 
-algo                           7            0.7                 
 alv                            1            0.1                 
 ambiente                       1            0.1                 
 an                             1            0.1                 
@@ -83,7 +82,6 @@ comentario                     1            0.1
 comentarios                    3            0.3                 
 comenzado                      1            0.1                 
 comercio                       1            0.1                 
-como                           6            0.6                 
 completamente                  1            0.1                 
 computaci                      2            0.2                 
 computer                       2            0.2                 
@@ -104,9 +102,6 @@ creado                         1            0.1
 crear                          1            0.1                 
 crm                            1            0.1                 
 cu                             1            0.1                 
-cual                           1            0.1                 
-cualquier                      2            0.2                 
-cuanta                         1            0.1                 
 curva                          1            0.1                 
 datos                          1            0.1                 
 decir                          1            0.1                 
@@ -134,14 +129,11 @@ dijo                           1            0.1
 disfruto                       1            0.1                 
 doble                          1            0.1                 
 dom                            1            0.1                 
-donde                          1            0.1                 
-dos                            2            0.2                 
 durante                        1            0.1                 
 ejemplo                        2            0.2                 
 elec                           1            0.1                 
 electrodom                     1            0.1                 
 elementales                    1            0.1                 
-ellos                          1            0.1                 
 empresas                       2            0.2                 
 encontramos                    1            0.1                 
 engineering                    1            0.1                 
@@ -153,17 +145,11 @@ entrada                        3            0.3
 entradas                       1            0.1                 
 enviar                         1            0.1                 
 es                             5            0.5                 
-esa                            1            0.1                 
 especial                       1            0.1                 
 est                            1            0.1                 
-esta                           2            0.2                 
-estas                          1            0.1                 
 esteganografia                 1            0.1                 
-esto                           1            0.1                 
-estos                          2            0.2                 
 estudiantes                    1            0.1                 
 etapas                         1            0.1                 
-etc                            1            0.1                 
 etiquetas                      2            0.2                 
 evaluar                        1            0.1                 
 exactamente                    1            0.1                 
@@ -197,7 +183,6 @@ grafica                        1            0.1
 gravedad                       1            0.1                 
 guillermo                      1            0.1                 
 gusta                          1            0.1                 
-ha                             1            0.1                 
 haberse                        1            0.1                 
 habitualmente                  1            0.1                 
 hace                           1            0.1                 
@@ -249,7 +234,6 @@ marzo                          1            0.1
 mas                            2            0.2                 
 matem                          1            0.1                 
 matsushita                     1            0.1                 
-me                             1            0.1                 
 mec                            3            0.3                 
 mediante                       3            0.3                 
 membres                        1            0.1                 
@@ -257,7 +241,6 @@ menci                          1            0.1
 menos                          1            0.1                 
 merece                         1            0.1                 
 metro                          3            0.3                 
-mi                             1            0.1                 
 ministerio                     1            0.1                 
 modelo                         1            0.1                 
 modo                           1            0.1                 
@@ -267,7 +250,6 @@ muchas                         2            0.2
 mucho                          2            0.2                 
 mujer                          1            0.1                 
 mundo                          3            0.3                 
-muy                            1            0.1                 
 nasa                           1            0.1                 
 nato                           1            0.1                 
 necesario                      1            0.1                 
@@ -285,9 +267,6 @@ operador                       2            0.2
 operar                         1            0.1                 
 oportunidad                    1            0.1                 
 or                             2            0.2                 
-otra                           1            0.1                 
-otras                          2            0.2                 
-otros                          1            0.1                 
 p                              3            0.3                 
 pa                             1            0.1                 
 paciente                       2            0.2                 
@@ -370,11 +349,9 @@ skip                           2            0.2
 sociedad                       1            0.1                 
 son                            5            0.5                 
 spain                          1            0.1                 
-su                             2            0.2                 
 sucia                          1            0.1                 
 suministro                     1            0.1                 
 super                          1            0.1                 
-sus                            3            0.3                 
 suscribirse                    1            0.1                 
 t                              4            0.4                 
 tambi                          1            0.1                 
@@ -401,10 +378,8 @@ totalmente                     1            0.1
 trasladar                      1            0.1                 
 tratamiento                    1            0.1                 
 tres                           2            0.2                 
-tu                             2            0.2                 
 turing                         3            0.3                 
 unidad                         1            0.1                 
-uno                            1            0.1                 
 usa                            1            0.1                 
 uso                            2            0.2                 
 v                              1            0.1                 

@@ -44,8 +44,6 @@ agresivo                       1            0.025
 ahora                          1            0.025               
 ahu                            2            0.05                
 alem                           1            0.025               
-algo                           1            0.025               
-algunos                        2            0.05                
 aliento                        1            0.025               
 all                            1            0.025               
 alumno                         1            0.025               
@@ -57,7 +55,6 @@ andes                          1            0.025
 animadoras                     1            0.025               
 animales                       1            0.025               
 anterior                       1            0.025               
-antes                          2            0.05                
 antigua                        1            0.025               
 antrop                         1            0.025               
 antropolog                     1            0.025               
@@ -66,7 +63,6 @@ aplicaciones                   1            0.025
 aplicar                        1            0.025               
 apuntaron                      1            0.025               
 aqu                            1            0.025               
-aquellos                       1            0.025               
 ara                            2            0.05                
 arabic                         1            0.025               
 argentinas                     2            0.05                
@@ -166,7 +162,6 @@ comerciales                    2            0.05
 cometer                        1            0.025               
 cometerlo                      1            0.025               
 comisi                         1            0.025               
-como                           3            0.075               
 compar                         1            0.025               
 compartido                     1            0.025               
 complicada                     1            0.025               
@@ -214,8 +209,6 @@ crear                          4            0.1
 crueldad                       1            0.025               
 ctenos                         1            0.025               
 cter                           1            0.025               
-cual                           1            0.025               
-cualquier                      1            0.025               
 cuenta                         16           0.4                 
 cuentas                        1            0.025               
 cuerdas                        2            0.05                
@@ -279,8 +272,6 @@ discusi                        1            0.025
 diseccionan                    1            0.025               
 distinto                       1            0.025               
 divulga                        1            0.025               
-donde                          2            0.05                
-dos                            4            0.1                 
 dudas                          1            0.025               
 durante                        1            0.025               
 easter                         2            0.05                
@@ -303,8 +294,6 @@ elegante                       1            0.025
 eliminada                      1            0.025               
 eliminado                      1            0.025               
 eliminar                       6            0.15                
-ellas                          2            0.05                
-ello                           2            0.05                
 empires                        2            0.05                
 encima                         1            0.025               
 encontrados                    1            0.025               
@@ -341,17 +330,13 @@ espacios                       1            0.025
 especial                       1            0.025               
 espectaculares                 1            0.025               
 est                            1            0.025               
-esta                           3            0.075               
 estaba                         1            0.025               
 estaban                        2            0.05                
 estatal                        1            0.025               
 estatua                        3            0.075               
 estatuas                       8            0.2                 
-este                           2            0.05                
 estilo                         1            0.025               
-esto                           1            0.025               
 estonian                       1            0.025               
-estos                          3            0.075               
 estudio                        5            0.125               
 etiquetas                      1            0.025               
 europa                         3            0.075               
@@ -424,7 +409,6 @@ guardado                       1            0.025
 guardar                        1            0.025               
 guerras                        1            0.025               
 gustar                         1            0.025               
-ha                             2            0.05                
 habitantes                     1            0.025               
 hac                            1            0.025               
 hace                           1            0.025               
@@ -559,7 +543,6 @@ military                       1            0.025
 millones                       2            0.05                
 ministra                       1            0.025               
 minor                          1            0.025               
-mis                            5            0.125               
 mismo                          1            0.025               
 misterio                       4            0.1                 
 misterios                      1            0.025               
@@ -596,7 +579,6 @@ multimedia                     3            0.075
 mummy                          1            0.025               
 mundo                          13           0.325               
 must                           1            0.025               
-muy                            1            0.025               
 n                              5            0.125               
 nacional                       1            0.025               
 naciones                       1            0.025               
@@ -620,12 +602,10 @@ normas                         4            0.1
 norte                          2            0.05                
 noruega                        1            0.025               
 nos                            1            0.025               
-nosotros                       4            0.1                 
 not                            1            0.025               
 noticias                       6            0.15                
 notificaciones                 2            0.05                
 nuclear                        1            0.025               
-nuestra                        6            0.15                
 nueva                          2            0.05                
 nuevo                          1            0.025               
 nuevos                         1            0.025               
@@ -647,10 +627,6 @@ opini                          2            0.05
 opuestos                       1            0.025               
 organizaciones                 1            0.025               
 oriente                        2            0.05                
-otra                           1            0.025               
-otras                          1            0.025               
-otro                           3            0.075               
-otros                          3            0.075               
 p                              4            0.1                 
 pa                             1            0.025               
 palabras                       1            0.025               
@@ -823,7 +799,6 @@ sesi                           6            0.15
 sexual                         1            0.025               
 sicas                          1            0.025               
 sido                           3            0.075               
-siempre                        1            0.025               
 siglas                         1            0.025               
 significado                    1            0.025               
 siguen                         1            0.025               
@@ -848,13 +823,11 @@ soportes                       1            0.025
 spanish                        1            0.025               
 sputnik                        40           1.0                 
 sputniknews                    5            0.125               
-su                             25           0.625               
 sub                            1            0.025               
 subir                          1            0.025               
 suficientes                    1            0.025               
 suicidio                       1            0.025               
 suministros                    1            0.025               
-sus                            5            0.125               
 suscr                          1            0.025               
 suscribirse                    1            0.025               
 sustancias                     1            0.025               
@@ -868,7 +841,6 @@ tales                          1            0.025
 tambi                          3            0.075               
 tampoco                        1            0.025               
 tarea                          1            0.025               
-te                             2            0.05                
 tecnolog                       3            0.075               
 telegram                       1            0.025               
 telescopio                     2            0.05                
@@ -905,14 +877,12 @@ ue                             1            0.025
 unidas                         1            0.025               
 unificaci                      1            0.025               
 universidad                    2            0.05                
-uno                            1            0.025               
 url                            1            0.025               
 us                             2            0.05                
 usa                            1            0.025               
 usado                          1            0.025               
 usando                         4            0.1                 
 uso                            9            0.225               
-usted                          2            0.05                
 usuario                        9            0.225               
 usuarios                       2            0.05                
 utilizaci                      1            0.025               

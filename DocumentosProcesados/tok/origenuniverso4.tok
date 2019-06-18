@@ -36,9 +36,6 @@ alejamiento                    1            0.03125
 alejamos                       2            0.0625              
 alejarse                       2            0.0625              
 alg                            3            0.09375             
-algo                           1            0.03125             
-alguna                         2            0.0625              
-algunos                        2            0.0625              
 all                            2            0.0625              
 alrededor                      2            0.0625              
 alta                           1            0.03125             
@@ -47,7 +44,6 @@ alto                           1            0.03125
 animaci                        1            0.03125             
 anomal                         1            0.03125             
 anterior                       1            0.03125             
-antes                          1            0.03125             
 aparenta                       3            0.09375             
 aparente                       2            0.0625              
 apariencia                     1            0.03125             
@@ -73,14 +69,12 @@ baja                           1            0.03125
 bang                           2            0.0625              
 basarnos                       1            0.03125             
 bastante                       1            0.03125             
-bien                           2            0.0625              
 big                            2            0.0625              
 bloques                        1            0.03125             
 borde                          1            0.03125             
 bromas                         1            0.03125             
 bulbo                          1            0.03125             
 c                              8            0.25                
-cada                           6            0.1875              
 caiga                          1            0.03125             
 cambios                        1            0.03125             
 camino                         1            0.03125             
@@ -114,7 +108,6 @@ combinar                       1            0.03125
 comenz                         1            0.03125             
 comenzar                       1            0.03125             
 comienza                       1            0.03125             
-como                           19           0.59375             
 comparando                     1            0.03125             
 completamente                  1            0.03125             
 completar                      1            0.03125             
@@ -149,11 +142,6 @@ correspondientes               2            0.0625
 crecer                         3            0.09375             
 creo                           2            0.0625              
 cuadrar                        1            0.03125             
-cual                           1            0.03125             
-cuales                         1            0.03125             
-cualquier                      1            0.03125             
-cualquiera                     1            0.03125             
-cuando                         1            0.03125             
 cuentas                        1            0.03125             
 cumple                         1            0.03125             
 cumplirse                      1            0.03125             
@@ -209,8 +197,6 @@ distinto                       2            0.0625
 distribuci                     1            0.03125             
 dividiendo                     1            0.03125             
 domina                         1            0.03125             
-donde                          4            0.125               
-dos                            5            0.15625             
 durante                        1            0.03125             
 efecto                         1            0.03125             
 efectos                        1            0.03125             
@@ -218,8 +204,6 @@ eje                            2            0.0625
 ejemplo                        1            0.03125             
 elementos                      3            0.09375             
 elevada                        2            0.0625              
-ellas                          1            0.03125             
-ellos                          3            0.09375             
 eludir                         1            0.03125             
 embargo                        3            0.09375             
 empezar                        1            0.03125             
@@ -238,16 +222,12 @@ entrar                         1            0.03125
 err                            1            0.03125             
 erupci                         1            0.03125             
 es                             20           0.625               
-esa                            4            0.125               
-esas                           1            0.03125             
 escapado                       1            0.03125             
 escapar                        3            0.09375             
 escapatoria                    1            0.03125             
 escogido                       1            0.03125             
-ese                            4            0.125               
 esenciales                     1            0.03125             
 eslab                          1            0.03125             
-eso                            4            0.125               
 espacio                        2            0.0625              
 especular                      1            0.03125             
 espiral                        8            0.25                
@@ -255,15 +235,11 @@ espirales                      5            0.15625
 esquem                         1            0.03125             
 esquema                        2            0.0625              
 est                            4            0.125               
-esta                           4            0.125               
 estabilidad                    1            0.03125             
 estable                        1            0.03125             
 estado                         1            0.03125             
 estando                        1            0.03125             
 estar                          1            0.03125             
-estas                          2            0.0625              
-este                           9            0.28125             
-estos                          5            0.15625             
 estrella                       2            0.0625              
 estrellas                      6            0.1875              
 estrictamente                  1            0.03125             
@@ -344,7 +320,6 @@ gravitatoria                   3            0.09375
 gravitatoriamente              2            0.0625              
 gravitatorias                  1            0.03125             
 guardar                        1            0.03125             
-ha                             5            0.15625             
 haber                          4            0.125               
 haberse                        3            0.09375             
 habr                           5            0.15625             
@@ -423,7 +398,6 @@ menores                        1            0.03125
 menos                          3            0.09375             
 mente                          1            0.03125             
 merma                          1            0.03125             
-mientras                       4            0.125               
 millones                       1            0.03125             
 miniatura                      1            0.03125             
 misma                          2            0.0625              
@@ -440,7 +414,6 @@ mucho                          2            0.0625
 mueve                          3            0.09375             
 multidireccional               1            0.03125             
 mutuamente                     1            0.03125             
-muy                            3            0.09375             
 n                              21           0.65625             
 nada                           5            0.15625             
 navegadores                    1            0.03125             
@@ -456,9 +429,6 @@ nos                            4            0.125
 notarse                        1            0.03125             
 nubes                          1            0.03125             
 nucleos                        1            0.03125             
-nuestra                        3            0.09375             
-nuestras                       1            0.03125             
-nuestro                        7            0.21875             
 nuevo                          2            0.0625              
 nunca                          2            0.0625              
 objeto                         1            0.03125             
@@ -475,10 +445,6 @@ opuesto                        1            0.03125
 orbital                        5            0.15625             
 origen                         5            0.15625             
 oscura                         2            0.0625              
-otra                           2            0.0625              
-otras                          4            0.125               
-otro                           5            0.15625             
-otros                          3            0.09375             
 p                              1            0.03125             
 par                            1            0.03125             
 parado                         1            0.03125             
@@ -542,7 +508,6 @@ pudo                           2            0.0625
 pueda                          1            0.03125             
 puede                          15           0.46875             
 pueden                         7            0.21875             
-pues                           1            0.03125             
 puesto                         2            0.0625              
 punteada                       1            0.03125             
 punto                          7            0.21875             
@@ -618,7 +583,6 @@ solar                          1            0.03125
 solo                           1            0.03125             
 son                            1            0.03125             
 sorpresas                      1            0.03125             
-su                             10           0.3125              
 subat                          1            0.03125             
 sucesiva                       1            0.03125             
 suceso                         1            0.03125             
@@ -633,14 +597,12 @@ supone                         1            0.03125
 suponemos                      1            0.03125             
 supuesta                       1            0.03125             
 supuesto                       2            0.0625              
-sus                            3            0.09375             
 tal                            3            0.09375             
 tama                           2            0.0625              
 tambi                          6            0.1875              
 tan                            2            0.0625              
 tangencial                     1            0.03125             
 tarde                          1            0.03125             
-te                             1            0.03125             
 tema                           1            0.03125             
 tendr                          5            0.15625             
 tenemos                        3            0.09375             
@@ -667,8 +629,6 @@ trazo                          1            0.03125
 tuvo                           1            0.03125             
 unir                           1            0.03125             
 universo                       6            0.1875              
-uno                            4            0.125               
-usted                          1            0.03125             
 v                              3            0.09375             
 vagando                        1            0.03125             
 van                            2            0.0625              
@@ -689,6 +649,5 @@ visto                          2            0.0625
 visual                         1            0.03125             
 visualmente                    1            0.03125             
 vuelta                         1            0.03125             
-yo                             1            0.03125             
 zona                           2            0.0625              
 zonas                          1            0.03125             

@@ -6,8 +6,6 @@ acudan                         1            0.125
 adquirir                       1            0.125               
 agravios                       1            0.125               
 alg                            1            0.125               
-alguna                         1            0.125               
-algunas                        1            0.125               
 all                            1            0.125               
 alta                           1            0.125               
 anteriores                     1            0.125               
@@ -37,7 +35,6 @@ cobro                          1            0.125
 combinado                      1            0.125               
 cometidos                      2            0.25                
 comisi                         1            0.125               
-como                           2            0.25                
 complejidad                    1            0.125               
 complicidad                    1            0.125               
 compras                        1            0.125               
@@ -61,7 +58,6 @@ correo                         2            0.25
 cr                             2            0.25                
 crucero                        1            0.125               
 cu                             1            0.125               
-cual                           2            0.25                
 d                              1            0.125               
 da                             3            0.375               
 dada                           1            0.125               
@@ -86,17 +82,13 @@ dinero                         4            0.5
 diversas                       1            0.125               
 diversos                       1            0.125               
 dolor                          1            0.125               
-donde                          1            0.125               
 doquier                        1            0.125               
-dos                            1            0.125               
 durante                        1            0.125               
 dvd                            1            0.125               
 eficiente                      1            0.125               
 ejecutados                     1            0.125               
 ejemplo                        1            0.125               
 electr                         1            0.125               
-ellas                          1            0.125               
-ellos                          2            0.25                
 empieza                        1            0.125               
 empresa                        1            0.125               
 encuentran                     1            0.125               
@@ -106,9 +98,7 @@ env                            2            0.25
 enviada                        1            0.125               
 error                          1            0.125               
 es                             8            1.0                 
-esa                            1            0.125               
 escr                           1            0.125               
-ese                            1            0.125               
 esp                            1            0.125               
 especiales                     1            0.125               
 est                            1            0.125               
@@ -116,10 +106,7 @@ establecer                     2            0.25
 estafa                         1            0.125               
 estafas                        1            0.125               
 estar                          1            0.125               
-este                           1            0.125               
-estos                          2            0.25                
 estrategias                    1            0.125               
-etc                            1            0.125               
 evadir                         1            0.125               
 eventualidades                 1            0.125               
 extranjero                     1            0.125               
@@ -198,7 +185,6 @@ motivos                        1            0.125
 muchos                         1            0.125               
 mundo                          1            0.125               
 musicales                      1            0.125               
-muy                            1            0.125               
 necesariamente                 1            0.125               
 negligencia                    1            0.125               
 no                             4            0.5                 
@@ -210,8 +196,6 @@ ofrecer                        1            0.125
 oportunidad                    1            0.125               
 oportunidades                  1            0.125               
 organizaci                     1            0.125               
-otro                           1            0.125               
-otros                          1            0.125               
 p                              3            0.375               
 pa                             1            0.125               
 padres                         1            0.125               
@@ -285,14 +269,12 @@ son                            6            0.75
 sorteo                         1            0.125               
 spam                           1            0.125               
 spoofing                       1            0.125               
-su                             2            0.25                
 subrepticio                    1            0.125               
 suma                           1            0.125               
 suplantaci                     1            0.125               
 supuesta                       2            0.25                
 supuestamente                  1            0.125               
 supuesto                       1            0.125               
-sus                            3            0.375               
 sustracci                      2            0.25                
 t                              3            0.375               
 tambi                          2            0.25                

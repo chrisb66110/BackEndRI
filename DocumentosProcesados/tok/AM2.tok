@@ -24,7 +24,6 @@ adulto                         1            0.05
 alcance                        2            0.1                 
 alg                            2            0.1                 
 alguien                        1            0.05                
-algunos                        1            0.05                
 alternancia                    1            0.05                
 alternativa                    1            0.05                
 alto                           1            0.05                
@@ -34,7 +33,6 @@ an                             1            0.05
 android                        3            0.15                
 anterior                       1            0.05                
 anteriormente                  1            0.05                
-antes                          2            0.1                 
 aparte                         1            0.05                
 apoyo                          1            0.05                
 app                            1            0.05                
@@ -63,7 +61,6 @@ buscan                         1            0.05
 buscar                         2            0.1                 
 by                             1            0.05                
 c                              4            0.2                 
-cada                           2            0.1                 
 cambias                        1            0.05                
 cambridge                      1            0.05                
 canci                          2            0.1                 
@@ -87,7 +84,6 @@ comentario                     2            0.1
 comentarios                    2            0.1                 
 comenzar                       2            0.1                 
 comienzo                       1            0.05                
-como                           3            0.15                
 comparativas                   1            0.05                
 compartir                      1            0.05                
 complementaria                 1            0.05                
@@ -107,10 +103,6 @@ cookies                        2            0.1
 costosa                        1            0.05                
 ctica                          1            0.05                
 cu                             1            0.05                
-cual                           1            0.05                
-cualquier                      4            0.2                 
-cualquiera                     3            0.15                
-cuando                         3            0.15                
 cuenta                         1            0.05                
 cumplir                        1            0.05                
 curiosidades                   1            0.05                
@@ -136,7 +128,6 @@ distintas                      1            0.05
 distintos                      2            0.1                 
 diversidad                     1            0.05                
 divertida                      1            0.05                
-dos                            2            0.1                 
 duda                           1            0.05                
 duolingo                       1            0.05                
 edici                          2            0.1                 
@@ -155,15 +146,10 @@ env                            1            0.05
 enviar                         1            0.05                
 equipo                         1            0.05                
 es                             15           0.75                
-esa                            2            0.1                 
-ese                            2            0.1                 
 esencial                       1            0.05                
-esos                           1            0.05                
 espa                           4            0.2                 
 est                            1            0.05                
-esta                           1            0.05                
 estar                          1            0.05                
-este                           3            0.15                
 excelente                      1            0.05                
 experimentado                  1            0.05                
 explicativo                    1            0.05                
@@ -247,11 +233,9 @@ mara                           2            0.1
 maras                          1            0.05                
 mate                           2            0.1                 
 may                            1            0.05                
-me                             1            0.05                
 menos                          1            0.05                
 meses                          2            0.1                 
 micr                           2            0.1                 
-mientras                       2            0.1                 
 mismo                          1            0.05                
 modo                           1            0.05                
 momento                        3            0.15                
@@ -261,7 +245,6 @@ mucha                          1            0.05
 muchos                         1            0.05                
 muestras                       1            0.05                
 musical                        2            0.1                 
-muy                            10           0.5                 
 nada                           1            0.05                
 navegador                      1            0.05                
 navegadores                    1            0.05                
@@ -292,8 +275,6 @@ opci                           1            0.05
 operadores                     1            0.05                
 opini                          1            0.05                
 oppo                           1            0.05                
-otra                           1            0.05                
-otro                           1            0.05                
 pantalla                       1            0.05                
 particular                     1            0.05                
 partitura                      2            0.1                 
@@ -375,7 +356,6 @@ ser                            2            0.1
 sesi                           3            0.15                
 sicas                          1            0.05                
 sico                           3            0.15                
-siempre                        1            0.05                
 sigue                          1            0.05                
 siguiente                      1            0.05                
 sitio                          1            0.05                
@@ -385,16 +365,13 @@ software                       2            0.1
 sonido                         1            0.05                
 soporte                        1            0.05                
 spam                           1            0.05                
-su                             3            0.15                
 suficiente                     1            0.05                
 supone                         1            0.05                
 surface                        1            0.05                
-sus                            3            0.15                
 suscr                          1            0.05                
 t                              2            0.1                 
 tablets                        1            0.05                
 tambi                          2            0.1                 
-te                             1            0.05                
 teclado                        2            0.1                 
 teclas                         1            0.05                
 tecnolog                       2            0.1                 
@@ -416,8 +393,6 @@ todos                          3            0.15
 toggle                         1            0.05                
 trav                           4            0.2                 
 tronos                         1            0.05                
-tu                             9            0.45                
-tus                            2            0.1                 
 tweet                          1            0.05                
 ubicaci                        1            0.05                
 ubicaciones                    1            0.05                

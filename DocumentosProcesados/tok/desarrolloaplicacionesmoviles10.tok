@@ -44,11 +44,7 @@ agradable                      2            0.0625
 agregandoles                   1            0.03125             
 agregar                        1            0.03125             
 agrupando                      1            0.03125             
-ahi                            1            0.03125             
 aleman                         1            0.03125             
-algun                          1            0.03125             
-alguna                         2            0.0625              
-algunas                        1            0.03125             
 alicante                       1            0.03125             
 all                            1            0.03125             
 almacenar                      1            0.03125             
@@ -64,7 +60,6 @@ anidadas                       4            0.125
 anomalia                       1            0.03125             
 anos                           1            0.03125             
 anterior                       3            0.09375             
-antes                          1            0.03125             
 apache                         2            0.0625              
 aparecera                      1            0.03125             
 apenas                         1            0.03125             
@@ -86,7 +81,6 @@ asuste                         1            0.03125
 async                          1            0.03125             
 atributo                       8            0.25                
 atributos                      1            0.03125             
-aun                            2            0.0625              
 autentia                       5            0.15625             
 autor                          4            0.125               
 avanzadas                      1            0.03125             
@@ -102,7 +96,6 @@ basedatos                      2            0.0625
 basico                         2            0.0625              
 bastante                       1            0.03125             
 bateria                        1            0.03125             
-bien                           5            0.15625             
 blackberry                     1            0.03125             
 bo                             6            0.1875              
 bonitas                        1            0.03125             
@@ -128,7 +121,6 @@ carga                          4            0.125
 cargarse                       1            0.03125             
 carlos                         4            0.125               
 casado                         1            0.03125             
-casi                           1            0.03125             
 caso                           1            0.03125             
 catalogar                      2            0.0625              
 catalogo                       1            0.03125             
@@ -167,7 +159,6 @@ comic                          1            0.03125
 command                        4            0.125               
 commandlistener                1            0.03125             
 commons                        1            0.03125             
-como                           11           0.34375             
 comoda                         1            0.03125             
 comparador                     1            0.03125             
 compartelo                     1            0.03125             
@@ -222,10 +213,6 @@ creando                        2            0.0625
 crear                          5            0.15625             
 creative                       1            0.03125             
 css                            5            0.15625             
-cual                           3            0.09375             
-cuales                         1            0.03125             
-cualquier                      1            0.03125             
-cuando                         6            0.1875              
 cuenta                         3            0.09375             
 cuerpo                         2            0.0625              
 da                             1            0.03125             
@@ -273,8 +260,6 @@ div                            1            0.03125
 divorciado                     1            0.03125             
 doctype                        1            0.03125             
 documentacion                  4            0.125               
-donde                          5            0.15625             
-dos                            1            0.03125             
 doy                            1            0.03125             
 efecto                         1            0.03125             
 ejecutar                       1            0.03125             
@@ -312,19 +297,15 @@ espera                         1            0.03125
 esperas                        1            0.03125             
 espero                         1            0.03125             
 est                            1            0.03125             
-esta                           10           0.3125              
 estable                        1            0.03125             
 establecer                     1            0.03125             
 estado                         1            0.03125             
 estan                          2            0.0625              
 estar                          3            0.09375             
 estaticos                      1            0.03125             
-este                           4            0.125               
 estilos                        2            0.0625              
-esto                           2            0.0625              
 estructuras                    1            0.03125             
 estuve                         1            0.03125             
-etc                            7            0.21875             
 etiquetas                      1            0.03125             
 evaluarlo                      2            0.0625              
 ex                             1            0.03125             
@@ -379,7 +360,6 @@ gratuita                       1            0.03125
 grid                           2            0.0625              
 guide                          1            0.03125             
 gusta                          1            0.03125             
-ha                             1            0.03125             
 haaala                         1            0.03125             
 habilitado                     1            0.03125             
 hace                           2            0.0625              
@@ -498,7 +478,6 @@ maps                           1            0.03125
 maquillarla                    1            0.03125             
 mas                            8            0.25                
 mayoria                        1            0.03125             
-me                             1            0.03125             
 mejor                          1            0.03125             
 mejorar                        1            0.03125             
 mendoza                        1            0.03125             
@@ -509,7 +488,6 @@ menu                           1            0.03125
 mercurial                      1            0.03125             
 meter                          1            0.03125             
 metodolog                      1            0.03125             
-mi                             4            0.125               
 mibasedato                     2            0.0625              
 microedition                   9            0.28125             
 midlet                         8            0.25                
@@ -536,7 +514,6 @@ muchas                         1            0.03125
 muchisimo                      1            0.03125             
 mucho                          1            0.03125             
 muchos                         1            0.03125             
-muy                            1            0.03125             
 mybatis                        2            0.0625              
 n                              1            0.03125             
 nada                           4            0.125               
@@ -555,10 +532,6 @@ new                            6            0.1875
 nl                             5            0.15625             
 no                             12           0.375               
 noticias                       2            0.0625              
-nuestra                        1            0.03125             
-nuestras                       2            0.0625              
-nuestro                        1            0.03125             
-nuestros                       2            0.0625              
 nuevo                          2            0.0625              
 null                           9            0.28125             
 num                            1            0.03125             
@@ -586,10 +559,6 @@ org                            1            0.03125
 organizacion                   1            0.03125             
 organizaciones                 1            0.03125             
 os                             3            0.09375             
-otra                           2            0.0625              
-otras                          5            0.15625             
-otro                           1            0.03125             
-otros                          3            0.09375             
 p                              1            0.03125             
 package                        4            0.125               
 pagespeed                      1            0.03125             
@@ -664,11 +633,9 @@ publicacion                    1            0.03125
 publique                       1            0.03125             
 puede                          3            0.09375             
 puedes                         7            0.21875             
-pues                           2            0.0625              
 puso                           1            0.03125             
 queria                         1            0.03125             
 qui                            1            0.03125             
-quien                          1            0.03125             
 quieres                        1            0.03125             
 quiero                         1            0.03125             
 quitar                         1            0.03125             
@@ -729,7 +696,6 @@ server                         3            0.09375
 servicios                      2            0.0625              
 share                          1            0.03125             
 showcase                       1            0.03125             
-siempre                        1            0.03125             
 siguenos                       1            0.03125             
 siguiente                      3            0.09375             
 simplemente                    1            0.03125             
@@ -755,8 +721,6 @@ started                        3            0.09375
 stream                         1            0.03125             
 string                         10           0.3125              
 stringbuffer                   1            0.03125             
-su                             4            0.125               
-sus                            2            0.0625              
 system                         4            0.125               
 t                              5            0.15625             
 tabla                          2            0.0625              
@@ -768,7 +732,6 @@ tapestry                       1            0.03125
 tardan                         1            0.03125             
 tarifas                        1            0.03125             
 tdd                            1            0.03125             
-te                             5            0.15625             
 tecnicas                       1            0.03125             
 telefonos                      1            0.03125             
 tema                           1            0.03125             
@@ -805,12 +768,10 @@ traves                         8            0.25
 tres                           1            0.03125             
 true                           2            0.0625              
 try                            6            0.1875              
-tu                             2            0.0625              
 tutorial                       5            0.15625             
 tutoriales                     5            0.15625             
 ui                             2            0.0625              
 unico                          2            0.0625              
-uno                            1            0.03125             
 url                            1            0.03125             
 usabilidad                     2            0.0625              
 usable                         2            0.0625              

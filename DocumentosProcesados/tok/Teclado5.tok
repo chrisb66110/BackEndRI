@@ -59,16 +59,11 @@ aerogenerador                  1            0.025
 ag                             1            0.025               
 agosto                         8            0.2                 
 alemania                       1            0.025               
-algo                           1            0.025               
-alguna                         1            0.025               
-algunas                        1            0.025               
-algunos                        1            0.025               
 alimentaci                     3            0.075               
 almacenamiento                 2            0.05                
 alta                           6            0.15                
 altavoces                      1            0.025               
 amazon                         1            0.025               
-ambos                          1            0.025               
 amd                            4            0.1                 
 an                             3            0.075               
 analisis                       1            0.025               
@@ -78,12 +73,10 @@ antigua                        1            0.025
 antiguos                       1            0.025               
 apartado                       1            0.025               
 apunta                         1            0.025               
-arriba                         3            0.075               
 art                            3            0.075               
 as                             2            0.05                
 audible                        1            0.025               
 aumentar                       2            0.05                
-aun                            1            0.025               
 autor                          1            0.025               
 avanza                         1            0.025               
 avisar                         1            0.025               
@@ -97,7 +90,6 @@ basa                           1            0.025
 base                           2            0.05                
 bastante                       4            0.1                 
 benchmark                      1            0.025               
-bien                           1            0.025               
 black                          10           0.25                
 blanca                         1            0.025               
 blanco                         1            0.025               
@@ -107,7 +99,6 @@ booleana                       1            0.025
 brown                          6            0.15                
 buenos                         2            0.05                
 c                              2            0.05                
-cada                           1            0.025               
 calculo                        2            0.05                
 calidad                        1            0.025               
 canal                          1            0.025               
@@ -131,7 +122,6 @@ com                            2            0.05
 comercializado                 1            0.025               
 comercializar                  1            0.025               
 comments                       1            0.025               
-como                           8            0.2                 
 compa                          6            0.15                
 compactos                      2            0.05                
 compartir                      1            0.025               
@@ -166,9 +156,6 @@ cticamente                     1            0.025
 ctil                           4            0.1                 
 ctiles                         1            0.025               
 cu                             3            0.075               
-cuales                         3            0.075               
-cualquiera                     1            0.025               
-cuando                         5            0.125               
 cuatro                         2            0.05                
 cuerpo                         3            0.075               
 cumplimiento                   1            0.025               
@@ -214,8 +201,6 @@ diy                            2            0.05
 do                             1            0.025               
 docente                        1            0.025               
 don                            1            0.025               
-donde                          2            0.05                
-dos                            4            0.1                 
 dura                           1            0.025               
 duro                           3            0.075               
 efecto                         1            0.025               
@@ -223,8 +208,6 @@ ejemplo                        1            0.025
 eksdfnttjq                     1            0.025               
 electr                         1            0.025               
 elegir                         2            0.05                
-ella                           1            0.025               
-ellos                          1            0.025               
 email                          2            0.05                
 empez                          1            0.025               
 encontraba                     1            0.025               
@@ -234,7 +217,6 @@ enfrent                        1            0.025
 entretenimiento                1            0.025               
 enviado                        1            0.025               
 es                             23           0.575               
-esa                            1            0.025               
 escribamos                     1            0.025               
 escritura                      1            0.025               
 espaciadoras                   4            0.1                 
@@ -242,13 +224,8 @@ especiales                     1            0.025
 especializado                  1            0.025               
 espera                         1            0.025               
 est                            5            0.125               
-esta                           7            0.175               
 estad                          1            0.025               
 estados                        1            0.025               
-estas                          8            0.2                 
-este                           5            0.125               
-esto                           1            0.025               
-estos                          17           0.425               
 estoy                          1            0.025               
 estrategia                     1            0.025               
 etas                           1            0.025               
@@ -304,7 +281,6 @@ grey                           2            0.05
 gtx                            1            0.025               
 gu                             6            0.15                
 gusta                          1            0.025               
-ha                             2            0.05                
 hablamos                       1            0.025               
 hace                           1            0.025               
 haciendo                       1            0.025               
@@ -380,7 +356,6 @@ may                            1            0.025
 mayo                           1            0.025               
 mayor                          1            0.025               
 mayormente                     1            0.025               
-me                             1            0.025               
 mec                            10           0.25                
 mecanismos                     1            0.025               
 mecanograf                     3            0.075               
@@ -395,12 +370,9 @@ mencionados                    1            0.025
 menor                          2            0.05                
 menos                          4            0.1                 
 mercado                        6            0.15                
-mi                             1            0.025               
 microsoft                      1            0.025               
 mide                           1            0.025               
-mientras                       5            0.125               
 mining                         1            0.025               
-mis                            1            0.025               
 misma                          1            0.025               
 mismo                          3            0.075               
 mismos                         1            0.025               
@@ -419,7 +391,6 @@ muchos                         2            0.05
 muelle                         1            0.025               
 mueven                         1            0.025               
 mundo                          1            0.025               
-muy                            5            0.125               
 mx                             40           1.0                 
 my                             2            0.05                
 n                              3            0.075               
@@ -437,15 +408,10 @@ no                             12           0.3
 nombra                         1            0.025               
 nombre                         1            0.025               
 nos                            3            0.075               
-nosotros                       3            0.075               
 notan                          1            0.025               
 notas                          1            0.025               
 noticias                       3            0.075               
 now                            1            0.025               
-nuestra                        1            0.025               
-nuestras                       1            0.025               
-nuestro                        2            0.05                
-nuestros                       1            0.025               
 nuevas                         1            0.025               
 nvidia                         3            0.075               
 nvme                           1            0.025               
@@ -459,8 +425,6 @@ ofreciendo                     1            0.025
 opini                          3            0.075               
 original                       1            0.025               
 os                             1            0.025               
-otras                          2            0.05                
-otros                          1            0.025               
 panel                          1            0.025               
 parte                          2            0.05                
 partes                         2            0.05                
@@ -533,7 +497,6 @@ punto                          1            0.025
 puntos                         1            0.025               
 queremos                       1            0.025               
 querer                         1            0.025               
-quien                          1            0.025               
 quiere                         1            0.025               
 r                              10           0.25                
 ratones                        1            0.025               
@@ -590,7 +553,6 @@ ser                            4            0.1
 serie                          1            0.025               
 shopping                       1            0.025               
 sido                           2            0.05                
-siendo                         2            0.05                
 siguen                         1            0.025               
 silenciosos                    1            0.025               
 silent                         2            0.05                
@@ -612,7 +574,6 @@ speed                          2            0.05
 spy                            1            0.025               
 ssd                            1            0.025               
 stargate                       1            0.025               
-su                             9            0.225               
 suave                          1            0.025               
 subir                          1            0.025               
 suceder                        1            0.025               
@@ -626,7 +587,6 @@ tambi                          5            0.125
 tan                            1            0.025               
 tarjetas                       4            0.1                 
 taza                           1            0.025               
-te                             3            0.075               
 tecla                          5            0.125               
 teclado                        3            0.075               
 teclados                       15           0.375               
@@ -660,7 +620,6 @@ twitter                        4            0.1
 ultimo                         1            0.025               
 ultra                          1            0.025               
 unidos                         1            0.025               
-uno                            1            0.025               
 usado                          1            0.025               
 usados                         2            0.05                
 usamos                         1            0.025               

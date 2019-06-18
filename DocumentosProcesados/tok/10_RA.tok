@@ -37,8 +37,6 @@ agresivo                       1            0.04
 agro                           2            0.08                
 aguas                          1            0.04                
 aldea                          1            0.04                
-alguno                         1            0.04                
-algunos                        1            0.04                
 alimentado                     1            0.04                
 alimentan                      1            0.04                
 alimentar                      2            0.08                
@@ -52,13 +50,11 @@ am                             9            0.36
 amarran                        1            0.04                
 amazon                         1            0.04                
 ambiente                       3            0.12                
-ambos                          1            0.04                
 amenazas                       1            0.04                
 ampliar                        3            0.12                
 anciana                        1            0.04                
 animal                         4            0.16                
 animales                       4            0.16                
-antes                          1            0.04                
 anticorrupci                   2            0.08                
 antioque                       2            0.08                
 antioquia                      5            0.2                 
@@ -102,7 +98,6 @@ buitrago                       1            0.04
 c                              7            0.28                
 ca                             1            0.04                
 cachorros                      1            0.04                
-cada                           1            0.04                
 cafeteros                      1            0.04                
 cambiario                      1            0.04                
 campos                         2            0.08                
@@ -150,7 +145,6 @@ comentarios                    3            0.12
 comercio                       1            0.04                
 cometas                        1            0.04                
 comfama                        2            0.08                
-como                           4            0.16                
 compartido                     1            0.04                
 competencia                    1            0.04                
 comuna                         1            0.04                
@@ -224,8 +218,6 @@ diez                           1            0.04
 digesti                        1            0.04                
 direcci                        1            0.04                
 divorcio                       1            0.04                
-donde                          2            0.08                
-dos                            3            0.12                
 dura                           1            0.04                
 durante                        3            0.12                
 eafit                          1            0.04                
@@ -243,8 +235,6 @@ elefante                       1            0.04
 elefantes                      1            0.04                
 elegido                        1            0.04                
 eliminar                       1            0.04                
-ella                           1            0.04                
-ellas                          1            0.04                
 embarazo                       3            0.12                
 emprenden                      1            0.04                
 empresas                       2            0.08                
@@ -261,22 +251,15 @@ errante                        1            0.04
 error                          2            0.08                
 errores                        3            0.12                
 es                             9            0.36                
-esas                           1            0.04                
 escribir                       1            0.04                
-ese                            1            0.04                
 espacial                       2            0.08                
 espalda                        1            0.04                
 especiales                     1            0.04                
 especie                        1            0.04                
 est                            5            0.2                 
-esta                           3            0.12                
 estaci                         2            0.08                
 estado                         1            0.04                
 estados                        2            0.08                
-estas                          1            0.04                
-este                           1            0.04                
-esto                           2            0.08                
-estos                          3            0.12                
 estrategia                     1            0.04                
 estrategias                    1            0.04                
 estudio                        1            0.04                
@@ -450,10 +433,8 @@ mes                            2            0.08
 meses                          3            0.12                
 mexicano                       1            0.04                
 mico                           1            0.04                
-mientras                       2            0.08                
 migraci                        1            0.04                
 millonario                     1            0.04                
-mis                            1            0.04                
 mismas                         1            0.04                
 moda                           2            0.08                
 modric                         1            0.04                
@@ -467,7 +448,6 @@ muchas                         2            0.08
 mujer                          1            0.04                
 multimedia                     2            0.08                
 mundo                          1            0.04                
-muy                            3            0.12                
 n                              7            0.28                
 nacer                          2            0.08                
 nacidos                        3            0.12                
@@ -491,8 +471,6 @@ nombre                         1            0.04
 notas                          1            0.04                
 noticia                        1            0.04                
 noviembre                      1            0.04                
-nuestras                       2            0.08                
-nuestro                        1            0.04                
 nueva                          1            0.04                
 nuevamente                     2            0.08                
 nuevas                         1            0.04                
@@ -512,9 +490,6 @@ ortograf                       1            0.04
 oscuros                        1            0.04                
 oso                            1            0.04                
 osos                           1            0.04                
-otra                           1            0.04                
-otras                          2            0.08                
-otros                          3            0.12                
 ox                             1            0.04                
 padres                         1            0.04                
 palacio                        1            0.04                
@@ -579,7 +554,6 @@ proyecto                       1            0.04
 publicado                      1            0.04                
 puede                          3            0.12                
 pueden                         3            0.12                
-pues                           1            0.04                
 puesto                         1            0.04                
 pulpo                          1            0.04                
 puntuaci                       1            0.04                
@@ -627,7 +601,6 @@ ser                            2            0.08
 servicio                       1            0.04                
 sesi                           1            0.04                
 shakira                        1            0.04                
-siendo                         1            0.04                
 sigan                          1            0.04                
 sigue                          2            0.08                
 sobreviva                      1            0.04                
@@ -640,7 +613,6 @@ sorpresa                       1            0.04
 sorpresiva                     1            0.04                
 sstock                         5            0.2                 
 ster                           2            0.08                
-su                             12           0.48                
 sudoku                         2            0.08                
 suficiente                     1            0.04                
 suficientemente                1            0.04                
@@ -648,7 +620,6 @@ superintendencia               1            0.04
 supervivencia                  1            0.04                
 sur                            1            0.04                
 suram                          1            0.04                
-sus                            24           0.96                
 suscr                          1            0.04                
 t                              5            0.2                 
 tal                            1            0.04                
@@ -684,11 +655,8 @@ ufanarse                       1            0.04
 unasur                         1            0.04                
 uni                            1            0.04                
 unidos                         2            0.08                
-uno                            2            0.08                
 usan                           1            0.04                
 uso                            1            0.04                
-usted                          2            0.08                
-ustedes                        1            0.04                
 usuario                        2            0.08                
 v                              2            0.08                
 vacaciones                     1            0.04                

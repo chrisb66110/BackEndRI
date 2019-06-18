@@ -23,7 +23,6 @@ agua                           7            0.14
 aguas                          3            0.06                
 ah                             1            0.02                
 aire                           6            0.12                
-alguno                         1            0.02                
 alimentaci                     1            0.02                
 alrededor                      1            0.02                
 alterar                        1            0.02                
@@ -36,8 +35,6 @@ aparici                        1            0.02
 aparte                         1            0.02                
 aportan                        1            0.02                
 apto                           2            0.04                
-aquel                          1            0.02                
-aquellas                       2            0.04                
 ara                            1            0.02                
 ardillas                       1            0.02                
 arrojados                      1            0.02                
@@ -52,7 +49,6 @@ aviso                          1            0.02
 ballenas                       1            0.02                
 base                           1            0.02                
 bi                             2            0.04                
-bien                           1            0.02                
 biodiversidad                  1            0.02                
 biol                           1            0.02                
 bitat                          2            0.04                
@@ -60,7 +56,6 @@ brindar                        1            0.02
 buscar                         2            0.04                
 c                              3            0.06                
 caballos                       1            0.02                
-cada                           7            0.14                
 calentamiento                  2            0.04                
 calidad                        1            0.02                
 cambio                         2            0.04                
@@ -88,7 +83,6 @@ colaboren                      1            0.02
 combustible                    1            0.02                
 combustibles                   2            0.04                
 comida                         1            0.02                
-como                           14           0.28                
 compenetraci                   1            0.02                
 completa                       5            0.1                 
 completo                       2            0.04                
@@ -139,9 +133,7 @@ crear                          2            0.04
 cree                           1            0.02                
 ctica                          1            0.02                
 cu                             1            0.02                
-cual                           2            0.04                
 cualidades                     1            0.02                
-cualquier                      1            0.02                
 cuidado                        3            0.06                
 culebras                       1            0.02                
 culpables                      1            0.02                
@@ -189,7 +181,6 @@ disciplina                     1            0.02
 disposici                      1            0.02                
 distintas                      2            0.04                
 diversidad                     1            0.02                
-donde                          3            0.06                
 dulces                         1            0.02                
 durante                        1            0.02                
 ecol                           2            0.04                
@@ -203,8 +194,6 @@ ejemplos                       1            0.02
 elaborar                       1            0.02                
 elefantes                      1            0.02                
 elementos                      14           0.28                
-ello                           2            0.04                
-ellos                          1            0.02                
 encargada                      1            0.02                
 encuentra                      1            0.02                
 encuentran                     2            0.04                
@@ -215,25 +204,19 @@ entorno                        10           0.2
 entra                          1            0.02                
 equilibrio                     1            0.02                
 es                             45           0.9                 
-esas                           1            0.02                
 esconden                       1            0.02                
 espa                           1            0.02                
 espacio                        1            0.02                
 espec                          2            0.04                
 especie                        2            0.04                
 especies                       14           0.28                
-esta                           1            0.02                
 establecen                     1            0.02                
 establecido                    1            0.02                
 estad                          1            0.02                
 estado                         1            0.02                
 estados                        1            0.02                
 estar                          1            0.02                
-estas                          1            0.02                
-este                           4            0.08                
 estilos                        1            0.02                
-esto                           1            0.02                
-estos                          1            0.02                
 estoy                          1            0.02                
 estructura                     3            0.06                
 estudiar                       1            0.02                
@@ -285,7 +268,6 @@ gorilas                        1            0.02
 grandes                        1            0.02                
 grupos                         1            0.02                
 h                              3            0.06                
-ha                             2            0.04                
 habit                          1            0.02                
 habitan                        1            0.02                
 habla                          1            0.02                
@@ -370,7 +352,6 @@ medio                          50           1.0
 medioambientales               3            0.06                
 medusas                        1            0.02                
 mejores                        1            0.02                
-mientras                       1            0.02                
 miles                          1            0.02                
 mismas                         1            0.02                
 mismo                          2            0.04                
@@ -383,7 +364,6 @@ mostrarte                      1            0.02
 msters                         1            0.02                
 muchas                         1            0.02                
 murci                          1            0.02                
-muy                            1            0.02                
 n                              2            0.04                
 nacen                          1            0.02                
 natural                        4            0.08                
@@ -400,16 +380,12 @@ no                             6            0.12
 noci                           1            0.02                
 nos                            2            0.04                
 nuclear                        3            0.06                
-nuestra                        2            0.04                
-nuestro                        2            0.04                
 numerosa                       1            0.02                
 objetos                        2            0.04                
 obstante                       1            0.02                
 obtiene                        2            0.04                
 org                            1            0.02                
 osos                           1            0.02                
-otra                           2            0.04                
-otro                           2            0.04                
 p                              1            0.02                
 paneles                        1            0.02                
 parte                          11           0.22                
@@ -465,12 +441,10 @@ publicidad                     1            0.02
 pueda                          1            0.02                
 puede                          2            0.04                
 pueden                         1            0.02                
-pues                           5            0.1                 
 pureza                         2            0.04                
 purificaci                     1            0.02                
 qu                             25           0.5                 
 qui                            2            0.04                
-quienes                        2            0.04                
 radica                         1            0.02                
 rasgos                         1            0.02                
 rea                            1            0.02                
@@ -507,8 +481,6 @@ seguir                         1            0.02
 ser                            10           0.2                 
 seres                          15           0.3                 
 serpientes                     1            0.02                
-siempre                        1            0.02                
-siendo                         2            0.04                
 significado                    1            0.02                
 simb                           1            0.02                
 sirve                          1            0.02                
@@ -524,7 +496,6 @@ son                            10           0.2
 soporte                        1            0.02                
 sostenible                     3            0.06                
 sostenida                      1            0.02                
-su                             14           0.28                
 subsistencia                   1            0.02                
 subsuelo                       1            0.02                
 subterr                        1            0.02                
@@ -533,7 +504,6 @@ suelos                         1            0.02
 superficie                     2            0.04                
 supervivencia                  1            0.02                
 supuesto                       1            0.02                
-sus                            5            0.1                 
 sustenten                      1            0.02                
 tambi                          9            0.18                
 taxon                          1            0.02                
@@ -564,11 +534,9 @@ trata                          1            0.02
 tratarse                       1            0.02                
 trav                           1            0.02                
 trending                       1            0.02                
-tu                             1            0.02                
 turismo                        1            0.02                
 ubicados                       1            0.02                
 une                            1            0.02                
-uno                            4            0.08                
 urbanizaci                     1            0.02                
 usan                           1            0.02                
 uso                            2            0.04                

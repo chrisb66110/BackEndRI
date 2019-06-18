@@ -26,11 +26,8 @@ ahora                          1            0.0625
 ajustando                      1            0.0625              
 alcanzando                     1            0.0625              
 alexa                          1            0.0625              
-algo                           1            0.0625              
 algoritmo                      1            0.0625              
 algoritmos                     1            0.0625              
-alguna                         2            0.125               
-algunos                        1            0.0625              
 all                            1            0.0625              
 altavoces                      2            0.125               
 alto                           1            0.0625              
@@ -40,7 +37,6 @@ analizando                     1            0.0625
 analizar                       1            0.0625              
 animales                       1            0.0625              
 anterioridad                   1            0.0625              
-antes                          1            0.0625              
 aplicaci                       1            0.0625              
 aplicaciones                   12           0.75                
 aplicadas                      1            0.0625              
@@ -74,7 +70,6 @@ basado                         1            0.0625
 bastante                       1            0.0625              
 bell                           1            0.0625              
 beneficios                     2            0.125               
-bien                           1            0.0625              
 big                            5            0.3125              
 blanco                         3            0.1875              
 blog                           4            0.25                
@@ -85,7 +80,6 @@ business                       1            0.0625
 c                              9            0.5625              
 cabecera                       1            0.0625              
 cabo                           1            0.0625              
-cada                           2            0.125               
 cambiado                       1            0.0625              
 cambios                        1            0.0625              
 campo                          2            0.125               
@@ -102,7 +96,6 @@ caracter                       1            0.0625
 caracteres                     2            0.125               
 carrera                        1            0.0625              
 carretera                      1            0.0625              
-casi                           1            0.0625              
 caso                           4            0.25                
 categor                        6            0.375               
 categorizaci                   1            0.0625              
@@ -138,7 +131,6 @@ comercial                      1            0.0625
 comerciales                    1            0.0625              
 comercializando                1            0.0625              
 comida                         1            0.0625              
-como                           5            0.3125              
 compa                          3            0.1875              
 compartidos                    1            0.0625              
 complejidad                    1            0.0625              
@@ -176,9 +168,6 @@ corteza                        1            0.0625
 cosas                          1            0.0625              
 criterio                       1            0.0625              
 cticas                         1            0.0625              
-cual                           4            0.25                
-cuales                         1            0.0625              
-cuando                         1            0.0625              
 cuesti                         1            0.0625              
 customer                       1            0.0625              
 d                              1            0.0625              
@@ -211,7 +200,6 @@ diccionario                    1            0.0625
 diferentes                     3            0.1875              
 dispositivos                   2            0.125               
 diversas                       2            0.125               
-dos                            4            0.25                
 dropscore                      2            0.125               
 durante                        1            0.0625              
 echo                           1            0.0625              
@@ -220,7 +208,6 @@ eficientes                     1            0.0625
 ejemplo                        5            0.3125              
 ejemplos                       2            0.125               
 electrodom                     1            0.0625              
-ello                           2            0.125               
 email                          2            0.125               
 embargo                        1            0.0625              
 embudo                         1            0.0625              
@@ -236,24 +223,15 @@ entrenamiento                  2            0.125
 equiparables                   1            0.0625              
 errores                        1            0.0625              
 es                             13           0.8125              
-esa                            1            0.0625              
 escena                         1            0.0625              
 esfuerzo                       1            0.0625              
-eso                            1            0.0625              
-esos                           1            0.0625              
 esperan                        1            0.0625              
 esquema                        1            0.0625              
 est                            9            0.5625              
-esta                           8            0.5                 
-estas                          2            0.125               
-este                           6            0.375               
 estimaci                       1            0.0625              
 estimar                        2            0.125               
-esto                           1            0.0625              
-estos                          1            0.0625              
 estrategias                    1            0.0625              
 estuvo                         1            0.0625              
-etc                            3            0.1875              
 exactamente                    1            0.0625              
 exactitud                      1            0.0625              
 exist                          1            0.0625              
@@ -291,7 +269,6 @@ google                         4            0.25
 grados                         1            0.0625              
 gran                           4            0.25                
 grandes                        6            0.375               
-ha                             6            0.375               
 hab                            1            0.0625              
 habiendo                       1            0.0625              
 habla                          1            0.0625              
@@ -415,7 +392,6 @@ muchos                         1            0.0625
 muestra                        1            0.0625              
 multicapas                     1            0.0625              
 mundo                          3            0.1875              
-muy                            4            0.25                
 n                              8            0.5                 
 natural                        1            0.0625              
 nea                            1            0.0625              
@@ -432,9 +408,6 @@ nombre                         1            0.0625
 nombres                        1            0.0625              
 novedades                      1            0.0625              
 novedosos                      1            0.0625              
-nuestra                        2            0.125               
-nuestro                        4            0.25                
-nuestros                       1            0.0625              
 nueva                          1            0.0625              
 nuevas                         1            0.0625              
 nuevo                          2            0.125               
@@ -452,8 +425,6 @@ organizar                      1            0.0625
 orientaciones                  1            0.0625              
 original                       1            0.0625              
 originalmente                  1            0.0625              
-otras                          1            0.0625              
-otro                           1            0.0625              
 p                              2            0.125               
 paisajes                       1            0.0625              
 palabras                       3            0.1875              
@@ -507,7 +478,6 @@ pymes                          1            0.0625
 qu                             8            0.5                 
 quality                        1            0.0625              
 quedarse                       1            0.0625              
-quien                          1            0.0625              
 rea                            1            0.0625              
 realice                        1            0.0625              
 realiza                        1            0.0625              
@@ -548,8 +518,6 @@ servicio                       1            0.0625
 servicios                      1            0.0625              
 set                            1            0.0625              
 sido                           2            0.125               
-siempre                        1            0.0625              
-siendo                         1            0.0625              
 sigamos                        1            0.0625              
 siguiente                      1            0.0625              
 siri                           1            0.0625              
@@ -559,21 +527,18 @@ software                       1            0.0625
 soluciones                     1            0.0625              
 son                            10           0.625               
 startup                        3            0.1875              
-su                             3            0.1875              
 sucesivas                      1            0.0625              
 suministrado                   1            0.0625              
 suministrar                    1            0.0625              
 superior                       1            0.0625              
 superiores                     1            0.0625              
 supuesto                       2            0.125               
-sus                            9            0.5625              
 suscr                          1            0.0625              
 t                              1            0.0625              
 taco                           1            0.0625              
 tambi                          1            0.0625              
 tarea                          3            0.1875              
 tareas                         4            0.25                
-te                             1            0.0625              
 tecnol                         2            0.125               
 tecnolog                       2            0.125               
 tendencias                     1            0.0625              
@@ -599,12 +564,10 @@ trataremos                     1            0.0625
 trav                           4            0.25                
 trayendo                       1            0.0625              
 trazos                         1            0.0625              
-tu                             1            0.0625              
 tuvieron                       1            0.0625              
 twitter                        1            0.0625              
 uber                           1            0.0625              
 uni                            1            0.0625              
-uno                            2            0.125               
 usan                           2            0.125               
 usar                           2            0.125               
 user                           1            0.0625              
@@ -627,6 +590,5 @@ visi                           1            0.0625
 vista                          1            0.0625              
 visto                          2            0.125               
 visual                         3            0.1875              
-vosotros                       1            0.0625              
 voz                            1            0.0625              
 web                            2            0.125               

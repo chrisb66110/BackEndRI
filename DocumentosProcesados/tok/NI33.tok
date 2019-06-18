@@ -45,7 +45,6 @@ alas                           1            0.04
 alejandr                       2            0.08                
 alg                            1            0.04                
 alguien                        1            0.04                
-algunos                        1            0.04                
 alonso                         1            0.04                
 alrededor                      2            0.08                
 alto                           2            0.08                
@@ -53,7 +52,6 @@ anal                           1            0.04
 analysis                       1            0.04                
 and                            3            0.12                
 anteriores                     1            0.04                
-antes                          1            0.04                
 antiguo                        2            0.08                
 antrop                         1            0.04                
 antropolog                     1            0.04                
@@ -95,7 +93,6 @@ basados                        1            0.04
 base                           2            0.08                
 bellas                         1            0.04                
 belleza                        2            0.08                
-bien                           1            0.04                
 binghamton                     1            0.04                
 biodiversidad                  2            0.08                
 blogs                          2            0.08                
@@ -120,7 +117,6 @@ caracter                       1            0.04
 carl                           1            0.04                
 cartelera                      2            0.08                
 casa                           2            0.08                
-casi                           2            0.08                
 castilla                       3            0.12                
 catalu                         2            0.08                
 caus                           2            0.08                
@@ -154,7 +150,6 @@ com                            2            0.08
 comentarios                    1            0.04                
 comercio                       1            0.04                
 comisar                        2            0.08                
-como                           4            0.16                
 completa                       1            0.04                
 complete                       1            0.04                
 comunidad                      1            0.04                
@@ -182,8 +177,6 @@ crearon                        1            0.04
 creen                          2            0.08                
 crestas                        2            0.08                
 cuadrados                      1            0.04                
-cualquiera                     1            0.04                
-cuando                         1            0.04                
 cuentas                        1            0.04                
 cuerda                         2            0.08                
 cultura                        2            0.08                
@@ -218,8 +211,6 @@ disfrutar                      1            0.04
 disposici                      1            0.04                
 distancia                      1            0.04                
 distritos                      2            0.08                
-donde                          1            0.04                
-dos                            4            0.16                
 durar                          1            0.04                
 econ                           1            0.04                
 econom                         2            0.08                
@@ -232,7 +223,6 @@ ejemplo                        1            0.04
 electr                         5            0.2                 
 electromagn                    1            0.04                
 elegante                       1            0.04                
-ellos                          3            0.12                
 emplazamiento                  1            0.04                
 emplea                         1            0.04                
 encontraron                    1            0.04                
@@ -251,28 +241,23 @@ equipo                         1            0.04
 era                            1            0.04                
 eran                           2            0.08                
 es                             8            0.32                
-esa                            1            0.04                
 escoria                        2            0.08                
 escult                         1            0.04                
 escultores                     1            0.04                
 eslang                         1            0.04                
-esos                           1            0.04                
 espa                           4            0.16                
 espaciales                     1            0.04                
 espacio                        1            0.04                
 espagueti                      2            0.08                
 esquelas                       2            0.08                
 est                            4            0.16                
-esta                           2            0.08                
 estaba                         1            0.04                
 estaban                        2            0.08                
 estabilizarlo                  1            0.04                
 estar                          1            0.04                
 estatua                        1            0.04                
 estatuas                       20           0.8                 
-este                           3            0.12                
 estilo                         2            0.08                
-estos                          2            0.08                
 estrategia                     1            0.04                
 estudio                        1            0.04                
 euros                          1            0.04                
@@ -325,7 +310,6 @@ gu                             2            0.08
 guapabox                       1            0.04                
 guerra                         1            0.04                
 guiza                          1            0.04                
-ha                             1            0.04                
 haber                          2            0.08                
 habitado                       1            0.04                
 habr                           1            0.04                
@@ -433,10 +417,8 @@ men                            1            0.04
 menos                          1            0.04                
 mes                            1            0.04                
 metros                         3            0.12                
-mi                             2            0.08                
 microsoft                      2            0.08                
 mide                           1            0.04                
-mientras                       1            0.04                
 millonario                     1            0.04                
 millones                       1            0.04                
 mismos                         1            0.04                
@@ -487,12 +469,10 @@ nivelaban                      1            0.04
 no                             7            0.28                
 nombre                         1            0.04                
 norte                          1            0.04                
-nosotros                       3            0.12                
 notablemente                   1            0.04                
 noticia                        2            0.08                
 noticias                       1            0.04                
 now                            1            0.04                
-nuestra                        1            0.04                
 nueva                          1            0.04                
 nuevo                          1            0.04                
 nui                            3            0.12                
@@ -508,8 +488,6 @@ opini                          2            0.08
 optimizar                      1            0.04                
 opuesto                        1            0.04                
 origen                         1            0.04                
-otras                          1            0.04                
-otro                           2            0.08                
 our                            1            0.04                
 own                            1            0.04                
 p                              1            0.04                
@@ -661,7 +639,6 @@ sombreros                      13           0.52
 son                            1            0.04                
 statistical                    1            0.04                
 store                          2            0.08                
-su                             14           0.56                
 suaves                         1            0.04                
 suger                          1            0.04                
 suiza                          1            0.04                
@@ -669,7 +646,6 @@ summum                         2            0.08
 superior                       10           0.4                 
 supersanos                     2            0.08                
 sur                            2            0.08                
-sus                            3            0.12                
 suscr                          1            0.04                
 t                              2            0.08                
 tailored                       1            0.04                
@@ -677,7 +653,6 @@ tallaban                       2            0.08
 talladas                       2            0.08                
 tama                           1            0.04                
 tambi                          1            0.04                
-te                             2            0.08                
 teatro                         3            0.12                
 tecnolog                       2            0.08                
 televisi                       2            0.08                
@@ -721,15 +696,12 @@ transporte                     2            0.08
 trasladadas                    1            0.04                
 trav                           2            0.08                
 tridimensionales               1            0.04                
-tu                             2            0.08                
 tumba                          2            0.08                
-tus                            1            0.04                
 tuvo                           1            0.04                
 tv                             3            0.12                
 ubicaci                        3            0.12                
 unieron                        1            0.04                
 universidad                    2            0.08                
-uno                            2            0.08                
 usado                          1            0.04                
 usando                         1            0.04                
 use                            1            0.04                

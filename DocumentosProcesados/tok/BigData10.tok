@@ -44,8 +44,6 @@ ahorrar                        1            0.02
 ahorro                         1            0.02                
 alejandra                      1            0.02                
 algoritmos                     1            0.02                
-algunas                        3            0.06                
-algunos                        5            0.1                 
 all                            1            0.02                
 almacenamiento                 6            0.12                
 almacenar                      1            0.02                
@@ -62,7 +60,6 @@ analizar                       3            0.06
 analysis                       1            0.02                
 anterior                       1            0.02                
 anteriores                     3            0.06                
-antes                          1            0.02                
 apache                         6            0.12                
 aparecen                       1            0.02                
 aparecer                       1            0.02                
@@ -112,7 +109,6 @@ best                           1            0.02
 bi                             1            0.02                
 biblioteca                     1            0.02                
 bicicleta                      1            0.02                
-bien                           2            0.04                
 big                            49           0.98                
 bigdata                        1            0.02                
 billones                       1            0.02                
@@ -130,7 +126,6 @@ bruto                          1            0.02
 busca                          1            0.02                
 business                       1            0.02                
 c                              4            0.08                
-cada                           4            0.08                
 cafe                           1            0.02                
 calidad                        1            0.02                
 cambiado                       1            0.02                
@@ -177,7 +172,6 @@ comentarios                    5            0.1
 comercios                      1            0.02                
 commerce                       1            0.02                
 commons                        2            0.04                
-como                           41           0.82                
 comparaci                      1            0.02                
 comparado                      1            0.02                
 complejos                      1            0.02                
@@ -219,10 +213,6 @@ creative                       1            0.02
 ctico                          2            0.04                
 cu                             2            0.04                
 cuadros                        1            0.02                
-cuales                         1            0.02                
-cualquier                      1            0.02                
-cualquiera                     1            0.02                
-cuando                         1            0.02                
 cuantiosos                     1            0.02                
 cuenta                         1            0.02                
 cuestiones                     1            0.02                
@@ -293,8 +283,6 @@ distribuyen                    1            0.02
 do                             1            0.02                
 document                       1            0.02                
 doing                          1            0.02                
-donde                          5            0.1                 
-dos                            1            0.02                
 drive                          3            0.06                
 duda                           1            0.02                
 economista                     1            0.02                
@@ -305,8 +293,6 @@ electricidad                   1            0.02
 electronyc                     1            0.02                
 elementos                      1            0.02                
 elevados                       1            0.02                
-ellas                          1            0.02                
-ello                           4            0.08                
 elpais                         1            0.02                
 else                           1            0.02                
 email                          1            0.02                
@@ -332,25 +318,18 @@ escenario                      4            0.08
 escenarios                     2            0.04                
 escocia                        1            0.02                
 escoger                        1            0.02                
-ese                            1            0.02                
 esenciales                     1            0.02                
 esencialmente                  1            0.02                
 esfuerzo                       1            0.02                
-eso                            1            0.02                
-esos                           1            0.02                
 especialmente                  2            0.04                
 especificaba                   1            0.02                
 est                            13           0.26                
-esta                           15           0.3                 
 establecer                     1            0.02                
 estado                         2            0.04                
 estamos                        3            0.06                
 estan                          1            0.02                
 estar                          1            0.02                
-estas                          3            0.06                
-este                           10           0.2                 
 estimado                       1            0.02                
-estos                          6            0.12                
 estructura                     2            0.04                
 etiquetas                      1            0.02                
 etl                            1            0.02                
@@ -436,7 +415,6 @@ gran                           2            0.04
 gratuita                       1            0.02                
 grupo                          1            0.02                
 grupos                         1            0.02                
-ha                             4            0.08                
 habla                          1            0.02                
 hablando                       1            0.02                
 hace                           4            0.08                
@@ -576,7 +554,6 @@ materia                        1            0.02
 mayo                           1            0.02                
 mayor                          3            0.06                
 mbricos                        1            0.02                
-me                             2            0.04                
 mediante                       5            0.1                 
 medidas                        1            0.02                
 medioambientales               1            0.02                
@@ -592,7 +569,6 @@ mes                            1            0.02
 meta                           1            0.02                
 meteorolog                     1            0.02                
 metters                        1            0.02                
-mi                             1            0.02                
 microsoft                      3            0.06                
 miles                          1            0.02                
 millones                       1            0.02                
@@ -617,7 +593,6 @@ muestra                        1            0.02
 muestran                       1            0.02                
 multidimensionales             1            0.02                
 mundo                          4            0.08                
-muy                            2            0.04                
 n                              16           0.32                
 nadie                          1            0.02                
 navegaci                       1            0.02                
@@ -641,9 +616,6 @@ nov                            1            0.02
 novedosa                       1            0.02                
 novedosas                      2            0.04                
 noviembre                      1            0.02                
-nuestra                        1            0.02                
-nuestras                       1            0.02                
-nuestros                       1            0.02                
 nueva                          1            0.02                
 nuevas                         1            0.02                
 nuevo                          1            0.02                
@@ -669,9 +641,6 @@ optimizar                      1            0.02
 org                            3            0.06                
 organizaci                     1            0.02                
 organizaciones                 1            0.02                
-otras                          5            0.1                 
-otro                           2            0.04                
-otros                          2            0.04                
 p                              6            0.12                
 pa                             2            0.04                
 pacioli                        1            0.02                
@@ -747,7 +716,6 @@ pudiera                        1            0.02
 puede                          4            0.08                
 pueden                         4            0.08                
 puedo                          1            0.02                
-pues                           4            0.08                
 puestos                        1            0.02                
 pulse                          1            0.02                
 punto                          3            0.06                
@@ -844,7 +812,6 @@ sexo                           3            0.06
 share                          1            0.02                
 show                           1            0.02                
 sicamente                      1            0.02                
-siendo                         2            0.04                
 significado                    1            0.02                
 siguientes                     2            0.04                
 sirve                          3            0.06                
@@ -870,7 +837,6 @@ ssa                            1            0.02
 startup                        1            0.02                
 ster                           1            0.02                
 stratebi                       1            0.02                
-su                             6            0.12                
 suele                          1            0.02                
 sufficient                     1            0.02                
 suficientes                    1            0.02                
@@ -878,7 +844,6 @@ superando                      1            0.02
 supone                         1            0.02                
 surge                          1            0.02                
 surgido                        2            0.04                
-sus                            1            0.02                
 suscribirse                    1            0.02                
 system                         1            0.02                
 t                              5            0.1                 
@@ -942,7 +907,6 @@ transmisi                      1            0.02
 transporte                     4            0.08                
 trasplantes                    1            0.02                
 trata                          1            0.02                
-tu                             3            0.06                
 twitter                        1            0.02                
 unen                           1            0.02                
 universidad                    4            0.08                
@@ -950,7 +914,6 @@ usado                          1            0.02
 usando                         1            0.02                
 usar                           1            0.02                
 uso                            5            0.1                 
-usted                          1            0.02                
 usuario                        1            0.02                
 utiliza                        2            0.04                
 v                              4            0.08                
@@ -989,7 +952,6 @@ xhtml                          1            0.02
 xima                           1            0.02                
 xml                            2            0.04                
 yinchuan                       1            0.02                
-yo                             1            0.02                
 york                           1            0.02                
 your                           1            0.02                
 youtube                        1            0.02                

@@ -41,10 +41,8 @@ algorithm                      2            0.0625
 algorithms                     1            0.03125             
 algoritmo                      13           0.40625             
 algoritmos                     14           0.4375              
-alguna                         1            0.03125             
 alineamiento                   1            0.03125             
 ambig                          1            0.03125             
-ambos                          1            0.03125             
 an                             2            0.0625              
 analog                         1            0.03125             
 and                            1            0.03125             
@@ -89,7 +87,6 @@ buenos                         1            0.03125
 buscar                         1            0.03125             
 by                             1            0.03125             
 c                              3            0.09375             
-cada                           4            0.125               
 cadena                         2            0.0625              
 cadenas                        1            0.03125             
 calcular                       1            0.03125             
@@ -111,7 +108,6 @@ com                            2            0.0625
 combinan                       1            0.03125             
 comercio                       1            0.03125             
 commons                        1            0.03125             
-como                           3            0.09375             
 compartir                      1            0.03125             
 componentes                    1            0.03125             
 comportamiento                 2            0.0625              
@@ -150,10 +146,6 @@ cruzados                       1            0.03125
 cruzamiento                    2            0.0625              
 ctica                          1            0.03125             
 cu                             4            0.125               
-cual                           1            0.03125             
-cuales                         1            0.03125             
-cualquier                      1            0.03125             
-cuando                         3            0.09375             
 cubiertas                      1            0.03125             
 cuenta                         1            0.03125             
 cumpla                         1            0.03125             
@@ -199,8 +191,6 @@ distribuci                     2            0.0625
 diversas                       1            0.03125             
 diversidad                     1            0.03125             
 donaciones                     1            0.03125             
-donde                          1            0.03125             
-dos                            4            0.125               
 editar                         7            0.21875             
 eficacia                       1            0.03125             
 ejemplo                        1            0.03125             
@@ -208,7 +198,6 @@ elegir                         1            0.03125
 elemento                       1            0.03125             
 eliminaci                      1            0.03125             
 elitismo                       1            0.03125             
-ellos                          1            0.03125             
 embargo                        1            0.03125             
 enciclopedia                   2            0.0625              
 encontraremos                  1            0.03125             
@@ -230,18 +219,13 @@ espec                          1            0.03125
 especiales                     1            0.03125             
 especies                       1            0.03125             
 est                            3            0.09375             
-esta                           4            0.125               
 estaba                         1            0.03125             
 estaban                        1            0.03125             
 establecen                     1            0.03125             
-estas                          1            0.03125             
-este                           1            0.03125             
-estos                          3            0.09375             
 estrategias                    1            0.03125             
 estructura                     1            0.03125             
 estructural                    1            0.03125             
 estructuras                    1            0.03125             
-etc                            1            0.03125             
 evaluaci                       2            0.0625              
 evaluados                      1            0.03125             
 evitando                       1            0.03125             
@@ -383,7 +367,6 @@ mejora                         1            0.03125
 mejores                        1            0.03125             
 menos                          2            0.0625              
 mica                           1            0.03125             
-mientras                       1            0.03125             
 modelos                        1            0.03125             
 modifica                       1            0.03125             
 modificada                     1            0.03125             
@@ -395,7 +378,6 @@ multicriteria                  1            0.03125
 multiobjetivo                  1            0.03125             
 mutaci                         4            0.125               
 mutaciones                     1            0.03125             
-muy                            3            0.09375             
 n                              5            0.15625             
 nada                           1            0.03125             
 natural                        1            0.03125             
@@ -421,8 +403,6 @@ optimizar                      2            0.0625
 optimization                   1            0.03125             
 org                            1            0.03125             
 organizados                    1            0.03125             
-otras                          1            0.03125             
-otros                          3            0.09375             
 p                              4            0.125               
 padres                         1            0.03125             
 palabras                       1            0.03125             
@@ -478,7 +458,6 @@ proyecto                       1            0.03125
 pseudoc                        1            0.03125             
 puede                          2            0.0625              
 pueden                         1            0.03125             
-pues                           1            0.03125             
 puntos                         1            0.03125             
 qu                             1            0.03125             
 querer                         1            0.03125             
@@ -529,7 +508,6 @@ serie                          1            0.03125
 sexual                         1            0.03125             
 shop                           1            0.03125             
 sico                           2            0.0625              
-siempre                        1            0.03125             
 siguiente                      3            0.09375             
 siguientes                     3            0.09375             
 simple                         1            0.03125             
@@ -547,7 +525,6 @@ someti                         1            0.03125
 son                            6            0.1875              
 srpski                         1            0.03125             
 step                           2            0.0625              
-su                             2            0.0625              
 subir                          1            0.03125             
 suomi                          1            0.03125             
 surgi                          1            0.03125             
@@ -556,7 +533,6 @@ t                              5            0.15625
 tales                          1            0.03125             
 tambi                          5            0.15625             
 tan                            1            0.03125             
-te                             1            0.03125             
 tener                          2            0.0625              
 tenerse                        1            0.03125             
 tenga                          1            0.03125             
@@ -576,7 +552,6 @@ trata                          1            0.03125
 trav                           1            0.03125             
 tutorial                       2            0.0625              
 universidades                  1            0.03125             
-uno                            2            0.0625              
 usan                           1            0.03125             
 usando                         2            0.0625              
 usar                           2            0.0625              

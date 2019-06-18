@@ -25,7 +25,6 @@ apenas                         1            0.03125
 aplicacion                     1            0.03125             
 app                            1            0.03125             
 aprender                       2            0.0625              
-aqui                           1            0.03125             
 archivos                       2            0.0625              
 arduino                        10           0.3125              
 arm                            1            0.03125             
@@ -60,7 +59,6 @@ chulos                         2            0.0625
 cinco                          2            0.0625              
 com                            1            0.03125             
 comando                        1            0.03125             
-como                           3            0.09375             
 comparte                       1            0.03125             
 componentes                    1            0.03125             
 comprar                        4            0.125               
@@ -83,8 +81,6 @@ creado                         1            0.03125
 creador                        1            0.03125             
 crear                          1            0.03125             
 crecer                         1            0.03125             
-cuando                         2            0.0625              
-cuantos                        3            0.09375             
 cumplimos                      1            0.03125             
 damos                          1            0.03125             
 datos                          1            0.03125             
@@ -108,7 +104,6 @@ educativa                      2            0.0625
 ejemplo                        1            0.03125             
 ejemplos                       2            0.0625              
 elegir                         1            0.03125             
-ellas                          1            0.03125             
 empezar                        2            0.0625              
 empleado                       1            0.03125             
 encender                       1            0.03125             
@@ -118,14 +113,9 @@ enlace                         6            0.1875
 entrevistas                    2            0.0625              
 enviarte                       1            0.03125             
 es                             4            0.125               
-eso                            2            0.0625              
 especiales                     1            0.03125             
 esperando                      1            0.03125             
 est                            1            0.03125             
-esta                           1            0.03125             
-este                           9            0.28125             
-esto                           3            0.09375             
-estos                          2            0.0625              
 estoy                          1            0.03125             
 existe                         1            0.03125             
 experiencia                    1            0.03125             
@@ -138,7 +128,6 @@ grabados                       2            0.0625
 grabar                         2            0.0625              
 gracias                        2            0.0625              
 gu                             2            0.0625              
-ha                             1            0.03125             
 habras                         1            0.03125             
 hacer                          1            0.03125             
 hacerlo                        1            0.03125             
@@ -182,7 +171,6 @@ mediante                       1            0.03125
 medios                         1            0.03125             
 mejor                          1            0.03125             
 mes                            1            0.03125             
-mi                             1            0.03125             
 minority                       1            0.03125             
 moccapi                        3            0.09375             
 modelos                        2            0.0625              
@@ -192,24 +180,19 @@ mostrar                        1            0.03125
 mostrarle                      1            0.03125             
 movil                          2            0.0625              
 multimedia                     1            0.03125             
-muy                            1            0.03125             
 necesario                      2            0.0625              
 necesitas                      1            0.03125             
 nivel                          1            0.03125             
 no                             6            0.1875              
 nos                            2            0.0625              
-nosotros                       1            0.03125             
 noticias                       4            0.125               
 novato                         2            0.0625              
 noviembre                      4            0.125               
-nuestra                        2            0.0625              
-nuestro                        1            0.03125             
 objeto                         1            0.03125             
 octubre                        4            0.125               
 ordenador                      2            0.0625              
 originales                     3            0.09375             
 os                             1            0.03125             
-otros                          1            0.03125             
 pantalla                       1            0.03125             
 parecido                       2            0.0625              
 pasaba                         1            0.03125             
@@ -245,7 +228,6 @@ puede                          2            0.0625
 pueden                         1            0.03125             
 puedes                         2            0.0625              
 puerta                         1            0.03125             
-pues                           1            0.03125             
 qu                             2            0.0625              
 raspberry                      32           1.0                 
 raspeberry                     1            0.03125             
@@ -281,12 +263,10 @@ sistema                        1            0.03125
 sitio                          2            0.0625              
 software                       1            0.03125             
 son                            3            0.09375             
-su                             2            0.0625              
 suficiente                     1            0.03125             
 tales                          1            0.03125             
 tambien                        2            0.0625              
 tan                            3            0.09375             
-te                             3            0.09375             
 teneis                         1            0.03125             
 tener                          1            0.03125             
 termostato                     2            0.0625              
@@ -297,8 +277,6 @@ tienes                         3            0.09375
 todo                           3            0.09375             
 todos                          1            0.03125             
 trucos                         2            0.0625              
-tu                             9            0.28125             
-tus                            1            0.03125             
 tutorial                       2            0.0625              
 tutoriales                     6            0.1875              
 usa                            1            0.03125             
@@ -316,5 +294,4 @@ vimos                          1            0.03125
 visitar                        1            0.03125             
 volar                          4            0.125               
 volver                         1            0.03125             
-vuestra                        2            0.0625              
 web                            2            0.0625              

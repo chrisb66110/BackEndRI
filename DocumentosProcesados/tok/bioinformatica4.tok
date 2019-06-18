@@ -11,11 +11,9 @@ bioinform                      5            0.625
 biol                           4            0.5                 
 biolog                         6            0.75                
 c                              2            0.25                
-cada                           1            0.125               
 cantidad                       1            0.125               
 cient                          1            0.125               
 combina                        1            0.125               
-como                           1            0.125               
 complejos                      1            0.125               
 completo                       1            0.125               
 comprender                     1            0.125               
@@ -42,17 +40,10 @@ dominios                       1            0.125
 enfermedades                   1            0.125               
 entender                       1            0.125               
 es                             3            0.375               
-esas                           1            0.125               
-eso                            2            0.25                
-esos                           1            0.125               
 especialmente                  1            0.125               
-esta                           2            0.25                
 estad                          1            0.125               
-estas                          2            0.25                
-estos                          1            0.125               
 estructura                     2            0.25                
 estructuras                    1            0.125               
-etc                            1            0.125               
 evolucionando                  1            0.125               
 experimental                   1            0.125               
 extraer                        1            0.125               
@@ -68,7 +59,6 @@ generar                        1            0.125
 genomas                        1            0.125               
 global                         1            0.125               
 grandes                        1            0.125               
-ha                             2            0.25                
 herramientas                   3            0.375               
 hoy                            1            0.125               
 identificar                    2            0.25                
@@ -122,7 +112,6 @@ sigue                          1            0.125
 similitud                      1            0.125               
 soluciones                     1            0.125               
 son                            1            0.125               
-su                             1            0.125               
 suelen                         1            0.125               
 t                              1            0.125               
 tales                          1            0.125               

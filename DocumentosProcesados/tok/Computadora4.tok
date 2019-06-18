@@ -180,8 +180,6 @@ alemania                       3            0.0375
 alfanum                        2            0.025               
 alg                            1            0.0125              
 algol                          1            0.0125              
-algunas                        1            0.0125              
-algunos                        1            0.0125              
 alianza                        1            0.0125              
 alimentaci                     1            0.0125              
 all                            1            0.0125              
@@ -211,7 +209,6 @@ angeles                        1            0.0125
 animado                        1            0.0125              
 antecesora                     1            0.0125              
 anteriormente                  1            0.0125              
-antes                          1            0.0125              
 antiguo                        1            0.0125              
 antiguos                       1            0.0125              
 antivirus                      1            0.0125              
@@ -233,7 +230,6 @@ aprender                       3            0.0375
 aprendizaje                    2            0.025               
 aproximadamente                6            0.075               
 aqu                            2            0.025               
-aquella                        1            0.0125              
 arcilla                        1            0.0125              
 aritm                          1            0.0125              
 arpanet                        3            0.0375              
@@ -311,7 +307,6 @@ business                       3            0.0375
 c                              21           0.2625              
 cableado                       1            0.0125              
 cables                         3            0.0375              
-cada                           3            0.0375              
 caja                           1            0.0125              
 cajero                         1            0.0125              
 calculadora                    4            0.05                
@@ -337,7 +332,6 @@ caracteres                     1            0.0125
 caracteriz                     1            0.0125              
 cartuchos                      1            0.0125              
 carver                         1            0.0125              
-casi                           1            0.0125              
 caso                           1            0.0125              
 categor                        3            0.0375              
 category                       1            0.0125              
@@ -392,7 +386,6 @@ comercialmente                 1            0.0125
 commodore                      1            0.0125              
 common                         1            0.0125              
 communications                 1            0.0125              
-como                           21           0.2625              
 compa                          6            0.075               
 compacta                       1            0.0125              
 compacto                       1            0.0125              
@@ -503,10 +496,6 @@ cronolog                       7            0.0875
 ctica                          1            0.0125              
 cticamente                     1            0.0125              
 cuadrada                       2            0.025               
-cual                           6            0.075               
-cuales                         1            0.0125              
-cualquier                      1            0.0125              
-cuando                         11           0.1375              
 cuatro                         5            0.0625              
 cubica                         1            0.0125              
 cuenta                         1            0.0125              
@@ -596,8 +585,6 @@ docenas                        1            0.0125
 dom                            1            0.0125              
 domin                          1            0.0125              
 don                            1            0.0125              
-donde                          1            0.0125              
-dos                            5            0.0625              
 douglas                        1            0.0125              
 drive                          1            0.0125              
 drives                         1            0.0125              
@@ -627,10 +614,6 @@ electronics                    1            0.0125
 electrooptic                   1            0.0125              
 elegir                         1            0.0125              
 eletronic                      1            0.0125              
-ella                           1            0.0125              
-ellas                          1            0.0125              
-ello                           3            0.0375              
-ellos                          1            0.0125              
 embargo                        3            0.0375              
 empleado                       1            0.0125              
 empresas                       2            0.025               
@@ -662,14 +645,10 @@ equivalente                    2            0.025
 era                            22           0.275               
 eran                           3            0.0375              
 es                             26           0.325               
-esa                            3            0.0375              
 escribe                        1            0.0125              
 escribieron                    2            0.025               
 escribirnos                    1            0.0125              
-ese                            3            0.0375              
 esfuerzo                       1            0.0125              
-eso                            3            0.0375              
-esos                           1            0.0125              
 espa                           2            0.025               
 espaciales                     1            0.0125              
 espacio                        1            0.0125              
@@ -677,7 +656,6 @@ espec                          2            0.025
 especiales                     2            0.025               
 especie                        1            0.0125              
 esperamos                      1            0.0125              
-esta                           4            0.05                
 estaba                         6            0.075               
 estaban                        1            0.0125              
 estableci                      1            0.0125              
@@ -685,12 +663,8 @@ estableciendo                  1            0.0125
 estaci                         2            0.025               
 estaciones                     1            0.0125              
 estados                        4            0.05                
-estas                          3            0.0375              
-este                           10           0.125               
 estimado                       1            0.0125              
-esto                           1            0.0125              
 estocolmo                      1            0.0125              
-estos                          1            0.0125              
 estrago                        1            0.0125              
 estructur                      1            0.0125              
 estructura                     2            0.025               
@@ -800,7 +774,6 @@ grupo                          2            0.025
 guerra                         3            0.0375              
 guillermo                      1            0.0125              
 h                              2            0.025               
-ha                             1            0.0125              
 hab                            1            0.0125              
 haber                          2            0.025               
 hac                            1            0.0125              
@@ -1126,7 +1099,6 @@ multiplicar                    1            0.0125
 mundial                        4            0.05                
 murray                         1            0.0125              
 music                          1            0.0125              
-muy                            5            0.0625              
 n                              4            0.05                
 nace                           1            0.0125              
 naci                           1            0.0125              
@@ -1168,11 +1140,9 @@ nolan                          1            0.0125
 nombre                         3            0.0375              
 north                          1            0.0125              
 nos                            2            0.025               
-nosotros                       1            0.0125              
 nova                           1            0.0125              
 noyce                          1            0.0125              
 nsfnet                         1            0.0125              
-nuestro                        2            0.025               
 nueva                          3            0.0375              
 nuevo                          4            0.05                
 nuevos                         2            0.025               
@@ -1207,10 +1177,6 @@ original                       1            0.0125
 originar                       1            0.0125              
 osborne                        2            0.025               
 oscar                          1            0.0125              
-otra                           2            0.025               
-otras                          4            0.05                
-otro                           1            0.0125              
-otros                          4            0.05                
 overclocking                   1            0.0125              
 packard                        2            0.025               
 padre                          1            0.0125              
@@ -1384,12 +1350,10 @@ publishing                     1            0.0125
 pudieran                       1            0.0125              
 puede                          5            0.0625              
 pueden                         1            0.0125              
-pues                           2            0.025               
 punto                          2            0.025               
 puntos                         1            0.0125              
 qu                             1            0.0125              
 qui                            1            0.0125              
-quien                          1            0.0125              
 quina                          22           0.275               
 quinas                         10           0.125               
 quiso                          1            0.0125              
@@ -1478,7 +1442,6 @@ shugart                        1            0.0125
 sico                           1            0.0125              
 sido                           1            0.0125              
 siemens                        1            0.0125              
-siendo                         3            0.0375              
 siete                          2            0.025               
 siglo                          1            0.0125              
 siglos                         2            0.025               
@@ -1523,7 +1486,6 @@ stibitz                        1            0.0125
 story                          1            0.0125              
 stretch                        2            0.025               
 stroustrup                     1            0.0125              
-su                             28           0.35                
 sucesora                       1            0.0125              
 suizo                          1            0.0125              
 suma                           1            0.0125              
@@ -1536,7 +1498,6 @@ superior                       1            0.0125
 sur                            1            0.0125              
 surgi                          2            0.025               
 surgieron                      2            0.025               
-sus                            16           0.2                 
 sustituida                     1            0.0125              
 sustituidas                    1            0.0125              
 sustituido                     1            0.0125              
@@ -1648,7 +1609,6 @@ universidad                    11           0.1375
 universidades                  2            0.025               
 university                     1            0.0125              
 unix                           1            0.0125              
-uno                            1            0.0125              
 us                             1            0.0125              
 usaba                          2            0.025               
 usaban                         2            0.025               

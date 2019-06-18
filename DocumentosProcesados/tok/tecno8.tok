@@ -31,7 +31,6 @@ aduanas                        1            0.05
 agricultura                    1            0.05                
 aided                          2            0.1                 
 ajustar                        1            0.05                
-algunas                        1            0.05                
 alianzas                       1            0.05                
 almac                          1            0.05                
 almacenamiento                 1            0.05                
@@ -45,8 +44,6 @@ aplicar                        1            0.05
 apoyan                         1            0.05                
 apoyar                         2            0.1                 
 apto                           2            0.1                 
-aquellas                       1            0.05                
-aquellos                       1            0.05                
 as                             2            0.1                 
 aseguran                       1            0.05                
 audio                          1            0.05                
@@ -75,7 +72,6 @@ cancelar                       2            0.1
 capacidad                      1            0.05                
 captura                        1            0.05                
 carlos                         1            0.05                
-casi                           1            0.05                
 caso                           2            0.1                 
 certificaci                    1            0.05                
 certificar                     2            0.1                 
@@ -92,7 +88,6 @@ com                            1            0.05
 comentario                     2            0.1                 
 comercio                       2            0.1                 
 comienzan                      1            0.05                
-como                           10           0.5                 
 comparte                       1            0.05                
 compartir                      5            0.25                
 competitiva                    1            0.05                
@@ -133,8 +128,6 @@ crecer                         1            0.05
 creciente                      2            0.1                 
 crm                            4            0.2                 
 cticas                         1            0.05                
-cual                           2            0.1                 
-cuando                         2            0.1                 
 cultivo                        1            0.05                
 cumplimiento                   1            0.05                
 curva                          1            0.05                
@@ -166,7 +159,6 @@ distribuidores                 1            0.05
 divisi                         1            0.05                
 documentaci                    2            0.1                 
 documentos                     2            0.1                 
-donde                          1            0.05                
 due                            1            0.05                
 econ                           1            0.05                
 eficiente                      1            0.05                
@@ -196,15 +188,10 @@ esencial                       1            0.05
 especializado                  3            0.15                
 especializados                 1            0.05                
 est                            1            0.05                
-esta                           2            0.1                 
 establecidos                   1            0.05                
-este                           1            0.05                
-esto                           2            0.1                 
-estos                          4            0.2                 
 estrat                         3            0.15                
 estrategia                     3            0.15                
 estructuras                    1            0.05                
-etc                            2            0.1                 
 evaluadores                    2            0.1                 
 evaluando                      2            0.1                 
 evaluandosoftware              1            0.05                
@@ -310,7 +297,6 @@ maquinarias                    1            0.05
 mar                            1            0.05                
 mayor                          3            0.15                
 mayores                        1            0.05                
-me                             2            0.1                 
 medianas                       1            0.05                
 mejor                          3            0.15                
 menor                          1            0.05                
@@ -325,7 +311,6 @@ monitorear                     2            0.1
 monitoreo                      2            0.1                 
 muchas                         1            0.05                
 muestra                        1            0.05                
-muy                            2            0.1                 
 n                              1            0.05                
 nacionales                     1            0.05                
 necesidades                    2            0.1                 
@@ -335,8 +320,6 @@ negocios                       1            0.05
 nivel                          1            0.05                
 no                             4            0.2                 
 nombre                         1            0.05                
-nosotros                       2            0.1                 
-nuestros                       2            0.1                 
 nuevas                         4            0.2                 
 numerosas                      1            0.05                
 objetivos                      1            0.05                
@@ -346,7 +329,6 @@ oportunidad                    1            0.05
 orientaci                      1            0.05                
 origen                         1            0.05                
 ortega                         1            0.05                
-otros                          1            0.05                
 p                              3            0.15                
 pa                             1            0.05                
 pagos                          1            0.05                
@@ -429,7 +411,6 @@ seleccionar                    1            0.05
 sentimos                       1            0.05                
 ser                            5            0.25                
 servicios                      5            0.25                
-siempre                        1            0.05                
 sistema                        1            0.05                
 sistemas                       13           0.65                
 situaci                        1            0.05                
@@ -441,15 +422,12 @@ soluciones                     5            0.25
 son                            3            0.15                
 soporta                        1            0.05                
 stock                          1            0.05                
-su                             15           0.75                
 suelen                         1            0.05                
 suministro                     2            0.1                 
 suministros                    1            0.05                
 surgieron                      1            0.05                
-sus                            7            0.35                
 tama                           1            0.05                
 tambi                          5            0.25                
-te                             1            0.05                
 tecnol                         1            0.05                
 tecnolog                       20           1.0                 
 teledetecci                    1            0.05                
@@ -471,8 +449,6 @@ transparencia                  1            0.05
 transporte                     1            0.05                
 trav                           2            0.1                 
 trazabilidad                   1            0.05                
-tu                             4            0.2                 
-tus                            1            0.05                
 twitter                        1            0.05                
 usadas                         1            0.05                
 usan                           1            0.05                

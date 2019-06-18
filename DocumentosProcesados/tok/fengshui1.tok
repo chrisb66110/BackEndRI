@@ -22,10 +22,6 @@ agua                           2            0.04
 agujas                         1            0.02                
 aislaron                       1            0.02                
 alg                            5            0.1                 
-algo                           5            0.1                 
-alguna                         1            0.02                
-algunas                        1            0.02                
-algunos                        2            0.04                
 alimentos                      1            0.02                
 all                            2            0.04                
 almacenando                    1            0.02                
@@ -64,7 +60,6 @@ armonizar                      2            0.04
 arquitect                      1            0.02                
 arraigada                      1            0.02                
 arregla                        1            0.02                
-arriba                         1            0.02                
 art                            1            0.02                
 arte                           8            0.16                
 articulo                       1            0.02                
@@ -99,7 +94,6 @@ bank                           1            0.02
 bas                            1            0.02                
 beber                          1            0.02                
 beberla                        1            0.02                
-bien                           2            0.04                
 bloques                        1            0.02                
 brillantes                     1            0.02                
 bueno                          1            0.02                
@@ -108,7 +102,6 @@ bur                            1            0.02
 butacones                      1            0.02                
 c                              1            0.02                
 cabeza                         4            0.08                
-cada                           3            0.06                
 calienta                       1            0.02                
 calma                          1            0.02                
 calman                         1            0.02                
@@ -122,7 +115,6 @@ camino                         1            0.02
 carta                          1            0.02                
 casa                           9            0.18                
 casas                          3            0.06                
-casi                           1            0.02                
 casos                          1            0.02                
 causarle                       2            0.04                
 centro                         1            0.02                
@@ -157,7 +149,6 @@ columbus                       1            0.02
 com                            2            0.04                
 combinado                      1            0.02                
 comenz                         1            0.02                
-como                           13           0.26                
 compensen                      1            0.02                
 competir                       1            0.02                
 comprobado                     1            0.02                
@@ -211,9 +202,6 @@ creencia                       2            0.04
 cu                             2            0.04                
 cuado                          1            0.02                
 cuadros                        2            0.04                
-cual                           1            0.02                
-cualquier                      1            0.02                
-cuando                         11           0.22                
 cuarto                         2            0.04                
 cuerpo                         1            0.02                
 cultivan                       1            0.02                
@@ -268,9 +256,7 @@ distrae                        1            0.02
 dividir                        1            0.02                
 dolores                        1            0.02                
 donald                         1            0.02                
-donde                          10           0.2                 
 dondequiera                    1            0.02                
-dos                            1            0.02                
 durmiendo                      1            0.02                
 duro                           1            0.02                
 econ                           1            0.02                
@@ -281,9 +267,6 @@ ejemplo                        6            0.12
 elegir                         1            0.02                
 elementos                      1            0.02                
 elim                           1            0.02                
-ella                           1            0.02                
-ellas                          1            0.02                
-ellos                          1            0.02                
 email                          1            0.02                
 embellecen                     1            0.02                
 empresario                     1            0.02                
@@ -310,14 +293,12 @@ entrar                         3            0.06
 envianos                       1            0.02                
 eran                           1            0.02                
 es                             14           0.28                
-esas                           1            0.02                
 escape                         1            0.02                
 escritorio                     11           0.22                
 escrutinio                     1            0.02                
 escuchando                     1            0.02                
 escultura                      1            0.02                
 esculturas                     1            0.02                
-ese                            1            0.02                
 espaciales                     1            0.02                
 espacio                        4            0.08                
 espacios                       2            0.04                
@@ -340,11 +321,7 @@ estamos                        2            0.04
 estanca                        1            0.02                
 estancada                      2            0.04                
 estar                          4            0.08                
-estas                          2            0.04                
-este                           4            0.08                
 estimulen                      1            0.02                
-esto                           1            0.02                
-estos                          2            0.04                
 estr                           2            0.04                
 estrat                         2            0.04                
 estructura                     1            0.02                
@@ -398,7 +375,6 @@ grandemente                    1            0.02
 grandes                        2            0.04                
 gratis                         1            0.02                
 gulf                           1            0.02                
-ha                             3            0.06                
 habitaci                       8            0.16                
 habitacion                     1            0.02                
 hace                           3            0.06                
@@ -505,7 +481,6 @@ menos                          3            0.06
 mental                         1            0.02                
 metemos                        1            0.02                
 meter                          1            0.02                
-mientras                       3            0.06                
 mil                            1            0.02                
 millones                       1            0.02                
 minimizar                      1            0.02                
@@ -533,7 +508,6 @@ multimillonarios               1            0.02
 muriendo                       1            0.02                
 musicales                      1            0.02                
 mustio                         1            0.02                
-muy                            10           0.2                 
 n                              1            0.02                
 naci                           1            0.02                
 nada                           2            0.04                
@@ -555,10 +529,6 @@ nivel                          1            0.02
 no                             20           0.4                 
 nombres                        1            0.02                
 nos                            16           0.32                
-nosotros                       2            0.04                
-nuestra                        3            0.06                
-nuestras                       2            0.04                
-nuestro                        2            0.04                
 nueva                          1            0.02                
 numerolog                      1            0.02                
 numerosa                       1            0.02                
@@ -588,9 +558,6 @@ oriente                        1            0.02
 origenes                       1            0.02                
 ornamento                      1            0.02                
 oscuro                         1            0.02                
-otra                           4            0.08                
-otras                          1            0.02                
-otros                          2            0.04                
 p                              1            0.02                
 pagadas                        1            0.02                
 paisaje                        5            0.1                 
@@ -663,12 +630,10 @@ puede                          6            0.12
 pueden                         4            0.08                
 puerta                         5            0.1                 
 puertas                        1            0.02                
-pues                           1            0.02                
 punto                          1            0.02                
 queda                          1            0.02                
 queens                         1            0.02                
 quejaba                        1            0.02                
-quienes                        1            0.02                
 quiz                           1            0.02                
 r                              3            0.06                
 rascamos                       1            0.02                
@@ -738,7 +703,6 @@ ser                            7            0.14
 serio                          1            0.02                
 serios                         1            0.02                
 shui                           34           0.68                
-siempre                        4            0.08                
 sienta                         1            0.02                
 sigamos                        1            0.02                
 significa                      2            0.04                
@@ -766,7 +730,6 @@ son                            5            0.1
 sonido                         1            0.02                
 soporte                        1            0.02                
 sorprendido                    1            0.02                
-su                             29           0.58                
 suaves                         2            0.04                
 suciedades                     1            0.02                
 sue                            3            0.06                
@@ -774,7 +737,6 @@ suena                          1            0.02
 suerte                         1            0.02                
 superstici                     1            0.02                
 supuesto                       1            0.02                
-sus                            8            0.16                
 sustit                         1            0.02                
 suyo                           1            0.02                
 tal                            3            0.06                
@@ -822,9 +784,7 @@ ubicaci                        1            0.02
 unidos                         1            0.02                
 universal                      3            0.06                
 univesal                       1            0.02                
-uno                            1            0.02                
 usarla                         1            0.02                
-usted                          1            0.02                
 utilice                        1            0.02                
 utilizan                       1            0.02                
 utilizarla                     1            0.02                

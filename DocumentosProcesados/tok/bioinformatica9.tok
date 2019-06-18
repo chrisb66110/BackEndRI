@@ -59,7 +59,6 @@ aplicada                       1            0.05
 aptas                          2            0.1                 
 arn                            8            0.4                 
 arranca                        1            0.05                
-arriba                         1            0.05                
 art                            5            0.25                
 artificiales                   3            0.15                
 as                             3            0.15                
@@ -87,13 +86,11 @@ by                             1            0.05
 c                              10           0.5                 
 cables                         2            0.1                 
 cabo                           3            0.15                
-cada                           1            0.05                
 cambiar                        2            0.1                 
 campo                          1            0.05                
 camuflarse                     1            0.05                
 capaz                          1            0.05                
 captar                         1            0.05                
-casi                           4            0.2                 
 cds                            1            0.05                
 celular                        3            0.15                
 celulares                      1            0.05                
@@ -118,7 +115,6 @@ comentario                     2            0.1
 comentarios                    6            0.3                 
 comente                        1            0.05                
 cometa                         1            0.05                
-como                           12           0.6                 
 compararse                     1            0.05                
 complejos                      1            0.05                
 completo                       3            0.15                
@@ -142,8 +138,6 @@ cosa                           2            0.1
 cosmo                          1            0.05                
 crean                          3            0.15                
 cu                             1            0.05                
-cual                           1            0.05                
-cualquier                      1            0.05                
 cuatro                         1            0.05                
 cucarachas                     1            0.05                
 curar                          1            0.05                
@@ -179,7 +173,6 @@ diversas                       1            0.05
 dom                            2            0.1                 
 donaci                         1            0.05                
 donato                         1            0.05                
-dos                            6            0.3                 
 durante                        2            0.1                 
 eclipse                        1            0.05                
 editados                       1            0.05                
@@ -188,7 +181,6 @@ eficacia                       1            0.05
 electr                         1            0.05                
 electricidad                   2            0.1                 
 eliminar                       1            0.05                
-ellos                          1            0.05                
 email                          1            0.05                
 embargo                        1            0.05                
 encajan                        1            0.05                
@@ -200,7 +192,6 @@ enfermedades                   2            0.1
 ensamblar                      1            0.05                
 enviar                         1            0.05                
 es                             9            0.45                
-esas                           1            0.05                
 escala                         6            0.3                 
 esencial                       1            0.05                
 esf                            1            0.05                
@@ -209,10 +200,8 @@ espacio                        1            0.05
 espanol                        1            0.05                
 especie                        1            0.05                
 est                            4            0.2                 
-esta                           7            0.35                
 estados                        1            0.05                
 estar                          2            0.1                 
-este                           2            0.1                 
 estimulaci                     1            0.05                
 estrategia                     1            0.05                
 estructural                    1            0.05                
@@ -252,7 +241,6 @@ google                         1            0.05
 gr                             1            0.05                
 gracias                        3            0.15                
 gusta                          1            0.05                
-ha                             3            0.15                
 hab                            4            0.2                 
 hace                           1            0.05                
 hacen                          1            0.05                
@@ -347,7 +335,6 @@ motor                          1            0.05
 movimiento                     5            0.25                
 muestra                        1            0.05                
 mundo                          2            0.1                 
-muy                            2            0.1                 
 n                              4            0.2                 
 nacional                       1            0.05                
 nano                           2            0.1                 
@@ -372,9 +359,6 @@ novedosos                      1            0.05
 noviembre                      1            0.05                
 ntico                          2            0.1                 
 ntrax                          2            0.1                 
-nuestra                        1            0.05                
-nuestras                       2            0.1                 
-nuestros                       1            0.05                
 nueva                          4            0.2                 
 nuevo                          2            0.1                 
 nuevos                         1            0.05                
@@ -392,9 +376,6 @@ ordenadores                    1            0.05
 org                            1            0.05                
 organismo                      1            0.05                
 organismos                     1            0.05                
-otra                           3            0.15                
-otras                          1            0.05                
-otros                          2            0.1                 
 p                              2            0.1                 
 parece                         2            0.1                 
 part                           1            0.05                
@@ -501,14 +482,12 @@ son                            5            0.25
 sonido                         2            0.1                 
 stico                          1            0.05                
 sticos                         1            0.05                
-su                             7            0.35                
 subunidades                    1            0.05                
 succionan                      1            0.05                
 sumergirse                     2            0.1                 
 super                          1            0.05                
 superados                      1            0.05                
 supervivencia                  1            0.05                
-sus                            4            0.2                 
 t                              3            0.15                
 tal                            1            0.05                
 tambi                          1            0.05                

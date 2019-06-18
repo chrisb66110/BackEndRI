@@ -34,8 +34,6 @@
 actual                         5            0.5                 
 actuales                       1            0.1                 
 actualizacion                  1            0.1                 
-alguna                         1            0.1                 
-algunos                        1            0.1                 
 android                        3            0.3                 
 aplicaciones                   1            0.1                 
 articulo                       2            0.2                 
@@ -50,13 +48,11 @@ bootstrap                      2            0.2
 bsd                            1            0.1                 
 buena                          5            0.5                 
 cache                          1            0.1                 
-cada                           2            0.2                 
 calidad                        1            0.1                 
 cantidad                       1            0.1                 
 casos                          1            0.1                 
 chrome                         5            0.5                 
 codigo                         4            0.4                 
-como                           2            0.2                 
 compararemos                   1            0.1                 
 compartiendo                   1            0.1                 
 compartir                      2            0.2                 
@@ -94,8 +90,6 @@ es                             5            0.5
 escrito                        1            0.1                 
 especifico                     1            0.1                 
 especificos                    1            0.1                 
-estas                          1            0.1                 
-este                           5            0.5                 
 estrellas                      5            0.5                 
 etiquetas                      1            0.1                 
 existen                        1            0.1                 
@@ -164,7 +158,6 @@ mit                            4            0.4
 modular                        6            0.6                 
 mozilla                        1            0.1                 
 mucho                          1            0.1                 
-muy                            1            0.1                 
 national                       1            0.1                 
 natural                        1            0.1                 
 navegacion                     1            0.1                 
@@ -214,11 +207,8 @@ solamente                      1            0.1
 son                            1            0.1                 
 soporte                        6            0.6                 
 starting                       1            0.1                 
-su                             1            0.1                 
-sus                            2            0.2                 
 tamano                         5            0.5                 
 tan                            1            0.1                 
-te                             2            0.2                 
 telefono                       1            0.1                 
 templates                      1            0.1                 
 terminos                       1            0.1                 
@@ -231,7 +221,6 @@ twitter                        1            0.1
 ui                             1            0.1                 
 uikit                          1            0.1                 
 ultima                         1            0.1                 
-uno                            1            0.1                 
 utiliza                        1            0.1                 
 utilizado                      2            0.2                 
 utilizados                     1            0.1                 

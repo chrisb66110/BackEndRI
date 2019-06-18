@@ -208,14 +208,10 @@ alemana                        1            0.008
 alemania                       1            0.008               
 alfonsies                      1            0.008               
 alfonso                        1            0.008               
-alguna                         1            0.008               
-algunos                        5            0.04                
 aligerando                     1            0.008               
 aligerandose                   1            0.008               
 alimentaria                    1            0.008               
-alla                           1            0.008               
 allen                          2            0.016               
-alli                           1            0.008               
 almagesto                      3            0.024               
 alrededor                      7            0.056               
 alta                           9            0.072               
@@ -230,7 +226,6 @@ alunizaje                      3            0.024
 alunizaron                     2            0.016               
 alunizo                        2            0.016               
 ambas                          3            0.024               
-ambos                          6            0.048               
 amebas                         1            0.008               
 amenizando                     1            0.008               
 americana                      2            0.016               
@@ -251,7 +246,6 @@ anos                           18           0.144
 ansiados                       1            0.008               
 anterior                       1            0.008               
 anteriores                     1            0.008               
-antes                          11           0.088               
 antigua                        4            0.032               
 antiguo                        1            0.008               
 apagado                        1            0.008               
@@ -278,9 +272,6 @@ aproximadamente                1            0.008
 aproximando                    1            0.008               
 aproximarse                    1            0.008               
 apuntaban                      1            0.008               
-aquellas                       3            0.024               
-aquellos                       1            0.008               
-aqui                           1            0.008               
 arabes                         2            0.016               
 areas                          4            0.032               
 arena                          1            0.008               
@@ -339,7 +330,6 @@ atril                          1            0.008
 aumenta                        3            0.024               
 aumentando                     3            0.024               
 aumento                        3            0.024               
-aun                            7            0.056               
 auroras                        1            0.008               
 ausencia                       2            0.016               
 auspicios                      1            0.008               
@@ -388,7 +378,6 @@ bastantes                      1            0.008
 batio                          1            0.008               
 beneficios                     1            0.008               
 berlin                         1            0.008               
-bien                           3            0.024               
 biologicos                     2            0.016               
 biologo                        1            0.008               
 biosatelite                    1            0.008               
@@ -411,7 +400,6 @@ c                              8            0.064
 cabeza                         3            0.024               
 cables                         1            0.008               
 cabo                           8            0.064               
-cada                           9            0.072               
 caer                           3            0.024               
 caera                          1            0.008               
 caida                          4            0.032               
@@ -467,7 +455,6 @@ cartas                         2            0.016
 cartografia                    2            0.016               
 cartografiadas                 1            0.008               
 cartografiar                   3            0.024               
-casi                           9            0.072               
 caso                           3            0.024               
 casos                          1            0.008               
 castilla                       1            0.008               
@@ -562,7 +549,6 @@ comienza                       1            0.008
 comienzo                       1            0.008               
 comienzos                      2            0.016               
 comite                         1            0.008               
-como                           53           0.424               
 comparadas                     1            0.008               
 competidor                     1            0.008               
 compitiesen                    1            0.008               
@@ -708,10 +694,6 @@ cruzar                         1            0.008
 cuaderno                       1            0.008               
 cuadrado                       2            0.016               
 cuadros                        1            0.008               
-cual                           11           0.088               
-cuales                         13           0.104               
-cualquier                      3            0.024               
-cuando                         18           0.144               
 cuarentena                     1            0.008               
 cuasares                       1            0.008               
 cuatro                         9            0.072               
@@ -886,8 +868,6 @@ doce                           1            0.008
 dominar                        1            0.008               
 domino                         1            0.008               
 donaciones                     1            0.008               
-donde                          9            0.072               
-dos                            43           0.344               
 dotadas                        1            0.008               
 duda                           1            0.008               
 duplica                        1            0.008               
@@ -926,10 +906,6 @@ elimina                        1            0.008
 elipse                         1            0.008               
 eliptica                       1            0.008               
 elipticas                      2            0.016               
-ella                           4            0.032               
-ellas                          2            0.016               
-ello                           6            0.048               
-ellos                          2            0.016               
 embargo                        6            0.048               
 emergencia                     1            0.008               
 emision                        1            0.008               
@@ -1005,7 +981,6 @@ era                            20           0.16
 eran                           11           0.088               
 eratostenes                    1            0.008               
 es                             77           0.616               
-esa                            2            0.016               
 escala                         1            0.008               
 escapar                        6            0.048               
 escapara                       1            0.008               
@@ -1014,11 +989,9 @@ escritor                       1            0.008
 escudo                         3            0.024               
 escudos                        2            0.016               
 escuela                        1            0.008               
-ese                            3            0.024               
 esencial                       1            0.008               
 esfera                         2            0.016               
 esfuerzos                      2            0.016               
-esos                           2            0.016               
 espacial                       77           0.616               
 espaciales                     25           0.2                 
 espacio                        38           0.304               
@@ -1036,7 +1009,6 @@ esperanzadoras                 1            0.008
 esperar                        1            0.008               
 espiar                         1            0.008               
 esquema                        1            0.008               
-esta                           30           0.24                
 estaba                         2            0.016               
 estaban                        1            0.008               
 estabilidad                    1            0.008               
@@ -1056,12 +1028,8 @@ estanco                        1            0.008
 estandar                       1            0.008               
 estando                        1            0.008               
 estar                          3            0.024               
-estas                          5            0.04                
-este                           23           0.184               
 estelar                        2            0.016               
 estelares                      2            0.016               
-esto                           9            0.072               
-estos                          9            0.072               
 estrella                       1            0.008               
 estrellandose                  1            0.008               
 estrellarse                    1            0.008               
@@ -1078,7 +1046,6 @@ estuviera                      1            0.008
 estuvo                         1            0.008               
 etapa                          6            0.048               
 etapas                         16           0.128               
-etc                            1            0.008               
 europa                         4            0.032               
 europea                        4            0.032               
 europeo                        1            0.008               
@@ -1294,7 +1261,6 @@ guia                           1            0.008
 guiado                         1            0.008               
 guiados                        1            0.008               
 h                              10           0.08                
-ha                             9            0.072               
 habia                          3            0.024               
 habian                         8            0.064               
 habiendo                       1            0.008               
@@ -1674,7 +1640,6 @@ microgravedad                  1            0.008
 micrometeoritos                1            0.008               
 mide                           1            0.008               
 midieron                       1            0.008               
-mientras                       12           0.096               
 miles                          2            0.016               
 mileto                         1            0.008               
 militares                      3            0.024               
@@ -1732,7 +1697,6 @@ mundo                          2            0.016
 murieron                       1            0.008               
 murio                          2            0.016               
 musico                         1            0.008               
-muy                            10           0.08                
 nacion                         1            0.008               
 naciones                       3            0.024               
 nasa                           12           0.096               
@@ -1772,14 +1736,11 @@ norteamericanas                1            0.008
 norteamericano                 6            0.048               
 norteamericanos                5            0.04                
 nos                            1            0.008               
-nosotros                       1            0.008               
 noticias                       2            0.016               
 noviembre                      5            0.04                
 nssdc                          1            0.008               
 nuclear                        2            0.016               
 nucleo                         3            0.024               
-nuestro                        3            0.024               
-nuestros                       1            0.008               
 nueva                          3            0.024               
 nuevas                         5            0.04                
 nueve                          1            0.008               
@@ -1865,10 +1826,6 @@ ornicoptero                    1            0.008
 oro                            2            0.016               
 ortos                          2            0.016               
 oso                            3            0.024               
-otra                           14           0.112               
-otras                          6            0.048               
-otro                           8            0.064               
-otros                          12           0.096               
 oxigeno                        4            0.032               
 pacifico                       2            0.016               
 pago                           2            0.016               
@@ -2109,7 +2066,6 @@ publico                        1            0.008
 puede                          13           0.104               
 pueden                         14           0.112               
 puertas                        2            0.016               
-pues                           2            0.016               
 puesta                         2            0.016               
 puesto                         5            0.04                
 puestos                        2            0.016               
@@ -2120,7 +2076,6 @@ puso                           1            0.008
 quedando                       1            0.008               
 queria                         1            0.008               
 queroseno                      1            0.008               
-quienes                        1            0.008               
 quimica                        1            0.008               
 quimicas                       1            0.008               
 quince                         1            0.008               
@@ -2342,7 +2297,6 @@ shuttle                        7            0.056
 siberianas                     1            0.008               
 sicilia                        1            0.008               
 sido                           12           0.096               
-siendo                         2            0.016               
 siete                          1            0.008               
 siglo                          5            0.04                
 siglos                         3            0.024               
@@ -2406,7 +2360,6 @@ spacecraft                     1            0.008
 spacelab                       1            0.008               
 sputnik                        6            0.048               
 sts                            1            0.008               
-su                             54           0.432               
 suave                          3            0.024               
 suavemente                     2            0.016               
 sube                           1            0.008               
@@ -2438,7 +2391,6 @@ sur                            1            0.008
 surge                          1            0.008               
 surgieron                      1            0.008               
 surveyor                       2            0.016               
-sus                            27           0.216               
 suscribete                     1            0.008               
 sustentacion                   1            0.008               
 sustentan                      1            0.008               
@@ -2555,9 +2507,7 @@ tripulado                      4            0.032
 tripulados                     19           0.152               
 tripulantes                    2            0.016               
 tsiolkovsky                    4            0.032               
-tu                             2            0.016               
 tubo                           1            0.008               
-tus                            1            0.008               
 tycho                          1            0.008               
 ultimo                         2            0.016               
 ultravioleta                   5            0.04                
@@ -2577,7 +2527,6 @@ unity                          1            0.008
 universal                      2            0.016               
 universidad                    1            0.008               
 universo                       3            0.024               
-uno                            7            0.056               
 urano                          3            0.024               
 urss                           8            0.064               
 usaba                          1            0.008               

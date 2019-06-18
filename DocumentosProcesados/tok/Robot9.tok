@@ -76,7 +76,6 @@ ciudad                         1            0.125
 ciudadano                      1            0.125               
 coche                          1            0.125               
 comentarios                    1            0.125               
-como                           2            0.25                
 concreciones                   2            0.25                
 conference                     1            0.125               
 confirmacion                   1            0.125               
@@ -116,14 +115,10 @@ empieza                        2            0.25
 empleados                      1            0.125               
 encarga                        1            0.125               
 entradas                       1            0.125               
-eres                           1            0.125               
 es                             3            0.375               
 escolar                        1            0.125               
 esqu                           1            0.125               
 esquadra                       1            0.125               
-esta                           1            0.125               
-estas                          1            0.125               
-este                           2            0.25                
 examenes                       1            0.125               
 experiencias                   1            0.125               
 extenderles                    1            0.125               
@@ -150,7 +145,6 @@ gr                             1            0.125
 grada                          2            0.25                
 grandes                        1            0.125               
 guarderias                     1            0.125               
-ha                             2            0.25                
 hacer                          1            0.125               
 hefei                          1            0.125               
 hemeroteca                     1            0.125               
@@ -223,7 +217,6 @@ once                           1            0.125
 opini                          1            0.125               
 oriental                       1            0.125               
 ot                             2            0.25                
-otros                          2            0.25                
 pacientes                      4            0.5                 
 pais                           1            0.125               
 paises                         1            0.125               
@@ -298,10 +291,8 @@ sonrisa                        1            0.125
 sorteos                        1            0.125               
 sport                          2            0.25                
 stilo                          1            0.125               
-su                             2            0.25                
 superar                        1            0.125               
 supervisar                     1            0.125               
-sus                            3            0.375               
 suscr                          1            0.125               
 tareas                         1            0.125               
 teatro                         1            0.125               
@@ -321,10 +312,8 @@ trabajan                       1            0.125
 trabajar                       1            0.125               
 tratar                         3            0.375               
 trump                          1            0.125               
-tu                             2            0.25                
 tv                             1            0.125               
 twitter                        4            0.5                 
-uno                            1            0.125               
 usuario                        1            0.125               
 v                              3            0.375               
 venta                          1            0.125               

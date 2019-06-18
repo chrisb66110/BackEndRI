@@ -262,10 +262,6 @@ alcanzado                      3            0.03
 alcanzar                       5            0.05                
 alcanzarse                     1            0.01                
 alcohol                        2            0.02                
-algun                          1            0.01                
-alguna                         2            0.02                
-algunas                        2            0.02                
-algunos                        6            0.06                
 ali                            1            0.01                
 alimentacion                   5            0.05                
 alimentaria                    1            0.01                
@@ -286,7 +282,6 @@ altos                          1            0.01
 am                             20           0.2                 
 amaral                         1            0.01                
 ambiente                       1            0.01                
-ambos                          1            0.01                
 american                       1            0.01                
 americanas                     1            0.01                
 aminoacidos                    3            0.03                
@@ -307,7 +302,6 @@ anos                           10           0.1
 anotar                         1            0.01                
 anterior                       1            0.01                
 anteriores                     1            0.01                
-antes                          3            0.03                
 anticiparse                    1            0.01                
 ap                             1            0.01                
 aparecer                       1            0.01                
@@ -333,9 +327,6 @@ apropiada                      3            0.03
 apropiadas                     1            0.01                
 apropiado                      1            0.01                
 aproximadamente                3            0.03                
-aquella                        1            0.01                
-aquellas                       2            0.02                
-aquellos                       8            0.08                
 arch                           4            0.04                
 ardito                         1            0.01                
 are                            2            0.02                
@@ -371,7 +362,6 @@ aumentaba                      1            0.01
 aumentado                      1            0.01                
 aumentados                     1            0.01                
 aumento                        6            0.06                
-aun                            7            0.07                
 autoestimacion                 2            0.02                
 automaticamente                1            0.01                
 autopsias                      1            0.01                
@@ -411,7 +401,6 @@ bengtsson                      2            0.02
 berkowitz                      1            0.01                
 beta                           2            0.02                
 bibliograficas                 1            0.01                
-bien                           5            0.05                
 biliar                         2            0.02                
 biliares                       1            0.01                
 biologica                      1            0.01                
@@ -445,7 +434,6 @@ busca                          1            0.01
 but                            1            0.01                
 by                             7            0.07                
 c                              3            0.03                
-cada                           6            0.06                
 caffeine                       1            0.01                
 cagnes                         1            0.01                
 cahill                         1            0.01                
@@ -483,7 +471,6 @@ cardiomiopatias                1            0.01
 cardiovascular                 2            0.02                
 carne                          1            0.01                
 caseina                        1            0.01                
-casi                           7            0.07                
 caso                           1            0.01                
 catabolismo                    1            0.01                
 catogeniga                     1            0.01                
@@ -554,7 +541,6 @@ comite                         1            0.01
 commercial                     1            0.01                
 committee                      1            0.01                
 commons                        1            0.01                
-como                           40           0.4                 
 comparado                      1            0.01                
 comparative                    1            0.01                
 comparison                     2            0.02                
@@ -691,10 +677,6 @@ critico                        1            0.01
 cronico                        1            0.01                
 cu                             1            0.01                
 cuadros                        1            0.01                
-cual                           3            0.03                
-cualquier                      9            0.09                
-cualquiera                     1            0.01                
-cuando                         22           0.22                
 cuantificar                    1            0.01                
 cuarto                         1            0.01                
 cuba                           1            0.01                
@@ -859,9 +841,7 @@ doctor                         1            0.01
 does                           1            0.01                
 dogmaticos                     1            0.01                
 donal                          1            0.01                
-donde                          4            0.04                
 donnelly                       1            0.01                
-dos                            1            0.01                
 doses                          1            0.01                
 dosis                          3            0.03                
 dr                             4            0.04                
@@ -913,7 +893,6 @@ elegir                         1            0.01
 eletrolitico                   1            0.01                
 elevaron                       1            0.01                
 eliminacion                    1            0.01                
-ellas                          2            0.02                
 email                          1            0.01                
 embarazo                       3            0.03                
 embargo                        8            0.08                
@@ -958,18 +937,14 @@ er                             1            0.01
 era                            3            0.03                
 eran                           2            0.02                
 es                             86           0.86                
-esa                            4            0.04                
-esas                           2            0.02                
 escasez                        1            0.01                
 esclarecido                    1            0.01                
 escrita                        1            0.01                
-ese                            3            0.03                
 esencial                       3            0.03                
 esenciales                     1            0.01                
 esfuerzan                      1            0.01                
 esfuerzo                       2            0.02                
 esfuerzos                      2            0.02                
-esos                           2            0.02                
 espa                           1            0.01                
 especial                       1            0.01                
 especialistas                  1            0.01                
@@ -978,7 +953,6 @@ especificos                    1            0.01
 esperada                       1            0.01                
 esperar                        1            0.01                
 est                            2            0.02                
-esta                           33           0.33                
 estaba                         1            0.01                
 estaban                        3            0.03                
 estabilidad                    1            0.01                
@@ -991,8 +965,6 @@ estadisticas                   1            0.01
 estan                          4            0.04                
 estar                          4            0.04                
 estara                         1            0.01                
-estas                          5            0.05                
-este                           16           0.16                
 esten                          1            0.01                
 estetica                       1            0.01                
 esteticos                      1            0.01                
@@ -1000,8 +972,6 @@ estilo                         4            0.04
 estimated                      1            0.01                
 estimulen                      1            0.01                
 estimulo                       1            0.01                
-esto                           26           0.26                
-estos                          15           0.15                
 estrategias                    2            0.02                
 estres                         1            0.01                
 estricta                       1            0.01                
@@ -1188,7 +1158,6 @@ guiarlas                       1            0.01
 guide                          1            0.01                
 guilford                       1            0.01                
 h                              3            0.03                
-ha                             18           0.18                
 habana                         2            0.02                
 haber                          2            0.02                
 habia                          7            0.07                
@@ -1574,10 +1543,8 @@ metodos                        4            0.04
 mezcla                         1            0.01                
 mf                             1            0.01                
 mg                             1            0.01                
-mi                             1            0.01                
 middle                         1            0.01                
 middlesex                      1            0.01                
-mientras                       9            0.09                
 milk                           1            0.01                
 miller                         1            0.01                
 millones                       1            0.01                
@@ -1637,7 +1604,6 @@ murgatroyd                     2            0.02
 muscle                         1            0.01                
 musculo                        1            0.01                
 mustajoki                      1            0.01                
-muy                            19           0.19                
 myth                           1            0.01                
 n                              2            0.02                
 nacional                       2            0.02                
@@ -1734,10 +1700,6 @@ origen                         2            0.02
 origin                         1            0.01                
 original                       2            0.02                
 other                          1            0.01                
-otra                           6            0.06                
-otras                          2            0.02                
-otro                           2            0.02                
-otros                          16           0.16                
 out                            2            0.02                
 outpatients                    1            0.01                
 overweight                     1            0.01                
@@ -1941,8 +1903,6 @@ purdy                          1            0.01
 purpose                        1            0.01                
 quaade                         2            0.02                
 questionnaires                 1            0.01                
-quien                          2            0.02                
-quienes                        1            0.01                
 quieren                        1            0.01                
 quizas                         1            0.01                
 quoted                         1            0.01                
@@ -2155,7 +2115,6 @@ sgd                            1            0.01
 shimokata                      1            0.01                
 short                          1            0.01                
 sido                           14           0.14                
-siempre                        1            0.01                
 sienten                        1            0.01                
 siga                           1            0.01                
 siglo                          1            0.01                
@@ -2217,7 +2176,6 @@ strang                         3            0.03
 stretner                       1            0.01                
 studies                        8            0.08                
 stunkard                       4            0.04                
-su                             25           0.25                
 subestiman                     1            0.01                
 subita                         2            0.02                
 subject                        1            0.01                
@@ -2256,7 +2214,6 @@ supuesto                       1            0.01
 sur                            1            0.01                
 surg                           2            0.02                
 surgical                       1            0.01                
-sus                            9            0.09                
 suspendan                      1            0.01                
 suspender                      2            0.02                
 sustancial                     4            0.04                
@@ -2358,7 +2315,6 @@ unexplained                    1            0.01
 unica                          10           0.1                 
 unido                          3            0.03                
 united                         1            0.01                
-uno                            5            0.05                
 up                             2            0.02                
 us                             1            0.01                
 usada                          1            0.01                
@@ -2452,7 +2408,6 @@ wr                             1            0.01
 ws                             1            0.01                
 xml                            1            0.01                
 year                           2            0.02                
-yo                             3            0.03                
 york                           1            0.01                
 yorks                          1            0.01                
 you                            1            0.01                

@@ -72,7 +72,6 @@ alcance                        1            0.03125
 alcanzar                       2            0.0625              
 alcoholismo                    1            0.03125             
 alg                            1            0.03125             
-algunos                        1            0.03125             
 all                            1            0.03125             
 altamente                      1            0.03125             
 altas                          1            0.03125             
@@ -81,7 +80,6 @@ alternativas                   1            0.03125
 alternativo                    1            0.03125             
 alto                           1            0.03125             
 amado                          1            0.03125             
-ambos                          3            0.09375             
 ampliamente                    1            0.03125             
 an                             1            0.03125             
 ancestrales                    1            0.03125             
@@ -94,7 +92,6 @@ apoyo                          2            0.0625
 aprendizaje                    1            0.03125             
 aprobarse                      1            0.03125             
 aqu                            1            0.03125             
-aquellas                       2            0.0625              
 arancibia                      1            0.03125             
 arm                            1            0.03125             
 armon                          1            0.03125             
@@ -122,7 +119,6 @@ bajas                          1            0.03125
 bebiendo                       1            0.03125             
 beneficiosas                   1            0.03125             
 beso                           1            0.03125             
-bien                           1            0.03125             
 biol                           4            0.125               
 bombardeo                      1            0.03125             
 buen                           2            0.0625              
@@ -130,7 +126,6 @@ buscar                         1            0.03125
 c                              4            0.125               
 cable                          1            0.03125             
 cabo                           1            0.03125             
-cada                           1            0.03125             
 calidad                        6            0.1875              
 cambiante                      1            0.03125             
 cambiar                        1            0.03125             
@@ -167,7 +162,6 @@ cognitivas                     1            0.03125
 coherente                      1            0.03125             
 colaci                         1            0.03125             
 comisi                         1            0.03125             
-como                           13           0.40625             
 competencias                   2            0.0625              
 competitiva                    2            0.0625              
 comprensi                      1            0.03125             
@@ -219,10 +213,6 @@ ctica                          2            0.0625
 cticamente                     1            0.03125             
 ctico                          1            0.03125             
 cuadernos                      1            0.03125             
-cual                           4            0.125               
-cuales                         4            0.125               
-cualquiera                     1            0.03125             
-cuando                         5            0.15625             
 cuenta                         1            0.03125             
 cuentan                        1            0.03125             
 culmine                        1            0.03125             
@@ -300,10 +290,6 @@ eficaz                         1            0.03125
 egresada                       1            0.03125             
 ejemplo                        3            0.09375             
 ejercida                       1            0.03125             
-ella                           2            0.0625              
-ellas                          1            0.03125             
-ello                           2            0.0625              
-ellos                          2            0.0625              
 embarazada                     2            0.0625              
 embarazadas                    1            0.03125             
 embarazan                      3            0.09375             
@@ -332,23 +318,18 @@ esclaviza                      1            0.03125
 escolar                        5            0.15625             
 escuela                        2            0.0625              
 escuelas                       1            0.03125             
-ese                            1            0.03125             
 especialmente                  6            0.1875              
 esperaban                      1            0.03125             
 esperado                       1            0.03125             
 esperados                      1            0.03125             
 est                            8            0.25                
-esta                           7            0.21875             
 estable                        1            0.03125             
 establecimiento                1            0.03125             
 estar                          1            0.03125             
-este                           9            0.28125             
 estigmatizaci                  1            0.03125             
 estigmatizadas                 1            0.03125             
 estilo                         1            0.03125             
 estimulan                      2            0.0625              
-esto                           3            0.09375             
-estos                          3            0.09375             
 estructura                     1            0.03125             
 estructuraci                   1            0.03125             
 estructurado                   1            0.03125             
@@ -357,7 +338,6 @@ estudiantiles                  2            0.0625
 estudio                        1            0.03125             
 estudios                       5            0.15625             
 etapa                          1            0.03125             
-etc                            1            0.03125             
 exige                          1            0.03125             
 existe                         1            0.03125             
 exitosamente                   1            0.03125             
@@ -422,7 +402,6 @@ grado                          1            0.03125
 gran                           2            0.0625              
 grandes                        1            0.03125             
 grupo                          1            0.03125             
-ha                             6            0.1875              
 haber                          2            0.0625              
 habilite                       1            0.03125             
 habitualmente                  4            0.125               
@@ -607,7 +586,6 @@ muchas                         3            0.09375
 multidimensional               1            0.03125             
 multiplicidad                  1            0.03125             
 mundo                          2            0.0625              
-muy                            3            0.09375             
 n                              12           0.375               
 naciones                       1            0.03125             
 natural                        1            0.03125             
@@ -623,7 +601,6 @@ no                             28           0.875
 normal                         1            0.03125             
 normalmente                    1            0.03125             
 noticias                       2            0.0625              
-nuestra                        1            0.03125             
 nunca                          1            0.03125             
 objetivos                      2            0.0625              
 obligaciones                   1            0.03125             
@@ -647,8 +624,6 @@ oportunidad                    1            0.03125
 oportunidades                  1            0.03125             
 organizaci                     1            0.03125             
 organizada                     1            0.03125             
-otra                           2            0.0625              
-otras                          2            0.0625              
 p                              5            0.15625             
 pa                             1            0.03125             
 padre                          3            0.09375             
@@ -747,7 +722,6 @@ pubertad                       1            0.03125
 puedan                         1            0.03125             
 puede                          3            0.09375             
 pueden                         2            0.0625              
-pues                           1            0.03125             
 puesto                         1            0.03125             
 quedan                         1            0.03125             
 quererse                       1            0.03125             
@@ -846,7 +820,6 @@ sico                           1            0.03125
 sicos                          1            0.03125             
 sida                           2            0.0625              
 sido                           1            0.03125             
-siendo                         2            0.0625              
 siente                         1            0.03125             
 sienten                        1            0.03125             
 siglo                          1            0.03125             
@@ -865,12 +838,10 @@ solteras                       1            0.03125
 son                            6            0.1875              
 status                         1            0.03125             
 stgo                           1            0.03125             
-su                             9            0.28125             
 suazo                          1            0.03125             
 subliminales                   1            0.03125             
 subsidiario                    1            0.03125             
 suele                          1            0.03125             
-sus                            17           0.53125             
 suscitado                      1            0.03125             
 t                              4            0.125               
 tal                            4            0.125               
@@ -911,7 +882,6 @@ transmiten                     1            0.03125
 trav                           2            0.0625              
 tres                           1            0.03125             
 tribunales                     1            0.03125             
-tu                             1            0.03125             
 tutela                         1            0.03125             
 tv                             1            0.03125             
 uchile                         1            0.03125             
@@ -919,7 +889,6 @@ unicef                         1            0.03125
 unidad                         2            0.0625              
 unidas                         1            0.03125             
 universidad                    2            0.0625              
-uno                            3            0.09375             
 unopec                         1            0.03125             
 usan                           1            0.03125             
 usando                         1            0.03125             

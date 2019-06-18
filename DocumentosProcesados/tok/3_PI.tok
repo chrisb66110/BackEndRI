@@ -15,12 +15,9 @@ abstracto                      1            0.025
 actualizado                    1            0.025               
 actualizar                     3            0.075               
 adicional                      1            0.025               
-algo                           1            0.025               
 algoritmo                      1            0.025               
-alguna                         2            0.05                
 ansi                           1            0.025               
 anteriores                     1            0.025               
-antes                          2            0.05                
 aparte                         1            0.025               
 aplicaci                       1            0.025               
 aprovechando                   1            0.025               
@@ -38,7 +35,6 @@ cambio                         1            0.025
 cancelar                       1            0.025               
 caracter                       2            0.05                
 char                           1            0.025               
-como                           3            0.075               
 compilador                     3            0.075               
 comporta                       1            0.025               
 comportamiento                 1            0.025               
@@ -55,9 +51,6 @@ crear                          1            0.025
 crearse                        1            0.025               
 cruzado                        2            0.05                
 cu                             6            0.15                
-cualquier                      1            0.025               
-cuando                         3            0.075               
-cuantas                        1            0.025               
 debido                         1            0.025               
 deeplearn                      2            0.05                
 deja                           1            0.025               
@@ -85,12 +78,8 @@ env                            1            0.025
 ernesto                        1            0.025               
 es                             40           1.0                 
 escabilidad                    2            0.05                
-eso                            1            0.025               
 est                            4            0.1                 
-esta                           4            0.1                 
 estar                          2            0.05                
-este                           2            0.05                
-estos                          1            0.025               
 estructurada                   1            0.025               
 existen                        1            0.025               
 forma                          1            0.025               
@@ -101,7 +90,6 @@ gestiona                       1            0.025
 gina                           3            0.075               
 gracias                        2            0.05                
 guarda                         1            0.025               
-ha                             1            0.025               
 habitual                       1            0.025               
 hablando                       1            0.025               
 hace                           1            0.025               
@@ -143,7 +131,6 @@ mensaje                        1            0.025
 metaprogramaci                 1            0.025               
 modernos                       1            0.025               
 mucho                          1            0.025               
-muy                            1            0.025               
 ndar                           3            0.075               
 necesario                      1            0.025               
 necesite                       1            0.025               
@@ -160,8 +147,6 @@ ocultar                        1            0.025
 oopscenities                   1            0.025               
 operador                       2            0.05                
 orientada                      1            0.025               
-otro                           1            0.025               
-otros                          1            0.025               
 p                              3            0.075               
 pendiente                      1            0.025               
 poco                           1            0.025               
@@ -201,7 +186,6 @@ ser                            2            0.05
 servidor                       2            0.05                
 sesi                           1            0.025               
 shared                         1            0.025               
-siempre                        1            0.025               
 significado                    2            0.05                
 similar                        1            0.025               
 sistema                        2            0.05                
@@ -209,9 +193,7 @@ smart                          2            0.05
 sobrecarga                     1            0.025               
 sobrecargar                    1            0.025               
 stack                          3            0.075               
-su                             3            0.075               
 suelen                         1            0.025               
-sus                            1            0.025               
 tal                            1            0.025               
 tan                            1            0.025               
 tendr                          1            0.025               
@@ -226,7 +208,6 @@ tradicional                    1            0.025
 tradicionales                  1            0.025               
 tres                           1            0.025               
 trivial                        1            0.025               
-tu                             1            0.025               
 uefi                           1            0.025               
 ultima                         1            0.025               
 unique                         1            0.025               

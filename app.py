@@ -23,6 +23,12 @@ class Documento:
         self.link = link
         self.resumen = resumen
 
+class Documentos:
+    def __init__(self, listaDocumentos, cantidadDocumentos, tiempo):
+        self.listaDocumentos = listaDocumentos
+        self.cantidadDocumentos = cantidadDocumentos
+        self.tiempo = tiempo
+
 class ProcConsultas:
 
     def __init__(self):
@@ -468,7 +474,13 @@ def hello_world(consulta):
 
     fin = time() - inicio
     print("FIN: %.10f seconds." % fin)
-    return json.dumps(lista, default=lambda o: o.__dict__, indent=4)
+    retornoDocumentos = Documentos(lista, lista.__len__(), fin)
+    jsonStringTodo = json.dumps(retornoDocumentos, default=lambda o: o.__dict__, indent=4)
+    #print(jsonStringTodo)
+
+    #jsonString = json.dumps(lista, default=lambda o: o.__dict__, indent=4)
+    #print(jsonString)
+    return jsonStringTodo
 
 if __name__ == '__main__':
     app.run()

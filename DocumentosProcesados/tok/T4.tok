@@ -14,7 +14,6 @@ acusa                          1            0.025
 administraci                   1            0.025               
 adquiriendo                    1            0.025               
 ahora                          2            0.05                
-algo                           1            0.025               
 alhambra                       2            0.05                
 almacenadas                    1            0.025               
 alternativa                    1            0.025               
@@ -31,7 +30,6 @@ apoya                          2            0.05
 applesfera                     5            0.125               
 aprendizaje                    1            0.025               
 apuesta                        1            0.025               
-aquellas                       1            0.025               
 arquitecturas                  1            0.025               
 art                            3            0.075               
 as                             2            0.05                
@@ -56,9 +54,7 @@ buscar                         1            0.025
 by                             6            0.15                
 c                              3            0.075               
 cabronazi                      1            0.025               
-cada                           1            0.025               
 caracter                       1            0.025               
-casi                           1            0.025               
 caso                           1            0.025               
 catapultado                    1            0.025               
 cazadores                      2            0.05                
@@ -78,7 +74,6 @@ coches                         1            0.025
 cola                           5            0.125               
 comentarios                    2            0.05                
 comienza                       1            0.025               
-como                           2            0.05                
 compartir                      4            0.1                 
 competici                      1            0.025               
 completa                       1            0.025               
@@ -102,9 +97,6 @@ creaci                         1            0.025
 creadores                      1            0.025               
 creciendo                      1            0.025               
 criptomonedas                  2            0.05                
-cuales                         1            0.025               
-cualquier                      2            0.05                
-cualquiera                     1            0.025               
 cuenta                         1            0.025               
 cursos                         2            0.05                
 curva                          1            0.025               
@@ -136,7 +128,6 @@ editorial                      1            0.025
 ejecutar                       1            0.025               
 elevada                        1            0.025               
 elevado                        1            0.025               
-ella                           1            0.025               
 email                          3            0.075               
 empieza                        1            0.025               
 empresa                        1            0.025               
@@ -153,12 +144,9 @@ espa                           2            0.05
 espinof                        5            0.125               
 esports                        6            0.15                
 est                            1            0.025               
-esta                           3            0.075               
 estando                        1            0.025               
-este                           1            0.025               
 estilo                         4            0.1                 
 estima                         1            0.025               
-estos                          1            0.025               
 estrenos                       1            0.025               
 estudiantes                    1            0.025               
 etiqueta                       1            0.025               
@@ -203,7 +191,6 @@ grupos                         1            0.025
 guarda                         1            0.025               
 gustar                         1            0.025               
 h                              1            0.025               
-ha                             2            0.05                
 habitualmente                  1            0.025               
 hablamos                       1            0.025               
 han                            2            0.05                
@@ -258,7 +245,6 @@ manera                         1            0.025
 manipular                      2            0.05                
 marcas                         1            0.025               
 mayor                          1            0.025               
-me                             1            0.025               
 media                          1            0.025               
 medios                         1            0.025               
 mejor                          1            0.025               
@@ -266,7 +252,6 @@ mejorar                        1            0.025
 men                            1            0.025               
 mercado                        3            0.075               
 meteor                         1            0.025               
-mi                             2            0.05                
 microsoft                      1            0.025               
 miner                          1            0.025               
 mobile                         1            0.025               
@@ -282,7 +267,6 @@ motos                          1            0.025
 mucho                          1            0.025               
 muchos                         1            0.025               
 mundo                          3            0.075               
-muy                            5            0.125               
 mvc                            1            0.025               
 mvw                            1            0.025               
 n                              3            0.075               
@@ -292,11 +276,8 @@ necesita                       1            0.025
 negativa                       1            0.025               
 no                             3            0.075               
 nobbot                         2            0.05                
-nosotros                       1            0.025               
 nostalgia                      1            0.025               
 notas                          1            0.025               
-nuestro                        1            0.025               
-nuestros                       1            0.025               
 nuevo                          1            0.025               
 ocio                           3            0.075               
 online                         2            0.05                
@@ -305,9 +286,6 @@ orange                         6            0.15
 orden                          1            0.025               
 orientada                      2            0.05                
 original                       1            0.025               
-otra                           2            0.05                
-otras                          1            0.025               
-otro                           1            0.025               
 p                              1            0.025               
 paladar                        7            0.175               
 participamos                   1            0.025               
@@ -384,7 +362,6 @@ series                         1            0.025
 servicio                       1            0.025               
 servidor                       1            0.025               
 sicos                          1            0.025               
-siempre                        1            0.025               
 sigue                          2            0.05                
 simplificar                    1            0.025               
 sitios                         1            0.025               
@@ -401,15 +378,12 @@ spa                            1            0.025
 standard                       1            0.025               
 star                           2            0.05                
 streaming                      1            0.025               
-su                             5            0.125               
 subir                          1            0.025               
-sus                            3            0.075               
 suscr                          1            0.025               
 suscribir                      2            0.05                
 t                              8            0.2                 
 tablets                        1            0.025               
 tan                            1            0.025               
-te                             1            0.025               
 tecnolog                       5            0.125               
 tele                           1            0.025               
 telegram                       4            0.1                 
@@ -428,8 +402,6 @@ traer                          1            0.025
 trav                           1            0.025               
 trendencias                    12           0.3                 
 trump                          1            0.025               
-tu                             1            0.025               
-tus                            1            0.025               
 tv                             3            0.075               
 twitter                        7            0.175               
 ui                             1            0.025               
@@ -437,7 +409,6 @@ underscore                     1            0.025
 unido                          1            0.025               
 universidades                  1            0.025               
 unlocked                       2            0.05                
-uno                            4            0.1                 
 usa                            1            0.025               
 usar                           1            0.025               
 uso                            4            0.1                 

@@ -27,8 +27,6 @@ adem                           4            0.2
 ahora                          1            0.05                
 alcance                        2            0.1                 
 alg                            1            0.05                
-alguna                         3            0.15                
-alguno                         1            0.05                
 almacena                       1            0.05                
 almacenamiento                 1            0.05                
 almacenar                      1            0.05                
@@ -36,7 +34,6 @@ alto                           2            0.1
 analytics                      6            0.3                 
 anta                           1            0.05                
 anteriormente                  1            0.05                
-antes                          1            0.05                
 aparece                        1            0.05                
 api                            1            0.05                
 aplicaci                       1            0.05                
@@ -46,8 +43,6 @@ aportar                        1            0.05
 aprender                       1            0.05                
 aprovecha                      1            0.05                
 aqu                            1            0.05                
-aquella                        1            0.05                
-aquellos                       2            0.1                 
 arquitectura                   1            0.05                
 art                            1            0.05                
 as                             1            0.05                
@@ -62,7 +57,6 @@ base                           2            0.1
 bastante                       1            0.05                
 batch                          1            0.05                
 beneficiando                   1            0.05                
-bien                           3            0.15                
 big                            8            0.4                 
 bigdata                        1            0.05                
 bigtable                       1            0.05                
@@ -71,14 +65,12 @@ board                          1            0.05
 brutal                         1            0.05                
 c                              1            0.05                
 ca                             1            0.05                
-cada                           4            0.2                 
 capacidad                      4            0.2                 
 capacidades                    1            0.05                
 capaz                          1            0.05                
 car                            1            0.05                
 caracter                       1            0.05                
 carga                          1            0.05                
-casi                           1            0.05                
 caso                           1            0.05                
 casos                          1            0.05                
 catal                          1            0.05                
@@ -94,7 +86,6 @@ cluster                        2            0.1
 colaboradores                  1            0.05                
 combinaci                      1            0.05                
 comentaba                      1            0.05                
-como                           6            0.3                 
 comodity                       1            0.05                
 complejas                      1            0.05                
 complejidad                    1            0.05                
@@ -131,10 +122,6 @@ crecer                         1            0.05
 crudo                          1            0.05                
 ctica                          1            0.05                
 cticamente                     1            0.05                
-cualquier                      1            0.05                
-cualquiera                     1            0.05                
-cuando                         4            0.2                 
-cuantos                        1            0.05                
 cubieboard                     1            0.05                
 cuenta                         1            0.05                
 cuesti                         1            0.05                
@@ -168,8 +155,6 @@ distribuyen                    1            0.05
 docencia                       1            0.05                
 docente                        1            0.05                
 dominarlas                     1            0.05                
-donde                          4            0.2                 
-dos                            2            0.1                 
 duro                           1            0.05                
 duros                          1            0.05                
 echar                          1            0.05                
@@ -209,13 +194,8 @@ espec                          2            0.1
 especializaci                  1            0.05                
 esperando                      1            0.05                
 est                            5            0.25                
-esta                           3            0.15                
 estaban                        1            0.05                
 estar                          1            0.05                
-estas                          4            0.2                 
-este                           10           0.5                 
-esto                           4            0.2                 
-estos                          3            0.15                
 estropea                       1            0.05                
 estructurar                    1            0.05                
 evoluci                        1            0.05                
@@ -251,7 +231,6 @@ grafos                         1            0.05
 grandes                        2            0.1                 
 gratuito                       1            0.05                
 guarda                         1            0.05                
-ha                             3            0.15                
 hablar                         2            0.1                 
 hace                           1            0.05                
 hacer                          6            0.3                 
@@ -328,7 +307,6 @@ memoria                        1            0.05
 mezcla                         1            0.05                
 micro                          1            0.05                
 miembro                        1            0.05                
-mientras                       1            0.05                
 millones                       1            0.05                
 min                            1            0.05                
 mobility                       1            0.05                
@@ -341,7 +319,6 @@ mucha                          1            0.05
 muchas                         1            0.05                
 mucho                          2            0.1                 
 muchos                         3            0.15                
-muy                            2            0.1                 
 n                              4            0.2                 
 nada                           1            0.05                
 navegaci                       1            0.05                
@@ -356,10 +333,6 @@ no                             10           0.5
 nodo                           2            0.1                 
 nodos                          2            0.1                 
 nos                            5            0.25                
-nuestra                        1            0.05                
-nuestras                       1            0.05                
-nuestro                        5            0.25                
-nuestros                       3            0.15                
 nuevas                         1            0.05                
 obtener                        1            0.05                
 ocasiones                      1            0.05                
@@ -373,8 +346,6 @@ operaci                        1            0.05
 operaciones                    1            0.05                
 original                       1            0.05                
 os                             1            0.05                
-otras                          3            0.15                
-otros                          3            0.15                
 paralelo                       1            0.05                
 particiones                    3            0.15                
 pasar                          3            0.15                
@@ -503,10 +474,8 @@ spork                          1            0.05
 sql                            2            0.1                 
 sqoop                          1            0.05                
 storage                        1            0.05                
-su                             4            0.2                 
 suite                          1            0.05                
 supercomputador                1            0.05                
-sus                            1            0.05                
 sustenta                       1            0.05                
 t                              3            0.15                
 tablas                         2            0.1                 
@@ -515,7 +484,6 @@ tambi                          5            0.25
 tan                            1            0.05                
 tarea                          1            0.05                
 tareas                         1            0.05                
-te                             1            0.05                
 tecnol                         1            0.05                
 tecnolog                       1            0.05                
 ten                            1            0.05                
