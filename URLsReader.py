@@ -30,7 +30,8 @@ class URLsReader:
             lineDiv = lineWithoutSpace.split(" ")
             if len(lineDiv) >= 2:
                 nombreDocumento = lineDiv[0].split(".")[0]
-                urlsDict[nombreDocumento] = lineDiv[1]
+                nombreDoc = (nombreDocumento.encode('ascii', 'ignore')).decode('utf-8')
+                urlsDict[nombreDoc] = lineDiv[1]
         return urlsDict
 
     def closeFile(self):

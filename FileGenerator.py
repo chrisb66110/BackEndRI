@@ -106,3 +106,10 @@ class FileGenerator:
         for word in sorted(dictPositngs.keys()):
             file.write(self.linePostings(word, dictPositngs[word][0], dictPositngs[word][1]))
         print(fileName + ".txt generado")
+
+    # Metodo que escribe los documentos procesados
+    def genereDocPro(self, fileName, string):
+        fileSave = './DocumentosProcesados/DocsConExpresiones/' + fileName + '.txt'
+        file = open(fileSave, 'w')
+        file.write(string)
+        print(fileName + ".txt generado")
