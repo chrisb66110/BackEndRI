@@ -19,8 +19,10 @@ class DocWordCounter:
         self.stopwordsDict = stopwords.getStopWords()
 
     def generateDict(self):
+        nuevoWwordVector = list()
         for word in self.wordVector:
             if word not in self.stopwordsDict:
+                nuevoWwordVector.append(word)
                 if word in self.dictionary:
                     # Caso en que ya exista el valor se le agrega 1 al value,
                     # que representa sumar la cantidad  de palabras que hay.
@@ -30,5 +32,6 @@ class DocWordCounter:
                 else:
                     # Caso en que no exista la palabra se agrega al diciconario.
                     self.dictionary[word] = 1
+        self.wordVector = nuevoWwordVector
         return self.dictionary
 

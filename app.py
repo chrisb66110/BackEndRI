@@ -58,10 +58,10 @@ class ProcConsultas:
         requestWordCount.generateStopWordsDict()
         # Separa las palabras y las agrega en un diccionario de la consulta.
         requestWordCount.separateWords()
-        self.words = requestWordCount.wordVector
         #for x in self.words:
         #    print(x)
         wordDict = requestWordCount.generateDict()
+        self.words = requestWordCount.wordVector
         # Se genera un diccionario de la frecuencia.
         freq = Frecuencias()
         freqDict = freq.generateFrequency(wordDict)
@@ -455,14 +455,13 @@ def hello_world(consulta):
             index = string.lower().find(' '+ word +' ')
             #print(str(index))
             if index != None:
-                resu = resu + string[index:index+60]
-                break
-        resumen = resu + '...'
+                resu = resu + string[index-30:index+40] + "..."
+        #resumen = resu + '...'
         #print(str(posActual) + ': ' + str(ranking[posActual]))
         #print('Nombre del documento: ' + nombreDocumento)
         #print('Link del documento: ' + linkDocumento)
         #print('Resumen del result: ' + resumen)
-        lista.append(Documento(nombreDocumento, linkDocumento, resumen))
+        lista.append(Documento(nombreDocumento, linkDocumento, resu))
     #for x in lista:
     #    print(x.nombre)
     #    print(x.link)
