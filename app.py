@@ -204,14 +204,14 @@ class ProcConsultas:
         raizSumaNormaVect = dict()
         for doc in sorted(docs.keys()):
             dictPesosDoc = docs[doc]
-            start_time = time()
+            #start_time = time()
             sumaProductoPuntoYraizSumaNormaVect = self.productoPunto(dictPesosDoc, vectorConsulta)
             sumaProductoPunto[doc] = sumaProductoPuntoYraizSumaNormaVect[0]
             raizSumaNormaVect[doc] = sumaProductoPuntoYraizSumaNormaVect[1]
-            elapsed_time = time() - start_time
+            #elapsed_time = time() - start_time
 
-            imprimir = '{:<75}'.format("productoPunto del doc " + doc)
-            print( imprimir + ": %.10f seconds." % elapsed_time)
+            #imprimir = '{:<75}'.format("productoPunto del doc " + doc)
+            #print( imprimir + ": %.10f seconds." % elapsed_time)
             #docsProductoPunto[doc] = dictPesosNuevo
         #docsProductoPunto
         #KEY: DOCUMENTO
@@ -285,6 +285,14 @@ class ProcConsultas:
             similaridad = sumaVecDocProductoPunto / ( sumaVecDocNorma * consultaNormaSumadaRaiz )
             docsSimilaridad[doc] = similaridad
         return docsSimilaridad
+
+    def sqrtconsultaNormaSumada(self, dictConsulta):
+        suma = 0
+        for word in sorted(dictConsulta.keys()):
+            valVector = dictConsulta[word]
+            suma = suma + valVector * valVector
+        sqrtSuma = math.sqrt(suma)
+        return sqrtSuma
 
 def leerDocs(urlsDict):
     dictDoc = dict()
@@ -365,29 +373,29 @@ def hello_world(consulta):
     # for doc in docsProductoPuntoSumado.keys():
     #   print(doc + ': ' + str(docsProductoPuntoSumado[doc]))
 
-    start_time = time()
+    #start_time = time()
     #docsPesosNorma = procConsultas.normaTodosVectores(docsPesos)
-    elapsed_time = time() - start_time
-    print("normaTodosVectores: %.10f seconds." % elapsed_time)
+    #elapsed_time = time() - start_time
+    #print("normaTodosVectores: %.10f seconds." % elapsed_time)
     # for doc in docsPesosNorma.keys():
     #     print(doc + ': ' + str(docsPesosNorma[doc]))
 
-    start_time = time()
-    consultaPesosNorma = procConsultas.normaVector(vectConsulta)
-    elapsed_time = time() - start_time
-    print("normaVector: %.10f seconds." % elapsed_time)
+    #start_time = time()
+    #consultaPesosNorma = procConsultas.normaVector(vectConsulta)
+    #elapsed_time = time() - start_time
+    #print("normaVector: %.10f seconds." % elapsed_time)
     # for term in consultaPesosNorma.keys():
     #     print(term + ': ' + str(consultaPesosNorma[term]))
 
-    start_time = time()
+    #start_time = time()
     #docsNormaSumados = procConsultas.sumaTodosVectores(docsPesosNorma)
-    elapsed_time = time() - start_time
-    print("sumaTodosVectores: %.10f seconds." % elapsed_time)
+    #elapsed_time = time() - start_time
+    #print("sumaTodosVectores: %.10f seconds." % elapsed_time)
     # for doc in docsNormaSumados.keys():
     #     print(doc + ': ' + str(docsNormaSumados[doc]))
 
     start_time = time()
-    consultaNormaSumada = procConsultas.sumaVector(consultaPesosNorma)
+    #consultaNormaSumada = procConsultas.sumaVector(consultaPesosNorma)
     elapsed_time = time() - start_time
     print("sumaVector: %.10f seconds." % elapsed_time)
     # print(consultaNormaSumada)
@@ -401,7 +409,8 @@ def hello_world(consulta):
     #    print(doc + ': ' + str(docsNormaSumadosRaiz[doc]))
 
     start_time = time()
-    consultaNormaSumadaRaiz = math.sqrt(consultaNormaSumada)
+    #consultaNormaSumadaRaiz = math.sqrt(consultaNormaSumada)
+    consultaNormaSumadaRaiz = procConsultas.sqrtconsultaNormaSumada(vectConsulta)
     elapsed_time = time() - start_time
     print("sqrt: %.10f seconds." % elapsed_time)
     #print(consultaNormaSumadaRaiz)
