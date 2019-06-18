@@ -28,7 +28,12 @@ class Rules:
 
     #Regla para quitar caracteres que no sean a-z, A-Z, 0-9, _
     def removeCharactersInvalid(self, stringDoc):
-        return re.sub(r'[A-Za-z0-9]*[!@#$%^&*(),.?":;{}|\\<>\[\]][\w]*', ' ', stringDoc)
+        nuevaString = re.sub(r'[A-Za-z0-9]*[!@#$%^&*(),.?":;{}|\\<>\[\]][\w]*', ' ', stringDoc)
+        # Quitar palabras que no comiencen con numeros o letras
+        nuevaString1 = re.sub(r'[^a-zA-Z0-9 \n]+[^ \n]* ', ' ', nuevaString)
+        # Quitar palabras que comiencen con letras y tengan numeros
+        nuevaString2 = re.sub(r'[a-zA-Z]+[\d]+[^ \n]* ', ' ', nuevaString1)
+        return re.sub(r'[A-Za-z0-9]*[!@+#$%^=&*(),.?":;{}|\\<>\[\]_-]+[\w]* ', ' ', nuevaString2)
 
     #Regla para quitar tildes
     def removeTick(self, stringDoc):
@@ -60,7 +65,7 @@ class Rules:
     #Regla para eliminar palabras que son alfanumericas
     def removeIfStartWithNumber(self, stringDoc):
         #Hay que dejar ese espacio al final para que indique que es hasta que finalizo la palabra
-        return re.sub(r'[\d]+[a-zA-Z_]+? ', ' ', stringDoc)
+        return re.sub(r'[\d]+[a-zA-Z=+_-]+?[0-9+=a-zA-Z_-]* ', ' ', stringDoc)
 
     #Regla para dejar los numeros hasta el 999,999
     def removeNumberBiggerThan(self, stringDoc):

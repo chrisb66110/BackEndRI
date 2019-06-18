@@ -1,4 +1,3 @@
-++                             9            0.36                
 11                             1            0.04                
 14                             1            0.04                
 2                              1            0.04                
@@ -14,9 +13,7 @@ ampliamente                    1            0.04
 answers                        1            0.04                
 aqui                           1            0.04                
 aun                            1            0.04                
-auto                           1            0.04                
-auto_                          1            0.04                
-auto_ptr                       1            0.04                
+auto                           3            0.12                
 automaticos                    4            0.16                
 basicamente                    1            0.04                
 beb                            1            0.04                
@@ -25,11 +22,9 @@ bloqueo                        1            0.04
 boost                          3            0.12                
 broma                          1            0.04                
 busque                         1            0.04                
-c                              7            0.28                
-c++                            1            0.04                
+c                              9            0.36                
 can                            1            0.04                
 casi                           2            0.08                
-cmo                            1            0.04                
 coca                           1            0.04                
 code                           2            0.08                
 cola                           1            0.04                
@@ -48,7 +43,7 @@ copiar                         1            0.04
 cu                             2            0.08                
 cual                           1            0.04                
 cuando                         3            0.12                
-debera                         2            0.08                
+deber                          2            0.08                
 deberia                        2            0.08                
 debido                         1            0.04                
 debiles                        1            0.04                
@@ -76,7 +71,7 @@ errores                        1            0.04
 es                             6            0.24                
 esencial                       1            0.04                
 eso                            1            0.04                
-espaol                         1            0.04                
+espa                           1            0.04                
 esperada                       1            0.04                
 esquema                        1            0.04                
 est                            1            0.04                
@@ -114,12 +109,12 @@ intencion                      1            0.04
 introduce                      1            0.04                
 introdujo                      1            0.04                
 juzguen                        1            0.04                
+l                              1            0.04                
 lectura                        1            0.04                
 lentas                         1            0.04                
 lentos                         1            0.04                
 les                            1            0.04                
 links                          1            0.04                
-lneas                          1            0.04                
 locales                        1            0.04                
 lugar                          1            0.04                
 m                              1            0.04                
@@ -148,7 +143,6 @@ objeto                         1            0.04
 objetos                        2            0.08                
 obligan                        1            0.04                
 ocasiones                      1            0.04                
-ogre                           1            0.04                
 oido                           1            0.04                
 otros                          2            0.08                
 personas                       1            0.04                
@@ -163,7 +157,7 @@ pregunta                       1            0.04
 principal                      1            0.04                
 procesamiento                  1            0.04                
 profundo                       1            0.04                
-programacin                    1            0.04                
+programaci                     1            0.04                
 programando                    1            0.04                
 prolija                        1            0.04                
 propensa                       1            0.04                
@@ -178,7 +172,7 @@ qu                             6            0.24
 querias                        1            0.04                
 question                       1            0.04                
 questions                      1            0.04                
-quin                           1            0.04                
+qui                            1            0.04                
 raramente                      1            0.04                
 read                           1            0.04                
 reconocimiento                 1            0.04                
@@ -190,14 +184,13 @@ respuesta                      1            0.04
 respuestas                     1            0.04                
 retornos                       1            0.04                
 s                              2            0.08                
-scoped_ptr                     2            0.08                
+scoped                         2            0.08                
 se                             4            0.16                
 sea                            1            0.04                
 seguir                         1            0.04                
 segun                          1            0.04                
 senalan                        1            0.04                
-shared_                        1            0.04                
-shared_ptr                     1            0.04                
+shared                         2            0.08                
 siempre                        2            0.08                
 significa                      1            0.04                
 sistemas                       1            0.04                
@@ -220,7 +213,6 @@ tipo                           2            0.08
 tipos                          1            0.04                
 tontos                         1            0.04                
 top                            1            0.04                
-tr1                            1            0.04                
 tres                           1            0.04                
 tu                             1            0.04                
 ultimo                         1            0.04                

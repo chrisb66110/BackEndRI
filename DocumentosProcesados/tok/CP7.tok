@@ -35,7 +35,7 @@
 173                            1            0.01                
 177                            1            0.01                
 18                             3            0.03                
-19                             3            0.03                
+19                             4            0.04                
 1929                           3            0.03                
 1931                           1            0.01                
 195                            1            0.01                
@@ -60,10 +60,10 @@
 1995                           4            0.04                
 1996                           8            0.08                
 1997                           1            0.01                
-2                              17           0.17                
+2                              18           0.18                
 20                             8            0.08                
 200                            5            0.05                
-2000                           3            0.03                
+2000                           2            0.02                
 208                            1            0.01                
 209                            1            0.01                
 21                             1            0.01                
@@ -178,7 +178,6 @@
 95                             1            0.01                
 961                            1            0.01                
 97                             1            0.01                
-=                              2            0.02                
 abandono                       1            0.01                
 abordan                        1            0.01                
 abril                          1            0.01                
@@ -342,7 +341,7 @@ ardito                         1            0.01
 are                            2            0.02                
 arnow                          1            0.01                
 arrest                         1            0.01                
-artculo                        2            0.02                
+art                            2            0.02                
 arterial                       2            0.02                
 articulaciones                 1            0.01                
 articulo                       4            0.04                
@@ -416,8 +415,7 @@ bien                           5            0.05
 biliar                         2            0.02                
 biliares                       1            0.01                
 biologica                      1            0.01                
-biomdicas                      1            0.01                
-biomdv                         1            0.01                
+biom                           2            0.02                
 bioquimicos                    1            0.01                
 birks                          3            0.03                
 bistrian                       1            0.01                
@@ -716,7 +714,7 @@ cutaneo                        1            0.01
 cuyo                           3            0.03                
 cycles                         1            0.01                
 cycling                        5            0.05                
-d                              16           0.16                
+d                              17           0.17                
 dale                           1            0.01                
 dallas                         1            0.01                
 daly                           1            0.01                
@@ -726,7 +724,6 @@ dano                           1            0.01
 darga                          1            0.01                
 day                            2            0.02                
 dc                             2            0.02                
-de600                          1            0.01                
 death                          1            0.01                
 debajo                         3            0.03                
 debe                           15           0.15                
@@ -857,7 +854,6 @@ diuretica                      2            0.02
 diuretico                      1            0.01                
 diureticos                     3            0.03                
 dj                             1            0.01                
-dnde                           1            0.01                
 doble                          1            0.01                
 doctor                         1            0.01                
 does                           1            0.01                
@@ -876,7 +872,6 @@ due                            1            0.01
 durante                        24           0.24                
 during                         3            0.03                
 dutton                         1            0.01                
-e208                           1            0.01                
 ea                             1            0.01                
 eating                         1            0.01                
 economia                       1            0.01                
@@ -975,7 +970,7 @@ esfuerzan                      1            0.01
 esfuerzo                       2            0.02                
 esfuerzos                      2            0.02                
 esos                           2            0.02                
-espaol                         1            0.01                
+espa                           1            0.01                
 especial                       1            0.01                
 especialistas                  1            0.01                
 especifico                     1            0.01                
@@ -1194,8 +1189,7 @@ guide                          1            0.01
 guilford                       1            0.01                
 h                              3            0.03                
 ha                             18           0.18                
-habana                         1            0.01                
-habanamay                      1            0.01                
+habana                         2            0.02                
 haber                          2            0.02                
 habia                          7            0.07                
 habian                         2            0.02                
@@ -1366,7 +1360,6 @@ involucrados                   1            0.01
 involving                      1            0.01                
 inyecciones                    1            0.01                
 is                             3            0.03                
-issn                           1            0.01                
 issues                         1            0.01                
 it                             2            0.02                
 its                            7            0.07                
@@ -2106,7 +2099,6 @@ ryde                           3            0.03
 rytig                          1            0.01                
 ryttig                         1            0.01                
 s                              11           0.11                
-s161                           1            0.01                
 sa                             2            0.02                
 saber                          2            0.02                
 saborizantes                   1            0.01                
@@ -2328,7 +2320,7 @@ to                             7            0.07
 toda                           8            0.08                
 todas                          4            0.04                
 todavia                        1            0.01                
-todo                           12           0.12                
+todo                           11           0.11                
 todos                          7            0.07                
 tomarse                        1            0.01                
 tome                           1            0.01                
@@ -2413,7 +2405,7 @@ ventajas                       1            0.01
 verdad                         3            0.03                
 verdadera                      1            0.01                
 verduras                       1            0.01                
-versinon                       1            0.01                
+versi                          1            0.01                
 versus                         1            0.01                
 vertes                         1            0.01                
 very                           27           0.27                

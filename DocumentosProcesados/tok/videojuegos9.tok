@@ -3,7 +3,6 @@
 3                              2            0.25                
 4                              1            0.125               
 5                              2            0.25                
-__s__                          1            0.125               
 absolut                        1            0.125               
 acertijo                       1            0.125               
 asternoid                      1            0.125               
@@ -99,7 +98,7 @@ spacewar                       1            0.125
 stars                          1            0.125               
 submarino                      1            0.125               
 tail                           1            0.125               
-tamano                         1            0.125               
+tama                           1            0.125               
 the                            3            0.375               
 titan                          1            0.125               
 torpedo                        1            0.125               

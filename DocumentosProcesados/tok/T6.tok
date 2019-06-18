@@ -1,4 +1,3 @@
-+52                            1            0.1                 
 0                              5            0.5                 
 000                            1            0.1                 
 01                             1            0.1                 
@@ -28,8 +27,7 @@
 5                              5            0.5                 
 6                              3            0.3                 
 637                            1            0.1                 
-7                              1            0.1                 
-7+                             1            0.1                 
+7                              2            0.2                 
 762                            1            0.1                 
 806                            1            0.1                 
 9                              2            0.2                 
@@ -130,10 +128,6 @@ hoy                            1            0.1
 html                           2            0.2                 
 icon                           1            0.1                 
 iconos                         5            0.5                 
-ie10+                          1            0.1                 
-ie7+                           1            0.1                 
-ie8+                           1            0.1                 
-ie9+                           2            0.2                 
 inc                            1            0.1                 
 incluye                        1            0.1                 
 individual                     1            0.1                 
@@ -180,7 +174,7 @@ ninguno                        2            0.2
 no                             2            0.2                 
 obtener                        1            0.1                 
 ofrece                         1            0.1                 
-optimizacin                    1            0.1                 
+optimizaci                     1            0.1                 
 otto                           1            0.1                 
 patrocinadores                 1            0.1                 
 permiten                       1            0.1                 
@@ -244,7 +238,6 @@ utilizados                     1            0.1
 utilizando                     2            0.2                 
 utilizar                       1            0.1                 
 v                              1            0.1                 
-v4                             1            0.1                 
 variables                      1            0.1                 
 version                        5            0.5                 
 versiones                      1            0.1                 
