@@ -1,9 +1,715 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e9f8540-2bb2-424e-b36f-d2a5bd6f1d50" name="Default Changelist" comment="">
+    <list default="true" id="5e9f8540-2bb2-424e-b36f-d2a5bd6f1d50" name="Default Changelist" comment="Creacion de vectores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/indice/indice.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/indice/indice.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/postings/postings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/postings/postings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/10_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/10_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/10_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/10_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/10_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/10_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/10_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/10_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/10_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/10_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/1_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/1_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/1_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/1_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/1_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/1_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/1_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/1_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/1_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/1_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/2_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/2_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/2_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/2_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/2_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/2_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/2_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/2_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/2_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/2_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/3_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/3_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/3_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/3_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/3_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/3_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/3_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/3_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/3_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/3_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/4_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/4_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/4_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/4_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/4_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/4_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/4_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/4_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/4_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/4_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/5_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/5_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/5_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/5_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/5_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/5_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/5_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/5_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/5_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/5_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/6_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/6_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/6_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/6_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/6_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/6_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/6_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/6_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/6_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/6_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/7_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/7_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/7_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/7_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/7_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/7_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/7_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/7_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/8_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/8_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/8_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/8_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/8_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/8_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/8_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/8_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/8_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/8_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/9_AP.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/9_AP.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/9_CT.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/9_CT.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/9_NR.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/9_NR.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/9_PI.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/9_PI.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/9_RA.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/9_RA.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/AM9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/AM9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BMW9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/BigData9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CP9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CP9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/CV-9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Cafe9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Computadora9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Economia9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ExpEspacial9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/FB-9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/IA9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/IA9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/JuegosdeMesa9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MC9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MC9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/MM-9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI21.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI21.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI210.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI210.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI22.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI22.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI23.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI23.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI24.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI24.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI25.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI25.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI26.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI26.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI27.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI27.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI28.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI28.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI29.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI29.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI31.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI31.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI310.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI310.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI32.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI32.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI33.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI33.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI34.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI34.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI35.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI35.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI36.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI36.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI37.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI37.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI38.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI38.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI39.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI39.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI41.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI41.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI410.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI410.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI42.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI42.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI43.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI43.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI44.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI44.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI45.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI45.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI46.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI46.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI47.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI47.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI48.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI48.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/NI49.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/NI49.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/P9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/P9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PI-9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/PelAnim9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Proy9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RE9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RE9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/RP-9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Robot9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/T9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/T9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/Teclado9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ajedrez9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/algoritmosgeneticos9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/allanturing8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ambiente9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/android9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/android9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/aplicacionweb9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteantiguo9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/arteprecolombino8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/auto9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/auto9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bioinformatica9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/bonsais9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cadenavalor9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ciberseguridad9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comida9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comida9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/comptecnubicua9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/computacionnube9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/cultura9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/delitosinformaticos9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrolloaplicacionesmoviles9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/desarrollomovil9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/diccionario9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/educsexual9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/emisiones9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/exploracionespacial9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/fengshui9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/hacking9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/lit9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/lit9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/logicadifusa9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/murallachina9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/musica9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/musica9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami11.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami11.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami12.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami12.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami14.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami14.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami19.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami19.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami20.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami20.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origami9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origami9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/origenuniverso9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/orquideas10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/orquideas10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/parquesnacionalescr9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/perro9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/perro9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/reciclaje9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/redesneuronales9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/ri9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/ri9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tablaturasguitarra9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/tecno9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismocr9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/turismoespacial9.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos1.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos1.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos10.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos10.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos2.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos2.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos3.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos3.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos4.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos4.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos5.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos5.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos6.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos6.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos7.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos7.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos8.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos8.tok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos9.tok" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/tok/videojuegos9.tok" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/vocabulario/vocabulario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/vocabulario/vocabulario.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_AP.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/10_CT.wtd" afterDir="false" />
@@ -25,6 +731,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_NR.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_PI.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/3_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_AP.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_CT.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_NR.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/4_PI.wtd" afterDir="false" />
@@ -42,12 +749,14 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_AP.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_CT.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_NR.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_PI.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/7_RA.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_AP.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_CT.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_NR.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_PI.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_RA.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/8_RA.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_AP.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_AP.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_CT.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_CT.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_NR.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_NR.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_PI.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/9_PI.wtd" afterDir="false" />
@@ -101,6 +810,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-6.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-7.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-8.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/CV-9.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Cafe2.wtd" afterDir="false" />
@@ -271,6 +981,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE7.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RE9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-2.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-3.wtd" afterDir="false" />
@@ -281,6 +992,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/RP-9.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot2.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot3.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/Robot4.wtd" afterDir="false" />
@@ -340,6 +1052,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/allanturing9.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente1.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente2.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente3.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/ambiente4.wtd" afterDir="false" />
@@ -381,6 +1094,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino2.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino3.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino4.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino5.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/arteprecolombino6.wtd" afterDir="false" />
@@ -443,6 +1157,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida5.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida6.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comida9.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/comptecnubicua10.wtd" afterDir="false" />
@@ -574,6 +1289,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit7.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/lit9.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa10.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa2.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa3.wtd" afterDir="false" />
@@ -581,6 +1297,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa5.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa6.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa7.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/logicadifusa9.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina1.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina1.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina10.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/murallachina10.wtd" afterDir="false" />
@@ -598,6 +1315,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica3.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica3.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica4.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica4.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica5.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica5.wtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica6.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica6.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica7.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/musica9.wtd" afterDir="false" />
@@ -610,7 +1328,6 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami15.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami15.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami16.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami16.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami17.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami17.wtd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami18.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami18.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami19.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami19.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami2.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami2.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami20.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/origami20.wtd" afterDir="false" />
@@ -741,9 +1458,7 @@
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos7.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos7.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos8.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos8.wtd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos9.wtd" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentosProcesados/wtd/videojuegos9.wtd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frecuencias.py" beforeDir="false" afterPath="$PROJECT_DIR$/Frecuencias.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weights.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weights.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -753,23 +1468,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="5576">
+              <caret line="341" column="1" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="338">
+              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -778,37 +1502,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frecuencias.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weights.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DocWordCounter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FileGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="51" column="42" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="126">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -825,6 +1522,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>protectora</find>
+      <find>1.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -841,6 +1539,8 @@
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Weights.py" />
         <option value="$PROJECT_DIR$/Frecuencias.py" />
+        <option value="$PROJECT_DIR$/FileGenerator.py" />
+        <option value="$PROJECT_DIR$/Rules.py" />
       </list>
     </option>
   </component>
@@ -856,7 +1556,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -864,10 +1563,22 @@
               <item name="BackEndRI" type="b2602c69:ProjectViewProjectNode" />
               <item name="BackEndRI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BackEndRI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEndRI" type="462c0819:PsiDirectoryNode" />
+              <item name="DocumentosProcesados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BackEndRI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEndRI" type="462c0819:PsiDirectoryNode" />
+              <item name="DocumentosProcesados" type="462c0819:PsiDirectoryNode" />
+              <item name="wtd" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -889,7 +1600,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flask server.Flask (app.py)">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BackEndRI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -944,6 +1655,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.Main" />
       </list>
@@ -962,6 +1675,8 @@
       <workItem from="1560537412533" duration="683000" />
       <workItem from="1560538259492" duration="52000" />
       <workItem from="1560538375086" duration="8401000" />
+      <workItem from="1560827931782" duration="1504000" />
+      <workItem from="1560829641825" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de proyecto">
       <created>1560538505479</created>
@@ -988,17 +1703,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9136000" />
+    <option name="totallyTimeSpent" value="14358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25642672" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14010283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30411687" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32934928" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1026,22 +1742,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="Creacion de vectores" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BackEndRI$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1560546002077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BackEndRI$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1560828008395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BackEndRI$IndiceReader.coverage" NAME="IndiceReader Coverage Results" MODIFIED="1560550596584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BackEndRI$BackEndRI.coverage" NAME="BackEndRI Coverage Results" MODIFIED="1560545125290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/BackEndRI$Main.coverage" NAME="Main Coverage Results" MODIFIED="1560545906203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BackEndRI$Main.coverage" NAME="Main Coverage Results" MODIFIED="1560832374175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TokReader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1061,13 +1771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Weights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1082,22 +1785,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="5576">
+          <caret line="341" column="1" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://C:/Program Files/Python37/Lib/encodings/cp1252.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="160">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocumentosProcesados/postings/postings.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-258559" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocumentosProcesados/wtd/1_NR.wtd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocumentosProcesados/wtd/1_CT.wtd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocumentosProcesados/wtd/1_AP.wtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6473">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

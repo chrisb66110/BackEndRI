@@ -32,13 +32,15 @@ class Rules:
 
     #Regla para quitar tildes
     def removeTick(self, stringDoc):
-        return normalize('NFC',
-                         re.sub(r"([^n\u0300-\u036f]|ñ(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+",
-                                r"\1",
-                                normalize("NFD", stringDoc),
-                                0,
-                                re.I)
-                         )
+        stringDoc = stringDoc.replace('á', 'a')
+        stringDoc = stringDoc.replace('é', 'e')
+        stringDoc = stringDoc.replace('í', 'i')
+        stringDoc = stringDoc.replace('ó', 'o')
+        stringDoc = stringDoc.replace('ú', 'u')
+        stringDoc = stringDoc.replace('ñ', 'n')
+        stringDoc = ''.join(c for c in stringDoc if c.isprintable())
+        stringDoc = (stringDoc.encode('ascii', 'ignore')).decode('utf-8')
+        return stringDoc
 
     def changeTick(selfs, stringDoc):
         docChangeTick = stringDoc.replace('&aacute;', 'a')
@@ -98,6 +100,6 @@ class Rules:
         stringDoc = self.removeTick(stringDoc)
         stringDoc = self.removeIfStartWithNumber(stringDoc)
         stringDoc = self.removeNumberBiggerThan(stringDoc)
-        stringDoc = self.removeLastPass(stringDoc)
+        #stringDoc = self.removeLastPass(stringDoc)
         stringDoc = self.removeWhiteSpace(stringDoc)
         return stringDoc
