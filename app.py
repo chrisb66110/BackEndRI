@@ -490,6 +490,14 @@ def hello_world(consulta):
     #print(jsonString)
     return jsonStringTodo
 
+@cross_origin()
+@app.route('/pagina/<nombreDoc>')
+def getPagina(nombreDoc):
+    print(nombreDoc)
+    htmlReader = HTMLReader((nombreDoc+'.html').encode('utf-8-sig'))
+    string = htmlReader.getHtml()
+    return string
+
 if __name__ == '__main__':
     app.run()
 
