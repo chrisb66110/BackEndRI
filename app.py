@@ -462,8 +462,10 @@ def hello_world(consulta):
         resu = '...'
         for word in procConsultas.words:
             index = string.lower().find(' '+ word +' ')
-            #print(str(index))
-            if index != None:
+            if index >= 0:
+                if index < 30:
+                    index = 30
+                # print("Palabra " + word + " en doc " + nombreDocumento + " : " + str(index))
                 resu = resu + string[index-30:index+40] + "..."
         #resumen = resu + '...'
         #print(str(posActual) + ': ' + str(ranking[posActual]))
