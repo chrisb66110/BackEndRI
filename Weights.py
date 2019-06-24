@@ -30,7 +30,8 @@ class Weights:
         for term in dicTok.keys():
             # Posicion 1 del valor del dictTok es la frecuencia normalizada
             # Posicion 1 del valor del dicVoc es la frecuencia inversa
-            weights[term] = (0.5 + 0.5 * dicTok[term][1]) * self.dicVoc[term][1]
+            if term in self.dicVoc:
+                weights[term] = (0.5 + 0.5 * dicTok[term][1]) * self.dicVoc[term][1]
         return weights
 
     # Metodo para mandar a generar los archivos .wtd
