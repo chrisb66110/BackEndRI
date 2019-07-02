@@ -288,5 +288,65 @@ def getLike(consulta):
     jsonStringTodo = json.dumps(retornoDocumentos, default=lambda o: o.__dict__, indent=4)
     return jsonStringTodo
 
+def Bigram(h1, h2):
+    h1 = h1.lower()
+    h2 = h2.lower()
+    tokens1 = []
+    for w in range(0, len(h1)):
+        if w != 0 and not h1[w - 1:w + 1] in tokens1:
+            tokens1.append(h1[w - 1:w + 1])
+        if w != len(h1) - 1 and not h1[w:w + 2] in tokens1:
+            tokens1.append(h1[w:w + 2])
+    tokens2 = []
+    for w in range(0, len(h2)):
+        if w != 0 and not h2[w - 1:w + 1] in tokens2:
+            tokens2.append(h2[w - 1:w + 1])
+        if w != len(h2) - 1 and not h2[w:w + 2] in tokens2:
+            tokens2.append(h2[w:w + 2])
+    return 2 * len(set(tokens1).intersection(tokens2)) / (len(tokens2) + len(tokens1))
+
+
+def corregirConsulta(consulta, dic):
+    consultaValida = True;
+    consultaMejorada = '';
+    for c in consulta.split(" "):
+        if c not in dic:
+            consultaValida = False
+            key = ''
+            val = -1
+            for d in dic.keys():
+                valTmp = Bigram(c, d)
+                if(list(dic[d])[0]>5):
+                    valTmp = valTmp + 0.1
+                if valTmp > val:
+                    val = valTmp
+                    key = d
+            if consultaMejorada == '':
+                consultaMejorada = key
+            else:
+                consultaMejorada = consultaMejorada + ' ' + key
+        else:
+            if consultaMejorada == '':
+                consultaMejorada = c
+            else:
+                consultaMejorada = consultaMejorada + ' ' + c
+    return consultaMejorada
+
+
+@cross_origin()
+@app.route('/querycheck/<consulta>')
+def getCheck(consulta):
+    result={}
+    rules = Rules()
+    consultaMod= rules.applyRules(consulta)
+    consultaMod=corregirConsulta(consultaMod,procConsultas.dicVoc)
+    result['result'] = consultaMod == consulta
+    result['consulta']= consultaMod
+    jsonStringTodo = json.dumps(result, default=lambda o: o.__dict__, indent=4)
+    print(result)
+    return jsonStringTodo
+
+
+
 if __name__ == '__main__':
     app.run()
