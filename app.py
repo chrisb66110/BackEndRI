@@ -14,6 +14,7 @@ from PostingsReader import *
 from VocabularioReader import *
 from  HTMLReader import *
 from WtdReader import *
+from collections import Counter
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -75,7 +76,7 @@ class ProcConsultas:
         # Genera el diccionario para obtener los pesos de la consulta.
         weights = Weights()
         dicWeights = weights.getDicWeightsConsulta(fileName)
-
+        print(dicWeights)
         vect = self.agregar_terminos_que_no_tenga(dicWeights)
         #for term in vect.keys():
         #    print(term + ': ' + str(vect[term]))
@@ -489,7 +490,7 @@ def hello_world(consulta):
     #print(jsonStringTodo)
 
     #jsonString = json.dumps(lista, default=lambda o: o.__dict__, indent=4)
-    #print(jsonString)
+    #print(jsonStringTodo)
     return jsonStringTodo
 
 @cross_origin()
@@ -499,6 +500,150 @@ def getPagina(nombreDoc):
     htmlReader = HTMLReader((nombreDoc+'.html').encode('utf-8-sig'))
     string = htmlReader.getHtml()
     return string
+
+@cross_origin()
+@app.route('/like/<consulta>')
+def getLike(consulta):
+    consulta = json.loads(consulta)
+    #print(consulta['docs'][0])
+    inicio = time()
+    start_time = time()
+    weights = Weights()
+    vectConsulta = procConsultas.generar_vector_consulta(consulta['q'])
+    for x in range(0,len(consulta['docs'])):
+        weightDoc=weights.getDicWeightsConsulta(consulta['docs'][x])
+        for key, value in weightDoc.items():
+            vectConsulta[key] += (1/len(consulta['docs']))*value
+    elapsed_time = time() - start_time
+    print("generar_vector_consulta: %.10f seconds." % elapsed_time)
+
+    start_time = time()
+    docsPesos = procConsultas.buscaDocumentosRealacionados(dictIndice, linesPonsting, wtdTodos)
+    elapsed_time = time() - start_time
+    print("buscaDocumentosRealacionados: %.10f seconds." % elapsed_time)
+
+    #for doc in docsPesos.keys():
+    #   print(doc + ': ' + str(docsPesos[doc]))
+
+    start_time = time()
+    sumaProductoPuntoYraizSumaNormaVect = procConsultas.productoPuntoTodosVectores(docsPesos,vectConsulta)
+    #docsProductoPunto =
+    elapsed_time = time() - start_time
+    print("productoPuntoTodosVectores: %.10f seconds." % elapsed_time)
+    #for doc in docsProductoPunto.keys():
+    #   print(doc + ': ' + str(docsProductoPunto[doc]))
+
+    start_time = time()
+    #docsProductoPuntoSumado = procConsultas.sumaTodosVectores(docsProductoPunto)
+    docsProductoPuntoSumado = sumaProductoPuntoYraizSumaNormaVect[0]
+    elapsed_time = time() - start_time
+    print("sumaTodosVectores: %.10f seconds." % elapsed_time)
+    # for doc in docsProductoPuntoSumado.keys():
+    #   print(doc + ': ' + str(docsProductoPuntoSumado[doc]))
+
+    #start_time = time()
+    #docsPesosNorma = procConsultas.normaTodosVectores(docsPesos)
+    #elapsed_time = time() - start_time
+    #print("normaTodosVectores: %.10f seconds." % elapsed_time)
+    # for doc in docsPesosNorma.keys():
+    #     print(doc + ': ' + str(docsPesosNorma[doc]))
+
+    #start_time = time()
+    #consultaPesosNorma = procConsultas.normaVector(vectConsulta)
+    #elapsed_time = time() - start_time
+    #print("normaVector: %.10f seconds." % elapsed_time)
+    # for term in consultaPesosNorma.keys():
+    #     print(term + ': ' + str(consultaPesosNorma[term]))
+
+    #start_time = time()
+    #docsNormaSumados = procConsultas.sumaTodosVectores(docsPesosNorma)
+    #elapsed_time = time() - start_time
+    #print("sumaTodosVectores: %.10f seconds." % elapsed_time)
+    # for doc in docsNormaSumados.keys():
+    #     print(doc + ': ' + str(docsNormaSumados[doc]))
+
+    start_time = time()
+    #consultaNormaSumada = procConsultas.sumaVector(consultaPesosNorma)
+    elapsed_time = time() - start_time
+    print("sumaVector: %.10f seconds." % elapsed_time)
+    # print(consultaNormaSumada)
+
+    start_time = time()
+    #docsNormaSumadosRaiz = procConsultas.raizTodosVectores(docsNormaSumados)
+    docsNormaSumadosRaiz = sumaProductoPuntoYraizSumaNormaVect[1]
+    elapsed_time = time() - start_time
+    print("raizTodosVectores: %.10f seconds." % elapsed_time)
+    #for doc in docsNormaSumadosRaiz.keys():
+    #    print(doc + ': ' + str(docsNormaSumadosRaiz[doc]))
+
+    start_time = time()
+    #consultaNormaSumadaRaiz = math.sqrt(consultaNormaSumada)
+    consultaNormaSumadaRaiz = procConsultas.sqrtconsultaNormaSumada(vectConsulta)
+    elapsed_time = time() - start_time
+    print("sqrt: %.10f seconds." % elapsed_time)
+    #print(consultaNormaSumadaRaiz)
+
+    start_time = time()
+    similaridad = procConsultas.similaridad(docsProductoPuntoSumado, docsNormaSumadosRaiz, consultaNormaSumadaRaiz)
+    elapsed_time = time() - start_time
+    print("similaridad: %.10f seconds." % elapsed_time)
+    #for doc in sorted(similaridad.keys()):
+    #    print(doc + ': ' + str(similaridad[doc]))
+
+    start_time = time()
+    #similaridad = { '5_AP': 0.5416401512051543, '1_AP': 0.4024963445340767 }
+    ranking = sorted(similaridad.items(), key=operator.itemgetter(1))
+    elapsed_time = time() - start_time
+    print("sorted(similaridad.items(),key=operator.itemgetter(1)): %.10f seconds." % elapsed_time)
+    #print(ranking[::-1])
+
+    start_time = time()
+    lista = list()
+    largo = ranking.__len__()
+    for x in range(0, largo):
+        posActual = largo - x - 1
+        nombreDocumento = str(ranking[posActual][0])
+        linkDocumento = urlsDict[ranking[posActual][0]]
+        #leerdoc = nombreDocumento + '.html'
+        #htmlReader = HTMLReader(bytes(leerdoc, 'utf-8'))
+        #htmlString = htmlReader.getHtml()
+        #rules = Rules()
+        string = docsProcesados[nombreDocumento] #rules.applyRules(htmlString)
+        #print(string)
+        #print(stringB)
+        #string = re.sub('', '', str(stringB, 'utf-8'))
+        resu = '...'
+        for word in procConsultas.words:
+            index = string.lower().find(' '+ word +' ')
+            if index >= 0:
+                if index < 30:
+                    index = 30
+                # print("Palabra " + word + " en doc " + nombreDocumento + " : " + str(index))
+                resu = resu + string[index-30:index+40] + "..."
+        #resumen = resu + '...'
+        #print(str(posActual) + ': ' + str(ranking[posActual]))
+        #print('Nombre del documento: ' + nombreDocumento)
+        #print('Link del documento: ' + linkDocumento)
+        #print('Resumen del result: ' + resumen)
+        lista.append(Documento(nombreDocumento, linkDocumento, resu))
+    #for x in lista:
+    #    print(x.nombre)
+    #    print(x.link)
+    #    print(x.resumen)
+    #list_example = [Documento('Hola1','http1','resumen1'), Documento('Hola2','http2','resumen2')]
+    #print(json.dumps(list_example))
+    elapsed_time = time() - start_time
+    print("ranking: %.10f seconds." % elapsed_time)
+
+    fin = time() - inicio
+    print("FIN: %.10f seconds." % fin)
+    retornoDocumentos = Documentos(lista, lista.__len__(), fin)
+    jsonStringTodo = json.dumps(retornoDocumentos, default=lambda o: o.__dict__, indent=4)
+    #print(jsonStringTodo)
+
+    #jsonString = json.dumps(lista, default=lambda o: o.__dict__, indent=4)
+    #print(jsonStringTodo)
+    return jsonStringTodo
 
 if __name__ == '__main__':
     app.run()
