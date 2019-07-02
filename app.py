@@ -226,7 +226,7 @@ def consulta(consulta):
         posActual = largo - x - 1
         nombreDocumento = str(ranking[posActual][0])
         linkDocumento = urlsDict[ranking[posActual][0]]
-        string = docsProcesados[nombreDocumento] #rules.applyRules(htmlString)
+        string = docsProcesados[nombreDocumento]
         resu = '...'
         for word in procConsultas.words:
             index = string.lower().find(' '+ word +' ')
@@ -273,14 +273,13 @@ def getLike(consulta):
         posActual = largo - x - 1
         nombreDocumento = str(ranking[posActual][0])
         linkDocumento = urlsDict[ranking[posActual][0]]
-        string = docsProcesados[nombreDocumento] #rules.applyRules(htmlString)
+        string = docsProcesados[nombreDocumento]
         resu = '...'
         for word in procConsultas.words:
             index = string.lower().find(' '+ word +' ')
             if index >= 0:
                 if index < 30:
                     index = 30
-                # print("Palabra " + word + " en doc " + nombreDocumento + " : " + str(index))
                 resu = resu + string[index-30:index+40] + "..."
         lista.append(Documento(nombreDocumento, linkDocumento, resu))
     fin = time() - inicio
