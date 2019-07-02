@@ -1,1 +1,1 @@
- recoro rect dorado 
+ recoro rectangulo dorado 

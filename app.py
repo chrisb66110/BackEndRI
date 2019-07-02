@@ -309,8 +309,9 @@ def Bigram(h1, h2):
 def corregirConsulta(consulta, dic):
     consultaValida = True;
     consultaMejorada = '';
+    stopWords = Stopwords().getStopWords()
     for c in consulta.split(" "):
-        if c not in dic:
+        if c not in dic and c not in stopWords:
             consultaValida = False
             key = ''
             val = -1
@@ -339,6 +340,7 @@ def getCheck(consulta):
     result={}
     rules = Rules()
     consultaMod= rules.applyRules(consulta)
+    consulta=consultaMod
     consultaMod=corregirConsulta(consultaMod,procConsultas.dicVoc)
     result['result'] = consultaMod == consulta
     result['consulta']= consultaMod

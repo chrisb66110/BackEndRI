@@ -1,7 +1,9 @@
-art                            1            0.2                 
-b                              2            0.4                 
-ciencias                       3            0.6                 
-detalles                       1            0.2                 
-informaci                      5            1.0                 
-metadatos                      2            0.4                 
-recuperaci                     2            0.4                 
+artculo                        1            0.25                
+bsqueda                        2            0.5                 
+ciencias                       3            0.75                
+detalles                       1            0.25                
+informacin                     4            1.0                 
+metadatos                      2            0.5                 
+recuperacin                    2            0.5                 
+vista                          1            0.25                
+volver                         1            0.25                
